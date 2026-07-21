@@ -1,8 +1,8 @@
 {
   "project_name": "HRRR ANN-CSGD CONUS Weather Hub",
   "description": "Duration-specific probabilistic precipitation postprocessing of HRRR forecasts using ANN-CSGD.",
-  "latest_initialization": "2025122900",
-  "latest_initialization_display": "December 29, 2025 at 00 UTC",
+  "latest_initialization": "2026072112",
+  "latest_initialization_display": "2026-07-21 12 UTC",
   "production_status": "PASS",
   "expected_products": 20,
   "passed_products": 20,
@@ -166,5 +166,14 @@
         }
       ]
     }
+  },
+  "updated_utc": "2026-07-21 18:33 UTC",
+  "operational_run": {
+    "initialization": "2026072112",
+    "endpoint_count": 8,
+    "product_count": 20,
+    "map_count": 105,
+    "status": "PASS",
+    "published_data_prepared": true
   }
 }
