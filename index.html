@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+  <meta
+    name="description"
+    content="HRRR ANN-CSGD probabilistic precipitation forecasts over CONUS."
+  >
+  <title>HRRR ANN-CSGD CONUS Weather Hub</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Probabilistic precipitation forecasting</p>
+      <h1>HRRR ANN-CSGD CONUS Weather Hub</h1>
+
+      <p class="subtitle">
+        Duration-specific 6-, 12-, and 24-hour probabilistic
+        precipitation products generated from HRRR forecasts using
+        artificial neural networks and censored-shifted gamma
+        distributions.
+      </p>
+
+      <div id="status-badge" class="status loading">
+        Loading production status…
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Latest operational run</p>
+          <h2 id="latest-init">Loading…</h2>
+        </div>
+      </div>
+
+      <div class="overview-grid">
+        <article class="metric-card">
+          <span class="metric-label">Production products</span>
+          <strong id="product-count">—</strong>
+          <span>Audited forecast windows</span>
+        </article>
+
+        <article class="metric-card">
+          <span class="metric-label">CONUS land cells</span>
+          <strong id="land-count">—</strong>
+          <span>0.25° forecast grid</span>
+        </article>
+
+        <article class="metric-card">
+          <span class="metric-label">Forecast durations</span>
+          <strong>6 / 12 / 24 h</strong>
+          <span>Independent ANN-CSGD models</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="section-label">Held-out 2025 verification</p>
+      <h2>Model performance</h2>
+
+      <div id="duration-cards" class="duration-grid"></div>
+    </section>
+
+    <section class="section">
+      <p class="section-label">Threshold verification</p>
+      <h2>Brier skill score and ROC AUC</h2>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Duration</th>
+              <th>Threshold</th>
+              <th>2025 events</th>
+              <th>ANN-CSGD BSS</th>
+              <th>Raw HRRR BSS</th>
+              <th>ANN-CSGD AUC</th>
+              <th>Raw HRRR AUC</th>
+            </tr>
+          </thead>
+          <tbody id="verification-table"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section method">
+      <p class="section-label">Method</p>
+      <h2>Duration-specific ANN-CSGD postprocessing</h2>
+
+      <p>
+        Each model receives twelve predictors describing HRRR
+        precipitation, neighborhood structure, forecast lead,
+        seasonality, valid hour, latitude, and longitude. The neural
+        network predicts the parameters of a censored-shifted gamma
+        distribution, providing expected precipitation and full
+        threshold-exceedance probabilities.
+      </p>
+
+      <p>
+        Models were selected using 2024 validation data and evaluated
+        independently on held-out 2025 observations from MRMS.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Research product developed by Nasrin Attar ·
+      University of Texas at Arlington
+    </p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

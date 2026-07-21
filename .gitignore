@@ -1,0 +1,11 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.keras
+*.h5
+*.npz
+*.nc
+*.nc4
+*.grib2
+*.tar.gz
+logs/
