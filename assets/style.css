@@ -225,3 +225,238 @@ footer {
     padding-top: 52px;
   }
 }
+
+
+/* Forecast map explorer */
+
+.section-intro {
+  max-width: 760px;
+  margin: -12px 0 0;
+  color: var(--muted);
+}
+
+.map-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.catalog-badge {
+  flex: 0 0 auto;
+  padding: 9px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  background: var(--surface-soft);
+  font-size: 0.88rem;
+  font-weight: 750;
+}
+
+.catalog-badge.ready {
+  color: var(--success);
+  border-color: #afd9c1;
+  background: var(--success-soft);
+}
+
+.map-controls {
+  display: grid;
+  grid-template-columns:
+    minmax(180px, 0.75fr)
+    minmax(210px, 1fr)
+    minmax(260px, 1.4fr);
+  gap: 16px;
+  margin: 28px 0 18px;
+}
+
+.map-controls label {
+  display: grid;
+  gap: 7px;
+}
+
+.map-controls label span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.map-controls select {
+  width: 100%;
+  min-height: 47px;
+  padding: 10px 38px 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  color: var(--text);
+  background: var(--surface);
+  font: inherit;
+  font-weight: 650;
+}
+
+.map-controls select:focus {
+  outline: 3px solid rgba(23, 105, 170, 0.15);
+  border-color: var(--accent);
+}
+
+.map-navigation {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.map-navigation button {
+  min-height: 42px;
+  padding: 9px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--accent-dark);
+  background: var(--surface-soft);
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.map-navigation button:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: #e1eef8;
+}
+
+.map-navigation button:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
+.map-selection-summary {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 0.93rem;
+  font-weight: 700;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.forecast-map-shell {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #e8eef5;
+}
+
+.forecast-map-shell img {
+  display: block;
+  width: 100%;
+  min-height: 380px;
+  object-fit: contain;
+  opacity: 0;
+  background: white;
+  transition: opacity 180ms ease;
+}
+
+.forecast-map-shell img.loaded {
+  opacity: 1;
+}
+
+.forecast-map-loading {
+  position: absolute;
+  inset: 0 0 72px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  background:
+    linear-gradient(
+      110deg,
+      #edf2f7 8%,
+      #f8fafc 18%,
+      #edf2f7 33%
+    );
+  background-size: 200% 100%;
+  font-weight: 750;
+  animation: map-loading 1.5s linear infinite;
+}
+
+.forecast-map-loading[hidden] {
+  display: none;
+}
+
+@keyframes map-loading {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+.forecast-map-shell figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 72px;
+  padding: 14px 18px;
+  border-top: 1px solid var(--border);
+  background: white;
+}
+
+.forecast-map-shell figcaption div {
+  display: grid;
+  gap: 3px;
+}
+
+.forecast-map-shell figcaption strong {
+  color: var(--accent-dark);
+}
+
+.forecast-map-shell figcaption span {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.forecast-map-shell figcaption a {
+  flex: 0 0 auto;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.forecast-map-shell figcaption a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 850px) {
+  .map-heading {
+    display: grid;
+  }
+
+  .catalog-badge {
+    justify-self: start;
+  }
+
+  .map-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .map-navigation {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .map-selection-summary {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    white-space: normal;
+  }
+
+  .forecast-map-shell img {
+    min-height: 230px;
+  }
+
+  .forecast-map-shell figcaption {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

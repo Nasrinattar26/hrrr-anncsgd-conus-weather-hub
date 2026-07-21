@@ -63,6 +63,82 @@
       </div>
     </section>
 
+
+    <section class="section map-explorer-section">
+      <div class="section-heading map-heading">
+        <div>
+          <p class="section-label">Operational forecast maps</p>
+          <h2>CONUS forecast-map explorer</h2>
+          <p class="section-intro">
+            Select a forecast duration, accumulation window, and ANN-CSGD
+            product. Maps are generated from the latest successful HRRR run.
+          </p>
+        </div>
+
+        <div id="map-catalog-status" class="catalog-badge">
+          Loading map catalog…
+        </div>
+      </div>
+
+      <div class="map-controls">
+        <label>
+          <span>Duration</span>
+          <select id="map-duration" aria-label="Forecast duration"></select>
+        </label>
+
+        <label>
+          <span>Forecast window</span>
+          <select id="map-window" aria-label="Forecast window"></select>
+        </label>
+
+        <label>
+          <span>Product</span>
+          <select id="map-product" aria-label="Forecast product"></select>
+        </label>
+      </div>
+
+      <div class="map-navigation">
+        <button id="previous-window" type="button">
+          ← Previous window
+        </button>
+
+        <div id="map-selection-summary" class="map-selection-summary">
+          Loading forecast map…
+        </div>
+
+        <button id="next-window" type="button">
+          Next window →
+        </button>
+      </div>
+
+      <figure class="forecast-map-shell">
+        <div id="forecast-map-loading" class="forecast-map-loading">
+          Loading map…
+        </div>
+
+        <img
+          id="forecast-map"
+          alt="HRRR ANN-CSGD CONUS precipitation forecast map"
+        >
+
+        <figcaption>
+          <div>
+            <strong id="forecast-map-title">Forecast map</strong>
+            <span id="forecast-map-validity"></span>
+          </div>
+
+          <a
+            id="forecast-map-full"
+            href="#"
+            target="_blank"
+            rel="noopener"
+          >
+            Open full-resolution map
+          </a>
+        </figcaption>
+      </figure>
+    </section>
+
     <section class="section">
       <p class="section-label">Held-out 2025 verification</p>
       <h2>Model performance</h2>
