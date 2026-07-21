@@ -1,7 +1,7 @@
 window.HRRR_MAP_CATALOG = {
   "title": "HRRR ANN-CSGD CONUS Forecast Maps",
   "init": "2026072112",
-  "created_utc": "2026-07-21 18:01 UTC",
+  "created_utc": "2026-07-21 18:42 UTC",
   "n_files": 105,
   "durations": {
     "6h": {
@@ -50,7 +50,7 @@ window.HRRR_MAP_CATALOG = {
               "units": "mm",
               "kind": "image",
               "path": "products/maps/2026072112/6h/f00_f06/expected_precip_mm.png",
-              "size_bytes": 433527
+              "size_bytes": 419007
             },
             {
               "duration_hours": 6,
@@ -118,7 +118,7 @@ window.HRRR_MAP_CATALOG = {
               "units": "mm",
               "kind": "image",
               "path": "products/maps/2026072112/6h/f06_f12/expected_precip_mm.png",
-              "size_bytes": 455353
+              "size_bytes": 431852
             },
             {
               "duration_hours": 6,
@@ -186,7 +186,7 @@ window.HRRR_MAP_CATALOG = {
               "units": "mm",
               "kind": "image",
               "path": "products/maps/2026072112/6h/f12_f18/expected_precip_mm.png",
-              "size_bytes": 452405
+              "size_bytes": 428860
             },
             {
               "duration_hours": 6,
@@ -254,7 +254,7 @@ window.HRRR_MAP_CATALOG = {
               "units": "mm",
               "kind": "image",
               "path": "products/maps/2026072112/6h/f18_f24/expected_precip_mm.png",
-              "size_bytes": 447629
+              "size_bytes": 419188
             },
             {
               "duration_hours": 6,
@@ -322,7 +322,7 @@ window.HRRR_MAP_CATALOG = {
               "units": "mm",
               "kind": "image",
               "path": "products/maps/2026072112/6h/f24_f30/expected_precip_mm.png",
-              "size_bytes": 437785
+              "size_bytes": 417755
             },
             {
               "duration_hours": 6,
@@ -390,7 +390,7 @@ window.HRRR_MAP_CATALOG = {
               "units": "mm",
               "kind": "image",
               "path": "products/maps/2026072112/6h/f30_f36/expected_precip_mm.png",
-              "size_bytes": 455038
+              "size_bytes": 428711
             },
             {
               "duration_hours": 6,
@@ -458,7 +458,7 @@ window.HRRR_MAP_CATALOG = {
               "units": "mm",
               "kind": "image",
               "path": "products/maps/2026072112/6h/f36_f42/expected_precip_mm.png",
-              "size_bytes": 450695
+              "size_bytes": 425415
             },
             {
               "duration_hours": 6,
@@ -526,7 +526,7 @@ window.HRRR_MAP_CATALOG = {
               "units": "mm",
               "kind": "image",
               "path": "products/maps/2026072112/6h/f42_f48/expected_precip_mm.png",
-              "size_bytes": 442535
+              "size_bytes": 419684
             },
             {
               "duration_hours": 6,
@@ -626,7 +626,7 @@ window.HRRR_MAP_CATALOG = {
               "units": "mm",
               "kind": "image",
               "path": "products/maps/2026072112/12h/f00_f12/expected_precip_mm.png",
-              "size_bytes": 457569
+              "size_bytes": 434599
             },
             {
               "duration_hours": 12,
@@ -694,7 +694,7 @@ window.HRRR_MAP_CATALOG = {
               "units": "mm",
               "kind": "image",
               "path": "products/maps/2026072112/12h/f06_f18/expected_precip_mm.png",
-              "size_bytes": 458065
+              "size_bytes": 438180
             },
             {
               "duration_hours": 12,
@@ -762,7 +762,7 @@ window.HRRR_MAP_CATALOG = {
               "units": "mm",
               "kind": "image",
               "path": "products/maps/2026072112/12h/f12_f24/expected_precip_mm.png",
-              "size_bytes": 460491
+              "size_bytes": 434071
             },
             {
               "duration_hours": 12,
@@ -830,7 +830,7 @@ window.HRRR_MAP_CATALOG = {
               "units": "mm",
               "kind": "image",
               "path": "products/maps/2026072112/12h/f18_f30/expected_precip_mm.png",
-              "size_bytes": 457880
+              "size_bytes": 426930
             },
             {
               "duration_hours": 12,
@@ -898,7 +898,7 @@ window.HRRR_MAP_CATALOG = {
               "units": "mm",
               "kind": "image",
               "path": "products/maps/2026072112/12h/f24_f36/expected_precip_mm.png",
-              "size_bytes": 461264
+              "size_bytes": 433773
             },
             {
               "duration_hours": 12,
@@ -966,7 +966,7 @@ window.HRRR_MAP_CATALOG = {
               "units": "mm",
               "kind": "image",
               "path": "products/maps/2026072112/12h/f30_f42/expected_precip_mm.png",
-              "size_bytes": 460411
+              "size_bytes": 436574
             },
             {
               "duration_hours": 12,
@@ -1034,7 +1034,7 @@ window.HRRR_MAP_CATALOG = {
               "units": "mm",
               "kind": "image",
               "path": "products/maps/2026072112/12h/f36_f48/expected_precip_mm.png",
-              "size_bytes": 458115
+              "size_bytes": 432063
             },
             {
               "duration_hours": 12,
@@ -1139,7 +1139,7 @@ window.HRRR_MAP_CATALOG = {
               "units": "mm",
               "kind": "image",
               "path": "products/maps/2026072112/24h/f00_f24/expected_precip_mm.png",
-              "size_bytes": 461649
+              "size_bytes": 441436
             },
             {
               "duration_hours": 24,
@@ -1219,7 +1219,7 @@ window.HRRR_MAP_CATALOG = {
               "units": "mm",
               "kind": "image",
               "path": "products/maps/2026072112/24h/f06_f30/expected_precip_mm.png",
-              "size_bytes": 462574
+              "size_bytes": 442109
             },
             {
               "duration_hours": 24,
@@ -1299,7 +1299,7 @@ window.HRRR_MAP_CATALOG = {
               "units": "mm",
               "kind": "image",
               "path": "products/maps/2026072112/24h/f12_f36/expected_precip_mm.png",
-              "size_bytes": 463535
+              "size_bytes": 442871
             },
             {
               "duration_hours": 24,
@@ -1379,7 +1379,7 @@ window.HRRR_MAP_CATALOG = {
               "units": "mm",
               "kind": "image",
               "path": "products/maps/2026072112/24h/f18_f42/expected_precip_mm.png",
-              "size_bytes": 465031
+              "size_bytes": 441664
             },
             {
               "duration_hours": 24,
@@ -1459,7 +1459,7 @@ window.HRRR_MAP_CATALOG = {
               "units": "mm",
               "kind": "image",
               "path": "products/maps/2026072112/24h/f24_f48/expected_precip_mm.png",
-              "size_bytes": 465856
+              "size_bytes": 441966
             },
             {
               "duration_hours": 24,
@@ -1537,7 +1537,7 @@ window.HRRR_MAP_CATALOG = {
       "units": "mm",
       "kind": "image",
       "path": "products/maps/2026072112/6h/f00_f06/expected_precip_mm.png",
-      "size_bytes": 433527
+      "size_bytes": 419007
     },
     {
       "duration_hours": 6,
@@ -1597,7 +1597,7 @@ window.HRRR_MAP_CATALOG = {
       "units": "mm",
       "kind": "image",
       "path": "products/maps/2026072112/6h/f06_f12/expected_precip_mm.png",
-      "size_bytes": 455353
+      "size_bytes": 431852
     },
     {
       "duration_hours": 6,
@@ -1657,7 +1657,7 @@ window.HRRR_MAP_CATALOG = {
       "units": "mm",
       "kind": "image",
       "path": "products/maps/2026072112/6h/f12_f18/expected_precip_mm.png",
-      "size_bytes": 452405
+      "size_bytes": 428860
     },
     {
       "duration_hours": 6,
@@ -1717,7 +1717,7 @@ window.HRRR_MAP_CATALOG = {
       "units": "mm",
       "kind": "image",
       "path": "products/maps/2026072112/6h/f18_f24/expected_precip_mm.png",
-      "size_bytes": 447629
+      "size_bytes": 419188
     },
     {
       "duration_hours": 6,
@@ -1777,7 +1777,7 @@ window.HRRR_MAP_CATALOG = {
       "units": "mm",
       "kind": "image",
       "path": "products/maps/2026072112/6h/f24_f30/expected_precip_mm.png",
-      "size_bytes": 437785
+      "size_bytes": 417755
     },
     {
       "duration_hours": 6,
@@ -1837,7 +1837,7 @@ window.HRRR_MAP_CATALOG = {
       "units": "mm",
       "kind": "image",
       "path": "products/maps/2026072112/6h/f30_f36/expected_precip_mm.png",
-      "size_bytes": 455038
+      "size_bytes": 428711
     },
     {
       "duration_hours": 6,
@@ -1897,7 +1897,7 @@ window.HRRR_MAP_CATALOG = {
       "units": "mm",
       "kind": "image",
       "path": "products/maps/2026072112/6h/f36_f42/expected_precip_mm.png",
-      "size_bytes": 450695
+      "size_bytes": 425415
     },
     {
       "duration_hours": 6,
@@ -1957,7 +1957,7 @@ window.HRRR_MAP_CATALOG = {
       "units": "mm",
       "kind": "image",
       "path": "products/maps/2026072112/6h/f42_f48/expected_precip_mm.png",
-      "size_bytes": 442535
+      "size_bytes": 419684
     },
     {
       "duration_hours": 6,
@@ -2017,7 +2017,7 @@ window.HRRR_MAP_CATALOG = {
       "units": "mm",
       "kind": "image",
       "path": "products/maps/2026072112/12h/f00_f12/expected_precip_mm.png",
-      "size_bytes": 457569
+      "size_bytes": 434599
     },
     {
       "duration_hours": 12,
@@ -2077,7 +2077,7 @@ window.HRRR_MAP_CATALOG = {
       "units": "mm",
       "kind": "image",
       "path": "products/maps/2026072112/12h/f06_f18/expected_precip_mm.png",
-      "size_bytes": 458065
+      "size_bytes": 438180
     },
     {
       "duration_hours": 12,
@@ -2137,7 +2137,7 @@ window.HRRR_MAP_CATALOG = {
       "units": "mm",
       "kind": "image",
       "path": "products/maps/2026072112/12h/f12_f24/expected_precip_mm.png",
-      "size_bytes": 460491
+      "size_bytes": 434071
     },
     {
       "duration_hours": 12,
@@ -2197,7 +2197,7 @@ window.HRRR_MAP_CATALOG = {
       "units": "mm",
       "kind": "image",
       "path": "products/maps/2026072112/12h/f18_f30/expected_precip_mm.png",
-      "size_bytes": 457880
+      "size_bytes": 426930
     },
     {
       "duration_hours": 12,
@@ -2257,7 +2257,7 @@ window.HRRR_MAP_CATALOG = {
       "units": "mm",
       "kind": "image",
       "path": "products/maps/2026072112/12h/f24_f36/expected_precip_mm.png",
-      "size_bytes": 461264
+      "size_bytes": 433773
     },
     {
       "duration_hours": 12,
@@ -2317,7 +2317,7 @@ window.HRRR_MAP_CATALOG = {
       "units": "mm",
       "kind": "image",
       "path": "products/maps/2026072112/12h/f30_f42/expected_precip_mm.png",
-      "size_bytes": 460411
+      "size_bytes": 436574
     },
     {
       "duration_hours": 12,
@@ -2377,7 +2377,7 @@ window.HRRR_MAP_CATALOG = {
       "units": "mm",
       "kind": "image",
       "path": "products/maps/2026072112/12h/f36_f48/expected_precip_mm.png",
-      "size_bytes": 458115
+      "size_bytes": 432063
     },
     {
       "duration_hours": 12,
@@ -2437,7 +2437,7 @@ window.HRRR_MAP_CATALOG = {
       "units": "mm",
       "kind": "image",
       "path": "products/maps/2026072112/24h/f00_f24/expected_precip_mm.png",
-      "size_bytes": 461649
+      "size_bytes": 441436
     },
     {
       "duration_hours": 24,
@@ -2509,7 +2509,7 @@ window.HRRR_MAP_CATALOG = {
       "units": "mm",
       "kind": "image",
       "path": "products/maps/2026072112/24h/f06_f30/expected_precip_mm.png",
-      "size_bytes": 462574
+      "size_bytes": 442109
     },
     {
       "duration_hours": 24,
@@ -2581,7 +2581,7 @@ window.HRRR_MAP_CATALOG = {
       "units": "mm",
       "kind": "image",
       "path": "products/maps/2026072112/24h/f12_f36/expected_precip_mm.png",
-      "size_bytes": 463535
+      "size_bytes": 442871
     },
     {
       "duration_hours": 24,
@@ -2653,7 +2653,7 @@ window.HRRR_MAP_CATALOG = {
       "units": "mm",
       "kind": "image",
       "path": "products/maps/2026072112/24h/f18_f42/expected_precip_mm.png",
-      "size_bytes": 465031
+      "size_bytes": 441664
     },
     {
       "duration_hours": 24,
@@ -2725,7 +2725,7 @@ window.HRRR_MAP_CATALOG = {
       "units": "mm",
       "kind": "image",
       "path": "products/maps/2026072112/24h/f24_f48/expected_precip_mm.png",
-      "size_bytes": 465856
+      "size_bytes": 441966
     },
     {
       "duration_hours": 24,
