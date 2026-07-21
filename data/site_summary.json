@@ -1,0 +1,170 @@
+{
+  "project_name": "HRRR ANN-CSGD CONUS Weather Hub",
+  "description": "Duration-specific probabilistic precipitation postprocessing of HRRR forecasts using ANN-CSGD.",
+  "latest_initialization": "2025122900",
+  "latest_initialization_display": "December 29, 2025 at 00 UTC",
+  "production_status": "PASS",
+  "expected_products": 20,
+  "passed_products": 20,
+  "failed_products": 0,
+  "grid": {
+    "latitude_points": 117,
+    "longitude_points": 253,
+    "land_cells": 13318,
+    "latitude_range": [
+      23.0,
+      52.0
+    ],
+    "longitude_range": [
+      -127.0,
+      -64.0
+    ],
+    "resolution_degrees": 0.25
+  },
+  "durations": {
+    "6h": {
+      "duration_hours": 6,
+      "threshold_count": 4,
+      "mean_crps_anncsgd": 0.3347800073420752,
+      "mean_crps_raw_hrrr": 0.5775569745709396,
+      "crpss_anncsgd_vs_raw": 0.4203515461123477,
+      "thresholds": [
+        {
+          "label": "0.25in",
+          "threshold_mm": 6.35,
+          "events_2025": 940584,
+          "bss_anncsgd": 0.3331732957281482,
+          "bss_raw_hrrr": -0.1084957052563027,
+          "auc_anncsgd": 0.9543626150692134,
+          "auc_raw_hrrr": 0.7117352646333232
+        },
+        {
+          "label": "0.5in",
+          "threshold_mm": 12.7,
+          "events_2025": 392100,
+          "bss_anncsgd": 0.2470383018862769,
+          "bss_raw_hrrr": -0.2881201229459555,
+          "auc_anncsgd": 0.9586261145862164,
+          "auc_raw_hrrr": 0.666780035950968
+        },
+        {
+          "label": "1in",
+          "threshold_mm": 25.4,
+          "events_2025": 103842,
+          "bss_anncsgd": 0.1366684409727488,
+          "bss_raw_hrrr": -0.5814003714586258,
+          "auc_anncsgd": 0.9607231369832976,
+          "auc_raw_hrrr": 0.6080528456424312
+        },
+        {
+          "label": "2in",
+          "threshold_mm": 50.8,
+          "events_2025": 13030,
+          "bss_anncsgd": 0.0442109554112585,
+          "bss_raw_hrrr": -1.0112329372409,
+          "auc_anncsgd": 0.9537414326178578,
+          "auc_raw_hrrr": 0.5493151987408114
+        }
+      ]
+    },
+    "12h": {
+      "duration_hours": 12,
+      "threshold_count": 4,
+      "mean_crps_anncsgd": 0.589260625026409,
+      "mean_crps_raw_hrrr": 1.017348455932794,
+      "crpss_anncsgd_vs_raw": 0.420787812091263,
+      "thresholds": [
+        {
+          "label": "0.5in",
+          "threshold_mm": 12.7,
+          "events_2025": 798054,
+          "bss_anncsgd": 0.3509710680438663,
+          "bss_raw_hrrr": -0.0935282142319615,
+          "auc_anncsgd": 0.9628490924318236,
+          "auc_raw_hrrr": 0.7199831878359501
+        },
+        {
+          "label": "1in",
+          "threshold_mm": 25.4,
+          "events_2025": 249403,
+          "bss_anncsgd": 0.2346000613210689,
+          "bss_raw_hrrr": -0.3581088020079495,
+          "auc_anncsgd": 0.9688240188728392,
+          "auc_raw_hrrr": 0.6621648384291979
+        },
+        {
+          "label": "2in",
+          "threshold_mm": 50.8,
+          "events_2025": 38342,
+          "bss_anncsgd": 0.1196045989128486,
+          "bss_raw_hrrr": -0.7243169609130444,
+          "auc_anncsgd": 0.9707951127080724,
+          "auc_raw_hrrr": 0.6041892133930759
+        },
+        {
+          "label": "3in",
+          "threshold_mm": 76.2,
+          "events_2025": 8263,
+          "bss_anncsgd": 0.0509026833218914,
+          "bss_raw_hrrr": -0.9875694917440055,
+          "auc_anncsgd": 0.9602007574984688,
+          "auc_raw_hrrr": 0.5631587822837465
+        }
+      ]
+    },
+    "24h": {
+      "duration_hours": 24,
+      "threshold_count": 5,
+      "mean_crps_anncsgd": 1.072531658820746,
+      "mean_crps_raw_hrrr": 1.8683949396813728,
+      "crpss_anncsgd_vs_raw": 0.4259609485970613,
+      "thresholds": [
+        {
+          "label": "0.5in",
+          "threshold_mm": 12.7,
+          "events_2025": 1240965,
+          "bss_anncsgd": 0.4235408807975858,
+          "bss_raw_hrrr": 0.0229028059865348,
+          "auc_anncsgd": 0.9591989746857468,
+          "auc_raw_hrrr": 0.7552906727703095
+        },
+        {
+          "label": "1in",
+          "threshold_mm": 25.4,
+          "events_2025": 460544,
+          "bss_anncsgd": 0.317938792370506,
+          "bss_raw_hrrr": -0.1933921741215523,
+          "auc_anncsgd": 0.9666021721175412,
+          "auc_raw_hrrr": 0.7062259453289348
+        },
+        {
+          "label": "2in",
+          "threshold_mm": 50.8,
+          "events_2025": 86106,
+          "bss_anncsgd": 0.2095646688624804,
+          "bss_raw_hrrr": -0.5144549677846206,
+          "auc_anncsgd": 0.9740383285274627,
+          "auc_raw_hrrr": 0.6556465321763622
+        },
+        {
+          "label": "3in",
+          "threshold_mm": 76.2,
+          "events_2025": 22804,
+          "bss_anncsgd": 0.1626060494071212,
+          "bss_raw_hrrr": -0.6647072150446136,
+          "auc_anncsgd": 0.9734841619019576,
+          "auc_raw_hrrr": 0.6319082592847745
+        },
+        {
+          "label": "5in",
+          "threshold_mm": 127.0,
+          "events_2025": 2399,
+          "bss_anncsgd": 0.0453664399121408,
+          "bss_raw_hrrr": -1.1330455428892892,
+          "auc_anncsgd": 0.9338214315814116,
+          "auc_raw_hrrr": 0.5860129392748451
+        }
+      ]
+    }
+  }
+}
