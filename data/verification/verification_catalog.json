@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "status": "SUCCESS",
+  "product": "HRRR ANN-CSGD operational precipitation verification",
+  "retention_definition": "Latest seven successful forecast initializations, newest to oldest.",
+  "maximum_retained_runs": 7,
+  "retained_run_count": 1,
+  "complete_run_count": 0,
+  "partial_run_count": 1,
+  "latest_initialization": "2026072112",
+  "latest_valid_time": "2026-07-22T12:00:00Z",
+  "metric_definitions": {
+    "BSS": "Brier Skill Score relative to monthly historical MRMS event-frequency climatology.",
+    "POD": "Hits divided by hits plus misses.",
+    "FAR": "False alarms divided by hits plus false alarms.",
+    "CSI": "Hits divided by hits plus misses plus false alarms."
+  },
+  "categorical_forecast_definition": "ANN-CSGD expected precipitation greater than or equal to the event threshold.",
+  "runs": [
+    {
+      "initialization": "2026072112",
+      "verification_state": "PARTIAL",
+      "is_fully_verified": false,
+      "forecast_window_count": 20,
+      "completed_window_count": 8,
+      "pending_window_count": 12,
+      "threshold_row_count": 49,
+      "earliest_valid_time": "2026-07-21T18:00:00Z",
+      "latest_valid_time": "2026-07-22T12:00:00Z",
+      "duration_window_counts": {
+        "6": 4,
+        "12": 3,
+        "24": 1
+      },
+      "metric_ranges": {
+        "POD": {
+          "finite_count": 47,
+          "minimum": 0.0,
+          "maximum": 0.6522556390977443
+        },
+        "FAR": {
+          "finite_count": 20,
+          "minimum": 0.14285714285714285,
+          "maximum": 0.6915422885572139
+        },
+        "CSI": {
+          "finite_count": 47,
+          "minimum": 0.0,
+          "maximum": 0.4521172638436482
+        },
+        "brier_skill_score": {
+          "finite_count": 49,
+          "minimum": -0.9103207792529711,
+          "maximum": 0.3903017135927087
+        }
+      },
+      "summary_url": "runs/2026072112/verification_summary.json",
+      "csv_url": "runs/2026072112/verification_metrics.csv"
+    }
+  ]
+}

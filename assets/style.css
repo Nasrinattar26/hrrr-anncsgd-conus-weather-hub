@@ -1163,3 +1163,188 @@ footer p {
 }
 
 /* END DASHBOARD NAVIGATION STATE FIX */
+
+/* BEGIN OPERATIONAL VERIFICATION INTERFACE */
+
+.operational-verification-panel {
+  border-left: 5px solid var(--fifa-magenta);
+}
+
+.verification-state {
+  min-width: 100px;
+}
+
+.verification-state.complete {
+  color: var(--green);
+  border: 1px solid #abd6bf;
+  background: var(--soft-green);
+}
+
+.verification-state.partial {
+  color: #7a4b00;
+  border: 1px solid #e7c77c;
+  background: #fff6d8;
+}
+
+.verification-state.error {
+  color: #a62929;
+  border: 1px solid #efb4b4;
+  background: #fff1f1;
+}
+
+.verification-live-summary {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.verification-controls {
+  display: grid;
+  grid-template-columns:
+    minmax(220px, 1.25fr)
+    minmax(190px, 0.85fr)
+    minmax(260px, 1.4fr);
+  gap: 14px;
+  margin: 22px 0 16px;
+}
+
+.verification-control {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+  color: var(--fifa-navy);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.verification-control select {
+  width: 100%;
+  min-height: 44px;
+  padding: 9px 38px 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  color: var(--text);
+  background: white;
+  font: inherit;
+  font-weight: 650;
+}
+
+.verification-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0 0 14px;
+}
+
+.verification-toolbar p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.verification-table-wrap {
+  max-height: 620px;
+  overflow: auto;
+}
+
+.verification-metrics-table {
+  min-width: 940px;
+}
+
+.verification-metrics-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.verification-metrics-table tbody tr:hover {
+  background: rgba(40, 80, 210, 0.045);
+}
+
+.verification-metrics-table td:nth-child(1),
+.verification-metrics-table td:nth-child(2),
+.verification-metrics-table td:nth-child(3),
+.verification-metrics-table td:nth-child(4),
+.verification-metrics-table th:nth-child(1),
+.verification-metrics-table th:nth-child(2),
+.verification-metrics-table th:nth-child(3),
+.verification-metrics-table th:nth-child(4) {
+  text-align: left;
+}
+
+.verification-metric-positive {
+  color: var(--green);
+  font-weight: 800;
+}
+
+.verification-metric-negative {
+  color: #a62929;
+  font-weight: 800;
+}
+
+.verification-empty {
+  padding: 28px 16px;
+  color: var(--muted);
+  text-align: center !important;
+  white-space: normal;
+}
+
+.verification-method-note {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.verification-method-note p {
+  margin: 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--muted);
+  background: var(--fifa-soft-white);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.verification-method-note strong {
+  color: var(--fifa-navy);
+}
+
+@media (max-width: 980px) {
+  .verification-live-summary,
+  .verification-controls,
+  .verification-method-note {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .verification-controls
+  .verification-control:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 680px) {
+  .verification-live-summary,
+  .verification-controls,
+  .verification-method-note {
+    grid-template-columns: 1fr;
+  }
+
+  .verification-controls
+  .verification-control:first-child {
+    grid-column: auto;
+  }
+
+  .verification-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .verification-toolbar
+  .download-file-link {
+    width: 100%;
+  }
+}
+
+/* END OPERATIONAL VERIFICATION INTERFACE */

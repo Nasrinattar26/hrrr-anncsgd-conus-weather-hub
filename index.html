@@ -450,60 +450,153 @@
         ></div>
       </section>
 
-      <section
+            <section
         id="verification"
-        class="panel data-panel"
+        class="panel data-panel operational-verification-panel"
       >
         <div class="section-title">
           <div>
             <p class="eyebrow dark-eyebrow">
-              Held-out 2025 verification
+              Operational forecast verification
             </p>
-            <h2>Model performance</h2>
+
+            <h2>BSS, POD, FAR, and CSI</h2>
+
             <p class="section-intro">
-              Independent probabilistic verification against MRMS
-              precipitation observations.
+              Verification is retained for up to the latest seven
+              successful forecast initializations. This is a sequence
+              of operational runs, not Day 1 through Day 7 forecast
+              lead times. Each run fills as duration-matched MRMS
+              observations become available.
             </p>
           </div>
 
-          <span class="pill magenta-pill">
-            Independent test
+          <span
+            id="verification-state-badge"
+            class="pill verification-state partial"
+          >
+            Loading
           </span>
         </div>
 
-        <div class="verification-callout">
+        <p
+          id="verification-catalog-status"
+          class="catalog-status"
+          aria-live="polite"
+        >
+          Loading the operational verification catalog…
+        </p>
+
+        <div class="verification-callout verification-live-summary">
           <div>
-            <span class="small-label">Verification period</span>
-            <strong>Held-out 2025</strong>
+            <span class="small-label">Run state</span>
+            <strong id="verification-run-state">Loading</strong>
           </div>
 
           <div>
-            <span class="small-label">Reference forecast</span>
-            <strong>Raw HRRR</strong>
+            <span class="small-label">Verified windows</span>
+            <strong id="verification-window-progress">—</strong>
           </div>
 
           <div>
-            <span class="small-label">Observation analysis</span>
-            <strong>MRMS precipitation</strong>
+            <span class="small-label">Pending windows</span>
+            <strong id="verification-pending-count">—</strong>
+          </div>
+
+          <div>
+            <span class="small-label">Latest valid time</span>
+            <strong id="verification-latest-valid">—</strong>
           </div>
         </div>
 
-        <div class="table-wrap table-wrapper">
-          <table>
+        <div class="verification-controls">
+          <label class="verification-control">
+            <span>Forecast initialization</span>
+
+            <select id="verification-run">
+              <option value="">Loading…</option>
+            </select>
+          </label>
+
+          <label class="verification-control">
+            <span>Accumulation duration</span>
+
+            <select id="verification-duration">
+              <option value="all">All durations</option>
+            </select>
+          </label>
+
+          <label class="verification-control">
+            <span>Forecast window</span>
+
+            <select id="verification-window">
+              <option value="all">All verified windows</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="verification-toolbar">
+          <p
+            id="verification-selection-summary"
+            aria-live="polite"
+          >
+            Loading verification metrics…
+          </p>
+
+          <a
+            id="verification-csv-download"
+            class="download-file-link"
+            href="#"
+            download
+          >
+            Download run CSV
+          </a>
+        </div>
+
+        <div class="table-wrap table-wrapper verification-table-wrap">
+          <table class="verification-metrics-table">
             <thead>
               <tr>
+                <th>Valid time</th>
                 <th>Duration</th>
+                <th>Window</th>
                 <th>Threshold</th>
-                <th>2025 events</th>
-                <th>ANN-CSGD BSS</th>
-                <th>Raw HRRR BSS</th>
-                <th>ANN-CSGD AUC</th>
-                <th>Raw HRRR AUC</th>
+                <th>Events</th>
+                <th>POD</th>
+                <th>FAR</th>
+                <th>CSI</th>
+                <th>BSS</th>
               </tr>
             </thead>
 
-            <tbody id="verification-table"></tbody>
+            <tbody id="verification-table">
+              <tr>
+                <td colspan="9" class="verification-empty">
+                  Loading operational verification metrics…
+                </td>
+              </tr>
+            </tbody>
           </table>
+        </div>
+
+        <div class="verification-method-note">
+          <p>
+            <strong>BSS:</strong>
+            threshold-exceedance probability relative to monthly
+            historical MRMS event-frequency climatology.
+          </p>
+
+          <p>
+            <strong>POD, FAR, and CSI:</strong>
+            categorical events use ANN-CSGD expected precipitation
+            greater than or equal to the corresponding threshold.
+            No probability cutoff is used.
+          </p>
+
+          <p>
+            An em dash indicates that a metric is undefined, such as
+            FAR when no forecast events occurred.
+          </p>
         </div>
       </section>
 
