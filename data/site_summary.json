@@ -167,13 +167,26 @@
       ]
     }
   },
-  "updated_utc": "2026-07-21 19:02 UTC",
+  "updated_utc": "2026-07-22 16:12 UTC",
   "operational_run": {
     "initialization": "2026072112",
     "endpoint_count": 8,
     "product_count": 20,
-    "map_count": 105,
+    "map_count": 145,
+    "gif_count": 22,
+    "grib2_file_count": 20,
+    "grib2_sidecar_count": 20,
+    "grib2_message_count": 145,
+    "grib2_package_available": true,
+    "grib2_package": "products/grib2/2026072112/hrrr_anncsgd_2026072112_grib2_download_package.tar.gz",
     "status": "PASS",
     "published_data_prepared": true
-  }
+  },
+  "map_count": 145,
+  "gif_count": 22,
+  "grib2_file_count": 20,
+  "grib2_sidecar_count": 20,
+  "grib2_message_count": 145,
+  "grib2_package_available": true,
+  "grib2_package": "products/grib2/2026072112/hrrr_anncsgd_2026072112_grib2_download_package.tar.gz"
 }

@@ -1,8 +1,8 @@
 {
   "title": "HRRR ANN-CSGD CONUS Forecast Maps",
   "init": "2026072112",
-  "created_utc": "2026-07-21 18:42 UTC",
-  "n_files": 105,
+  "created_utc": "2026-07-21 21:11 UTC",
+  "n_files": 145,
   "durations": {
     "6h": {
       "duration_hours": 6,
@@ -30,6 +30,16 @@
         {
           "variable": "prob_gt_2inch_percent",
           "label": "Probability > 2 inches",
+          "units": "%"
+        },
+        {
+          "variable": "prob_gt_2yr6h_ari_percent",
+          "label": "Probability > local 2-year ARI",
+          "units": "%"
+        },
+        {
+          "variable": "prob_gt_5yr6h_ari_percent",
+          "label": "Probability > local 5-year ARI",
           "units": "%"
         }
       ],
@@ -99,6 +109,30 @@
               "kind": "image",
               "path": "products/maps/2026072112/6h/f00_f06/prob_gt_2inch_percent.png",
               "size_bytes": 406771
+            },
+            {
+              "duration_hours": 6,
+              "window": "f00_f06",
+              "start_fhr": 0,
+              "end_fhr": 6,
+              "variable": "prob_gt_2yr6h_ari_percent",
+              "label": "Probability > local 2-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/6h/f00_f06/prob_gt_2yr6h_ari_percent.png",
+              "size_bytes": 408665
+            },
+            {
+              "duration_hours": 6,
+              "window": "f00_f06",
+              "start_fhr": 0,
+              "end_fhr": 6,
+              "variable": "prob_gt_5yr6h_ari_percent",
+              "label": "Probability > local 5-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/6h/f00_f06/prob_gt_5yr6h_ari_percent.png",
+              "size_bytes": 407939
             }
           ]
         },
@@ -167,6 +201,30 @@
               "kind": "image",
               "path": "products/maps/2026072112/6h/f06_f12/prob_gt_2inch_percent.png",
               "size_bytes": 411322
+            },
+            {
+              "duration_hours": 6,
+              "window": "f06_f12",
+              "start_fhr": 6,
+              "end_fhr": 12,
+              "variable": "prob_gt_2yr6h_ari_percent",
+              "label": "Probability > local 2-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/6h/f06_f12/prob_gt_2yr6h_ari_percent.png",
+              "size_bytes": 414402
+            },
+            {
+              "duration_hours": 6,
+              "window": "f06_f12",
+              "start_fhr": 6,
+              "end_fhr": 12,
+              "variable": "prob_gt_5yr6h_ari_percent",
+              "label": "Probability > local 5-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/6h/f06_f12/prob_gt_5yr6h_ari_percent.png",
+              "size_bytes": 410347
             }
           ]
         },
@@ -235,6 +293,30 @@
               "kind": "image",
               "path": "products/maps/2026072112/6h/f12_f18/prob_gt_2inch_percent.png",
               "size_bytes": 409949
+            },
+            {
+              "duration_hours": 6,
+              "window": "f12_f18",
+              "start_fhr": 12,
+              "end_fhr": 18,
+              "variable": "prob_gt_2yr6h_ari_percent",
+              "label": "Probability > local 2-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/6h/f12_f18/prob_gt_2yr6h_ari_percent.png",
+              "size_bytes": 414579
+            },
+            {
+              "duration_hours": 6,
+              "window": "f12_f18",
+              "start_fhr": 12,
+              "end_fhr": 18,
+              "variable": "prob_gt_5yr6h_ari_percent",
+              "label": "Probability > local 5-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/6h/f12_f18/prob_gt_5yr6h_ari_percent.png",
+              "size_bytes": 410846
             }
           ]
         },
@@ -303,6 +385,30 @@
               "kind": "image",
               "path": "products/maps/2026072112/6h/f18_f24/prob_gt_2inch_percent.png",
               "size_bytes": 406724
+            },
+            {
+              "duration_hours": 6,
+              "window": "f18_f24",
+              "start_fhr": 18,
+              "end_fhr": 24,
+              "variable": "prob_gt_2yr6h_ari_percent",
+              "label": "Probability > local 2-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/6h/f18_f24/prob_gt_2yr6h_ari_percent.png",
+              "size_bytes": 409138
+            },
+            {
+              "duration_hours": 6,
+              "window": "f18_f24",
+              "start_fhr": 18,
+              "end_fhr": 24,
+              "variable": "prob_gt_5yr6h_ari_percent",
+              "label": "Probability > local 5-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/6h/f18_f24/prob_gt_5yr6h_ari_percent.png",
+              "size_bytes": 407850
             }
           ]
         },
@@ -371,6 +477,30 @@
               "kind": "image",
               "path": "products/maps/2026072112/6h/f24_f30/prob_gt_2inch_percent.png",
               "size_bytes": 406130
+            },
+            {
+              "duration_hours": 6,
+              "window": "f24_f30",
+              "start_fhr": 24,
+              "end_fhr": 30,
+              "variable": "prob_gt_2yr6h_ari_percent",
+              "label": "Probability > local 2-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/6h/f24_f30/prob_gt_2yr6h_ari_percent.png",
+              "size_bytes": 407861
+            },
+            {
+              "duration_hours": 6,
+              "window": "f24_f30",
+              "start_fhr": 24,
+              "end_fhr": 30,
+              "variable": "prob_gt_5yr6h_ari_percent",
+              "label": "Probability > local 5-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/6h/f24_f30/prob_gt_5yr6h_ari_percent.png",
+              "size_bytes": 407401
             }
           ]
         },
@@ -439,6 +569,30 @@
               "kind": "image",
               "path": "products/maps/2026072112/6h/f30_f36/prob_gt_2inch_percent.png",
               "size_bytes": 407642
+            },
+            {
+              "duration_hours": 6,
+              "window": "f30_f36",
+              "start_fhr": 30,
+              "end_fhr": 36,
+              "variable": "prob_gt_2yr6h_ari_percent",
+              "label": "Probability > local 2-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/6h/f30_f36/prob_gt_2yr6h_ari_percent.png",
+              "size_bytes": 413830
+            },
+            {
+              "duration_hours": 6,
+              "window": "f30_f36",
+              "start_fhr": 30,
+              "end_fhr": 36,
+              "variable": "prob_gt_5yr6h_ari_percent",
+              "label": "Probability > local 5-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/6h/f30_f36/prob_gt_5yr6h_ari_percent.png",
+              "size_bytes": 409446
             }
           ]
         },
@@ -507,6 +661,30 @@
               "kind": "image",
               "path": "products/maps/2026072112/6h/f36_f42/prob_gt_2inch_percent.png",
               "size_bytes": 408134
+            },
+            {
+              "duration_hours": 6,
+              "window": "f36_f42",
+              "start_fhr": 36,
+              "end_fhr": 42,
+              "variable": "prob_gt_2yr6h_ari_percent",
+              "label": "Probability > local 2-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/6h/f36_f42/prob_gt_2yr6h_ari_percent.png",
+              "size_bytes": 413994
+            },
+            {
+              "duration_hours": 6,
+              "window": "f36_f42",
+              "start_fhr": 36,
+              "end_fhr": 42,
+              "variable": "prob_gt_5yr6h_ari_percent",
+              "label": "Probability > local 5-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/6h/f36_f42/prob_gt_5yr6h_ari_percent.png",
+              "size_bytes": 411592
             }
           ]
         },
@@ -575,6 +753,30 @@
               "kind": "image",
               "path": "products/maps/2026072112/6h/f42_f48/prob_gt_2inch_percent.png",
               "size_bytes": 408571
+            },
+            {
+              "duration_hours": 6,
+              "window": "f42_f48",
+              "start_fhr": 42,
+              "end_fhr": 48,
+              "variable": "prob_gt_2yr6h_ari_percent",
+              "label": "Probability > local 2-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/6h/f42_f48/prob_gt_2yr6h_ari_percent.png",
+              "size_bytes": 412996
+            },
+            {
+              "duration_hours": 6,
+              "window": "f42_f48",
+              "start_fhr": 42,
+              "end_fhr": 48,
+              "variable": "prob_gt_5yr6h_ari_percent",
+              "label": "Probability > local 5-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/6h/f42_f48/prob_gt_5yr6h_ari_percent.png",
+              "size_bytes": 409103
             }
           ]
         }
@@ -606,6 +808,16 @@
         {
           "variable": "prob_gt_3inch_percent",
           "label": "Probability > 3 inches",
+          "units": "%"
+        },
+        {
+          "variable": "prob_gt_2yr12h_ari_percent",
+          "label": "Probability > local 2-year ARI",
+          "units": "%"
+        },
+        {
+          "variable": "prob_gt_5yr12h_ari_percent",
+          "label": "Probability > local 5-year ARI",
           "units": "%"
         }
       ],
@@ -675,6 +887,30 @@
               "kind": "image",
               "path": "products/maps/2026072112/12h/f00_f12/prob_gt_3inch_percent.png",
               "size_bytes": 408267
+            },
+            {
+              "duration_hours": 12,
+              "window": "f00_f12",
+              "start_fhr": 0,
+              "end_fhr": 12,
+              "variable": "prob_gt_2yr12h_ari_percent",
+              "label": "Probability > local 2-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/12h/f00_f12/prob_gt_2yr12h_ari_percent.png",
+              "size_bytes": 412818
+            },
+            {
+              "duration_hours": 12,
+              "window": "f00_f12",
+              "start_fhr": 0,
+              "end_fhr": 12,
+              "variable": "prob_gt_5yr12h_ari_percent",
+              "label": "Probability > local 5-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/12h/f00_f12/prob_gt_5yr12h_ari_percent.png",
+              "size_bytes": 409452
             }
           ]
         },
@@ -743,6 +979,30 @@
               "kind": "image",
               "path": "products/maps/2026072112/12h/f06_f18/prob_gt_3inch_percent.png",
               "size_bytes": 410215
+            },
+            {
+              "duration_hours": 12,
+              "window": "f06_f18",
+              "start_fhr": 6,
+              "end_fhr": 18,
+              "variable": "prob_gt_2yr12h_ari_percent",
+              "label": "Probability > local 2-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/12h/f06_f18/prob_gt_2yr12h_ari_percent.png",
+              "size_bytes": 418095
+            },
+            {
+              "duration_hours": 12,
+              "window": "f06_f18",
+              "start_fhr": 6,
+              "end_fhr": 18,
+              "variable": "prob_gt_5yr12h_ari_percent",
+              "label": "Probability > local 5-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/12h/f06_f18/prob_gt_5yr12h_ari_percent.png",
+              "size_bytes": 412683
             }
           ]
         },
@@ -811,6 +1071,30 @@
               "kind": "image",
               "path": "products/maps/2026072112/12h/f12_f24/prob_gt_3inch_percent.png",
               "size_bytes": 407512
+            },
+            {
+              "duration_hours": 12,
+              "window": "f12_f24",
+              "start_fhr": 12,
+              "end_fhr": 24,
+              "variable": "prob_gt_2yr12h_ari_percent",
+              "label": "Probability > local 2-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/12h/f12_f24/prob_gt_2yr12h_ari_percent.png",
+              "size_bytes": 413985
+            },
+            {
+              "duration_hours": 12,
+              "window": "f12_f24",
+              "start_fhr": 12,
+              "end_fhr": 24,
+              "variable": "prob_gt_5yr12h_ari_percent",
+              "label": "Probability > local 5-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/12h/f12_f24/prob_gt_5yr12h_ari_percent.png",
+              "size_bytes": 409685
             }
           ]
         },
@@ -879,6 +1163,30 @@
               "kind": "image",
               "path": "products/maps/2026072112/12h/f18_f30/prob_gt_3inch_percent.png",
               "size_bytes": 406590
+            },
+            {
+              "duration_hours": 12,
+              "window": "f18_f30",
+              "start_fhr": 18,
+              "end_fhr": 30,
+              "variable": "prob_gt_2yr12h_ari_percent",
+              "label": "Probability > local 2-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/12h/f18_f30/prob_gt_2yr12h_ari_percent.png",
+              "size_bytes": 409105
+            },
+            {
+              "duration_hours": 12,
+              "window": "f18_f30",
+              "start_fhr": 18,
+              "end_fhr": 30,
+              "variable": "prob_gt_5yr12h_ari_percent",
+              "label": "Probability > local 5-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/12h/f18_f30/prob_gt_5yr12h_ari_percent.png",
+              "size_bytes": 407749
             }
           ]
         },
@@ -947,6 +1255,30 @@
               "kind": "image",
               "path": "products/maps/2026072112/12h/f24_f36/prob_gt_3inch_percent.png",
               "size_bytes": 406285
+            },
+            {
+              "duration_hours": 12,
+              "window": "f24_f36",
+              "start_fhr": 24,
+              "end_fhr": 36,
+              "variable": "prob_gt_2yr12h_ari_percent",
+              "label": "Probability > local 2-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/12h/f24_f36/prob_gt_2yr12h_ari_percent.png",
+              "size_bytes": 411756
+            },
+            {
+              "duration_hours": 12,
+              "window": "f24_f36",
+              "start_fhr": 24,
+              "end_fhr": 36,
+              "variable": "prob_gt_5yr12h_ari_percent",
+              "label": "Probability > local 5-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/12h/f24_f36/prob_gt_5yr12h_ari_percent.png",
+              "size_bytes": 407891
             }
           ]
         },
@@ -1015,6 +1347,30 @@
               "kind": "image",
               "path": "products/maps/2026072112/12h/f30_f42/prob_gt_3inch_percent.png",
               "size_bytes": 406906
+            },
+            {
+              "duration_hours": 12,
+              "window": "f30_f42",
+              "start_fhr": 30,
+              "end_fhr": 42,
+              "variable": "prob_gt_2yr12h_ari_percent",
+              "label": "Probability > local 2-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/12h/f30_f42/prob_gt_2yr12h_ari_percent.png",
+              "size_bytes": 415307
+            },
+            {
+              "duration_hours": 12,
+              "window": "f30_f42",
+              "start_fhr": 30,
+              "end_fhr": 42,
+              "variable": "prob_gt_5yr12h_ari_percent",
+              "label": "Probability > local 5-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/12h/f30_f42/prob_gt_5yr12h_ari_percent.png",
+              "size_bytes": 412743
             }
           ]
         },
@@ -1083,6 +1439,30 @@
               "kind": "image",
               "path": "products/maps/2026072112/12h/f36_f48/prob_gt_3inch_percent.png",
               "size_bytes": 407579
+            },
+            {
+              "duration_hours": 12,
+              "window": "f36_f48",
+              "start_fhr": 36,
+              "end_fhr": 48,
+              "variable": "prob_gt_2yr12h_ari_percent",
+              "label": "Probability > local 2-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/12h/f36_f48/prob_gt_2yr12h_ari_percent.png",
+              "size_bytes": 415157
+            },
+            {
+              "duration_hours": 12,
+              "window": "f36_f48",
+              "start_fhr": 36,
+              "end_fhr": 48,
+              "variable": "prob_gt_5yr12h_ari_percent",
+              "label": "Probability > local 5-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/12h/f36_f48/prob_gt_5yr12h_ari_percent.png",
+              "size_bytes": 411727
             }
           ]
         }
@@ -1119,6 +1499,16 @@
         {
           "variable": "prob_gt_5inch_percent",
           "label": "Probability > 5 inches",
+          "units": "%"
+        },
+        {
+          "variable": "prob_gt_2yr24h_ari_percent",
+          "label": "Probability > local 2-year ARI",
+          "units": "%"
+        },
+        {
+          "variable": "prob_gt_5yr24h_ari_percent",
+          "label": "Probability > local 5-year ARI",
           "units": "%"
         }
       ],
@@ -1200,6 +1590,30 @@
               "kind": "image",
               "path": "products/maps/2026072112/24h/f00_f24/prob_gt_5inch_percent.png",
               "size_bytes": 406344
+            },
+            {
+              "duration_hours": 24,
+              "window": "f00_f24",
+              "start_fhr": 0,
+              "end_fhr": 24,
+              "variable": "prob_gt_2yr24h_ari_percent",
+              "label": "Probability > local 2-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/24h/f00_f24/prob_gt_2yr24h_ari_percent.png",
+              "size_bytes": 415504
+            },
+            {
+              "duration_hours": 24,
+              "window": "f00_f24",
+              "start_fhr": 0,
+              "end_fhr": 24,
+              "variable": "prob_gt_5yr24h_ari_percent",
+              "label": "Probability > local 5-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/24h/f00_f24/prob_gt_5yr24h_ari_percent.png",
+              "size_bytes": 410239
             }
           ]
         },
@@ -1280,6 +1694,30 @@
               "kind": "image",
               "path": "products/maps/2026072112/24h/f06_f30/prob_gt_5inch_percent.png",
               "size_bytes": 406755
+            },
+            {
+              "duration_hours": 24,
+              "window": "f06_f30",
+              "start_fhr": 6,
+              "end_fhr": 30,
+              "variable": "prob_gt_2yr24h_ari_percent",
+              "label": "Probability > local 2-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/24h/f06_f30/prob_gt_2yr24h_ari_percent.png",
+              "size_bytes": 415968
+            },
+            {
+              "duration_hours": 24,
+              "window": "f06_f30",
+              "start_fhr": 6,
+              "end_fhr": 30,
+              "variable": "prob_gt_5yr24h_ari_percent",
+              "label": "Probability > local 5-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/24h/f06_f30/prob_gt_5yr24h_ari_percent.png",
+              "size_bytes": 410671
             }
           ]
         },
@@ -1360,6 +1798,30 @@
               "kind": "image",
               "path": "products/maps/2026072112/24h/f12_f36/prob_gt_5inch_percent.png",
               "size_bytes": 406342
+            },
+            {
+              "duration_hours": 24,
+              "window": "f12_f36",
+              "start_fhr": 12,
+              "end_fhr": 36,
+              "variable": "prob_gt_2yr24h_ari_percent",
+              "label": "Probability > local 2-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/24h/f12_f36/prob_gt_2yr24h_ari_percent.png",
+              "size_bytes": 416051
+            },
+            {
+              "duration_hours": 24,
+              "window": "f12_f36",
+              "start_fhr": 12,
+              "end_fhr": 36,
+              "variable": "prob_gt_5yr24h_ari_percent",
+              "label": "Probability > local 5-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/24h/f12_f36/prob_gt_5yr24h_ari_percent.png",
+              "size_bytes": 409378
             }
           ]
         },
@@ -1440,6 +1902,30 @@
               "kind": "image",
               "path": "products/maps/2026072112/24h/f18_f42/prob_gt_5inch_percent.png",
               "size_bytes": 406451
+            },
+            {
+              "duration_hours": 24,
+              "window": "f18_f42",
+              "start_fhr": 18,
+              "end_fhr": 42,
+              "variable": "prob_gt_2yr24h_ari_percent",
+              "label": "Probability > local 2-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/24h/f18_f42/prob_gt_2yr24h_ari_percent.png",
+              "size_bytes": 416740
+            },
+            {
+              "duration_hours": 24,
+              "window": "f18_f42",
+              "start_fhr": 18,
+              "end_fhr": 42,
+              "variable": "prob_gt_5yr24h_ari_percent",
+              "label": "Probability > local 5-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/24h/f18_f42/prob_gt_5yr24h_ari_percent.png",
+              "size_bytes": 410913
             }
           ]
         },
@@ -1520,6 +2006,30 @@
               "kind": "image",
               "path": "products/maps/2026072112/24h/f24_f48/prob_gt_5inch_percent.png",
               "size_bytes": 406070
+            },
+            {
+              "duration_hours": 24,
+              "window": "f24_f48",
+              "start_fhr": 24,
+              "end_fhr": 48,
+              "variable": "prob_gt_2yr24h_ari_percent",
+              "label": "Probability > local 2-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/24h/f24_f48/prob_gt_2yr24h_ari_percent.png",
+              "size_bytes": 417125
+            },
+            {
+              "duration_hours": 24,
+              "window": "f24_f48",
+              "start_fhr": 24,
+              "end_fhr": 48,
+              "variable": "prob_gt_5yr24h_ari_percent",
+              "label": "Probability > local 5-year ARI",
+              "units": "%",
+              "kind": "image",
+              "path": "products/maps/2026072112/24h/f24_f48/prob_gt_5yr24h_ari_percent.png",
+              "size_bytes": 411161
             }
           ]
         }
@@ -1589,6 +2099,30 @@
     },
     {
       "duration_hours": 6,
+      "window": "f00_f06",
+      "start_fhr": 0,
+      "end_fhr": 6,
+      "variable": "prob_gt_2yr6h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/6h/f00_f06/prob_gt_2yr6h_ari_percent.png",
+      "size_bytes": 408665
+    },
+    {
+      "duration_hours": 6,
+      "window": "f00_f06",
+      "start_fhr": 0,
+      "end_fhr": 6,
+      "variable": "prob_gt_5yr6h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/6h/f00_f06/prob_gt_5yr6h_ari_percent.png",
+      "size_bytes": 407939
+    },
+    {
+      "duration_hours": 6,
       "window": "f06_f12",
       "start_fhr": 6,
       "end_fhr": 12,
@@ -1646,6 +2180,30 @@
       "kind": "image",
       "path": "products/maps/2026072112/6h/f06_f12/prob_gt_2inch_percent.png",
       "size_bytes": 411322
+    },
+    {
+      "duration_hours": 6,
+      "window": "f06_f12",
+      "start_fhr": 6,
+      "end_fhr": 12,
+      "variable": "prob_gt_2yr6h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/6h/f06_f12/prob_gt_2yr6h_ari_percent.png",
+      "size_bytes": 414402
+    },
+    {
+      "duration_hours": 6,
+      "window": "f06_f12",
+      "start_fhr": 6,
+      "end_fhr": 12,
+      "variable": "prob_gt_5yr6h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/6h/f06_f12/prob_gt_5yr6h_ari_percent.png",
+      "size_bytes": 410347
     },
     {
       "duration_hours": 6,
@@ -1709,6 +2267,30 @@
     },
     {
       "duration_hours": 6,
+      "window": "f12_f18",
+      "start_fhr": 12,
+      "end_fhr": 18,
+      "variable": "prob_gt_2yr6h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/6h/f12_f18/prob_gt_2yr6h_ari_percent.png",
+      "size_bytes": 414579
+    },
+    {
+      "duration_hours": 6,
+      "window": "f12_f18",
+      "start_fhr": 12,
+      "end_fhr": 18,
+      "variable": "prob_gt_5yr6h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/6h/f12_f18/prob_gt_5yr6h_ari_percent.png",
+      "size_bytes": 410846
+    },
+    {
+      "duration_hours": 6,
       "window": "f18_f24",
       "start_fhr": 18,
       "end_fhr": 24,
@@ -1766,6 +2348,30 @@
       "kind": "image",
       "path": "products/maps/2026072112/6h/f18_f24/prob_gt_2inch_percent.png",
       "size_bytes": 406724
+    },
+    {
+      "duration_hours": 6,
+      "window": "f18_f24",
+      "start_fhr": 18,
+      "end_fhr": 24,
+      "variable": "prob_gt_2yr6h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/6h/f18_f24/prob_gt_2yr6h_ari_percent.png",
+      "size_bytes": 409138
+    },
+    {
+      "duration_hours": 6,
+      "window": "f18_f24",
+      "start_fhr": 18,
+      "end_fhr": 24,
+      "variable": "prob_gt_5yr6h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/6h/f18_f24/prob_gt_5yr6h_ari_percent.png",
+      "size_bytes": 407850
     },
     {
       "duration_hours": 6,
@@ -1829,6 +2435,30 @@
     },
     {
       "duration_hours": 6,
+      "window": "f24_f30",
+      "start_fhr": 24,
+      "end_fhr": 30,
+      "variable": "prob_gt_2yr6h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/6h/f24_f30/prob_gt_2yr6h_ari_percent.png",
+      "size_bytes": 407861
+    },
+    {
+      "duration_hours": 6,
+      "window": "f24_f30",
+      "start_fhr": 24,
+      "end_fhr": 30,
+      "variable": "prob_gt_5yr6h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/6h/f24_f30/prob_gt_5yr6h_ari_percent.png",
+      "size_bytes": 407401
+    },
+    {
+      "duration_hours": 6,
       "window": "f30_f36",
       "start_fhr": 30,
       "end_fhr": 36,
@@ -1886,6 +2516,30 @@
       "kind": "image",
       "path": "products/maps/2026072112/6h/f30_f36/prob_gt_2inch_percent.png",
       "size_bytes": 407642
+    },
+    {
+      "duration_hours": 6,
+      "window": "f30_f36",
+      "start_fhr": 30,
+      "end_fhr": 36,
+      "variable": "prob_gt_2yr6h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/6h/f30_f36/prob_gt_2yr6h_ari_percent.png",
+      "size_bytes": 413830
+    },
+    {
+      "duration_hours": 6,
+      "window": "f30_f36",
+      "start_fhr": 30,
+      "end_fhr": 36,
+      "variable": "prob_gt_5yr6h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/6h/f30_f36/prob_gt_5yr6h_ari_percent.png",
+      "size_bytes": 409446
     },
     {
       "duration_hours": 6,
@@ -1949,6 +2603,30 @@
     },
     {
       "duration_hours": 6,
+      "window": "f36_f42",
+      "start_fhr": 36,
+      "end_fhr": 42,
+      "variable": "prob_gt_2yr6h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/6h/f36_f42/prob_gt_2yr6h_ari_percent.png",
+      "size_bytes": 413994
+    },
+    {
+      "duration_hours": 6,
+      "window": "f36_f42",
+      "start_fhr": 36,
+      "end_fhr": 42,
+      "variable": "prob_gt_5yr6h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/6h/f36_f42/prob_gt_5yr6h_ari_percent.png",
+      "size_bytes": 411592
+    },
+    {
+      "duration_hours": 6,
       "window": "f42_f48",
       "start_fhr": 42,
       "end_fhr": 48,
@@ -2006,6 +2684,30 @@
       "kind": "image",
       "path": "products/maps/2026072112/6h/f42_f48/prob_gt_2inch_percent.png",
       "size_bytes": 408571
+    },
+    {
+      "duration_hours": 6,
+      "window": "f42_f48",
+      "start_fhr": 42,
+      "end_fhr": 48,
+      "variable": "prob_gt_2yr6h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/6h/f42_f48/prob_gt_2yr6h_ari_percent.png",
+      "size_bytes": 412996
+    },
+    {
+      "duration_hours": 6,
+      "window": "f42_f48",
+      "start_fhr": 42,
+      "end_fhr": 48,
+      "variable": "prob_gt_5yr6h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/6h/f42_f48/prob_gt_5yr6h_ari_percent.png",
+      "size_bytes": 409103
     },
     {
       "duration_hours": 12,
@@ -2069,6 +2771,30 @@
     },
     {
       "duration_hours": 12,
+      "window": "f00_f12",
+      "start_fhr": 0,
+      "end_fhr": 12,
+      "variable": "prob_gt_2yr12h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/12h/f00_f12/prob_gt_2yr12h_ari_percent.png",
+      "size_bytes": 412818
+    },
+    {
+      "duration_hours": 12,
+      "window": "f00_f12",
+      "start_fhr": 0,
+      "end_fhr": 12,
+      "variable": "prob_gt_5yr12h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/12h/f00_f12/prob_gt_5yr12h_ari_percent.png",
+      "size_bytes": 409452
+    },
+    {
+      "duration_hours": 12,
       "window": "f06_f18",
       "start_fhr": 6,
       "end_fhr": 18,
@@ -2126,6 +2852,30 @@
       "kind": "image",
       "path": "products/maps/2026072112/12h/f06_f18/prob_gt_3inch_percent.png",
       "size_bytes": 410215
+    },
+    {
+      "duration_hours": 12,
+      "window": "f06_f18",
+      "start_fhr": 6,
+      "end_fhr": 18,
+      "variable": "prob_gt_2yr12h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/12h/f06_f18/prob_gt_2yr12h_ari_percent.png",
+      "size_bytes": 418095
+    },
+    {
+      "duration_hours": 12,
+      "window": "f06_f18",
+      "start_fhr": 6,
+      "end_fhr": 18,
+      "variable": "prob_gt_5yr12h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/12h/f06_f18/prob_gt_5yr12h_ari_percent.png",
+      "size_bytes": 412683
     },
     {
       "duration_hours": 12,
@@ -2189,6 +2939,30 @@
     },
     {
       "duration_hours": 12,
+      "window": "f12_f24",
+      "start_fhr": 12,
+      "end_fhr": 24,
+      "variable": "prob_gt_2yr12h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/12h/f12_f24/prob_gt_2yr12h_ari_percent.png",
+      "size_bytes": 413985
+    },
+    {
+      "duration_hours": 12,
+      "window": "f12_f24",
+      "start_fhr": 12,
+      "end_fhr": 24,
+      "variable": "prob_gt_5yr12h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/12h/f12_f24/prob_gt_5yr12h_ari_percent.png",
+      "size_bytes": 409685
+    },
+    {
+      "duration_hours": 12,
       "window": "f18_f30",
       "start_fhr": 18,
       "end_fhr": 30,
@@ -2246,6 +3020,30 @@
       "kind": "image",
       "path": "products/maps/2026072112/12h/f18_f30/prob_gt_3inch_percent.png",
       "size_bytes": 406590
+    },
+    {
+      "duration_hours": 12,
+      "window": "f18_f30",
+      "start_fhr": 18,
+      "end_fhr": 30,
+      "variable": "prob_gt_2yr12h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/12h/f18_f30/prob_gt_2yr12h_ari_percent.png",
+      "size_bytes": 409105
+    },
+    {
+      "duration_hours": 12,
+      "window": "f18_f30",
+      "start_fhr": 18,
+      "end_fhr": 30,
+      "variable": "prob_gt_5yr12h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/12h/f18_f30/prob_gt_5yr12h_ari_percent.png",
+      "size_bytes": 407749
     },
     {
       "duration_hours": 12,
@@ -2309,6 +3107,30 @@
     },
     {
       "duration_hours": 12,
+      "window": "f24_f36",
+      "start_fhr": 24,
+      "end_fhr": 36,
+      "variable": "prob_gt_2yr12h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/12h/f24_f36/prob_gt_2yr12h_ari_percent.png",
+      "size_bytes": 411756
+    },
+    {
+      "duration_hours": 12,
+      "window": "f24_f36",
+      "start_fhr": 24,
+      "end_fhr": 36,
+      "variable": "prob_gt_5yr12h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/12h/f24_f36/prob_gt_5yr12h_ari_percent.png",
+      "size_bytes": 407891
+    },
+    {
+      "duration_hours": 12,
       "window": "f30_f42",
       "start_fhr": 30,
       "end_fhr": 42,
@@ -2369,6 +3191,30 @@
     },
     {
       "duration_hours": 12,
+      "window": "f30_f42",
+      "start_fhr": 30,
+      "end_fhr": 42,
+      "variable": "prob_gt_2yr12h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/12h/f30_f42/prob_gt_2yr12h_ari_percent.png",
+      "size_bytes": 415307
+    },
+    {
+      "duration_hours": 12,
+      "window": "f30_f42",
+      "start_fhr": 30,
+      "end_fhr": 42,
+      "variable": "prob_gt_5yr12h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/12h/f30_f42/prob_gt_5yr12h_ari_percent.png",
+      "size_bytes": 412743
+    },
+    {
+      "duration_hours": 12,
       "window": "f36_f48",
       "start_fhr": 36,
       "end_fhr": 48,
@@ -2426,6 +3272,30 @@
       "kind": "image",
       "path": "products/maps/2026072112/12h/f36_f48/prob_gt_3inch_percent.png",
       "size_bytes": 407579
+    },
+    {
+      "duration_hours": 12,
+      "window": "f36_f48",
+      "start_fhr": 36,
+      "end_fhr": 48,
+      "variable": "prob_gt_2yr12h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/12h/f36_f48/prob_gt_2yr12h_ari_percent.png",
+      "size_bytes": 415157
+    },
+    {
+      "duration_hours": 12,
+      "window": "f36_f48",
+      "start_fhr": 36,
+      "end_fhr": 48,
+      "variable": "prob_gt_5yr12h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/12h/f36_f48/prob_gt_5yr12h_ari_percent.png",
+      "size_bytes": 411727
     },
     {
       "duration_hours": 24,
@@ -2501,6 +3371,30 @@
     },
     {
       "duration_hours": 24,
+      "window": "f00_f24",
+      "start_fhr": 0,
+      "end_fhr": 24,
+      "variable": "prob_gt_2yr24h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/24h/f00_f24/prob_gt_2yr24h_ari_percent.png",
+      "size_bytes": 415504
+    },
+    {
+      "duration_hours": 24,
+      "window": "f00_f24",
+      "start_fhr": 0,
+      "end_fhr": 24,
+      "variable": "prob_gt_5yr24h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/24h/f00_f24/prob_gt_5yr24h_ari_percent.png",
+      "size_bytes": 410239
+    },
+    {
+      "duration_hours": 24,
       "window": "f06_f30",
       "start_fhr": 6,
       "end_fhr": 30,
@@ -2570,6 +3464,30 @@
       "kind": "image",
       "path": "products/maps/2026072112/24h/f06_f30/prob_gt_5inch_percent.png",
       "size_bytes": 406755
+    },
+    {
+      "duration_hours": 24,
+      "window": "f06_f30",
+      "start_fhr": 6,
+      "end_fhr": 30,
+      "variable": "prob_gt_2yr24h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/24h/f06_f30/prob_gt_2yr24h_ari_percent.png",
+      "size_bytes": 415968
+    },
+    {
+      "duration_hours": 24,
+      "window": "f06_f30",
+      "start_fhr": 6,
+      "end_fhr": 30,
+      "variable": "prob_gt_5yr24h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/24h/f06_f30/prob_gt_5yr24h_ari_percent.png",
+      "size_bytes": 410671
     },
     {
       "duration_hours": 24,
@@ -2645,6 +3563,30 @@
     },
     {
       "duration_hours": 24,
+      "window": "f12_f36",
+      "start_fhr": 12,
+      "end_fhr": 36,
+      "variable": "prob_gt_2yr24h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/24h/f12_f36/prob_gt_2yr24h_ari_percent.png",
+      "size_bytes": 416051
+    },
+    {
+      "duration_hours": 24,
+      "window": "f12_f36",
+      "start_fhr": 12,
+      "end_fhr": 36,
+      "variable": "prob_gt_5yr24h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/24h/f12_f36/prob_gt_5yr24h_ari_percent.png",
+      "size_bytes": 409378
+    },
+    {
+      "duration_hours": 24,
       "window": "f18_f42",
       "start_fhr": 18,
       "end_fhr": 42,
@@ -2717,6 +3659,30 @@
     },
     {
       "duration_hours": 24,
+      "window": "f18_f42",
+      "start_fhr": 18,
+      "end_fhr": 42,
+      "variable": "prob_gt_2yr24h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/24h/f18_f42/prob_gt_2yr24h_ari_percent.png",
+      "size_bytes": 416740
+    },
+    {
+      "duration_hours": 24,
+      "window": "f18_f42",
+      "start_fhr": 18,
+      "end_fhr": 42,
+      "variable": "prob_gt_5yr24h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/24h/f18_f42/prob_gt_5yr24h_ari_percent.png",
+      "size_bytes": 410913
+    },
+    {
+      "duration_hours": 24,
       "window": "f24_f48",
       "start_fhr": 24,
       "end_fhr": 48,
@@ -2786,6 +3752,30 @@
       "kind": "image",
       "path": "products/maps/2026072112/24h/f24_f48/prob_gt_5inch_percent.png",
       "size_bytes": 406070
+    },
+    {
+      "duration_hours": 24,
+      "window": "f24_f48",
+      "start_fhr": 24,
+      "end_fhr": 48,
+      "variable": "prob_gt_2yr24h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/24h/f24_f48/prob_gt_2yr24h_ari_percent.png",
+      "size_bytes": 417125
+    },
+    {
+      "duration_hours": 24,
+      "window": "f24_f48",
+      "start_fhr": 24,
+      "end_fhr": 48,
+      "variable": "prob_gt_5yr24h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "kind": "image",
+      "path": "products/maps/2026072112/24h/f24_f48/prob_gt_5yr24h_ari_percent.png",
+      "size_bytes": 411161
     }
   ]
 }

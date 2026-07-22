@@ -9,3 +9,8 @@ __pycache__/
 *.grib2
 *.tar.gz
 logs/
+
+# BEGIN HRRR ANN-CSGD GRIB2 PACKAGE EXCEPTION
+# Publish only the generated operational GRIB2 download package.
+!products/grib2/**/hrrr_anncsgd_*_grib2_download_package.tar.gz
+# END HRRR ANN-CSGD GRIB2 PACKAGE EXCEPTION

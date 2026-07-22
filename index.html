@@ -140,6 +140,98 @@
     </section>
 
     <section class="section">
+      <p class="section-label">Operational animations</p>
+      <h2>CONUS forecast animations</h2>
+
+      <p class="section-intro">
+        Explore animated ANN-CSGD forecast products by accumulation duration and
+        forecast variable.
+      </p>
+
+      <p id="gif-catalog-status" class="catalog-status" role="status">
+        GIF catalog will load when the page initializes.
+      </p>
+
+      <div class="media-controls">
+        <label for="gif-duration">
+          Accumulation duration
+          <select id="gif-duration" name="gif-duration">
+            <option value="6">6-hour</option>
+            <option value="12" selected>12-hour</option>
+            <option value="24">24-hour</option>
+          </select>
+        </label>
+
+        <label for="gif-product">
+          Forecast product
+          <select id="gif-product" name="gif-product">
+            <option value="expected_precip_mm">Expected precipitation</option>
+          </select>
+        </label>
+      </div>
+
+      <figure class="forecast-gif-shell">
+        <div id="forecast-gif-loading" class="map-loading" role="status">
+          Select an available animation.
+        </div>
+
+        <img
+          id="forecast-gif"
+          src=""
+          alt="HRRR ANN-CSGD CONUS forecast animation"
+          loading="lazy"
+          hidden
+        >
+
+        <figcaption>
+          <h3 id="forecast-gif-title">Forecast animation</h3>
+          <p id="forecast-gif-summary">
+            Animation metadata will appear after the GIF catalog loads.
+          </p>
+          <a
+            id="forecast-gif-full"
+            href="#"
+            target="_blank"
+            rel="noopener"
+            aria-disabled="true"
+          >
+            Open full-resolution animation
+          </a>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="section">
+      <p class="section-label">Machine-readable forecast data</p>
+      <h2>GRIB2 download center</h2>
+
+      <p id="grib-catalog-status" class="catalog-status" role="status">
+        GRIB2 catalog will load when the page initializes.
+      </p>
+
+      <div class="download-actions">
+        <a
+          id="grib-package-download"
+          class="primary-download"
+          href="#"
+          aria-disabled="true"
+        >
+          Download complete GRIB2 package
+        </a>
+
+        <p id="grib-package-summary">
+          Package metadata will appear after the GRIB2 manifest loads.
+        </p>
+      </div>
+
+      <div
+        id="grib-download-list"
+        class="download-grid"
+        aria-live="polite"
+      ></div>
+    </section>
+
+    <section class="section">
       <p class="section-label">Held-out 2025 verification</p>
       <h2>Model performance</h2>
 

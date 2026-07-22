@@ -460,3 +460,327 @@ footer {
     flex-direction: column;
   }
 }
+
+/* BEGIN GIF AND GRIB2 FRONTEND STYLES */
+
+.section-intro {
+  max-width: 72rem;
+  margin: 0 0 1.25rem;
+  color: var(--muted, #52606d);
+  line-height: 1.65;
+}
+
+.catalog-status {
+  margin: 0 0 1.25rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border, #d8dee8);
+  border-radius: 0.75rem;
+  background: var(--surface-soft, #f6f8fb);
+  color: var(--muted, #52606d);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.media-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0 0 1.25rem;
+}
+
+.media-controls label {
+  display: grid;
+  gap: 0.45rem;
+  color: var(--text, #18212f);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.media-controls select {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.65rem 2.25rem 0.65rem 0.8rem;
+  border: 1px solid var(--border, #d8dee8);
+  border-radius: 0.65rem;
+  background: var(--surface, #ffffff);
+  color: var(--text, #18212f);
+  font: inherit;
+}
+
+.media-controls select:focus-visible {
+  outline: 3px solid
+    color-mix(
+      in srgb,
+      var(--accent, #1769aa) 30%,
+      transparent
+    );
+  outline-offset: 2px;
+  border-color: var(--accent, #1769aa);
+}
+
+.media-controls select:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.forecast-gif-shell {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--border, #d8dee8);
+  border-radius: 1rem;
+  background: var(--surface, #ffffff);
+  box-shadow: var(
+    --shadow-sm,
+    0 8px 24px rgb(15 23 42 / 8%)
+  );
+}
+
+.forecast-gif-shell > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 72vh;
+  object-fit: contain;
+  background: var(--surface-soft, #f6f8fb);
+}
+
+.forecast-gif-shell > img[hidden] {
+  display: none;
+}
+
+.forecast-gif-shell .map-loading {
+  display: grid;
+  min-height: 18rem;
+  place-items: center;
+  padding: 2rem;
+  background: var(--surface-soft, #f6f8fb);
+  color: var(--muted, #52606d);
+  text-align: center;
+}
+
+.forecast-gif-shell .map-loading[hidden] {
+  display: none;
+}
+
+.forecast-gif-shell figcaption {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1rem 1.15rem 1.2rem;
+  border-top: 1px solid var(--border, #d8dee8);
+}
+
+.forecast-gif-shell figcaption h3,
+.forecast-gif-shell figcaption p {
+  margin: 0;
+}
+
+.forecast-gif-shell figcaption p {
+  color: var(--muted, #52606d);
+  line-height: 1.55;
+}
+
+.forecast-gif-shell figcaption a {
+  width: fit-content;
+  color: var(--accent, #1769aa);
+  font-weight: 700;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.18em;
+}
+
+.forecast-gif-shell figcaption a:hover {
+  text-decoration-thickness: 0.15em;
+}
+
+.forecast-gif-shell figcaption a[aria-disabled="true"] {
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.download-actions {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 1.25rem;
+  padding: 1rem;
+  border: 1px solid var(--border, #d8dee8);
+  border-radius: 0.85rem;
+  background: var(--surface-soft, #f6f8fb);
+}
+
+.download-actions p {
+  flex: 1;
+  margin: 0;
+  color: var(--muted, #52606d);
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.primary-download {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--accent, #1769aa);
+  border-radius: 0.65rem;
+  background: var(--accent, #1769aa);
+  color: var(--accent-contrast, #ffffff);
+  font-weight: 800;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+}
+
+.primary-download:hover {
+  filter: brightness(0.95);
+}
+
+.primary-download:focus-visible,
+.download-file-link:focus-visible {
+  outline: 3px solid
+    color-mix(
+      in srgb,
+      var(--accent, #1769aa) 30%,
+      transparent
+    );
+  outline-offset: 3px;
+}
+
+.primary-download[aria-disabled="true"] {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    minmax(0, 1fr)
+  );
+  gap: 1rem;
+}
+
+.download-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border, #d8dee8);
+  border-radius: 0.85rem;
+  background: var(--surface, #ffffff);
+  box-shadow: var(
+    --shadow-sm,
+    0 8px 24px rgb(15 23 42 / 8%)
+  );
+}
+
+.download-card-heading {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--border, #d8dee8);
+  background: var(--surface-soft, #f6f8fb);
+  color: var(--text, #18212f);
+  font-size: 1rem;
+}
+
+.download-card > p {
+  margin: 0;
+  padding: 1rem;
+  color: var(--muted, #52606d);
+}
+
+.download-row {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--border, #d8dee8);
+}
+
+.download-row:last-child {
+  border-bottom: 0;
+}
+
+.download-details {
+  display: grid;
+  min-width: 0;
+  gap: 0.25rem;
+}
+
+.download-details strong {
+  color: var(--text, #18212f);
+  font-size: 0.88rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.download-details small {
+  color: var(--muted, #52606d);
+  line-height: 1.4;
+}
+
+.download-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.download-file-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--border, #d8dee8);
+  border-radius: 999px;
+  background: var(--surface-soft, #f6f8fb);
+  color: var(--accent, #1769aa);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.download-file-link:hover {
+  border-color: var(--accent, #1769aa);
+  background: var(--surface, #ffffff);
+}
+
+@media (max-width: 960px) {
+  .download-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .download-actions {
+    flex-direction: column;
+  }
+
+  .primary-download {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .media-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .forecast-gif-shell .map-loading {
+    min-height: 12rem;
+  }
+
+  .forecast-gif-shell figcaption {
+    padding: 0.9rem;
+  }
+
+  .download-actions {
+    padding: 0.85rem;
+  }
+
+  .download-row {
+    padding: 0.8rem 0.85rem;
+  }
+}
+
+/* END GIF AND GRIB2 FRONTEND STYLES */
