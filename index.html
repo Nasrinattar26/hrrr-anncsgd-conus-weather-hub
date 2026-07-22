@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -8,7 +8,7 @@
   >
   <meta
     name="description"
-    content="HRRR ANN-CSGD probabilistic precipitation forecasts over CONUS."
+    content="Operational HRRR ANN-CSGD probabilistic precipitation guidance for the contiguous United States."
   >
   <title>HRRR ANN-CSGD CONUS Weather Hub</title>
   <link rel="stylesheet" href="assets/style.css">
@@ -17,273 +17,582 @@
 <body>
   <header class="hero">
     <div class="hero-content">
-      <p class="eyebrow">Probabilistic precipitation forecasting</p>
-      <h1>HRRR ANN-CSGD CONUS Weather Hub</h1>
+      <div class="hero-text">
+        <p class="eyebrow">
+          ANN-CSGD operational probabilistic guidance
+        </p>
 
-      <p class="subtitle">
-        Duration-specific 6-, 12-, and 24-hour probabilistic
-        precipitation products generated from HRRR forecasts using
-        artificial neural networks and censored-shifted gamma
-        distributions.
-      </p>
+        <h1>HRRR ANN-CSGD CONUS Weather Hub</h1>
 
-      <div id="status-badge" class="status loading">
-        Loading production status…
+        <p class="hero-description">
+          Duration-specific 6-, 12-, and 24-hour probabilistic
+          precipitation products generated from HRRR forecasts using
+          artificial neural networks and censored-shifted gamma
+          distributions.
+        </p>
+
+        <div class="hero-actions">
+          <span
+            id="status-badge"
+            class="status loading"
+            aria-live="polite"
+          >
+            Loading production status…
+          </span>
+
+          <a
+            class="verification-dashboard-button"
+            href="#forecast-workspace"
+          >
+            Explore forecast guidance
+          </a>
+        </div>
       </div>
+
+      <aside class="hero-card hero-run-card">
+        <span class="small-label">Latest operational run</span>
+
+        <strong id="latest-init" class="big-value">
+          Loading…
+        </strong>
+
+        <p class="small-note">
+          Latest prepared and audited HRRR ANN-CSGD initialization.
+        </p>
+
+        <div class="hero-stat-grid">
+          <article class="hero-stat">
+            <span class="small-label">Production products</span>
+            <strong id="product-count">—</strong>
+          </article>
+
+          <article class="hero-stat">
+            <span class="small-label">CONUS land cells</span>
+            <strong id="land-count">—</strong>
+          </article>
+
+          <article class="hero-stat">
+            <span class="small-label">Durations</span>
+            <strong>6 / 12 / 24 h</strong>
+          </article>
+
+          <article class="hero-stat">
+            <span class="small-label">Forecast grid</span>
+            <strong>0.25°</strong>
+          </article>
+        </div>
+      </aside>
     </div>
   </header>
 
-  <main>
-    <section class="section">
-      <div class="section-heading">
+  <main class="page">
+    <aside class="control-panel panel">
+      <div class="section-title compact-title">
         <div>
-          <p class="section-label">Latest operational run</p>
-          <h2 id="latest-init">Loading…</h2>
+          <p class="eyebrow dark-eyebrow">Dashboard navigation</p>
+          <h2>Forecast workspace</h2>
         </div>
       </div>
 
-      <div class="overview-grid">
-        <article class="metric-card">
-          <span class="metric-label">Production products</span>
-          <strong id="product-count">—</strong>
-          <span>Audited forecast windows</span>
-        </article>
+      <article class="current-run-card">
+        <span class="small-label">Operational system</span>
+        <strong>Three independent ANN-CSGD models</strong>
+        <p>
+          Separate models provide calibrated guidance for 6-, 12-,
+          and 24-hour precipitation accumulation periods.
+        </p>
+      </article>
 
-        <article class="metric-card">
-          <span class="metric-label">CONUS land cells</span>
-          <strong id="land-count">—</strong>
-          <span>0.25° forecast grid</span>
-        </article>
+      <nav class="product-list" aria-label="Dashboard sections">
+        <a class="product-button active" href="#forecast-workspace">
+          <span>01</span>
+          Forecast maps
+        </a>
 
-        <article class="metric-card">
-          <span class="metric-label">Forecast durations</span>
-          <strong>6 / 12 / 24 h</strong>
-          <span>Independent ANN-CSGD models</span>
-        </article>
+        <a class="product-button" href="#forecast-animations">
+          <span>02</span>
+          Forecast animations
+        </a>
+
+        <a class="product-button" href="#grib2-downloads">
+          <span>03</span>
+          GRIB2 downloads
+        </a>
+
+        <a class="product-button" href="#verification">
+          <span>04</span>
+          Model verification
+        </a>
+
+        <a class="product-button" href="#method">
+          <span>05</span>
+          Method and guidance
+        </a>
+      </nav>
+
+      <div class="control-guide">
+        <p class="small-label">Dashboard capabilities</p>
+
+        <ul class="check-list">
+          <li>145 operational CONUS maps</li>
+          <li>22 duration-specific animations</li>
+          <li>20 downloadable GRIB2 files</li>
+          <li>Fixed and local ARI thresholds</li>
+          <li>Held-out 2025 model verification</li>
+        </ul>
       </div>
-    </section>
+    </aside>
 
+    <div class="dashboard">
+      <section class="panel dashboard-overview">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow dark-eyebrow">
+              Operational dashboard
+            </p>
+            <h2>What this dashboard shows</h2>
+          </div>
 
-    <section class="section map-explorer-section">
-      <div class="section-heading map-heading">
-        <div>
-          <p class="section-label">Operational forecast maps</p>
-          <h2>CONUS forecast-map explorer</h2>
-          <p class="section-intro">
-            Select a forecast duration, accumulation window, and ANN-CSGD
-            product. Maps are generated from the latest successful HRRR run.
+          <span class="pill">HRRR → ANN-CSGD</span>
+        </div>
+
+        <div class="summary-grid">
+          <article class="metric-card">
+            <span class="small-label">Forecast products</span>
+            <strong class="metric-value">PQPF</strong>
+            <p>
+              Expected precipitation and calibrated threshold-
+              exceedance probabilities.
+            </p>
+          </article>
+
+          <article class="metric-card">
+            <span class="small-label">Spatial coverage</span>
+            <strong class="metric-value">CONUS</strong>
+            <p>
+              Gridded guidance across contiguous United States land
+              points.
+            </p>
+          </article>
+
+          <article class="metric-card">
+            <span class="small-label">Local extremes</span>
+            <strong class="metric-value">ARI</strong>
+            <p>
+              Duration-specific 2-year and 5-year recurrence-interval
+              exceedance probabilities.
+            </p>
+          </article>
+        </div>
+
+        <div class="duration-heading">
+          <div>
+            <p class="small-label">Independent forecast models</p>
+            <h3>Duration performance summary</h3>
+          </div>
+
+          <p class="muted">
+            Cards are populated from the latest site-summary data.
           </p>
         </div>
 
-        <div id="map-catalog-status" class="catalog-badge">
-          Loading map catalog…
-        </div>
-      </div>
+        <div
+          id="duration-cards"
+          class="duration-grid"
+          aria-live="polite"
+        ></div>
+      </section>
 
-      <div class="map-controls">
-        <label>
-          <span>Duration</span>
-          <select id="map-duration" aria-label="Forecast duration"></select>
-        </label>
-
-        <label>
-          <span>Forecast window</span>
-          <select id="map-window" aria-label="Forecast window"></select>
-        </label>
-
-        <label>
-          <span>Product</span>
-          <select id="map-product" aria-label="Forecast product"></select>
-        </label>
-      </div>
-
-      <div class="map-navigation">
-        <button id="previous-window" type="button">
-          ← Previous window
-        </button>
-
-        <div id="map-selection-summary" class="map-selection-summary">
-          Loading forecast map…
-        </div>
-
-        <button id="next-window" type="button">
-          Next window →
-        </button>
-      </div>
-
-      <figure class="forecast-map-shell">
-        <div id="forecast-map-loading" class="forecast-map-loading">
-          Loading map…
-        </div>
-
-        <img
-          id="forecast-map"
-          alt="HRRR ANN-CSGD CONUS precipitation forecast map"
-        >
-
-        <figcaption>
+      <section
+        id="forecast-workspace"
+        class="panel data-panel map-explorer-section"
+      >
+        <div class="section-title map-heading">
           <div>
-            <strong id="forecast-map-title">Forecast map</strong>
-            <span id="forecast-map-validity"></span>
+            <p class="eyebrow dark-eyebrow">
+              Operational forecast maps
+            </p>
+            <h2>CONUS forecast-map explorer</h2>
+            <p class="section-intro">
+              Select an accumulation duration, forecast window, and
+              ANN-CSGD product.
+            </p>
+          </div>
+
+          <span
+            id="map-catalog-status"
+            class="catalog-badge"
+            aria-live="polite"
+          >
+            Loading map catalog…
+          </span>
+        </div>
+
+        <div class="map-controls">
+          <label>
+            <span>Duration</span>
+            <select id="map-duration">
+              <option value="6h">6-hour</option>
+              <option value="12h" selected>12-hour</option>
+              <option value="24h">24-hour</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Forecast window</span>
+            <select id="map-window">
+              <option>Loading…</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Forecast product</span>
+            <select id="map-product">
+              <option value="expected_precip_mm">
+                Expected precipitation
+              </option>
+            </select>
+          </label>
+        </div>
+
+        <div class="map-navigation">
+          <button id="previous-window" type="button">
+            ← Previous window
+          </button>
+
+          <div
+            id="map-selection-summary"
+            class="map-selection-summary"
+            aria-live="polite"
+          >
+            Loading forecast selection…
+          </div>
+
+          <button id="next-window" type="button">
+            Next window →
+          </button>
+        </div>
+
+        <figure class="forecast-map-shell map-shell">
+          <div
+            id="forecast-map-loading"
+            class="forecast-map-loading"
+          >
+            Loading forecast map…
+          </div>
+
+          <img
+            id="forecast-map"
+            alt="Selected HRRR ANN-CSGD CONUS forecast map"
+          >
+
+          <figcaption>
+            <div>
+              <strong id="forecast-map-title">
+                Forecast map
+              </strong>
+
+              <span id="forecast-map-validity">
+                Map validity will appear here.
+              </span>
+            </div>
+
+            <a
+              id="forecast-map-full"
+              href="#"
+              target="_blank"
+              rel="noopener"
+            >
+              Open full-resolution map
+            </a>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section
+        id="forecast-animations"
+        class="panel product-gallery-panel"
+      >
+        <div class="section-title">
+          <div>
+            <p class="eyebrow dark-eyebrow">
+              Operational animations
+            </p>
+            <h2>CONUS forecast animations</h2>
+            <p class="section-intro">
+              Explore animated ANN-CSGD products by duration and
+              forecast variable.
+            </p>
+          </div>
+
+          <span class="pill cyan-pill">Animated guidance</span>
+        </div>
+
+        <p
+          id="gif-catalog-status"
+          class="catalog-status"
+          aria-live="polite"
+        >
+          GIF catalog will load when the page initializes.
+        </p>
+
+        <div class="media-controls">
+          <label>
+            <span>Accumulation duration</span>
+
+            <select id="gif-duration">
+              <option value="6">6-hour</option>
+              <option value="12" selected>12-hour</option>
+              <option value="24">24-hour</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Forecast product</span>
+
+            <select id="gif-product">
+              <option value="expected_precip_mm">
+                Expected precipitation
+              </option>
+            </select>
+          </label>
+        </div>
+
+        <figure class="forecast-gif-shell map-shell">
+          <div
+            id="forecast-gif-loading"
+            class="map-loading"
+          >
+            Select an available animation.
+          </div>
+
+          <img
+            id="forecast-gif"
+            alt="Animated HRRR ANN-CSGD CONUS forecast"
+            hidden
+          >
+
+          <figcaption>
+            <div>
+              <h3 id="forecast-gif-title">
+                Forecast animation
+              </h3>
+
+              <p id="forecast-gif-summary">
+                Animation metadata will appear after the catalog
+                loads.
+              </p>
+            </div>
+
+            <a
+              id="forecast-gif-full"
+              href="#"
+              target="_blank"
+              rel="noopener"
+              aria-disabled="true"
+            >
+              Open full-resolution animation
+            </a>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section
+        id="grib2-downloads"
+        class="panel product-gallery-panel"
+      >
+        <div class="section-title">
+          <div>
+            <p class="eyebrow dark-eyebrow">
+              Machine-readable forecast data
+            </p>
+            <h2>GRIB2 download center</h2>
+            <p class="section-intro">
+              Download individual files, JSON metadata sidecars, or
+              the complete operational package.
+            </p>
+          </div>
+
+          <span class="pill lime-pill">Technical products</span>
+        </div>
+
+        <p
+          id="grib-catalog-status"
+          class="catalog-status"
+          aria-live="polite"
+        >
+          GRIB2 catalog will load when the page initializes.
+        </p>
+
+        <div class="download-actions">
+          <div>
+            <p class="small-label">Complete forecast package</p>
+
+            <p id="grib-package-summary">
+              Package metadata will appear after the manifest loads.
+            </p>
           </div>
 
           <a
-            id="forecast-map-full"
+            id="grib-package-download"
+            class="primary-download"
             href="#"
-            target="_blank"
-            rel="noopener"
-          >
-            Open full-resolution map
-          </a>
-        </figcaption>
-      </figure>
-    </section>
-
-    <section class="section">
-      <p class="section-label">Operational animations</p>
-      <h2>CONUS forecast animations</h2>
-
-      <p class="section-intro">
-        Explore animated ANN-CSGD forecast products by accumulation duration and
-        forecast variable.
-      </p>
-
-      <p id="gif-catalog-status" class="catalog-status" role="status">
-        GIF catalog will load when the page initializes.
-      </p>
-
-      <div class="media-controls">
-        <label for="gif-duration">
-          Accumulation duration
-          <select id="gif-duration" name="gif-duration">
-            <option value="6">6-hour</option>
-            <option value="12" selected>12-hour</option>
-            <option value="24">24-hour</option>
-          </select>
-        </label>
-
-        <label for="gif-product">
-          Forecast product
-          <select id="gif-product" name="gif-product">
-            <option value="expected_precip_mm">Expected precipitation</option>
-          </select>
-        </label>
-      </div>
-
-      <figure class="forecast-gif-shell">
-        <div id="forecast-gif-loading" class="map-loading" role="status">
-          Select an available animation.
-        </div>
-
-        <img
-          id="forecast-gif"
-          src=""
-          alt="HRRR ANN-CSGD CONUS forecast animation"
-          loading="lazy"
-          hidden
-        >
-
-        <figcaption>
-          <h3 id="forecast-gif-title">Forecast animation</h3>
-          <p id="forecast-gif-summary">
-            Animation metadata will appear after the GIF catalog loads.
-          </p>
-          <a
-            id="forecast-gif-full"
-            href="#"
-            target="_blank"
-            rel="noopener"
             aria-disabled="true"
           >
-            Open full-resolution animation
+            Download complete GRIB2 package
           </a>
-        </figcaption>
-      </figure>
-    </section>
+        </div>
 
-    <section class="section">
-      <p class="section-label">Machine-readable forecast data</p>
-      <h2>GRIB2 download center</h2>
+        <div
+          id="grib-download-list"
+          class="download-grid"
+          aria-live="polite"
+        ></div>
+      </section>
 
-      <p id="grib-catalog-status" class="catalog-status" role="status">
-        GRIB2 catalog will load when the page initializes.
-      </p>
+      <section
+        id="verification"
+        class="panel data-panel"
+      >
+        <div class="section-title">
+          <div>
+            <p class="eyebrow dark-eyebrow">
+              Held-out 2025 verification
+            </p>
+            <h2>Model performance</h2>
+            <p class="section-intro">
+              Independent probabilistic verification against MRMS
+              precipitation observations.
+            </p>
+          </div>
 
-      <div class="download-actions">
-        <a
-          id="grib-package-download"
-          class="primary-download"
-          href="#"
-          aria-disabled="true"
-        >
-          Download complete GRIB2 package
-        </a>
+          <span class="pill magenta-pill">
+            Independent test
+          </span>
+        </div>
 
-        <p id="grib-package-summary">
-          Package metadata will appear after the GRIB2 manifest loads.
-        </p>
-      </div>
+        <div class="verification-callout">
+          <div>
+            <span class="small-label">Verification period</span>
+            <strong>Held-out 2025</strong>
+          </div>
 
-      <div
-        id="grib-download-list"
-        class="download-grid"
-        aria-live="polite"
-      ></div>
-    </section>
+          <div>
+            <span class="small-label">Reference forecast</span>
+            <strong>Raw HRRR</strong>
+          </div>
 
-    <section class="section">
-      <p class="section-label">Held-out 2025 verification</p>
-      <h2>Model performance</h2>
+          <div>
+            <span class="small-label">Observation analysis</span>
+            <strong>MRMS precipitation</strong>
+          </div>
+        </div>
 
-      <div id="duration-cards" class="duration-grid"></div>
-    </section>
+        <div class="table-wrap table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Duration</th>
+                <th>Threshold</th>
+                <th>2025 events</th>
+                <th>ANN-CSGD BSS</th>
+                <th>Raw HRRR BSS</th>
+                <th>ANN-CSGD AUC</th>
+                <th>Raw HRRR AUC</th>
+              </tr>
+            </thead>
 
-    <section class="section">
-      <p class="section-label">Threshold verification</p>
-      <h2>Brier skill score and ROC AUC</h2>
+            <tbody id="verification-table"></tbody>
+          </table>
+        </div>
+      </section>
 
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Duration</th>
-              <th>Threshold</th>
-              <th>2025 events</th>
-              <th>ANN-CSGD BSS</th>
-              <th>Raw HRRR BSS</th>
-              <th>ANN-CSGD AUC</th>
-              <th>Raw HRRR AUC</th>
-            </tr>
-          </thead>
-          <tbody id="verification-table"></tbody>
-        </table>
-      </div>
-    </section>
+      <section
+        id="method"
+        class="panel user-guide-panel method"
+      >
+        <div class="section-title">
+          <div>
+            <p class="eyebrow dark-eyebrow">Quick guide</p>
+            <h2>How to read this dashboard</h2>
+          </div>
 
-    <section class="section method">
-      <p class="section-label">Method</p>
-      <h2>Duration-specific ANN-CSGD postprocessing</h2>
+          <span class="pill teal-pill">Method</span>
+        </div>
 
-      <p>
-        Each model receives twelve predictors describing HRRR
-        precipitation, neighborhood structure, forecast lead,
-        seasonality, valid hour, latitude, and longitude. The neural
-        network predicts the parameters of a censored-shifted gamma
-        distribution, providing expected precipitation and full
-        threshold-exceedance probabilities.
-      </p>
+        <div class="user-guide-text">
+          <article class="guide-card">
+            <span class="guide-number">01</span>
+            <div>
+              <h3>Select a duration</h3>
+              <p>
+                Choose 6-, 12-, or 24-hour accumulation guidance.
+              </p>
+            </div>
+          </article>
 
-      <p>
-        Models were selected using 2024 validation data and evaluated
-        independently on held-out 2025 observations from MRMS.
-      </p>
-    </section>
+          <article class="guide-card">
+            <span class="guide-number">02</span>
+            <div>
+              <h3>Select a product</h3>
+              <p>
+                Expected precipitation is the predictive mean.
+                Probability products show threshold exceedance risk.
+              </p>
+            </div>
+          </article>
+
+          <article class="guide-card">
+            <span class="guide-number">03</span>
+            <div>
+              <h3>Inspect forecast timing</h3>
+              <p>
+                Move through available HRRR lead windows using the
+                selector or previous and next controls.
+              </p>
+            </div>
+          </article>
+
+          <article class="guide-card">
+            <span class="guide-number">04</span>
+            <div>
+              <h3>Download gridded data</h3>
+              <p>
+                GRIB2 files provide machine-readable fields, while
+                JSON sidecars describe the file contents.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="method-summary">
+          <p class="small-label">
+            Duration-specific ANN-CSGD postprocessing
+          </p>
+
+          <p>
+            Each model receives twelve predictors describing HRRR
+            precipitation, neighborhood structure, forecast lead,
+            seasonality, valid hour, latitude, and longitude.
+          </p>
+
+          <p>
+            The neural network predicts the parameters of a
+            censored-shifted gamma distribution, producing expected
+            precipitation and threshold-exceedance probabilities.
+            Models were evaluated independently on held-out 2025
+            MRMS observations.
+          </p>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer>
     <p>
-      Research product developed by Nasrin Attar ·
-      University of Texas at Arlington
+      Research product developed by Nasrin Attar under the
+      supervision of Prof. Yu Zhang at The University of Texas at
+      Arlington.
     </p>
   </footer>
 
