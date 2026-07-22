@@ -1557,3 +1557,153 @@ loadSite().catch(error => {
       "Forecast maps could not be loaded.";
   }
 });
+
+/* BEGIN ACTIVE DASHBOARD NAVIGATION */
+
+function initializeDashboardNavigation() {
+  const navigationLinks = Array.from(
+    document.querySelectorAll(
+      '.product-list .product-button[href^="#"]'
+    )
+  );
+
+  const navigationItems = navigationLinks
+    .map((link) => {
+      const href = link.getAttribute("href") || "";
+      const sectionId = href.startsWith("#")
+        ? href.slice(1)
+        : "";
+
+      return {
+        link,
+        sectionId,
+        section: sectionId
+          ? document.getElementById(sectionId)
+          : null
+      };
+    })
+    .filter((item) => item.section);
+
+  if (!navigationItems.length) {
+    return;
+  }
+
+  function setActiveNavigation(sectionId) {
+    navigationItems.forEach((item) => {
+      const isActive = item.sectionId === sectionId;
+
+      item.link.classList.toggle("active", isActive);
+
+      if (isActive) {
+        item.link.setAttribute(
+          "aria-current",
+          "location"
+        );
+      } else {
+        item.link.removeAttribute("aria-current");
+      }
+    });
+  }
+
+  function updateNavigationFromScroll() {
+    const activationLine = Math.max(
+      110,
+      Math.min(window.innerHeight * 0.24, 180)
+    );
+
+    let activeItem = navigationItems[0];
+
+    for (const item of navigationItems) {
+      const bounds = item.section.getBoundingClientRect();
+
+      if (bounds.top <= activationLine) {
+        activeItem = item;
+      } else {
+        break;
+      }
+    }
+
+    const pageBottomReached = (
+      window.scrollY + window.innerHeight
+      >= document.documentElement.scrollHeight - 8
+    );
+
+    if (pageBottomReached) {
+      activeItem = navigationItems[
+        navigationItems.length - 1
+      ];
+    }
+
+    setActiveNavigation(activeItem.sectionId);
+  }
+
+  let scrollUpdateScheduled = false;
+
+  function scheduleNavigationUpdate() {
+    if (scrollUpdateScheduled) {
+      return;
+    }
+
+    scrollUpdateScheduled = true;
+
+    window.requestAnimationFrame(() => {
+      scrollUpdateScheduled = false;
+      updateNavigationFromScroll();
+    });
+  }
+
+  navigationItems.forEach((item) => {
+    item.link.addEventListener("click", () => {
+      setActiveNavigation(item.sectionId);
+    });
+  });
+
+  window.addEventListener(
+    "scroll",
+    scheduleNavigationUpdate,
+    { passive: true }
+  );
+
+  window.addEventListener(
+    "resize",
+    scheduleNavigationUpdate
+  );
+
+  window.addEventListener("hashchange", () => {
+    const sectionId = window.location.hash.slice(1);
+
+    if (
+      navigationItems.some(
+        (item) => item.sectionId === sectionId
+      )
+    ) {
+      setActiveNavigation(sectionId);
+    } else {
+      scheduleNavigationUpdate();
+    }
+  });
+
+  const initialSectionId = window.location.hash.slice(1);
+
+  if (
+    navigationItems.some(
+      (item) => item.sectionId === initialSectionId
+    )
+  ) {
+    setActiveNavigation(initialSectionId);
+  } else {
+    updateNavigationFromScroll();
+  }
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener(
+    "DOMContentLoaded",
+    initializeDashboardNavigation,
+    { once: true }
+  );
+} else {
+  initializeDashboardNavigation();
+}
+
+/* END ACTIVE DASHBOARD NAVIGATION */
