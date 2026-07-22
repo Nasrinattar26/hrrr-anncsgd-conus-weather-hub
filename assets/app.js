@@ -1561,25 +1561,20 @@ loadSite().catch(error => {
 /* BEGIN ACTIVE DASHBOARD NAVIGATION */
 
 function initializeDashboardNavigation() {
-  const navigationLinks = Array.from(
+  const navigationItems = Array.from(
     document.querySelectorAll(
       '.product-list .product-button[href^="#"]'
     )
-  );
-
-  const navigationItems = navigationLinks
+  )
     .map((link) => {
-      const href = link.getAttribute("href") || "";
-      const sectionId = href.startsWith("#")
-        ? href.slice(1)
-        : "";
+      const sectionId = (
+        link.getAttribute("href") || ""
+      ).replace(/^#/, "");
 
       return {
         link,
         sectionId,
-        section: sectionId
-          ? document.getElementById(sectionId)
-          : null
+        section: document.getElementById(sectionId)
       };
     })
     .filter((item) => item.section);
@@ -1588,13 +1583,19 @@ function initializeDashboardNavigation() {
     return;
   }
 
+  let selectedSectionId = "";
+  let selectionLockUntil = 0;
+  let updateScheduled = false;
+
   function setActiveNavigation(sectionId) {
+    selectedSectionId = sectionId;
+
     navigationItems.forEach((item) => {
-      const isActive = item.sectionId === sectionId;
+      const active = item.sectionId === sectionId;
 
-      item.link.classList.toggle("active", isActive);
+      item.link.classList.toggle("active", active);
 
-      if (isActive) {
+      if (active) {
         item.link.setAttribute(
           "aria-current",
           "location"
@@ -1605,56 +1606,86 @@ function initializeDashboardNavigation() {
     });
   }
 
-  function updateNavigationFromScroll() {
+  function findSectionFromScroll() {
     const activationLine = Math.max(
-      110,
-      Math.min(window.innerHeight * 0.24, 180)
+      130,
+      Math.min(window.innerHeight * 0.30, 230)
     );
 
-    let activeItem = navigationItems[0];
+    let selected = navigationItems[0];
 
     for (const item of navigationItems) {
       const bounds = item.section.getBoundingClientRect();
 
       if (bounds.top <= activationLine) {
-        activeItem = item;
+        selected = item;
       } else {
         break;
       }
     }
 
-    const pageBottomReached = (
+    const bottomReached = (
       window.scrollY + window.innerHeight
-      >= document.documentElement.scrollHeight - 8
+      >= document.documentElement.scrollHeight - 10
     );
 
-    if (pageBottomReached) {
-      activeItem = navigationItems[
+    if (bottomReached) {
+      selected = navigationItems[
         navigationItems.length - 1
       ];
     }
 
-    setActiveNavigation(activeItem.sectionId);
+    return selected;
   }
 
-  let scrollUpdateScheduled = false;
-
-  function scheduleNavigationUpdate() {
-    if (scrollUpdateScheduled) {
+  function updateNavigationFromScroll() {
+    if (
+      selectedSectionId
+      && Date.now() < selectionLockUntil
+    ) {
+      setActiveNavigation(selectedSectionId);
       return;
     }
 
-    scrollUpdateScheduled = true;
+    const selected = findSectionFromScroll();
+    setActiveNavigation(selected.sectionId);
+  }
+
+  function scheduleNavigationUpdate() {
+    if (updateScheduled) {
+      return;
+    }
+
+    updateScheduled = true;
 
     window.requestAnimationFrame(() => {
-      scrollUpdateScheduled = false;
+      updateScheduled = false;
       updateNavigationFromScroll();
     });
   }
 
   navigationItems.forEach((item) => {
-    item.link.addEventListener("click", () => {
+    item.link.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      selectionLockUntil = Date.now() + 1400;
       setActiveNavigation(item.sectionId);
+
+      window.history.replaceState(
+        null,
+        "",
+        `#${item.sectionId}`
+      );
+
+      item.section.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+      window.setTimeout(() => {
+        selectionLockUntil = 0;
+        updateNavigationFromScroll();
+      }, 1450);
     });
   });
 
@@ -1672,25 +1703,25 @@ function initializeDashboardNavigation() {
   window.addEventListener("hashchange", () => {
     const sectionId = window.location.hash.slice(1);
 
-    if (
-      navigationItems.some(
-        (item) => item.sectionId === sectionId
-      )
-    ) {
+    const matchingItem = navigationItems.find(
+      (item) => item.sectionId === sectionId
+    );
+
+    if (matchingItem) {
       setActiveNavigation(sectionId);
     } else {
-      scheduleNavigationUpdate();
+      updateNavigationFromScroll();
     }
   });
 
   const initialSectionId = window.location.hash.slice(1);
 
-  if (
-    navigationItems.some(
-      (item) => item.sectionId === initialSectionId
-    )
-  ) {
-    setActiveNavigation(initialSectionId);
+  const initialItem = navigationItems.find(
+    (item) => item.sectionId === initialSectionId
+  );
+
+  if (initialItem) {
+    setActiveNavigation(initialItem.sectionId);
   } else {
     updateNavigationFromScroll();
   }

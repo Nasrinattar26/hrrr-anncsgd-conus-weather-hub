@@ -1137,3 +1137,29 @@ footer p {
 }
 
 /* END HRRR DASHBOARD LAYOUT FIX */
+
+/* BEGIN DASHBOARD NAVIGATION STATE FIX */
+
+/*
+ * Hover and selected states must be visually different.
+ * The selected row remains blue and its number becomes lime green.
+ */
+
+.product-list .product-button:hover:not(.active) {
+  color: var(--fifa-royal);
+  border-color: #dce6f5;
+  background: #f7faff;
+}
+
+.product-list .product-button.active {
+  color: var(--fifa-royal);
+  border-color: #b9cef1;
+  background: var(--soft-blue);
+}
+
+.product-list .product-button.active span {
+  color: var(--fifa-navy);
+  background: var(--fifa-lime);
+}
+
+/* END DASHBOARD NAVIGATION STATE FIX */
