@@ -982,3 +982,11 @@ summary {
 }
 
 /* END THRESHOLD-ARI-GALLERY */
+
+/* BEGIN SIMPLIFIED VERIFICATION RUN CARD */
+
+.v2-run-card__facts.v2-run-card__facts--single {
+  grid-template-columns: 1fr;
+}
+
+/* END SIMPLIFIED VERIFICATION RUN CARD */

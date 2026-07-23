@@ -19,7 +19,7 @@
 
   <link
     rel="stylesheet"
-    href="assets/verification.css?v=20260723-gallery2"
+    href="assets/verification.css?v=20260723-simplified-run-card"
   >
 </head>
 
@@ -49,13 +49,6 @@
           >
             Return to Forecast Dashboard
           </a>
-
-          <a
-            class="v2-button v2-button--accent"
-            href="#verification-products"
-          >
-            Explore Verification Maps
-          </a>
         </div>
       </div>
 
@@ -74,23 +67,21 @@
           Loading…
         </strong>
 
-        <div class="v2-run-card__facts">
-          <div>
-            <span>State</span>
+        <span
+          id="verification-page-run-state"
+          hidden
+          aria-hidden="true"
+        ></span>
 
-            <strong id="verification-page-run-state">
-              Loading…
-            </strong>
-          </div>
+        <span
+          id="verification-page-window-count"
+          hidden
+          aria-hidden="true"
+        ></span>
 
-          <div>
-            <span>Windows</span>
-
-            <strong id="verification-page-window-count">
-              Loading…
-            </strong>
-          </div>
-
+        <div
+          class="v2-run-card__facts v2-run-card__facts--single"
+        >
           <div>
             <span>Latest valid</span>
 
@@ -367,9 +358,6 @@ Loading product details…
       HRRR ANN-CSGD operational precipitation verification
     </span>
 
-    <a href="index.html">
-      Return to Forecast Dashboard
-    </a>
   </footer>
 
   <script src="assets/verification.js"></script>
