@@ -111,7 +111,34 @@ function populateWindowSelector() {
 
 function populateProductSelector() {
   const select = document.getElementById("map-product");
-  const products = currentDuration().products;
+  const products = [
+    ...currentDuration().products
+  ].sort((left, right) => {
+    const orderDifference = (
+      forecastProductOrder(
+        left.variable,
+        left.label
+      )
+      - forecastProductOrder(
+        right.variable,
+        right.label
+      )
+    );
+
+    if (orderDifference !== 0) {
+      return orderDifference;
+    }
+
+    return forecastProductLabel(
+      left.variable,
+      left.label
+    ).localeCompare(
+      forecastProductLabel(
+        right.variable,
+        right.label
+      )
+    );
+  });
 
   select.innerHTML = "";
 
@@ -688,6 +715,35 @@ function mediaProductLabel(variableName) {
   return forecastProductLabel(variableName);
 }
 
+function forecastProductOrder(
+  variableName,
+  fallbackLabel = ""
+) {
+  const label = forecastProductLabel(
+    variableName,
+    fallbackLabel
+  );
+
+  const preferredOrder = [
+    "Expected precipitation",
+    "Probability > 0.25 inch",
+    "Probability > 0.5 inch",
+    "Probability > 1 inch",
+    "Probability > 2 inches",
+    "Probability > 3 inches",
+    "Probability > 5 inches",
+    "Probability > local 2-year ARI",
+    "Probability > local 5-year ARI",
+    "ANN-CSGD / WPC ERO Comparison"
+  ];
+
+  const index = preferredOrder.indexOf(label);
+
+  return index >= 0
+    ? index
+    : preferredOrder.length;
+}
+
 function mediaEntryDuration(entry) {
   const directValue = mediaFirstDefined(entry, [
     "duration_hours",
@@ -872,7 +928,20 @@ function populateGifProductSelector() {
         .map((entry) => mediaEntryVariable(entry))
         .filter(Boolean)
     )
-  );
+  ).sort((left, right) => {
+    const orderDifference = (
+      forecastProductOrder(left)
+      - forecastProductOrder(right)
+    );
+
+    if (orderDifference !== 0) {
+      return orderDifference;
+    }
+
+    return mediaProductLabel(left).localeCompare(
+      mediaProductLabel(right)
+    );
+  });
 
   selector.replaceChildren();
 
