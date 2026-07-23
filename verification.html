@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Operational HRRR ANN-CSGD precipitation verification against duration-matched MRMS observations."
+  >
+
+  <title>
+    Operational Verification | HRRR ANN-CSGD Weather Hub
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="assets/verification.css?v=20260723-gallery2"
+  >
+</head>
+
+<body>
+  <header class="v2-hero">
+    <div class="v2-hero__inner">
+      <div class="v2-hero__content">
+        <p class="v2-eyebrow">
+          Experimental forecast verification
+        </p>
+
+        <h1>
+          HRRR ANN-CSGD<br>
+          Operational Verification
+        </h1>
+
+        <p class="v2-hero__lead">
+          Duration-matched comparisons of raw HRRR precipitation,
+          ANN-CSGD probabilistic guidance, and MRMS Pass2
+          observations across the contiguous United States.
+        </p>
+
+        <div class="v2-hero__actions">
+          <a
+            class="v2-button v2-button--glass"
+            href="index.html"
+          >
+            Return to Forecast Dashboard
+          </a>
+
+          <a
+            class="v2-button v2-button--accent"
+            href="#verification-products"
+          >
+            Explore Verification Maps
+          </a>
+        </div>
+      </div>
+
+      <aside
+        class="v2-run-card"
+        aria-label="Current verification run"
+      >
+        <p class="v2-run-card__label">
+          Current verification run
+        </p>
+
+        <strong
+          id="verification-page-initialization"
+          class="v2-run-card__initialization"
+        >
+          Loading…
+        </strong>
+
+        <div class="v2-run-card__facts">
+          <div>
+            <span>State</span>
+
+            <strong id="verification-page-run-state">
+              Loading…
+            </strong>
+          </div>
+
+          <div>
+            <span>Windows</span>
+
+            <strong id="verification-page-window-count">
+              Loading…
+            </strong>
+          </div>
+
+          <div>
+            <span>Latest valid</span>
+
+            <strong id="verification-page-latest-valid">
+              Loading…
+            </strong>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main class="v2-page">
+    <section class="v2-panel v2-overview">
+      <div class="v2-section-heading">
+        <p class="v2-eyebrow v2-eyebrow--blue">
+          Product description
+        </p>
+
+        <h2>How to interpret these graphics</h2>
+
+        <p>
+          Each graphic compares forecasts and duration-matched
+          observations over the same valid period and spatial domain.
+        </p>
+      </div>
+
+      <div class="v2-description-grid">
+        <article class="v2-description-card">
+          <div class="v2-description-card__number">
+            01
+          </div>
+
+          <div>
+            <h3>Amount verification</h3>
+
+            <p>
+              Compares raw HRRR precipitation, ANN-CSGD expected
+              precipitation, and MRMS observations. The fourth panel
+              shows where ANN-CSGD reduced or increased absolute
+              precipitation error.
+            </p>
+          </div>
+        </article>
+
+        <article class="v2-description-card">
+          <div class="v2-description-card__number">
+            02
+          </div>
+
+          <div>
+            <h3>Threshold verification</h3>
+
+            <p>
+              Compares raw HRRR deterministic exceedance with
+              ANN-CSGD exceedance probability and the corresponding
+              observed MRMS exceedance areas.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section
+      id="verification-products"
+      class="v2-panel v2-controls-panel"
+    >
+      <div class="v2-controls-panel__header">
+        <div class="v2-section-heading">
+          <p class="v2-eyebrow v2-eyebrow--blue">
+            Verification workspace
+          </p>
+
+          <h2>Select a verification product</h2>
+
+          <p>
+            Choose the run, duration, lead window, domain, product
+            family, and precipitation threshold.
+          </p>
+        </div>
+
+        <p
+          id="verification-page-catalog-status"
+          class="v2-catalog-status"
+          data-state="loading"
+          role="status"
+          aria-live="polite"
+        >
+          Loading verification catalog…
+        </p>
+      </div>
+
+      <div class="v2-controls">
+        <label>
+          <span>Initialization</span>
+
+          <select id="verification-page-run">
+            <option>Loading…</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Duration</span>
+
+          <select id="verification-page-duration">
+            <option>Loading…</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Lead window</span>
+
+          <select id="verification-page-window">
+            <option>Loading…</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Domain</span>
+
+          <select id="verification-page-domain">
+            <option>Loading…</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Product</span>
+
+          <select id="verification-page-family">
+            <option>Loading…</option>
+          </select>
+        </label>
+
+        <label id="verification-page-threshold-control">
+          <span>Threshold</span>
+
+          <select id="verification-page-threshold">
+            <option>Loading…</option>
+          </select>
+        </label>
+      </div>
+
+      <p
+        id="verification-page-selection-summary"
+        class="v2-selection-summary"
+        aria-live="polite"
+      >
+        Preparing selection…
+      </p>
+    </section>
+
+      <section class="v2-gallery-section">
+        <header class="v2-gallery-heading">
+          <div>
+            <p class="v2-eyebrow v2-eyebrow--blue">
+              Threshold and ARI products
+            </p>
+
+            <h2>Verification map gallery</h2>
+
+            <p>
+              Every available fixed-threshold and
+              recurrence-interval product for the selected
+              initialization, duration, lead window, and domain.
+            </p>
+          </div>
+
+          <span
+            id="verification-gallery-count"
+            class="v2-gallery-count"
+          >
+            Loading products…
+          </span>
+        </header>
+
+        <p
+          id="verification-gallery-status"
+          class="v2-gallery-status"
+          data-state="loading"
+          role="status"
+          aria-live="polite"
+        >
+          Loading threshold and ARI products…
+        </p>
+
+        <div
+          id="verification-product-gallery"
+          class="v2-product-gallery"
+          aria-live="polite"
+          aria-busy="true"
+        ></div>
+      </section>
+
+      <!-- Hidden single-product targets retained for verification.js. -->
+      <div
+        class="v2-js-contract-map"
+        hidden
+        aria-hidden="true"
+      >
+        <h2 id="verification-page-map-title">
+          Verification map
+        </h2>
+
+        <p id="verification-page-map-subtitle"></p>
+
+        <p
+          id="verification-page-map-status"
+          data-state="loading"
+        ></p>
+
+        <img
+          id="verification-page-map-image"
+          alt=""
+          hidden
+        >
+
+        <a
+          id="verification-page-full-image"
+          href="#"
+          aria-disabled="true"
+        >
+          Open full image
+        </a>
+
+        <a
+          id="verification-page-metadata-link"
+          href="#"
+          aria-disabled="true"
+        >
+          Open metadata
+        </a>
+      </div>
+
+      <!-- Hidden targets retained for verification.js only. -->
+    <div class="v2-hidden-metric-contract" hidden aria-hidden="true">
+      <span id="verification-page-metric-1-label">Metric 1</span>
+      <span id="verification-page-metric-1-value">—</span>
+      <span id="verification-page-metric-2-label">Metric 2</span>
+      <span id="verification-page-metric-2-value">—</span>
+      <span id="verification-page-metric-3-label">Metric 3</span>
+      <span id="verification-page-metric-3-value">—</span>
+      <span id="verification-page-metric-4-label">Metric 4</span>
+      <span id="verification-page-metric-4-value">—</span>
+      <span id="verification-page-metric-note"></span>
+    </div>
+
+    <section class="v2-panel v2-method-panel">
+      <div class="v2-section-heading">
+        <p class="v2-eyebrow v2-eyebrow--blue">
+          Product information
+        </p>
+
+        <h2>Selected-product metadata</h2>
+
+        <p>
+          Inspect the initialization, accumulation duration,
+          valid period, threshold, spatial domain, and source
+          information for the selected verification graphic.
+        </p>
+      </div>
+
+      <details class="v2-details">
+        <summary>Open selected-product metadata</summary>
+
+        <pre id="verification-page-product-details">
+Loading product details…
+        </pre>
+      </details>
+    </section>
+  </main>
+
+  <footer class="v2-footer">
+    <span>
+      HRRR ANN-CSGD operational precipitation verification
+    </span>
+
+    <a href="index.html">
+      Return to Forecast Dashboard
+    </a>
+  </footer>
+
+  <script src="assets/verification.js"></script>
+  <script src="assets/verification-gallery.js?v=20260723-gallery2"></script>
+</body>
+</html>
