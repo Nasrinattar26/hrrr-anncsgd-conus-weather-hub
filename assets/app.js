@@ -52,26 +52,7 @@ function loadOverview(data) {
   document.getElementById("land-count").textContent =
     data.grid.land_cells.toLocaleString();
 
-  const cards = document.getElementById("duration-cards");
 
-  cards.innerHTML = "";
-
-  for (const [key, duration] of Object.entries(data.durations)) {
-    const card = document.createElement("article");
-    card.className = "duration-card";
-
-    card.innerHTML = `
-      <h3>${key} model</h3>
-      <strong>CRPSS ${number(duration.crpss_anncsgd_vs_raw)}</strong>
-      <p>
-        ANN-CSGD CRPS: ${number(duration.mean_crps_anncsgd, 3)} mm<br>
-        Raw HRRR CRPS: ${number(duration.mean_crps_raw_hrrr, 3)} mm<br>
-        ${duration.threshold_count} verified thresholds
-      </p>
-    `;
-
-    cards.appendChild(card);
-  }
 }
 
 function currentDuration() {
