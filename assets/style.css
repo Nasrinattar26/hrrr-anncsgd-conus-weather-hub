@@ -1305,3 +1305,48 @@ footer p {
 }
 
 /* END THREE-CARD RUN SUMMARY */
+
+/* BEGIN COMPACT DASHBOARD GUIDE */
+
+.compact-dashboard-guide {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 0.75fr);
+  align-items: center;
+  gap: 2rem;
+  padding: clamp(1.4rem, 2.5vw, 2.25rem);
+  border-left: 0.4rem solid #13b8a6;
+}
+
+.compact-dashboard-guide__copy h2 {
+  margin: 0.25rem 0 0.65rem;
+}
+
+.compact-dashboard-guide__copy > p:last-child {
+  max-width: 58rem;
+  margin: 0;
+  color: #60728e;
+  line-height: 1.65;
+}
+
+.compact-dashboard-guide__note {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  border: 1px solid #cbd9ee;
+  border-radius: 0.9rem;
+  background: #f6f9fe;
+  color: #526785;
+  line-height: 1.55;
+}
+
+.compact-dashboard-guide__note strong {
+  color: #10203b;
+}
+
+@media (max-width: 850px) {
+  .compact-dashboard-guide {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* END COMPACT DASHBOARD GUIDE */

@@ -11,7 +11,7 @@
     content="Operational HRRR ANN-CSGD probabilistic precipitation guidance for the contiguous United States."
   >
   <title>HRRR ANN-CSGD CONUS Weather Hub</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css?v=20260723-compact-guide">
 </head>
 
 <body>
@@ -396,83 +396,29 @@
       </section>
 
 
-      <section
+            <section
         id="method"
-        class="panel user-guide-panel method"
+        class="panel compact-dashboard-guide"
       >
-        <div class="section-title">
-          <div>
-            <p class="eyebrow dark-eyebrow">Quick guide</p>
-            <h2>How to read this dashboard</h2>
-          </div>
-
-          <span class="pill teal-pill">Method</span>
-        </div>
-
-        <div class="user-guide-text">
-          <article class="guide-card">
-            <span class="guide-number">01</span>
-            <div>
-              <h3>Select a duration</h3>
-              <p>
-                Choose 6-, 12-, or 24-hour accumulation guidance.
-              </p>
-            </div>
-          </article>
-
-          <article class="guide-card">
-            <span class="guide-number">02</span>
-            <div>
-              <h3>Select a product</h3>
-              <p>
-                Expected precipitation is the predictive mean.
-                Probability products show threshold exceedance risk.
-              </p>
-            </div>
-          </article>
-
-          <article class="guide-card">
-            <span class="guide-number">03</span>
-            <div>
-              <h3>Inspect forecast timing</h3>
-              <p>
-                Move through available HRRR lead windows using the
-                selector or previous and next controls.
-              </p>
-            </div>
-          </article>
-
-          <article class="guide-card">
-            <span class="guide-number">04</span>
-            <div>
-              <h3>Download gridded data</h3>
-              <p>
-                GRIB2 files provide machine-readable fields, while
-                JSON sidecars describe the file contents.
-              </p>
-            </div>
-          </article>
-        </div>
-
-        <div class="method-summary">
-          <p class="small-label">
-            Duration-specific ANN-CSGD postprocessing
+        <div class="compact-dashboard-guide__copy">
+          <p class="eyebrow dark-eyebrow">
+            Quick guide
           </p>
+
+          <h2>Use the forecast dashboard</h2>
 
           <p>
-            Each model receives twelve predictors describing HRRR
-            precipitation, neighborhood structure, forecast lead,
-            seasonality, valid hour, latitude, and longitude.
-          </p>
-
-          <p>
-            The neural network predicts the parameters of a
-            censored-shifted gamma distribution, producing expected
-            precipitation and threshold-exceedance probabilities.
-            Models were evaluated independently on held-out 2025
-            MRMS observations.
+            Choose an accumulation duration, forecast window, and
+            product. Use the previous and next buttons to move through
+            the available forecast periods.
           </p>
         </div>
+
+        <p class="compact-dashboard-guide__note">
+          <strong>ANN-CSGD</strong> postprocesses HRRR forecasts into
+          expected precipitation and threshold-exceedance
+          probabilities.
+        </p>
       </section>
     </div>
   </main>
