@@ -990,3 +990,11 @@ summary {
 }
 
 /* END SIMPLIFIED VERIFICATION RUN CARD */
+
+/* BEGIN HIDDEN VERIFICATION METADATA */
+
+#verification-products a[href$=".json"] {
+  display: none !important;
+}
+
+/* END HIDDEN VERIFICATION METADATA */
