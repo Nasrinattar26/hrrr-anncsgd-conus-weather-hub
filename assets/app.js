@@ -127,7 +127,10 @@ function populateProductSelector() {
     const option = document.createElement("option");
 
     option.value = product.variable;
-    option.textContent = product.label;
+    option.textContent = forecastProductLabel(
+      product.variable,
+      product.label
+    );
     option.selected =
       product.variable === mapState.productVariable;
 
@@ -139,6 +142,10 @@ function renderForecastMap() {
   const duration = currentDuration();
   const window = currentWindow();
   const product = currentProduct();
+  const productLabel = forecastProductLabel(
+    product.variable,
+    product.label
+  );
 
   mapState.productVariable = product.variable;
 
@@ -155,7 +162,7 @@ function renderForecastMap() {
 
   image.classList.remove("loaded");
   image.alt =
-    `${product.label}, ${duration.duration_hours}-hour ` +
+    `${productLabel}, ${duration.duration_hours}-hour ` +
     `forecast window ${window.label}`;
 
   image.onload = () => {
@@ -172,13 +179,13 @@ function renderForecastMap() {
   fullLink.href = versionedPath;
 
   document.getElementById("forecast-map-title").textContent =
-    `${product.label} · ${duration.duration_hours}-hour product`;
+    `${productLabel} · ${duration.duration_hours}-hour product`;
 
   document.getElementById("forecast-map-validity").textContent =
     `Window ${window.label} · initialization ${mapCatalog.init}`;
 
   document.getElementById("map-selection-summary").textContent =
-    `${duration.duration_hours} h · ${window.label} · ${product.label}`;
+    `${duration.duration_hours} h · ${window.label} · ${productLabel}`;
 
   document.getElementById("previous-window").disabled =
     mapState.windowIndex === 0;
@@ -594,29 +601,77 @@ function mediaBasename(pathValue) {
   );
 }
 
-function mediaProductLabel(variableName) {
+function forecastProductLabel(
+  variableName,
+  fallbackLabel = ""
+) {
+  const normalized = String(
+    variableName || ""
+  ).trim().toLowerCase();
+
   const labels = {
-    expected_precip_mm: "Expected precipitation",
-    raw_hrrr_precip_mm: "Raw HRRR precipitation",
-    prob_gt_0p5in_percent: "Probability above 0.5 inch",
-    prob_gt_1in_percent: "Probability above 1 inch",
-    prob_gt_2in_percent: "Probability above 2 inches",
+    expected_precip_mm:
+      "Expected precipitation",
+
+    prob_gt_0p25in_percent:
+      "Probability > 0.25 inch",
+    prob_gt_0p25inch_percent:
+      "Probability > 0.25 inch",
+
+    prob_gt_0p5in_percent:
+      "Probability > 0.5 inch",
+    prob_gt_0p5inch_percent:
+      "Probability > 0.5 inch",
+
+    prob_gt_1in_percent:
+      "Probability > 1 inch",
+    prob_gt_1inch_percent:
+      "Probability > 1 inch",
+
+    prob_gt_2in_percent:
+      "Probability > 2 inches",
+    prob_gt_2inch_percent:
+      "Probability > 2 inches",
+
+    prob_gt_3in_percent:
+      "Probability > 3 inches",
+    prob_gt_3inch_percent:
+      "Probability > 3 inches",
+
+    prob_gt_5in_percent:
+      "Probability > 5 inches",
+    prob_gt_5inch_percent:
+      "Probability > 5 inches",
+
     prob_gt_2yr6h_ari_percent:
-      "Probability above 2-year 6-hour ARI",
-    prob_gt_5yr6h_ari_percent:
-      "Probability above 5-year 6-hour ARI",
+      "Probability > local 2-year ARI",
     prob_gt_2yr12h_ari_percent:
-      "Probability above 2-year 12-hour ARI",
-    prob_gt_5yr12h_ari_percent:
-      "Probability above 5-year 12-hour ARI",
+      "Probability > local 2-year ARI",
     prob_gt_2yr24h_ari_percent:
-      "Probability above 2-year 24-hour ARI",
+      "Probability > local 2-year ARI",
+
+    prob_gt_5yr6h_ari_percent:
+      "Probability > local 5-year ARI",
+    prob_gt_5yr12h_ari_percent:
+      "Probability > local 5-year ARI",
     prob_gt_5yr24h_ari_percent:
-      "Probability above 5-year 24-hour ARI"
+      "Probability > local 5-year ARI",
+
+    anncsgd_wpc_ero_comparison:
+      "ANN-CSGD / WPC ERO Comparison",
+    wpc_ero_comparison:
+      "ANN-CSGD / WPC ERO Comparison"
   };
 
-  if (labels[variableName]) {
-    return labels[variableName];
+  if (labels[normalized]) {
+    return labels[normalized];
+  }
+
+  if (
+    typeof fallbackLabel === "string"
+    && fallbackLabel.trim() !== ""
+  ) {
+    return fallbackLabel.trim();
   }
 
   return String(variableName || "Forecast product")
@@ -627,6 +682,10 @@ function mediaProductLabel(variableName) {
     .replace(/\b\w/g, (character) => {
       return character.toUpperCase();
     });
+}
+
+function mediaProductLabel(variableName) {
+  return forecastProductLabel(variableName);
 }
 
 function mediaEntryDuration(entry) {
