@@ -112,7 +112,7 @@ function populateWindowSelector() {
 function populateProductSelector() {
   const select = document.getElementById("map-product");
   const products = [
-    ...currentDuration().products
+    ...currentWindow().products
   ].sort((left, right) => {
     const orderDifference = (
       forecastProductOrder(
@@ -241,6 +241,7 @@ function attachMapListeners() {
     .getElementById("map-window")
     .addEventListener("change", event => {
       mapState.windowIndex = Number(event.target.value);
+      populateProductSelector();
       renderForecastMap();
     });
 

@@ -1614,6 +1614,21 @@ window.HRRR_MAP_CATALOG = {
               "kind": "image",
               "path": "products/maps/2026072312/24h/f00_f24/prob_gt_5yr24h_ari_percent.png",
               "size_bytes": 420608
+            },
+            {
+              "duration_hours": 24,
+              "window": "f00_f24",
+              "start_fhr": 0,
+              "end_fhr": 24,
+              "variable": "wpc_ero_comparison_day1",
+              "label": "WPC ERO Comparison \u2014 Day 1",
+              "units": "comparison",
+              "kind": "image",
+              "path": "products/ero/2026072312/24h/f00_f24/hrrr_anncsgd_wpc_ero_2026072312_24h_f00_f24_day1_conus.png",
+              "metadata_path": "products/ero/2026072312/24h/f00_f24/hrrr_anncsgd_wpc_ero_2026072312_24h_f00_f24_day1_conus.json",
+              "size_bytes": 1082510,
+              "ero_day": 1,
+              "ero_temporal_coverage": "partial"
             }
           ]
         },
@@ -2030,6 +2045,21 @@ window.HRRR_MAP_CATALOG = {
               "kind": "image",
               "path": "products/maps/2026072312/24h/f24_f48/prob_gt_5yr24h_ari_percent.png",
               "size_bytes": 424105
+            },
+            {
+              "duration_hours": 24,
+              "window": "f24_f48",
+              "start_fhr": 24,
+              "end_fhr": 48,
+              "variable": "wpc_ero_comparison_day2",
+              "label": "WPC ERO Comparison \u2014 Day 2",
+              "units": "comparison",
+              "kind": "image",
+              "path": "products/ero/2026072312/24h/f24_f48/hrrr_anncsgd_wpc_ero_2026072312_24h_f24_f48_day2_conus.png",
+              "metadata_path": "products/ero/2026072312/24h/f24_f48/hrrr_anncsgd_wpc_ero_2026072312_24h_f24_f48_day2_conus.json",
+              "size_bytes": 1090479,
+              "ero_day": 2,
+              "ero_temporal_coverage": "full"
             }
           ]
         }
