@@ -1314,7 +1314,6 @@ footer p {
   align-items: center;
   gap: 2rem;
   padding: clamp(1.4rem, 2.5vw, 2.25rem);
-  border-left: 0.4rem solid #13b8a6;
 }
 
 .compact-dashboard-guide__copy h2 {
