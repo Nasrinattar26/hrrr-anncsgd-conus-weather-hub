@@ -1350,3 +1350,23 @@ footer p {
 }
 
 /* END COMPACT DASHBOARD GUIDE */
+
+/* BEGIN SIMPLIFIED OPERATIONAL SUMMARY */
+
+#map-catalog-status {
+  display: none !important;
+}
+
+.hero-stat-grid--two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+@media (max-width: 700px) {
+  .hero-stat-grid--two {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* END SIMPLIFIED OPERATIONAL SUMMARY */

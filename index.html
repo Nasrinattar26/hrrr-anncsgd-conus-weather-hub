@@ -11,7 +11,7 @@
     content="Operational HRRR ANN-CSGD probabilistic precipitation guidance for the contiguous United States."
   >
   <title>HRRR ANN-CSGD CONUS Weather Hub</title>
-  <link rel="stylesheet" href="assets/style.css?v=20260723-compact-guide">
+  <link rel="stylesheet" href="assets/style.css?v=20260723-simple-summary">
 </head>
 
 <body>
@@ -67,13 +67,14 @@
           Latest prepared and audited HRRR ANN-CSGD initialization.
         </p>
 
-        <div class="hero-stat-grid hero-stat-grid--three">
+        <div class="hero-stat-grid hero-stat-grid--two">
 
 
-          <article class="hero-stat">
-            <span class="small-label">CONUS land cells</span>
-            <strong id="land-count">—</strong>
-          </article>
+          <span
+              id="land-count"
+              hidden
+              aria-hidden="true"
+            ></span>
 
           <article class="hero-stat">
             <span class="small-label">Durations</span>
