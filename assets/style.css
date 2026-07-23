@@ -1348,3 +1348,11 @@ footer p {
 }
 
 /* END OPERATIONAL VERIFICATION INTERFACE */
+
+/* BEGIN HIDDEN PRODUCTION AUDIT BADGE */
+
+#status-badge {
+  display: none !important;
+}
+
+/* END HIDDEN PRODUCTION AUDIT BADGE */
