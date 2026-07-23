@@ -1172,3 +1172,120 @@ footer p {
 }
 
 /* END HIDDEN PRODUCTION AUDIT BADGE */
+
+/* BEGIN COMPACT GRIB2 DOWNLOADER */
+
+.download-grid.grib-compact-downloader {
+  display: block;
+}
+
+.grib-compact-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.grib-compact-control {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.grib-compact-control > span {
+  color: #526785;
+  font-size: 0.83rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.grib-compact-control select {
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.75rem 2.75rem 0.75rem 0.9rem;
+  border: 1px solid #cbd9ee;
+  border-radius: 0.85rem;
+  background: #fff;
+  color: #10203b;
+  font: inherit;
+  font-weight: 700;
+}
+
+.grib-selected-file {
+  padding: 1.25rem;
+  border: 1px solid #cbd9ee;
+  border-radius: 1rem;
+  background: #f8fbff;
+}
+
+.grib-selected-file__label {
+  margin: 0 0 0.55rem;
+}
+
+.grib-selected-file__name {
+  display: block;
+  color: #10203b;
+  font-size: 1.08rem;
+  overflow-wrap: anywhere;
+}
+
+.grib-selected-file__details,
+.grib-selected-file__fields {
+  margin: 0.55rem 0 0;
+  color: #60728e;
+}
+
+.grib-selected-file__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.1rem;
+}
+
+.grib-compact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.85rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid #1f5bc4;
+  border-radius: 0.8rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.grib-compact-button--primary {
+  background: #1f5bc4;
+  color: #fff;
+}
+
+.grib-compact-button--secondary {
+  background: #fff;
+  color: #1f5bc4;
+}
+
+.grib-compact-button[aria-disabled="true"] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.grib-compact-empty {
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid #cbd9ee;
+  border-radius: 0.85rem;
+  color: #60728e;
+}
+
+@media (max-width: 720px) {
+  .grib-compact-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .grib-selected-file__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+/* END COMPACT GRIB2 DOWNLOADER */

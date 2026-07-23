@@ -1037,6 +1037,7 @@ function gribSidecarPath(entry) {
 }
 
 function renderGribDownloads(catalog) {
+  // BEGIN COMPACT GRIB2 DOWNLOADER
   gribCatalog = catalog;
 
   const catalogStatus = document.getElementById(
@@ -1087,7 +1088,7 @@ function renderGribDownloads(catalog) {
 
   const calculatedMessageCount = gribEntries.reduce(
     (total, entry) => {
-      const entryCount = mediaFiniteNumber(
+      const count = mediaFiniteNumber(
         mediaFirstDefined(entry, [
           "message_count",
           "messages",
@@ -1096,7 +1097,7 @@ function renderGribDownloads(catalog) {
         ])
       );
 
-      return total + (entryCount === null ? 0 : entryCount);
+      return total + (count === null ? 0 : count);
     },
     0
   );
@@ -1108,14 +1109,15 @@ function renderGribDownloads(catalog) {
   );
 
   catalogStatus.textContent = (
-    `${gribEntries.length} GRIB2 forecast files`
+    `${gribEntries.length} GRIB2 files`
     + (
       messageCount > 0
-        ? ` containing ${messageCount} messages`
+        ? ` containing ${messageCount} forecast fields`
         : ""
     )
     + ` are available for ${
       gribCatalog.__initialization
+      || gribCatalog.init
       || "the latest initialization"
     }.`
   );
@@ -1123,7 +1125,7 @@ function renderGribDownloads(catalog) {
   if (packageEntry) {
     const rawPackagePath = mediaEntryPath(packageEntry);
 
-    const packagePath = mediaResolveProductPath(
+    const resolvedPackagePath = mediaResolveProductPath(
       rawPackagePath,
       "grib2",
       gribCatalog
@@ -1138,7 +1140,7 @@ function renderGribDownloads(catalog) {
       ])
     );
 
-    packageLink.href = packagePath;
+    packageLink.href = resolvedPackagePath;
     packageLink.removeAttribute("aria-disabled");
     packageLink.setAttribute("download", "");
 
@@ -1152,130 +1154,358 @@ function renderGribDownloads(catalog) {
     );
   } else {
     packageLink.href = "#";
-    packageLink.setAttribute("aria-disabled", "true");
+    packageLink.setAttribute(
+      "aria-disabled",
+      "true"
+    );
 
     packageSummary.textContent =
       "The complete package was not listed in the manifest.";
   }
 
   downloadList.replaceChildren();
+  downloadList.classList.add(
+    "grib-compact-downloader"
+  );
 
-  [6, 12, 24].forEach((duration) => {
-    const durationEntries = gribEntries
-      .filter((entry) => {
-        return mediaEntryDuration(entry) === duration;
-      })
-      .sort((left, right) => {
-        return String(mediaEntryPath(left)).localeCompare(
-          String(mediaEntryPath(right))
-        );
-      });
+  if (gribEntries.length === 0) {
+    const emptyMessage = document.createElement("p");
 
-    const card = document.createElement("article");
-    card.className = "download-card";
+    emptyMessage.className =
+      "grib-compact-empty";
 
-    const heading = document.createElement("h3");
-    heading.className = "download-card-heading";
-    heading.textContent = `${duration}-hour forecast files`;
-    card.append(heading);
+    emptyMessage.textContent =
+      "No individual GRIB2 files are available.";
 
-    if (durationEntries.length === 0) {
-      const emptyMessage = document.createElement("p");
+    downloadList.append(emptyMessage);
+    return;
+  }
 
-      emptyMessage.textContent =
-        "No files were listed for this duration.";
+  function entryWindow(entry) {
+    const directWindow = mediaFirstDefined(
+      entry,
+      [
+        "window",
+        "forecast_window",
+        "lead_window"
+      ]
+    );
 
-      card.append(emptyMessage);
-      downloadList.append(card);
+    if (directWindow !== undefined && directWindow !== null) {
+      return String(directWindow);
+    }
+
+    const pathMatch = String(
+      mediaEntryPath(entry)
+    ).match(/f\d+_f\d+/i);
+
+    return pathMatch ? pathMatch[0] : "unknown";
+  }
+
+  function entryStartHour(entry) {
+    const value = mediaFiniteNumber(
+      mediaFirstDefined(entry, [
+        "start_fhr",
+        "lead_start_hour",
+        "start_hour"
+      ])
+    );
+
+    return value === null
+      ? Number.MAX_SAFE_INTEGER
+      : value;
+  }
+
+  const sortedEntries = [...gribEntries].sort(
+    (left, right) => {
+      const durationDifference = (
+        mediaEntryDuration(left)
+        - mediaEntryDuration(right)
+      );
+
+      if (durationDifference !== 0) {
+        return durationDifference;
+      }
+
+      return (
+        entryStartHour(left)
+        - entryStartHour(right)
+      );
+    }
+  );
+
+  const durations = [
+    ...new Set(
+      sortedEntries
+        .map((entry) => mediaEntryDuration(entry))
+        .filter((duration) => Number.isFinite(duration))
+    )
+  ].sort((left, right) => left - right);
+
+  const controls = document.createElement("div");
+  controls.className = "grib-compact-controls";
+
+  const durationLabel = document.createElement("label");
+  durationLabel.className = "grib-compact-control";
+
+  const durationText = document.createElement("span");
+  durationText.textContent = "Accumulation duration";
+
+  const durationSelect = document.createElement("select");
+  durationSelect.id = "grib-duration-select";
+  durationSelect.setAttribute(
+    "aria-label",
+    "GRIB2 accumulation duration"
+  );
+
+  durationLabel.append(
+    durationText,
+    durationSelect
+  );
+
+  const windowLabel = document.createElement("label");
+  windowLabel.className = "grib-compact-control";
+
+  const windowText = document.createElement("span");
+  windowText.textContent = "Forecast window";
+
+  const windowSelect = document.createElement("select");
+  windowSelect.id = "grib-window-select";
+  windowSelect.setAttribute(
+    "aria-label",
+    "GRIB2 forecast window"
+  );
+
+  windowLabel.append(
+    windowText,
+    windowSelect
+  );
+
+  controls.append(
+    durationLabel,
+    windowLabel
+  );
+
+  const selectedFile = document.createElement("article");
+  selectedFile.className = "grib-selected-file";
+
+  const selectedHeading = document.createElement("p");
+  selectedHeading.className =
+    "small-label grib-selected-file__label";
+  selectedHeading.textContent = "Selected forecast file";
+
+  const selectedName = document.createElement("strong");
+  selectedName.className = "grib-selected-file__name";
+
+  const selectedDetails = document.createElement("p");
+  selectedDetails.className =
+    "grib-selected-file__details";
+
+  const selectedFields = document.createElement("p");
+  selectedFields.className =
+    "grib-selected-file__fields";
+
+  const actions = document.createElement("div");
+  actions.className = "grib-selected-file__actions";
+
+  const gribLink = document.createElement("a");
+  gribLink.className =
+    "grib-compact-button grib-compact-button--primary";
+  gribLink.textContent = "Download GRIB2";
+  gribLink.setAttribute("download", "");
+
+  const metadataLink = document.createElement("a");
+  metadataLink.className =
+    "grib-compact-button grib-compact-button--secondary";
+  metadataLink.textContent = "Open metadata";
+  metadataLink.target = "_blank";
+  metadataLink.rel = "noopener";
+
+  actions.append(
+    gribLink,
+    metadataLink
+  );
+
+  selectedFile.append(
+    selectedHeading,
+    selectedName,
+    selectedDetails,
+    selectedFields,
+    actions
+  );
+
+  downloadList.append(
+    controls,
+    selectedFile
+  );
+
+  durations.forEach((duration) => {
+    const option = document.createElement("option");
+
+    option.value = String(duration);
+    option.textContent = `${duration}-hour`;
+
+    durationSelect.append(option);
+  });
+
+  durationSelect.value = String(durations[0]);
+
+  function updateSelectedFile() {
+    const duration = Number(durationSelect.value);
+    const windowValue = windowSelect.value;
+
+    const selectedEntry = sortedEntries.find((entry) => {
+      return (
+        mediaEntryDuration(entry) === duration
+        && entryWindow(entry) === windowValue
+      );
+    });
+
+    if (!selectedEntry) {
+      selectedName.textContent =
+        "No matching GRIB2 file";
+
+      selectedDetails.textContent = "";
+      selectedFields.textContent = "";
+
+      gribLink.href = "#";
+      metadataLink.href = "#";
+
+      gribLink.setAttribute(
+        "aria-disabled",
+        "true"
+      );
+
+      metadataLink.setAttribute(
+        "aria-disabled",
+        "true"
+      );
+
       return;
     }
 
+    const rawGribPath = mediaEntryPath(selectedEntry);
+
+    const resolvedGribPath = mediaResolveProductPath(
+      rawGribPath,
+      "grib2",
+      gribCatalog
+    );
+
+    const rawSidecarPath = gribSidecarPath(
+      selectedEntry
+    );
+
+    const resolvedSidecarPath = rawSidecarPath
+      ? mediaResolveProductPath(
+          rawSidecarPath,
+          "grib2",
+          gribCatalog
+        )
+      : null;
+
+    const fileBytes = mediaFiniteNumber(
+      mediaFirstDefined(selectedEntry, [
+        "size_bytes",
+        "bytes",
+        "file_size_bytes"
+      ])
+    );
+
+    const entryMessageCount = mediaFiniteNumber(
+      mediaFirstDefined(selectedEntry, [
+        "message_count",
+        "messages",
+        "number_of_messages",
+        "n_messages"
+      ])
+    );
+
+    const variables = Array.isArray(
+      selectedEntry.variables
+    )
+      ? selectedEntry.variables
+      : [];
+
+    selectedName.textContent =
+      mediaBasename(rawGribPath);
+
+    selectedDetails.textContent = [
+      `${duration}-hour accumulation`,
+      windowValue,
+      (
+        entryMessageCount === null
+          ? null
+          : `${entryMessageCount} messages`
+      ),
+      (
+        fileBytes === null
+          ? null
+          : formatBytes(fileBytes)
+      )
+    ].filter(Boolean).join(" · ");
+
+    selectedFields.textContent = (
+      variables.length > 0
+        ? `${variables.length} forecast fields included`
+        : "Forecast-field details are available in the metadata."
+    );
+
+    gribLink.href = resolvedGribPath;
+    gribLink.removeAttribute("aria-disabled");
+
+    if (resolvedSidecarPath) {
+      metadataLink.href = resolvedSidecarPath;
+      metadataLink.removeAttribute("aria-disabled");
+    } else {
+      metadataLink.href = "#";
+      metadataLink.setAttribute(
+        "aria-disabled",
+        "true"
+      );
+    }
+  }
+
+  function updateWindows() {
+    const duration = Number(durationSelect.value);
+
+    const durationEntries = sortedEntries.filter(
+      (entry) => {
+        return mediaEntryDuration(entry) === duration;
+      }
+    );
+
+    windowSelect.replaceChildren();
+
     durationEntries.forEach((entry) => {
-      const rawGribPath = mediaEntryPath(entry);
+      const option = document.createElement("option");
+      const windowValue = entryWindow(entry);
 
-      const resolvedGribPath = mediaResolveProductPath(
-        rawGribPath,
-        "grib2",
-        gribCatalog
-      );
+      option.value = windowValue;
+      option.textContent = windowValue;
 
-      const rawSidecarPath = gribSidecarPath(entry);
-
-      const resolvedSidecarPath = (
-        rawSidecarPath
-          ? mediaResolveProductPath(
-              rawSidecarPath,
-              "grib2",
-              gribCatalog
-            )
-          : null
-      );
-
-      const row = document.createElement("div");
-      row.className = "download-row";
-
-      const details = document.createElement("div");
-      details.className = "download-details";
-
-      const filenameElement = document.createElement("strong");
-      filenameElement.textContent = mediaBasename(rawGribPath);
-      details.append(filenameElement);
-
-      const fileBytes = mediaFiniteNumber(
-        mediaFirstDefined(entry, [
-          "size_bytes",
-          "bytes",
-          "file_size_bytes"
-        ])
-      );
-
-      const entryMessageCount = mediaFiniteNumber(
-        mediaFirstDefined(entry, [
-          "message_count",
-          "messages",
-          "number_of_messages",
-          "n_messages"
-        ])
-      );
-
-      const detailParts = [];
-
-      if (entryMessageCount !== null) {
-        detailParts.push(`${entryMessageCount} messages`);
-      }
-
-      if (fileBytes !== null) {
-        detailParts.push(formatBytes(fileBytes));
-      }
-
-      if (detailParts.length > 0) {
-        const metadata = document.createElement("small");
-        metadata.textContent = detailParts.join(" · ");
-        details.append(metadata);
-      }
-
-      const links = document.createElement("div");
-      links.className = "download-links";
-
-      links.append(
-        createDownloadLink(resolvedGribPath, "GRIB2")
-      );
-
-      if (resolvedSidecarPath) {
-        links.append(
-          createDownloadLink(
-            resolvedSidecarPath,
-            "Metadata JSON"
-          )
-        );
-      }
-
-      row.append(details, links);
-      card.append(row);
+      windowSelect.append(option);
     });
 
-    downloadList.append(card);
-  });
+    if (windowSelect.options.length > 0) {
+      windowSelect.selectedIndex = 0;
+    }
+
+    updateSelectedFile();
+  }
+
+  durationSelect.addEventListener(
+    "change",
+    updateWindows
+  );
+
+  windowSelect.addEventListener(
+    "change",
+    updateSelectedFile
+  );
+
+  updateWindows();
+  // END COMPACT GRIB2 DOWNLOADER
 }
 
 function setGifCatalogError(error) {
