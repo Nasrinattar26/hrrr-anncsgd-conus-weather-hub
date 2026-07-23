@@ -46,8 +46,6 @@ function loadOverview(data) {
   document.getElementById("latest-init").textContent =
     data.latest_initialization_display;
 
-  document.getElementById("product-count").textContent =
-    `${data.passed_products} / ${data.expected_products}`;
 
   document.getElementById("land-count").textContent =
     data.grid.land_cells.toLocaleString();

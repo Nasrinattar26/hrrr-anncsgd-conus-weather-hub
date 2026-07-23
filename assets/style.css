@@ -1289,3 +1289,19 @@ footer p {
 }
 
 /* END COMPACT GRIB2 DOWNLOADER */
+
+/* BEGIN THREE-CARD RUN SUMMARY */
+
+.hero-stat-grid--three {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .hero-stat-grid--three {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* END THREE-CARD RUN SUMMARY */
