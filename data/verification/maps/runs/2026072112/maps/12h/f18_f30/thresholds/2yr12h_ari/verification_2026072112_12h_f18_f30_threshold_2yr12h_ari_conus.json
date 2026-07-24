@@ -67,6 +67,55 @@
     "POD": 0.0,
     "FAR": null,
     "CSI": 0.0,
+    "FSS": 0.0,
+    "fractions_skill_score": {
+      "1x1": 0.0,
+      "3x3": 0.0,
+      "5x5": 0.0
+    },
+    "fss_display_neighborhood": "3x3",
+    "brier_score": 0.0003163435967785957,
+    "bs_climatology": 0.00031662627390228266
+  },
+  "raw_hrrr_metrics": {
+    "observed_events": 4,
+    "forecast_events": 4,
+    "hits": 0,
+    "misses": 4,
+    "false_alarms": 4,
+    "correct_negatives": 12745,
+    "brier_skill_score": -0.9812107563460011,
+    "POD": 0.0,
+    "FAR": 1.0,
+    "CSI": 0.0,
+    "FSS": 0.0,
+    "fractions_skill_score": {
+      "1x1": 0.0,
+      "3x3": 0.0,
+      "5x5": 0.0
+    },
+    "fss_display_neighborhood": "3x3",
+    "brier_score": 0.0006273033795969576,
+    "bs_climatology": 0.00031662627390228266
+  },
+  "ann_csgd_metrics": {
+    "observed_events": 4,
+    "forecast_events": 0,
+    "hits": 0,
+    "misses": 4,
+    "false_alarms": 0,
+    "correct_negatives": 12749,
+    "brier_skill_score": 0.0008927784804562133,
+    "POD": 0.0,
+    "FAR": null,
+    "CSI": 0.0,
+    "FSS": 0.0,
+    "fractions_skill_score": {
+      "1x1": 0.0,
+      "3x3": 0.0,
+      "5x5": 0.0
+    },
+    "fss_display_neighborhood": "3x3",
     "brier_score": 0.0003163435967785957,
     "bs_climatology": 0.00031662627390228266
   },
@@ -146,20 +195,20 @@
   "product_id": "2026072112__12h__f18_f30__threshold_verification__2yr12h_ari__conus",
   "public_image_url": "data/verification/maps/runs/2026072112/maps/12h/f18_f30/thresholds/2yr12h_ari/verification_2026072112_12h_f18_f30_threshold_2yr12h_ari_conus.webp",
   "public_metadata_url": "data/verification/maps/runs/2026072112/maps/12h/f18_f30/thresholds/2yr12h_ari/verification_2026072112_12h_f18_f30_threshold_2yr12h_ari_conus.json",
-  "source_png_sha256": "22b4ba190589cb9fb6cbcad298c70b0b043ec2e3714281b34c7a89ebad094f41",
+  "source_png_sha256": "a182626e3e597f9881f23392567c05d01a9e0499ceebb4335b7886ddeac9dfba",
   "public_webp_profile": {
     "name": "high",
     "maximum_width": 2200,
     "quality": 88,
     "method": 6
   },
-  "webp_bytes": 287050,
-  "webp_sha256": "295d747e73247bec1982cc43e6b1499d0678f02ff957898d63b4c25544f140e8",
+  "webp_bytes": 243804,
+  "webp_sha256": "f643899fc047e324434c6d710231b43e7fa1df1ccd16b1a2f9ceedf90ddd4311",
   "webp_width": 2200,
-  "webp_height": 1440,
+  "webp_height": 1377,
   "webp_rgb_standard_deviation": [
-    41.435678943452835,
-    39.240256495655885,
-    41.17247577542445
+    36.74074461631964,
+    34.14227438277242,
+    36.16460150688072
   ]
 }

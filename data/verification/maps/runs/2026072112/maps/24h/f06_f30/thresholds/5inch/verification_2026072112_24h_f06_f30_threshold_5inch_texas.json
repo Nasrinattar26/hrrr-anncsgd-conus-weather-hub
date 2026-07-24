@@ -67,6 +67,55 @@
     "POD": 0.0,
     "FAR": null,
     "CSI": 0.0,
+    "FSS": 0.0,
+    "fractions_skill_score": {
+      "1x1": 0.0,
+      "3x3": 0.0,
+      "5x5": 0.0
+    },
+    "fss_display_neighborhood": "3x3",
+    "brier_score": 0.0003478866360186582,
+    "bs_climatology": 0.00037600525347748645
+  },
+  "raw_hrrr_metrics": {
+    "observed_events": 5,
+    "forecast_events": 10,
+    "hits": 1,
+    "misses": 4,
+    "false_alarms": 9,
+    "correct_negatives": 13304,
+    "brier_skill_score": -1.5960343157293315,
+    "POD": 0.2,
+    "FAR": 0.9,
+    "CSI": 0.07142857142857142,
+    "FSS": 0.14719793558058514,
+    "fractions_skill_score": {
+      "1x1": 0.1333333333333333,
+      "3x3": 0.14719793558058514,
+      "5x5": 0.14365023153779044
+    },
+    "fss_display_neighborhood": "3x3",
+    "brier_score": 0.0009761225409220603,
+    "bs_climatology": 0.00037600525347748645
+  },
+  "ann_csgd_metrics": {
+    "observed_events": 5,
+    "forecast_events": 0,
+    "hits": 0,
+    "misses": 5,
+    "false_alarms": 0,
+    "correct_negatives": 13313,
+    "brier_skill_score": 0.07478251220900001,
+    "POD": 0.0,
+    "FAR": null,
+    "CSI": 0.0,
+    "FSS": 0.0,
+    "fractions_skill_score": {
+      "1x1": 0.0,
+      "3x3": 0.0,
+      "5x5": 0.0
+    },
+    "fss_display_neighborhood": "3x3",
     "brier_score": 0.0003478866360186582,
     "bs_climatology": 0.00037600525347748645
   },
@@ -146,20 +195,20 @@
   "product_id": "2026072112__24h__f06_f30__threshold_verification__5inch__texas",
   "public_image_url": "data/verification/maps/runs/2026072112/maps/24h/f06_f30/thresholds/5inch/verification_2026072112_24h_f06_f30_threshold_5inch_texas.webp",
   "public_metadata_url": "data/verification/maps/runs/2026072112/maps/24h/f06_f30/thresholds/5inch/verification_2026072112_24h_f06_f30_threshold_5inch_texas.json",
-  "source_png_sha256": "fad4738b245e44559686d00ea8dd380b03189c61809b96a519984dd4ae07b7c3",
+  "source_png_sha256": "6d7a510f478aae0bfd5e2139a13b2e03836c9e4839cd94a5ea8718779eeb7716",
   "public_webp_profile": {
     "name": "high",
     "maximum_width": 2200,
     "quality": 88,
     "method": 6
   },
-  "webp_bytes": 156522,
-  "webp_sha256": "6025581bf327e9e1e54624b1c83606c27d8024705168b05431419d196037eb9f",
+  "webp_bytes": 102900,
+  "webp_sha256": "a276841000b08b7887321ecc445a0efdd9acd284562d67a43784fac1b22c8258",
   "webp_width": 2200,
-  "webp_height": 1711,
+  "webp_height": 1648,
   "webp_rgb_standard_deviation": [
-    40.595873534679775,
-    38.83521959488156,
-    41.1510941167889
+    34.51752819880719,
+    32.35641799442188,
+    34.92345056902801
   ]
 }

@@ -289,6 +289,14 @@ document.addEventListener("DOMContentLoaded", () => {
           "CSI",
           number(rawMetrics.CSI, 3),
         ],
+          [
+            "FSS 3×3",
+            number(
+              rawMetrics.FSS
+              ?? rawMetrics.fractions_skill_score?.["3x3"],
+              3
+            ),
+          ],
       ]
     );
 
@@ -319,6 +327,14 @@ document.addEventListener("DOMContentLoaded", () => {
           "CSI",
           number(annMetrics.CSI, 3),
         ],
+          [
+            "FSS 3×3",
+            number(
+              annMetrics.FSS
+              ?? annMetrics.fractions_skill_score?.["3x3"],
+              3
+            ),
+          ],
       ]
     );
 
@@ -375,10 +391,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
           <p class="v2-gallery-card__metric-note">
             Observed event: MRMS precipitation ≥ the selected
-            threshold. POD, FAR, and CSI use each model's
-            single-valued precipitation forecast. BSS uses
-            exceedance probabilities relative to historical
-            MRMS climatology.
+              threshold. POD, FAR, CSI, and FSS use each
+              model's single-valued precipitation forecast. FSS
+              uses land-aware 3×3 neighborhood event fractions.
+              BSS uses exceedance probabilities relative to
+              historical MRMS climatology.
           </p>
         </section>
       </article>

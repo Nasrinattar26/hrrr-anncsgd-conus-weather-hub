@@ -67,6 +67,55 @@
     "POD": 0.0,
     "FAR": null,
     "CSI": 0.0,
+    "FSS": 0.0,
+    "fractions_skill_score": {
+      "1x1": 0.0,
+      "3x3": 0.0,
+      "5x5": 0.0
+    },
+    "fss_display_neighborhood": "3x3",
+    "brier_score": 0.0001496592512146123,
+    "bs_climatology": 0.00015091089721893115
+  },
+  "raw_hrrr_metrics": {
+    "observed_events": 2,
+    "forecast_events": 0,
+    "hits": 0,
+    "misses": 2,
+    "false_alarms": 0,
+    "correct_negatives": 13299,
+    "brier_skill_score": 0.0036197716067610797,
+    "POD": 0.0,
+    "FAR": null,
+    "CSI": 0.0,
+    "FSS": 0.0,
+    "fractions_skill_score": {
+      "1x1": 0.0,
+      "3x3": 0.0,
+      "5x5": 0.0
+    },
+    "fss_display_neighborhood": "3x3",
+    "brier_score": 0.00015036463423802722,
+    "bs_climatology": 0.00015091089721893115
+  },
+  "ann_csgd_metrics": {
+    "observed_events": 2,
+    "forecast_events": 0,
+    "hits": 0,
+    "misses": 2,
+    "false_alarms": 0,
+    "correct_negatives": 13299,
+    "brier_skill_score": 0.008293940513143028,
+    "POD": 0.0,
+    "FAR": null,
+    "CSI": 0.0,
+    "FSS": 0.0,
+    "fractions_skill_score": {
+      "1x1": 0.0,
+      "3x3": 0.0,
+      "5x5": 0.0
+    },
+    "fss_display_neighborhood": "3x3",
     "brier_score": 0.0001496592512146123,
     "bs_climatology": 0.00015091089721893115
   },
@@ -153,59 +202,13 @@
     "quality": 88,
     "method": 6
   },
-  "webp_bytes": 274296,
-  "webp_sha256": "dc0b19218ed0e41aa12dbadddb7f14f8addf09530ac48a1d9729e375bd4b5a52",
+  "webp_bytes": 231080,
+  "webp_sha256": "a95b3bfe83598fc134dcd5585729279092e974c054ba495227c4fa6be3618b67",
   "webp_width": 2200,
   "webp_height": 1377,
   "webp_rgb_standard_deviation": [
-    35.78021197061824,
-    33.7841135309355,
-    35.24350848969632
-  ],
-  "observation_variable": "mrms_obs_6h",
-  "grid_shape": [
-    117,
-    253
-  ],
-  "raw_hrrr_metrics": {
-    "observed_events": 2,
-    "forecast_events": 0,
-    "hits": 0,
-    "misses": 2,
-    "false_alarms": 0,
-    "correct_negatives": 13299,
-    "brier_skill_score": 0.0036197716067610797,
-    "POD": 0.0,
-    "FAR": null,
-    "CSI": 0.0,
-    "brier_score": 0.00015036463423802722,
-    "bs_climatology": 0.00015091089721893115
-  },
-  "ann_csgd_metrics": {
-    "observed_events": 2,
-    "forecast_events": 0,
-    "hits": 0,
-    "misses": 2,
-    "false_alarms": 0,
-    "correct_negatives": 13299,
-    "brier_skill_score": 0.008293940513143028,
-    "POD": 0.0,
-    "FAR": null,
-    "CSI": 0.0,
-    "brier_score": 0.0001496592512146123,
-    "bs_climatology": 0.00015091089721893115
-  },
-  "output_png_bytes": 1306396,
-  "output_png_sha256": "23e422b1ab68e7722954f0cbced9002a2fee34cc04ed02fb67aa5821846649c9",
-  "output_png_width": 3472,
-  "output_png_height": 2173,
-  "output_png_mode": "RGBA",
-  "output_png_format": "PNG",
-  "output_png_channel_stddev": [
-    38.62631418819119,
-    36.08850365195908,
-    37.08632934457269
-  ],
-  "image_url": "data/verification/maps/runs/2026072112/maps/6h/f24_f30/thresholds/5yr6h_ari/verification_2026072112_6h_f24_f30_threshold_5yr6h_ari_conus.webp",
-  "metadata_url": "data/verification/maps/runs/2026072112/maps/6h/f24_f30/thresholds/5yr6h_ari/verification_2026072112_6h_f24_f30_threshold_5yr6h_ari_conus.json"
+    35.70409419791017,
+    33.782303136128405,
+    35.29040593571568
+  ]
 }

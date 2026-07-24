@@ -67,6 +67,55 @@
     "POD": 0.11235955056179775,
     "FAR": 0.2857142857142857,
     "CSI": 0.10752688172043011,
+    "FSS": 0.3394320232239403,
+    "fractions_skill_score": {
+      "1x1": 0.1941747572815533,
+      "3x3": 0.3394320232239403,
+      "5x5": 0.37096051862966906
+    },
+    "fss_display_neighborhood": "3x3",
+    "brier_score": 0.005815642179684697,
+    "bs_climatology": 0.006638141225820641
+  },
+  "raw_hrrr_metrics": {
+    "observed_events": 89,
+    "forecast_events": 110,
+    "hits": 17,
+    "misses": 72,
+    "false_alarms": 93,
+    "correct_negatives": 13136,
+    "brier_skill_score": -0.8663730121602489,
+    "POD": 0.19101123595505617,
+    "FAR": 0.8454545454545455,
+    "CSI": 0.09340659340659341,
+    "FSS": 0.3506348339740396,
+    "fractions_skill_score": {
+      "1x1": 0.17085427135678388,
+      "3x3": 0.3506348339740396,
+      "5x5": 0.466132495852992
+    },
+    "fss_display_neighborhood": "3x3",
+    "brier_score": 0.012389247634779997,
+    "bs_climatology": 0.006638141225820641
+  },
+  "ann_csgd_metrics": {
+    "observed_events": 89,
+    "forecast_events": 14,
+    "hits": 10,
+    "misses": 79,
+    "false_alarms": 4,
+    "correct_negatives": 13225,
+    "brier_skill_score": 0.12390502373414969,
+    "POD": 0.11235955056179775,
+    "FAR": 0.2857142857142857,
+    "CSI": 0.10752688172043011,
+    "FSS": 0.3394320232239403,
+    "fractions_skill_score": {
+      "1x1": 0.1941747572815533,
+      "3x3": 0.3394320232239403,
+      "5x5": 0.37096051862966906
+    },
+    "fss_display_neighborhood": "3x3",
     "brier_score": 0.005815642179684697,
     "bs_climatology": 0.006638141225820641
   },
@@ -146,20 +195,20 @@
   "product_id": "2026072112__24h__f06_f30__threshold_verification__2inch__conus",
   "public_image_url": "data/verification/maps/runs/2026072112/maps/24h/f06_f30/thresholds/2inch/verification_2026072112_24h_f06_f30_threshold_2inch_conus.webp",
   "public_metadata_url": "data/verification/maps/runs/2026072112/maps/24h/f06_f30/thresholds/2inch/verification_2026072112_24h_f06_f30_threshold_2inch_conus.json",
-  "source_png_sha256": "acd946141b6647e662a20ece7477d44339b3ccd73ceecc37a62a865dda2b2708",
+  "source_png_sha256": "a5a19bcfd9f48b739dd0e35104980d411e256320a1e35a39e90aa3b0f4aae158",
   "public_webp_profile": {
     "name": "high",
     "maximum_width": 2200,
     "quality": 88,
     "method": 6
   },
-  "webp_bytes": 320236,
-  "webp_sha256": "7601fc68662c689613df7d70e45a8a5f04a37d4c00ef3e1ab4cf1e16d621cdd7",
+  "webp_bytes": 276002,
+  "webp_sha256": "e7ffc7d4e6bb78e604e7d07f44de6299168cab692497dd85ba6e24d0428f0048",
   "webp_width": 2200,
-  "webp_height": 1440,
+  "webp_height": 1377,
   "webp_rgb_standard_deviation": [
-    46.71181002031837,
-    41.22008968602219,
-    44.45704223940918
+    43.472490225152164,
+    36.97274451994128,
+    40.57720685386497
   ]
 }

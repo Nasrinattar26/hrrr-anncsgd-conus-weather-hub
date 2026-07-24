@@ -67,6 +67,55 @@
     "POD": 0.1994949494949495,
     "FAR": 0.5611111111111111,
     "CSI": 0.158953722334004,
+    "FSS": 0.44654179328565535,
+    "fractions_skill_score": {
+      "1x1": 0.27430555555555547,
+      "3x3": 0.44654179328565535,
+      "5x5": 0.5418800809543118
+    },
+    "fss_display_neighborhood": "3x3",
+    "brier_score": 0.02238210241045619,
+    "bs_climatology": 0.02844403232230256
+  },
+  "raw_hrrr_metrics": {
+    "observed_events": 396,
+    "forecast_events": 468,
+    "hits": 140,
+    "misses": 256,
+    "false_alarms": 328,
+    "correct_negatives": 12594,
+    "brier_skill_score": -0.541638945396941,
+    "POD": 0.35353535353535354,
+    "FAR": 0.7008547008547008,
+    "CSI": 0.19337016574585636,
+    "FSS": 0.592887878089529,
+    "fractions_skill_score": {
+      "1x1": 0.32407407407407407,
+      "3x3": 0.592887878089529,
+      "5x5": 0.7086346436845996
+    },
+    "fss_display_neighborhood": "3x3",
+    "brier_score": 0.04385042799219102,
+    "bs_climatology": 0.02844403232230256
+  },
+  "ann_csgd_metrics": {
+    "observed_events": 396,
+    "forecast_events": 180,
+    "hits": 79,
+    "misses": 317,
+    "false_alarms": 101,
+    "correct_negatives": 12821,
+    "brier_skill_score": 0.21311781125678508,
+    "POD": 0.1994949494949495,
+    "FAR": 0.5611111111111111,
+    "CSI": 0.158953722334004,
+    "FSS": 0.44654179328565535,
+    "fractions_skill_score": {
+      "1x1": 0.27430555555555547,
+      "3x3": 0.44654179328565535,
+      "5x5": 0.5418800809543118
+    },
+    "fss_display_neighborhood": "3x3",
     "brier_score": 0.02238210241045619,
     "bs_climatology": 0.02844403232230256
   },
@@ -146,20 +195,20 @@
   "product_id": "2026072112__24h__f06_f30__threshold_verification__1inch__texas",
   "public_image_url": "data/verification/maps/runs/2026072112/maps/24h/f06_f30/thresholds/1inch/verification_2026072112_24h_f06_f30_threshold_1inch_texas.webp",
   "public_metadata_url": "data/verification/maps/runs/2026072112/maps/24h/f06_f30/thresholds/1inch/verification_2026072112_24h_f06_f30_threshold_1inch_texas.json",
-  "source_png_sha256": "328ed35859d31377c61dc077adaa3b72829ac5497db16178efec278648278e2e",
+  "source_png_sha256": "0a4f2abed7f7270d5d7312c93b15545f496e2b1a6e94458c13abb1c6a14fc0b3",
   "public_webp_profile": {
     "name": "high",
     "maximum_width": 2200,
     "quality": 88,
     "method": 6
   },
-  "webp_bytes": 161662,
-  "webp_sha256": "819bc667b38f991a4a5776a972895566805eba33e78d747e7147e3d4ddee309f",
+  "webp_bytes": 107882,
+  "webp_sha256": "2105a408d7240c5814c666b328ab2269e12c2cdf94ce44628d1e502510f20d2c",
   "webp_width": 2200,
-  "webp_height": 1711,
+  "webp_height": 1648,
   "webp_rgb_standard_deviation": [
-    41.12258568323413,
-    39.64564701541322,
-    41.24441627816633
+    35.251636637651416,
+    33.49300683985615,
+    35.11264594360196
   ]
 }
