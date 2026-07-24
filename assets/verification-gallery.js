@@ -290,10 +290,23 @@ document.addEventListener("DOMContentLoaded", () => {
           number(rawMetrics.CSI, 3),
         ],
           [
+            "FSS 1×1",
+            number(
+              rawMetrics.fractions_skill_score?.["1x1"],
+              3
+            ),
+          ],
+          [
             "FSS 3×3",
             number(
-              rawMetrics.FSS
-              ?? rawMetrics.fractions_skill_score?.["3x3"],
+              rawMetrics.fractions_skill_score?.["3x3"],
+              3
+            ),
+          ],
+          [
+            "FSS 5×5",
+            number(
+              rawMetrics.fractions_skill_score?.["5x5"],
               3
             ),
           ],
@@ -328,10 +341,23 @@ document.addEventListener("DOMContentLoaded", () => {
           number(annMetrics.CSI, 3),
         ],
           [
+            "FSS 1×1",
+            number(
+              annMetrics.fractions_skill_score?.["1x1"],
+              3
+            ),
+          ],
+          [
             "FSS 3×3",
             number(
-              annMetrics.FSS
-              ?? annMetrics.fractions_skill_score?.["3x3"],
+              annMetrics.fractions_skill_score?.["3x3"],
+              3
+            ),
+          ],
+          [
+            "FSS 5×5",
+            number(
+              annMetrics.fractions_skill_score?.["5x5"],
               3
             ),
           ],
