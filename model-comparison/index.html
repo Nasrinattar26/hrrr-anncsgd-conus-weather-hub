@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="Matched verification of GEFS-driven and HRRR-driven ANN-CSGD precipitation guidance."
+  >
+  <title>ANN-CSGD Forecast-System Comparison</title>
+  <link
+    rel="stylesheet"
+    href="assets/model-comparison.css?v=20260725T170402"
+  >
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__inner">
+      <div>
+        <p class="eyebrow">Matched probabilistic verification</p>
+        <h1>ANN-CSGD Forecast-System Comparison</h1>
+        <p class="hero__subtitle">
+          GEFS-driven and HRRR-driven precipitation guidance evaluated
+          against the same duration-matched MRMS observations.
+        </p>
+        <nav class="hero__actions" aria-label="Page navigation">
+          <a class="button button--glass" href="../">
+            Return to Forecast Dashboard
+          </a>
+          <a class="button button--accent" href="../verification.html">
+            Open HRRR Verification
+          </a>
+        </nav>
+      </div>
+      <aside class="run-card" aria-label="Comparison run">
+        <span>Comparison initialization</span>
+        <strong id="run-init">Loading…</strong>
+        <p id="run-summary">Loading common verification sample…</p>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel" aria-labelledby="result-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow eyebrow--blue">Pilot assessment</p>
+          <h2 id="result-title">Performance at a glance</h2>
+        </div>
+        <span class="reference-pill">MRMS reference</span>
+      </div>
+      <div id="summary-cards" class="summary-grid"></div>
+      <p id="pilot-caution" class="callout"></p>
+    </section>
+
+    <section class="panel" aria-labelledby="amount-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow eyebrow--blue">Precipitation amount</p>
+          <h2 id="amount-title">Continuous verification</h2>
+        </div>
+      </div>
+      <div class="chart-grid chart-grid--two">
+        <article class="chart-block">
+          <h3>Overall error</h3>
+          <p>Lower values are better. Units are millimeters.</p>
+          <div id="amount-bars"></div>
+        </article>
+        <article class="chart-block">
+          <h3>CRPS by matched forecast window</h3>
+          <p>Analytical CRPS from the full censored-gamma distribution.</p>
+          <div id="window-crps-chart"></div>
+        </article>
+      </div>
+      <div class="table-shell">
+        <table>
+          <thead>
+            <tr>
+              <th>Forecast system</th>
+              <th>CRPS ↓</th>
+              <th>MAE ↓</th>
+              <th>RMSE ↓</th>
+              <th>Bias</th>
+              <th>Correlation ↑</th>
+              <th>CRPSS/raw ↑</th>
+            </tr>
+          </thead>
+          <tbody id="amount-table"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="probabilistic-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow eyebrow--blue">Threshold probabilities</p>
+          <h2 id="probabilistic-title">Skill, discrimination, and calibration</h2>
+        </div>
+      </div>
+      <div class="chart-grid chart-grid--three">
+        <article class="chart-block">
+          <h3>Brier Skill Score</h3>
+          <p>Positive values outperform the shared MRMS climatology.</p>
+          <div id="bss-chart"></div>
+        </article>
+        <article class="chart-block">
+          <h3>ROC AUC</h3>
+          <p>Event discrimination across probability cutoffs.</p>
+          <div id="roc-chart"></div>
+        </article>
+        <article class="chart-block">
+          <h3>Precision–recall AUC</h3>
+          <p>Discrimination focused on uncommon precipitation events.</p>
+          <div id="pr-chart"></div>
+        </article>
+      </div>
+      <div class="reliability-row">
+        <article class="chart-block">
+          <div class="chart-heading-with-control">
+            <div>
+              <h3>Reliability</h3>
+              <p>Forecast probability versus observed event frequency.</p>
+            </div>
+            <label>
+              <span>Threshold</span>
+              <select id="reliability-threshold"></select>
+            </label>
+          </div>
+          <div id="reliability-chart"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="classification-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow eyebrow--blue">Deterministic event diagnosis</p>
+          <h2 id="classification-title">Precision, recall, and F1 by window</h2>
+        </div>
+      </div>
+      <p class="section-note">
+        Events are defined by thresholding each model’s expected precipitation.
+        Gray cells indicate an undefined score because no positive forecast was issued.
+      </p>
+      <div id="classification-heatmaps" class="heatmap-layout"></div>
+      <div class="heatmap-legend" aria-label="Categorical score legend">
+        <span>0.0</span><div></div><span>1.0</span>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="fss-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow eyebrow--blue">Neighborhood verification</p>
+          <h2 id="fss-title">Fractions Skill Score</h2>
+        </div>
+      </div>
+      <p class="section-note">
+        All three land-aware neighborhood scales are shown. Higher values indicate
+        better spatial agreement of deterministic exceedance fields.
+      </p>
+      <div class="chart-grid chart-grid--three">
+        <article class="chart-block">
+          <h3>1 × 1 grid cells</h3>
+          <div id="fss-1x1"></div>
+        </article>
+        <article class="chart-block">
+          <h3>3 × 3 grid cells</h3>
+          <div id="fss-3x3"></div>
+        </article>
+        <article class="chart-block">
+          <h3>5 × 5 grid cells</h3>
+          <div id="fss-5x5"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="distribution-title">
+      <div class="section-heading section-heading--controls">
+        <div>
+          <p class="eyebrow eyebrow--blue">Distribution diagnostics</p>
+          <h2 id="distribution-title">Observed and predictive distributions</h2>
+        </div>
+        <label class="group-control">
+          <span>Valid-period group</span>
+          <select id="distribution-group"></select>
+        </label>
+      </div>
+      <div class="distribution-summary" id="distribution-summary"></div>
+      <div class="chart-grid chart-grid--two">
+        <article class="chart-block">
+          <h3>Conditional positive-precipitation PDF</h3>
+          <p>
+            MRMS empirical density and pooled CSGD densities conditional on
+            precipitation above zero.
+          </p>
+          <div id="pdf-chart"></div>
+        </article>
+        <article class="chart-block">
+          <h3>Exceedance curve</h3>
+          <p>
+            Observed frequency and mean predictive probability above each
+            precipitation amount.
+          </p>
+          <div id="survival-chart"></div>
+        </article>
+        <article class="chart-block chart-block--wide">
+          <h3>Randomized PIT</h3>
+          <p>
+            A calibrated predictive distribution approaches the horizontal
+            0.10 reference across the ten bins.
+          </p>
+          <div id="pit-chart"></div>
+        </article>
+      </div>
+      <p id="distribution-warning" class="callout callout--neutral"></p>
+    </section>
+
+    <section class="panel" aria-labelledby="threshold-table-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow eyebrow--blue">Exact values</p>
+          <h2 id="threshold-table-title">Threshold scorecard</h2>
+        </div>
+      </div>
+      <div class="table-shell">
+        <table>
+          <thead>
+            <tr>
+              <th>Threshold</th>
+              <th>Forecast system</th>
+              <th>BSS</th>
+              <th>ROC AUC</th>
+              <th>PR AUC</th>
+              <th>ECE ↓</th>
+              <th>CSI</th>
+              <th>ETS</th>
+              <th>FSS 1×1</th>
+              <th>FSS 3×3</th>
+              <th>FSS 5×5</th>
+            </tr>
+          </thead>
+          <tbody id="threshold-table"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="contract-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow eyebrow--blue">Evaluation contract</p>
+          <h2 id="contract-title">Fair-comparison safeguards</h2>
+        </div>
+      </div>
+      <div class="contract-grid">
+        <article>
+          <strong>Common valid periods</strong>
+          <p>Both systems are scored for the same four 12-hour windows.</p>
+        </article>
+        <article>
+          <strong>Common grid and mask</strong>
+          <p>Scores use identical 0.25° grid cells and threshold domains.</p>
+        </article>
+        <article>
+          <strong>Common observations</strong>
+          <p>All metrics use duration-matched MRMS Pass2 precipitation.</p>
+        </article>
+        <article>
+          <strong>Common reference</strong>
+          <p>BSS uses the same 2020–2025 monthly MRMS climatology.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Research comparison of GEFS-driven and HRRR-driven ANN-CSGD guidance</p>
+  </footer>
+
+  <script
+    src="data/comparison_run.js?v=20260725T170402"
+  ></script>
+  <script
+    src="assets/model-comparison.js?v=20260725T170402"
+  ></script>
+</body>
+</html>
