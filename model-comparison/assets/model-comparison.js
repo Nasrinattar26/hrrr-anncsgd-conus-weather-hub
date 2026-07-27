@@ -13,7 +13,7 @@
   const HRRR = "HRRR ANN-CSGD";
   const GEFS = "GEFS ANN-CSGD";
   const RAW_HRRR = "Raw HRRR";
-  const RAW_GEFS = "Raw GEFS";
+  const RAW_GEFS = "GEFS ensemble-mean QPF";
   const models = [HRRR, GEFS];
   const colors = {
     [HRRR]: "#1767d5",
