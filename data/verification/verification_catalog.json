@@ -4,11 +4,11 @@
   "product": "HRRR ANN-CSGD operational precipitation verification",
   "retention_definition": "Latest seven successful forecast initializations, newest to oldest.",
   "maximum_retained_runs": 7,
-  "retained_run_count": 1,
+  "retained_run_count": 2,
   "complete_run_count": 0,
-  "partial_run_count": 1,
-  "latest_initialization": "2026072112",
-  "latest_valid_time": "2026-07-22T18:00:00Z",
+  "partial_run_count": 2,
+  "latest_initialization": "2026072712",
+  "latest_valid_time": "2026-07-27T18:00:00Z",
   "metric_definitions": {
     "BSS": "Brier Skill Score relative to monthly historical MRMS event-frequency climatology.",
     "POD": "Hits divided by hits plus misses.",
@@ -17,6 +17,46 @@
   },
   "categorical_forecast_definition": "ANN-CSGD expected precipitation greater than or equal to the event threshold.",
   "runs": [
+    {
+      "initialization": "2026072712",
+      "verification_state": "PARTIAL",
+      "is_fully_verified": false,
+      "forecast_window_count": 20,
+      "completed_window_count": 1,
+      "pending_window_count": 19,
+      "threshold_row_count": 6,
+      "earliest_valid_time": "2026-07-27T18:00:00Z",
+      "latest_valid_time": "2026-07-27T18:00:00Z",
+      "duration_window_counts": {
+        "6": 1,
+        "12": 0,
+        "24": 0
+      },
+      "metric_ranges": {
+        "POD": {
+          "finite_count": 6,
+          "minimum": 0.0,
+          "maximum": 0.22807017543859648
+        },
+        "FAR": {
+          "finite_count": 2,
+          "minimum": 0.7511961722488039,
+          "maximum": 0.8970588235294118
+        },
+        "CSI": {
+          "finite_count": 6,
+          "minimum": 0.0,
+          "maximum": 0.13506493506493505
+        },
+        "brier_skill_score": {
+          "finite_count": 6,
+          "minimum": -0.061895347333826845,
+          "maximum": -0.0012249407703559534
+        }
+      },
+      "summary_url": "runs/2026072712/verification_summary.json",
+      "csv_url": "runs/2026072712/verification_metrics.csv"
+    },
     {
       "initialization": "2026072112",
       "verification_state": "PARTIAL",
