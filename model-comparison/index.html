@@ -10,7 +10,7 @@
   <title>ANN-CSGD Forecast-System Comparison</title>
   <link
     rel="stylesheet"
-    href="assets/model-comparison.css?v=20260725T170402"
+    href="assets/model-comparison.css?v=20260727T203713"
   >
 </head>
 <body>
@@ -90,6 +90,67 @@
       </div>
     </section>
 
+
+
+    <section class="panel" aria-labelledby="paired-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow eyebrow--blue">Paired uncertainty assessment</p>
+          <h2 id="paired-title">Which system performs better?</h2>
+        </div>
+      </div>
+      <p class="section-note">
+        Differences are HRRR minus GEFS. Confidence intervals use a paired
+        5 × 5-grid-cell spatial-block bootstrap across the same four valid periods.
+        Negative differences favor HRRR for these lower-is-better scores.
+      </p>
+      <div id="paired-amount-chart"></div>
+      <p id="paired-amount-interpretation" class="callout callout--neutral"></p>
+    </section>
+
+    <section class="panel" aria-labelledby="interval-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow eyebrow--blue">Distribution calibration</p>
+          <h2 id="interval-title">Predictive intervals and WIS</h2>
+        </div>
+      </div>
+      <div class="chart-grid chart-grid--two">
+        <article class="chart-block">
+          <h3>Interval coverage</h3>
+          <p>
+            Empirical coverage should approach the one-to-one reference.
+            Values above it indicate conservative coverage; the censored
+            distribution’s probability mass at zero can also create overcoverage.
+          </p>
+          <div id="interval-coverage-chart"></div>
+        </article>
+        <article class="chart-block">
+          <h3>Weighted Interval Score</h3>
+          <p>
+            WIS jointly rewards narrow intervals and correct coverage.
+            Lower values are better.
+          </p>
+          <div id="wis-summary"></div>
+        </article>
+      </div>
+      <div class="table-shell">
+        <table>
+          <thead>
+            <tr>
+              <th>Forecast system</th>
+              <th>Nominal</th>
+              <th>Empirical</th>
+              <th>Coverage error</th>
+              <th>Mean width</th>
+              <th>Median width</th>
+            </tr>
+          </thead>
+          <tbody id="interval-table"></tbody>
+        </table>
+      </div>
+    </section>
+
     <section class="panel" aria-labelledby="probabilistic-title">
       <div class="section-heading">
         <div>
@@ -114,12 +175,45 @@
           <div id="pr-chart"></div>
         </article>
       </div>
+
+      <div class="v2-subsection">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow eyebrow--blue">Paired Brier-score evidence</p>
+            <h3>Threshold probability differences</h3>
+          </div>
+        </div>
+        <p class="section-note">
+          Positive values show the percentage reduction in Brier score achieved
+          by HRRR ANN-CSGD relative to GEFS ANN-CSGD. Event counts are displayed
+          because rare-threshold uncertainty remains important.
+        </p>
+        <div id="paired-brier-chart"></div>
+      </div>
+      <div class="chart-grid chart-grid--two v2-subsection">
+        <article class="chart-block">
+          <h3>Normalized resolution</h3>
+          <p>
+            Brier resolution divided by event uncertainty. Higher values indicate
+            greater separation of observed event frequencies.
+          </p>
+          <div id="brier-resolution-chart"></div>
+        </article>
+        <article class="chart-block">
+          <h3>Normalized reliability penalty</h3>
+          <p>
+            Brier reliability divided by event uncertainty. Lower values indicate
+            better probability calibration.
+          </p>
+          <div id="brier-reliability-chart"></div>
+        </article>
+      </div>
       <div class="reliability-row">
         <article class="chart-block">
           <div class="chart-heading-with-control">
             <div>
               <h3>Reliability</h3>
-              <p>Forecast probability versus observed event frequency.</p>
+              <p>Supported probability bins with Wilson 95% binomial reference intervals.</p>
             </div>
             <label>
               <span>Threshold</span>
@@ -139,8 +233,7 @@
         </div>
       </div>
       <p class="section-note">
-        Events are defined by thresholding each model’s expected precipitation.
-        Gray cells indicate an undefined score because no positive forecast was issued.
+        Events are defined by thresholding each model’s expected precipitation. Recall equals POD, precision equals 1 − FAR, and F1 is mathematically equivalent to 1 × 1 FSS. Gray cells indicate no positive forecast.
       </p>
       <div id="classification-heatmaps" class="heatmap-layout"></div>
       <div class="heatmap-legend" aria-label="Categorical score legend">
@@ -156,8 +249,7 @@
         </div>
       </div>
       <p class="section-note">
-        All three land-aware neighborhood scales are shown. Higher values indicate
-        better spatial agreement of deterministic exceedance fields.
+        All three land-aware neighborhood scales are retained. The 1 × 1 value equals the event-field F1/Dice score; 3 × 3 and 5 × 5 emphasize increasingly tolerant spatial agreement.
       </p>
       <div class="chart-grid chart-grid--three">
         <article class="chart-block">
@@ -207,8 +299,7 @@
         <article class="chart-block chart-block--wide">
           <h3>Randomized PIT</h3>
           <p>
-            A calibrated predictive distribution approaches the horizontal
-            0.10 reference across the ten bins.
+            A calibrated predictive distribution approaches 0.10 in each bin. The shaded band is an approximate binomial reference and does not account for spatial dependence.
           </p>
           <div id="pit-chart"></div>
         </article>
@@ -278,10 +369,10 @@
   </footer>
 
   <script
-    src="data/comparison_run.js?v=20260725T170402"
+    src="data/comparison_run.js?v=20260727T203713"
   ></script>
   <script
-    src="assets/model-comparison.js?v=20260725T170402"
+    src="assets/model-comparison.js?v=20260727T203713"
   ></script>
 </body>
 </html>
