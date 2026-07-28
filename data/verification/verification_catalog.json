@@ -8,7 +8,7 @@
   "complete_run_count": 5,
   "partial_run_count": 1,
   "latest_initialization": "2026072712",
-  "latest_valid_time": "2026-07-28T12:00:00Z",
+  "latest_valid_time": "2026-07-28T18:00:00Z",
   "metric_definitions": {
     "BSS": "Brier Skill Score relative to monthly historical MRMS event-frequency climatology.",
     "POD": "Hits divided by hits plus misses.",
@@ -22,34 +22,34 @@
       "verification_state": "PARTIAL",
       "is_fully_verified": false,
       "forecast_window_count": 20,
-      "completed_window_count": 8,
-      "pending_window_count": 12,
-      "threshold_row_count": 49,
+      "completed_window_count": 11,
+      "pending_window_count": 9,
+      "threshold_row_count": 68,
       "earliest_valid_time": "2026-07-27T18:00:00Z",
-      "latest_valid_time": "2026-07-28T12:00:00Z",
+      "latest_valid_time": "2026-07-28T18:00:00Z",
       "duration_window_counts": {
-        "6": 4,
-        "12": 3,
-        "24": 1
+        "6": 5,
+        "12": 4,
+        "24": 2
       },
       "metric_ranges": {
         "POD": {
-          "finite_count": 46,
+          "finite_count": 65,
           "minimum": 0.0,
-          "maximum": 0.38333333333333336
+          "maximum": 0.4094775212636695
         },
         "FAR": {
-          "finite_count": 19,
-          "minimum": 0.6594533029612756,
+          "finite_count": 25,
+          "minimum": 0.6360691144708424,
           "maximum": 1.0
         },
         "CSI": {
-          "finite_count": 46,
+          "finite_count": 65,
           "minimum": 0.0,
-          "maximum": 0.22001471670345843
+          "maximum": 0.2386685552407932
         },
         "brier_skill_score": {
-          "finite_count": 49,
+          "finite_count": 68,
           "minimum": -14.388581710301425,
           "maximum": 0.8448893441313702
         }
