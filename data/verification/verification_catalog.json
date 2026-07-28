@@ -8,7 +8,7 @@
   "complete_run_count": 0,
   "partial_run_count": 3,
   "latest_initialization": "2026072712",
-  "latest_valid_time": "2026-07-27T18:00:00Z",
+  "latest_valid_time": "2026-07-28T12:00:00Z",
   "metric_definitions": {
     "BSS": "Brier Skill Score relative to monthly historical MRMS event-frequency climatology.",
     "POD": "Hits divided by hits plus misses.",
@@ -22,36 +22,36 @@
       "verification_state": "PARTIAL",
       "is_fully_verified": false,
       "forecast_window_count": 20,
-      "completed_window_count": 1,
-      "pending_window_count": 19,
-      "threshold_row_count": 6,
+      "completed_window_count": 8,
+      "pending_window_count": 12,
+      "threshold_row_count": 49,
       "earliest_valid_time": "2026-07-27T18:00:00Z",
-      "latest_valid_time": "2026-07-27T18:00:00Z",
+      "latest_valid_time": "2026-07-28T12:00:00Z",
       "duration_window_counts": {
-        "6": 1,
-        "12": 0,
-        "24": 0
+        "6": 4,
+        "12": 3,
+        "24": 1
       },
       "metric_ranges": {
         "POD": {
-          "finite_count": 6,
+          "finite_count": 46,
           "minimum": 0.0,
-          "maximum": 0.22807017543859648
+          "maximum": 0.38333333333333336
         },
         "FAR": {
-          "finite_count": 2,
-          "minimum": 0.7511961722488039,
-          "maximum": 0.8970588235294118
+          "finite_count": 19,
+          "minimum": 0.6594533029612756,
+          "maximum": 1.0
         },
         "CSI": {
-          "finite_count": 6,
+          "finite_count": 46,
           "minimum": 0.0,
-          "maximum": 0.13506493506493505
+          "maximum": 0.22001471670345843
         },
         "brier_skill_score": {
-          "finite_count": 6,
-          "minimum": -0.061895347333826845,
-          "maximum": -0.0012249407703559534
+          "finite_count": 49,
+          "minimum": -14.388581710301425,
+          "maximum": 0.8448893441313702
         }
       },
       "summary_url": "runs/2026072712/verification_summary.json",
