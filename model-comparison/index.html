@@ -10,7 +10,7 @@
   <title>ANN-CSGD model comparison</title>
   <link
     rel="stylesheet"
-    href="assets/model-comparison.css?v=20260728T224930"
+    href="assets/model-comparison.css?v=20260728T225913"
   >
 
 <style id="comparison-selector-style">
@@ -407,7 +407,24 @@
   (() => {
     "use strict";
 
-    const version = "20260728T224930";
+    const version = "20260728T225913";
+
+    const withVersion = (
+      source,
+      token = version
+    ) => {
+      const url = new URL(
+        source,
+        window.location.href
+      );
+
+      url.searchParams.set(
+        "v",
+        token
+      );
+
+      return url.href;
+    };
 
     const loadScript = source => new Promise(
       (resolve, reject) => {
@@ -422,12 +439,16 @@
     const start = async () => {
       try {
         const catalogResponse = await fetch(
-          `../data/model-comparison/catalog.json?v=${version}`,
+          withVersion(
+            "../data/model-comparison/catalog.json"
+          ),
           { cache: "no-store" }
         );
 
         if (!catalogResponse.ok) {
-          throw new Error("Comparison catalog unavailable.");
+          throw new Error(
+            "Comparison catalog unavailable."
+          );
         }
 
         const catalog = await catalogResponse.json();
@@ -441,39 +462,74 @@
 
         if (
           !selected
-          || !/^\d{10}$/.test(selected.initialization)
+          || !/^\d{10}$/.test(
+            selected.initialization
+          )
           || !/^runs\/\d{10}\/comparison_run\.json$/.test(
             selected.data_json
           )
         ) {
-          throw new Error("Invalid comparison-run record.");
+          throw new Error(
+            "Invalid comparison-run record."
+          );
         }
 
         const dataResponse = await fetch(
-          `../data/model-comparison/${selected.data_json}`
-            + `?v=${encodeURIComponent(
-              catalog.generated_utc || ""
-            )}`,
+          withVersion(
+            (
+              "../data/model-comparison/"
+              + selected.data_json
+            ),
+            catalog.generated_utc || version
+          ),
           { cache: "no-store" }
         );
 
         if (!dataResponse.ok) {
-          throw new Error("Selected comparison data unavailable.");
+          throw new Error(
+            "Selected comparison data unavailable."
+          );
         }
 
         const data = await dataResponse.json();
 
-        if (data.initialization !== selected.initialization) {
-          throw new Error("Comparison initialization mismatch.");
+        if (
+          data.initialization
+          !== selected.initialization
+        ) {
+          throw new Error(
+            "Comparison initialization mismatch."
+          );
         }
 
         window.MODEL_COMPARISON_CATALOG = catalog;
         window.MODEL_COMPARISON_DATA = data;
       } catch (error) {
-        console.warn("Comparison loader fallback:", error);
+        console.warn(
+          "Comparison loader fallback:",
+          error
+        );
 
         await loadScript(
-          `data/comparison_run.js?v=20260728T224930"run-summary");
+          withVersion(
+            "data/comparison_run.js"
+          )
+        );
+      }
+
+      await loadScript(
+        withVersion(
+          "assets/model-comparison.js"
+        )
+      );
+    };
+
+    start().catch(error => {
+      console.error(error);
+
+      const summary = document.getElementById(
+        "run-summary"
+      );
 
       if (summary) {
         summary.textContent =
@@ -481,6 +537,6 @@
       }
     });
   })();
-</script>
+  </script>
 </body>
 </html>
