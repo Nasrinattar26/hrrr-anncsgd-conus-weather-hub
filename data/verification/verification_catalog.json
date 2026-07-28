@@ -4,9 +4,9 @@
   "product": "HRRR ANN-CSGD operational precipitation verification",
   "retention_definition": "Latest seven successful forecast initializations, newest to oldest.",
   "maximum_retained_runs": 7,
-  "retained_run_count": 2,
+  "retained_run_count": 3,
   "complete_run_count": 0,
-  "partial_run_count": 2,
+  "partial_run_count": 3,
   "latest_initialization": "2026072712",
   "latest_valid_time": "2026-07-27T18:00:00Z",
   "metric_definitions": {
@@ -56,6 +56,46 @@
       },
       "summary_url": "runs/2026072712/verification_summary.json",
       "csv_url": "runs/2026072712/verification_metrics.csv"
+    },
+    {
+      "initialization": "2026072612",
+      "verification_state": "PARTIAL",
+      "is_fully_verified": false,
+      "forecast_window_count": 20,
+      "completed_window_count": 11,
+      "pending_window_count": 9,
+      "threshold_row_count": 68,
+      "earliest_valid_time": "2026-07-26T18:00:00Z",
+      "latest_valid_time": "2026-07-27T18:00:00Z",
+      "duration_window_counts": {
+        "6": 5,
+        "12": 4,
+        "24": 2
+      },
+      "metric_ranges": {
+        "POD": {
+          "finite_count": 60,
+          "minimum": 0.0,
+          "maximum": 0.42424242424242425
+        },
+        "FAR": {
+          "finite_count": 18,
+          "minimum": 0.5882352941176471,
+          "maximum": 1.0
+        },
+        "CSI": {
+          "finite_count": 60,
+          "minimum": 0.0,
+          "maximum": 0.2641509433962264
+        },
+        "brier_skill_score": {
+          "finite_count": 68,
+          "minimum": -7.159064210289678,
+          "maximum": 0.9927081928573598
+        }
+      },
+      "summary_url": "runs/2026072612/verification_summary.json",
+      "csv_url": "runs/2026072612/verification_metrics.csv"
     },
     {
       "initialization": "2026072112",
