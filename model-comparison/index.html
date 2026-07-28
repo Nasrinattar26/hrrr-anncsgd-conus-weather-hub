@@ -7,10 +7,10 @@
     name="description"
     content="Matched verification of GEFS-driven and HRRR-driven ANN-CSGD precipitation guidance."
   >
-  <title>ANN-CSGD Forecast-System Comparison</title>
+  <title>ANN-CSGD model comparison</title>
   <link
     rel="stylesheet"
-    href="assets/model-comparison.css?v=20260727T213904"
+    href="assets/model-comparison.css?v=20260728T213011Z"
   >
 
 <style id="comparison-selector-style">
@@ -55,12 +55,11 @@
   <header class="hero">
     <div class="hero__inner">
       <div>
-        <p class="eyebrow">Matched probabilistic verification</p>
-        <h1>ANN-CSGD Forecast-System Comparison</h1>
+        <p class="eyebrow">Forecast verification</p>
+        <h1>ANN-CSGD model comparison</h1>
         <p class="hero__subtitle">
-          GEFS-driven and HRRR-driven precipitation guidance evaluated
-          against the same duration-matched MRMS observations.
-        </p>
+        See how the HRRR- and GEFS-based ANN-CSGD forecasts performed against the same MRMS observations. Choose a date to explore the results.
+      </p>
         <nav class="hero__actions" aria-label="Page navigation">
           <a class="button button--glass" href="../">
             Return to Forecast Dashboard
@@ -89,18 +88,6 @@
   </header>
 
   <main>
-    <section class="panel" aria-labelledby="result-title">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow eyebrow--blue">Pilot assessment</p>
-          <h2 id="result-title">Performance at a glance</h2>
-        </div>
-        <span class="reference-pill">MRMS reference</span>
-      </div>
-      <div id="summary-cards" class="summary-grid"></div>
-      <p id="pilot-caution" class="callout"></p>
-    </section>
-
     <section class="panel" aria-labelledby="amount-title">
       <div class="section-heading">
         <div>
@@ -420,7 +407,7 @@
   (() => {
     "use strict";
 
-    const version = "20260728T203915Z";
+    const version = "20260728T213011Z";
 
     const loadScript = source => new Promise(
       (resolve, reject) => {

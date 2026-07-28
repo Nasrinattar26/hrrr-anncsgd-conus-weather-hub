@@ -633,55 +633,12 @@
 
   const hrrr = amount(HRRR);
   const gefs = amount(GEFS);
-  const crpsDifference = 100 * (
-    gefs.mean_crps_mm - hrrr.mean_crps_mm
-  ) / gefs.mean_crps_mm;
 
   document.getElementById("run-init").textContent =
     `${data.initialization.slice(0, 8)} ${data.initialization.slice(8)} UTC`;
   document.getElementById("run-summary").textContent =
     `${data.common_window_count} matched 12-hour windows · `
     + `${data.total_amount_samples.toLocaleString()} common land samples`;
-
-  document.getElementById("summary-cards").innerHTML = [
-    {
-      model: "hrrr",
-      label: "Lowest CRPS",
-      value: `${number(hrrr.mean_crps_mm)} mm`,
-      note: `HRRR · ${number(crpsDifference, 1)}% below GEFS`,
-    },
-    {
-      model: "hrrr",
-      label: "Largest own-baseline CRPSS",
-      value: number(hrrr.crpss_vs_own_raw),
-      note: "HRRR relative to its own raw baseline",
-    },
-    {
-      model: "gefs",
-      label: "Lowest ANN-CSGD MAE",
-      value: `${number(gefs.mae_mm)} mm`,
-      note: "GEFS ANN-CSGD",
-    },
-    {
-      model: "gefs",
-      label: "Smallest bias",
-      value: `${signed(gefs.bias_mm)} mm`,
-      note: "GEFS ANN-CSGD",
-    },
-  ].map(card => `
-    <article class="summary-card summary-card--${card.model}">
-      <span>${card.label}</span>
-      <strong>${card.value}</strong>
-      <p>${card.note}</p>
-    </article>
-  `).join("");
-
-  document.getElementById("pilot-caution").textContent =
-    "Pilot interpretation: Four-window spatial-block intervals favor HRRR "
-    + "for CRPS and RMSE, and HRRR has the lower WIS. They favor GEFS for "
-    + "MAE and generally sharper intervals. Absolute-bias superiority "
-    + "is inconclusive. Multi-day retention is required before an "
-    + "overall ranking.";
 
   const amountMetrics = [
     ["CRPS", "mean_crps_mm"],
