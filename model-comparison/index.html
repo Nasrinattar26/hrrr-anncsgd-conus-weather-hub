@@ -10,7 +10,7 @@
   <title>ANN-CSGD model comparison</title>
   <link
     rel="stylesheet"
-    href="assets/model-comparison.css?v=20260728T213011Z"
+    href="assets/model-comparison.css?v=20260728T222902"
   >
 
 <style id="comparison-selector-style">
@@ -94,18 +94,6 @@
           <p class="eyebrow eyebrow--blue">Precipitation amount</p>
           <h2 id="amount-title">Continuous verification</h2>
         </div>
-      </div>
-      <div class="chart-grid chart-grid--two">
-        <article class="chart-block">
-          <h3>Overall error</h3>
-          <p>Lower values are better. Units are millimeters.</p>
-          <div id="amount-bars"></div>
-        </article>
-        <article class="chart-block">
-          <h3>CRPS by matched forecast window</h3>
-          <p>Analytical CRPS from the full censored-gamma distribution.</p>
-          <div id="window-crps-chart"></div>
-        </article>
       </div>
       <div class="table-shell">
         <table>
@@ -193,20 +181,32 @@
           <h2 id="probabilistic-title">Skill, discrimination, and calibration</h2>
         </div>
       </div>
-      <div class="chart-grid chart-grid--three">
+      <div class="probabilistic-control">
+          <label for="probabilistic-threshold">
+            Precipitation threshold
+          </label>
+          <select id="probabilistic-threshold">
+            <option>Loading…</option>
+          </select>
+          <p>
+            Choose one threshold. The charts show its scores across
+            forecast lead end hours f24, f30, f36, and f42.
+          </p>
+        </div>
+        <div class="chart-grid chart-grid--three">
         <article class="chart-block">
           <h3>Brier Skill Score</h3>
-          <p>Positive values outperform the shared MRMS climatology.</p>
+          <p>For the selected threshold, positive values outperform the shared MRMS climatology.</p>
           <div id="bss-chart"></div>
         </article>
         <article class="chart-block">
           <h3>ROC AUC</h3>
-          <p>Event discrimination across probability cutoffs.</p>
+          <p>For the selected threshold, event discrimination by forecast lead window.</p>
           <div id="roc-chart"></div>
         </article>
         <article class="chart-block">
           <h3>Precision–recall AUC</h3>
-          <p>Discrimination focused on uncommon precipitation events.</p>
+          <p>For the selected threshold, discrimination for uncommon events by forecast lead window.</p>
           <div id="pr-chart"></div>
         </article>
       </div>
@@ -407,7 +407,7 @@
   (() => {
     "use strict";
 
-    const version = "20260728T213011Z";
+    const version = "20260728T222348";
 
     const loadScript = source => new Promise(
       (resolve, reject) => {
@@ -473,19 +473,7 @@
         console.warn("Comparison loader fallback:", error);
 
         await loadScript(
-          `data/comparison_run.js?v=${version}`
-        );
-      }
-
-      await loadScript(
-        `assets/model-comparison.js?v=${version}`
-      );
-    };
-
-    start().catch(error => {
-      console.error(error);
-
-      const summary = document.getElementById("run-summary");
+          `data/comparison_run.js?v=20260728T222902"run-summary");
 
       if (summary) {
         summary.textContent =

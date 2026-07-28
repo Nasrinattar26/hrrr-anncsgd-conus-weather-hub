@@ -640,37 +640,6 @@
     `${data.common_window_count} matched 12-hour windows · `
     + `${data.total_amount_samples.toLocaleString()} common land samples`;
 
-  const amountMetrics = [
-    ["CRPS", "mean_crps_mm"],
-    ["MAE", "mae_mm"],
-    ["RMSE", "rmse_mm"],
-  ];
-  document.getElementById("amount-bars").innerHTML = `
-    <div class="metric-bars">
-      ${amountMetrics.map(([label, key]) => {
-        const maximum = Math.max(hrrr[key], gefs[key]) * 1.08;
-        return `
-          <div class="metric-group">
-            <div class="metric-group__title">${label}</div>
-            ${models.map(model => {
-              const row = amount(model);
-              return `
-                <div class="metric-bar">
-                  <span>${model.replace(" ANN-CSGD", "")}</span>
-                  <div class="metric-track">
-                    <div class="metric-fill metric-fill--${modelClass(model)}"
-                      style="width:${100 * row[key] / maximum}%"></div>
-                  </div>
-                  <strong>${number(row[key])}</strong>
-                </div>
-              `;
-            }).join("")}
-          </div>
-        `;
-      }).join("")}
-    </div>
-  `;
-
   document.getElementById("amount-table").innerHTML =
     data.amount_summary.map(row => {
       const modelName = row.model.includes("HRRR") ? "hrrr" : "gefs";
@@ -687,60 +656,250 @@
       `;
     }).join("");
 
-  const windowSeries = models.map(model => ({
-    className: modelClass(model),
-    label: model,
-    values: windowNames.map(window =>
-      data.amount_by_window.find(row =>
-        row.window === window && row.model === model
-      ).mean_crps_mm
-    ),
-  }));
-  document.getElementById("window-crps-chart").innerHTML = lineChart({
-    title: "window-crps",
-    description: "CRPS by matched forecast window for both ANN-CSGD systems.",
-    series: windowSeries,
-    labels: windowNames.map(shortWindow),
-    minimum: 0,
-    maximum: Math.max(...windowSeries.flatMap(item => item.values)) * 1.12,
-  });
-
   const metricSeries = key => models.map(model => ({
     className: modelClass(model),
     label: model,
     values: thresholdNames.map(threshold => thresholdRow(threshold, model)[key]),
   }));
 
-  const bssValues = metricSeries("brier_skill_score");
-  document.getElementById("bss-chart").innerHTML = lineChart({
-    title: "brier-skill-score",
-    description: "Brier Skill Score across six precipitation thresholds.",
-    series: bssValues,
-    labels: thresholdNames.map(shortThreshold),
-    minimum: Math.min(0, ...bssValues.flatMap(item => item.values)) - 0.02,
-    maximum: Math.max(...bssValues.flatMap(item => item.values)) * 1.15,
-    reference: 0,
-  });
+  const leadThresholdRows = Array.isArray(
+    data.threshold_by_window
+  ) ? data.threshold_by_window : [];
 
-  document.getElementById("roc-chart").innerHTML = lineChart({
-    title: "roc-auc",
-    description: "ROC area under the curve across six thresholds.",
-    series: metricSeries("roc_auc"),
-    labels: thresholdNames.map(shortThreshold),
-    minimum: 0.5,
-    maximum: 1,
-  });
+  const probabilisticSelector =
+    document.getElementById("probabilistic-threshold");
 
-  document.getElementById("pr-chart").innerHTML = lineChart({
-    title: "pr-auc",
-    description: "Precision recall area under the curve across six thresholds.",
-    series: metricSeries("pr_auc"),
-    labels: thresholdNames.map(shortThreshold),
-    minimum: 0,
-    maximum: Math.max(
-      ...metricSeries("pr_auc").flatMap(item => item.values)
-    ) * 1.15,
-  });
+  probabilisticSelector.innerHTML = thresholdNames.map(
+    (threshold, index) => `
+      <option value="${index}">${escapeHtml(threshold)}</option>
+    `
+  ).join("");
+
+  const leadLabel = window => {
+    const row = leadThresholdRows.find(
+      item => item.window === window
+    );
+
+    return row && finite(row.lead_end_hour)
+      ? `f${Math.round(row.lead_end_hour)}`
+      : shortWindow(window);
+  };
+
+  const leadMetricSeries = (threshold, key) => models.map(model => ({
+    className: modelClass(model),
+    label: model,
+    values: windowNames.map(window => {
+      const row = leadThresholdRows.find(item =>
+        item.threshold === threshold
+        && item.window === window
+        && item.model === model
+      );
+
+      return row && finite(row[key]) ? row[key] : null;
+    }),
+  }));
+
+  const leadLineChart = ({
+    title,
+    description,
+    series,
+    minimum,
+    maximum,
+    reference = null,
+  }) => {
+    const finiteValues = series.flatMap(
+      item => item.values.filter(finite)
+    );
+
+    if (!finiteValues.length) {
+      return `
+        <p class="chart-empty">
+          Lead-window values will appear after this initialization
+          is refreshed with the updated scorer.
+        </p>
+      `;
+    }
+
+    let lower = minimum;
+    let upper = maximum;
+
+    if (!finite(lower)) lower = Math.min(...finiteValues);
+    if (!finite(upper)) upper = Math.max(...finiteValues);
+
+    if (upper <= lower) {
+      const padding = Math.max(Math.abs(upper) * 0.1, 0.05);
+      lower -= padding;
+      upper += padding;
+    }
+
+    const width = 650;
+    const height = 340;
+    const left = 66;
+    const right = 20;
+    const top = 24;
+    const bottom = 70;
+    const chartWidth = width - left - right;
+    const chartHeight = height - top - bottom;
+
+    const px = index => left + (
+      windowNames.length === 1
+        ? chartWidth / 2
+        : index * chartWidth / (windowNames.length - 1)
+    );
+
+    const py = value =>
+      top + (upper - value) * chartHeight / (upper - lower);
+
+    const ticks = Array.from(
+      { length: 5 },
+      (_, index) => lower + index * (upper - lower) / 4
+    );
+
+    const grid = ticks.map(value => `
+      <line class="grid-line"
+        x1="${left}" x2="${width - right}"
+        y1="${py(value)}" y2="${py(value)}"></line>
+      <text class="tick-label"
+        x="${left - 9}" y="${py(value) + 4}"
+        text-anchor="end">${number(value, 2)}</text>
+    `).join("");
+
+    const referenceLine = finite(reference)
+      && reference >= lower
+      && reference <= upper
+      ? `
+        <line class="reference-line"
+          x1="${left}" x2="${width - right}"
+          y1="${py(reference)}" y2="${py(reference)}"></line>
+      `
+      : "";
+
+    const marks = series.map(item => {
+      const segments = item.values.slice(0, -1).map(
+        (value, index) => {
+          const next = item.values[index + 1];
+
+          if (!finite(value) || !finite(next)) return "";
+
+          return `
+            <line
+              class="series-line series-line--${item.className}"
+              x1="${px(index)}" y1="${py(value)}"
+              x2="${px(index + 1)}" y2="${py(next)}">
+            </line>
+          `;
+        }
+      ).join("");
+
+      const dots = item.values.map((value, index) =>
+        finite(value)
+          ? `
+            <circle
+              class="series-dot--${item.className}"
+              cx="${px(index)}" cy="${py(value)}" r="4.5">
+            </circle>
+          `
+          : ""
+      ).join("");
+
+      return segments + dots;
+    }).join("");
+
+    const labels = windowNames.map((window, index) => `
+      <text class="tick-label"
+        x="${px(index)}" y="${height - 37}"
+        text-anchor="middle">${escapeHtml(leadLabel(window))}</text>
+    `).join("");
+
+    const legend = `
+      <div class="lead-chart-legend" aria-label="Forecast systems">
+        ${series.map(item => `
+          <span>
+            <i class="lead-chart-key lead-chart-key--${item.className}"></i>
+            ${escapeHtml(item.label)}
+          </span>
+        `).join("")}
+      </div>
+    `;
+
+    return `
+      <svg viewBox="0 0 ${width} ${height}" role="img"
+        aria-labelledby="${title}-title ${title}-description">
+        <title id="${title}-title">${escapeHtml(title)}</title>
+        <desc id="${title}-description">${escapeHtml(description)}</desc>
+        ${grid}
+        ${referenceLine}
+        ${marks}
+        ${labels}
+        <text class="axis-label"
+          x="${left + chartWidth / 2}" y="${height - 8}"
+          text-anchor="middle">Forecast lead end hour</text>
+      </svg>
+      ${legend}
+    `;
+  };
+
+  const renderLeadThresholdCharts = () => {
+    const threshold =
+      thresholdNames[Number(probabilisticSelector.value)]
+      || thresholdNames[0];
+
+    const bssSeries = leadMetricSeries(
+      threshold,
+      "brier_skill_score"
+    );
+    const bssFinite = bssSeries.flatMap(
+      item => item.values.filter(finite)
+    );
+
+    document.getElementById("bss-chart").innerHTML =
+      leadLineChart({
+        title: `Brier Skill Score for ${threshold}`,
+        description:
+          `Brier Skill Score by forecast lead for ${threshold}.`,
+        series: bssSeries,
+        minimum: bssFinite.length
+          ? Math.min(0, ...bssFinite) - 0.02
+          : -0.05,
+        maximum: bssFinite.length
+          ? Math.max(0.05, ...bssFinite) * 1.12
+          : 0.1,
+        reference: 0,
+      });
+
+    document.getElementById("roc-chart").innerHTML =
+      leadLineChart({
+        title: `ROC AUC for ${threshold}`,
+        description:
+          `ROC AUC by forecast lead for ${threshold}.`,
+        series: leadMetricSeries(threshold, "roc_auc"),
+        minimum: 0.5,
+        maximum: 1,
+      });
+
+    const prSeries = leadMetricSeries(threshold, "pr_auc");
+    const prFinite = prSeries.flatMap(
+      item => item.values.filter(finite)
+    );
+
+    document.getElementById("pr-chart").innerHTML =
+      leadLineChart({
+        title: `Precision recall AUC for ${threshold}`,
+        description:
+          `Precision recall AUC by forecast lead for ${threshold}.`,
+        series: prSeries,
+        minimum: 0,
+        maximum: prFinite.length
+          ? Math.min(1, Math.max(0.05, ...prFinite) * 1.12)
+          : 1,
+      });
+  };
+
+  probabilisticSelector.addEventListener(
+    "change",
+    renderLeadThresholdCharts
+  );
+  renderLeadThresholdCharts();
 
   const reliabilitySelector =
     document.getElementById("reliability-threshold");

@@ -592,178 +592,6 @@ footer {
   }
 }
 
-
-/* Model-comparison V2 scientific diagnostics. */
-.v2-subsection {
-  margin-top: 1.7rem;
-  padding-top: 1.35rem;
-  border-top: 1px solid var(--line);
-}
-
-.v2-forest,
-.v2-calibration {
-  width: 100%;
-  overflow: hidden;
-}
-
-.v2-forest svg,
-.v2-calibration svg {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.v2-ci-line {
-  stroke: #334155;
-  stroke-width: 2.2;
-}
-
-.v2-zero-line {
-  stroke: #7c8ba0;
-  stroke-width: 1.2;
-  stroke-dasharray: 5 5;
-}
-
-.v2-ci-dot--hrrr {
-  fill: var(--hrrr);
-  stroke: #ffffff;
-  stroke-width: 1.5;
-}
-
-.v2-ci-dot--gefs {
-  fill: var(--gefs);
-  stroke: #ffffff;
-  stroke-width: 1.5;
-}
-
-.v2-ci-dot--neutral {
-  fill: #64748b;
-  stroke: #ffffff;
-  stroke-width: 1.5;
-}
-
-.v2-row-label {
-  fill: #12203a;
-  font-size: 13px;
-  font-weight: 750;
-}
-
-.v2-value-label,
-.v2-support-label {
-  fill: #526783;
-  font-size: 11px;
-  font-weight: 650;
-}
-
-.v2-support-label {
-  font-weight: 550;
-}
-
-.v2-axis-label {
-  fill: #526783;
-  font-size: 11px;
-  font-weight: 700;
-}
-
-.v2-coverage-reference {
-  fill: none;
-  stroke: #7c8ba0;
-  stroke-width: 1.3;
-  stroke-dasharray: 6 5;
-}
-
-.v2-coverage-line--hrrr {
-  fill: none;
-  stroke: var(--hrrr);
-  stroke-width: 3;
-}
-
-.v2-coverage-line--gefs {
-  fill: none;
-  stroke: var(--gefs);
-  stroke-width: 3;
-}
-
-.v2-coverage-dot--hrrr { fill: var(--hrrr); }
-.v2-coverage-dot--gefs { fill: var(--gefs); }
-
-.v2-wis {
-  display: grid;
-  gap: 1rem;
-  margin-top: 1.4rem;
-}
-
-.v2-wis-row {
-  display: grid;
-  grid-template-columns: minmax(145px, 0.75fr) minmax(120px, 2fr) 75px;
-  gap: 0.8rem;
-  align-items: center;
-}
-
-.v2-wis-track {
-  height: 15px;
-  overflow: hidden;
-  border-radius: 999px;
-  background: #e5edf8;
-}
-
-.v2-wis-fill {
-  height: 100%;
-  border-radius: inherit;
-}
-
-.v2-wis-fill--hrrr { background: var(--hrrr); }
-.v2-wis-fill--gefs { background: var(--gefs); }
-
-.v2-wis-note {
-  margin-top: 1.4rem;
-  color: var(--muted);
-}
-
-.v2-reliability-note {
-  margin: 0.8rem 0 0;
-  color: var(--muted);
-  font-weight: 650;
-}
-
-.v2-reliability-warning {
-  margin-top: 1rem;
-  padding: 1rem 1.1rem;
-  border-left: 4px solid #d97721;
-  background: #fff8ed;
-  color: #69420d;
-}
-
-.v2-reliability-error {
-  stroke-width: 1.5;
-}
-
-.v2-reliability-error--hrrr { stroke: var(--hrrr); }
-.v2-reliability-error--gefs { stroke: var(--gefs); }
-
-.v2-pit-band {
-  fill: #7c8ba0;
-  opacity: 0.16;
-}
-
-.v2-pit-band-label {
-  fill: #526783;
-  font-size: 11px;
-  font-weight: 650;
-}
-
-.v2-science-note {
-  margin-top: 1rem;
-  color: var(--muted);
-}
-
-@media (max-width: 700px) {
-  .v2-wis-row {
-    grid-template-columns: 1fr;
-    gap: 0.35rem;
-  }
-}
-
 /* BEGIN SIMPLE HUMAN COMPARISON THEME
    Plot geometry, values, and HRRR/GEFS colors remain unchanged. */
 
@@ -947,3 +775,267 @@ footer {
 }
 
 /* END SIMPLE HUMAN COMPARISON THEME */
+
+/* BEGIN LEAD-THRESHOLD COMPARISON CONTROLS */
+.probabilistic-control {
+  display: grid;
+  grid-template-columns: minmax(13rem, 20rem) 1fr;
+  gap: 0.45rem 1.25rem;
+  align-items: end;
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.85rem;
+  background: var(--soft);
+}
+
+.probabilistic-control label {
+  grid-column: 1;
+  color: var(--ink);
+  font-weight: 750;
+}
+
+.probabilistic-control select {
+  grid-column: 1;
+  min-height: 2.75rem;
+  border: 1px solid var(--line);
+  border-radius: 0.65rem;
+  padding: 0.55rem 0.75rem;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+}
+
+.probabilistic-control p {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.lead-chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.1rem;
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.lead-chart-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+}
+
+.lead-chart-key {
+  width: 1.25rem;
+  height: 0.18rem;
+  border-radius: 999px;
+}
+
+.lead-chart-key--hrrr {
+  background: #1767d5;
+}
+
+.lead-chart-key--gefs {
+  background: #d97721;
+}
+
+.chart-empty {
+  min-height: 12rem;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 1rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .probabilistic-control {
+    grid-template-columns: 1fr;
+  }
+
+  .probabilistic-control label,
+  .probabilistic-control select,
+  .probabilistic-control p {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+/* END LEAD-THRESHOLD COMPARISON CONTROLS */
+
+
+/* Model-comparison V2 scientific diagnostics. */
+.v2-subsection {
+  margin-top: 1.7rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid var(--line);
+}
+
+.v2-forest,
+.v2-calibration {
+  width: 100%;
+  overflow: hidden;
+}
+
+.v2-forest svg,
+.v2-calibration svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.v2-ci-line {
+  stroke: #334155;
+  stroke-width: 2.2;
+}
+
+.v2-zero-line {
+  stroke: #7c8ba0;
+  stroke-width: 1.2;
+  stroke-dasharray: 5 5;
+}
+
+.v2-ci-dot--hrrr {
+  fill: var(--hrrr);
+  stroke: #ffffff;
+  stroke-width: 1.5;
+}
+
+.v2-ci-dot--gefs {
+  fill: var(--gefs);
+  stroke: #ffffff;
+  stroke-width: 1.5;
+}
+
+.v2-ci-dot--neutral {
+  fill: #64748b;
+  stroke: #ffffff;
+  stroke-width: 1.5;
+}
+
+.v2-row-label {
+  fill: #12203a;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.v2-value-label,
+.v2-support-label {
+  fill: #526783;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.v2-support-label {
+  font-weight: 550;
+}
+
+.v2-axis-label {
+  fill: #526783;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.v2-coverage-reference {
+  fill: none;
+  stroke: #7c8ba0;
+  stroke-width: 1.3;
+  stroke-dasharray: 6 5;
+}
+
+.v2-coverage-line--hrrr {
+  fill: none;
+  stroke: var(--hrrr);
+  stroke-width: 3;
+}
+
+.v2-coverage-line--gefs {
+  fill: none;
+  stroke: var(--gefs);
+  stroke-width: 3;
+}
+
+.v2-coverage-dot--hrrr { fill: var(--hrrr); }
+.v2-coverage-dot--gefs { fill: var(--gefs); }
+
+.v2-wis {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.v2-wis-row {
+  display: grid;
+  grid-template-columns: minmax(145px, 0.75fr) minmax(120px, 2fr) 75px;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.v2-wis-track {
+  height: 15px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e5edf8;
+}
+
+.v2-wis-fill {
+  height: 100%;
+  border-radius: inherit;
+}
+
+.v2-wis-fill--hrrr { background: var(--hrrr); }
+.v2-wis-fill--gefs { background: var(--gefs); }
+
+.v2-wis-note {
+  margin-top: 1.4rem;
+  color: var(--muted);
+}
+
+.v2-reliability-note {
+  margin: 0.8rem 0 0;
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.v2-reliability-warning {
+  margin-top: 1rem;
+  padding: 1rem 1.1rem;
+  border-left: 4px solid #d97721;
+  background: #fff8ed;
+  color: #69420d;
+}
+
+.v2-reliability-error {
+  stroke-width: 1.5;
+}
+
+.v2-reliability-error--hrrr { stroke: var(--hrrr); }
+.v2-reliability-error--gefs { stroke: var(--gefs); }
+
+.v2-pit-band {
+  fill: #7c8ba0;
+  opacity: 0.16;
+}
+
+.v2-pit-band-label {
+  fill: #526783;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.v2-science-note {
+  margin-top: 1rem;
+  color: var(--muted);
+}
+
+@media (max-width: 700px) {
+  .v2-wis-row {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+}
