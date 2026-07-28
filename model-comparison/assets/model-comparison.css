@@ -592,6 +592,282 @@ footer {
   }
 }
 
+/* BEGIN SIMPLE HUMAN COMPARISON THEME
+   Plot geometry, values, and HRRR/GEFS colors remain unchanged. */
+
+html,
+body {
+  background: #f4f3ef;
+}
+
+body {
+  color: #26333d;
+  font-family:
+    "Avenir Next",
+    Avenir,
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.hero {
+  color: #26333d;
+  background: #fbfaf7;
+  border-bottom: 1px solid #dedfd9;
+}
+
+.hero__inner {
+  width: min(1420px, calc(100% - 48px));
+  padding: clamp(2.5rem, 5vw, 4.8rem) 0;
+  gap: clamp(2rem, 5vw, 4.5rem);
+}
+
+.hero h1 {
+  max-width: 850px;
+  color: #23313b;
+  font-size: clamp(2.35rem, 5vw, 4.65rem);
+  font-weight: 720;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+
+.eyebrow,
+.eyebrow--blue {
+  color: #5e716d;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: none;
+}
+
+.hero__subtitle {
+  max-width: 800px;
+  margin-top: 1.25rem;
+  color: #596973;
+  font-size: clamp(1rem, 1.35vw, 1.18rem);
+  line-height: 1.65;
+}
+
+.hero__actions .button,
+.hero__actions a {
+  border: 1px solid #d6d9d4;
+  background: #ffffff;
+  color: #30413f;
+  box-shadow: none;
+}
+
+.hero__actions .button--primary {
+  border-color: #466c64;
+  background: #466c64;
+  color: #ffffff;
+}
+
+.run-card {
+  border: 1px solid #d8dad5;
+  border-radius: 1rem;
+  padding: 1.4rem;
+  background: #f2f2ee;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.run-card span {
+  color: #64716f;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: none;
+}
+
+.run-card strong {
+  color: #25343d;
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  font-weight: 680;
+}
+
+.run-card p {
+  color: #637079;
+}
+
+.run-card select,
+.run-card__select,
+.run-card__selected select {
+  border: 1px solid #cfd4ce;
+  border-radius: 0.7rem;
+  background: #ffffff;
+  color: #26333d;
+  box-shadow: none;
+}
+
+main {
+  width: min(1420px, calc(100% - 48px));
+}
+
+.panel {
+  border: 1px solid #dedfd9;
+  border-radius: 1rem;
+  padding: clamp(1.4rem, 2.8vw, 2.6rem);
+  background: #fffefa;
+  box-shadow: none;
+}
+
+.section-heading {
+  margin-bottom: 1.6rem;
+}
+
+.section-heading h2 {
+  color: #23313b;
+  font-size: clamp(1.7rem, 2.6vw, 2.35rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+}
+
+.chart-block h3 {
+  color: #2a3943;
+  font-weight: 680;
+}
+
+.chart-block > p,
+.section-heading p {
+  color: #64727b;
+}
+
+.table-shell {
+  border-color: #e0e2dd;
+  box-shadow: none;
+}
+
+.callout {
+  border-left-width: 3px;
+  border-left-color: #71847f;
+  background: #f4f5f1;
+  color: #4d5f5b;
+}
+
+.callout--neutral {
+  border-left-color: #98a09b;
+  background: #f5f5f2;
+  color: #5e6b70;
+}
+
+.site-footer,
+footer {
+  color: #657177;
+}
+
+@media (max-width: 760px) {
+  .hero__inner,
+  main {
+    width: min(100% - 24px, 1420px);
+  }
+
+  .hero__inner {
+    padding: 2.25rem 0;
+  }
+
+  .panel {
+    border-radius: 0.8rem;
+  }
+}
+
+/* END SIMPLE HUMAN COMPARISON THEME */
+
+/* BEGIN LEAD-THRESHOLD COMPARISON CONTROLS */
+.probabilistic-control {
+  display: grid;
+  grid-template-columns: minmax(13rem, 20rem) 1fr;
+  gap: 0.45rem 1.25rem;
+  align-items: end;
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.85rem;
+  background: var(--soft);
+}
+
+.probabilistic-control label {
+  grid-column: 1;
+  color: var(--ink);
+  font-weight: 750;
+}
+
+.probabilistic-control select {
+  grid-column: 1;
+  min-height: 2.75rem;
+  border: 1px solid var(--line);
+  border-radius: 0.65rem;
+  padding: 0.55rem 0.75rem;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+}
+
+.probabilistic-control p {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.lead-chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.1rem;
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.lead-chart-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+}
+
+.lead-chart-key {
+  width: 1.25rem;
+  height: 0.18rem;
+  border-radius: 999px;
+}
+
+.lead-chart-key--hrrr {
+  background: #1767d5;
+}
+
+.lead-chart-key--gefs {
+  background: #d97721;
+}
+
+.chart-empty {
+  min-height: 12rem;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 1rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .probabilistic-control {
+    grid-template-columns: 1fr;
+  }
+
+  .probabilistic-control label,
+  .probabilistic-control select,
+  .probabilistic-control p {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+/* END LEAD-THRESHOLD COMPARISON CONTROLS */
+
 
 /* Model-comparison V2 scientific diagnostics. */
 .v2-subsection {

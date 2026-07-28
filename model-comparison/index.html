@@ -7,22 +7,59 @@
     name="description"
     content="Matched verification of GEFS-driven and HRRR-driven ANN-CSGD precipitation guidance."
   >
-  <title>ANN-CSGD Forecast-System Comparison</title>
+  <title>ANN-CSGD model comparison</title>
   <link
     rel="stylesheet"
-    href="assets/model-comparison.css?v=20260727T213904"
+    href="assets/model-comparison.css?v=20260728T224930"
   >
+
+<style id="comparison-selector-style">
+  .run-card label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  #comparison-initialization {
+    width: 100%;
+    margin-bottom: 0.65rem;
+    padding: 0.65rem 0.75rem;
+    color: #17253a;
+    background: #fff;
+    border: 1px solid rgba(23, 103, 213, 0.3);
+    border-radius: 0.7rem;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  #comparison-initialization:focus {
+    outline: 3px solid rgba(23, 103, 213, 0.22);
+    outline-offset: 2px;
+  }
+
+  .run-card__selected {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+</style>
 </head>
 <body>
   <header class="hero">
     <div class="hero__inner">
       <div>
-        <p class="eyebrow">Matched probabilistic verification</p>
-        <h1>ANN-CSGD Forecast-System Comparison</h1>
+        <p class="eyebrow">Forecast verification</p>
+        <h1>ANN-CSGD model comparison</h1>
         <p class="hero__subtitle">
-          GEFS-driven and HRRR-driven precipitation guidance evaluated
-          against the same duration-matched MRMS observations.
-        </p>
+        See how the HRRR- and GEFS-based ANN-CSGD forecasts performed against the same MRMS observations. Choose a date to explore the results.
+      </p>
         <nav class="hero__actions" aria-label="Page navigation">
           <a class="button button--glass" href="../">
             Return to Forecast Dashboard
@@ -33,44 +70,30 @@
         </nav>
       </div>
       <aside class="run-card" aria-label="Comparison run">
-        <span>Comparison initialization</span>
-        <strong id="run-init">Loading…</strong>
+        <label for="comparison-initialization">
+          Comparison initialization
+        </label>
+        <select
+          id="comparison-initialization"
+          aria-label="Comparison initialization"
+        >
+          <option>Loading…</option>
+        </select>
+        <strong id="run-init" class="run-card__selected">
+          Loading…
+        </strong>
         <p id="run-summary">Loading common verification sample…</p>
       </aside>
     </div>
   </header>
 
   <main>
-    <section class="panel" aria-labelledby="result-title">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow eyebrow--blue">Pilot assessment</p>
-          <h2 id="result-title">Performance at a glance</h2>
-        </div>
-        <span class="reference-pill">MRMS reference</span>
-      </div>
-      <div id="summary-cards" class="summary-grid"></div>
-      <p id="pilot-caution" class="callout"></p>
-    </section>
-
     <section class="panel" aria-labelledby="amount-title">
       <div class="section-heading">
         <div>
           <p class="eyebrow eyebrow--blue">Precipitation amount</p>
           <h2 id="amount-title">Continuous verification</h2>
         </div>
-      </div>
-      <div class="chart-grid chart-grid--two">
-        <article class="chart-block">
-          <h3>Overall error</h3>
-          <p>Lower values are better. Units are millimeters.</p>
-          <div id="amount-bars"></div>
-        </article>
-        <article class="chart-block">
-          <h3>CRPS by matched forecast window</h3>
-          <p>Analytical CRPS from the full censored-gamma distribution.</p>
-          <div id="window-crps-chart"></div>
-        </article>
       </div>
       <div class="table-shell">
         <table>
@@ -158,20 +181,32 @@
           <h2 id="probabilistic-title">Skill, discrimination, and calibration</h2>
         </div>
       </div>
-      <div class="chart-grid chart-grid--three">
+      <div class="probabilistic-control">
+          <label for="probabilistic-threshold">
+            Precipitation threshold
+          </label>
+          <select id="probabilistic-threshold">
+            <option>Loading…</option>
+          </select>
+          <p>
+            Choose one threshold. The charts show its scores across
+            forecast lead end hours f24, f30, f36, and f42.
+          </p>
+        </div>
+        <div class="chart-grid chart-grid--three">
         <article class="chart-block">
           <h3>Brier Skill Score</h3>
-          <p>Positive values outperform the shared MRMS climatology.</p>
+          <p>For the selected threshold, positive values outperform the shared MRMS climatology.</p>
           <div id="bss-chart"></div>
         </article>
         <article class="chart-block">
           <h3>ROC AUC</h3>
-          <p>Event discrimination across probability cutoffs.</p>
+          <p>For the selected threshold, event discrimination by forecast lead window.</p>
           <div id="roc-chart"></div>
         </article>
         <article class="chart-block">
           <h3>Precision–recall AUC</h3>
-          <p>Discrimination focused on uncommon precipitation events.</p>
+          <p>For the selected threshold, discrimination for uncommon events by forecast lead window.</p>
           <div id="pr-chart"></div>
         </article>
       </div>
@@ -368,11 +403,84 @@
     <p>Research comparison of GEFS-driven and HRRR-driven ANN-CSGD guidance</p>
   </footer>
 
-  <script
-    src="data/comparison_run.js?v=20260727T213904"
-  ></script>
-  <script
-    src="assets/model-comparison.js?v=20260727T213904"
-  ></script>
+  <script>
+  (() => {
+    "use strict";
+
+    const version = "20260728T224930";
+
+    const loadScript = source => new Promise(
+      (resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = source;
+        script.onload = resolve;
+        script.onerror = reject;
+        document.body.appendChild(script);
+      }
+    );
+
+    const start = async () => {
+      try {
+        const catalogResponse = await fetch(
+          `../data/model-comparison/catalog.json?v=${version}`,
+          { cache: "no-store" }
+        );
+
+        if (!catalogResponse.ok) {
+          throw new Error("Comparison catalog unavailable.");
+        }
+
+        const catalog = await catalogResponse.json();
+        const requested = new URLSearchParams(
+          window.location.search
+        ).get("init");
+
+        const selected = catalog.runs.find(
+          run => run.initialization === requested
+        ) || catalog.runs[0];
+
+        if (
+          !selected
+          || !/^\d{10}$/.test(selected.initialization)
+          || !/^runs\/\d{10}\/comparison_run\.json$/.test(
+            selected.data_json
+          )
+        ) {
+          throw new Error("Invalid comparison-run record.");
+        }
+
+        const dataResponse = await fetch(
+          `../data/model-comparison/${selected.data_json}`
+            + `?v=${encodeURIComponent(
+              catalog.generated_utc || ""
+            )}`,
+          { cache: "no-store" }
+        );
+
+        if (!dataResponse.ok) {
+          throw new Error("Selected comparison data unavailable.");
+        }
+
+        const data = await dataResponse.json();
+
+        if (data.initialization !== selected.initialization) {
+          throw new Error("Comparison initialization mismatch.");
+        }
+
+        window.MODEL_COMPARISON_CATALOG = catalog;
+        window.MODEL_COMPARISON_DATA = data;
+      } catch (error) {
+        console.warn("Comparison loader fallback:", error);
+
+        await loadScript(
+          `data/comparison_run.js?v=20260728T224930"run-summary");
+
+      if (summary) {
+        summary.textContent =
+          "Comparison data could not be loaded.";
+      }
+    });
+  })();
+</script>
 </body>
 </html>
