@@ -12,6 +12,44 @@
     rel="stylesheet"
     href="assets/model-comparison.css?v=20260727T213904"
   >
+
+<style id="comparison-selector-style">
+  .run-card label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  #comparison-initialization {
+    width: 100%;
+    margin-bottom: 0.65rem;
+    padding: 0.65rem 0.75rem;
+    color: #17253a;
+    background: #fff;
+    border: 1px solid rgba(23, 103, 213, 0.3);
+    border-radius: 0.7rem;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  #comparison-initialization:focus {
+    outline: 3px solid rgba(23, 103, 213, 0.22);
+    outline-offset: 2px;
+  }
+
+  .run-card__selected {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+</style>
 </head>
 <body>
   <header class="hero">
@@ -33,8 +71,18 @@
         </nav>
       </div>
       <aside class="run-card" aria-label="Comparison run">
-        <span>Comparison initialization</span>
-        <strong id="run-init">Loading…</strong>
+        <label for="comparison-initialization">
+          Comparison initialization
+        </label>
+        <select
+          id="comparison-initialization"
+          aria-label="Comparison initialization"
+        >
+          <option>Loading…</option>
+        </select>
+        <strong id="run-init" class="run-card__selected">
+          Loading…
+        </strong>
         <p id="run-summary">Loading common verification sample…</p>
       </aside>
     </div>
@@ -368,11 +416,96 @@
     <p>Research comparison of GEFS-driven and HRRR-driven ANN-CSGD guidance</p>
   </footer>
 
-  <script
-    src="data/comparison_run.js?v=20260727T213904"
-  ></script>
-  <script
-    src="assets/model-comparison.js?v=20260727T213904"
-  ></script>
+  <script>
+  (() => {
+    "use strict";
+
+    const version = "20260728T203915Z";
+
+    const loadScript = source => new Promise(
+      (resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = source;
+        script.onload = resolve;
+        script.onerror = reject;
+        document.body.appendChild(script);
+      }
+    );
+
+    const start = async () => {
+      try {
+        const catalogResponse = await fetch(
+          `../data/model-comparison/catalog.json?v=${version}`,
+          { cache: "no-store" }
+        );
+
+        if (!catalogResponse.ok) {
+          throw new Error("Comparison catalog unavailable.");
+        }
+
+        const catalog = await catalogResponse.json();
+        const requested = new URLSearchParams(
+          window.location.search
+        ).get("init");
+
+        const selected = catalog.runs.find(
+          run => run.initialization === requested
+        ) || catalog.runs[0];
+
+        if (
+          !selected
+          || !/^\d{10}$/.test(selected.initialization)
+          || !/^runs\/\d{10}\/comparison_run\.json$/.test(
+            selected.data_json
+          )
+        ) {
+          throw new Error("Invalid comparison-run record.");
+        }
+
+        const dataResponse = await fetch(
+          `../data/model-comparison/${selected.data_json}`
+            + `?v=${encodeURIComponent(
+              catalog.generated_utc || ""
+            )}`,
+          { cache: "no-store" }
+        );
+
+        if (!dataResponse.ok) {
+          throw new Error("Selected comparison data unavailable.");
+        }
+
+        const data = await dataResponse.json();
+
+        if (data.initialization !== selected.initialization) {
+          throw new Error("Comparison initialization mismatch.");
+        }
+
+        window.MODEL_COMPARISON_CATALOG = catalog;
+        window.MODEL_COMPARISON_DATA = data;
+      } catch (error) {
+        console.warn("Comparison loader fallback:", error);
+
+        await loadScript(
+          `data/comparison_run.js?v=${version}`
+        );
+      }
+
+      await loadScript(
+        `assets/model-comparison.js?v=${version}`
+      );
+    };
+
+    start().catch(error => {
+      console.error(error);
+
+      const summary = document.getElementById("run-summary");
+
+      if (summary) {
+        summary.textContent =
+          "Comparison data could not be loaded.";
+      }
+    });
+  })();
+</script>
 </body>
 </html>

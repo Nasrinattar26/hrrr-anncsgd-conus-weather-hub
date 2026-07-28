@@ -10,6 +10,50 @@
     return;
   }
 
+
+  const catalog = window.MODEL_COMPARISON_CATALOG;
+  const initializationSelector = document.getElementById(
+    "comparison-initialization"
+  );
+
+  const formatInitialization = initialization => {
+    const value = String(initialization || "");
+
+    if (!/^\d{10}$/.test(value)) return value;
+
+    return `${value.slice(0, 4)}-${value.slice(4, 6)}-`
+      + `${value.slice(6, 8)} ${value.slice(8, 10)} UTC`;
+  };
+
+  if (initializationSelector) {
+    const availableRuns = (
+      catalog
+      && Array.isArray(catalog.runs)
+      && catalog.runs.length
+    )
+      ? catalog.runs
+      : [{ initialization: data.initialization }];
+
+    initializationSelector.replaceChildren();
+
+    availableRuns.forEach(run => {
+      const option = document.createElement("option");
+      option.value = run.initialization;
+      option.textContent = formatInitialization(
+        run.initialization
+      );
+      initializationSelector.appendChild(option);
+    });
+
+    initializationSelector.value = data.initialization;
+
+    initializationSelector.addEventListener("change", event => {
+      const url = new URL(window.location.href);
+      url.searchParams.set("init", event.target.value);
+      window.location.assign(url.toString());
+    });
+  }
+
   const HRRR = "HRRR ANN-CSGD";
   const GEFS = "GEFS ANN-CSGD";
   const RAW_HRRR = "Raw HRRR";
