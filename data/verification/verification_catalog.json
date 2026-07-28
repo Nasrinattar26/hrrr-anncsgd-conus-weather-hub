@@ -5,8 +5,8 @@
   "retention_definition": "Latest seven successful forecast initializations, newest to oldest.",
   "maximum_retained_runs": 7,
   "retained_run_count": 3,
-  "complete_run_count": 0,
-  "partial_run_count": 3,
+  "complete_run_count": 1,
+  "partial_run_count": 2,
   "latest_initialization": "2026072712",
   "latest_valid_time": "2026-07-28T12:00:00Z",
   "metric_definitions": {
@@ -99,38 +99,38 @@
     },
     {
       "initialization": "2026072112",
-      "verification_state": "PARTIAL",
-      "is_fully_verified": false,
+      "verification_state": "COMPLETE",
+      "is_fully_verified": true,
       "forecast_window_count": 20,
-      "completed_window_count": 11,
-      "pending_window_count": 9,
-      "threshold_row_count": 68,
+      "completed_window_count": 20,
+      "pending_window_count": 0,
+      "threshold_row_count": 125,
       "earliest_valid_time": "2026-07-21T18:00:00Z",
-      "latest_valid_time": "2026-07-22T18:00:00Z",
+      "latest_valid_time": "2026-07-23T12:00:00Z",
       "duration_window_counts": {
-        "6": 5,
-        "12": 4,
-        "24": 2
+        "6": 8,
+        "12": 7,
+        "24": 5
       },
       "metric_ranges": {
         "POD": {
-          "finite_count": 66,
+          "finite_count": 122,
           "minimum": 0.0,
           "maximum": 0.6522556390977443
         },
         "FAR": {
-          "finite_count": 27,
+          "finite_count": 46,
           "minimum": 0.0,
-          "maximum": 0.6915422885572139
+          "maximum": 1.0
         },
         "CSI": {
-          "finite_count": 66,
+          "finite_count": 122,
           "minimum": 0.0,
           "maximum": 0.4521172638436482
         },
         "brier_skill_score": {
-          "finite_count": 68,
-          "minimum": -0.9103207792529711,
+          "finite_count": 125,
+          "minimum": -1.4207806936864062,
           "maximum": 0.3903017135927087
         }
       },
