@@ -10,7 +10,7 @@
   <title>ANN-CSGD model comparison</title>
   <link
     rel="stylesheet"
-    href="assets/model-comparison.css?v=20260729T151252"
+    href="assets/model-comparison.css?v=20260729T170252Z"
   >
 
 <style id="comparison-selector-style">
@@ -193,16 +193,11 @@
             forecast lead end hours f24, f30, f36, and f42.
           </p>
         </div>
-        <div class="chart-grid chart-grid--two">
+        <div class="chart-grid chart-grid--single">
         <article class="chart-block">
           <h3>Brier Skill Score by forecast window</h3>
           <p>Each point verifies a different 12-hour period. Positive values outperform the shared MRMS climatology; values need not decrease monotonically across individual windows.</p>
           <div id="bss-chart"></div>
-        </article>
-        <article class="chart-block">
-          <h3>Precision–recall AUC by forecast lead</h3>
-          <p>Discrimination for uncommon precipitation events at each forecast lead.</p>
-          <div id="pr-chart"></div>
         </article>
       </div>
       <article class="chart-block roc-curves-block">
@@ -411,7 +406,7 @@
   (() => {
     "use strict";
 
-    const version = "20260729T151252";
+    const version = "20260729T170252Z";
 
     const withVersion = (
       source,

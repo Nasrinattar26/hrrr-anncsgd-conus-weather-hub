@@ -1015,22 +1015,6 @@
     document.getElementById("roc-chart").innerHTML =
       rocCurvePanels(threshold);
 
-    const prSeries = leadMetricSeries(threshold, "pr_auc");
-    const prFinite = prSeries.flatMap(
-      item => item.values.filter(finite)
-    );
-
-    document.getElementById("pr-chart").innerHTML =
-      leadLineChart({
-        title: `Precision recall AUC for ${threshold}`,
-        description:
-          `Precision recall AUC by forecast lead for ${threshold}.`,
-        series: prSeries,
-        minimum: 0,
-        maximum: prFinite.length
-          ? Math.min(1, Math.max(0.05, ...prFinite) * 1.12)
-          : 1,
-      });
   };
 
   probabilisticSelector.addEventListener(

@@ -1124,3 +1124,10 @@ footer {
     gap: 0.35rem;
   }
 }
+
+/* BEGIN SINGLE PROBABILISTIC CHART
+   The Average Precision display was intentionally removed. */
+.chart-grid.chart-grid--single {
+  grid-template-columns: minmax(0, 1fr);
+}
+/* END SINGLE PROBABILISTIC CHART */
