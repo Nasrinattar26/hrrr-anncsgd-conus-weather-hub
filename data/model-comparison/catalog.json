@@ -3,7 +3,7 @@
   "latest_initialization": "2026072700",
   "retained_run_count": 6,
   "maximum_retained_runs": 30,
-  "generated_utc": "2026-07-29T15:52:43.039088Z",
+  "generated_utc": "2026-07-29T15:53:05.477815Z",
   "runs": [
     {
       "initialization": "2026072700",
@@ -35,7 +35,7 @@
     {
       "initialization": "2026072400",
       "status": "PASS",
-      "generated_utc": "2026-07-28T22:55:42Z",
+      "generated_utc": "2026-07-29T15:53:04Z",
       "common_window_count": 4,
       "total_amount_samples": 53272,
       "data_json": "runs/2026072400/comparison_run.json",
