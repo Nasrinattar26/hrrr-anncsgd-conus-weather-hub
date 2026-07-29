@@ -1131,3 +1131,27 @@ footer {
   grid-template-columns: minmax(0, 1fr);
 }
 /* END SINGLE PROBABILISTIC CHART */
+
+/* BEGIN SHARED WARM COMPARISON ACTIONS */
+.hero__actions .button.button--glass,
+.hero__actions .button.button--accent {
+  border-color: #c8ef29;
+  background: #c8ef29;
+  color: #23313b;
+  box-shadow: none;
+}
+
+.hero__actions .button.button--glass:hover,
+.hero__actions .button.button--accent:hover {
+  border-color: #b8df1d;
+  background: #b8df1d;
+  color: #23313b;
+  transform: translateY(-1px);
+}
+
+.hero__actions .button.button--glass:focus-visible,
+.hero__actions .button.button--accent:focus-visible {
+  outline: 3px solid rgba(70, 108, 100, 0.28);
+  outline-offset: 3px;
+}
+/* END SHARED WARM COMPARISON ACTIONS */

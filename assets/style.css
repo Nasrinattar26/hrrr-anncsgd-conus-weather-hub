@@ -1369,3 +1369,81 @@ footer p {
 }
 
 /* END SIMPLIFIED OPERATIONAL SUMMARY */
+
+/* BEGIN SHARED WARM DASHBOARD HEADER */
+.hero {
+  border-bottom: 1px solid #dedfd9;
+  background: #fbfaf7;
+  color: #26333d;
+}
+
+.hero::before,
+.hero::after {
+  display: none;
+}
+
+.hero h1 {
+  color: #23313b;
+  text-shadow: none;
+}
+
+.hero .eyebrow {
+  color: #64716f;
+}
+
+.hero-description {
+  color: #596973;
+}
+
+.hero .verification-dashboard-button {
+  border: 1px solid #c8ef29;
+  background: #c8ef29;
+  color: #23313b;
+  box-shadow: none;
+}
+
+.hero .verification-dashboard-button:hover {
+  border-color: #b8df1d;
+  background: #b8df1d;
+  color: #23313b;
+}
+
+.hero .verification-dashboard-button:focus-visible {
+  outline: 3px solid rgba(70, 108, 100, 0.28);
+  outline-offset: 3px;
+}
+
+.hero .hero-card {
+  border-color: #d8dad5;
+  background: #f2f2ee;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.hero .hero-card .small-label {
+  color: #64716f;
+}
+
+.hero .hero-card .big-value,
+.hero .hero-card > strong {
+  color: #25343d;
+}
+
+.hero .hero-card .small-note {
+  color: #637079;
+}
+
+.hero .hero-stat {
+  border-color: #d8dad5;
+  background: #e7e8e2;
+}
+
+.hero .hero-stat span,
+.hero .hero-stat .small-label {
+  color: #64716f;
+}
+
+.hero .hero-stat strong {
+  color: #25343d;
+}
+/* END SHARED WARM DASHBOARD HEADER */

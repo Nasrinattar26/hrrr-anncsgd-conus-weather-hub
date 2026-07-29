@@ -998,3 +998,74 @@ summary {
 }
 
 /* END HIDDEN VERIFICATION METADATA */
+
+/* BEGIN SHARED WARM VERIFICATION HEADER */
+.v2-hero {
+  border-bottom: 1px solid #dedfd9;
+  background: #fbfaf7;
+  color: #26333d;
+}
+
+.v2-hero::after {
+  background: none;
+}
+
+.v2-hero .v2-eyebrow {
+  color: #64716f;
+}
+
+.v2-hero h1 {
+  color: #23313b;
+  text-shadow: none;
+}
+
+.v2-hero__lead {
+  color: #596973;
+}
+
+.v2-hero .v2-button--glass {
+  border-color: #c8ef29;
+  background: #c8ef29;
+  color: #23313b;
+  box-shadow: none;
+}
+
+.v2-hero .v2-button--glass:hover {
+  border-color: #b8df1d;
+  background: #b8df1d;
+  color: #23313b;
+}
+
+.v2-hero .v2-button--glass:focus-visible {
+  outline: 3px solid rgba(70, 108, 100, 0.28);
+  outline-offset: 3px;
+}
+
+.v2-hero .v2-run-card {
+  border-color: #d8dad5;
+  background: #f2f2ee;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.v2-hero .v2-run-card__label {
+  color: #64716f;
+}
+
+.v2-hero .v2-run-card__initialization {
+  color: #25343d;
+}
+
+.v2-hero .v2-run-card__facts div {
+  border: 1px solid #d8dad5;
+  background: #e7e8e2;
+}
+
+.v2-hero .v2-run-card__facts span {
+  color: #64716f;
+}
+
+.v2-hero .v2-run-card__facts strong {
+  color: #25343d;
+}
+/* END SHARED WARM VERIFICATION HEADER */
