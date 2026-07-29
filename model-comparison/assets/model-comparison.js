@@ -666,6 +666,10 @@
     data.threshold_by_window
   ) ? data.threshold_by_window : [];
 
+  const rocCurveRows = Array.isArray(
+    data.roc_curves_by_window
+  ) ? data.roc_curves_by_window : [];
+
   const probabilisticSelector =
     document.getElementById("probabilistic-threshold");
 
@@ -839,6 +843,147 @@
     `;
   };
 
+  const rocCurvePanels = threshold => {
+    const width = 430;
+    const height = 390;
+    const left = 62;
+    const right = 18;
+    const top = 20;
+    const bottom = 68;
+    const plotWidth = width - left - right;
+    const plotHeight = height - top - bottom;
+    const ticks = [0, 0.25, 0.5, 0.75, 1];
+
+    const px = value => left + value * plotWidth;
+    const py = value => top + (1 - value) * plotHeight;
+
+    const panel = window => {
+      const rows = models.map(model => rocCurveRows.find(item =>
+        item.threshold === threshold
+        && item.window === window
+        && item.model === model
+      ));
+
+      const available = rows.filter(row =>
+        row
+        && Array.isArray(row.false_positive_rate)
+        && Array.isArray(row.true_positive_rate)
+        && row.false_positive_rate.length >= 2
+        && row.false_positive_rate.length
+          === row.true_positive_rate.length
+      );
+
+      if (!available.length) {
+        return `
+          <section class="roc-window-panel">
+            <h4>${escapeHtml(leadLabel(window))}</h4>
+            <p>${escapeHtml(shortWindow(window))}</p>
+            <p class="chart-empty">
+              ROC points are unavailable for this forecast window.
+            </p>
+          </section>
+        `;
+      }
+
+      const grid = ticks.map(value => `
+        <line class="grid-line"
+          x1="${px(0)}" x2="${px(1)}"
+          y1="${py(value)}" y2="${py(value)}"></line>
+        <line class="grid-line"
+          x1="${px(value)}" x2="${px(value)}"
+          y1="${py(0)}" y2="${py(1)}"></line>
+        <text class="tick-label"
+          x="${px(value)}" y="${height - 39}"
+          text-anchor="middle">${value.toFixed(2)}</text>
+        <text class="tick-label"
+          x="${left - 9}" y="${py(value) + 4}"
+          text-anchor="end">${value.toFixed(2)}</text>
+      `).join("");
+
+      const curves = available.map(row => {
+        const className = modelClass(row.model);
+        const points = row.false_positive_rate.map(
+          (falsePositiveRate, index) => {
+            const truePositiveRate =
+              row.true_positive_rate[index];
+
+            return `${px(falsePositiveRate)},${py(
+              truePositiveRate
+            )}`;
+          }
+        ).join(" ");
+
+        return `
+          <polyline
+            class="series-line series-line--${className}"
+            points="${points}">
+          </polyline>
+        `;
+      }).join("");
+
+      const legend = available.map(row => {
+        const className = modelClass(row.model);
+
+        return `
+          <span>
+            <i class="${className}"></i>
+            ${escapeHtml(row.model)}
+            · AUC ${number(row.roc_auc, 3)}
+          </span>
+        `;
+      }).join("");
+
+      return `
+        <section class="roc-window-panel">
+          <h4>${escapeHtml(leadLabel(window))}</h4>
+          <p>
+            ${escapeHtml(shortWindow(window))}
+            · ${available[0].sample_count.toLocaleString()} samples
+            · ${available[0].observed_events.toLocaleString()} events
+          </p>
+          <svg viewBox="0 0 ${width} ${height}" role="img"
+            aria-label="ROC curves for ${escapeHtml(
+              threshold
+            )}, ${escapeHtml(leadLabel(window))}">
+            ${grid}
+            <line class="roc-no-skill"
+              x1="${px(0)}" y1="${py(0)}"
+              x2="${px(1)}" y2="${py(1)}"></line>
+            <line class="roc-axis"
+              x1="${px(0)}" y1="${py(0)}"
+              x2="${px(1)}" y2="${py(0)}"></line>
+            <line class="roc-axis"
+              x1="${px(0)}" y1="${py(0)}"
+              x2="${px(0)}" y2="${py(1)}"></line>
+            ${curves}
+            <text class="axis-label"
+              x="${left + plotWidth / 2}" y="${height - 8}"
+              text-anchor="middle">False-positive rate</text>
+            <text class="axis-label"
+              transform="translate(17 ${top + plotHeight / 2}) rotate(-90)"
+              text-anchor="middle">True-positive rate</text>
+          </svg>
+          <div class="roc-legend">${legend}</div>
+        </section>
+      `;
+    };
+
+    if (!rocCurveRows.length) {
+      return `
+        <p class="chart-empty">
+          True ROC curves will appear after this initialization is
+          refreshed with the ROC-aware scorer.
+        </p>
+      `;
+    }
+
+    return `
+      <div class="roc-small-multiples">
+        ${windowNames.map(panel).join("")}
+      </div>
+    `;
+  };
+
   const renderLeadThresholdCharts = () => {
     const threshold =
       thresholdNames[Number(probabilisticSelector.value)]
@@ -868,14 +1013,7 @@
       });
 
     document.getElementById("roc-chart").innerHTML =
-      leadLineChart({
-        title: `ROC AUC for ${threshold}`,
-        description:
-          `ROC AUC by forecast lead for ${threshold}.`,
-        series: leadMetricSeries(threshold, "roc_auc"),
-        minimum: 0.5,
-        maximum: 1,
-      });
+      rocCurvePanels(threshold);
 
     const prSeries = leadMetricSeries(threshold, "pr_auc");
     const prFinite = prSeries.flatMap(

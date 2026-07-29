@@ -10,7 +10,7 @@
   <title>ANN-CSGD model comparison</title>
   <link
     rel="stylesheet"
-    href="assets/model-comparison.css?v=20260729T134200"
+    href="assets/model-comparison.css?v=20260729T151252"
   >
 
 <style id="comparison-selector-style">
@@ -193,23 +193,27 @@
             forecast lead end hours f24, f30, f36, and f42.
           </p>
         </div>
-        <div class="chart-grid chart-grid--three">
+        <div class="chart-grid chart-grid--two">
         <article class="chart-block">
-          <h3>Brier Skill Score</h3>
-          <p>For the selected threshold, positive values outperform the shared MRMS climatology.</p>
+          <h3>Brier Skill Score by forecast lead</h3>
+          <p>For the selected precipitation threshold, positive values outperform the shared MRMS climatology.</p>
           <div id="bss-chart"></div>
         </article>
         <article class="chart-block">
-          <h3>ROC AUC</h3>
-          <p>For the selected threshold, event discrimination by forecast lead window.</p>
-          <div id="roc-chart"></div>
-        </article>
-        <article class="chart-block">
-          <h3>Precision–recall AUC</h3>
-          <p>For the selected threshold, discrimination for uncommon events by forecast lead window.</p>
+          <h3>Precision–recall AUC by forecast lead</h3>
+          <p>Discrimination for uncommon precipitation events at each forecast lead.</p>
           <div id="pr-chart"></div>
         </article>
       </div>
+      <article class="chart-block roc-curves-block">
+        <h3>ROC curves by forecast window</h3>
+        <p>
+          True-positive rate versus false-positive rate across forecast
+          probability decision thresholds. The diagonal represents no
+          discrimination.
+        </p>
+        <div id="roc-chart"></div>
+      </article>
 
       <div class="v2-subsection">
         <div class="section-heading">
@@ -407,7 +411,7 @@
   (() => {
     "use strict";
 
-    const version = "20260729T134200";
+    const version = "20260729T151252";
 
     const withVersion = (
       source,
