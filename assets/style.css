@@ -1447,3 +1447,17 @@ footer p {
   color: #25343d;
 }
 /* END SHARED WARM DASHBOARD HEADER */
+
+/* BEGIN SHARED WARM PAGE CANVAS */
+:root {
+  --bg: #f4f3ef;
+}
+
+html,
+body,
+body main,
+body .page {
+  background-color: #f4f3ef;
+  background-image: none;
+}
+/* END SHARED WARM PAGE CANVAS */

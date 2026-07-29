@@ -1069,3 +1069,18 @@ summary {
   color: #25343d;
 }
 /* END SHARED WARM VERIFICATION HEADER */
+
+/* BEGIN SHARED WARM PAGE CANVAS */
+:root {
+  --v2-background: #f4f3ef;
+}
+
+html,
+body,
+body main,
+body .v2-page,
+body .v2-main {
+  background-color: #f4f3ef;
+  background-image: none;
+}
+/* END SHARED WARM PAGE CANVAS */
