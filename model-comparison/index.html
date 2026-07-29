@@ -10,7 +10,7 @@
   <title>ANN-CSGD model comparison</title>
   <link
     rel="stylesheet"
-    href="assets/model-comparison.css?v=20260729T173041Z"
+    href="assets/model-comparison.css?v=20260729T180829"
   >
 
 <style id="comparison-selector-style">
@@ -52,6 +52,21 @@
 </style>
 </head>
 <body>
+
+  <nav class="global-site-nav" aria-label="Primary navigation">
+    <div class="global-site-nav__inner">
+      <a class="global-site-nav__brand" href="../index.html">
+        ANN-CSGD Weather Hub
+      </a>
+      <div class="global-site-nav__links">
+        <a href="../index.html#forecast-workspace">Forecasts</a>
+        <a href="../verification.html">Verification</a>
+        <a href="./" aria-current="page">Model comparison</a>
+        <a href="../index.html#grib2-downloads">Downloads</a>
+        <a href="../index.html#method">Method</a>
+      </div>
+    </div>
+  </nav>
   <header class="hero">
     <div class="hero__inner">
       <div>
@@ -88,6 +103,15 @@
   </header>
 
   <main>
+
+    <nav class="comparison-section-nav" aria-label="Comparison sections">
+      <a href="#amount-title">Overview</a>
+      <a href="#paired-title">Paired evidence</a>
+      <a href="#probabilistic-title">Threshold skill</a>
+      <a href="#fss-title">Spatial skill</a>
+      <a href="#distribution-title">Distributions</a>
+      <a href="#threshold-table-title">Scorecard</a>
+    </nav>
     <section class="panel" aria-labelledby="amount-title">
       <div class="section-heading">
         <div>
@@ -278,7 +302,7 @@
       <p class="section-note">
         All three land-aware neighborhood scales are retained. The 1 × 1 value equals the event-field F1/Dice score; 3 × 3 and 5 × 5 emphasize increasingly tolerant spatial agreement.
       </p>
-      <div class="chart-grid chart-grid--three">
+      <div class="chart-grid chart-grid--fss">
         <article class="chart-block">
           <h3>1 × 1 grid cells</h3>
           <div id="fss-1x1"></div>
@@ -410,7 +434,7 @@
   (() => {
     "use strict";
 
-    const version = "20260729T170252Z";
+    const version = "20260729T180829";
 
     const withVersion = (
       source,

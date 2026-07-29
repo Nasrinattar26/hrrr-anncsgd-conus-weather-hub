@@ -339,7 +339,7 @@
                       <span class="heatmap-cell ${valueClass}" style="${style}"
                         aria-label="${escapeHtml(
                           `${model}, ${threshold}, ${window}, ${label}: `
-                          + (finite(value) ? value.toFixed(3) : "undefined")
+                          + (finite(value) ? value.toFixed(3) : "Not available")
                         )}">
                         ${finite(value) ? value.toFixed(2) : "—"}
                       </span>
@@ -1001,7 +1001,7 @@
       leadLineChart({
         title: `Brier Skill Score for ${threshold}`,
         description:
-          `Brier Skill Score by forecast lead for ${threshold}.`,
+          `Brier Skill Score by forecast window for ${threshold}.`,
         series: bssSeries,
         minimum: bssFinite.length
           ? Math.min(0, ...bssFinite) - 0.02
@@ -1228,10 +1228,9 @@
     .filter(row => row.hrrr_minus_gefs > 0)
     .map(row => row.metric);
   document.getElementById("paired-amount-interpretation").textContent =
-    `For this four-window pilot, HRRR has conclusive advantages in `
-    + `${hrrrWins.join(" and ")}; GEFS has a conclusive advantage in `
-    + `${gefsWins.join(" and ")}. Aggregate absolute-bias superiority `
-    + `is inconclusive because its 95% interval crosses zero.`;
+    "For this four-window pilot, the paired confidence "
+    + "intervals above show which HRRR–GEFS differences "
+    + "are statistically conclusive.";
 
   const coverageRows = data.amount_intervals;
   const width = 700;
