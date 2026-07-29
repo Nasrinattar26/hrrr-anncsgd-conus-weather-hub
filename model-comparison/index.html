@@ -193,13 +193,6 @@
             forecast lead end hours f24, f30, f36, and f42.
           </p>
         </div>
-        <div class="chart-grid chart-grid--single">
-        <article class="chart-block">
-          <h3>Brier Skill Score by forecast window</h3>
-          <p>Each point verifies a different 12-hour period. Positive values outperform the shared MRMS climatology; values need not decrease monotonically across individual windows.</p>
-          <div id="bss-chart"></div>
-        </article>
-      </div>
       <article class="chart-block roc-curves-block">
         <h3>ROC curves by forecast window</h3>
         <p>
@@ -340,6 +333,17 @@
       </div>
       <p id="distribution-warning" class="callout callout--neutral"></p>
     </section>
+
+      <section class="panel" aria-label="Brier Skill Score by forecast window">
+        <div class="chart-grid chart-grid--single">
+          <article class="chart-block">
+            <h3>Brier Skill Score by forecast window</h3>
+            <p>Each point verifies a different 12-hour period. Positive values outperform the shared MRMS climatology; values need not decrease monotonically across individual windows.</p>
+            <div id="bss-chart"></div>
+          </article>
+        </div>
+      </section>
+
 
     <section class="panel" aria-labelledby="threshold-table-title">
       <div class="section-heading">
