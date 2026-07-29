@@ -4,13 +4,13 @@
   "files": [
     {
       "name": "comparison_run.json",
-      "bytes": 316588,
-      "sha256": "3ee91e30a44d9c31e8998a4f383d305888bad19e8df202669b3d512bca62e424"
+      "bytes": 658873,
+      "sha256": "ad2e8b676c752d261dae8f0f56f2c39100d3681e5c4b3b84264679e210c059a6"
     },
     {
       "name": "comparison_run.js",
-      "bytes": 207529,
-      "sha256": "3c3c27914177caf635c77b3bc49030900f8e6dc8f0e6d7a58611f394cc7804df"
+      "bytes": 433487,
+      "sha256": "cc4ee15286a3bdd15b2426b70d03cdca399378854e20c6b90cf988a0bb7b6f87"
     }
   ]
 }
