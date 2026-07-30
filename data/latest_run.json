@@ -1,8 +1,8 @@
 {
   "status": "READY_FOR_PUBLICATION",
-  "initialization": "2026072912",
-  "initialization_display": "2026-07-29 12 UTC",
-  "updated_utc": "2026-07-29 16:46 UTC",
+  "initialization": "2026073012",
+  "initialization_display": "2026-07-30 12 UTC",
+  "updated_utc": "2026-07-30 16:46 UTC",
   "endpoints": 8,
   "pqpf_products": 20,
   "forecast_maps": 145,
@@ -11,7 +11,7 @@
   "grib2_sidecars": 20,
   "grib2_messages": 145,
   "grib2_package_available": true,
-  "grib2_package": "products/grib2/2026072912/hrrr_anncsgd_2026072912_grib2_download_package.tar.gz",
+  "grib2_package": "products/grib2/2026073012/hrrr_anncsgd_2026073012_grib2_download_package.tar.gz",
   "durations_hours": [
     6,
     12,
@@ -19,6 +19,6 @@
   ],
   "catalog": "data/map_catalog.json",
   "map_catalog": "data/map_catalog.json",
-  "gif_manifest": "products/gifs/2026072912/manifest.json",
-  "grib2_manifest": "products/grib2/2026072912/manifest.json"
+  "gif_manifest": "products/gifs/2026073012/manifest.json",
+  "grib2_manifest": "products/grib2/2026073012/manifest.json"
 }
