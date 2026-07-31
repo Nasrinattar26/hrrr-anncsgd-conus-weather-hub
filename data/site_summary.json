@@ -1,8 +1,8 @@
 {
   "project_name": "HRRR ANN-CSGD CONUS Weather Hub",
   "description": "Duration-specific probabilistic precipitation postprocessing of HRRR forecasts using ANN-CSGD.",
-  "latest_initialization": "2026073012",
-  "latest_initialization_display": "2026-07-30 12 UTC",
+  "latest_initialization": "2026073112",
+  "latest_initialization_display": "2026-07-31 12 UTC",
   "production_status": "PASS",
   "expected_products": 20,
   "passed_products": 20,
@@ -167,9 +167,9 @@
       ]
     }
   },
-  "updated_utc": "2026-07-30 16:46 UTC",
+  "updated_utc": "2026-07-31 16:46 UTC",
   "operational_run": {
-    "initialization": "2026073012",
+    "initialization": "2026073112",
     "endpoint_count": 8,
     "product_count": 20,
     "map_count": 145,
@@ -178,7 +178,7 @@
     "grib2_sidecar_count": 20,
     "grib2_message_count": 145,
     "grib2_package_available": true,
-    "grib2_package": "products/grib2/2026073012/hrrr_anncsgd_2026073012_grib2_download_package.tar.gz",
+    "grib2_package": "products/grib2/2026073112/hrrr_anncsgd_2026073112_grib2_download_package.tar.gz",
     "status": "PASS",
     "published_data_prepared": true
   },
@@ -188,5 +188,5 @@
   "grib2_sidecar_count": 20,
   "grib2_message_count": 145,
   "grib2_package_available": true,
-  "grib2_package": "products/grib2/2026073012/hrrr_anncsgd_2026073012_grib2_download_package.tar.gz"
+  "grib2_package": "products/grib2/2026073112/hrrr_anncsgd_2026073112_grib2_download_package.tar.gz"
 }
