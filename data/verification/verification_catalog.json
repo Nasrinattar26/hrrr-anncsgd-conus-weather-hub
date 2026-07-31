@@ -5,10 +5,10 @@
   "retention_definition": "Latest successful forecast initializations, newest to oldest, up to the configured maximum.",
   "maximum_retained_runs": 30,
   "retained_run_count": 8,
-  "complete_run_count": 7,
-  "partial_run_count": 1,
+  "complete_run_count": 8,
+  "partial_run_count": 0,
   "latest_initialization": "2026072912",
-  "latest_valid_time": "2026-07-30T18:00:00Z",
+  "latest_valid_time": "2026-07-31T12:00:00Z",
   "metric_definitions": {
     "BSS": "Brier Skill Score relative to monthly historical MRMS event-frequency climatology.",
     "POD": "Hits divided by hits plus misses.",
@@ -19,37 +19,37 @@
   "runs": [
     {
       "initialization": "2026072912",
-      "verification_state": "PARTIAL",
-      "is_fully_verified": false,
+      "verification_state": "COMPLETE",
+      "is_fully_verified": true,
       "forecast_window_count": 20,
-      "completed_window_count": 11,
-      "pending_window_count": 9,
-      "threshold_row_count": 68,
+      "completed_window_count": 20,
+      "pending_window_count": 0,
+      "threshold_row_count": 125,
       "earliest_valid_time": "2026-07-29T18:00:00Z",
-      "latest_valid_time": "2026-07-30T18:00:00Z",
+      "latest_valid_time": "2026-07-31T12:00:00Z",
       "duration_window_counts": {
-        "6": 5,
-        "12": 4,
-        "24": 2
+        "6": 8,
+        "12": 7,
+        "24": 5
       },
       "metric_ranges": {
         "POD": {
-          "finite_count": 62,
+          "finite_count": 119,
           "minimum": 0.0,
           "maximum": 0.5769230769230769
         },
         "FAR": {
-          "finite_count": 21,
+          "finite_count": 38,
           "minimum": 0.0,
           "maximum": 1.0
         },
         "CSI": {
-          "finite_count": 62,
+          "finite_count": 119,
           "minimum": 0.0,
-          "maximum": 0.4470198675496689
+          "maximum": 0.4642289348171701
         },
         "brier_skill_score": {
-          "finite_count": 68,
+          "finite_count": 125,
           "minimum": -1.4031151556167307,
           "maximum": 0.9182182189770552
         }
