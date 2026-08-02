@@ -5,10 +5,10 @@
   "retention_definition": "Latest successful forecast initializations, newest to oldest, up to the configured maximum.",
   "maximum_retained_runs": 30,
   "retained_run_count": 10,
-  "complete_run_count": 9,
-  "partial_run_count": 1,
+  "complete_run_count": 10,
+  "partial_run_count": 0,
   "latest_initialization": "2026073112",
-  "latest_valid_time": "2026-08-01T18:00:00Z",
+  "latest_valid_time": "2026-08-02T12:00:00Z",
   "metric_definitions": {
     "BSS": "Brier Skill Score relative to monthly historical MRMS event-frequency climatology.",
     "POD": "Hits divided by hits plus misses.",
@@ -19,38 +19,38 @@
   "runs": [
     {
       "initialization": "2026073112",
-      "verification_state": "PARTIAL",
-      "is_fully_verified": false,
+      "verification_state": "COMPLETE",
+      "is_fully_verified": true,
       "forecast_window_count": 20,
-      "completed_window_count": 11,
-      "pending_window_count": 9,
-      "threshold_row_count": 68,
+      "completed_window_count": 20,
+      "pending_window_count": 0,
+      "threshold_row_count": 125,
       "earliest_valid_time": "2026-07-31T18:00:00Z",
-      "latest_valid_time": "2026-08-01T18:00:00Z",
+      "latest_valid_time": "2026-08-02T12:00:00Z",
       "duration_window_counts": {
-        "6": 5,
-        "12": 4,
-        "24": 2
+        "6": 8,
+        "12": 7,
+        "24": 5
       },
       "metric_ranges": {
         "POD": {
-          "finite_count": 64,
+          "finite_count": 118,
           "minimum": 0.0,
           "maximum": 0.6124497991967871
         },
         "FAR": {
-          "finite_count": 22,
+          "finite_count": 39,
           "minimum": 0.22033898305084745,
           "maximum": 1.0
         },
         "CSI": {
-          "finite_count": 64,
+          "finite_count": 118,
           "minimum": 0.0,
           "maximum": 0.4825949367088608
         },
         "brier_skill_score": {
-          "finite_count": 68,
-          "minimum": -0.7128810386967477,
+          "finite_count": 125,
+          "minimum": -10.243322058511632,
           "maximum": 0.9469424746116185
         }
       },
