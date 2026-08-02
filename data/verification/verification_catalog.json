@@ -4,11 +4,11 @@
   "product": "HRRR ANN-CSGD operational precipitation verification",
   "retention_definition": "Latest successful forecast initializations, newest to oldest, up to the configured maximum.",
   "maximum_retained_runs": 30,
-  "retained_run_count": 10,
+  "retained_run_count": 11,
   "complete_run_count": 10,
-  "partial_run_count": 0,
-  "latest_initialization": "2026073112",
-  "latest_valid_time": "2026-08-02T12:00:00Z",
+  "partial_run_count": 1,
+  "latest_initialization": "2026080112",
+  "latest_valid_time": "2026-08-02T18:00:00Z",
   "metric_definitions": {
     "BSS": "Brier Skill Score relative to monthly historical MRMS event-frequency climatology.",
     "POD": "Hits divided by hits plus misses.",
@@ -17,6 +17,46 @@
   },
   "categorical_forecast_definition": "ANN-CSGD expected precipitation greater than or equal to the event threshold.",
   "runs": [
+    {
+      "initialization": "2026080112",
+      "verification_state": "PARTIAL",
+      "is_fully_verified": false,
+      "forecast_window_count": 20,
+      "completed_window_count": 11,
+      "pending_window_count": 9,
+      "threshold_row_count": 68,
+      "earliest_valid_time": "2026-08-01T18:00:00Z",
+      "latest_valid_time": "2026-08-02T18:00:00Z",
+      "duration_window_counts": {
+        "6": 5,
+        "12": 4,
+        "24": 2
+      },
+      "metric_ranges": {
+        "POD": {
+          "finite_count": 66,
+          "minimum": 0.0,
+          "maximum": 0.5265348595213319
+        },
+        "FAR": {
+          "finite_count": 24,
+          "minimum": 0.4142857142857143,
+          "maximum": 1.0
+        },
+        "CSI": {
+          "finite_count": 66,
+          "minimum": 0.0,
+          "maximum": 0.36243180046765394
+        },
+        "brier_skill_score": {
+          "finite_count": 68,
+          "minimum": -4.021197595838701,
+          "maximum": 0.3342171673908827
+        }
+      },
+      "summary_url": "runs/2026080112/verification_summary.json",
+      "csv_url": "runs/2026080112/verification_metrics.csv"
+    },
     {
       "initialization": "2026073112",
       "verification_state": "COMPLETE",
