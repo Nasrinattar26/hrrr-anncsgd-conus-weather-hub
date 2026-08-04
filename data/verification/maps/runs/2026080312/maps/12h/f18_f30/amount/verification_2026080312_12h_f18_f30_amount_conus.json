@@ -1,0 +1,83 @@
+{
+  "status": "SUCCESS",
+  "product_family": "amount_verification",
+  "initialization": "2026080312",
+  "initialization_utc": "2026-08-03T12:00:00Z",
+  "duration_hours": 12,
+  "window": "f18_f30",
+  "lead_start_hour": 18,
+  "lead_end_hour": 30,
+  "valid_start_utc": "2026-08-04T06:00:00Z",
+  "valid_end_utc": "2026-08-04T18:00:00Z",
+  "domain": "conus",
+  "domain_label": "CONUS",
+  "domain_definition": "geographic_bounding_box",
+  "domain_extent": [
+    -127.0,
+    -64.0,
+    23.0,
+    52.0
+  ],
+  "common_domain_cell_count": 13318,
+  "land_cell_count": 13318,
+  "display_wet_threshold_mm": 0.1,
+  "wet_display_cell_count": 3070,
+  "performance_label": "Raw HRRR has lower domain MAE",
+  "field_statistics": {
+    "raw_hrrr_precip_mm": {
+      "count": 13318,
+      "minimum": 0.0,
+      "maximum": 89.16000366210938,
+      "mean": 0.3134464635617918
+    },
+    "expected_precip_mm": {
+      "count": 13318,
+      "minimum": 0.019590647891163826,
+      "maximum": 21.718299865722656,
+      "mean": 0.5179174935564349
+    },
+    "mrms_observation_mm": {
+      "count": 13318,
+      "minimum": 0.0,
+      "maximum": 59.20000076293945,
+      "mean": 0.44608800089481015
+    },
+    "absolute_error_improvement_mm": {
+      "count": 13318,
+      "minimum": -15.958015441894531,
+      "maximum": 79.0155668258667,
+      "mean": -0.036704137919655
+    }
+  },
+  "summary_metrics": {
+    "raw_hrrr_mae_mm": 0.5755278576085159,
+    "ann_csgd_mae_mm": 0.6122319955281709,
+    "mae_improvement_mm": -0.03670413791965499,
+    "mae_improvement_percent": -6.377473728582186,
+    "raw_hrrr_rmse_mm": 2.914305035865365,
+    "ann_csgd_rmse_mm": 2.145274302070494,
+    "raw_hrrr_bias_mm": -0.13264153733301837,
+    "ann_csgd_bias_mm": 0.07182949266162478
+  },
+  "improvement_formula": "abs(raw_hrrr_mm - mrms_mm) - abs(ann_csgd_expected_mm - mrms_mm)",
+  "positive_improvement_meaning": "ANN-CSGD expected precipitation is closer to MRMS than raw HRRR",
+  "product_id": "2026080312__12h__f18_f30__amount_verification__conus",
+  "public_image_url": "data/verification/maps/runs/2026080312/maps/12h/f18_f30/amount/verification_2026080312_12h_f18_f30_amount_conus.webp",
+  "public_metadata_url": "data/verification/maps/runs/2026080312/maps/12h/f18_f30/amount/verification_2026080312_12h_f18_f30_amount_conus.json",
+  "source_png_sha256": "d710eecab8e6a9760eaad38ae896c59cfe3ded2630888b59c36fa89a7a48366e",
+  "public_webp_profile": {
+    "name": "high",
+    "maximum_width": 2200,
+    "quality": 88,
+    "method": 6
+  },
+  "webp_bytes": 269406,
+  "webp_sha256": "fa48786dbfccbe055d670b7eb1ccef09063061c238bac803753464ff60d7d222",
+  "webp_width": 2200,
+  "webp_height": 1420,
+  "webp_rgb_standard_deviation": [
+    47.32772133024487,
+    45.37518875034049,
+    46.27726272011541
+  ]
+}
