@@ -1,10 +1,19 @@
 {
   "contract_version": 1,
-  "latest_initialization": "2026080200",
-  "retained_run_count": 12,
+  "latest_initialization": "2026080300",
+  "retained_run_count": 13,
   "maximum_retained_runs": 30,
-  "generated_utc": "2026-08-03T21:41:01.313006Z",
+  "generated_utc": "2026-08-04T21:41:00.733067Z",
   "runs": [
+    {
+      "initialization": "2026080300",
+      "status": "PASS",
+      "generated_utc": "2026-08-04T21:40:59Z",
+      "common_window_count": 4,
+      "total_amount_samples": 53272,
+      "data_json": "runs/2026080300/comparison_run.json",
+      "data_js": "runs/2026080300/comparison_run.js"
+    },
     {
       "initialization": "2026080200",
       "status": "PASS",
