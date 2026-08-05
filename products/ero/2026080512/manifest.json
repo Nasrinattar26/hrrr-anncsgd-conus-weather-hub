@@ -1,0 +1,55 @@
+{
+  "status": "SUCCESS",
+  "initialization": "2026080512",
+  "product_family": "hrrr_anncsgd_wpc_ero_comparison",
+  "product_count": 2,
+  "standard_map_count_unchanged": 145,
+  "created_utc": "2026-08-05T16:46:09.099859+00:00",
+  "products": [
+    {
+      "duration_hours": 24,
+      "window": "f00_f24",
+      "start_fhr": 0,
+      "end_fhr": 24,
+      "variable": "wpc_ero_comparison_day1",
+      "label": "WPC ERO Comparison \u2014 Day 1",
+      "units": "comparison",
+      "kind": "image",
+      "path": "products/ero/2026080512/24h/f00_f24/hrrr_anncsgd_wpc_ero_2026080512_24h_f00_f24_day1_conus.png",
+      "metadata_path": "products/ero/2026080512/24h/f00_f24/hrrr_anncsgd_wpc_ero_2026080512_24h_f00_f24_day1_conus.json",
+      "size_bytes": 1075728,
+      "ero_day": 1,
+      "ero_temporal_coverage": "partial",
+      "sha256": "854d435aeb41a4068299954c113e3d0f27de03c33be6be257669c9e3ae68d5d8",
+      "wpc_ero_source_url": "https://www.wpc.ncep.noaa.gov/exper/eromap/geojson/Day1_Latest.geojson",
+      "wpc_ero_valid_start_actual_utc": "2026-08-05T16:00:00Z",
+      "wpc_ero_valid_end_actual_utc": "2026-08-06T12:00:00Z",
+      "ero_categories": [
+        "MARGINAL",
+        "SLIGHT"
+      ]
+    },
+    {
+      "duration_hours": 24,
+      "window": "f24_f48",
+      "start_fhr": 24,
+      "end_fhr": 48,
+      "variable": "wpc_ero_comparison_day2",
+      "label": "WPC ERO Comparison \u2014 Day 2",
+      "units": "comparison",
+      "kind": "image",
+      "path": "products/ero/2026080512/24h/f24_f48/hrrr_anncsgd_wpc_ero_2026080512_24h_f24_f48_day2_conus.png",
+      "metadata_path": "products/ero/2026080512/24h/f24_f48/hrrr_anncsgd_wpc_ero_2026080512_24h_f24_f48_day2_conus.json",
+      "size_bytes": 1071802,
+      "ero_day": 2,
+      "ero_temporal_coverage": "full",
+      "sha256": "25fa7049fd98d05f381f8fea22160a809e9d4c05b3998e7eaf5d7001be869607",
+      "wpc_ero_source_url": "https://www.wpc.ncep.noaa.gov/exper/eromap/geojson/Day2_Latest.geojson",
+      "wpc_ero_valid_start_actual_utc": "2026-08-06T12:00:00Z",
+      "wpc_ero_valid_end_actual_utc": "2026-08-07T12:00:00Z",
+      "ero_categories": [
+        "MARGINAL"
+      ]
+    }
+  ]
+}
