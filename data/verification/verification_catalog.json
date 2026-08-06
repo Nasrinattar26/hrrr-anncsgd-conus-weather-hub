@@ -5,10 +5,10 @@
   "retention_definition": "Latest successful forecast initializations, newest to oldest, up to the configured maximum.",
   "maximum_retained_runs": 30,
   "retained_run_count": 14,
-  "complete_run_count": 13,
-  "partial_run_count": 1,
+  "complete_run_count": 14,
+  "partial_run_count": 0,
   "latest_initialization": "2026080412",
-  "latest_valid_time": "2026-08-05T18:00:00Z",
+  "latest_valid_time": "2026-08-06T12:00:00Z",
   "metric_definitions": {
     "BSS": "Brier Skill Score relative to monthly historical MRMS event-frequency climatology.",
     "POD": "Hits divided by hits plus misses.",
@@ -19,38 +19,38 @@
   "runs": [
     {
       "initialization": "2026080412",
-      "verification_state": "PARTIAL",
-      "is_fully_verified": false,
+      "verification_state": "COMPLETE",
+      "is_fully_verified": true,
       "forecast_window_count": 20,
-      "completed_window_count": 11,
-      "pending_window_count": 9,
-      "threshold_row_count": 68,
+      "completed_window_count": 20,
+      "pending_window_count": 0,
+      "threshold_row_count": 125,
       "earliest_valid_time": "2026-08-04T18:00:00Z",
-      "latest_valid_time": "2026-08-05T18:00:00Z",
+      "latest_valid_time": "2026-08-06T12:00:00Z",
       "duration_window_counts": {
-        "6": 5,
-        "12": 4,
-        "24": 2
+        "6": 8,
+        "12": 7,
+        "24": 5
       },
       "metric_ranges": {
         "POD": {
-          "finite_count": 60,
+          "finite_count": 108,
           "minimum": 0.0,
-          "maximum": 0.32051282051282054
+          "maximum": 0.5482456140350878
         },
         "FAR": {
-          "finite_count": 18,
-          "minimum": 0.5333333333333333,
+          "finite_count": 30,
+          "minimum": 0.4212962962962963,
           "maximum": 1.0
         },
         "CSI": {
-          "finite_count": 60,
+          "finite_count": 108,
           "minimum": 0.0,
-          "maximum": 0.22115384615384615
+          "maximum": 0.39184952978056425
         },
         "brier_skill_score": {
-          "finite_count": 68,
-          "minimum": -0.10874616367293655,
+          "finite_count": 125,
+          "minimum": -2.0077942758278575,
           "maximum": 0.9955458104777368
         }
       },
