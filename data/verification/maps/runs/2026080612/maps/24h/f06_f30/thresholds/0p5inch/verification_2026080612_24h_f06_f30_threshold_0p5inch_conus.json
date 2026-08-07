@@ -1,0 +1,214 @@
+{
+  "status": "SUCCESS",
+  "product_family": "threshold_verification",
+  "initialization": "2026080612",
+  "initialization_utc": "2026-08-06T12:00:00Z",
+  "duration_hours": 24,
+  "window": "f06_f30",
+  "lead_start_hour": 6,
+  "lead_end_hour": 30,
+  "valid_start_utc": "2026-08-06T18:00:00Z",
+  "valid_end_utc": "2026-08-07T18:00:00Z",
+  "domain": "conus",
+  "domain_label": "CONUS",
+  "domain_definition": "geographic_bounding_box",
+  "domain_extent": [
+    -127.0,
+    -64.0,
+    23.0,
+    52.0
+  ],
+  "common_sample_count": 13318,
+  "selected_domain_cell_count": 13318,
+  "land_cell_count": 13318,
+  "field_statistics": {
+    "probability_fraction": {
+      "count": 13318,
+      "minimum": 1.3110240961726092e-16,
+      "maximum": 0.8305704593658447,
+      "mean": 0.054929967760182864
+    },
+    "local_brier_improvement": {
+      "count": 13318,
+      "minimum": -0.8739118697735804,
+      "maximum": 0.997300282394594,
+      "mean": 0.02749489589353887
+    }
+  },
+  "positive_improvement_meaning": "ANN-CSGD probability has lower local squared error than raw HRRR deterministic exceedance",
+  "threshold_key": "0p5inch",
+  "threshold_label": "0.5 inch",
+  "threshold_type": "fixed",
+  "threshold_source": "validated_metric_row",
+  "spatially_varying_threshold": false,
+  "threshold_title_text": "0.5 inch / 12.7 mm",
+  "threshold_field_statistics": {
+    "count": 13318,
+    "minimum": 12.699999809265137,
+    "maximum": 12.699999809265137,
+    "mean": 12.699999809265137
+  },
+  "backend_threshold_minimum_mm": 12.699999809265137,
+  "backend_threshold_maximum_mm": 12.699999809265137,
+  "probability_key": "prob_gt_0p5inch",
+  "probability_display_threshold": 0.001,
+  "brier_improvement_display_threshold": 0.01,
+  "event_counts": {
+    "observed_events": 723,
+    "raw_hrrr_events": 534,
+    "ann_mean_forecast_events": 279,
+    "hits": 106,
+    "misses": 617,
+    "false_alarms": 173,
+    "correct_negatives": 12422
+  },
+  "validated_metrics": {
+    "brier_skill_score": 0.02316660354383626,
+    "POD": 0.14661134163208853,
+    "FAR": 0.6200716845878136,
+    "CSI": 0.11830357142857142,
+    "FSS": 0.380506413270435,
+    "fractions_skill_score": {
+      "1x1": 0.21157684630738516,
+      "3x3": 0.380506413270435,
+      "5x5": 0.4540902955793191
+    },
+    "fss_display_neighborhood": "3x3",
+    "brier_score": 0.04706584896304619,
+    "bs_climatology": 0.04818206373143623
+  },
+  "raw_hrrr_metrics": {
+    "observed_events": 723,
+    "forecast_events": 534,
+    "hits": 132,
+    "misses": 591,
+    "false_alarms": 402,
+    "correct_negatives": 12193,
+    "brier_skill_score": -0.5474792709623637,
+    "POD": 0.1825726141078838,
+    "FAR": 0.7528089887640449,
+    "CSI": 0.11733333333333333,
+    "FSS": 0.43013574050000547,
+    "fractions_skill_score": {
+      "1x1": 0.2100238663484486,
+      "3x3": 0.43013574050000547,
+      "5x5": 0.5376331065470475
+    },
+    "fss_display_neighborhood": "3x3",
+    "brier_score": 0.07456074485658508,
+    "bs_climatology": 0.04818206373143623
+  },
+  "ann_csgd_metrics": {
+    "observed_events": 723,
+    "forecast_events": 279,
+    "hits": 106,
+    "misses": 617,
+    "false_alarms": 173,
+    "correct_negatives": 12422,
+    "brier_skill_score": 0.02316660354383626,
+    "POD": 0.14661134163208853,
+    "FAR": 0.6200716845878136,
+    "CSI": 0.11830357142857142,
+    "FSS": 0.380506413270435,
+    "fractions_skill_score": {
+      "1x1": 0.21157684630738516,
+      "3x3": 0.380506413270435,
+      "5x5": 0.4540902955793191
+    },
+    "fss_display_neighborhood": "3x3",
+    "brier_score": 0.04706584896304619,
+    "bs_climatology": 0.04818206373143623
+  },
+  "brier_comparison": {
+    "raw_hrrr_deterministic_bs": 0.07456074485658508,
+    "ann_csgd_probability_bs": 0.04706584896304619,
+    "mean_local_brier_improvement": 0.027494895893538887,
+    "performance_label": "ANN-CSGD has lower Brier error"
+  },
+  "metric_contract": {
+    "probabilistic_forecast_source": "threshold_exceedance_probability",
+    "bss_reference": "historical_mrms_event_frequency_climatology",
+    "categorical_forecast_source": "mean_precipitation_mm",
+    "categorical_event_rule": "mean_precipitation_ge_threshold",
+    "observed_event_rule": "mrms_precipitation_ge_threshold",
+    "probability_cutoff_for_categorical_metrics": null,
+    "units": {
+      "mean_forecast": "mm",
+      "observation": "mm",
+      "threshold": "mm",
+      "probability": "fraction_0_to_1"
+    }
+  },
+  "categorical_probability_cutoff": null,
+  "categorical_forecast_rule": "ann_csgd_expected_precipitation_ge_threshold",
+  "local_brier_improvement_formula": "(raw_hrrr_event - observed_event)^2 - (ann_csgd_probability - observed_event)^2",
+  "visual_style": "four_panel_reference_style_v2",
+  "panel_order": [
+    "raw_hrrr_precipitation_amount",
+    "raw_hrrr_deterministic_exceedance",
+    "ann_csgd_exceedance_probability",
+    "mrms_observed_precipitation_with_exceedance_polygon"
+  ],
+  "raw_hrrr_deterministic_encoding_percent": 100.0,
+  "observed_exceedance_overlay": {
+    "enabled": true,
+    "fill_color": "#8b0000",
+    "fill_alpha": 0.12,
+    "outline_color": "#8b0000",
+    "outline_width": 1.35,
+    "polygon_source": "mrms_observation_ge_threshold"
+  },
+  "reference_style_amount_levels_mm": [
+    0.1,
+    1.0,
+    2.0,
+    5.0,
+    10.0,
+    15.0,
+    25.0,
+    40.0,
+    60.0,
+    80.0,
+    100.0,
+    125.0,
+    150.0,
+    200.0
+  ],
+  "reference_style_probability_levels_percent": [
+    0.1,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    10.0,
+    20.0,
+    30.0,
+    40.0,
+    50.0,
+    60.0,
+    70.0,
+    80.0,
+    90.0,
+    95.0,
+    100.0
+  ],
+  "product_id": "2026080612__24h__f06_f30__threshold_verification__0p5inch__conus",
+  "public_image_url": "data/verification/maps/runs/2026080612/maps/24h/f06_f30/thresholds/0p5inch/verification_2026080612_24h_f06_f30_threshold_0p5inch_conus.webp",
+  "public_metadata_url": "data/verification/maps/runs/2026080612/maps/24h/f06_f30/thresholds/0p5inch/verification_2026080612_24h_f06_f30_threshold_0p5inch_conus.json",
+  "source_png_sha256": "f738975056ef948d03a8a4ae04fae406fa2dcde02c1b7fca84aa231ca5502a81",
+  "public_webp_profile": {
+    "name": "high",
+    "maximum_width": 2200,
+    "quality": 88,
+    "method": 6
+  },
+  "webp_bytes": 289592,
+  "webp_sha256": "eee9a179406470ba8f804082f9509799496884ea798d929364b12f161a0c6173",
+  "webp_width": 2200,
+  "webp_height": 1377,
+  "webp_rgb_standard_deviation": [
+    49.59608308585993,
+    41.10605926800323,
+    42.351066473295354
+  ]
+}
