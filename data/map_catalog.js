@@ -1,7 +1,7 @@
 window.HRRR_MAP_CATALOG = {
   "title": "HRRR ANN-CSGD CONUS Forecast Maps",
-  "init": "2026080712",
-  "created_utc": "2026-08-07 16:45 UTC",
+  "init": "2026080812",
+  "created_utc": "2026-08-08 16:45 UTC",
   "n_files": 145,
   "durations": {
     "6h": {
@@ -59,8 +59,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Expected precipitation",
               "units": "mm",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f00_f06/expected_precip_mm.png",
-              "size_bytes": 415030
+              "path": "products/maps/2026080812/6h/f00_f06/expected_precip_mm.png",
+              "size_bytes": 413962
             },
             {
               "duration_hours": 6,
@@ -71,8 +71,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.25 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f00_f06/prob_gt_0p25inch_percent.png",
-              "size_bytes": 442627
+              "path": "products/maps/2026080812/6h/f00_f06/prob_gt_0p25inch_percent.png",
+              "size_bytes": 439438
             },
             {
               "duration_hours": 6,
@@ -83,8 +83,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.5 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f00_f06/prob_gt_0p5inch_percent.png",
-              "size_bytes": 434761
+              "path": "products/maps/2026080812/6h/f00_f06/prob_gt_0p5inch_percent.png",
+              "size_bytes": 432901
             },
             {
               "duration_hours": 6,
@@ -95,8 +95,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 1 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f00_f06/prob_gt_1inch_percent.png",
-              "size_bytes": 424511
+              "path": "products/maps/2026080812/6h/f00_f06/prob_gt_1inch_percent.png",
+              "size_bytes": 422903
             },
             {
               "duration_hours": 6,
@@ -107,8 +107,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 2 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f00_f06/prob_gt_2inch_percent.png",
-              "size_bytes": 417091
+              "path": "products/maps/2026080812/6h/f00_f06/prob_gt_2inch_percent.png",
+              "size_bytes": 417483
             },
             {
               "duration_hours": 6,
@@ -119,8 +119,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 2-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f00_f06/prob_gt_2yr6h_ari_percent.png",
-              "size_bytes": 418222
+              "path": "products/maps/2026080812/6h/f00_f06/prob_gt_2yr6h_ari_percent.png",
+              "size_bytes": 418846
             },
             {
               "duration_hours": 6,
@@ -131,8 +131,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 5-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f00_f06/prob_gt_5yr6h_ari_percent.png",
-              "size_bytes": 416382
+              "path": "products/maps/2026080812/6h/f00_f06/prob_gt_5yr6h_ari_percent.png",
+              "size_bytes": 416947
             }
           ]
         },
@@ -151,8 +151,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Expected precipitation",
               "units": "mm",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f06_f12/expected_precip_mm.png",
-              "size_bytes": 428992
+              "path": "products/maps/2026080812/6h/f06_f12/expected_precip_mm.png",
+              "size_bytes": 426459
             },
             {
               "duration_hours": 6,
@@ -163,8 +163,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.25 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f06_f12/prob_gt_0p25inch_percent.png",
-              "size_bytes": 473291
+              "path": "products/maps/2026080812/6h/f06_f12/prob_gt_0p25inch_percent.png",
+              "size_bytes": 465963
             },
             {
               "duration_hours": 6,
@@ -175,8 +175,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.5 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f06_f12/prob_gt_0p5inch_percent.png",
-              "size_bytes": 457752
+              "path": "products/maps/2026080812/6h/f06_f12/prob_gt_0p5inch_percent.png",
+              "size_bytes": 453305
             },
             {
               "duration_hours": 6,
@@ -187,8 +187,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 1 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f06_f12/prob_gt_1inch_percent.png",
-              "size_bytes": 443495
+              "path": "products/maps/2026080812/6h/f06_f12/prob_gt_1inch_percent.png",
+              "size_bytes": 439347
             },
             {
               "duration_hours": 6,
@@ -199,8 +199,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 2 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f06_f12/prob_gt_2inch_percent.png",
-              "size_bytes": 421932
+              "path": "products/maps/2026080812/6h/f06_f12/prob_gt_2inch_percent.png",
+              "size_bytes": 421978
             },
             {
               "duration_hours": 6,
@@ -211,8 +211,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 2-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f06_f12/prob_gt_2yr6h_ari_percent.png",
-              "size_bytes": 423080
+              "path": "products/maps/2026080812/6h/f06_f12/prob_gt_2yr6h_ari_percent.png",
+              "size_bytes": 422888
             },
             {
               "duration_hours": 6,
@@ -223,8 +223,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 5-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f06_f12/prob_gt_5yr6h_ari_percent.png",
-              "size_bytes": 419703
+              "path": "products/maps/2026080812/6h/f06_f12/prob_gt_5yr6h_ari_percent.png",
+              "size_bytes": 418800
             }
           ]
         },
@@ -243,8 +243,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Expected precipitation",
               "units": "mm",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f12_f18/expected_precip_mm.png",
-              "size_bytes": 422366
+              "path": "products/maps/2026080812/6h/f12_f18/expected_precip_mm.png",
+              "size_bytes": 416238
             },
             {
               "duration_hours": 6,
@@ -255,8 +255,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.25 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f12_f18/prob_gt_0p25inch_percent.png",
-              "size_bytes": 461391
+              "path": "products/maps/2026080812/6h/f12_f18/prob_gt_0p25inch_percent.png",
+              "size_bytes": 458267
             },
             {
               "duration_hours": 6,
@@ -267,8 +267,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.5 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f12_f18/prob_gt_0p5inch_percent.png",
-              "size_bytes": 451700
+              "path": "products/maps/2026080812/6h/f12_f18/prob_gt_0p5inch_percent.png",
+              "size_bytes": 443296
             },
             {
               "duration_hours": 6,
@@ -279,8 +279,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 1 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f12_f18/prob_gt_1inch_percent.png",
-              "size_bytes": 433513
+              "path": "products/maps/2026080812/6h/f12_f18/prob_gt_1inch_percent.png",
+              "size_bytes": 426504
             },
             {
               "duration_hours": 6,
@@ -291,8 +291,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 2 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f12_f18/prob_gt_2inch_percent.png",
-              "size_bytes": 421064
+              "path": "products/maps/2026080812/6h/f12_f18/prob_gt_2inch_percent.png",
+              "size_bytes": 417937
             },
             {
               "duration_hours": 6,
@@ -303,8 +303,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 2-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f12_f18/prob_gt_2yr6h_ari_percent.png",
-              "size_bytes": 421680
+              "path": "products/maps/2026080812/6h/f12_f18/prob_gt_2yr6h_ari_percent.png",
+              "size_bytes": 419572
             },
             {
               "duration_hours": 6,
@@ -315,8 +315,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 5-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f12_f18/prob_gt_5yr6h_ari_percent.png",
-              "size_bytes": 419217
+              "path": "products/maps/2026080812/6h/f12_f18/prob_gt_5yr6h_ari_percent.png",
+              "size_bytes": 417008
             }
           ]
         },
@@ -335,8 +335,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Expected precipitation",
               "units": "mm",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f18_f24/expected_precip_mm.png",
-              "size_bytes": 416758
+              "path": "products/maps/2026080812/6h/f18_f24/expected_precip_mm.png",
+              "size_bytes": 412697
             },
             {
               "duration_hours": 6,
@@ -347,8 +347,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.25 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f18_f24/prob_gt_0p25inch_percent.png",
-              "size_bytes": 447001
+              "path": "products/maps/2026080812/6h/f18_f24/prob_gt_0p25inch_percent.png",
+              "size_bytes": 439660
             },
             {
               "duration_hours": 6,
@@ -359,8 +359,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.5 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f18_f24/prob_gt_0p5inch_percent.png",
-              "size_bytes": 438001
+              "path": "products/maps/2026080812/6h/f18_f24/prob_gt_0p5inch_percent.png",
+              "size_bytes": 431627
             },
             {
               "duration_hours": 6,
@@ -371,8 +371,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 1 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f18_f24/prob_gt_1inch_percent.png",
-              "size_bytes": 427620
+              "path": "products/maps/2026080812/6h/f18_f24/prob_gt_1inch_percent.png",
+              "size_bytes": 420614
             },
             {
               "duration_hours": 6,
@@ -383,8 +383,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 2 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f18_f24/prob_gt_2inch_percent.png",
-              "size_bytes": 419910
+              "path": "products/maps/2026080812/6h/f18_f24/prob_gt_2inch_percent.png",
+              "size_bytes": 416856
             },
             {
               "duration_hours": 6,
@@ -395,8 +395,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 2-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f18_f24/prob_gt_2yr6h_ari_percent.png",
-              "size_bytes": 419625
+              "path": "products/maps/2026080812/6h/f18_f24/prob_gt_2yr6h_ari_percent.png",
+              "size_bytes": 419224
             },
             {
               "duration_hours": 6,
@@ -407,8 +407,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 5-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f18_f24/prob_gt_5yr6h_ari_percent.png",
-              "size_bytes": 417896
+              "path": "products/maps/2026080812/6h/f18_f24/prob_gt_5yr6h_ari_percent.png",
+              "size_bytes": 416899
             }
           ]
         },
@@ -427,8 +427,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Expected precipitation",
               "units": "mm",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f24_f30/expected_precip_mm.png",
-              "size_bytes": 419226
+              "path": "products/maps/2026080812/6h/f24_f30/expected_precip_mm.png",
+              "size_bytes": 413348
             },
             {
               "duration_hours": 6,
@@ -439,8 +439,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.25 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f24_f30/prob_gt_0p25inch_percent.png",
-              "size_bytes": 447238
+              "path": "products/maps/2026080812/6h/f24_f30/prob_gt_0p25inch_percent.png",
+              "size_bytes": 438828
             },
             {
               "duration_hours": 6,
@@ -451,8 +451,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.5 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f24_f30/prob_gt_0p5inch_percent.png",
-              "size_bytes": 440468
+              "path": "products/maps/2026080812/6h/f24_f30/prob_gt_0p5inch_percent.png",
+              "size_bytes": 432354
             },
             {
               "duration_hours": 6,
@@ -463,8 +463,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 1 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f24_f30/prob_gt_1inch_percent.png",
-              "size_bytes": 430578
+              "path": "products/maps/2026080812/6h/f24_f30/prob_gt_1inch_percent.png",
+              "size_bytes": 422934
             },
             {
               "duration_hours": 6,
@@ -475,8 +475,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 2 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f24_f30/prob_gt_2inch_percent.png",
-              "size_bytes": 419132
+              "path": "products/maps/2026080812/6h/f24_f30/prob_gt_2inch_percent.png",
+              "size_bytes": 417382
             },
             {
               "duration_hours": 6,
@@ -487,8 +487,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 2-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f24_f30/prob_gt_2yr6h_ari_percent.png",
-              "size_bytes": 419447
+              "path": "products/maps/2026080812/6h/f24_f30/prob_gt_2yr6h_ari_percent.png",
+              "size_bytes": 417610
             },
             {
               "duration_hours": 6,
@@ -499,8 +499,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 5-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f24_f30/prob_gt_5yr6h_ari_percent.png",
-              "size_bytes": 417538
+              "path": "products/maps/2026080812/6h/f24_f30/prob_gt_5yr6h_ari_percent.png",
+              "size_bytes": 416636
             }
           ]
         },
@@ -519,8 +519,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Expected precipitation",
               "units": "mm",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f30_f36/expected_precip_mm.png",
-              "size_bytes": 424628
+              "path": "products/maps/2026080812/6h/f30_f36/expected_precip_mm.png",
+              "size_bytes": 422359
             },
             {
               "duration_hours": 6,
@@ -531,8 +531,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.25 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f30_f36/prob_gt_0p25inch_percent.png",
-              "size_bytes": 460766
+              "path": "products/maps/2026080812/6h/f30_f36/prob_gt_0p25inch_percent.png",
+              "size_bytes": 464418
             },
             {
               "duration_hours": 6,
@@ -543,8 +543,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.5 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f30_f36/prob_gt_0p5inch_percent.png",
-              "size_bytes": 451321
+              "path": "products/maps/2026080812/6h/f30_f36/prob_gt_0p5inch_percent.png",
+              "size_bytes": 450650
             },
             {
               "duration_hours": 6,
@@ -555,8 +555,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 1 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f30_f36/prob_gt_1inch_percent.png",
-              "size_bytes": 438248
+              "path": "products/maps/2026080812/6h/f30_f36/prob_gt_1inch_percent.png",
+              "size_bytes": 437377
             },
             {
               "duration_hours": 6,
@@ -567,8 +567,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 2 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f30_f36/prob_gt_2inch_percent.png",
-              "size_bytes": 419902
+              "path": "products/maps/2026080812/6h/f30_f36/prob_gt_2inch_percent.png",
+              "size_bytes": 420112
             },
             {
               "duration_hours": 6,
@@ -579,8 +579,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 2-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f30_f36/prob_gt_2yr6h_ari_percent.png",
-              "size_bytes": 424033
+              "path": "products/maps/2026080812/6h/f30_f36/prob_gt_2yr6h_ari_percent.png",
+              "size_bytes": 425904
             },
             {
               "duration_hours": 6,
@@ -591,8 +591,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 5-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f30_f36/prob_gt_5yr6h_ari_percent.png",
-              "size_bytes": 420298
+              "path": "products/maps/2026080812/6h/f30_f36/prob_gt_5yr6h_ari_percent.png",
+              "size_bytes": 420449
             }
           ]
         },
@@ -611,8 +611,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Expected precipitation",
               "units": "mm",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f36_f42/expected_precip_mm.png",
-              "size_bytes": 418313
+              "path": "products/maps/2026080812/6h/f36_f42/expected_precip_mm.png",
+              "size_bytes": 416061
             },
             {
               "duration_hours": 6,
@@ -623,8 +623,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.25 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f36_f42/prob_gt_0p25inch_percent.png",
-              "size_bytes": 454126
+              "path": "products/maps/2026080812/6h/f36_f42/prob_gt_0p25inch_percent.png",
+              "size_bytes": 457908
             },
             {
               "duration_hours": 6,
@@ -635,8 +635,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.5 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f36_f42/prob_gt_0p5inch_percent.png",
-              "size_bytes": 445930
+              "path": "products/maps/2026080812/6h/f36_f42/prob_gt_0p5inch_percent.png",
+              "size_bytes": 444017
             },
             {
               "duration_hours": 6,
@@ -647,8 +647,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 1 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f36_f42/prob_gt_1inch_percent.png",
-              "size_bytes": 430430
+              "path": "products/maps/2026080812/6h/f36_f42/prob_gt_1inch_percent.png",
+              "size_bytes": 428674
             },
             {
               "duration_hours": 6,
@@ -659,8 +659,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 2 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f36_f42/prob_gt_2inch_percent.png",
-              "size_bytes": 419178
+              "path": "products/maps/2026080812/6h/f36_f42/prob_gt_2inch_percent.png",
+              "size_bytes": 418543
             },
             {
               "duration_hours": 6,
@@ -671,8 +671,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 2-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f36_f42/prob_gt_2yr6h_ari_percent.png",
-              "size_bytes": 422109
+              "path": "products/maps/2026080812/6h/f36_f42/prob_gt_2yr6h_ari_percent.png",
+              "size_bytes": 422351
             },
             {
               "duration_hours": 6,
@@ -683,8 +683,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 5-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f36_f42/prob_gt_5yr6h_ari_percent.png",
-              "size_bytes": 418263
+              "path": "products/maps/2026080812/6h/f36_f42/prob_gt_5yr6h_ari_percent.png",
+              "size_bytes": 420013
             }
           ]
         },
@@ -703,8 +703,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Expected precipitation",
               "units": "mm",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f42_f48/expected_precip_mm.png",
-              "size_bytes": 414346
+              "path": "products/maps/2026080812/6h/f42_f48/expected_precip_mm.png",
+              "size_bytes": 412891
             },
             {
               "duration_hours": 6,
@@ -715,8 +715,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.25 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f42_f48/prob_gt_0p25inch_percent.png",
-              "size_bytes": 440834
+              "path": "products/maps/2026080812/6h/f42_f48/prob_gt_0p25inch_percent.png",
+              "size_bytes": 440333
             },
             {
               "duration_hours": 6,
@@ -727,8 +727,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.5 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f42_f48/prob_gt_0p5inch_percent.png",
-              "size_bytes": 435591
+              "path": "products/maps/2026080812/6h/f42_f48/prob_gt_0p5inch_percent.png",
+              "size_bytes": 433274
             },
             {
               "duration_hours": 6,
@@ -739,8 +739,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 1 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f42_f48/prob_gt_1inch_percent.png",
-              "size_bytes": 425916
+              "path": "products/maps/2026080812/6h/f42_f48/prob_gt_1inch_percent.png",
+              "size_bytes": 424850
             },
             {
               "duration_hours": 6,
@@ -751,8 +751,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 2 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f42_f48/prob_gt_2inch_percent.png",
-              "size_bytes": 418703
+              "path": "products/maps/2026080812/6h/f42_f48/prob_gt_2inch_percent.png",
+              "size_bytes": 418381
             },
             {
               "duration_hours": 6,
@@ -763,8 +763,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 2-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f42_f48/prob_gt_2yr6h_ari_percent.png",
-              "size_bytes": 418975
+              "path": "products/maps/2026080812/6h/f42_f48/prob_gt_2yr6h_ari_percent.png",
+              "size_bytes": 421120
             },
             {
               "duration_hours": 6,
@@ -775,8 +775,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 5-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/6h/f42_f48/prob_gt_5yr6h_ari_percent.png",
-              "size_bytes": 417347
+              "path": "products/maps/2026080812/6h/f42_f48/prob_gt_5yr6h_ari_percent.png",
+              "size_bytes": 418974
             }
           ]
         }
@@ -837,8 +837,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Expected precipitation",
               "units": "mm",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f00_f12/expected_precip_mm.png",
-              "size_bytes": 431768
+              "path": "products/maps/2026080812/12h/f00_f12/expected_precip_mm.png",
+              "size_bytes": 428272
             },
             {
               "duration_hours": 12,
@@ -849,8 +849,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.5 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f00_f12/prob_gt_0p5inch_percent.png",
-              "size_bytes": 463969
+              "path": "products/maps/2026080812/12h/f00_f12/prob_gt_0p5inch_percent.png",
+              "size_bytes": 457251
             },
             {
               "duration_hours": 12,
@@ -861,8 +861,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 1 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f00_f12/prob_gt_1inch_percent.png",
-              "size_bytes": 447611
+              "path": "products/maps/2026080812/12h/f00_f12/prob_gt_1inch_percent.png",
+              "size_bytes": 443349
             },
             {
               "duration_hours": 12,
@@ -873,8 +873,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 2 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f00_f12/prob_gt_2inch_percent.png",
-              "size_bytes": 425080
+              "path": "products/maps/2026080812/12h/f00_f12/prob_gt_2inch_percent.png",
+              "size_bytes": 424259
             },
             {
               "duration_hours": 12,
@@ -885,8 +885,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 3 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f00_f12/prob_gt_3inch_percent.png",
-              "size_bytes": 418416
+              "path": "products/maps/2026080812/12h/f00_f12/prob_gt_3inch_percent.png",
+              "size_bytes": 418557
             },
             {
               "duration_hours": 12,
@@ -897,8 +897,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 2-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f00_f12/prob_gt_2yr12h_ari_percent.png",
-              "size_bytes": 421921
+              "path": "products/maps/2026080812/12h/f00_f12/prob_gt_2yr12h_ari_percent.png",
+              "size_bytes": 421266
             },
             {
               "duration_hours": 12,
@@ -909,8 +909,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 5-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f00_f12/prob_gt_5yr12h_ari_percent.png",
-              "size_bytes": 417904
+              "path": "products/maps/2026080812/12h/f00_f12/prob_gt_5yr12h_ari_percent.png",
+              "size_bytes": 417135
             }
           ]
         },
@@ -929,8 +929,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Expected precipitation",
               "units": "mm",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f06_f18/expected_precip_mm.png",
-              "size_bytes": 434181
+              "path": "products/maps/2026080812/12h/f06_f18/expected_precip_mm.png",
+              "size_bytes": 429924
             },
             {
               "duration_hours": 12,
@@ -941,8 +941,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.5 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f06_f18/prob_gt_0p5inch_percent.png",
-              "size_bytes": 467466
+              "path": "products/maps/2026080812/12h/f06_f18/prob_gt_0p5inch_percent.png",
+              "size_bytes": 460350
             },
             {
               "duration_hours": 12,
@@ -953,8 +953,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 1 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f06_f18/prob_gt_1inch_percent.png",
-              "size_bytes": 451237
+              "path": "products/maps/2026080812/12h/f06_f18/prob_gt_1inch_percent.png",
+              "size_bytes": 446445
             },
             {
               "duration_hours": 12,
@@ -965,8 +965,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 2 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f06_f18/prob_gt_2inch_percent.png",
-              "size_bytes": 429407
+              "path": "products/maps/2026080812/12h/f06_f18/prob_gt_2inch_percent.png",
+              "size_bytes": 426202
             },
             {
               "duration_hours": 12,
@@ -977,8 +977,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 3 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f06_f18/prob_gt_3inch_percent.png",
-              "size_bytes": 420071
+              "path": "products/maps/2026080812/12h/f06_f18/prob_gt_3inch_percent.png",
+              "size_bytes": 418884
             },
             {
               "duration_hours": 12,
@@ -989,8 +989,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 2-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f06_f18/prob_gt_2yr12h_ari_percent.png",
-              "size_bytes": 424947
+              "path": "products/maps/2026080812/12h/f06_f18/prob_gt_2yr12h_ari_percent.png",
+              "size_bytes": 424882
             },
             {
               "duration_hours": 12,
@@ -1001,8 +1001,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 5-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f06_f18/prob_gt_5yr12h_ari_percent.png",
-              "size_bytes": 420814
+              "path": "products/maps/2026080812/12h/f06_f18/prob_gt_5yr12h_ari_percent.png",
+              "size_bytes": 418546
             }
           ]
         },
@@ -1021,8 +1021,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Expected precipitation",
               "units": "mm",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f12_f24/expected_precip_mm.png",
-              "size_bytes": 428610
+              "path": "products/maps/2026080812/12h/f12_f24/expected_precip_mm.png",
+              "size_bytes": 423745
             },
             {
               "duration_hours": 12,
@@ -1033,8 +1033,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.5 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f12_f24/prob_gt_0p5inch_percent.png",
-              "size_bytes": 460937
+              "path": "products/maps/2026080812/12h/f12_f24/prob_gt_0p5inch_percent.png",
+              "size_bytes": 457209
             },
             {
               "duration_hours": 12,
@@ -1045,8 +1045,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 1 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f12_f24/prob_gt_1inch_percent.png",
-              "size_bytes": 443379
+              "path": "products/maps/2026080812/12h/f12_f24/prob_gt_1inch_percent.png",
+              "size_bytes": 434836
             },
             {
               "duration_hours": 12,
@@ -1057,8 +1057,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 2 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f12_f24/prob_gt_2inch_percent.png",
-              "size_bytes": 425435
+              "path": "products/maps/2026080812/12h/f12_f24/prob_gt_2inch_percent.png",
+              "size_bytes": 420134
             },
             {
               "duration_hours": 12,
@@ -1069,8 +1069,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 3 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f12_f24/prob_gt_3inch_percent.png",
-              "size_bytes": 419042
+              "path": "products/maps/2026080812/12h/f12_f24/prob_gt_3inch_percent.png",
+              "size_bytes": 416575
             },
             {
               "duration_hours": 12,
@@ -1081,8 +1081,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 2-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f12_f24/prob_gt_2yr12h_ari_percent.png",
-              "size_bytes": 421147
+              "path": "products/maps/2026080812/12h/f12_f24/prob_gt_2yr12h_ari_percent.png",
+              "size_bytes": 419881
             },
             {
               "duration_hours": 12,
@@ -1093,8 +1093,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 5-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f12_f24/prob_gt_5yr12h_ari_percent.png",
-              "size_bytes": 418831
+              "path": "products/maps/2026080812/12h/f12_f24/prob_gt_5yr12h_ari_percent.png",
+              "size_bytes": 416449
             }
           ]
         },
@@ -1113,8 +1113,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Expected precipitation",
               "units": "mm",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f18_f30/expected_precip_mm.png",
-              "size_bytes": 424681
+              "path": "products/maps/2026080812/12h/f18_f30/expected_precip_mm.png",
+              "size_bytes": 418513
             },
             {
               "duration_hours": 12,
@@ -1125,8 +1125,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.5 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f18_f30/prob_gt_0p5inch_percent.png",
-              "size_bytes": 449934
+              "path": "products/maps/2026080812/12h/f18_f30/prob_gt_0p5inch_percent.png",
+              "size_bytes": 442745
             },
             {
               "duration_hours": 12,
@@ -1137,8 +1137,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 1 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f18_f30/prob_gt_1inch_percent.png",
-              "size_bytes": 438360
+              "path": "products/maps/2026080812/12h/f18_f30/prob_gt_1inch_percent.png",
+              "size_bytes": 430617
             },
             {
               "duration_hours": 12,
@@ -1149,8 +1149,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 2 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f18_f30/prob_gt_2inch_percent.png",
-              "size_bytes": 424411
+              "path": "products/maps/2026080812/12h/f18_f30/prob_gt_2inch_percent.png",
+              "size_bytes": 419316
             },
             {
               "duration_hours": 12,
@@ -1161,8 +1161,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 3 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f18_f30/prob_gt_3inch_percent.png",
-              "size_bytes": 418235
+              "path": "products/maps/2026080812/12h/f18_f30/prob_gt_3inch_percent.png",
+              "size_bytes": 416704
             },
             {
               "duration_hours": 12,
@@ -1173,8 +1173,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 2-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f18_f30/prob_gt_2yr12h_ari_percent.png",
-              "size_bytes": 420220
+              "path": "products/maps/2026080812/12h/f18_f30/prob_gt_2yr12h_ari_percent.png",
+              "size_bytes": 419549
             },
             {
               "duration_hours": 12,
@@ -1185,8 +1185,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 5-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f18_f30/prob_gt_5yr12h_ari_percent.png",
-              "size_bytes": 418347
+              "path": "products/maps/2026080812/12h/f18_f30/prob_gt_5yr12h_ari_percent.png",
+              "size_bytes": 417420
             }
           ]
         },
@@ -1205,8 +1205,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Expected precipitation",
               "units": "mm",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f24_f36/expected_precip_mm.png",
-              "size_bytes": 429796
+              "path": "products/maps/2026080812/12h/f24_f36/expected_precip_mm.png",
+              "size_bytes": 428732
             },
             {
               "duration_hours": 12,
@@ -1217,8 +1217,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.5 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f24_f36/prob_gt_0p5inch_percent.png",
-              "size_bytes": 457555
+              "path": "products/maps/2026080812/12h/f24_f36/prob_gt_0p5inch_percent.png",
+              "size_bytes": 457982
             },
             {
               "duration_hours": 12,
@@ -1229,8 +1229,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 1 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f24_f36/prob_gt_1inch_percent.png",
-              "size_bytes": 446052
+              "path": "products/maps/2026080812/12h/f24_f36/prob_gt_1inch_percent.png",
+              "size_bytes": 445055
             },
             {
               "duration_hours": 12,
@@ -1241,8 +1241,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 2 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f24_f36/prob_gt_2inch_percent.png",
-              "size_bytes": 426044
+              "path": "products/maps/2026080812/12h/f24_f36/prob_gt_2inch_percent.png",
+              "size_bytes": 423771
             },
             {
               "duration_hours": 12,
@@ -1253,8 +1253,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 3 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f24_f36/prob_gt_3inch_percent.png",
-              "size_bytes": 418845
+              "path": "products/maps/2026080812/12h/f24_f36/prob_gt_3inch_percent.png",
+              "size_bytes": 418134
             },
             {
               "duration_hours": 12,
@@ -1265,8 +1265,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 2-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f24_f36/prob_gt_2yr12h_ari_percent.png",
-              "size_bytes": 423664
+              "path": "products/maps/2026080812/12h/f24_f36/prob_gt_2yr12h_ari_percent.png",
+              "size_bytes": 424877
             },
             {
               "duration_hours": 12,
@@ -1277,8 +1277,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 5-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f24_f36/prob_gt_5yr12h_ari_percent.png",
-              "size_bytes": 419660
+              "path": "products/maps/2026080812/12h/f24_f36/prob_gt_5yr12h_ari_percent.png",
+              "size_bytes": 419082
             }
           ]
         },
@@ -1297,8 +1297,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Expected precipitation",
               "units": "mm",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f30_f42/expected_precip_mm.png",
-              "size_bytes": 428278
+              "path": "products/maps/2026080812/12h/f30_f42/expected_precip_mm.png",
+              "size_bytes": 429497
             },
             {
               "duration_hours": 12,
@@ -1309,8 +1309,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.5 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f30_f42/prob_gt_0p5inch_percent.png",
-              "size_bytes": 456715
+              "path": "products/maps/2026080812/12h/f30_f42/prob_gt_0p5inch_percent.png",
+              "size_bytes": 461529
             },
             {
               "duration_hours": 12,
@@ -1321,8 +1321,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 1 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f30_f42/prob_gt_1inch_percent.png",
-              "size_bytes": 445668
+              "path": "products/maps/2026080812/12h/f30_f42/prob_gt_1inch_percent.png",
+              "size_bytes": 442850
             },
             {
               "duration_hours": 12,
@@ -1333,8 +1333,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 2 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f30_f42/prob_gt_2inch_percent.png",
-              "size_bytes": 424996
+              "path": "products/maps/2026080812/12h/f30_f42/prob_gt_2inch_percent.png",
+              "size_bytes": 425419
             },
             {
               "duration_hours": 12,
@@ -1345,8 +1345,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 3 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f30_f42/prob_gt_3inch_percent.png",
-              "size_bytes": 418623
+              "path": "products/maps/2026080812/12h/f30_f42/prob_gt_3inch_percent.png",
+              "size_bytes": 418467
             },
             {
               "duration_hours": 12,
@@ -1357,8 +1357,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 2-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f30_f42/prob_gt_2yr12h_ari_percent.png",
-              "size_bytes": 425348
+              "path": "products/maps/2026080812/12h/f30_f42/prob_gt_2yr12h_ari_percent.png",
+              "size_bytes": 426132
             },
             {
               "duration_hours": 12,
@@ -1369,8 +1369,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 5-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f30_f42/prob_gt_5yr12h_ari_percent.png",
-              "size_bytes": 421450
+              "path": "products/maps/2026080812/12h/f30_f42/prob_gt_5yr12h_ari_percent.png",
+              "size_bytes": 421424
             }
           ]
         },
@@ -1389,8 +1389,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Expected precipitation",
               "units": "mm",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f36_f48/expected_precip_mm.png",
-              "size_bytes": 424842
+              "path": "products/maps/2026080812/12h/f36_f48/expected_precip_mm.png",
+              "size_bytes": 422137
             },
             {
               "duration_hours": 12,
@@ -1401,8 +1401,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.5 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f36_f48/prob_gt_0p5inch_percent.png",
-              "size_bytes": 455163
+              "path": "products/maps/2026080812/12h/f36_f48/prob_gt_0p5inch_percent.png",
+              "size_bytes": 456685
             },
             {
               "duration_hours": 12,
@@ -1413,8 +1413,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 1 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f36_f48/prob_gt_1inch_percent.png",
-              "size_bytes": 440376
+              "path": "products/maps/2026080812/12h/f36_f48/prob_gt_1inch_percent.png",
+              "size_bytes": 438555
             },
             {
               "duration_hours": 12,
@@ -1425,8 +1425,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 2 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f36_f48/prob_gt_2inch_percent.png",
-              "size_bytes": 423234
+              "path": "products/maps/2026080812/12h/f36_f48/prob_gt_2inch_percent.png",
+              "size_bytes": 421977
             },
             {
               "duration_hours": 12,
@@ -1437,8 +1437,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 3 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f36_f48/prob_gt_3inch_percent.png",
-              "size_bytes": 417965
+              "path": "products/maps/2026080812/12h/f36_f48/prob_gt_3inch_percent.png",
+              "size_bytes": 418507
             },
             {
               "duration_hours": 12,
@@ -1449,8 +1449,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 2-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f36_f48/prob_gt_2yr12h_ari_percent.png",
-              "size_bytes": 421270
+              "path": "products/maps/2026080812/12h/f36_f48/prob_gt_2yr12h_ari_percent.png",
+              "size_bytes": 424030
             },
             {
               "duration_hours": 12,
@@ -1461,8 +1461,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 5-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/12h/f36_f48/prob_gt_5yr12h_ari_percent.png",
-              "size_bytes": 418032
+              "path": "products/maps/2026080812/12h/f36_f48/prob_gt_5yr12h_ari_percent.png",
+              "size_bytes": 421055
             }
           ]
         }
@@ -1528,8 +1528,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Expected precipitation",
               "units": "mm",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f00_f24/expected_precip_mm.png",
-              "size_bytes": 440361
+              "path": "products/maps/2026080812/24h/f00_f24/expected_precip_mm.png",
+              "size_bytes": 434877
             },
             {
               "duration_hours": 24,
@@ -1540,8 +1540,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.5 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f00_f24/prob_gt_0p5inch_percent.png",
-              "size_bytes": 474473
+              "path": "products/maps/2026080812/24h/f00_f24/prob_gt_0p5inch_percent.png",
+              "size_bytes": 469598
             },
             {
               "duration_hours": 24,
@@ -1552,8 +1552,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 1 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f00_f24/prob_gt_1inch_percent.png",
-              "size_bytes": 458967
+              "path": "products/maps/2026080812/24h/f00_f24/prob_gt_1inch_percent.png",
+              "size_bytes": 453570
             },
             {
               "duration_hours": 24,
@@ -1564,8 +1564,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 2 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f00_f24/prob_gt_2inch_percent.png",
-              "size_bytes": 435224
+              "path": "products/maps/2026080812/24h/f00_f24/prob_gt_2inch_percent.png",
+              "size_bytes": 429494
             },
             {
               "duration_hours": 24,
@@ -1576,8 +1576,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 3 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f00_f24/prob_gt_3inch_percent.png",
-              "size_bytes": 422322
+              "path": "products/maps/2026080812/24h/f00_f24/prob_gt_3inch_percent.png",
+              "size_bytes": 420230
             },
             {
               "duration_hours": 24,
@@ -1588,8 +1588,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 5 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f00_f24/prob_gt_5inch_percent.png",
-              "size_bytes": 414266
+              "path": "products/maps/2026080812/24h/f00_f24/prob_gt_5inch_percent.png",
+              "size_bytes": 414204
             },
             {
               "duration_hours": 24,
@@ -1600,8 +1600,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 2-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f00_f24/prob_gt_2yr24h_ari_percent.png",
-              "size_bytes": 423492
+              "path": "products/maps/2026080812/24h/f00_f24/prob_gt_2yr24h_ari_percent.png",
+              "size_bytes": 421180
             },
             {
               "duration_hours": 24,
@@ -1612,8 +1612,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 5-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f00_f24/prob_gt_5yr24h_ari_percent.png",
-              "size_bytes": 418682
+              "path": "products/maps/2026080812/24h/f00_f24/prob_gt_5yr24h_ari_percent.png",
+              "size_bytes": 417123
             },
             {
               "duration_hours": 24,
@@ -1624,9 +1624,9 @@ window.HRRR_MAP_CATALOG = {
               "label": "WPC ERO Comparison \u2014 Day 1",
               "units": "comparison",
               "kind": "image",
-              "path": "products/ero/2026080712/24h/f00_f24/hrrr_anncsgd_wpc_ero_2026080712_24h_f00_f24_day1_conus.png",
-              "metadata_path": "products/ero/2026080712/24h/f00_f24/hrrr_anncsgd_wpc_ero_2026080712_24h_f00_f24_day1_conus.json",
-              "size_bytes": 1105851,
+              "path": "products/ero/2026080812/24h/f00_f24/hrrr_anncsgd_wpc_ero_2026080812_24h_f00_f24_day1_conus.png",
+              "metadata_path": "products/ero/2026080812/24h/f00_f24/hrrr_anncsgd_wpc_ero_2026080812_24h_f00_f24_day1_conus.json",
+              "size_bytes": 1091769,
               "ero_day": 1,
               "ero_temporal_coverage": "partial"
             }
@@ -1647,8 +1647,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Expected precipitation",
               "units": "mm",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f06_f30/expected_precip_mm.png",
-              "size_bytes": 439553
+              "path": "products/maps/2026080812/24h/f06_f30/expected_precip_mm.png",
+              "size_bytes": 436318
             },
             {
               "duration_hours": 24,
@@ -1659,8 +1659,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.5 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f06_f30/prob_gt_0p5inch_percent.png",
-              "size_bytes": 472605
+              "path": "products/maps/2026080812/24h/f06_f30/prob_gt_0p5inch_percent.png",
+              "size_bytes": 472445
             },
             {
               "duration_hours": 24,
@@ -1671,8 +1671,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 1 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f06_f30/prob_gt_1inch_percent.png",
-              "size_bytes": 457563
+              "path": "products/maps/2026080812/24h/f06_f30/prob_gt_1inch_percent.png",
+              "size_bytes": 455390
             },
             {
               "duration_hours": 24,
@@ -1683,8 +1683,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 2 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f06_f30/prob_gt_2inch_percent.png",
-              "size_bytes": 437380
+              "path": "products/maps/2026080812/24h/f06_f30/prob_gt_2inch_percent.png",
+              "size_bytes": 430647
             },
             {
               "duration_hours": 24,
@@ -1695,8 +1695,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 3 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f06_f30/prob_gt_3inch_percent.png",
-              "size_bytes": 422578
+              "path": "products/maps/2026080812/24h/f06_f30/prob_gt_3inch_percent.png",
+              "size_bytes": 420103
             },
             {
               "duration_hours": 24,
@@ -1707,8 +1707,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 5 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f06_f30/prob_gt_5inch_percent.png",
-              "size_bytes": 415105
+              "path": "products/maps/2026080812/24h/f06_f30/prob_gt_5inch_percent.png",
+              "size_bytes": 414703
             },
             {
               "duration_hours": 24,
@@ -1719,8 +1719,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 2-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f06_f30/prob_gt_2yr24h_ari_percent.png",
-              "size_bytes": 423516
+              "path": "products/maps/2026080812/24h/f06_f30/prob_gt_2yr24h_ari_percent.png",
+              "size_bytes": 422845
             },
             {
               "duration_hours": 24,
@@ -1731,8 +1731,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 5-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f06_f30/prob_gt_5yr24h_ari_percent.png",
-              "size_bytes": 420214
+              "path": "products/maps/2026080812/24h/f06_f30/prob_gt_5yr24h_ari_percent.png",
+              "size_bytes": 417679
             }
           ]
         },
@@ -1751,8 +1751,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Expected precipitation",
               "units": "mm",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f12_f36/expected_precip_mm.png",
-              "size_bytes": 439453
+              "path": "products/maps/2026080812/24h/f12_f36/expected_precip_mm.png",
+              "size_bytes": 437901
             },
             {
               "duration_hours": 24,
@@ -1763,8 +1763,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.5 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f12_f36/prob_gt_0p5inch_percent.png",
-              "size_bytes": 471979
+              "path": "products/maps/2026080812/24h/f12_f36/prob_gt_0p5inch_percent.png",
+              "size_bytes": 474808
             },
             {
               "duration_hours": 24,
@@ -1775,8 +1775,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 1 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f12_f36/prob_gt_1inch_percent.png",
-              "size_bytes": 458057
+              "path": "products/maps/2026080812/24h/f12_f36/prob_gt_1inch_percent.png",
+              "size_bytes": 455653
             },
             {
               "duration_hours": 24,
@@ -1787,8 +1787,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 2 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f12_f36/prob_gt_2inch_percent.png",
-              "size_bytes": 435170
+              "path": "products/maps/2026080812/24h/f12_f36/prob_gt_2inch_percent.png",
+              "size_bytes": 428249
             },
             {
               "duration_hours": 24,
@@ -1799,8 +1799,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 3 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f12_f36/prob_gt_3inch_percent.png",
-              "size_bytes": 422658
+              "path": "products/maps/2026080812/24h/f12_f36/prob_gt_3inch_percent.png",
+              "size_bytes": 420489
             },
             {
               "duration_hours": 24,
@@ -1811,8 +1811,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 5 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f12_f36/prob_gt_5inch_percent.png",
-              "size_bytes": 414461
+              "path": "products/maps/2026080812/24h/f12_f36/prob_gt_5inch_percent.png",
+              "size_bytes": 414188
             },
             {
               "duration_hours": 24,
@@ -1823,8 +1823,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 2-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f12_f36/prob_gt_2yr24h_ari_percent.png",
-              "size_bytes": 424713
+              "path": "products/maps/2026080812/24h/f12_f36/prob_gt_2yr24h_ari_percent.png",
+              "size_bytes": 423571
             },
             {
               "duration_hours": 24,
@@ -1835,8 +1835,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 5-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f12_f36/prob_gt_5yr24h_ari_percent.png",
-              "size_bytes": 419097
+              "path": "products/maps/2026080812/24h/f12_f36/prob_gt_5yr24h_ari_percent.png",
+              "size_bytes": 418604
             }
           ]
         },
@@ -1855,8 +1855,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Expected precipitation",
               "units": "mm",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f18_f42/expected_precip_mm.png",
-              "size_bytes": 436025
+              "path": "products/maps/2026080812/24h/f18_f42/expected_precip_mm.png",
+              "size_bytes": 436474
             },
             {
               "duration_hours": 24,
@@ -1867,8 +1867,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.5 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f18_f42/prob_gt_0p5inch_percent.png",
-              "size_bytes": 466100
+              "path": "products/maps/2026080812/24h/f18_f42/prob_gt_0p5inch_percent.png",
+              "size_bytes": 473867
             },
             {
               "duration_hours": 24,
@@ -1879,8 +1879,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 1 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f18_f42/prob_gt_1inch_percent.png",
-              "size_bytes": 452731
+              "path": "products/maps/2026080812/24h/f18_f42/prob_gt_1inch_percent.png",
+              "size_bytes": 451830
             },
             {
               "duration_hours": 24,
@@ -1891,8 +1891,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 2 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f18_f42/prob_gt_2inch_percent.png",
-              "size_bytes": 434165
+              "path": "products/maps/2026080812/24h/f18_f42/prob_gt_2inch_percent.png",
+              "size_bytes": 430056
             },
             {
               "duration_hours": 24,
@@ -1903,8 +1903,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 3 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f18_f42/prob_gt_3inch_percent.png",
-              "size_bytes": 420236
+              "path": "products/maps/2026080812/24h/f18_f42/prob_gt_3inch_percent.png",
+              "size_bytes": 420330
             },
             {
               "duration_hours": 24,
@@ -1915,8 +1915,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 5 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f18_f42/prob_gt_5inch_percent.png",
-              "size_bytes": 414726
+              "path": "products/maps/2026080812/24h/f18_f42/prob_gt_5inch_percent.png",
+              "size_bytes": 414661
             },
             {
               "duration_hours": 24,
@@ -1927,8 +1927,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 2-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f18_f42/prob_gt_2yr24h_ari_percent.png",
-              "size_bytes": 425444
+              "path": "products/maps/2026080812/24h/f18_f42/prob_gt_2yr24h_ari_percent.png",
+              "size_bytes": 425930
             },
             {
               "duration_hours": 24,
@@ -1939,8 +1939,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 5-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f18_f42/prob_gt_5yr24h_ari_percent.png",
-              "size_bytes": 418668
+              "path": "products/maps/2026080812/24h/f18_f42/prob_gt_5yr24h_ari_percent.png",
+              "size_bytes": 420262
             }
           ]
         },
@@ -1959,8 +1959,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Expected precipitation",
               "units": "mm",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f24_f48/expected_precip_mm.png",
-              "size_bytes": 435864
+              "path": "products/maps/2026080812/24h/f24_f48/expected_precip_mm.png",
+              "size_bytes": 435522
             },
             {
               "duration_hours": 24,
@@ -1971,8 +1971,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 0.5 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f24_f48/prob_gt_0p5inch_percent.png",
-              "size_bytes": 467453
+              "path": "products/maps/2026080812/24h/f24_f48/prob_gt_0p5inch_percent.png",
+              "size_bytes": 473859
             },
             {
               "duration_hours": 24,
@@ -1983,8 +1983,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 1 inch",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f24_f48/prob_gt_1inch_percent.png",
-              "size_bytes": 454539
+              "path": "products/maps/2026080812/24h/f24_f48/prob_gt_1inch_percent.png",
+              "size_bytes": 453444
             },
             {
               "duration_hours": 24,
@@ -1995,8 +1995,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 2 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f24_f48/prob_gt_2inch_percent.png",
-              "size_bytes": 434787
+              "path": "products/maps/2026080812/24h/f24_f48/prob_gt_2inch_percent.png",
+              "size_bytes": 432587
             },
             {
               "duration_hours": 24,
@@ -2007,8 +2007,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 3 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f24_f48/prob_gt_3inch_percent.png",
-              "size_bytes": 420104
+              "path": "products/maps/2026080812/24h/f24_f48/prob_gt_3inch_percent.png",
+              "size_bytes": 421608
             },
             {
               "duration_hours": 24,
@@ -2019,8 +2019,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > 5 inches",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f24_f48/prob_gt_5inch_percent.png",
-              "size_bytes": 414336
+              "path": "products/maps/2026080812/24h/f24_f48/prob_gt_5inch_percent.png",
+              "size_bytes": 414365
             },
             {
               "duration_hours": 24,
@@ -2031,8 +2031,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 2-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f24_f48/prob_gt_2yr24h_ari_percent.png",
-              "size_bytes": 425801
+              "path": "products/maps/2026080812/24h/f24_f48/prob_gt_2yr24h_ari_percent.png",
+              "size_bytes": 427278
             },
             {
               "duration_hours": 24,
@@ -2043,8 +2043,8 @@ window.HRRR_MAP_CATALOG = {
               "label": "Probability > local 5-year ARI",
               "units": "%",
               "kind": "image",
-              "path": "products/maps/2026080712/24h/f24_f48/prob_gt_5yr24h_ari_percent.png",
-              "size_bytes": 419275
+              "path": "products/maps/2026080812/24h/f24_f48/prob_gt_5yr24h_ari_percent.png",
+              "size_bytes": 422686
             },
             {
               "duration_hours": 24,
@@ -2055,9 +2055,9 @@ window.HRRR_MAP_CATALOG = {
               "label": "WPC ERO Comparison \u2014 Day 2",
               "units": "comparison",
               "kind": "image",
-              "path": "products/ero/2026080712/24h/f24_f48/hrrr_anncsgd_wpc_ero_2026080712_24h_f24_f48_day2_conus.png",
-              "metadata_path": "products/ero/2026080712/24h/f24_f48/hrrr_anncsgd_wpc_ero_2026080712_24h_f24_f48_day2_conus.json",
-              "size_bytes": 1087147,
+              "path": "products/ero/2026080812/24h/f24_f48/hrrr_anncsgd_wpc_ero_2026080812_24h_f24_f48_day2_conus.png",
+              "metadata_path": "products/ero/2026080812/24h/f24_f48/hrrr_anncsgd_wpc_ero_2026080812_24h_f24_f48_day2_conus.json",
+              "size_bytes": 1082931,
               "ero_day": 2,
               "ero_temporal_coverage": "full"
             }
@@ -2076,8 +2076,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Expected precipitation",
       "units": "mm",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f00_f06/expected_precip_mm.png",
-      "size_bytes": 415030
+      "path": "products/maps/2026080812/6h/f00_f06/expected_precip_mm.png",
+      "size_bytes": 413962
     },
     {
       "duration_hours": 6,
@@ -2088,8 +2088,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.25 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f00_f06/prob_gt_0p25inch_percent.png",
-      "size_bytes": 442627
+      "path": "products/maps/2026080812/6h/f00_f06/prob_gt_0p25inch_percent.png",
+      "size_bytes": 439438
     },
     {
       "duration_hours": 6,
@@ -2100,8 +2100,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.5 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f00_f06/prob_gt_0p5inch_percent.png",
-      "size_bytes": 434761
+      "path": "products/maps/2026080812/6h/f00_f06/prob_gt_0p5inch_percent.png",
+      "size_bytes": 432901
     },
     {
       "duration_hours": 6,
@@ -2112,8 +2112,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 1 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f00_f06/prob_gt_1inch_percent.png",
-      "size_bytes": 424511
+      "path": "products/maps/2026080812/6h/f00_f06/prob_gt_1inch_percent.png",
+      "size_bytes": 422903
     },
     {
       "duration_hours": 6,
@@ -2124,8 +2124,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 2 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f00_f06/prob_gt_2inch_percent.png",
-      "size_bytes": 417091
+      "path": "products/maps/2026080812/6h/f00_f06/prob_gt_2inch_percent.png",
+      "size_bytes": 417483
     },
     {
       "duration_hours": 6,
@@ -2136,8 +2136,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 2-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f00_f06/prob_gt_2yr6h_ari_percent.png",
-      "size_bytes": 418222
+      "path": "products/maps/2026080812/6h/f00_f06/prob_gt_2yr6h_ari_percent.png",
+      "size_bytes": 418846
     },
     {
       "duration_hours": 6,
@@ -2148,8 +2148,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 5-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f00_f06/prob_gt_5yr6h_ari_percent.png",
-      "size_bytes": 416382
+      "path": "products/maps/2026080812/6h/f00_f06/prob_gt_5yr6h_ari_percent.png",
+      "size_bytes": 416947
     },
     {
       "duration_hours": 6,
@@ -2160,8 +2160,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Expected precipitation",
       "units": "mm",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f06_f12/expected_precip_mm.png",
-      "size_bytes": 428992
+      "path": "products/maps/2026080812/6h/f06_f12/expected_precip_mm.png",
+      "size_bytes": 426459
     },
     {
       "duration_hours": 6,
@@ -2172,8 +2172,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.25 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f06_f12/prob_gt_0p25inch_percent.png",
-      "size_bytes": 473291
+      "path": "products/maps/2026080812/6h/f06_f12/prob_gt_0p25inch_percent.png",
+      "size_bytes": 465963
     },
     {
       "duration_hours": 6,
@@ -2184,8 +2184,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.5 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f06_f12/prob_gt_0p5inch_percent.png",
-      "size_bytes": 457752
+      "path": "products/maps/2026080812/6h/f06_f12/prob_gt_0p5inch_percent.png",
+      "size_bytes": 453305
     },
     {
       "duration_hours": 6,
@@ -2196,8 +2196,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 1 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f06_f12/prob_gt_1inch_percent.png",
-      "size_bytes": 443495
+      "path": "products/maps/2026080812/6h/f06_f12/prob_gt_1inch_percent.png",
+      "size_bytes": 439347
     },
     {
       "duration_hours": 6,
@@ -2208,8 +2208,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 2 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f06_f12/prob_gt_2inch_percent.png",
-      "size_bytes": 421932
+      "path": "products/maps/2026080812/6h/f06_f12/prob_gt_2inch_percent.png",
+      "size_bytes": 421978
     },
     {
       "duration_hours": 6,
@@ -2220,8 +2220,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 2-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f06_f12/prob_gt_2yr6h_ari_percent.png",
-      "size_bytes": 423080
+      "path": "products/maps/2026080812/6h/f06_f12/prob_gt_2yr6h_ari_percent.png",
+      "size_bytes": 422888
     },
     {
       "duration_hours": 6,
@@ -2232,8 +2232,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 5-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f06_f12/prob_gt_5yr6h_ari_percent.png",
-      "size_bytes": 419703
+      "path": "products/maps/2026080812/6h/f06_f12/prob_gt_5yr6h_ari_percent.png",
+      "size_bytes": 418800
     },
     {
       "duration_hours": 6,
@@ -2244,8 +2244,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Expected precipitation",
       "units": "mm",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f12_f18/expected_precip_mm.png",
-      "size_bytes": 422366
+      "path": "products/maps/2026080812/6h/f12_f18/expected_precip_mm.png",
+      "size_bytes": 416238
     },
     {
       "duration_hours": 6,
@@ -2256,8 +2256,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.25 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f12_f18/prob_gt_0p25inch_percent.png",
-      "size_bytes": 461391
+      "path": "products/maps/2026080812/6h/f12_f18/prob_gt_0p25inch_percent.png",
+      "size_bytes": 458267
     },
     {
       "duration_hours": 6,
@@ -2268,8 +2268,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.5 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f12_f18/prob_gt_0p5inch_percent.png",
-      "size_bytes": 451700
+      "path": "products/maps/2026080812/6h/f12_f18/prob_gt_0p5inch_percent.png",
+      "size_bytes": 443296
     },
     {
       "duration_hours": 6,
@@ -2280,8 +2280,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 1 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f12_f18/prob_gt_1inch_percent.png",
-      "size_bytes": 433513
+      "path": "products/maps/2026080812/6h/f12_f18/prob_gt_1inch_percent.png",
+      "size_bytes": 426504
     },
     {
       "duration_hours": 6,
@@ -2292,8 +2292,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 2 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f12_f18/prob_gt_2inch_percent.png",
-      "size_bytes": 421064
+      "path": "products/maps/2026080812/6h/f12_f18/prob_gt_2inch_percent.png",
+      "size_bytes": 417937
     },
     {
       "duration_hours": 6,
@@ -2304,8 +2304,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 2-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f12_f18/prob_gt_2yr6h_ari_percent.png",
-      "size_bytes": 421680
+      "path": "products/maps/2026080812/6h/f12_f18/prob_gt_2yr6h_ari_percent.png",
+      "size_bytes": 419572
     },
     {
       "duration_hours": 6,
@@ -2316,8 +2316,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 5-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f12_f18/prob_gt_5yr6h_ari_percent.png",
-      "size_bytes": 419217
+      "path": "products/maps/2026080812/6h/f12_f18/prob_gt_5yr6h_ari_percent.png",
+      "size_bytes": 417008
     },
     {
       "duration_hours": 6,
@@ -2328,8 +2328,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Expected precipitation",
       "units": "mm",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f18_f24/expected_precip_mm.png",
-      "size_bytes": 416758
+      "path": "products/maps/2026080812/6h/f18_f24/expected_precip_mm.png",
+      "size_bytes": 412697
     },
     {
       "duration_hours": 6,
@@ -2340,8 +2340,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.25 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f18_f24/prob_gt_0p25inch_percent.png",
-      "size_bytes": 447001
+      "path": "products/maps/2026080812/6h/f18_f24/prob_gt_0p25inch_percent.png",
+      "size_bytes": 439660
     },
     {
       "duration_hours": 6,
@@ -2352,8 +2352,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.5 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f18_f24/prob_gt_0p5inch_percent.png",
-      "size_bytes": 438001
+      "path": "products/maps/2026080812/6h/f18_f24/prob_gt_0p5inch_percent.png",
+      "size_bytes": 431627
     },
     {
       "duration_hours": 6,
@@ -2364,8 +2364,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 1 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f18_f24/prob_gt_1inch_percent.png",
-      "size_bytes": 427620
+      "path": "products/maps/2026080812/6h/f18_f24/prob_gt_1inch_percent.png",
+      "size_bytes": 420614
     },
     {
       "duration_hours": 6,
@@ -2376,8 +2376,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 2 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f18_f24/prob_gt_2inch_percent.png",
-      "size_bytes": 419910
+      "path": "products/maps/2026080812/6h/f18_f24/prob_gt_2inch_percent.png",
+      "size_bytes": 416856
     },
     {
       "duration_hours": 6,
@@ -2388,8 +2388,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 2-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f18_f24/prob_gt_2yr6h_ari_percent.png",
-      "size_bytes": 419625
+      "path": "products/maps/2026080812/6h/f18_f24/prob_gt_2yr6h_ari_percent.png",
+      "size_bytes": 419224
     },
     {
       "duration_hours": 6,
@@ -2400,8 +2400,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 5-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f18_f24/prob_gt_5yr6h_ari_percent.png",
-      "size_bytes": 417896
+      "path": "products/maps/2026080812/6h/f18_f24/prob_gt_5yr6h_ari_percent.png",
+      "size_bytes": 416899
     },
     {
       "duration_hours": 6,
@@ -2412,8 +2412,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Expected precipitation",
       "units": "mm",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f24_f30/expected_precip_mm.png",
-      "size_bytes": 419226
+      "path": "products/maps/2026080812/6h/f24_f30/expected_precip_mm.png",
+      "size_bytes": 413348
     },
     {
       "duration_hours": 6,
@@ -2424,8 +2424,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.25 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f24_f30/prob_gt_0p25inch_percent.png",
-      "size_bytes": 447238
+      "path": "products/maps/2026080812/6h/f24_f30/prob_gt_0p25inch_percent.png",
+      "size_bytes": 438828
     },
     {
       "duration_hours": 6,
@@ -2436,8 +2436,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.5 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f24_f30/prob_gt_0p5inch_percent.png",
-      "size_bytes": 440468
+      "path": "products/maps/2026080812/6h/f24_f30/prob_gt_0p5inch_percent.png",
+      "size_bytes": 432354
     },
     {
       "duration_hours": 6,
@@ -2448,8 +2448,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 1 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f24_f30/prob_gt_1inch_percent.png",
-      "size_bytes": 430578
+      "path": "products/maps/2026080812/6h/f24_f30/prob_gt_1inch_percent.png",
+      "size_bytes": 422934
     },
     {
       "duration_hours": 6,
@@ -2460,8 +2460,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 2 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f24_f30/prob_gt_2inch_percent.png",
-      "size_bytes": 419132
+      "path": "products/maps/2026080812/6h/f24_f30/prob_gt_2inch_percent.png",
+      "size_bytes": 417382
     },
     {
       "duration_hours": 6,
@@ -2472,8 +2472,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 2-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f24_f30/prob_gt_2yr6h_ari_percent.png",
-      "size_bytes": 419447
+      "path": "products/maps/2026080812/6h/f24_f30/prob_gt_2yr6h_ari_percent.png",
+      "size_bytes": 417610
     },
     {
       "duration_hours": 6,
@@ -2484,8 +2484,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 5-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f24_f30/prob_gt_5yr6h_ari_percent.png",
-      "size_bytes": 417538
+      "path": "products/maps/2026080812/6h/f24_f30/prob_gt_5yr6h_ari_percent.png",
+      "size_bytes": 416636
     },
     {
       "duration_hours": 6,
@@ -2496,8 +2496,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Expected precipitation",
       "units": "mm",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f30_f36/expected_precip_mm.png",
-      "size_bytes": 424628
+      "path": "products/maps/2026080812/6h/f30_f36/expected_precip_mm.png",
+      "size_bytes": 422359
     },
     {
       "duration_hours": 6,
@@ -2508,8 +2508,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.25 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f30_f36/prob_gt_0p25inch_percent.png",
-      "size_bytes": 460766
+      "path": "products/maps/2026080812/6h/f30_f36/prob_gt_0p25inch_percent.png",
+      "size_bytes": 464418
     },
     {
       "duration_hours": 6,
@@ -2520,8 +2520,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.5 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f30_f36/prob_gt_0p5inch_percent.png",
-      "size_bytes": 451321
+      "path": "products/maps/2026080812/6h/f30_f36/prob_gt_0p5inch_percent.png",
+      "size_bytes": 450650
     },
     {
       "duration_hours": 6,
@@ -2532,8 +2532,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 1 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f30_f36/prob_gt_1inch_percent.png",
-      "size_bytes": 438248
+      "path": "products/maps/2026080812/6h/f30_f36/prob_gt_1inch_percent.png",
+      "size_bytes": 437377
     },
     {
       "duration_hours": 6,
@@ -2544,8 +2544,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 2 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f30_f36/prob_gt_2inch_percent.png",
-      "size_bytes": 419902
+      "path": "products/maps/2026080812/6h/f30_f36/prob_gt_2inch_percent.png",
+      "size_bytes": 420112
     },
     {
       "duration_hours": 6,
@@ -2556,8 +2556,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 2-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f30_f36/prob_gt_2yr6h_ari_percent.png",
-      "size_bytes": 424033
+      "path": "products/maps/2026080812/6h/f30_f36/prob_gt_2yr6h_ari_percent.png",
+      "size_bytes": 425904
     },
     {
       "duration_hours": 6,
@@ -2568,8 +2568,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 5-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f30_f36/prob_gt_5yr6h_ari_percent.png",
-      "size_bytes": 420298
+      "path": "products/maps/2026080812/6h/f30_f36/prob_gt_5yr6h_ari_percent.png",
+      "size_bytes": 420449
     },
     {
       "duration_hours": 6,
@@ -2580,8 +2580,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Expected precipitation",
       "units": "mm",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f36_f42/expected_precip_mm.png",
-      "size_bytes": 418313
+      "path": "products/maps/2026080812/6h/f36_f42/expected_precip_mm.png",
+      "size_bytes": 416061
     },
     {
       "duration_hours": 6,
@@ -2592,8 +2592,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.25 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f36_f42/prob_gt_0p25inch_percent.png",
-      "size_bytes": 454126
+      "path": "products/maps/2026080812/6h/f36_f42/prob_gt_0p25inch_percent.png",
+      "size_bytes": 457908
     },
     {
       "duration_hours": 6,
@@ -2604,8 +2604,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.5 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f36_f42/prob_gt_0p5inch_percent.png",
-      "size_bytes": 445930
+      "path": "products/maps/2026080812/6h/f36_f42/prob_gt_0p5inch_percent.png",
+      "size_bytes": 444017
     },
     {
       "duration_hours": 6,
@@ -2616,8 +2616,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 1 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f36_f42/prob_gt_1inch_percent.png",
-      "size_bytes": 430430
+      "path": "products/maps/2026080812/6h/f36_f42/prob_gt_1inch_percent.png",
+      "size_bytes": 428674
     },
     {
       "duration_hours": 6,
@@ -2628,8 +2628,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 2 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f36_f42/prob_gt_2inch_percent.png",
-      "size_bytes": 419178
+      "path": "products/maps/2026080812/6h/f36_f42/prob_gt_2inch_percent.png",
+      "size_bytes": 418543
     },
     {
       "duration_hours": 6,
@@ -2640,8 +2640,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 2-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f36_f42/prob_gt_2yr6h_ari_percent.png",
-      "size_bytes": 422109
+      "path": "products/maps/2026080812/6h/f36_f42/prob_gt_2yr6h_ari_percent.png",
+      "size_bytes": 422351
     },
     {
       "duration_hours": 6,
@@ -2652,8 +2652,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 5-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f36_f42/prob_gt_5yr6h_ari_percent.png",
-      "size_bytes": 418263
+      "path": "products/maps/2026080812/6h/f36_f42/prob_gt_5yr6h_ari_percent.png",
+      "size_bytes": 420013
     },
     {
       "duration_hours": 6,
@@ -2664,8 +2664,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Expected precipitation",
       "units": "mm",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f42_f48/expected_precip_mm.png",
-      "size_bytes": 414346
+      "path": "products/maps/2026080812/6h/f42_f48/expected_precip_mm.png",
+      "size_bytes": 412891
     },
     {
       "duration_hours": 6,
@@ -2676,8 +2676,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.25 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f42_f48/prob_gt_0p25inch_percent.png",
-      "size_bytes": 440834
+      "path": "products/maps/2026080812/6h/f42_f48/prob_gt_0p25inch_percent.png",
+      "size_bytes": 440333
     },
     {
       "duration_hours": 6,
@@ -2688,8 +2688,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.5 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f42_f48/prob_gt_0p5inch_percent.png",
-      "size_bytes": 435591
+      "path": "products/maps/2026080812/6h/f42_f48/prob_gt_0p5inch_percent.png",
+      "size_bytes": 433274
     },
     {
       "duration_hours": 6,
@@ -2700,8 +2700,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 1 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f42_f48/prob_gt_1inch_percent.png",
-      "size_bytes": 425916
+      "path": "products/maps/2026080812/6h/f42_f48/prob_gt_1inch_percent.png",
+      "size_bytes": 424850
     },
     {
       "duration_hours": 6,
@@ -2712,8 +2712,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 2 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f42_f48/prob_gt_2inch_percent.png",
-      "size_bytes": 418703
+      "path": "products/maps/2026080812/6h/f42_f48/prob_gt_2inch_percent.png",
+      "size_bytes": 418381
     },
     {
       "duration_hours": 6,
@@ -2724,8 +2724,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 2-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f42_f48/prob_gt_2yr6h_ari_percent.png",
-      "size_bytes": 418975
+      "path": "products/maps/2026080812/6h/f42_f48/prob_gt_2yr6h_ari_percent.png",
+      "size_bytes": 421120
     },
     {
       "duration_hours": 6,
@@ -2736,8 +2736,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 5-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/6h/f42_f48/prob_gt_5yr6h_ari_percent.png",
-      "size_bytes": 417347
+      "path": "products/maps/2026080812/6h/f42_f48/prob_gt_5yr6h_ari_percent.png",
+      "size_bytes": 418974
     },
     {
       "duration_hours": 12,
@@ -2748,8 +2748,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Expected precipitation",
       "units": "mm",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f00_f12/expected_precip_mm.png",
-      "size_bytes": 431768
+      "path": "products/maps/2026080812/12h/f00_f12/expected_precip_mm.png",
+      "size_bytes": 428272
     },
     {
       "duration_hours": 12,
@@ -2760,8 +2760,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.5 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f00_f12/prob_gt_0p5inch_percent.png",
-      "size_bytes": 463969
+      "path": "products/maps/2026080812/12h/f00_f12/prob_gt_0p5inch_percent.png",
+      "size_bytes": 457251
     },
     {
       "duration_hours": 12,
@@ -2772,8 +2772,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 1 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f00_f12/prob_gt_1inch_percent.png",
-      "size_bytes": 447611
+      "path": "products/maps/2026080812/12h/f00_f12/prob_gt_1inch_percent.png",
+      "size_bytes": 443349
     },
     {
       "duration_hours": 12,
@@ -2784,8 +2784,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 2 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f00_f12/prob_gt_2inch_percent.png",
-      "size_bytes": 425080
+      "path": "products/maps/2026080812/12h/f00_f12/prob_gt_2inch_percent.png",
+      "size_bytes": 424259
     },
     {
       "duration_hours": 12,
@@ -2796,8 +2796,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 3 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f00_f12/prob_gt_3inch_percent.png",
-      "size_bytes": 418416
+      "path": "products/maps/2026080812/12h/f00_f12/prob_gt_3inch_percent.png",
+      "size_bytes": 418557
     },
     {
       "duration_hours": 12,
@@ -2808,8 +2808,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 2-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f00_f12/prob_gt_2yr12h_ari_percent.png",
-      "size_bytes": 421921
+      "path": "products/maps/2026080812/12h/f00_f12/prob_gt_2yr12h_ari_percent.png",
+      "size_bytes": 421266
     },
     {
       "duration_hours": 12,
@@ -2820,8 +2820,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 5-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f00_f12/prob_gt_5yr12h_ari_percent.png",
-      "size_bytes": 417904
+      "path": "products/maps/2026080812/12h/f00_f12/prob_gt_5yr12h_ari_percent.png",
+      "size_bytes": 417135
     },
     {
       "duration_hours": 12,
@@ -2832,8 +2832,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Expected precipitation",
       "units": "mm",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f06_f18/expected_precip_mm.png",
-      "size_bytes": 434181
+      "path": "products/maps/2026080812/12h/f06_f18/expected_precip_mm.png",
+      "size_bytes": 429924
     },
     {
       "duration_hours": 12,
@@ -2844,8 +2844,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.5 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f06_f18/prob_gt_0p5inch_percent.png",
-      "size_bytes": 467466
+      "path": "products/maps/2026080812/12h/f06_f18/prob_gt_0p5inch_percent.png",
+      "size_bytes": 460350
     },
     {
       "duration_hours": 12,
@@ -2856,8 +2856,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 1 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f06_f18/prob_gt_1inch_percent.png",
-      "size_bytes": 451237
+      "path": "products/maps/2026080812/12h/f06_f18/prob_gt_1inch_percent.png",
+      "size_bytes": 446445
     },
     {
       "duration_hours": 12,
@@ -2868,8 +2868,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 2 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f06_f18/prob_gt_2inch_percent.png",
-      "size_bytes": 429407
+      "path": "products/maps/2026080812/12h/f06_f18/prob_gt_2inch_percent.png",
+      "size_bytes": 426202
     },
     {
       "duration_hours": 12,
@@ -2880,8 +2880,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 3 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f06_f18/prob_gt_3inch_percent.png",
-      "size_bytes": 420071
+      "path": "products/maps/2026080812/12h/f06_f18/prob_gt_3inch_percent.png",
+      "size_bytes": 418884
     },
     {
       "duration_hours": 12,
@@ -2892,8 +2892,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 2-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f06_f18/prob_gt_2yr12h_ari_percent.png",
-      "size_bytes": 424947
+      "path": "products/maps/2026080812/12h/f06_f18/prob_gt_2yr12h_ari_percent.png",
+      "size_bytes": 424882
     },
     {
       "duration_hours": 12,
@@ -2904,8 +2904,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 5-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f06_f18/prob_gt_5yr12h_ari_percent.png",
-      "size_bytes": 420814
+      "path": "products/maps/2026080812/12h/f06_f18/prob_gt_5yr12h_ari_percent.png",
+      "size_bytes": 418546
     },
     {
       "duration_hours": 12,
@@ -2916,8 +2916,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Expected precipitation",
       "units": "mm",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f12_f24/expected_precip_mm.png",
-      "size_bytes": 428610
+      "path": "products/maps/2026080812/12h/f12_f24/expected_precip_mm.png",
+      "size_bytes": 423745
     },
     {
       "duration_hours": 12,
@@ -2928,8 +2928,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.5 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f12_f24/prob_gt_0p5inch_percent.png",
-      "size_bytes": 460937
+      "path": "products/maps/2026080812/12h/f12_f24/prob_gt_0p5inch_percent.png",
+      "size_bytes": 457209
     },
     {
       "duration_hours": 12,
@@ -2940,8 +2940,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 1 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f12_f24/prob_gt_1inch_percent.png",
-      "size_bytes": 443379
+      "path": "products/maps/2026080812/12h/f12_f24/prob_gt_1inch_percent.png",
+      "size_bytes": 434836
     },
     {
       "duration_hours": 12,
@@ -2952,8 +2952,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 2 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f12_f24/prob_gt_2inch_percent.png",
-      "size_bytes": 425435
+      "path": "products/maps/2026080812/12h/f12_f24/prob_gt_2inch_percent.png",
+      "size_bytes": 420134
     },
     {
       "duration_hours": 12,
@@ -2964,8 +2964,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 3 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f12_f24/prob_gt_3inch_percent.png",
-      "size_bytes": 419042
+      "path": "products/maps/2026080812/12h/f12_f24/prob_gt_3inch_percent.png",
+      "size_bytes": 416575
     },
     {
       "duration_hours": 12,
@@ -2976,8 +2976,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 2-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f12_f24/prob_gt_2yr12h_ari_percent.png",
-      "size_bytes": 421147
+      "path": "products/maps/2026080812/12h/f12_f24/prob_gt_2yr12h_ari_percent.png",
+      "size_bytes": 419881
     },
     {
       "duration_hours": 12,
@@ -2988,8 +2988,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 5-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f12_f24/prob_gt_5yr12h_ari_percent.png",
-      "size_bytes": 418831
+      "path": "products/maps/2026080812/12h/f12_f24/prob_gt_5yr12h_ari_percent.png",
+      "size_bytes": 416449
     },
     {
       "duration_hours": 12,
@@ -3000,8 +3000,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Expected precipitation",
       "units": "mm",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f18_f30/expected_precip_mm.png",
-      "size_bytes": 424681
+      "path": "products/maps/2026080812/12h/f18_f30/expected_precip_mm.png",
+      "size_bytes": 418513
     },
     {
       "duration_hours": 12,
@@ -3012,8 +3012,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.5 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f18_f30/prob_gt_0p5inch_percent.png",
-      "size_bytes": 449934
+      "path": "products/maps/2026080812/12h/f18_f30/prob_gt_0p5inch_percent.png",
+      "size_bytes": 442745
     },
     {
       "duration_hours": 12,
@@ -3024,8 +3024,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 1 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f18_f30/prob_gt_1inch_percent.png",
-      "size_bytes": 438360
+      "path": "products/maps/2026080812/12h/f18_f30/prob_gt_1inch_percent.png",
+      "size_bytes": 430617
     },
     {
       "duration_hours": 12,
@@ -3036,8 +3036,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 2 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f18_f30/prob_gt_2inch_percent.png",
-      "size_bytes": 424411
+      "path": "products/maps/2026080812/12h/f18_f30/prob_gt_2inch_percent.png",
+      "size_bytes": 419316
     },
     {
       "duration_hours": 12,
@@ -3048,8 +3048,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 3 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f18_f30/prob_gt_3inch_percent.png",
-      "size_bytes": 418235
+      "path": "products/maps/2026080812/12h/f18_f30/prob_gt_3inch_percent.png",
+      "size_bytes": 416704
     },
     {
       "duration_hours": 12,
@@ -3060,8 +3060,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 2-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f18_f30/prob_gt_2yr12h_ari_percent.png",
-      "size_bytes": 420220
+      "path": "products/maps/2026080812/12h/f18_f30/prob_gt_2yr12h_ari_percent.png",
+      "size_bytes": 419549
     },
     {
       "duration_hours": 12,
@@ -3072,8 +3072,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 5-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f18_f30/prob_gt_5yr12h_ari_percent.png",
-      "size_bytes": 418347
+      "path": "products/maps/2026080812/12h/f18_f30/prob_gt_5yr12h_ari_percent.png",
+      "size_bytes": 417420
     },
     {
       "duration_hours": 12,
@@ -3084,8 +3084,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Expected precipitation",
       "units": "mm",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f24_f36/expected_precip_mm.png",
-      "size_bytes": 429796
+      "path": "products/maps/2026080812/12h/f24_f36/expected_precip_mm.png",
+      "size_bytes": 428732
     },
     {
       "duration_hours": 12,
@@ -3096,8 +3096,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.5 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f24_f36/prob_gt_0p5inch_percent.png",
-      "size_bytes": 457555
+      "path": "products/maps/2026080812/12h/f24_f36/prob_gt_0p5inch_percent.png",
+      "size_bytes": 457982
     },
     {
       "duration_hours": 12,
@@ -3108,8 +3108,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 1 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f24_f36/prob_gt_1inch_percent.png",
-      "size_bytes": 446052
+      "path": "products/maps/2026080812/12h/f24_f36/prob_gt_1inch_percent.png",
+      "size_bytes": 445055
     },
     {
       "duration_hours": 12,
@@ -3120,8 +3120,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 2 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f24_f36/prob_gt_2inch_percent.png",
-      "size_bytes": 426044
+      "path": "products/maps/2026080812/12h/f24_f36/prob_gt_2inch_percent.png",
+      "size_bytes": 423771
     },
     {
       "duration_hours": 12,
@@ -3132,8 +3132,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 3 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f24_f36/prob_gt_3inch_percent.png",
-      "size_bytes": 418845
+      "path": "products/maps/2026080812/12h/f24_f36/prob_gt_3inch_percent.png",
+      "size_bytes": 418134
     },
     {
       "duration_hours": 12,
@@ -3144,8 +3144,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 2-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f24_f36/prob_gt_2yr12h_ari_percent.png",
-      "size_bytes": 423664
+      "path": "products/maps/2026080812/12h/f24_f36/prob_gt_2yr12h_ari_percent.png",
+      "size_bytes": 424877
     },
     {
       "duration_hours": 12,
@@ -3156,8 +3156,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 5-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f24_f36/prob_gt_5yr12h_ari_percent.png",
-      "size_bytes": 419660
+      "path": "products/maps/2026080812/12h/f24_f36/prob_gt_5yr12h_ari_percent.png",
+      "size_bytes": 419082
     },
     {
       "duration_hours": 12,
@@ -3168,8 +3168,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Expected precipitation",
       "units": "mm",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f30_f42/expected_precip_mm.png",
-      "size_bytes": 428278
+      "path": "products/maps/2026080812/12h/f30_f42/expected_precip_mm.png",
+      "size_bytes": 429497
     },
     {
       "duration_hours": 12,
@@ -3180,8 +3180,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.5 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f30_f42/prob_gt_0p5inch_percent.png",
-      "size_bytes": 456715
+      "path": "products/maps/2026080812/12h/f30_f42/prob_gt_0p5inch_percent.png",
+      "size_bytes": 461529
     },
     {
       "duration_hours": 12,
@@ -3192,8 +3192,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 1 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f30_f42/prob_gt_1inch_percent.png",
-      "size_bytes": 445668
+      "path": "products/maps/2026080812/12h/f30_f42/prob_gt_1inch_percent.png",
+      "size_bytes": 442850
     },
     {
       "duration_hours": 12,
@@ -3204,8 +3204,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 2 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f30_f42/prob_gt_2inch_percent.png",
-      "size_bytes": 424996
+      "path": "products/maps/2026080812/12h/f30_f42/prob_gt_2inch_percent.png",
+      "size_bytes": 425419
     },
     {
       "duration_hours": 12,
@@ -3216,8 +3216,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 3 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f30_f42/prob_gt_3inch_percent.png",
-      "size_bytes": 418623
+      "path": "products/maps/2026080812/12h/f30_f42/prob_gt_3inch_percent.png",
+      "size_bytes": 418467
     },
     {
       "duration_hours": 12,
@@ -3228,8 +3228,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 2-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f30_f42/prob_gt_2yr12h_ari_percent.png",
-      "size_bytes": 425348
+      "path": "products/maps/2026080812/12h/f30_f42/prob_gt_2yr12h_ari_percent.png",
+      "size_bytes": 426132
     },
     {
       "duration_hours": 12,
@@ -3240,8 +3240,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 5-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f30_f42/prob_gt_5yr12h_ari_percent.png",
-      "size_bytes": 421450
+      "path": "products/maps/2026080812/12h/f30_f42/prob_gt_5yr12h_ari_percent.png",
+      "size_bytes": 421424
     },
     {
       "duration_hours": 12,
@@ -3252,8 +3252,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Expected precipitation",
       "units": "mm",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f36_f48/expected_precip_mm.png",
-      "size_bytes": 424842
+      "path": "products/maps/2026080812/12h/f36_f48/expected_precip_mm.png",
+      "size_bytes": 422137
     },
     {
       "duration_hours": 12,
@@ -3264,8 +3264,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.5 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f36_f48/prob_gt_0p5inch_percent.png",
-      "size_bytes": 455163
+      "path": "products/maps/2026080812/12h/f36_f48/prob_gt_0p5inch_percent.png",
+      "size_bytes": 456685
     },
     {
       "duration_hours": 12,
@@ -3276,8 +3276,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 1 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f36_f48/prob_gt_1inch_percent.png",
-      "size_bytes": 440376
+      "path": "products/maps/2026080812/12h/f36_f48/prob_gt_1inch_percent.png",
+      "size_bytes": 438555
     },
     {
       "duration_hours": 12,
@@ -3288,8 +3288,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 2 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f36_f48/prob_gt_2inch_percent.png",
-      "size_bytes": 423234
+      "path": "products/maps/2026080812/12h/f36_f48/prob_gt_2inch_percent.png",
+      "size_bytes": 421977
     },
     {
       "duration_hours": 12,
@@ -3300,8 +3300,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 3 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f36_f48/prob_gt_3inch_percent.png",
-      "size_bytes": 417965
+      "path": "products/maps/2026080812/12h/f36_f48/prob_gt_3inch_percent.png",
+      "size_bytes": 418507
     },
     {
       "duration_hours": 12,
@@ -3312,8 +3312,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 2-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f36_f48/prob_gt_2yr12h_ari_percent.png",
-      "size_bytes": 421270
+      "path": "products/maps/2026080812/12h/f36_f48/prob_gt_2yr12h_ari_percent.png",
+      "size_bytes": 424030
     },
     {
       "duration_hours": 12,
@@ -3324,8 +3324,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 5-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/12h/f36_f48/prob_gt_5yr12h_ari_percent.png",
-      "size_bytes": 418032
+      "path": "products/maps/2026080812/12h/f36_f48/prob_gt_5yr12h_ari_percent.png",
+      "size_bytes": 421055
     },
     {
       "duration_hours": 24,
@@ -3336,8 +3336,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Expected precipitation",
       "units": "mm",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f00_f24/expected_precip_mm.png",
-      "size_bytes": 440361
+      "path": "products/maps/2026080812/24h/f00_f24/expected_precip_mm.png",
+      "size_bytes": 434877
     },
     {
       "duration_hours": 24,
@@ -3348,8 +3348,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.5 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f00_f24/prob_gt_0p5inch_percent.png",
-      "size_bytes": 474473
+      "path": "products/maps/2026080812/24h/f00_f24/prob_gt_0p5inch_percent.png",
+      "size_bytes": 469598
     },
     {
       "duration_hours": 24,
@@ -3360,8 +3360,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 1 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f00_f24/prob_gt_1inch_percent.png",
-      "size_bytes": 458967
+      "path": "products/maps/2026080812/24h/f00_f24/prob_gt_1inch_percent.png",
+      "size_bytes": 453570
     },
     {
       "duration_hours": 24,
@@ -3372,8 +3372,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 2 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f00_f24/prob_gt_2inch_percent.png",
-      "size_bytes": 435224
+      "path": "products/maps/2026080812/24h/f00_f24/prob_gt_2inch_percent.png",
+      "size_bytes": 429494
     },
     {
       "duration_hours": 24,
@@ -3384,8 +3384,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 3 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f00_f24/prob_gt_3inch_percent.png",
-      "size_bytes": 422322
+      "path": "products/maps/2026080812/24h/f00_f24/prob_gt_3inch_percent.png",
+      "size_bytes": 420230
     },
     {
       "duration_hours": 24,
@@ -3396,8 +3396,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 5 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f00_f24/prob_gt_5inch_percent.png",
-      "size_bytes": 414266
+      "path": "products/maps/2026080812/24h/f00_f24/prob_gt_5inch_percent.png",
+      "size_bytes": 414204
     },
     {
       "duration_hours": 24,
@@ -3408,8 +3408,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 2-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f00_f24/prob_gt_2yr24h_ari_percent.png",
-      "size_bytes": 423492
+      "path": "products/maps/2026080812/24h/f00_f24/prob_gt_2yr24h_ari_percent.png",
+      "size_bytes": 421180
     },
     {
       "duration_hours": 24,
@@ -3420,8 +3420,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 5-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f00_f24/prob_gt_5yr24h_ari_percent.png",
-      "size_bytes": 418682
+      "path": "products/maps/2026080812/24h/f00_f24/prob_gt_5yr24h_ari_percent.png",
+      "size_bytes": 417123
     },
     {
       "duration_hours": 24,
@@ -3432,8 +3432,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Expected precipitation",
       "units": "mm",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f06_f30/expected_precip_mm.png",
-      "size_bytes": 439553
+      "path": "products/maps/2026080812/24h/f06_f30/expected_precip_mm.png",
+      "size_bytes": 436318
     },
     {
       "duration_hours": 24,
@@ -3444,8 +3444,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.5 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f06_f30/prob_gt_0p5inch_percent.png",
-      "size_bytes": 472605
+      "path": "products/maps/2026080812/24h/f06_f30/prob_gt_0p5inch_percent.png",
+      "size_bytes": 472445
     },
     {
       "duration_hours": 24,
@@ -3456,8 +3456,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 1 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f06_f30/prob_gt_1inch_percent.png",
-      "size_bytes": 457563
+      "path": "products/maps/2026080812/24h/f06_f30/prob_gt_1inch_percent.png",
+      "size_bytes": 455390
     },
     {
       "duration_hours": 24,
@@ -3468,8 +3468,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 2 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f06_f30/prob_gt_2inch_percent.png",
-      "size_bytes": 437380
+      "path": "products/maps/2026080812/24h/f06_f30/prob_gt_2inch_percent.png",
+      "size_bytes": 430647
     },
     {
       "duration_hours": 24,
@@ -3480,8 +3480,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 3 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f06_f30/prob_gt_3inch_percent.png",
-      "size_bytes": 422578
+      "path": "products/maps/2026080812/24h/f06_f30/prob_gt_3inch_percent.png",
+      "size_bytes": 420103
     },
     {
       "duration_hours": 24,
@@ -3492,8 +3492,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 5 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f06_f30/prob_gt_5inch_percent.png",
-      "size_bytes": 415105
+      "path": "products/maps/2026080812/24h/f06_f30/prob_gt_5inch_percent.png",
+      "size_bytes": 414703
     },
     {
       "duration_hours": 24,
@@ -3504,8 +3504,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 2-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f06_f30/prob_gt_2yr24h_ari_percent.png",
-      "size_bytes": 423516
+      "path": "products/maps/2026080812/24h/f06_f30/prob_gt_2yr24h_ari_percent.png",
+      "size_bytes": 422845
     },
     {
       "duration_hours": 24,
@@ -3516,8 +3516,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 5-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f06_f30/prob_gt_5yr24h_ari_percent.png",
-      "size_bytes": 420214
+      "path": "products/maps/2026080812/24h/f06_f30/prob_gt_5yr24h_ari_percent.png",
+      "size_bytes": 417679
     },
     {
       "duration_hours": 24,
@@ -3528,8 +3528,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Expected precipitation",
       "units": "mm",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f12_f36/expected_precip_mm.png",
-      "size_bytes": 439453
+      "path": "products/maps/2026080812/24h/f12_f36/expected_precip_mm.png",
+      "size_bytes": 437901
     },
     {
       "duration_hours": 24,
@@ -3540,8 +3540,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.5 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f12_f36/prob_gt_0p5inch_percent.png",
-      "size_bytes": 471979
+      "path": "products/maps/2026080812/24h/f12_f36/prob_gt_0p5inch_percent.png",
+      "size_bytes": 474808
     },
     {
       "duration_hours": 24,
@@ -3552,8 +3552,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 1 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f12_f36/prob_gt_1inch_percent.png",
-      "size_bytes": 458057
+      "path": "products/maps/2026080812/24h/f12_f36/prob_gt_1inch_percent.png",
+      "size_bytes": 455653
     },
     {
       "duration_hours": 24,
@@ -3564,8 +3564,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 2 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f12_f36/prob_gt_2inch_percent.png",
-      "size_bytes": 435170
+      "path": "products/maps/2026080812/24h/f12_f36/prob_gt_2inch_percent.png",
+      "size_bytes": 428249
     },
     {
       "duration_hours": 24,
@@ -3576,8 +3576,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 3 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f12_f36/prob_gt_3inch_percent.png",
-      "size_bytes": 422658
+      "path": "products/maps/2026080812/24h/f12_f36/prob_gt_3inch_percent.png",
+      "size_bytes": 420489
     },
     {
       "duration_hours": 24,
@@ -3588,8 +3588,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 5 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f12_f36/prob_gt_5inch_percent.png",
-      "size_bytes": 414461
+      "path": "products/maps/2026080812/24h/f12_f36/prob_gt_5inch_percent.png",
+      "size_bytes": 414188
     },
     {
       "duration_hours": 24,
@@ -3600,8 +3600,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 2-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f12_f36/prob_gt_2yr24h_ari_percent.png",
-      "size_bytes": 424713
+      "path": "products/maps/2026080812/24h/f12_f36/prob_gt_2yr24h_ari_percent.png",
+      "size_bytes": 423571
     },
     {
       "duration_hours": 24,
@@ -3612,8 +3612,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 5-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f12_f36/prob_gt_5yr24h_ari_percent.png",
-      "size_bytes": 419097
+      "path": "products/maps/2026080812/24h/f12_f36/prob_gt_5yr24h_ari_percent.png",
+      "size_bytes": 418604
     },
     {
       "duration_hours": 24,
@@ -3624,8 +3624,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Expected precipitation",
       "units": "mm",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f18_f42/expected_precip_mm.png",
-      "size_bytes": 436025
+      "path": "products/maps/2026080812/24h/f18_f42/expected_precip_mm.png",
+      "size_bytes": 436474
     },
     {
       "duration_hours": 24,
@@ -3636,8 +3636,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.5 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f18_f42/prob_gt_0p5inch_percent.png",
-      "size_bytes": 466100
+      "path": "products/maps/2026080812/24h/f18_f42/prob_gt_0p5inch_percent.png",
+      "size_bytes": 473867
     },
     {
       "duration_hours": 24,
@@ -3648,8 +3648,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 1 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f18_f42/prob_gt_1inch_percent.png",
-      "size_bytes": 452731
+      "path": "products/maps/2026080812/24h/f18_f42/prob_gt_1inch_percent.png",
+      "size_bytes": 451830
     },
     {
       "duration_hours": 24,
@@ -3660,8 +3660,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 2 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f18_f42/prob_gt_2inch_percent.png",
-      "size_bytes": 434165
+      "path": "products/maps/2026080812/24h/f18_f42/prob_gt_2inch_percent.png",
+      "size_bytes": 430056
     },
     {
       "duration_hours": 24,
@@ -3672,8 +3672,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 3 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f18_f42/prob_gt_3inch_percent.png",
-      "size_bytes": 420236
+      "path": "products/maps/2026080812/24h/f18_f42/prob_gt_3inch_percent.png",
+      "size_bytes": 420330
     },
     {
       "duration_hours": 24,
@@ -3684,8 +3684,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 5 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f18_f42/prob_gt_5inch_percent.png",
-      "size_bytes": 414726
+      "path": "products/maps/2026080812/24h/f18_f42/prob_gt_5inch_percent.png",
+      "size_bytes": 414661
     },
     {
       "duration_hours": 24,
@@ -3696,8 +3696,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 2-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f18_f42/prob_gt_2yr24h_ari_percent.png",
-      "size_bytes": 425444
+      "path": "products/maps/2026080812/24h/f18_f42/prob_gt_2yr24h_ari_percent.png",
+      "size_bytes": 425930
     },
     {
       "duration_hours": 24,
@@ -3708,8 +3708,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 5-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f18_f42/prob_gt_5yr24h_ari_percent.png",
-      "size_bytes": 418668
+      "path": "products/maps/2026080812/24h/f18_f42/prob_gt_5yr24h_ari_percent.png",
+      "size_bytes": 420262
     },
     {
       "duration_hours": 24,
@@ -3720,8 +3720,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Expected precipitation",
       "units": "mm",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f24_f48/expected_precip_mm.png",
-      "size_bytes": 435864
+      "path": "products/maps/2026080812/24h/f24_f48/expected_precip_mm.png",
+      "size_bytes": 435522
     },
     {
       "duration_hours": 24,
@@ -3732,8 +3732,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 0.5 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f24_f48/prob_gt_0p5inch_percent.png",
-      "size_bytes": 467453
+      "path": "products/maps/2026080812/24h/f24_f48/prob_gt_0p5inch_percent.png",
+      "size_bytes": 473859
     },
     {
       "duration_hours": 24,
@@ -3744,8 +3744,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 1 inch",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f24_f48/prob_gt_1inch_percent.png",
-      "size_bytes": 454539
+      "path": "products/maps/2026080812/24h/f24_f48/prob_gt_1inch_percent.png",
+      "size_bytes": 453444
     },
     {
       "duration_hours": 24,
@@ -3756,8 +3756,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 2 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f24_f48/prob_gt_2inch_percent.png",
-      "size_bytes": 434787
+      "path": "products/maps/2026080812/24h/f24_f48/prob_gt_2inch_percent.png",
+      "size_bytes": 432587
     },
     {
       "duration_hours": 24,
@@ -3768,8 +3768,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 3 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f24_f48/prob_gt_3inch_percent.png",
-      "size_bytes": 420104
+      "path": "products/maps/2026080812/24h/f24_f48/prob_gt_3inch_percent.png",
+      "size_bytes": 421608
     },
     {
       "duration_hours": 24,
@@ -3780,8 +3780,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > 5 inches",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f24_f48/prob_gt_5inch_percent.png",
-      "size_bytes": 414336
+      "path": "products/maps/2026080812/24h/f24_f48/prob_gt_5inch_percent.png",
+      "size_bytes": 414365
     },
     {
       "duration_hours": 24,
@@ -3792,8 +3792,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 2-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f24_f48/prob_gt_2yr24h_ari_percent.png",
-      "size_bytes": 425801
+      "path": "products/maps/2026080812/24h/f24_f48/prob_gt_2yr24h_ari_percent.png",
+      "size_bytes": 427278
     },
     {
       "duration_hours": 24,
@@ -3804,8 +3804,8 @@ window.HRRR_MAP_CATALOG = {
       "label": "Probability > local 5-year ARI",
       "units": "%",
       "kind": "image",
-      "path": "products/maps/2026080712/24h/f24_f48/prob_gt_5yr24h_ari_percent.png",
-      "size_bytes": 419275
+      "path": "products/maps/2026080812/24h/f24_f48/prob_gt_5yr24h_ari_percent.png",
+      "size_bytes": 422686
     }
   ]
 };
