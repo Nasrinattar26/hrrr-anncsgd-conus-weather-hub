@@ -2,14 +2,14 @@
   "status": "PASS",
   "type": "GEFS/HRRR ANN-CSGD model-comparison page",
   "contract_version": 4,
-  "initialization": "2026080700",
-  "generated_utc": "2026-08-08T21:41:01Z",
+  "initialization": "2026080800",
+  "generated_utc": "2026-08-09T21:41:00Z",
   "file_count": 5,
   "files": [
     {
       "path": "index.html",
       "bytes": 17888,
-      "sha256": "5fc7c27933e07cf531e9394db0a78bab462a636b07c86694a722fba89d7a9ffb"
+      "sha256": "050bea7f143e89b127826058dc9feeebf6a1cc41d58dc44a6f22be1b87a85866"
     },
     {
       "path": "assets/model-comparison.css",
@@ -23,13 +23,13 @@
     },
     {
       "path": "data/comparison_run.json",
-      "bytes": 668389,
-      "sha256": "35afdfd4763bbeb44aaf5419bbf6f02b893a3cb2422393bf98a9db3c06a858db"
+      "bytes": 666928,
+      "sha256": "7fcf5ae355214d3c3e882bbd49978e7d428d20ad72b8f15b8ab7fb62e04dece9"
     },
     {
       "path": "data/comparison_run.js",
-      "bytes": 440285,
-      "sha256": "00019d43816c0dd5f1514d7b6545780d4725fa611c340991cfb3ad5a9d00160b"
+      "bytes": 437634,
+      "sha256": "b4eb820b8d8606ba46d2cbafdc790dd29f5c994fb9189fecc762b1e2953e18d8"
     }
   ]
 }
