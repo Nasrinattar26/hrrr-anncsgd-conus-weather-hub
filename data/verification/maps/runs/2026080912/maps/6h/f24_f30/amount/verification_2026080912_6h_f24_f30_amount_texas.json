@@ -1,0 +1,83 @@
+{
+  "status": "SUCCESS",
+  "product_family": "amount_verification",
+  "initialization": "2026080912",
+  "initialization_utc": "2026-08-09T12:00:00Z",
+  "duration_hours": 6,
+  "window": "f24_f30",
+  "lead_start_hour": 24,
+  "lead_end_hour": 30,
+  "valid_start_utc": "2026-08-10T12:00:00Z",
+  "valid_end_utc": "2026-08-10T18:00:00Z",
+  "domain": "texas",
+  "domain_label": "Texas regional view",
+  "domain_definition": "geographic_bounding_box",
+  "domain_extent": [
+    -107.5,
+    -92.5,
+    25.0,
+    37.2
+  ],
+  "common_domain_cell_count": 1930,
+  "land_cell_count": 13318,
+  "display_wet_threshold_mm": 0.1,
+  "wet_display_cell_count": 150,
+  "performance_label": "ANN-CSGD has lower domain MAE",
+  "field_statistics": {
+    "raw_hrrr_precip_mm": {
+      "count": 1930,
+      "minimum": 0.0,
+      "maximum": 68.55999755859375,
+      "mean": 0.25983937173946686
+    },
+    "expected_precip_mm": {
+      "count": 1930,
+      "minimum": 0.01618431694805622,
+      "maximum": 8.772992134094238,
+      "mean": 0.2550205046175907
+    },
+    "mrms_observation_mm": {
+      "count": 1930,
+      "minimum": 0.0,
+      "maximum": 30.799999237060547,
+      "mean": 0.18797927498817443
+    },
+    "absolute_error_improvement_mm": {
+      "count": 1930,
+      "minimum": -12.233984470367432,
+      "maximum": 59.78700542449951,
+      "mean": 0.08460809026550443
+    }
+  },
+  "summary_metrics": {
+    "raw_hrrr_mae_mm": 0.32666838856346403,
+    "ann_csgd_mae_mm": 0.2420602982979596,
+    "mae_improvement_mm": 0.08460809026550442,
+    "mae_improvement_percent": 25.90029927216758,
+    "raw_hrrr_rmse_mm": 2.8476384397499945,
+    "ann_csgd_rmse_mm": 1.2718335269777903,
+    "raw_hrrr_bias_mm": 0.07186009675129244,
+    "ann_csgd_bias_mm": 0.06704122962941624
+  },
+  "improvement_formula": "abs(raw_hrrr_mm - mrms_mm) - abs(ann_csgd_expected_mm - mrms_mm)",
+  "positive_improvement_meaning": "ANN-CSGD expected precipitation is closer to MRMS than raw HRRR",
+  "product_id": "2026080912__6h__f24_f30__amount_verification__texas",
+  "public_image_url": "data/verification/maps/runs/2026080912/maps/6h/f24_f30/amount/verification_2026080912_6h_f24_f30_amount_texas.webp",
+  "public_metadata_url": "data/verification/maps/runs/2026080912/maps/6h/f24_f30/amount/verification_2026080912_6h_f24_f30_amount_texas.json",
+  "source_png_sha256": "e4241d3d3fbebb20272dc60e9bd6f2fe03b76f6e49b63c682c820f084767c4dc",
+  "public_webp_profile": {
+    "name": "high",
+    "maximum_width": 2200,
+    "quality": 88,
+    "method": 6
+  },
+  "webp_bytes": 120164,
+  "webp_sha256": "7158dfd55653ffaa3945a7def29ffbeb49781f3b8e8fee33df74e529c71f928e",
+  "webp_width": 2200,
+  "webp_height": 1462,
+  "webp_rgb_standard_deviation": [
+    42.50011009361037,
+    42.32669808742146,
+    43.493137669997886
+  ]
+}
