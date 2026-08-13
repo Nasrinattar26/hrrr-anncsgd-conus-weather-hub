@@ -1,10 +1,16 @@
 {
   "status": "SUCCESS",
-  "latest_initialization": "2026081112",
-  "retained_run_count": 21,
+  "latest_initialization": "2026081212",
+  "retained_run_count": 22,
   "map_retention_runs": 30,
   "metric_retention_runs": 30,
   "runs": [
+    {
+      "initialization": "2026081212",
+      "product_count": 44,
+      "catalog_url": "data/verification/maps/runs/2026081212/map_catalog.json",
+      "success_marker_url": "data/verification/maps/runs/2026081212/_MAPS_SUCCESS"
+    },
     {
       "initialization": "2026081112",
       "product_count": 44,

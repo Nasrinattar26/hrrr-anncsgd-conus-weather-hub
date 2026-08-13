@@ -1,0 +1,214 @@
+{
+  "status": "SUCCESS",
+  "product_family": "threshold_verification",
+  "initialization": "2026081212",
+  "initialization_utc": "2026-08-12T12:00:00Z",
+  "duration_hours": 12,
+  "window": "f18_f30",
+  "lead_start_hour": 18,
+  "lead_end_hour": 30,
+  "valid_start_utc": "2026-08-13T06:00:00Z",
+  "valid_end_utc": "2026-08-13T18:00:00Z",
+  "domain": "conus",
+  "domain_label": "CONUS",
+  "domain_definition": "geographic_bounding_box",
+  "domain_extent": [
+    -127.0,
+    -64.0,
+    23.0,
+    52.0
+  ],
+  "common_sample_count": 13318,
+  "selected_domain_cell_count": 13318,
+  "land_cell_count": 13318,
+  "field_statistics": {
+    "probability_fraction": {
+      "count": 13318,
+      "minimum": 0.0,
+      "maximum": 0.03829687088727951,
+      "mean": 0.0005018644026054706
+    },
+    "local_brier_improvement": {
+      "count": 13318,
+      "minimum": -0.001466650319756957,
+      "maximum": 0.9999276871868702,
+      "mean": 0.00046083310996406694
+    }
+  },
+  "positive_improvement_meaning": "ANN-CSGD probability has lower local squared error than raw HRRR deterministic exceedance",
+  "threshold_key": "3inch",
+  "threshold_label": "3 inches",
+  "threshold_type": "fixed",
+  "threshold_source": "validated_metric_row",
+  "spatially_varying_threshold": false,
+  "threshold_title_text": "3 inches / 76.2 mm",
+  "threshold_field_statistics": {
+    "count": 13318,
+    "minimum": 76.19999694824219,
+    "maximum": 76.19999694824219,
+    "mean": 76.19999694824219
+  },
+  "backend_threshold_minimum_mm": 76.19999694824219,
+  "backend_threshold_maximum_mm": 76.19999694824219,
+  "probability_key": "prob_gt_3inch",
+  "probability_display_threshold": 0.001,
+  "brier_improvement_display_threshold": 0.01,
+  "event_counts": {
+    "observed_events": 6,
+    "raw_hrrr_events": 6,
+    "ann_mean_forecast_events": 0,
+    "hits": 0,
+    "misses": 6,
+    "false_alarms": 0,
+    "correct_negatives": 13312
+  },
+  "validated_metrics": {
+    "brier_skill_score": 0.024919032479444714,
+    "POD": 0.0,
+    "FAR": null,
+    "CSI": 0.0,
+    "FSS": 0.0,
+    "fractions_skill_score": {
+      "1x1": 0.0,
+      "3x3": 0.0,
+      "5x5": 0.0
+    },
+    "fss_display_neighborhood": "3x3",
+    "brier_score": 0.0004402030816562966,
+    "bs_climatology": 0.00045145284988553204
+  },
+  "raw_hrrr_metrics": {
+    "observed_events": 6,
+    "forecast_events": 6,
+    "hits": 0,
+    "misses": 6,
+    "false_alarms": 6,
+    "correct_negatives": 13306,
+    "brier_skill_score": -0.9958589071900317,
+    "POD": 0.0,
+    "FAR": 1.0,
+    "CSI": 0.0,
+    "FSS": 0.0,
+    "fractions_skill_score": {
+      "1x1": 0.0,
+      "3x3": 0.0,
+      "5x5": 0.07633587786259521
+    },
+    "fss_display_neighborhood": "3x3",
+    "brier_score": 0.0009010361916203634,
+    "bs_climatology": 0.00045145284988553204
+  },
+  "ann_csgd_metrics": {
+    "observed_events": 6,
+    "forecast_events": 0,
+    "hits": 0,
+    "misses": 6,
+    "false_alarms": 0,
+    "correct_negatives": 13312,
+    "brier_skill_score": 0.024919032479444714,
+    "POD": 0.0,
+    "FAR": null,
+    "CSI": 0.0,
+    "FSS": 0.0,
+    "fractions_skill_score": {
+      "1x1": 0.0,
+      "3x3": 0.0,
+      "5x5": 0.0
+    },
+    "fss_display_neighborhood": "3x3",
+    "brier_score": 0.0004402030816562966,
+    "bs_climatology": 0.00045145284988553204
+  },
+  "brier_comparison": {
+    "raw_hrrr_deterministic_bs": 0.0009010361916203634,
+    "ann_csgd_probability_bs": 0.0004402030816562966,
+    "mean_local_brier_improvement": 0.0004608331099640668,
+    "performance_label": "ANN-CSGD has lower Brier error"
+  },
+  "metric_contract": {
+    "probabilistic_forecast_source": "threshold_exceedance_probability",
+    "bss_reference": "historical_mrms_event_frequency_climatology",
+    "categorical_forecast_source": "mean_precipitation_mm",
+    "categorical_event_rule": "mean_precipitation_ge_threshold",
+    "observed_event_rule": "mrms_precipitation_ge_threshold",
+    "probability_cutoff_for_categorical_metrics": null,
+    "units": {
+      "mean_forecast": "mm",
+      "observation": "mm",
+      "threshold": "mm",
+      "probability": "fraction_0_to_1"
+    }
+  },
+  "categorical_probability_cutoff": null,
+  "categorical_forecast_rule": "ann_csgd_expected_precipitation_ge_threshold",
+  "local_brier_improvement_formula": "(raw_hrrr_event - observed_event)^2 - (ann_csgd_probability - observed_event)^2",
+  "visual_style": "four_panel_reference_style_v2",
+  "panel_order": [
+    "raw_hrrr_precipitation_amount",
+    "raw_hrrr_deterministic_exceedance",
+    "ann_csgd_exceedance_probability",
+    "mrms_observed_precipitation_with_exceedance_polygon"
+  ],
+  "raw_hrrr_deterministic_encoding_percent": 100.0,
+  "observed_exceedance_overlay": {
+    "enabled": true,
+    "fill_color": "#8b0000",
+    "fill_alpha": 0.12,
+    "outline_color": "#8b0000",
+    "outline_width": 1.35,
+    "polygon_source": "mrms_observation_ge_threshold"
+  },
+  "reference_style_amount_levels_mm": [
+    0.1,
+    1.0,
+    2.0,
+    5.0,
+    10.0,
+    15.0,
+    25.0,
+    40.0,
+    60.0,
+    80.0,
+    100.0,
+    125.0,
+    150.0,
+    200.0
+  ],
+  "reference_style_probability_levels_percent": [
+    0.1,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    10.0,
+    20.0,
+    30.0,
+    40.0,
+    50.0,
+    60.0,
+    70.0,
+    80.0,
+    90.0,
+    95.0,
+    100.0
+  ],
+  "product_id": "2026081212__12h__f18_f30__threshold_verification__3inch__conus",
+  "public_image_url": "data/verification/maps/runs/2026081212/maps/12h/f18_f30/thresholds/3inch/verification_2026081212_12h_f18_f30_threshold_3inch_conus.webp",
+  "public_metadata_url": "data/verification/maps/runs/2026081212/maps/12h/f18_f30/thresholds/3inch/verification_2026081212_12h_f18_f30_threshold_3inch_conus.json",
+  "source_png_sha256": "c2b7d117136591dc4d40812d010b5b4dcb5a4e9ce88569e298038e468101be02",
+  "public_webp_profile": {
+    "name": "high",
+    "maximum_width": 2200,
+    "quality": 88,
+    "method": 6
+  },
+  "webp_bytes": 247684,
+  "webp_sha256": "b5355d1507cfe618bd19fab3968f1f27a2bea8d09ab6ce5bab0a065128ccfe34",
+  "webp_width": 2200,
+  "webp_height": 1377,
+  "webp_rgb_standard_deviation": [
+    38.83628227566821,
+    34.6583190933205,
+    37.75750996796923
+  ]
+}
