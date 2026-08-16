@@ -5,10 +5,10 @@
   "retention_definition": "Latest successful forecast initializations, newest to oldest, up to the configured maximum.",
   "maximum_retained_runs": 30,
   "retained_run_count": 24,
-  "complete_run_count": 23,
-  "partial_run_count": 1,
+  "complete_run_count": 24,
+  "partial_run_count": 0,
   "latest_initialization": "2026081412",
-  "latest_valid_time": "2026-08-15T18:00:00Z",
+  "latest_valid_time": "2026-08-16T12:00:00Z",
   "metric_definitions": {
     "BSS": "Brier Skill Score relative to monthly historical MRMS event-frequency climatology.",
     "POD": "Hits divided by hits plus misses.",
@@ -19,39 +19,39 @@
   "runs": [
     {
       "initialization": "2026081412",
-      "verification_state": "PARTIAL",
-      "is_fully_verified": false,
+      "verification_state": "COMPLETE",
+      "is_fully_verified": true,
       "forecast_window_count": 20,
-      "completed_window_count": 11,
-      "pending_window_count": 9,
-      "threshold_row_count": 68,
+      "completed_window_count": 20,
+      "pending_window_count": 0,
+      "threshold_row_count": 125,
       "earliest_valid_time": "2026-08-14T18:00:00Z",
-      "latest_valid_time": "2026-08-15T18:00:00Z",
+      "latest_valid_time": "2026-08-16T12:00:00Z",
       "duration_window_counts": {
-        "6": 5,
-        "12": 4,
-        "24": 2
+        "6": 8,
+        "12": 7,
+        "24": 5
       },
       "metric_ranges": {
         "POD": {
-          "finite_count": 65,
+          "finite_count": 119,
           "minimum": 0.0,
           "maximum": 0.43434343434343436
         },
         "FAR": {
-          "finite_count": 27,
-          "minimum": 0.5277777777777778,
+          "finite_count": 43,
+          "minimum": 0.5,
           "maximum": 1.0
         },
         "CSI": {
-          "finite_count": 65,
+          "finite_count": 119,
           "minimum": 0.0,
           "maximum": 0.2857142857142857
         },
         "brier_skill_score": {
-          "finite_count": 68,
+          "finite_count": 125,
           "minimum": -0.31781703311595,
-          "maximum": 0.438709330724782
+          "maximum": 0.8875817366442154
         }
       },
       "summary_url": "runs/2026081412/verification_summary.json",
