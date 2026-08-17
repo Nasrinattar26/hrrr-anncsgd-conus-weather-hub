@@ -5,10 +5,10 @@
   "retention_definition": "Latest successful forecast initializations, newest to oldest, up to the configured maximum.",
   "maximum_retained_runs": 30,
   "retained_run_count": 25,
-  "complete_run_count": 24,
-  "partial_run_count": 1,
+  "complete_run_count": 25,
+  "partial_run_count": 0,
   "latest_initialization": "2026081512",
-  "latest_valid_time": "2026-08-16T18:00:00Z",
+  "latest_valid_time": "2026-08-17T12:00:00Z",
   "metric_definitions": {
     "BSS": "Brier Skill Score relative to monthly historical MRMS event-frequency climatology.",
     "POD": "Hits divided by hits plus misses.",
@@ -19,37 +19,37 @@
   "runs": [
     {
       "initialization": "2026081512",
-      "verification_state": "PARTIAL",
-      "is_fully_verified": false,
+      "verification_state": "COMPLETE",
+      "is_fully_verified": true,
       "forecast_window_count": 20,
-      "completed_window_count": 11,
-      "pending_window_count": 9,
-      "threshold_row_count": 68,
+      "completed_window_count": 20,
+      "pending_window_count": 0,
+      "threshold_row_count": 125,
       "earliest_valid_time": "2026-08-15T18:00:00Z",
-      "latest_valid_time": "2026-08-16T18:00:00Z",
+      "latest_valid_time": "2026-08-17T12:00:00Z",
       "duration_window_counts": {
-        "6": 5,
-        "12": 4,
-        "24": 2
+        "6": 8,
+        "12": 7,
+        "24": 5
       },
       "metric_ranges": {
         "POD": {
-          "finite_count": 59,
+          "finite_count": 109,
           "minimum": 0.0,
           "maximum": 0.4282178217821782
         },
         "FAR": {
-          "finite_count": 25,
+          "finite_count": 42,
           "minimum": 0.43478260869565216,
           "maximum": 1.0
         },
         "CSI": {
-          "finite_count": 59,
+          "finite_count": 109,
           "minimum": 0.0,
           "maximum": 0.2837465564738292
         },
         "brier_skill_score": {
-          "finite_count": 68,
+          "finite_count": 125,
           "minimum": -9.144302269062756,
           "maximum": 0.9662946760334693
         }
