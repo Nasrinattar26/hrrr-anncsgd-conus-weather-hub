@@ -1,0 +1,56 @@
+{
+  "product_family": "hrrr_anncsgd_wpc_ero_comparison",
+  "initialization": "2026081812",
+  "duration_hours": 24,
+  "window": "f00_f24",
+  "ero_day": 1,
+  "valid_start_utc": "2026-08-18T12:00:00Z",
+  "valid_end_utc": "2026-08-19T12:00:00Z",
+  "ero_issue_times": [
+    "2026-08-18 15:59:00"
+  ],
+  "ero_categories": [
+    "MARGINAL",
+    "SLIGHT"
+  ],
+  "ero_feature_count": 2,
+  "threshold_key": "1inch",
+  "threshold_mm": 25.4,
+  "comparison_scope": "qualitative_guidance_comparison",
+  "science_note": "WPC ERO categories are excessive-rainfall risk guidance and are not equivalent to ANN-CSGD precipitation probabilities.",
+  "panels": [
+    "raw_hrrr_24h_precipitation",
+    "raw_hrrr_deterministic_1inch_exceedance",
+    "ann_csgd_1inch_exceedance_probability",
+    "wpc_ero_categorical_risk"
+  ],
+  "field_statistics": {
+    "raw_hrrr_maximum_mm": 54.599998474121094,
+    "ann_csgd_expected_maximum_mm": 24.221149444580078,
+    "ann_csgd_1inch_probability_maximum_percent": 39.00861740112305
+  },
+  "source_npz": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/realtime_products/2026081812/24h/f00_f24/hrrr_2026081812_f00_f24_anncsgd_24h.npz",
+  "source_ero_geojson": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/github/hrrr-anncsgd-conus-weather-hub/products/ero/2026081812/source/Day1_normalized.geojson",
+  "png_width": 3600,
+  "png_height": 2070,
+  "png_bytes": 1050829,
+  "png_sha256": "79968cc20eb581bde425ce4d003ba3346021e9ae7460767edeb79159c4c96d67",
+  "png_rgb_standard_deviation": [
+    44.19904477818673,
+    43.96670867708863,
+    43.705474955231594
+  ],
+  "wpc_ero_source_url": "https://www.wpc.ncep.noaa.gov/exper/eromap/geojson/Day1_Latest.geojson",
+  "wpc_ero_official_geojson": "products/ero/2026081812/source/Day1_Latest.geojson",
+  "wpc_ero_valid_start_actual_utc": "2026-08-18T16:00:00Z",
+  "wpc_ero_valid_end_actual_utc": "2026-08-19T12:00:00Z",
+  "wpc_ero_temporal_coverage": "partial",
+  "wpc_ero_issue_times_actual": [
+    "2026-08-18 15:59:00"
+  ],
+  "wpc_ero_categories_actual": [
+    "MARGINAL",
+    "SLIGHT"
+  ],
+  "science_note_temporal": "The WPC Day-1 ERO may begin after the start of the HRRR f00-f24 window. Actual WPC validity is preserved in this metadata."
+}
