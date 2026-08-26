@@ -1,10 +1,16 @@
 {
   "status": "SUCCESS",
-  "latest_initialization": "2026082412",
+  "latest_initialization": "2026082512",
   "retained_run_count": 30,
   "map_retention_runs": 30,
   "metric_retention_runs": 30,
   "runs": [
+    {
+      "initialization": "2026082512",
+      "product_count": 44,
+      "catalog_url": "data/verification/maps/runs/2026082512/map_catalog.json",
+      "success_marker_url": "data/verification/maps/runs/2026082512/_MAPS_SUCCESS"
+    },
     {
       "initialization": "2026082412",
       "product_count": 44,
@@ -178,12 +184,6 @@
       "product_count": 44,
       "catalog_url": "data/verification/maps/runs/2026072312/map_catalog.json",
       "success_marker_url": "data/verification/maps/runs/2026072312/_MAPS_SUCCESS"
-    },
-    {
-      "initialization": "2026072112",
-      "product_count": 44,
-      "catalog_url": "data/verification/maps/runs/2026072112/map_catalog.json",
-      "success_marker_url": "data/verification/maps/runs/2026072112/_MAPS_SUCCESS"
     }
   ]
 }
