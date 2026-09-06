@@ -1,0 +1,214 @@
+{
+  "status": "SUCCESS",
+  "product_family": "threshold_verification",
+  "initialization": "2026090512",
+  "initialization_utc": "2026-09-05T12:00:00Z",
+  "duration_hours": 6,
+  "window": "f24_f30",
+  "lead_start_hour": 24,
+  "lead_end_hour": 30,
+  "valid_start_utc": "2026-09-06T12:00:00Z",
+  "valid_end_utc": "2026-09-06T18:00:00Z",
+  "domain": "texas",
+  "domain_label": "Texas regional view",
+  "domain_definition": "geographic_bounding_box",
+  "domain_extent": [
+    -107.5,
+    -92.5,
+    25.0,
+    37.2
+  ],
+  "common_sample_count": 13318,
+  "selected_domain_cell_count": 1930,
+  "land_cell_count": 13318,
+  "field_statistics": {
+    "probability_fraction": {
+      "count": 13318,
+      "minimum": 1.569890051289491e-13,
+      "maximum": 0.6371452808380127,
+      "mean": 0.020930124213737744
+    },
+    "local_brier_improvement": {
+      "count": 13318,
+      "minimum": -0.8321523447007175,
+      "maximum": 0.9981367340381979,
+      "mean": 0.015851235002359895
+    }
+  },
+  "positive_improvement_meaning": "ANN-CSGD probability has lower local squared error than raw HRRR deterministic exceedance",
+  "threshold_key": "0p25inch",
+  "threshold_label": "0.25 inch",
+  "threshold_type": "fixed",
+  "threshold_source": "validated_metric_row",
+  "spatially_varying_threshold": false,
+  "threshold_title_text": "0.25 inch / 6.3 mm",
+  "threshold_field_statistics": {
+    "count": 13318,
+    "minimum": 6.349999904632568,
+    "maximum": 6.349999904632568,
+    "mean": 6.349999904632568
+  },
+  "backend_threshold_minimum_mm": 6.349999904632568,
+  "backend_threshold_maximum_mm": 6.349999904632568,
+  "probability_key": "prob_gt_0p25inch",
+  "probability_display_threshold": 0.001,
+  "brier_improvement_display_threshold": 0.01,
+  "event_counts": {
+    "observed_events": 317,
+    "raw_hrrr_events": 296,
+    "ann_mean_forecast_events": 159,
+    "hits": 26,
+    "misses": 291,
+    "false_alarms": 133,
+    "correct_negatives": 12868
+  },
+  "validated_metrics": {
+    "brier_skill_score": 0.01705774867516241,
+    "POD": 0.08201892744479496,
+    "FAR": 0.8364779874213837,
+    "CSI": 0.057777777777777775,
+    "FSS": 0.16433185844514875,
+    "fractions_skill_score": {
+      "1x1": 0.10924369747899176,
+      "3x3": 0.16433185844514875,
+      "5x5": 0.22370386731313874
+    },
+    "fss_display_neighborhood": "3x3",
+    "brier_score": 0.02311858028522082,
+    "bs_climatology": 0.02351977469079281
+  },
+  "raw_hrrr_metrics": {
+    "observed_events": 317,
+    "forecast_events": 296,
+    "hits": 47,
+    "misses": 270,
+    "false_alarms": 249,
+    "correct_negatives": 12752,
+    "brier_skill_score": -0.6568957738713406,
+    "POD": 0.14826498422712933,
+    "FAR": 0.8412162162162162,
+    "CSI": 0.08303886925795052,
+    "FSS": 0.27429008165649915,
+    "fractions_skill_score": {
+      "1x1": 0.15334420880913524,
+      "3x3": 0.27429008165649915,
+      "5x5": 0.34191313974435933
+    },
+    "fss_display_neighborhood": "3x3",
+    "brier_score": 0.03896981528758072,
+    "bs_climatology": 0.02351977469079281
+  },
+  "ann_csgd_metrics": {
+    "observed_events": 317,
+    "forecast_events": 159,
+    "hits": 26,
+    "misses": 291,
+    "false_alarms": 133,
+    "correct_negatives": 12868,
+    "brier_skill_score": 0.01705774867516241,
+    "POD": 0.08201892744479496,
+    "FAR": 0.8364779874213837,
+    "CSI": 0.057777777777777775,
+    "FSS": 0.16433185844514875,
+    "fractions_skill_score": {
+      "1x1": 0.10924369747899176,
+      "3x3": 0.16433185844514875,
+      "5x5": 0.22370386731313874
+    },
+    "fss_display_neighborhood": "3x3",
+    "brier_score": 0.02311858028522082,
+    "bs_climatology": 0.02351977469079281
+  },
+  "brier_comparison": {
+    "raw_hrrr_deterministic_bs": 0.03896981528758072,
+    "ann_csgd_probability_bs": 0.02311858028522082,
+    "mean_local_brier_improvement": 0.015851235002359902,
+    "performance_label": "ANN-CSGD has lower Brier error"
+  },
+  "metric_contract": {
+    "probabilistic_forecast_source": "threshold_exceedance_probability",
+    "bss_reference": "historical_mrms_event_frequency_climatology",
+    "categorical_forecast_source": "mean_precipitation_mm",
+    "categorical_event_rule": "mean_precipitation_ge_threshold",
+    "observed_event_rule": "mrms_precipitation_ge_threshold",
+    "probability_cutoff_for_categorical_metrics": null,
+    "units": {
+      "mean_forecast": "mm",
+      "observation": "mm",
+      "threshold": "mm",
+      "probability": "fraction_0_to_1"
+    }
+  },
+  "categorical_probability_cutoff": null,
+  "categorical_forecast_rule": "ann_csgd_expected_precipitation_ge_threshold",
+  "local_brier_improvement_formula": "(raw_hrrr_event - observed_event)^2 - (ann_csgd_probability - observed_event)^2",
+  "visual_style": "four_panel_reference_style_v2",
+  "panel_order": [
+    "raw_hrrr_precipitation_amount",
+    "raw_hrrr_deterministic_exceedance",
+    "ann_csgd_exceedance_probability",
+    "mrms_observed_precipitation_with_exceedance_polygon"
+  ],
+  "raw_hrrr_deterministic_encoding_percent": 100.0,
+  "observed_exceedance_overlay": {
+    "enabled": true,
+    "fill_color": "#8b0000",
+    "fill_alpha": 0.12,
+    "outline_color": "#8b0000",
+    "outline_width": 1.35,
+    "polygon_source": "mrms_observation_ge_threshold"
+  },
+  "reference_style_amount_levels_mm": [
+    0.1,
+    1.0,
+    2.0,
+    5.0,
+    10.0,
+    15.0,
+    25.0,
+    40.0,
+    60.0,
+    80.0,
+    100.0,
+    125.0,
+    150.0,
+    200.0
+  ],
+  "reference_style_probability_levels_percent": [
+    0.1,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    10.0,
+    20.0,
+    30.0,
+    40.0,
+    50.0,
+    60.0,
+    70.0,
+    80.0,
+    90.0,
+    95.0,
+    100.0
+  ],
+  "product_id": "2026090512__6h__f24_f30__threshold_verification__0p25inch__texas",
+  "public_image_url": "data/verification/maps/runs/2026090512/maps/6h/f24_f30/thresholds/0p25inch/verification_2026090512_6h_f24_f30_threshold_0p25inch_texas.webp",
+  "public_metadata_url": "data/verification/maps/runs/2026090512/maps/6h/f24_f30/thresholds/0p25inch/verification_2026090512_6h_f24_f30_threshold_0p25inch_texas.json",
+  "source_png_sha256": "97b72f3647de63e3de1ed34ebdec8352e1c879d726596908ba6de97505661115",
+  "public_webp_profile": {
+    "name": "high",
+    "maximum_width": 2200,
+    "quality": 88,
+    "method": 6
+  },
+  "webp_bytes": 108862,
+  "webp_sha256": "4a2146063667196caa81b62f0062fb22abea2766d91f5c5c9f4dcd5becf24e5b",
+  "webp_width": 2200,
+  "webp_height": 1648,
+  "webp_rgb_standard_deviation": [
+    40.26965288694028,
+    35.80866603423183,
+    36.7566264837793
+  ]
+}
