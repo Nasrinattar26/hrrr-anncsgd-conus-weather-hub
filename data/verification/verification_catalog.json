@@ -5,10 +5,10 @@
   "retention_definition": "Latest successful forecast initializations, newest to oldest, up to the configured maximum.",
   "maximum_retained_runs": 30,
   "retained_run_count": 30,
-  "complete_run_count": 29,
-  "partial_run_count": 1,
+  "complete_run_count": 30,
+  "partial_run_count": 0,
   "latest_initialization": "2026090712",
-  "latest_valid_time": "2026-09-08T18:00:00Z",
+  "latest_valid_time": "2026-09-09T12:00:00Z",
   "metric_definitions": {
     "BSS": "Brier Skill Score relative to monthly historical MRMS event-frequency climatology.",
     "POD": "Hits divided by hits plus misses.",
@@ -19,39 +19,39 @@
   "runs": [
     {
       "initialization": "2026090712",
-      "verification_state": "PARTIAL",
-      "is_fully_verified": false,
+      "verification_state": "COMPLETE",
+      "is_fully_verified": true,
       "forecast_window_count": 20,
-      "completed_window_count": 11,
-      "pending_window_count": 9,
-      "threshold_row_count": 68,
+      "completed_window_count": 20,
+      "pending_window_count": 0,
+      "threshold_row_count": 125,
       "earliest_valid_time": "2026-09-07T18:00:00Z",
-      "latest_valid_time": "2026-09-08T18:00:00Z",
+      "latest_valid_time": "2026-09-09T12:00:00Z",
       "duration_window_counts": {
-        "6": 5,
-        "12": 4,
-        "24": 2
+        "6": 8,
+        "12": 7,
+        "24": 5
       },
       "metric_ranges": {
         "POD": {
-          "finite_count": 58,
+          "finite_count": 105,
           "minimum": 0.0,
-          "maximum": 0.4043478260869565
+          "maximum": 0.41379310344827586
         },
         "FAR": {
-          "finite_count": 25,
+          "finite_count": 36,
           "minimum": 0.1111111111111111,
           "maximum": 1.0
         },
         "CSI": {
-          "finite_count": 58,
+          "finite_count": 105,
           "minimum": 0.0,
           "maximum": 0.37424547283702214
         },
         "brier_skill_score": {
-          "finite_count": 68,
-          "minimum": -2.005527104927742,
-          "maximum": 0.9944015687583843
+          "finite_count": 125,
+          "minimum": -5.60199255688161,
+          "maximum": 0.9953272168703419
         }
       },
       "summary_url": "runs/2026090712/verification_summary.json",
