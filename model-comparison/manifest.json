@@ -1,35 +1,73 @@
 {
-  "status": "PASS",
-  "type": "GEFS/HRRR ANN-CSGD model-comparison page",
   "contract_version": 4,
-  "initialization": "2026090900",
-  "generated_utc": "2026-09-10T21:41:50Z",
-  "file_count": 5,
+  "file_count": 9,
   "files": [
     {
+      "bytes": 21845,
       "path": "index.html",
-      "bytes": 17888,
-      "sha256": "95b6395812dc936005de519bac799ab4aa92c11b3d829af4da07add457835735"
+      "sha256": "b7388e05b8151f39af6f4cc6afb6312a582c315481e02a3ed57b57dd6464b1d6"
     },
     {
-      "path": "assets/model-comparison.css",
       "bytes": 25358,
+      "path": "assets/model-comparison.css",
       "sha256": "a7b3ef66f0190834a977c59b0ff07d1c5951373ddfe28a6e0ae2e3dd8a4495dc"
     },
     {
-      "path": "assets/model-comparison.js",
       "bytes": 57328,
+      "path": "assets/model-comparison.js",
       "sha256": "417211c20f3574edabef2c6a8cfb372427e38c61655bd2da827ebd792fe1d90f"
     },
     {
-      "path": "data/comparison_run.json",
+      "bytes": 4162,
+      "path": "assets/resolution-comparison.css",
+      "sha256": "abee0a84dc51bc5a52551de6682acea0f2b51e66de3a086239d8ab0aa3209b8f"
+    },
+    {
+      "bytes": 12761,
+      "path": "assets/resolution-comparison.js",
+      "sha256": "695fc9b85e2ae21ba71fa8513e982fd1de6ad9da8274376715bdcfc723486d88"
+    },
+    {
       "bytes": 702738,
+      "path": "data/comparison_run.json",
       "sha256": "38da64fbc46fb5d52fb6f136dc828fb8a5d82fa635bf6984f044d5fefec57afe"
     },
     {
-      "path": "data/comparison_run.js",
       "bytes": 459962,
+      "path": "data/comparison_run.js",
       "sha256": "a61cb846198e6c4c5ad075b90396f59e427e6c117dc61b13e3f0c56c6387e1bf"
+    },
+    {
+      "bytes": 1433343,
+      "path": "data/resolution_comparison.json",
+      "sha256": "68a77b9594a1394315e50dd8be28f78118349dac844ab4a62042bf0184ccfa91"
+    },
+    {
+      "bytes": 1081019,
+      "path": "data/resolution_comparison.js",
+      "sha256": "9960613dd7dfef5f2ba3fdcba9bce9e6dbc4f8b343d9d159cefb3657351625d1"
     }
-  ]
+  ],
+  "generated_utc": "2026-09-10T21:41:50Z",
+  "initialization": "2026090900",
+  "resolution_comparison": {
+    "contract_version": 1,
+    "durations_hours": [
+      6,
+      12,
+      24
+    ],
+    "native_3km_exploratory": true,
+    "primary_group": "overall",
+    "resolutions": [
+      "025",
+      "0125",
+      "3km"
+    ],
+    "samples_per_resolution_duration": 53272,
+    "source_created_utc": "2026-08-05T22:31:37.989572+00:00",
+    "status": "PASS"
+  },
+  "status": "PASS",
+  "type": "GEFS/HRRR ANN-CSGD model-comparison page"
 }

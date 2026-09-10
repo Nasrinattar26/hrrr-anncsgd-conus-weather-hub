@@ -50,6 +50,7 @@
     white-space: nowrap;
   }
 </style>
+  <link rel="stylesheet" href="assets/resolution-comparison.css?v=20260805T223116Z">
 </head>
 <body>
 
@@ -110,6 +111,7 @@
       <a href="#probabilistic-title">Threshold skill</a>
       <a href="#fss-title">Spatial skill</a>
       <a href="#distribution-title">Distributions</a>
+      <a href="#resolution-title">Resolution study</a>
       <a href="#threshold-table-title">Scorecard</a>
     </nav>
     <section class="panel" aria-labelledby="amount-title">
@@ -398,6 +400,52 @@
       </div>
     </section>
 
+<!-- BEGIN ANN-CSGD RESOLUTION COMPARISON -->
+    <section class="panel" id="resolution-comparison" aria-labelledby="resolution-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow eyebrow--blue">Spatial-resolution experiment</p>
+          <h2 id="resolution-title">ANN-CSGD resolution comparison</h2>
+        </div>
+      </div>
+      <div class="resolution-scope-banner">
+        <div>
+          <strong>Frozen common-location held-out evaluation</strong>
+          <p>All systems are verified against the same 0.25° MRMS targets at 13,318 land locations and four 2025 cases, giving 53,272 point-cases per duration and resolution.</p>
+        </div>
+        <span class="resolution-scope-badge">Native 3 km is exploratory</span>
+      </div>
+      <div class="resolution-controls" aria-label="Resolution comparison controls">
+        <label>Case group<select id="resolution-group"></select></label>
+        <label>Accumulation duration<select id="resolution-duration"></select></label>
+        <label>Precipitation threshold<select id="resolution-threshold"></select></label>
+      </div>
+      <p id="resolution-selection-summary" class="resolution-selection-summary"></p>
+      <div id="resolution-methods" class="resolution-method-grid"></div>
+      <p id="resolution-interpretation" class="callout callout--neutral"></p>
+      <p id="resolution-event-warning" class="resolution-event-warning" hidden></p>
+      <div class="resolution-metric-grid">
+        <article class="chart-block"><h3>Continuous Ranked Probability Score</h3><p>Lower CRPS is better. Raw HRRR is the shared deterministic reference.</p><div id="resolution-crps-chart" class="resolution-chart"></div></article>
+        <article class="chart-block"><h3>CRPSS relative to raw HRRR</h3><p>Higher positive values indicate improvement over the shared raw-HRRR reference.</p><div id="resolution-crpss-chart" class="resolution-chart"></div></article>
+        <article class="chart-block"><h3>Brier Skill Score</h3><p>Threshold-specific skill relative to the shared 2024 validation climatology.</p><div id="resolution-bss-chart" class="resolution-chart"></div></article>
+        <article class="chart-block"><h3>ROC area under the curve</h3><p>Higher values indicate better event discrimination.</p><div id="resolution-auc-chart" class="resolution-chart"></div></article>
+      </div>
+      <article class="chart-block resolution-reliability-wrap">
+        <h3>Reliability</h3>
+        <p>Observed event frequency versus mean forecast probability in populated bins. Curves closer to the diagonal are better calibrated.</p>
+        <div id="resolution-reliability-chart" class="resolution-reliability-chart"></div>
+      </article>
+      <div class="section-heading"><div><p class="eyebrow eyebrow--blue">Exact selected values</p><h3>Resolution scorecard</h3></div></div>
+      <div class="table-shell resolution-table">
+        <table>
+          <thead><tr><th>Resolution</th><th>CRPS ↓</th><th>CRPSS ↑</th><th>BSS ↑</th><th>ROC AUC ↑</th><th>CSI ↑</th><th>POD ↑</th><th>FAR ↓</th><th>Events</th></tr></thead>
+          <tbody id="resolution-score-table"></tbody>
+        </table>
+      </div>
+      <p class="resolution-footnote"><strong>Interpretation safeguard:</strong> this is a common-location point-sampling comparison, not common-support area averaging. The native-HRRR model used a selected multi-date training design, whereas the 0.25° and 0.125° systems used full historical archives; therefore, native-grid differences cannot be attributed to spatial resolution alone.</p>
+    </section>
+    <!-- END ANN-CSGD RESOLUTION COMPARISON -->
+
     <section class="panel" aria-labelledby="contract-title">
       <div class="section-heading">
         <div>
@@ -565,5 +613,7 @@
     });
   })();
   </script>
+  <script src="data/resolution_comparison.js?v=20260805T223116Z"></script>
+  <script src="assets/resolution-comparison.js?v=20260805T223116Z"></script>
 </body>
 </html>
