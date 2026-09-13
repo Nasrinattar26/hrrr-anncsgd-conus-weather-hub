@@ -1,31 +1,99 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Storm case studies · MRMS, ANN-CSGD and GNN-CSGD</title><link rel="stylesheet" href="assets/map-gallery.css"></head>
-<body><header><nav><a href="../model-comparison/">Model comparison</a><a href="#maps">Case maps</a><a href="#interpretation">Window scores</a><a href="#all-windows">Storm summary</a></nav><p class="eyebrow">Storm case studies</p><h1>Where the forecast<br>met the storm.</h1><p class="lead">Compare MRMS rainfall with ANN-CSGD, GNN-CSGD and raw HRRR at the same locations and valid times.</p><label class="storm-choice">Storm<select id="event"></select></label><h2 id="event-title"></h2><div class="badges" id="event-badges"></div><p><a id="event-source" target="_blank" rel="noopener">NOAA event context ↗</a></p></header>
-<main><section id="pending" hidden><p class="eyebrow">Selected storm · results pending</p><h2>Edouard is selected for comparison.</h2><p id="pending-message"></p><p>Maps and numerical scores will appear after the matched forecast and observation arrays are verified.</p></section>
-<div id="scored-content"><section id="maps"><div class="section-head"><div><p class="eyebrow">Observed and forecast</p><h2>Inspect one window at a time</h2></div><p id="map-status" class="muted"></p></div>
-<div class="controls"><label>Accumulation<select id="duration"></select></label><label>Valid window · UTC<select id="window"></select></label><label>Threshold<select id="threshold"></select></label></div>
-<p id="timing" class="timing"></p><p id="support" class="muted"></p>
-<div class="tabs" role="group" aria-label="Figure type"><button data-view="amounts" aria-pressed="true">Rainfall amounts</button><button data-view="probabilities" aria-pressed="false">Exceedance probabilities</button><button data-view="brier" aria-pressed="false">Local Brier error</button><button data-view="mean_error" aria-pressed="false">Mean rainfall error</button><button data-view="reliability" aria-pressed="false">Reliability</button><button data-view="survival" aria-pressed="false">Extreme point</button></div>
-<div id="amount-choice" hidden><label>Forecast model<select id="model"></select></label></div>
-<div class="figure-intro"><h3 id="figure-title"></h3><p id="figure-caption"></p><p id="display-note" class="display-note"></p><a id="full-image" target="_blank" rel="noopener">Open full-resolution figure ↗</a><p id="no-image" hidden></p></div><div id="figure-area"></div><div id="side-by-side" class="map-pair" hidden></div></section>
-<section id="interpretation"><p class="eyebrow">What the maps show</p><h2>Check local rainfall and probability errors.</h2><p id="finding" class="lead-small"></p><div class="score-wrap"><table><thead><tr><th>Forecast</th><th>Mean rainfall<br>(mm)</th><th>CRPS ↓<br>(mm)</th><th>Brier score ↓</th><th>ROC AUC ↑</th></tr></thead><tbody id="scores"></tbody></table></div><p id="observed" class="timing"></p><p id="scoring-revision" class="scoring-revision"></p><p class="muted">A predictive mean is the expectation of a rainfall distribution. AUC measures discrimination; inspect reliability separately. Storm scores describe each selected region and window, not a pooled ranking of storms.</p><div class="download-row"><a id="csv" download="case_scores.csv">Exact scores · CSV</a><a id="json" download="case_results.json">Results and methods · JSON</a><a id="correction" download="crps_scoring_correction.csv">CRPS scoring correction · CSV</a></div></section>
-
-<section id="all-windows" aria-labelledby="all-windows-title">
-<p class="eyebrow">Both storms · all available windows</p>
-<h2 id="all-windows-title">GNN's advantage depends on the storm.</h2>
-<p>GNN-CSGD has slightly lower average CRPS for Hill Country at every duration. ANN-CSGD has lower average CRPS for Edouard at every duration. These averages include all 80 available windows, including windows outside the focus maps.</p>
-<div class="score-wrap"><table class="all-windows-table"><caption>Average CRPS in millimetres; lower is better. GNN change is relative to the event's ANN reference.</caption><thead><tr><th scope="col">Storm</th><th scope="col">Duration</th><th scope="col">Windows</th><th scope="col">ANN CRPS ↓</th><th scope="col">GNN CRPS ↓</th><th scope="col">GNN change</th></tr></thead><tbody>
-<tr><th scope='row'>Hill Country · July 2025</th><td>6 h</td><td>16</td><td>3.6194</td><td>3.5933</td><td>0.72% lower</td></tr>
-<tr><th scope='row'>Hill Country · July 2025</th><td>12 h</td><td>16</td><td>6.4612</td><td>6.3823</td><td>1.22% lower</td></tr>
-<tr><th scope='row'>Hill Country · July 2025</th><td>24 h</td><td>16</td><td>10.8960</td><td>10.7211</td><td>1.60% lower</td></tr>
-<tr><th scope='row'>Edouard · September 2026</th><td>6 h</td><td>14</td><td>1.5928</td><td>1.6216</td><td>1.81% higher</td></tr>
-<tr><th scope='row'>Edouard · September 2026</th><td>12 h</td><td>11</td><td>2.7829</td><td>2.8277</td><td>1.61% higher</td></tr>
-<tr><th scope='row'>Edouard · September 2026</th><td>24 h</td><td>7</td><td>5.4736</td><td>5.6554</td><td>3.32% higher</td></tr>
-</tbody></table></div>
-<p><strong>Threshold probabilities:</strong> for Hill Country, GNN has lower average Brier score in 8 of 13 duration–threshold combinations; ANN has lower scores in the other 5. For Edouard, ANN has lower average Brier score in all 13 combinations. GNN does not consistently improve the heavy-rainfall probabilities.</p>
-<p><strong>Comparison scope:</strong> the Hill Country reference is the controlled 0.25° ANN; the Edouard reference is the operational 0.25° ANN. The GNN uses a 0.25° graph. Hill Country's ANN and GNN training archives differ, so this comparison does not isolate architecture alone.</p>
-<p class="muted">Averages weight each available window equally within each duration. All windows within a storm use the same number of regional points. Windows overlap, and nearby points are dependent; differences here are descriptive, without significance claims. These case results do not establish a general operational winner.</p>
-<div class="download-row"><a href="downloads/all_windows_crps.csv" download>All-window CRPS · CSV</a><a href="downloads/all_windows_brier.csv" download>All-window Brier scores · CSV</a><a href="downloads/gnn_storm_review.md" download>Findings and validation · Markdown</a></div>
-</section>
-<section class="methods"><p class="eyebrow">Scope of this case</p><h2>Keep the target and forecast provenance explicit.</h2><p id="comparison-design"></p><p id="case-scope"></p><p id="case-selection"></p><p id="verification-support"></p><p>Each accumulation window is scored separately. Overlapping windows and nearby locations are dependent; this page makes no single-storm significance claims. Filled contours interpolate only for display between common 0.25° samples. Missing locations remain masked. Scores, binary exceedances and local errors use original sample values.</p><p>Model choices list only models present in that window’s scored export. A native predictor grid does not make the common 0.25° verification target a native 3-km observation grid.</p><p id="geo-note" hidden>County and parish lines and municipal centroids: <a href="https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer">U.S. Census Bureau TIGERweb</a>. Town labels are geographic context, not rain gauges.</p></section></div>
-</main><footer>MRMS observations · matched precipitation forecast windows</footer><script src="assets/map-data.js"></script><script src="assets/map-gallery.js"></script></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Storm case studies · ANN-CSGD and GNN-CSGD</title>
+  <link rel="stylesheet" href="assets/map-gallery.css?v=simple-20260913">
+</head>
+<body>
+  <a class="skip-link" href="#maps">Skip to maps</a>
+  <header class="page-header">
+    <nav aria-label="Main navigation"><a href="../">Weather hub</a><a href="../model-comparison/">Model comparison</a></nav>
+    <h1>Storm case studies</h1>
+    <p class="lead">Compare forecast rainfall and probabilities with MRMS observations.</p>
+  </header>
+  <main>
+    <section class="selection" aria-label="Choose a storm and forecast window">
+      <div class="selection-grid">
+        <label class="storm-choice">Storm<select id="event"></select></label>
+        <label>Accumulation<select id="duration"></select></label>
+        <label class="window-choice">Window · UTC<select id="window" aria-describedby="window-help"></select></label>
+      </div>
+      <p id="window-help" class="selection-note">“Maps” marks the window with detailed figures. Scores are available for every window.</p>
+    </section>
+    <section id="pending" hidden><h2>Results pending</h2><p id="pending-message"></p></section>
+    <div id="scored-content">
+      <section id="maps" aria-labelledby="maps-title">
+        <div class="section-head"><h2 id="maps-title">Maps</h2><a id="full-image" target="_blank" rel="noopener">Open map ↗</a></div>
+        <div class="map-controls">
+          <label>View<select id="view">
+            <option value="amounts">Rainfall amounts</option>
+            <option value="probabilities">Rainfall probability</option>
+            <option value="brier">Local Brier error</option>
+            <option value="mean_error">Rainfall error</option>
+            <option value="reliability">Reliability</option>
+            <option value="survival">Extreme-point probability</option>
+          </select></label>
+          <label id="model-choice">Forecast model<select id="model"></select></label>
+          <label>Rainfall threshold<select id="threshold" aria-describedby="threshold-help"></select></label>
+        </div>
+        <p id="threshold-help" class="selection-note">Threshold applies to probabilities, Brier scores and ROC AUC.</p>
+        <p id="timing" class="timing"></p>
+        <figure>
+          <div id="figure-area"></div>
+          <div id="no-image" class="empty-state" hidden><p>Scores are available for this window. Detailed maps are available for the marked window.</p><button id="show-mapped" type="button">Show mapped window</button></div>
+          <figcaption id="figure-caption"></figcaption>
+        </figure>
+      </section>
+      <section id="interpretation" aria-labelledby="scores-title">
+        <div class="section-head"><h2 id="scores-title">Window scores</h2><span class="muted">↓ Lower is better · ↑ Higher is better</span></div>
+        <p id="observed" class="observed"></p>
+        <p id="finding" class="finding" aria-live="polite"></p>
+        <div class="score-wrap" role="region" aria-label="Scores for the selected window" tabindex="0">
+          <table><thead><tr><th scope="col">Model</th><th scope="col">Mean rainfall<br>mm</th><th scope="col">CRPS ↓<br>mm</th><th scope="col">Brier score ↓</th><th scope="col">ROC AUC ↑</th></tr></thead><tbody id="scores"></tbody></table>
+        </div>
+      </section>
+      <details id="all-windows" class="foldout">
+        <summary>Compare both storms · all windows</summary>
+        <div class="foldout-content">
+          <p>GNN has lower average CRPS for Hill Country; ANN has lower average CRPS for Edouard.</p>
+          <div class="score-wrap" role="region" aria-label="All-window CRPS comparison" tabindex="0"><table>
+            <caption>Average CRPS (mm), lower is better</caption>
+            <thead><tr><th scope="col">Storm</th><th scope="col">Duration</th><th scope="col">Windows</th><th scope="col">ANN</th><th scope="col">GNN</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Hill Country</th><td>6 h</td><td>16</td><td>3.6194</td><td>3.5933</td></tr>
+              <tr><th scope="row">Hill Country</th><td>12 h</td><td>16</td><td>6.4612</td><td>6.3823</td></tr>
+              <tr><th scope="row">Hill Country</th><td>24 h</td><td>16</td><td>10.8960</td><td>10.7211</td></tr>
+              <tr><th scope="row">Edouard</th><td>6 h</td><td>14</td><td>1.5928</td><td>1.6216</td></tr>
+              <tr><th scope="row">Edouard</th><td>12 h</td><td>11</td><td>2.7829</td><td>2.8277</td></tr>
+              <tr><th scope="row">Edouard</th><td>24 h</td><td>7</td><td>5.4736</td><td>5.6554</td></tr>
+            </tbody>
+          </table></div>
+          <p>For average Brier score, GNN leads in 8 of 13 Hill Country duration–threshold comparisons. ANN leads in all 13 for Edouard.</p>
+          <p class="muted">Each window has equal weight within its duration. Windows overlap; these differences are descriptive. ANN references are the controlled 0.25° model for Hill Country and the operational 0.25° model for Edouard.</p>
+          <div class="download-row"><a href="downloads/all_windows_crps.csv" download>CRPS CSV</a><a href="downloads/all_windows_brier.csv" download>Brier CSV</a><a href="downloads/gnn_storm_review.md" download>Full review</a></div>
+        </div>
+      </details>
+      <details class="foldout" id="methods">
+        <summary>Methods, sources and downloads</summary>
+        <div class="foldout-content">
+          <ul class="method-list">
+            <li>Forecasts and MRMS use the same 0.25° verification locations and accumulation times. Contour shading interpolates only for display; scores use original samples.</li>
+            <li id="comparison-scope"></li>
+            <li>Mapped windows were selected using observations. Overlapping windows and nearby points are dependent; storm results do not establish a general model ranking.</li>
+            <li>CRPS uses the corrected zero-mass formula. Training used the earlier objective; these frozen models were scored without retraining.</li>
+          </ul>
+          <p class="muted">A threshold event means rainfall strictly exceeds the selected amount. Raw HRRR is a deterministic forecast. County lines and town labels provide geographic context.</p>
+          <div class="download-row"><a id="csv" download="case_scores.csv">Window scores CSV</a><a id="json" download="case_results.json">Results and full methods</a><a id="correction" download="crps_scoring_correction.csv">CRPS correction CSV</a></div>
+          <div class="download-row"><a id="event-source" target="_blank" rel="noopener">NOAA storm context ↗</a><a href="https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer" target="_blank" rel="noopener">Census map boundaries ↗</a></div>
+        </div>
+      </details>
+    </div>
+    <noscript><p>Enable JavaScript to view the maps. <a href="downloads/all_windows_crps.csv">Download the CRPS summary.</a></p></noscript>
+  </main>
+  <footer>MRMS · HRRR · ANN-CSGD · GNN-CSGD</footer>
+  <script src="assets/map-data.js"></script>
+  <script src="assets/map-gallery.js?v=simple-20260913"></script>
+</body>
+</html>
