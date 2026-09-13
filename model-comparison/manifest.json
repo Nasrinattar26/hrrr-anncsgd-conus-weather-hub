@@ -3,9 +3,9 @@
   "file_count": 9,
   "files": [
     {
-      "bytes": 21845,
+      "bytes": 23410,
       "path": "index.html",
-      "sha256": "fb3e94fbc00828d20cc9078dcae54fbc705cdce377f965e7cb67664bf9013f8f"
+      "sha256": "a6e6e3c2796b13e54ec9830741311dba0082f9e5e7239fcfacb13a8af4ae7d32"
     },
     {
       "bytes": 25358,
@@ -18,14 +18,14 @@
       "sha256": "417211c20f3574edabef2c6a8cfb372427e38c61655bd2da827ebd792fe1d90f"
     },
     {
-      "bytes": 4162,
+      "bytes": 6662,
       "path": "assets/resolution-comparison.css",
-      "sha256": "abee0a84dc51bc5a52551de6682acea0f2b51e66de3a086239d8ab0aa3209b8f"
+      "sha256": "c15352781a42604db68c6b411d7269c881f284a16d5b10b05f864c14cfbbee82"
     },
     {
-      "bytes": 12761,
+      "bytes": 18422,
       "path": "assets/resolution-comparison.js",
-      "sha256": "695fc9b85e2ae21ba71fa8513e982fd1de6ad9da8274376715bdcfc723486d88"
+      "sha256": "a80910ca94d5e57eff3122ae697463661c3ce8d367b44bc40cd9e30ec73b80fb"
     },
     {
       "bytes": 674922,
@@ -38,35 +38,52 @@
       "sha256": "50c6f113cb40c334d1361bee39298a04f60a5b0b779c15ee454eceef5565d851"
     },
     {
-      "bytes": 1433343,
+      "bytes": 1663506,
       "path": "data/resolution_comparison.json",
-      "sha256": "68a77b9594a1394315e50dd8be28f78118349dac844ab4a62042bf0184ccfa91"
+      "sha256": "0745600172ee1b7392f802d33ec56c958a8dae796f036483c0e8a1a37602f1d4"
     },
     {
-      "bytes": 1081019,
+      "bytes": 1281667,
       "path": "data/resolution_comparison.js",
-      "sha256": "9960613dd7dfef5f2ba3fdcba9bce9e6dbc4f8b343d9d159cefb3657351625d1"
+      "sha256": "9aea0ae12a0f9d5f74812d33e10cd2826cb1af99d1858fd611703f919fa9ae03"
     }
   ],
   "generated_utc": "2026-09-12T21:41:20Z",
   "initialization": "2026091100",
   "resolution_comparison": {
-    "contract_version": 1,
+    "bootstrap_repetitions": 10000,
+    "cache_token": "controlled-5e4ddafd0cafbbf4",
+    "case_study_subsampling": false,
+    "common_locations": 13318,
+    "comparison_type": "controlled_full_history_common_target_resolution_comparison",
+    "contract_version": 2,
     "durations_hours": [
       6,
       12,
       24
     ],
-    "native_3km_exploratory": true,
-    "primary_group": "overall",
+    "heldout_test_records": 1456,
+    "identical_target": true,
+    "identical_training_records": true,
+    "native_3km_exploratory": false,
+    "recommended_default": "025",
     "resolutions": [
       "025",
       "0125",
       "3km"
     ],
-    "samples_per_resolution_duration": 53272,
-    "source_created_utc": "2026-08-05T22:31:37.989572+00:00",
-    "status": "PASS"
+    "samples_per_resolution_duration": 19391008,
+    "source_created_utc": "2026-09-13T13:54:55.369032Z",
+    "status": "PASS",
+    "test_year": 2025,
+    "training_records": 4284,
+    "training_years": [
+      2021,
+      2022,
+      2023
+    ],
+    "validation_records": 1455,
+    "validation_year": 2024
   },
   "status": "PASS",
   "type": "GEFS/HRRR ANN-CSGD model-comparison page"
