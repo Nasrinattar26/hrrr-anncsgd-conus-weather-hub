@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "source_preview_manifest_sha256": "51c0049619b7ecf7fd26875ad45936c86e7c201adc8660fc298111a974bf5f8f",
+  "source_handoff_sha256": "6c231f7bd8c8a3e59e7d51cb60af04e5188524f6bf854e4902365c4af1e2dcff",
+  "scoring_version": "csgd_crps_zero_mass_v1",
+  "source_website_hashes_verified": 264,
+  "pngs_verified": 254,
+  "exported_windows_verified": 80,
+  "max_mean_crps_reproduction_error_mm": 1.7763568394002505e-15,
+  "max_crps_quadrature_error_mm": 2.5585933371985448e-09,
+  "summary_weighting": "equal available windows within each duration; dependent point-window samples",
+  "training_performed": false
+}
