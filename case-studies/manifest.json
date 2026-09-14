@@ -14,7 +14,7 @@
   "files": {
     "assets/map-data.js": "8149e49426e09907c1ae070a4ef237380e94d302666f2697d787449a5327da9f",
     "assets/map-gallery.css": "741ffd0e98cc1d56bdb630f99aa24a72b6d02a36a15da63c58b1e7933d6a2223",
-    "assets/map-gallery.js": "60382749497ad885986c3bf0016848994afd37f912ae61eafb6283ddbde7ef80",
+    "assets/map-gallery.js": "09010c99c0d29d30cadef39935599e7151a7517e5bc88c9c928ef3a9b3c44f6e",
     "downloads/all_windows_brier.csv": "593859887fce105aa9888bec4b12ced6e8961be049d672776400cf0616fe7655",
     "downloads/all_windows_crps.csv": "d29e0103bfb92a1d337f813106a5fa3b4639f3febc1bd838fd35f9e8ffeac753",
     "downloads/gnn_storm_review.md": "1ffce326a3b4ec7dffb07c58990338ba50928c9144d9a31487489263fd6bbceb",
@@ -279,7 +279,7 @@
     "events/hill_country_2025/figures/6h_06474_t25p4_reliability.png": "e87e0c719c5537e96f3a01090c9c0bf81ab5ee65952592be3a4e23981793c58c",
     "events/hill_country_2025/figures/6h_06474_t50p8_reliability.png": "45c9311cf9f3f5f4a3e709b4336417f43371498ed64c0ab02f41956debad3430",
     "events/hill_country_2025/figures/6h_06474_t6p35_reliability.png": "96df0979405177bc99802631e2332e311ddd705f795198cb8a3824b958abd208",
-    "index.html": "7f777e08f46b81453fb7a876adefd1e7cccdd4356ff813de5b4202b5dd5daf82"
+    "index.html": "57829b053db783aedc3a31f4ad4f4d093d600db798d7263724b067b978d72963"
   },
-  "presentation_version": "simple_20260913_v1"
+  "presentation_version": "probability_views_20260914_v1"
 }

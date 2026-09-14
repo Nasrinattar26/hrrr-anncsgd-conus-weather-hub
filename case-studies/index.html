@@ -28,8 +28,9 @@
         <div class="section-head"><h2 id="maps-title">Maps</h2><a id="full-image" target="_blank" rel="noopener">Open map ↗</a></div>
         <div class="map-controls">
           <label>View<select id="view">
+            <option value="probabilities" selected>Rainfall probability (%)</option>
             <option value="amounts">Rainfall amounts</option>
-            <option value="probabilities">Rainfall probability</option>
+            <option value="raw_exceedance">Raw HRRR · yes/no exceedance</option>
             <option value="brier">Local Brier error</option>
             <option value="mean_error">Rainfall error</option>
             <option value="reliability">Reliability</option>
@@ -38,7 +39,7 @@
           <label id="model-choice">Forecast model<select id="model"></select></label>
           <label>Rainfall threshold<select id="threshold" aria-describedby="threshold-help"></select></label>
         </div>
-        <p id="threshold-help" class="selection-note">Threshold applies to probabilities, Brier scores and ROC AUC.</p>
+        <p id="threshold-help" class="selection-note">Colors show ANN/GNN probabilities (%); the outline marks MRMS exceedances.</p>
         <p id="timing" class="timing"></p>
         <figure>
           <div id="figure-area"></div>
@@ -94,6 +95,6 @@
   </main>
   <footer>MRMS · HRRR · ANN-CSGD · GNN-CSGD</footer>
   <script src="assets/map-data.js"></script>
-  <script src="assets/map-gallery.js?v=simple-20260913"></script>
+  <script src="assets/map-gallery.js?v=probability-20260914"></script>
 </body>
 </html>

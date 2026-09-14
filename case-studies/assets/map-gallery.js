@@ -23,6 +23,8 @@
   function option(value, text) {
     const o = document.createElement('option'); o.value = value; o.textContent = text; return o;
   }
+  const preferredModel = r => r.models.find(m => m.id === '025' || m.id === 'ann_operational')?.id || r.models[0].id;
+  let preferredView = 'probabilities';
   function changeDuration() {
     rows = event.records.filter(r => r.duration_hours === Number($('duration').value));
     $('window').replaceChildren(...rows.map((r, i) => option(i,
@@ -34,7 +36,7 @@
     const r = current(), oldModel = $('model').value;
     $('model').replaceChildren(...r.models.map(m => option(m.id, label(m))), option('raw_hrrr', 'Raw HRRR'));
     $('model').value = r.models.some(m => m.id === oldModel) || oldModel === 'raw_hrrr' ? oldModel :
-      (r.models.some(m => m.id === 'gnn_csgd') ? 'gnn_csgd' : r.models[0].id);
+      preferredModel(r);
     $('threshold').replaceChildren(...r.thresholds.map((t, i) => option(i, thresholdLabel(t.threshold_mm))));
     $('threshold').value = String(Math.max(0, r.thresholds.findIndex(t => t.threshold_mm === selectedThreshold)));
     render();
@@ -44,19 +46,29 @@
     if (!r || !t) return;
     selectedThreshold = t.threshold_mm;
     const choices = { ...r.figures, ...t.figures };
+    choices.raw_exceedance = t.figures.probability_panels?.raw_hrrr;
     for (const o of $('view').options) o.disabled = !choices[o.value];
-    if (!choices[$('view').value]) $('view').value = 'amounts';
-    const view = $('view').value || 'amounts';
+    const availableViews = Array.from($('view').options).filter(o => !o.disabled).map(o => o.value);
+    const view = choices[preferredView] ? preferredView : (availableViews[0] || preferredView);
+    $('view').value = view;
     $('view').disabled = !Object.values(choices).some(v => typeof v === 'string' && v);
     const panels = view === 'amounts' ? r.figures.amount_comparisons :
       (view === 'probabilities' ? t.figures.probability_panels : null);
-    const model = $('model').value;
+    // A single raw forecast has no calibrated percentage probability field.
+    // Keep its binary map in a separate view and in the score table.
+    const oldModel = $('model').value;
+    const modelOptions = r.models.map(m => option(m.id, label(m)));
+    if (view !== 'probabilities') modelOptions.push(option('raw_hrrr', 'Raw HRRR'));
+    $('model').replaceChildren(...modelOptions);
+    $('model').value = r.models.some(m => m.id === oldModel) || (view !== 'probabilities' && oldModel === 'raw_hrrr') ? oldModel : preferredModel(r);
+    const model = view === 'raw_exceedance' ? 'raw_hrrr' : $('model').value;
     const file = panels?.[model] || choices[view];
     $('model-choice').hidden = !panels;
     $('timing').textContent = `Initialized ${date.format(new Date(r.init_utc))}, ${clock(r.init_utc)} UTC · Forecast hours ${r.lead_to_window_start_hours}–${Number(r.lead_to_window_start_hours) + r.duration_hours}`;
     const captions = {
       amounts: 'MRMS and forecast rainfall share one scale in mm. Shading interpolates between common 0.25° samples.',
-      probabilities: `${model === 'raw_hrrr' ? 'Raw HRRR exceedance' : 'Probability of rainfall'} > ${inches(t.threshold_mm)} in (${number.format(t.threshold_mm)} mm). Black outline: MRMS exceedance.`,
+      probabilities: `Probability of rainfall > ${inches(t.threshold_mm)} in (${number.format(t.threshold_mm)} mm). Shading: forecast probability (%). Black outline: MRMS exceedance.`,
+      raw_exceedance: `MRMS observed and raw HRRR forecast exceedance of ${inches(t.threshold_mm)} in (${number.format(t.threshold_mm)} mm). Filled areas indicate exceedance.`,
       brier: 'Blue: lower Brier error than raw HRRR. Red: higher error. Values use original samples.',
       mean_error: 'Forecast mean minus MRMS (mm). Negative: too little rain; positive: too much.',
       reliability: 'Observed frequency versus forecast probability; the diagonal indicates agreement.',
@@ -68,6 +80,13 @@
     $('full-image').hidden = !file;
     $('figure-caption').hidden = !file;
     $('figure-caption').textContent = captions[view];
+    const thresholdHelp = {
+      probabilities: 'Colors show ANN/GNN probabilities (%); the outline marks MRMS exceedances.',
+      raw_exceedance: 'Raw HRRR is a single rainfall forecast, so this comparison shows yes/no exceedance.',
+      brier: 'Threshold sets the rainfall event used in the Brier-error map and scores.',
+      reliability: 'Threshold sets the rainfall event used in the reliability plot and scores.'
+    };
+    $('threshold-help').textContent = thresholdHelp[view] || 'Threshold updates the Brier score and ROC AUC below; this figure is independent of it.';
     if (file) {
       const img = document.createElement('img');
       img.src = imageSource(file);
@@ -75,7 +94,7 @@
       img.decoding = 'async';
       $('figure-area').append(img);
       $('full-image').href = imageSource(file);
-      $('full-image').textContent = view === 'amounts' || view === 'probabilities' || view === 'brier' || view === 'mean_error' ? 'Open map ↗' : 'Open figure ↗';
+      $('full-image').textContent = ['amounts', 'probabilities', 'raw_exceedance', 'brier', 'mean_error'].includes(view) ? 'Open map ↗' : 'Open figure ↗';
     } else $('full-image').removeAttribute('href');
     const modelScores = r.models.map(m => {
       const p = t.models.find(x => x.id === m.id);
@@ -86,7 +105,7 @@
     $('scores').replaceChildren(...modelScores.map(m => {
       const tr = document.createElement('tr'), name = document.createElement('th');
       name.scope = 'row'; name.textContent = m.name;
-      if (panels && m.id === model) {
+      if ((panels || view === 'raw_exceedance') && m.id === model) {
         tr.className = 'selected';
         const mark = document.createElement('span'); mark.className = 'marker'; mark.textContent = 'shown'; name.append(mark);
       }
@@ -107,7 +126,9 @@
   }
   function changeEvent() {
     event = cases.find(e => e.event_id === $('event').value);
-    $('view').value = 'amounts';
+    preferredView = 'probabilities';
+    $('view').value = preferredView;
+    if (event.status === 'SCORED') $('model').value = preferredModel(event.records[0]);
     const pending = event.status !== 'SCORED';
     $('pending').hidden = !pending; $('scored-content').hidden = pending;
     $('duration').disabled = pending; $('window').disabled = pending;
@@ -131,7 +152,8 @@
   $('event').addEventListener('change', changeEvent);
   $('duration').addEventListener('change', changeDuration);
   $('window').addEventListener('change', changeWindow);
-  for (const id of ['view', 'model', 'threshold']) $(id).addEventListener('change', render);
+  $('view').addEventListener('change', () => { preferredView = $('view').value; render(); });
+  for (const id of ['model', 'threshold']) $(id).addEventListener('change', render);
   $('show-mapped').addEventListener('click', () => {
     $('window').value = String(Math.max(0, rows.findIndex(r => r.focus))); changeWindow();
   });
