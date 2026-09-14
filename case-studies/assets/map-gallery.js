@@ -19,7 +19,7 @@
   const imageSource = f => {
     const source = window.ANN_MAP_IMAGES?.[f] || f;
     if (!source || /^(data:|blob:)/.test(source)) return source;
-    return source + (source.includes('?') ? '&' : '?') + 'v=mrms-operational-colors-20260914';
+    return source + (source.includes('?') ? '&' : '?') + 'v=mrms-hrrr-colors-20260914';
   };
   let event = cases[0], rows = [], selectedThreshold = 50.8;
   const current = () => rows[Number($('window').value)];
