@@ -16,7 +16,11 @@
   const inches = mm => number.format(mm / 25.4);
   const thresholdLabel = mm => `${inches(mm)} in · ${number.format(mm)} mm`;
   const label = m => labels[m.id] || m.label;
-  const imageSource = f => window.ANN_MAP_IMAGES?.[f] || f;
+  const imageSource = f => {
+    const source = window.ANN_MAP_IMAGES?.[f] || f;
+    if (!source || /^(data:|blob:)/.test(source)) return source;
+    return source + (source.includes('?') ? '&' : '?') + 'v=operational-probability-colors-20260914';
+  };
   let event = cases[0], rows = [], selectedThreshold = 50.8;
   const current = () => rows[Number($('window').value)];
   const threshold = () => current().thresholds[Number($('threshold').value)];
