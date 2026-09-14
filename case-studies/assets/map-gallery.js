@@ -19,7 +19,7 @@
   const imageSource = f => {
     const source = window.ANN_MAP_IMAGES?.[f] || f;
     if (!source || /^(data:|blob:)/.test(source)) return source;
-    return source + (source.includes('?') ? '&' : '?') + 'v=operational-probability-colors-20260914';
+    return source + (source.includes('?') ? '&' : '?') + 'v=mrms-operational-colors-20260914';
   };
   let event = cases[0], rows = [], selectedThreshold = 50.8;
   const current = () => rows[Number($('window').value)];
@@ -71,7 +71,7 @@
     $('timing').textContent = `Initialized ${date.format(new Date(r.init_utc))}, ${clock(r.init_utc)} UTC · Forecast hours ${r.lead_to_window_start_hours}–${Number(r.lead_to_window_start_hours) + r.duration_hours}`;
     const captions = {
       amounts: 'MRMS and forecast rainfall share one scale in mm. Shading interpolates between common 0.25° samples.',
-      probabilities: `Probability of rainfall > ${inches(t.threshold_mm)} in (${number.format(t.threshold_mm)} mm). Shading: forecast probability (%). Black outline: MRMS exceedance.`,
+      probabilities: `Left: MRMS observed precipitation. Right: probability of rainfall > ${inches(t.threshold_mm)} in (${number.format(t.threshold_mm)} mm); black outline marks MRMS exceedance on the scoring grid.`,
       raw_exceedance: `MRMS observed and raw HRRR forecast exceedance of ${inches(t.threshold_mm)} in (${number.format(t.threshold_mm)} mm). Filled areas indicate exceedance.`,
       brier: 'Blue: lower Brier error than raw HRRR. Red: higher error. Values use original samples.',
       mean_error: 'Forecast mean minus MRMS (mm). Negative: too little rain; positive: too much.',
