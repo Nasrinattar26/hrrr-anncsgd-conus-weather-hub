@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Storm case studies · ANN-CSGD and GNN-CSGD</title>
-  <link rel="stylesheet" href="assets/map-gallery.css?v=simple-20260913">
+  <link rel="stylesheet" href="assets/map-gallery.css?v=point-hover-20260914">
 </head>
 <body>
   <a class="skip-link" href="#maps">Skip to maps</a>
@@ -43,6 +43,7 @@
         <p id="timing" class="timing"></p>
         <figure>
           <div id="figure-area"></div>
+          <p id="hover-help" class="hover-help" hidden>Hover or tap a map to inspect the nearest original 0.25° verification point.</p>
           <div id="no-image" class="empty-state" hidden><p>Scores are available for this window. Detailed maps are available for the marked window.</p><button id="show-mapped" type="button">Show mapped window</button></div>
           <figcaption id="figure-caption"></figcaption>
         </figure>
@@ -95,6 +96,7 @@
   </main>
   <footer>MRMS · HRRR · ANN-CSGD · GNN-CSGD</footer>
   <script src="assets/map-data.js"></script>
-  <script src="assets/map-gallery.js?v=mrms-hrrr-colors-20260914"></script>
+  <script src="assets/map-hover-data.js?v=point-hover-20260914"></script>
+  <script src="assets/map-gallery.js?v=point-hover-20260914"></script>
 </body>
 </html>

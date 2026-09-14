@@ -1,6 +1,7 @@
 'use strict';
 (() => {
   const cases = window.ANN_MAP_CASES || [];
+  const hover = window.ANN_MAP_HOVER || {};
   const $ = id => document.getElementById(id);
   if (!cases.length) return;
   const labels = {
@@ -16,6 +17,19 @@
   const inches = mm => number.format(mm / 25.4);
   const thresholdLabel = mm => `${inches(mm)} in · ${number.format(mm)} mm`;
   const label = m => labels[m.id] || m.label;
+  const pointMm = value => {
+    const n = Number(value);
+    if (!Number.isFinite(n)) return '—';
+    if (n === 0) return '0.00 mm';
+    return `${Math.abs(n) < 1 ? n.toFixed(3) : n.toFixed(2)} mm`;
+  };
+  const pointProbability = value => {
+    const percent = 100 * Number(value);
+    if (!Number.isFinite(percent)) return '—';
+    return `${percent < 0.1 ? percent.toFixed(2) : percent.toFixed(1)}%`;
+  };
+  const coordinate = (value, positive, negative) =>
+    `${Math.abs(Number(value)).toFixed(2)}°${Number(value) >= 0 ? positive : negative}`;
   const imageSource = f => {
     const source = window.ANN_MAP_IMAGES?.[f] || f;
     if (!source || /^(data:|blob:)/.test(source)) return source;
@@ -29,6 +43,130 @@
   }
   const preferredModel = r => r.models.find(m => m.id === '025' || m.id === 'ann_operational')?.id || r.models[0].id;
   let preferredView = 'probabilities';
+
+  function tooltipRows(record, panel, view, t, selectedModel, index) {
+    const mm = Number(t.threshold_mm);
+    const observed = Number(record.observation[index]);
+    const raw = Number(record.raw_hrrr[index]);
+    const observedEvent = observed > mm;
+    const rawEvent = raw > mm;
+    const modelId = panel.model || selectedModel;
+    const modelData = record.models?.[modelId];
+    const output = [
+      ['Location', `${coordinate(record.lat[index], 'N', 'S')}, ${coordinate(record.lon[index], 'E', 'W')}`],
+      ['MRMS rainfall', pointMm(observed)]
+    ];
+    if (view === 'probabilities') {
+      const probability = modelData?.probabilities?.[String(mm)]?.[index];
+      output.push(['Threshold', `>${thresholdLabel(mm)}`],
+                  ['MRMS event', observedEvent ? 'Exceeded' : 'Not exceeded'],
+                  [modelData?.label || labels[modelId] || 'Forecast probability', pointProbability(probability)]);
+    } else if (view === 'amounts') {
+      const forecast = modelId === 'raw_hrrr' ? raw : Number(modelData?.mean?.[index]);
+      output.push([modelId === 'raw_hrrr' ? 'Raw HRRR' : (modelData?.label || labels[modelId] || 'Forecast mean'), pointMm(forecast)],
+                  ['Forecast − MRMS', `${forecast >= observed ? '+' : ''}${pointMm(forecast - observed)}`]);
+    } else if (view === 'raw_exceedance') {
+      output.push(['Threshold', `>${thresholdLabel(mm)}`],
+                  ['MRMS event', observedEvent ? 'Exceeded' : 'Not exceeded'],
+                  ['Raw HRRR rainfall', pointMm(raw)],
+                  ['Raw HRRR event', rawEvent ? 'Exceeded' : 'Not exceeded']);
+    } else if (view === 'brier') {
+      const probability = Number(modelData?.probabilities?.[String(mm)]?.[index]);
+      const modelError = (probability - Number(observedEvent)) ** 2;
+      const rawError = (Number(rawEvent) - Number(observedEvent)) ** 2;
+      const improvement = rawError - modelError;
+      output.push(['Threshold', `>${thresholdLabel(mm)}`],
+                  [modelData?.label || labels[modelId] || 'Forecast probability', pointProbability(probability)],
+                  ['MRMS event', observedEvent ? 'Exceeded' : 'Not exceeded'],
+                  ['Model Brier error', fmt(modelError, 4)],
+                  ['Raw − model error', `${improvement >= 0 ? '+' : ''}${fmt(improvement, 4)}`]);
+    } else if (view === 'mean_error') {
+      const forecast = Number(modelData?.mean?.[index]);
+      output.push([modelData?.label || labels[modelId] || 'Forecast mean', pointMm(forecast)],
+                  ['Forecast − MRMS', `${forecast >= observed ? '+' : ''}${pointMm(forecast - observed)}`]);
+    }
+    return output;
+  }
+
+  function installPointInspector(img, file, view, r, t, selectedModel) {
+    const mapViews = new Set(['probabilities', 'amounts', 'raw_exceedance', 'brier', 'mean_error']);
+    const layout = hover.layouts?.[file];
+    const record = hover.events?.[event.event_id]?.records?.[r.id];
+    if (!mapViews.has(view) || !layout || !record) return;
+    const area = $('figure-area');
+    const marker = document.createElement('span');
+    marker.className = 'point-marker';
+    marker.hidden = true;
+    const tip = document.createElement('div');
+    tip.className = 'point-tooltip';
+    tip.id = 'point-tooltip';
+    tip.setAttribute('role', 'tooltip');
+    tip.hidden = true;
+    area.classList.add('has-point-inspector');
+    area.append(marker, tip);
+    $('hover-help').hidden = false;
+    img.classList.add('inspectable-map');
+    img.tabIndex = 0;
+    img.setAttribute('aria-describedby', 'hover-help');
+    img.setAttribute('aria-label', img.alt + '. Interactive point-value map.');
+
+    const hide = () => { marker.hidden = true; tip.hidden = true; };
+    function showAt(clientX, clientY) {
+      if (!img.naturalWidth || !img.naturalHeight) return;
+      const imageBox = img.getBoundingClientRect();
+      const areaBox = area.getBoundingClientRect();
+      const px = (clientX - imageBox.left) * layout.width / imageBox.width;
+      const py = (clientY - imageBox.top) * layout.height / imageBox.height;
+      const panel = layout.panels.find(p => px >= p.x0 && px <= p.x1 && py >= p.y0 && py <= p.y1);
+      if (!panel) { hide(); return; }
+      const lonGuess = layout.xlim[0] + (px - panel.x0) / (panel.x1 - panel.x0) * (layout.xlim[1] - layout.xlim[0]);
+      const latGuess = layout.ylim[1] - (py - panel.y0) / (panel.y1 - panel.y0) * (layout.ylim[1] - layout.ylim[0]);
+      const cosine = Math.cos(latGuess * Math.PI / 180);
+      let best = -1, bestDistance = Infinity;
+      for (let i = 0; i < record.lat.length; i += 1) {
+        const dy = Number(record.lat[i]) - latGuess;
+        const dx = (Number(record.lon[i]) - lonGuess) * cosine;
+        const distance = Math.hypot(dx, dy);
+        if (distance < bestDistance) { bestDistance = distance; best = i; }
+      }
+      if (best < 0 || bestDistance > 0.20) { hide(); return; }
+      const pointX = panel.x0 + (Number(record.lon[best]) - layout.xlim[0]) /
+        (layout.xlim[1] - layout.xlim[0]) * (panel.x1 - panel.x0);
+      const pointY = panel.y0 + (layout.ylim[1] - Number(record.lat[best])) /
+        (layout.ylim[1] - layout.ylim[0]) * (panel.y1 - panel.y0);
+      marker.style.left = `${imageBox.left - areaBox.left + pointX / layout.width * imageBox.width}px`;
+      marker.style.top = `${imageBox.top - areaBox.top + pointY / layout.height * imageBox.height}px`;
+      marker.hidden = false;
+      tip.replaceChildren();
+      const heading = document.createElement('strong');
+      heading.textContent = 'Nearest verification point';
+      const list = document.createElement('dl');
+      for (const [name, value] of tooltipRows(record, panel, view, t, selectedModel, best)) {
+        const row = document.createElement('div');
+        const term = document.createElement('dt'); term.textContent = name;
+        const detail = document.createElement('dd'); detail.textContent = value;
+        row.append(term, detail); list.append(row);
+      }
+      tip.append(heading, list);
+      tip.hidden = false;
+      const cursorX = clientX - areaBox.left;
+      const cursorY = clientY - areaBox.top;
+      const tipWidth = tip.offsetWidth, tipHeight = tip.offsetHeight;
+      const left = Math.max(6, Math.min(cursorX + 16, areaBox.width - tipWidth - 6));
+      const top = cursorY + tipHeight + 18 <= areaBox.height ? cursorY + 16 : cursorY - tipHeight - 16;
+      tip.style.left = `${left}px`;
+      tip.style.top = `${Math.max(6, top)}px`;
+    }
+    img.addEventListener('pointermove', e => showAt(e.clientX, e.clientY));
+    img.addEventListener('pointerleave', e => { if (e.pointerType !== 'touch') hide(); });
+    img.addEventListener('click', e => showAt(e.clientX, e.clientY));
+    img.addEventListener('focus', () => {
+      const box = img.getBoundingClientRect(), panel = layout.panels[0];
+      showAt(box.left + (panel.x0 + panel.x1) / 2 / layout.width * box.width,
+             box.top + (panel.y0 + panel.y1) / 2 / layout.height * box.height);
+    });
+    img.addEventListener('keydown', e => { if (e.key === 'Escape') hide(); });
+  }
   function changeDuration() {
     rows = event.records.filter(r => r.duration_hours === Number($('duration').value));
     $('window').replaceChildren(...rows.map((r, i) => option(i,
@@ -79,6 +217,8 @@
       survival: 'Forecast probabilities at the largest MRMS rainfall observation; the vertical line marks the observed amount.'
     };
     $('figure-area').replaceChildren();
+    $('figure-area').classList.remove('has-point-inspector');
+    $('hover-help').hidden = true;
     $('figure-area').classList.toggle('single-map', Boolean(panels && view === 'probabilities' && model !== 'raw_hrrr'));
     $('no-image').hidden = Boolean(file);
     $('full-image').hidden = !file;
@@ -97,6 +237,7 @@
       img.alt = `${event.title} · ${r.duration_hours} h · ${$('view').selectedOptions[0].textContent}${panels ? ' · ' + $('model').selectedOptions[0].textContent : ''}`;
       img.decoding = 'async';
       $('figure-area').append(img);
+      installPointInspector(img, file, view, r, t, model);
       $('full-image').href = imageSource(file);
       $('full-image').textContent = ['amounts', 'probabilities', 'raw_exceedance', 'brier', 'mean_error'].includes(view) ? 'Open map ↗' : 'Open figure ↗';
     } else $('full-image').removeAttribute('href');

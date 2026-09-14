@@ -29,8 +29,20 @@ p{margin:10px 0}
 .timing{font-size:13px;color:var(--muted);margin:18px 0 10px}
 figure{margin:0}
 #figure-area{min-width:0}
+#figure-area.has-point-inspector{position:relative}
 #figure-area img{display:block;width:100%;height:auto;margin:0 auto;max-width:1184px}
 #figure-area.single-map img{max-width:760px}
+.inspectable-map{cursor:crosshair}
+.inspectable-map:focus-visible{outline:3px solid #efab46;outline-offset:3px}
+.point-marker{position:absolute;z-index:4;width:13px;height:13px;border:2px solid #fff;border-radius:50%;background:#1260cf;box-shadow:0 0 0 2px #193343;transform:translate(-50%,-50%);pointer-events:none}
+.point-tooltip{position:absolute;z-index:5;width:min(310px,calc(100% - 12px));padding:11px 13px;border:1px solid rgba(255,255,255,.28);border-radius:9px;background:rgba(15,37,52,.96);box-shadow:0 8px 24px rgba(15,37,52,.22);color:#fff;font-size:12px;line-height:1.35;font-variant-numeric:tabular-nums;pointer-events:none}
+.point-tooltip strong{display:block;margin-bottom:7px;font-size:13px}
+.point-tooltip dl{margin:0}
+.point-tooltip dl>div{display:grid;grid-template-columns:minmax(92px,.85fr) minmax(110px,1.15fr);gap:10px;padding:3px 0;border-top:1px solid rgba(255,255,255,.13)}
+.point-tooltip dl>div:first-child{border-top:0}
+.point-tooltip dt{color:#c9d9e4}
+.point-tooltip dd{margin:0;text-align:right;font-weight:650}
+.hover-help{margin:8px 0 0;color:var(--muted);font-size:12px}
 figcaption{font-size:13px;color:var(--muted);margin-top:10px}
 .empty-state{padding:24px;background:var(--wash);border-radius:10px;text-align:center}
 .empty-state p{margin-top:0}
@@ -72,6 +84,7 @@ footer{padding-top:24px;padding-bottom:30px;color:var(--muted);font-size:12px}
   select{font-size:14px;padding-left:9px;padding-right:23px}
   #maps{padding-top:22px}
   #figure-area img{min-width:0}
+  .point-tooltip{font-size:11px}
   .timing,figcaption{font-size:12px}
   th,td{padding:11px 12px}
   .finding{font-size:13px}
