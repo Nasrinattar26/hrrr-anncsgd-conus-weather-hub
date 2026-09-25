@@ -1,7 +1,7 @@
 window.HRRR_MAP_CATALOG = {
   "title": "HRRR ANN-CSGD CONUS Forecast Maps",
   "init": "2026092512",
-  "created_utc": "2026-09-25 16:45 UTC",
+  "created_utc": "2026-09-25T17:14:24.575382+00:00",
   "n_files": 145,
   "durations": {
     "6h": {
@@ -10,7 +10,7 @@ window.HRRR_MAP_CATALOG = {
         {
           "variable": "expected_precip_mm",
           "label": "Expected precipitation",
-          "units": "mm"
+          "units": "inches"
         },
         {
           "variable": "prob_gt_0p25inch_percent",
@@ -57,10 +57,10 @@ window.HRRR_MAP_CATALOG = {
               "end_fhr": 6,
               "variable": "expected_precip_mm",
               "label": "Expected precipitation",
-              "units": "mm",
+              "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092512/6h/f00_f06/expected_precip_mm.png",
-              "size_bytes": 415157
+              "size_bytes": 413424
             },
             {
               "duration_hours": 6,
@@ -149,10 +149,10 @@ window.HRRR_MAP_CATALOG = {
               "end_fhr": 12,
               "variable": "expected_precip_mm",
               "label": "Expected precipitation",
-              "units": "mm",
+              "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092512/6h/f06_f12/expected_precip_mm.png",
-              "size_bytes": 419029
+              "size_bytes": 417326
             },
             {
               "duration_hours": 6,
@@ -241,10 +241,10 @@ window.HRRR_MAP_CATALOG = {
               "end_fhr": 18,
               "variable": "expected_precip_mm",
               "label": "Expected precipitation",
-              "units": "mm",
+              "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092512/6h/f12_f18/expected_precip_mm.png",
-              "size_bytes": 417310
+              "size_bytes": 415637
             },
             {
               "duration_hours": 6,
@@ -333,10 +333,10 @@ window.HRRR_MAP_CATALOG = {
               "end_fhr": 24,
               "variable": "expected_precip_mm",
               "label": "Expected precipitation",
-              "units": "mm",
+              "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092512/6h/f18_f24/expected_precip_mm.png",
-              "size_bytes": 415124
+              "size_bytes": 413417
             },
             {
               "duration_hours": 6,
@@ -425,10 +425,10 @@ window.HRRR_MAP_CATALOG = {
               "end_fhr": 30,
               "variable": "expected_precip_mm",
               "label": "Expected precipitation",
-              "units": "mm",
+              "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092512/6h/f24_f30/expected_precip_mm.png",
-              "size_bytes": 413471
+              "size_bytes": 411770
             },
             {
               "duration_hours": 6,
@@ -517,10 +517,10 @@ window.HRRR_MAP_CATALOG = {
               "end_fhr": 36,
               "variable": "expected_precip_mm",
               "label": "Expected precipitation",
-              "units": "mm",
+              "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092512/6h/f30_f36/expected_precip_mm.png",
-              "size_bytes": 413591
+              "size_bytes": 411861
             },
             {
               "duration_hours": 6,
@@ -609,10 +609,10 @@ window.HRRR_MAP_CATALOG = {
               "end_fhr": 42,
               "variable": "expected_precip_mm",
               "label": "Expected precipitation",
-              "units": "mm",
+              "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092512/6h/f36_f42/expected_precip_mm.png",
-              "size_bytes": 414799
+              "size_bytes": 413115
             },
             {
               "duration_hours": 6,
@@ -701,10 +701,10 @@ window.HRRR_MAP_CATALOG = {
               "end_fhr": 48,
               "variable": "expected_precip_mm",
               "label": "Expected precipitation",
-              "units": "mm",
+              "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092512/6h/f42_f48/expected_precip_mm.png",
-              "size_bytes": 415853
+              "size_bytes": 414118
             },
             {
               "duration_hours": 6,
@@ -788,7 +788,7 @@ window.HRRR_MAP_CATALOG = {
         {
           "variable": "expected_precip_mm",
           "label": "Expected precipitation",
-          "units": "mm"
+          "units": "inches"
         },
         {
           "variable": "prob_gt_0p5inch_percent",
@@ -835,10 +835,10 @@ window.HRRR_MAP_CATALOG = {
               "end_fhr": 12,
               "variable": "expected_precip_mm",
               "label": "Expected precipitation",
-              "units": "mm",
+              "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092512/12h/f00_f12/expected_precip_mm.png",
-              "size_bytes": 422596
+              "size_bytes": 420717
             },
             {
               "duration_hours": 12,
@@ -927,10 +927,10 @@ window.HRRR_MAP_CATALOG = {
               "end_fhr": 18,
               "variable": "expected_precip_mm",
               "label": "Expected precipitation",
-              "units": "mm",
+              "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092512/12h/f06_f18/expected_precip_mm.png",
-              "size_bytes": 425054
+              "size_bytes": 423194
             },
             {
               "duration_hours": 12,
@@ -1019,10 +1019,10 @@ window.HRRR_MAP_CATALOG = {
               "end_fhr": 24,
               "variable": "expected_precip_mm",
               "label": "Expected precipitation",
-              "units": "mm",
+              "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092512/12h/f12_f24/expected_precip_mm.png",
-              "size_bytes": 422634
+              "size_bytes": 420734
             },
             {
               "duration_hours": 12,
@@ -1111,10 +1111,10 @@ window.HRRR_MAP_CATALOG = {
               "end_fhr": 30,
               "variable": "expected_precip_mm",
               "label": "Expected precipitation",
-              "units": "mm",
+              "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092512/12h/f18_f30/expected_precip_mm.png",
-              "size_bytes": 419165
+              "size_bytes": 417308
             },
             {
               "duration_hours": 12,
@@ -1203,10 +1203,10 @@ window.HRRR_MAP_CATALOG = {
               "end_fhr": 36,
               "variable": "expected_precip_mm",
               "label": "Expected precipitation",
-              "units": "mm",
+              "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092512/12h/f24_f36/expected_precip_mm.png",
-              "size_bytes": 416705
+              "size_bytes": 414761
             },
             {
               "duration_hours": 12,
@@ -1295,10 +1295,10 @@ window.HRRR_MAP_CATALOG = {
               "end_fhr": 42,
               "variable": "expected_precip_mm",
               "label": "Expected precipitation",
-              "units": "mm",
+              "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092512/12h/f30_f42/expected_precip_mm.png",
-              "size_bytes": 418625
+              "size_bytes": 416689
             },
             {
               "duration_hours": 12,
@@ -1387,10 +1387,10 @@ window.HRRR_MAP_CATALOG = {
               "end_fhr": 48,
               "variable": "expected_precip_mm",
               "label": "Expected precipitation",
-              "units": "mm",
+              "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092512/12h/f36_f48/expected_precip_mm.png",
-              "size_bytes": 418925
+              "size_bytes": 417034
             },
             {
               "duration_hours": 12,
@@ -1474,7 +1474,7 @@ window.HRRR_MAP_CATALOG = {
         {
           "variable": "expected_precip_mm",
           "label": "Expected precipitation",
-          "units": "mm"
+          "units": "inches"
         },
         {
           "variable": "prob_gt_0p5inch_percent",
@@ -1526,10 +1526,10 @@ window.HRRR_MAP_CATALOG = {
               "end_fhr": 24,
               "variable": "expected_precip_mm",
               "label": "Expected precipitation",
-              "units": "mm",
+              "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092512/24h/f00_f24/expected_precip_mm.png",
-              "size_bytes": 430516
+              "size_bytes": 428675
             },
             {
               "duration_hours": 24,
@@ -1626,7 +1626,7 @@ window.HRRR_MAP_CATALOG = {
               "kind": "image",
               "path": "products/ero/2026092512/24h/f00_f24/hrrr_anncsgd_wpc_ero_2026092512_24h_f00_f24_day1_conus.png",
               "metadata_path": "products/ero/2026092512/24h/f00_f24/hrrr_anncsgd_wpc_ero_2026092512_24h_f00_f24_day1_conus.json",
-              "size_bytes": 1072609,
+              "size_bytes": 1075708,
               "ero_day": 1,
               "ero_temporal_coverage": "partial"
             }
@@ -1645,10 +1645,10 @@ window.HRRR_MAP_CATALOG = {
               "end_fhr": 30,
               "variable": "expected_precip_mm",
               "label": "Expected precipitation",
-              "units": "mm",
+              "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092512/24h/f06_f30/expected_precip_mm.png",
-              "size_bytes": 430513
+              "size_bytes": 428669
             },
             {
               "duration_hours": 24,
@@ -1749,10 +1749,10 @@ window.HRRR_MAP_CATALOG = {
               "end_fhr": 36,
               "variable": "expected_precip_mm",
               "label": "Expected precipitation",
-              "units": "mm",
+              "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092512/24h/f12_f36/expected_precip_mm.png",
-              "size_bytes": 427044
+              "size_bytes": 425152
             },
             {
               "duration_hours": 24,
@@ -1853,10 +1853,10 @@ window.HRRR_MAP_CATALOG = {
               "end_fhr": 42,
               "variable": "expected_precip_mm",
               "label": "Expected precipitation",
-              "units": "mm",
+              "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092512/24h/f18_f42/expected_precip_mm.png",
-              "size_bytes": 424260
+              "size_bytes": 422460
             },
             {
               "duration_hours": 24,
@@ -1957,10 +1957,10 @@ window.HRRR_MAP_CATALOG = {
               "end_fhr": 48,
               "variable": "expected_precip_mm",
               "label": "Expected precipitation",
-              "units": "mm",
+              "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092512/24h/f24_f48/expected_precip_mm.png",
-              "size_bytes": 421669
+              "size_bytes": 419829
             },
             {
               "duration_hours": 24,
@@ -2057,7 +2057,7 @@ window.HRRR_MAP_CATALOG = {
               "kind": "image",
               "path": "products/ero/2026092512/24h/f24_f48/hrrr_anncsgd_wpc_ero_2026092512_24h_f24_f48_day2_conus.png",
               "metadata_path": "products/ero/2026092512/24h/f24_f48/hrrr_anncsgd_wpc_ero_2026092512_24h_f24_f48_day2_conus.json",
-              "size_bytes": 1039182,
+              "size_bytes": 1042072,
               "ero_day": 2,
               "ero_temporal_coverage": "full"
             }
@@ -2074,10 +2074,10 @@ window.HRRR_MAP_CATALOG = {
       "end_fhr": 6,
       "variable": "expected_precip_mm",
       "label": "Expected precipitation",
-      "units": "mm",
+      "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092512/6h/f00_f06/expected_precip_mm.png",
-      "size_bytes": 415157
+      "size_bytes": 413424
     },
     {
       "duration_hours": 6,
@@ -2158,10 +2158,10 @@ window.HRRR_MAP_CATALOG = {
       "end_fhr": 12,
       "variable": "expected_precip_mm",
       "label": "Expected precipitation",
-      "units": "mm",
+      "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092512/6h/f06_f12/expected_precip_mm.png",
-      "size_bytes": 419029
+      "size_bytes": 417326
     },
     {
       "duration_hours": 6,
@@ -2242,10 +2242,10 @@ window.HRRR_MAP_CATALOG = {
       "end_fhr": 18,
       "variable": "expected_precip_mm",
       "label": "Expected precipitation",
-      "units": "mm",
+      "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092512/6h/f12_f18/expected_precip_mm.png",
-      "size_bytes": 417310
+      "size_bytes": 415637
     },
     {
       "duration_hours": 6,
@@ -2326,10 +2326,10 @@ window.HRRR_MAP_CATALOG = {
       "end_fhr": 24,
       "variable": "expected_precip_mm",
       "label": "Expected precipitation",
-      "units": "mm",
+      "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092512/6h/f18_f24/expected_precip_mm.png",
-      "size_bytes": 415124
+      "size_bytes": 413417
     },
     {
       "duration_hours": 6,
@@ -2410,10 +2410,10 @@ window.HRRR_MAP_CATALOG = {
       "end_fhr": 30,
       "variable": "expected_precip_mm",
       "label": "Expected precipitation",
-      "units": "mm",
+      "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092512/6h/f24_f30/expected_precip_mm.png",
-      "size_bytes": 413471
+      "size_bytes": 411770
     },
     {
       "duration_hours": 6,
@@ -2494,10 +2494,10 @@ window.HRRR_MAP_CATALOG = {
       "end_fhr": 36,
       "variable": "expected_precip_mm",
       "label": "Expected precipitation",
-      "units": "mm",
+      "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092512/6h/f30_f36/expected_precip_mm.png",
-      "size_bytes": 413591
+      "size_bytes": 411861
     },
     {
       "duration_hours": 6,
@@ -2578,10 +2578,10 @@ window.HRRR_MAP_CATALOG = {
       "end_fhr": 42,
       "variable": "expected_precip_mm",
       "label": "Expected precipitation",
-      "units": "mm",
+      "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092512/6h/f36_f42/expected_precip_mm.png",
-      "size_bytes": 414799
+      "size_bytes": 413115
     },
     {
       "duration_hours": 6,
@@ -2662,10 +2662,10 @@ window.HRRR_MAP_CATALOG = {
       "end_fhr": 48,
       "variable": "expected_precip_mm",
       "label": "Expected precipitation",
-      "units": "mm",
+      "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092512/6h/f42_f48/expected_precip_mm.png",
-      "size_bytes": 415853
+      "size_bytes": 414118
     },
     {
       "duration_hours": 6,
@@ -2746,10 +2746,10 @@ window.HRRR_MAP_CATALOG = {
       "end_fhr": 12,
       "variable": "expected_precip_mm",
       "label": "Expected precipitation",
-      "units": "mm",
+      "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092512/12h/f00_f12/expected_precip_mm.png",
-      "size_bytes": 422596
+      "size_bytes": 420717
     },
     {
       "duration_hours": 12,
@@ -2830,10 +2830,10 @@ window.HRRR_MAP_CATALOG = {
       "end_fhr": 18,
       "variable": "expected_precip_mm",
       "label": "Expected precipitation",
-      "units": "mm",
+      "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092512/12h/f06_f18/expected_precip_mm.png",
-      "size_bytes": 425054
+      "size_bytes": 423194
     },
     {
       "duration_hours": 12,
@@ -2914,10 +2914,10 @@ window.HRRR_MAP_CATALOG = {
       "end_fhr": 24,
       "variable": "expected_precip_mm",
       "label": "Expected precipitation",
-      "units": "mm",
+      "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092512/12h/f12_f24/expected_precip_mm.png",
-      "size_bytes": 422634
+      "size_bytes": 420734
     },
     {
       "duration_hours": 12,
@@ -2998,10 +2998,10 @@ window.HRRR_MAP_CATALOG = {
       "end_fhr": 30,
       "variable": "expected_precip_mm",
       "label": "Expected precipitation",
-      "units": "mm",
+      "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092512/12h/f18_f30/expected_precip_mm.png",
-      "size_bytes": 419165
+      "size_bytes": 417308
     },
     {
       "duration_hours": 12,
@@ -3082,10 +3082,10 @@ window.HRRR_MAP_CATALOG = {
       "end_fhr": 36,
       "variable": "expected_precip_mm",
       "label": "Expected precipitation",
-      "units": "mm",
+      "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092512/12h/f24_f36/expected_precip_mm.png",
-      "size_bytes": 416705
+      "size_bytes": 414761
     },
     {
       "duration_hours": 12,
@@ -3166,10 +3166,10 @@ window.HRRR_MAP_CATALOG = {
       "end_fhr": 42,
       "variable": "expected_precip_mm",
       "label": "Expected precipitation",
-      "units": "mm",
+      "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092512/12h/f30_f42/expected_precip_mm.png",
-      "size_bytes": 418625
+      "size_bytes": 416689
     },
     {
       "duration_hours": 12,
@@ -3250,10 +3250,10 @@ window.HRRR_MAP_CATALOG = {
       "end_fhr": 48,
       "variable": "expected_precip_mm",
       "label": "Expected precipitation",
-      "units": "mm",
+      "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092512/12h/f36_f48/expected_precip_mm.png",
-      "size_bytes": 418925
+      "size_bytes": 417034
     },
     {
       "duration_hours": 12,
@@ -3334,10 +3334,10 @@ window.HRRR_MAP_CATALOG = {
       "end_fhr": 24,
       "variable": "expected_precip_mm",
       "label": "Expected precipitation",
-      "units": "mm",
+      "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092512/24h/f00_f24/expected_precip_mm.png",
-      "size_bytes": 430516
+      "size_bytes": 428675
     },
     {
       "duration_hours": 24,
@@ -3430,10 +3430,10 @@ window.HRRR_MAP_CATALOG = {
       "end_fhr": 30,
       "variable": "expected_precip_mm",
       "label": "Expected precipitation",
-      "units": "mm",
+      "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092512/24h/f06_f30/expected_precip_mm.png",
-      "size_bytes": 430513
+      "size_bytes": 428669
     },
     {
       "duration_hours": 24,
@@ -3526,10 +3526,10 @@ window.HRRR_MAP_CATALOG = {
       "end_fhr": 36,
       "variable": "expected_precip_mm",
       "label": "Expected precipitation",
-      "units": "mm",
+      "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092512/24h/f12_f36/expected_precip_mm.png",
-      "size_bytes": 427044
+      "size_bytes": 425152
     },
     {
       "duration_hours": 24,
@@ -3622,10 +3622,10 @@ window.HRRR_MAP_CATALOG = {
       "end_fhr": 42,
       "variable": "expected_precip_mm",
       "label": "Expected precipitation",
-      "units": "mm",
+      "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092512/24h/f18_f42/expected_precip_mm.png",
-      "size_bytes": 424260
+      "size_bytes": 422460
     },
     {
       "duration_hours": 24,
@@ -3718,10 +3718,10 @@ window.HRRR_MAP_CATALOG = {
       "end_fhr": 48,
       "variable": "expected_precip_mm",
       "label": "Expected precipitation",
-      "units": "mm",
+      "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092512/24h/f24_f48/expected_precip_mm.png",
-      "size_bytes": 421669
+      "size_bytes": 419829
     },
     {
       "duration_hours": 24,
@@ -3807,5 +3807,6 @@ window.HRRR_MAP_CATALOG = {
       "path": "products/maps/2026092512/24h/f24_f48/prob_gt_5yr24h_ari_percent.png",
       "size_bytes": 416677
     }
-  ]
+  ],
+  "display_amount_units": "inches"
 };

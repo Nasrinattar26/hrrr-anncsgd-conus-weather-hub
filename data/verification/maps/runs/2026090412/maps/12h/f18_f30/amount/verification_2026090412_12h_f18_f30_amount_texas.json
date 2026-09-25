@@ -64,20 +64,21 @@
   "product_id": "2026090412__12h__f18_f30__amount_verification__texas",
   "public_image_url": "data/verification/maps/runs/2026090412/maps/12h/f18_f30/amount/verification_2026090412_12h_f18_f30_amount_texas.webp",
   "public_metadata_url": "data/verification/maps/runs/2026090412/maps/12h/f18_f30/amount/verification_2026090412_12h_f18_f30_amount_texas.json",
-  "source_png_sha256": "2b15478c428ad033880e03727de2558b734fcfb5efc70acf9649ad13aa3df310",
+  "source_png_sha256": "73d2b6449ea332ba632e53c45b907567ffc5038213fe69bba1a05bfbc38da252",
   "public_webp_profile": {
     "name": "high",
     "maximum_width": 2200,
     "quality": 88,
     "method": 6
   },
-  "webp_bytes": 131176,
-  "webp_sha256": "09ca2d23d77c1136999780a8cc0f000870927d9fc15a63b074b7882a34353fed",
+  "webp_bytes": 131536,
+  "webp_sha256": "bfed42c05e160575d2b86f591dbd37705f691b904cebc091e34936981803f554",
   "webp_width": 2200,
-  "webp_height": 1462,
+  "webp_height": 1452,
   "webp_rgb_standard_deviation": [
-    43.33467956395833,
-    42.32599323031754,
-    44.27576042585985
-  ]
+    43.39850945801744,
+    42.37892130919863,
+    44.28069439560179
+  ],
+  "display_amount_units": "inches"
 }

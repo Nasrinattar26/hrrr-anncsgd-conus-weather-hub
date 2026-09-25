@@ -195,20 +195,21 @@
   "product_id": "2026090912__24h__f06_f30__threshold_verification__5yr24h_ari__texas",
   "public_image_url": "data/verification/maps/runs/2026090912/maps/24h/f06_f30/thresholds/5yr24h_ari/verification_2026090912_24h_f06_f30_threshold_5yr24h_ari_texas.webp",
   "public_metadata_url": "data/verification/maps/runs/2026090912/maps/24h/f06_f30/thresholds/5yr24h_ari/verification_2026090912_24h_f06_f30_threshold_5yr24h_ari_texas.json",
-  "source_png_sha256": "205b59c7061f095ebf203a1c1041b88bacaee3131774b2ae67c9c62c8840207b",
+  "source_png_sha256": "da6ea523b36d46b2f6f9b586a384f1182ee227f46f7d9f9ebf51da5d132e9eb6",
   "public_webp_profile": {
     "name": "high",
     "maximum_width": 2200,
     "quality": 88,
     "method": 6
   },
-  "webp_bytes": 132370,
-  "webp_sha256": "d2498b23279cc1333e55f27e48582d1fbd837bb52022834d43f37078e489bd21",
+  "webp_bytes": 132052,
+  "webp_sha256": "712c86c66919aa2712e5504dc569a20dfa5440eb29f07c8b60963882e3870960",
   "webp_width": 2200,
-  "webp_height": 1648,
+  "webp_height": 1636,
   "webp_rgb_standard_deviation": [
-    41.5554264398449,
-    34.20483574636359,
-    40.484365427750184
-  ]
+    41.538250682480275,
+    34.19357367194672,
+    40.46607748555408
+  ],
+  "display_amount_units": "inches"
 }

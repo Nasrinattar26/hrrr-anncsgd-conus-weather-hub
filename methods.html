@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How the HRRR ANN-CSGD precipitation forecasts and MRMS verification are made.">
+  <title>Methods and guidance · HRRR ANN-CSGD</title>
+  <link rel="stylesheet" href="assets/style.css?v=20260729T180318Z">
+  <link rel="stylesheet" href="assets/sarah-feedback.css?v=1">
+</head>
+<body>
+  <nav class="global-site-nav" aria-label="Primary navigation">
+    <div class="global-site-nav__inner">
+      <a class="global-site-nav__brand" href="index.html">ANN-CSGD Weather Hub</a>
+      <div class="global-site-nav__links">
+        <a href="index.html#forecast-workspace">Forecasts</a>
+        <a href="verification.html">Verification</a>
+        <a href="case-studies/">Storm case studies</a>
+        <a href="index.html#grib2-downloads">Downloads</a>
+        <a href="methods.html" aria-current="page">Methods and guidance</a>
+      </div>
+    </div>
+  </nav>
+  <header class="hero"><div class="methods-wrap">
+    <p class="eyebrow">About the product</p>
+    <h1>How the forecasts are made</h1>
+    <p>HRRR precipitation forecasts are statistically postprocessed into expected rainfall and probabilities of exceeding rainfall thresholds over the contiguous United States.</p>
+  </div></header>
+  <main class="methods-wrap methods-content">
+    <nav class="methods-links" aria-label="On this page">
+      <a href="#forecast-method">Forecast method</a><a href="#training">Training</a>
+      <a href="#verification">Verification</a><a href="#using-guidance">Using the guidance</a>
+    </nav>
+    <section class="panel" id="forecast-method">
+      <h2>One HRRR initialization, three accumulation models</h2>
+      <p>The operational system uses <strong>one HRRR initialization per forecast</strong>. It does not combine time-lagged HRRR members. Three separately trained artificial neural networks (ANNs) handle <strong>6-, 12- and 24-hour accumulations</strong>. These are three duration-specific HRRR models; the GEFS-based dashboard is a separate forecast system.</p>
+      <ol>
+        <li><strong>Prepare HRRR precipitation.</strong> Cumulative HRRR precipitation is interpolated from its native grid to a 0.25° latitude–longitude grid using bilinear interpolation. Subtracting the cumulative fields at each window's endpoints gives the window accumulation; negative differences are clipped to zero.</li>
+        <li><strong>Construct twelve predictors.</strong> The network uses accumulated precipitation, its log transform, a 5 × 5 neighborhood mean and maximum, spatial gradient magnitude, normalized lead time, sine and cosine of day of year, sine and cosine of valid UTC hour, and normalized latitude and longitude. Predictors are standardized using saved training statistics.</li>
+        <li><strong>Predict a rainfall distribution.</strong> The duration-specific ANN produces the parameters of a censored shifted gamma distribution (CSGD) at each land-grid location. If G is gamma distributed, rainfall is represented as Y = max(0, G + shift). Censoring assigns probability to zero rainfall.</li>
+        <li><strong>Calculate the displayed products.</strong> Expected rainfall is the mathematical expectation of this distribution. Exceedance probabilities are calculated analytically from its gamma survival function for fixed rainfall amounts and local recurrence thresholds.</li>
+      </ol>
+      <p><strong>What “probabilistic” means here:</strong> the probabilities come from the predicted CSGD. The displayed products are not fractions of time-lagged members, and the operational inference script does not need to sample an ensemble to generate them. MRMS supplies observed targets for training and verification; it is not an input predictor for the real-time forecast.</p>
+      <p>The grid has 117 latitude positions and 253 longitude positions, spanning 23–52°N and 127–64°W at 0.25° spacing. The operational land mask contains 13,318 cells.</p>
+    </section>
+    <section class="panel" id="training">
+      <h2>Training and evaluation</h2>
+      <p>The duration-specific training workflow separates training records from 2024 validation and held-out 2025 evaluation records. Model selection uses validation data. Feature normalization is fitted to training records. The networks are trained with a continuous ranked probability score (CRPS) objective against matched MRMS precipitation.</p>
+      <p>Held-out 2025 scores describe that historical evaluation period. The operational verification page uses observations that become available after each real-time forecast. The separate resolution experiments and cross-system verification have their own sample periods and comparison rules.</p>
+      <p><a href="model-comparison/">View verification comparisons and their stated scope</a>.</p>
+    </section>
+    <section class="panel" id="verification">
+      <h2>How operational verification is calculated</h2>
+      <div class="methods-table"><table>
+        <thead><tr><th>Component</th><th>Processing used by the operational scripts</th></tr></thead>
+        <tbody>
+          <tr><td>Raw HRRR</td><td>Bilinearly interpolated to the ANN 0.25° grid before accumulation predictors and verification fields are formed.</td></tr>
+          <tr><td>ANN-CSGD</td><td>Predictions on the same 0.25° grid and land mask.</td></tr>
+          <tr><td>MRMS observations</td><td>MultiSensor QPE 6-hour Pass2 fields sampled to the 0.25° grid with nearest-neighbor interpolation. One, two or four consecutive nonoverlapping 6-hour fields supply 6-, 12- or 24-hour verification totals. Missing observations are not replaced by zero.</td></tr>
+          <tr><td>Matching</td><td>Identical accumulation windows and matching grid coordinates. Scores use the applicable common finite land cells; ARI scores also require a valid local threshold. Regional views use the selected domain.</td></tr>
+        </tbody>
+      </table></div>
+      <p class="methods-caution"><strong>Resolution limitation.</strong> These operational comparisons are made at common 0.25° grid locations. They do not compare ANN-CSGD at 0.25° against HRRR verified independently on its native 3-km grid. However, bilinear interpolation for HRRR and nearest-neighbor sampling for MRMS are different spatial operations. They are not conservative area averages and can change local extremes and event frequencies. A common output grid therefore does not eliminate all differences in effective spatial resolution or representativeness.</p>
+      <h3>What the scores measure</h3>
+      <ul>
+        <li><strong>Amount errors:</strong> mean absolute error (MAE), root mean squared error (RMSE) and bias compare raw HRRR and ANN-CSGD expected rainfall with MRMS, cell by cell. Amount errors are displayed in inches. Positive MAE improvement means ANN-CSGD's absolute error was smaller.</li>
+        <li><strong>Brier score and Brier skill score (BSS):</strong> assess forecast probabilities against observed threshold events. The operational BSS reference is monthly historical MRMS event-frequency climatology. Positive skill indicates improvement over that reference. A zero or unavailable reference score cannot supply a defined skill score.</li>
+        <li><strong>POD, FAR and CSI:</strong> use yes/no events from precipitation amounts meeting or exceeding the threshold. For ANN-CSGD, the categorical event uses expected rainfall ≥ threshold; it does not use a probability cutoff.</li>
+        <li><strong>Fractions skill score (FSS):</strong> compares event fractions in 1 × 1, 3 × 3 and 5 × 5 grid-cell neighborhoods, with the applicable valid land mask. These neighborhood scores are distinct from the pointwise scores and are not object-based storm tracking.</li>
+      </ul>
+      <p>These are grid-cell and neighborhood verification methods. No storm-object identification, matching or tracking is used for these operational maps. A single cycle or rare threshold may have few events; use the reported sample counts and retained dates when interpreting its scores. Cross-system verification is a separate page and must be interpreted using that page's matched windows, samples and reference definitions.</p>
+      <p><a href="verification.html">Open operational verification</a> · <a href="model-comparison/">Compare verification performance</a></p>
+    </section>
+    <section class="panel" id="using-guidance">
+      <h2>Reading the forecast dashboard</h2>
+      <ul>
+        <li><strong>Initialization:</strong> the model's starting time, shown in UTC. The selector controls maps, animations and downloads for the chosen run. The latest-run card always identifies the newest published initialization.</li>
+        <li><strong>Forecast window:</strong> f00–f12, for example, is accumulated rainfall during the first twelve hours after initialization. Compare forecast systems only when accumulation duration and valid start and end times agree.</li>
+        <li><strong>Units:</strong> operational rainfall maps and amount metrics use inches; probabilities use percent. One inch equals 25.4 mm. Downloaded scientific data and metadata fields ending in <code>_mm</code> retain their original millimeter units. Research case-study figures retain their labeled original units.</li>
+        <li><strong>ARI:</strong> a local average recurrence interval rainfall threshold for the specified duration. A probability of exceeding a 2-year rainfall threshold is not a direct flash-flood probability.</li>
+        <li><strong>WPC ERO:</strong> the Excessive Rainfall Outlook describes a different hazard quantity from ANN-CSGD rainfall exceedance probabilities. Check the ERO issue time and valid period printed with the product.</li>
+        <li><strong>Past runs:</strong> the four most recent complete published runs are retained. Historical maps can be reconstructed only where the saved forecast products remain available. Missing archived animations or downloads are shown as unavailable for that run.</li>
+      </ul>
+      <p><a class="verification-dashboard-button" href="https://nasrinattar26.github.io/ann-csgd-worldcup-weather-hub/">Open GEFS forecast dashboard</a></p>
+      <p>The GEFS ANN-CSGD World Cup Weather Hub is a separate dashboard. Its initialization, valid periods and supported products may differ from those shown here.</p>
+    </section>
+    <section class="panel">
+      <h2>Implementation basis</h2>
+      <p>This description follows the operational source reviewed on 25 September 2026: HRRR regridding (04b), duration-specific training (50, 52, 53), inference (57), MRMS processing (47, 65), verification metrics (63, 68) and verification maps (74, 75). Display units and navigation updates do not change trained weights, forecast distributions or verification formulas.</p>
+    </section>
+  </main>
+  <footer><p>Research product developed by Nasrin Attar under the supervision of Prof. Yu Zhang at The University of Texas at Arlington.</p></footer>
+</body>
+</html>

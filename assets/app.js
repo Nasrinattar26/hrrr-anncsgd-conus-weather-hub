@@ -193,6 +193,7 @@ function renderForecastMap() {
     `forecast window ${window.label}`;
 
   image.onload = () => {
+    image.hidden = false;
     loading.hidden = true;
     image.classList.add("loaded");
   };
@@ -230,7 +231,10 @@ function changeDuration(durationKey) {
   renderForecastMap();
 }
 
+let mapListenersAttached = false;
 function attachMapListeners() {
+  if (mapListenersAttached) return;
+  mapListenersAttached = true;
   document
     .getElementById("map-duration")
     .addEventListener("change", event => {
@@ -1045,6 +1049,7 @@ function renderForecastGif() {
   fullLink.removeAttribute("aria-disabled");
 
   image.onload = () => {
+    image.hidden = false;
     loading.hidden = true;
     image.hidden = false;
   };
@@ -1738,119 +1743,123 @@ async function fetchJsonCatalog(url) {
   return response.json();
 }
 
-async function loadSite() {
-  try {
-    await loadCoreSite();
-  } catch (error) {
-    console.error(
-      "Core dashboard initialization failed:",
-      error
-    );
+let forecastRuns = [];
+let forecastRequest = 0;
+
+function runDisplay(init) {
+  return `${init.slice(0, 4)}-${init.slice(4, 6)}-${init.slice(6, 8)} ${init.slice(8, 10)}:00 UTC`;
+}
+
+function clearSelectedForecast() {
+  mapCatalog = null;
+  gifCatalog = null;
+  gribCatalog = null;
+  for (const id of ["forecast-map", "forecast-gif"]) {
+    const img = document.getElementById(id);
+    if (img) { img.hidden = true; img.removeAttribute("src"); }
   }
-
-  let summary;
-  let catalog;
-
-  try {
-    [summary, catalog] = await Promise.all([
-      fetchJsonCatalog("./data/site_summary.json"),
-      fetchJsonCatalog("./data/map_catalog.json")
-    ]);
-  } catch (error) {
-    console.error(
-      "Could not determine the operational initialization:",
-      error
-    );
-
-    setGifCatalogError(error);
-    setGribCatalogError(error);
-    return;
+  for (const id of ["forecast-map-full", "forecast-gif-full", "grib-package-download"]) {
+    const link = document.getElementById(id);
+    if (link) { link.removeAttribute("href"); link.setAttribute("aria-disabled", "true"); }
   }
-
-  const initialization = mediaResolveInitialization([
-    summary,
-    catalog
-  ]);
-
-  if (!initialization) {
-    const error = new Error(
-      "No YYYYMMDDHH initialization was found "
-      + "in the site metadata."
-    );
-
-    console.error(error);
-    setGifCatalogError(error);
-    setGribCatalogError(error);
-    return;
+  for (const id of ["forecast-map-title", "forecast-map-validity", "map-selection-summary", "forecast-gif-title"]) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = "Loading selected run…";
   }
-
-  const gifManifestUrl =
-    `./products/gifs/${initialization}/manifest.json`;
-
-  const gribManifestUrl =
-    `./products/grib2/${initialization}/manifest.json`;
-
-  const results = await Promise.allSettled([
-    fetchJsonCatalog(gifManifestUrl),
-    fetchJsonCatalog(gribManifestUrl)
-  ]);
-
-  const gifResult = results[0];
-  const gribResult = results[1];
-
-  if (gifResult.status === "fulfilled") {
-    const gifs = mediaAttachCatalogContext(
-      gifResult.value,
-      initialization,
-      "gifs"
-    );
-
-    initializeGifExplorer(gifs);
-  } else {
-    console.error(
-      "GIF manifest load failed:",
-      gifResult.reason
-    );
-
-    setGifCatalogError(gifResult.reason);
-  }
-
-  if (gribResult.status === "fulfilled") {
-    const grib = mediaAttachCatalogContext(
-      gribResult.value,
-      initialization,
-      "grib2"
-    );
-
-    renderGribDownloads(grib);
-  } else {
-    console.error(
-      "GRIB2 manifest load failed:",
-      gribResult.reason
-    );
-
-    setGribCatalogError(gribResult.reason);
+  const loading = document.getElementById("forecast-map-loading");
+  if (loading) { loading.hidden = false; loading.textContent = "Loading selected run…"; }
+  setGifCatalogError(new Error("Loading selected run"));
+  setGribCatalogError(new Error("Loading selected run"));
+  for (const id of ["map-duration", "map-window", "map-product", "previous-window", "next-window", "gif-duration", "gif-product"]) {
+    const el = document.getElementById(id);
+    if (el) el.disabled = true;
   }
 }
 
-
-
+async function loadSelectedForecast(init) {
+  const request = ++forecastRequest;
+  const run = forecastRuns.find(item => item.init === init);
+  if (!run) throw new Error("That initialization is not in the published archive.");
+  clearSelectedForecast();
+  const note = document.getElementById("forecast-run-note");
+  const badge = document.getElementById("map-catalog-status");
+  badge.textContent = `Loading INIT ${init}…`;
+  note.textContent = `Loading ${runDisplay(init)}…`;
+  const optional = path => path ? fetchJsonCatalog(path) : Promise.reject(new Error("Not archived for this initialization"));
+  const results = await Promise.allSettled([
+    fetchJsonCatalog(run.map_catalog), optional(run.gif_manifest), optional(run.grib_manifest)
+  ]);
+  if (request !== forecastRequest) return;
+  try {
+    if (results[0].status !== "fulfilled") throw results[0].reason;
+    const catalog = results[0].value;
+    if (String(catalog.init) !== init) throw new Error("The map catalog belongs to a different initialization.");
+    initializeMapExplorer(catalog);
+    for (const id of ["map-duration", "map-window", "map-product"]) document.getElementById(id).disabled = false;
+    document.getElementById("forecast-map-full")?.removeAttribute("aria-disabled");
+    note.textContent = `Viewing ${runDisplay(init)}${init === forecastRuns[0].init ? " · latest published run" : " · archived forecast"}. ${forecastRuns.length} run${forecastRuns.length === 1 ? "" : "s"} available. Maps, animations and downloads use this initialization.`;
+    const url = new URL(window.location.href);
+    url.searchParams.set("init", init);
+    window.history.replaceState(null, "", url);
+  } catch (error) {
+    badge.textContent = `INIT ${init} unavailable`;
+    note.textContent = `Could not load ${runDisplay(init)}: ${error.message}. Choose another run or reload.`;
+    const loading = document.getElementById("forecast-map-loading");
+    if (loading) loading.textContent = "Maps for the selected initialization could not be loaded.";
+    setGifCatalogError(error);
+    setGribCatalogError(error);
+    return;
+  }
+  for (const [index, kind] of [[1, "gifs"], [2, "grib2"]]) {
+    const result = results[index];
+    try {
+      if (result.status !== "fulfilled") throw result.reason;
+      const foundInit = mediaExtractInitialization(result.value);
+      if (foundInit && foundInit !== init) throw new Error("Manifest initialization mismatch");
+      const catalog = mediaAttachCatalogContext(result.value, init, kind);
+      if (kind === "gifs") {
+        initializeGifExplorer(catalog);
+        for (const id of ["gif-duration", "gif-product"]) document.getElementById(id).disabled = false;
+        document.getElementById("forecast-gif-full")?.removeAttribute("aria-disabled");
+      } else {
+        renderGribDownloads(catalog);
+      }
+    } catch (error) {
+      if (kind === "gifs") setGifCatalogError(error); else setGribCatalogError(error);
+    }
+  }
+}
 
 async function loadCoreSite() {
-  siteSummary = await fetchJson(
-    "./data/site_summary.json",
-    "site_summary_v2"
-  );
-
+  siteSummary = await fetchJsonCatalog("./data/site_summary.json");
   loadOverview(siteSummary);
-
-  const catalog = await fetchJson(
-    "./data/map_catalog.json",
-    `${siteSummary.latest_initialization}_maps`
-  );
-
-  initializeMapExplorer(catalog);
 }
+
+async function loadSite() {
+  await loadCoreSite();
+  const archive = await fetchJsonCatalog("./data/forecast-runs/catalog.json");
+  forecastRuns = archive.runs.filter(item => /^\d{10}$/.test(item.init) && item.map_catalog)
+    .sort((a, b) => b.init.localeCompare(a.init));
+  if (!forecastRuns.length) throw new Error("No complete forecasts are in the archive.");
+  const select = document.getElementById("forecast-init");
+  select.replaceChildren();
+  for (const [index, run] of forecastRuns.entries()) {
+    const option = document.createElement("option");
+    option.value = run.init;
+    option.textContent = `${runDisplay(run.init)}${index === 0 ? " · latest" : ""}`;
+    select.append(option);
+  }
+  select.disabled = false;
+  select.addEventListener("change", () => loadSelectedForecast(select.value).catch(console.error));
+  const requested = new URL(window.location.href).searchParams.get("init");
+  const known = forecastRuns.some(run => run.init === requested);
+  select.value = known ? requested : forecastRuns[0].init;
+  await loadSelectedForecast(select.value);
+  if (requested && !known) {
+    document.getElementById("forecast-run-note").textContent += ` Requested initialization ${requested} is not retained; the latest published forecast is shown.`;
+  }
+}
+
 
 loadSite().catch(error => {
   console.error(error);

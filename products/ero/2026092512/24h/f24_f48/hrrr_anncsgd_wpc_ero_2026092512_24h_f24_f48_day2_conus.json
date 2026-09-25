@@ -33,12 +33,12 @@
   "source_ero_geojson": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/github/hrrr-anncsgd-conus-weather-hub/products/ero/2026092512/source/Day2_normalized.geojson",
   "png_width": 3600,
   "png_height": 2070,
-  "png_bytes": 1039182,
-  "png_sha256": "b1f4d4aed9c86567421797eba52db5d93b9427a72ec80b2fb508f4e68e75e238",
+  "png_bytes": 1042072,
+  "png_sha256": "ec40f9734dfbe09d2759f9540d011c1ff82471e439aa27826fff3803a8c95dd7",
   "png_rgb_standard_deviation": [
-    43.511662119133725,
-    43.72203673432104,
-    43.844413617653736
+    43.280472099238274,
+    43.48822982981765,
+    43.60870791392299
   ],
   "wpc_ero_source_url": "https://www.wpc.ncep.noaa.gov/exper/eromap/geojson/Day2_Latest.geojson",
   "wpc_ero_official_geojson": "products/ero/2026092512/source/Day2_Latest.geojson",
@@ -52,5 +52,6 @@
     "MARGINAL",
     "SLIGHT"
   ],
-  "science_note_temporal": "The WPC ERO validity matches the HRRR 24-hour window."
+  "science_note_temporal": "The WPC ERO validity matches the HRRR 24-hour window.",
+  "display_amount_units": "inches"
 }

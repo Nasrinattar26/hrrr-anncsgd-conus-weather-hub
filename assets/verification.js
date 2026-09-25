@@ -1,5 +1,13 @@
 "use strict";
 
+// Display conversion only; source metadata remains in millimeters.
+function amountInches(value) {
+  if (value === null || value === undefined || value === "") return null;
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? parsed / 25.4 : null;
+}
+
+
 const MAP_TOP_CATALOG_URL =
   "data/verification/maps/map_catalog.json";
 
@@ -645,12 +653,12 @@ function renderProductDetails(product, metadata) {
       "ARI threshold range",
       (
         `${formatMetric(
-          metadata.threshold_field_statistics.minimum,
+          amountInches(metadata.threshold_field_statistics.minimum),
           2
         )}–${formatMetric(
-          metadata.threshold_field_statistics.maximum,
+          amountInches(metadata.threshold_field_statistics.maximum),
           2
-        )} mm`
+        )} in`
       ),
     ]);
   }
@@ -704,18 +712,18 @@ function renderMetricCards(product, metadata) {
     [
       (
         `${formatMetric(
-          metrics.raw_hrrr_mae_mm
-        )} mm`
+          amountInches(metrics.raw_hrrr_mae_mm)
+        )} in`
       ),
       (
         `${formatMetric(
-          metrics.ann_csgd_mae_mm
-        )} mm`
+          amountInches(metrics.ann_csgd_mae_mm)
+        )} in`
       ),
       (
         `${formatSignedMetric(
-          metrics.mae_improvement_mm
-        )} mm`
+          amountInches(metrics.mae_improvement_mm)
+        )} in`
       ),
       (
         `${formatSignedMetric(

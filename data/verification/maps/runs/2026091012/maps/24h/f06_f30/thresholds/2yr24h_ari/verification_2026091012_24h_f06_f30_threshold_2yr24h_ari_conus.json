@@ -195,20 +195,21 @@
   "product_id": "2026091012__24h__f06_f30__threshold_verification__2yr24h_ari__conus",
   "public_image_url": "data/verification/maps/runs/2026091012/maps/24h/f06_f30/thresholds/2yr24h_ari/verification_2026091012_24h_f06_f30_threshold_2yr24h_ari_conus.webp",
   "public_metadata_url": "data/verification/maps/runs/2026091012/maps/24h/f06_f30/thresholds/2yr24h_ari/verification_2026091012_24h_f06_f30_threshold_2yr24h_ari_conus.json",
-  "source_png_sha256": "2cc513cc6e9e89da66a1764abdae4cf61b1e0a87db797f7a2c9152cc8e1c4dd2",
+  "source_png_sha256": "22dbc16f28d016b7f0689b762c29cea458f4d7b83b48500ec62a7c60c4f0cf48",
   "public_webp_profile": {
     "name": "high",
     "maximum_width": 2200,
     "quality": 88,
     "method": 6
   },
-  "webp_bytes": 252894,
-  "webp_sha256": "5fea56b5d235f5d5ea1162560551299e4cb8b19d4ec9fe42171c264f75bd385c",
+  "webp_bytes": 252426,
+  "webp_sha256": "051420f0c1f62b7567dcf184672ad8db1a98dd2a7dcf640e6af8428d17ac6968",
   "webp_width": 2200,
-  "webp_height": 1377,
+  "webp_height": 1368,
   "webp_rgb_standard_deviation": [
-    39.28159540478702,
-    34.826562895161565,
-    38.10152931645311
-  ]
+    39.310049194949094,
+    34.89657499404015,
+    38.12834792535868
+  ],
+  "display_amount_units": "inches"
 }

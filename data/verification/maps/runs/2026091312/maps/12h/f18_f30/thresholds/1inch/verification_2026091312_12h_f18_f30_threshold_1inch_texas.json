@@ -41,7 +41,7 @@
   "threshold_type": "fixed",
   "threshold_source": "validated_metric_row",
   "spatially_varying_threshold": false,
-  "threshold_title_text": "1 inch / 25.4 mm",
+  "threshold_title_text": "1 inches",
   "threshold_field_statistics": {
     "count": 13318,
     "minimum": 25.399999618530273,
@@ -195,20 +195,21 @@
   "product_id": "2026091312__12h__f18_f30__threshold_verification__1inch__texas",
   "public_image_url": "data/verification/maps/runs/2026091312/maps/12h/f18_f30/thresholds/1inch/verification_2026091312_12h_f18_f30_threshold_1inch_texas.webp",
   "public_metadata_url": "data/verification/maps/runs/2026091312/maps/12h/f18_f30/thresholds/1inch/verification_2026091312_12h_f18_f30_threshold_1inch_texas.json",
-  "source_png_sha256": "998716c596095402267c2ee312523a681f0fe14798c3e1d31c8bd414bad92968",
+  "source_png_sha256": "19d2f8292d42b46ae629c770d05dbcd7b3d86f59352902a4e245eeaba9fee828",
   "public_webp_profile": {
     "name": "high",
     "maximum_width": 2200,
     "quality": 88,
     "method": 6
   },
-  "webp_bytes": 102850,
-  "webp_sha256": "81c1702965f2d5cb1e08b8e08a14b15f9a279b66a7004539b797d2f5c2f5747c",
+  "webp_bytes": 104854,
+  "webp_sha256": "69f915642fca837e62f7de63d02cbf55c20f3fc5b88fd1c4196695f4540f2325",
   "webp_width": 2200,
-  "webp_height": 1648,
+  "webp_height": 1636,
   "webp_rgb_standard_deviation": [
-    36.157335952074455,
-    33.277626140484905,
-    35.238785848633896
-  ]
+    36.076905529565494,
+    33.25144998897137,
+    35.176969390422904
+  ],
+  "display_amount_units": "inches"
 }
