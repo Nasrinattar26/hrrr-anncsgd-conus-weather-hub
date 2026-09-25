@@ -86,8 +86,13 @@
     </section>
     <section class="panel" id="forecast-comparison">
       <h2>Comparing GEFS and HRRR forecast maps</h2>
-      <p><a href="forecast-comparison/">Compare the two ANN-CSGD forecast systems</a> for identical 12-hour valid periods, using expected rainfall in inches and fixed-threshold probabilities in percent. The panels share the same color scale and common finite land cells on the existing 0.25° grid; no new interpolation is performed.</p>
-      <p>The daily pairing uses GEFS initialized at 00 UTC and HRRR initialized at 12 UTC on the same date. Their valid periods match, but GEFS has a 12-hour longer lead. These maps show forecast guidance and cannot establish comparative skill. The available products are expected rainfall and probabilities above 0.5, 1 and 2 inches. The separate GEFS 24-hour sampling product and local ARI thresholds are outside this comparison.</p>
+      <p><a href="forecast-comparison/">Compare the two ANN-CSGD forecast systems</a> for identical 12- or 24-hour valid periods, using expected rainfall in inches and fixed-threshold probabilities in percent. The panels share the same color scale and common finite land cells on the existing 0.25° grid; no new interpolation is performed.</p>
+      <p>The daily pairing uses GEFS initialized at 00 UTC and HRRR initialized at 12 UTC on the same date. Their valid periods match, but GEFS has a 12-hour longer lead. These maps show forecast guidance and cannot establish comparative skill. The available products are expected rainfall and the probability of exceeding 0.5, 1 and 2 inches. Local ARI thresholds are outside this comparison. A 6-hour GEFS-based ANN-CSGD counterpart is not available in the reviewed operational workflow; all three durations remain available for HRRR on its dashboard.</p>
+    </section>
+    <section class="panel" id="comparison-24h-method">
+      <h2>How the 24-hour GEFS comparison is constructed</h2>
+      <p>The existing GEFS RT7a product sums independent Monte Carlo draws from two non-overlapping 12-hour CSGD predictive distributions. Its 24-hour exceedance probabilities are the percentage of these sampled sums exceeding each fixed threshold. The actual sample count is read from the stored forecast metadata and displayed on the comparison page. Expected 24-hour rainfall is the sum of the two 12-hour expected values.</p>
+      <p>The HRRR panel uses its separate, directly predicted 24-hour CSGD distribution. Matching valid periods, thresholds and grid cells does not equalize these constructions. GEFS sampling assumes independence between the two periods and adds Monte Carlo variability; it does not preserve their temporal dependence. The comparison displays these existing products without running new sampling or inference. The renderer checks that the GEFS expected 24-hour amount equals the sum of the corresponding stored 12-hour expectations.</p>
     </section>
     <section class="panel">
       <h2>Implementation basis</h2>

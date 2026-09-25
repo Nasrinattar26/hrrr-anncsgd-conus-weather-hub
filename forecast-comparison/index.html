@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Compare GEFS-based and HRRR-based ANN-CSGD rainfall forecasts for matching 12-hour valid periods.">
+  <meta name="description" content="Compare GEFS-based and HRRR-based ANN-CSGD rainfall forecasts for matching 12- and 24-hour valid periods.">
   <title>Compare forecasts · ANN-CSGD Weather Hub</title>
   <link rel="stylesheet" href="../assets/style.css?v=20260729T180318Z">
-  <link rel="stylesheet" href="assets/comparison.css?v=1">
+  <link rel="stylesheet" href="assets/comparison.css?v=2">
 </head>
 <body>
   <nav class="global-site-nav" aria-label="Primary navigation"><div class="global-site-nav__inner">
@@ -21,7 +21,7 @@
   <header class="compare-hero"><div class="compare-wrap">
     <p class="eyebrow">Two forecast systems · One rainfall period</p>
     <h1>Compare GEFS and HRRR forecasts</h1>
-    <p>View ANN-CSGD guidance from both forecast systems with the same 12-hour rainfall period, threshold and color scale.</p>
+    <p>View ANN-CSGD guidance from both forecast systems with the same rainfall accumulation period, threshold and color scale.</p>
     <div class="compare-links">
       <a href="../index.html">HRRR forecast dashboard ↗</a>
       <a href="https://nasrinattar26.github.io/ann-csgd-worldcup-weather-hub/">GEFS forecast dashboard ↗</a>
@@ -38,9 +38,12 @@
       <p id="freshness" class="muted" aria-live="polite">Checking published runs…</p>
       <div class="compare-controls">
         <label for="compare-run">Forecast pair (UTC)<select id="compare-run" disabled><option>Loading…</option></select></label>
-        <label for="compare-window">12-hour valid period (UTC)<select id="compare-window" disabled><option>Loading…</option></select></label>
+        <label for="compare-duration">Accumulation duration<select id="compare-duration" disabled><option>Loading…</option></select></label>
+        <label for="compare-window">Valid period (UTC)<select id="compare-window" disabled><option>Loading…</option></select></label>
         <label for="compare-product">Forecast product<select id="compare-product" disabled><option>Loading…</option></select></label>
       </div>
+      <p id="comparison-method" class="comparison-method" role="note"></p>
+      <p id="hrrr-duration-help" hidden><a id="hrrr-duration-link" href="../index.html#forecast-workspace">View HRRR forecasts for this duration ↗</a></p>
       <div class="window-actions"><button id="previous" type="button" disabled>← Previous period</button><button id="next" type="button" disabled>Next period →</button></div>
       <p id="comparison-status" role="status" aria-live="polite">Loading forecast comparison…</p>
       <figure id="comparison-figure" hidden>
@@ -52,12 +55,13 @@
     <section class="compare-panel compare-explanation" aria-labelledby="reading-title">
       <h2 id="reading-title">Reading these maps</h2>
       <p>Expected rainfall is shown in inches. Exceedance probabilities are shown as percentages for the same fixed rainfall threshold in both panels. Both fields are displayed at matching 0.25° grid locations using their common finite land cells; no additional interpolation is performed for this page.</p>
-      <p>This page compares the two <strong>postprocessed ANN-CSGD systems</strong>. It includes the directly available 12-hour products: expected rainfall and probabilities above 0.5, 1 and 2 inches. The standard HRRR dashboard also provides 6- and 24-hour products. The GEFS 24-hour sampling product has a different construction and is outside this comparison.</p>
+      <p>This page compares the two <strong>postprocessed ANN-CSGD systems</strong> for 12- and 24-hour accumulations: expected rainfall and the probability of exceeding 0.5, 1 and 2 inches. The HRRR dashboard also provides 6-hour guidance. A 6-hour GEFS counterpart is not available in the reviewed daily workflow, so that selection explains the limitation and links to HRRR.</p>
+      <p><strong>The 24-hour methods differ.</strong> GEFS probabilities come from stored Monte Carlo samples of the sum of two non-overlapping 12-hour CSGD distributions, assuming independence between periods. GEFS expected rainfall is the sum of their expectations. HRRR uses its directly predicted 24-hour CSGD distribution. The GEFS construction does not represent temporal dependence between the two periods. Sampling variability also affects the probabilities. The sample count is displayed with the selected 24-hour forecast.</p>
       <p>Maps are generated from saved numerical forecast fields. Initialization times and lead intervals appear above both panels. Recent comparison pairs accumulate as the daily workflow publishes them, with up to four retained runs. A missing or invalid source produces an unavailable message for that run.</p>
       <p><a href="../methods.html#verification">Read the verification methods and spatial-resolution limitations</a>.</p>
     </section>
   </main>
   <footer><p>Research product developed by Nasrin Attar under the supervision of Prof. Yu Zhang at The University of Texas at Arlington.</p></footer>
-  <script src="assets/comparison.js?v=1"></script>
+  <script src="assets/comparison.js?v=2"></script>
 </body>
 </html>

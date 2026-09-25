@@ -26,7 +26,8 @@ let siteSummary = null;
 let mapCatalog = null;
 
 const mapState = {
-  durationKey: "12h",
+  durationKey: ["6h", "12h", "24h"].includes(new URL(window.location.href).searchParams.get("duration"))
+    ? new URL(window.location.href).searchParams.get("duration") : "12h",
   windowIndex: 0,
   productVariable: "expected_precip_mm"
 };
@@ -223,6 +224,9 @@ function renderForecastMap() {
 }
 
 function changeDuration(durationKey) {
+  const selectedUrl = new URL(window.location.href);
+  selectedUrl.searchParams.set("duration", durationKey);
+  window.history.replaceState(null, "", selectedUrl);
   mapState.durationKey = durationKey;
   mapState.windowIndex = 0;
 
@@ -646,48 +650,48 @@ function forecastProductLabel(
       "Expected precipitation",
 
     prob_gt_0p25in_percent:
-      "Probability > 0.25 inch",
+      "Probability of exceeding 0.25 inch",
     prob_gt_0p25inch_percent:
-      "Probability > 0.25 inch",
+      "Probability of exceeding 0.25 inch",
 
     prob_gt_0p5in_percent:
-      "Probability > 0.5 inch",
+      "Probability of exceeding 0.5 inch",
     prob_gt_0p5inch_percent:
-      "Probability > 0.5 inch",
+      "Probability of exceeding 0.5 inch",
 
     prob_gt_1in_percent:
-      "Probability > 1 inch",
+      "Probability of exceeding 1 inch",
     prob_gt_1inch_percent:
-      "Probability > 1 inch",
+      "Probability of exceeding 1 inch",
 
     prob_gt_2in_percent:
-      "Probability > 2 inches",
+      "Probability of exceeding 2 inches",
     prob_gt_2inch_percent:
-      "Probability > 2 inches",
+      "Probability of exceeding 2 inches",
 
     prob_gt_3in_percent:
-      "Probability > 3 inches",
+      "Probability of exceeding 3 inches",
     prob_gt_3inch_percent:
-      "Probability > 3 inches",
+      "Probability of exceeding 3 inches",
 
     prob_gt_5in_percent:
-      "Probability > 5 inches",
+      "Probability of exceeding 5 inches",
     prob_gt_5inch_percent:
-      "Probability > 5 inches",
+      "Probability of exceeding 5 inches",
 
     prob_gt_2yr6h_ari_percent:
-      "Probability > local 2-year ARI",
+      "Probability of exceeding local 2-year ARI",
     prob_gt_2yr12h_ari_percent:
-      "Probability > local 2-year ARI",
+      "Probability of exceeding local 2-year ARI",
     prob_gt_2yr24h_ari_percent:
-      "Probability > local 2-year ARI",
+      "Probability of exceeding local 2-year ARI",
 
     prob_gt_5yr6h_ari_percent:
-      "Probability > local 5-year ARI",
+      "Probability of exceeding local 5-year ARI",
     prob_gt_5yr12h_ari_percent:
-      "Probability > local 5-year ARI",
+      "Probability of exceeding local 5-year ARI",
     prob_gt_5yr24h_ari_percent:
-      "Probability > local 5-year ARI",
+      "Probability of exceeding local 5-year ARI",
 
     anncsgd_wpc_ero_comparison:
       "ANN-CSGD / WPC ERO Comparison",
@@ -731,14 +735,14 @@ function forecastProductOrder(
 
   const preferredOrder = [
     "Expected precipitation",
-    "Probability > 0.25 inch",
-    "Probability > 0.5 inch",
-    "Probability > 1 inch",
-    "Probability > 2 inches",
-    "Probability > 3 inches",
-    "Probability > 5 inches",
-    "Probability > local 2-year ARI",
-    "Probability > local 5-year ARI",
+    "Probability of exceeding 0.25 inch",
+    "Probability of exceeding 0.5 inch",
+    "Probability of exceeding 1 inch",
+    "Probability of exceeding 2 inches",
+    "Probability of exceeding 3 inches",
+    "Probability of exceeding 5 inches",
+    "Probability of exceeding local 2-year ARI",
+    "Probability of exceeding local 5-year ARI",
     "ANN-CSGD / WPC ERO Comparison"
   ];
 
