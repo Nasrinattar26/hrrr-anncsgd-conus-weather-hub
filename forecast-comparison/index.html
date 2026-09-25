@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Compare GEFS-based and HRRR-based ANN-CSGD rainfall forecasts for matching 12-hour valid periods.">
+  <title>Compare forecasts · ANN-CSGD Weather Hub</title>
+  <link rel="stylesheet" href="../assets/style.css?v=20260729T180318Z">
+  <link rel="stylesheet" href="assets/comparison.css?v=1">
+</head>
+<body>
+  <nav class="global-site-nav" aria-label="Primary navigation"><div class="global-site-nav__inner">
+    <a class="global-site-nav__brand" href="../index.html">ANN-CSGD Weather Hub</a>
+    <div class="global-site-nav__links">
+      <a href="../index.html">Forecasts</a>
+      <a href="./" aria-current="page">Compare forecasts</a>
+      <a href="../verification.html">Verification</a>
+      <a href="../methods.html">Methods and guidance</a>
+    </div>
+  </div></nav>
+  <header class="compare-hero"><div class="compare-wrap">
+    <p class="eyebrow">Two forecast systems · One rainfall period</p>
+    <h1>Compare GEFS and HRRR forecasts</h1>
+    <p>View ANN-CSGD guidance from both forecast systems with the same 12-hour rainfall period, threshold and color scale.</p>
+    <div class="compare-links">
+      <a href="../index.html">HRRR forecast dashboard ↗</a>
+      <a href="https://nasrinattar26.github.io/ann-csgd-worldcup-weather-hub/">GEFS forecast dashboard ↗</a>
+      <a href="../model-comparison/">Compare verification performance ↗</a>
+    </div>
+  </div></header>
+  <main class="compare-wrap">
+    <section class="comparison-note" aria-label="Comparison scope">
+      <strong>Same valid period, different starting times.</strong>
+      <p>The daily pairing uses the same date’s GEFS 00 UTC and HRRR 12 UTC forecasts. GEFS therefore has a 12-hour longer lead for the same rainfall period. These maps show differences in guidance; they do not establish which system is more skillful.</p>
+    </section>
+    <section class="compare-panel" aria-labelledby="explore-title">
+      <div class="compare-heading"><h2 id="explore-title">Explore a forecast pair</h2><button id="refresh" type="button">Refresh forecasts</button></div>
+      <p id="freshness" class="muted" aria-live="polite">Checking published runs…</p>
+      <div class="compare-controls">
+        <label for="compare-run">Forecast pair (UTC)<select id="compare-run" disabled><option>Loading…</option></select></label>
+        <label for="compare-window">12-hour valid period (UTC)<select id="compare-window" disabled><option>Loading…</option></select></label>
+        <label for="compare-product">Forecast product<select id="compare-product" disabled><option>Loading…</option></select></label>
+      </div>
+      <div class="window-actions"><button id="previous" type="button" disabled>← Previous period</button><button id="next" type="button" disabled>Next period →</button></div>
+      <p id="comparison-status" role="status" aria-live="polite">Loading forecast comparison…</p>
+      <figure id="comparison-figure" hidden>
+        <img id="comparison-image" alt="" decoding="async">
+        <figcaption><span id="comparison-caption"></span><a id="full-image" target="_blank" rel="noopener">Open full-size comparison ↗</a></figcaption>
+      </figure>
+      <noscript><p>Enable JavaScript to choose a forecast pair. Both individual forecast dashboards are linked above.</p></noscript>
+    </section>
+    <section class="compare-panel compare-explanation" aria-labelledby="reading-title">
+      <h2 id="reading-title">Reading these maps</h2>
+      <p>Expected rainfall is shown in inches. Exceedance probabilities are shown as percentages for the same fixed rainfall threshold in both panels. Both fields are displayed at matching 0.25° grid locations using their common finite land cells; no additional interpolation is performed for this page.</p>
+      <p>This page compares the two <strong>postprocessed ANN-CSGD systems</strong>. It includes the directly available 12-hour products: expected rainfall and probabilities above 0.5, 1 and 2 inches. The standard HRRR dashboard also provides 6- and 24-hour products. The GEFS 24-hour sampling product has a different construction and is outside this comparison.</p>
+      <p>Maps are generated from saved numerical forecast fields. Initialization times and lead intervals appear above both panels. Recent comparison pairs accumulate as the daily workflow publishes them, with up to four retained runs. A missing or invalid source produces an unavailable message for that run.</p>
+      <p><a href="../methods.html#verification">Read the verification methods and spatial-resolution limitations</a>.</p>
+    </section>
+  </main>
+  <footer><p>Research product developed by Nasrin Attar under the supervision of Prof. Yu Zhang at The University of Texas at Arlington.</p></footer>
+  <script src="assets/comparison.js?v=1"></script>
+</body>
+</html>

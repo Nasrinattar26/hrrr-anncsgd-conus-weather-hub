@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "latest_hrrr_initialization": "2026092512",
+  "generated_utc": "2026-09-25T21:30:18.537916+00:00",
+  "runs": [
+    {
+      "init": "2026092512",
+      "gefs_init": "2026092500",
+      "status": "ready",
+      "manifest": "data/forecast-comparison/runs/2026092512.json"
+    }
+  ]
+}

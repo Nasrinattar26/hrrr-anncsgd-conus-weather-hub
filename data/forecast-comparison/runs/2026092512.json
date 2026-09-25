@@ -1,0 +1,419 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "hrrr_init": "2026092512",
+  "gefs_init": "2026092500",
+  "duration_hours": 12,
+  "generated_utc": "2026-09-25T21:30:18.536685+00:00",
+  "input_fingerprint": "429deb33c938152b3e9db85bbe5ffd737ea77853fcf15c3237009a91c7b7d3ec",
+  "gefs_source_sha256": "47fbe2d91833d26e132bfc69c896abec82a6da500d7621108eb38860593728b7",
+  "render_version": "forecast-comparison-v1",
+  "grid": {
+    "spacing_degrees": 0.25,
+    "shape": [
+      117,
+      253
+    ],
+    "regridding_performed": false
+  },
+  "matching": "Same valid start, valid end, duration, threshold and common finite land cells. Initializations differ by 12 hours.",
+  "products": [
+    {
+      "id": "expected_precip",
+      "label": "Expected 12-hour rainfall",
+      "units": "inches",
+      "threshold_inch": null
+    },
+    {
+      "id": "prob_gt_0p5inch",
+      "label": "Chance of more than 0.5 inch in 12 hours",
+      "units": "%",
+      "threshold_inch": 0.5
+    },
+    {
+      "id": "prob_gt_1inch",
+      "label": "Chance of more than 1 inch in 12 hours",
+      "units": "%",
+      "threshold_inch": 1.0
+    },
+    {
+      "id": "prob_gt_2inch",
+      "label": "Chance of more than 2 inches in 12 hours",
+      "units": "%",
+      "threshold_inch": 2.0
+    }
+  ],
+  "windows": [
+    {
+      "id": "f00_f12",
+      "hrrr_init": "2026092512",
+      "gefs_init": "2026092500",
+      "duration_hours": 12,
+      "hrrr_end_fhr": 12,
+      "gefs_end_fhr": 24,
+      "valid_start": "2026-09-25T12:00:00Z",
+      "valid_end": "2026-09-26T00:00:00Z",
+      "hrrr_source_sha256": "310c2684e797f1c423fd9a0bbd213eb7ff4582c477ffd452ae5afebba041bb4f",
+      "products": [
+        {
+          "id": "expected_precip",
+          "label": "Expected 12-hour rainfall",
+          "units": "inches",
+          "threshold_inch": null,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f00_f12_expected_precip_429deb33c938.png",
+          "sha256": "f0c1799cfdcefef117c14844fb38cc93d4b20354fef487a94074110c0aa1d2ed",
+          "size_bytes": 313117
+        },
+        {
+          "id": "prob_gt_0p5inch",
+          "label": "Chance of more than 0.5 inch in 12 hours",
+          "units": "%",
+          "threshold_inch": 0.5,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f00_f12_prob_gt_0p5inch_429deb33c938.png",
+          "sha256": "88683c7b671e600598067d1361a2735204100e1292e08eb3c020f29931566fc3",
+          "size_bytes": 324115
+        },
+        {
+          "id": "prob_gt_1inch",
+          "label": "Chance of more than 1 inch in 12 hours",
+          "units": "%",
+          "threshold_inch": 1.0,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f00_f12_prob_gt_1inch_429deb33c938.png",
+          "sha256": "7797edfc134c183b97b69f3700e23ebe21a1f9d4226eef96d2cd800913d74482",
+          "size_bytes": 313834
+        },
+        {
+          "id": "prob_gt_2inch",
+          "label": "Chance of more than 2 inches in 12 hours",
+          "units": "%",
+          "threshold_inch": 2.0,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f00_f12_prob_gt_2inch_429deb33c938.png",
+          "sha256": "4bdf2a815cb95dce1650584c85faf47372a1a0c6a6cbc413408db0fd851c92dd",
+          "size_bytes": 307498
+        }
+      ]
+    },
+    {
+      "id": "f06_f18",
+      "hrrr_init": "2026092512",
+      "gefs_init": "2026092500",
+      "duration_hours": 12,
+      "hrrr_end_fhr": 18,
+      "gefs_end_fhr": 30,
+      "valid_start": "2026-09-25T18:00:00Z",
+      "valid_end": "2026-09-26T06:00:00Z",
+      "hrrr_source_sha256": "007f295c59380ae2cfc12bfe6e3fdc37f586a2e554dfb4cc4c87942b209f16ee",
+      "products": [
+        {
+          "id": "expected_precip",
+          "label": "Expected 12-hour rainfall",
+          "units": "inches",
+          "threshold_inch": null,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f06_f18_expected_precip_429deb33c938.png",
+          "sha256": "90f92c27b0785cb0bfbb3bedea82f33ab9a8a42a3ee9669ce56e6abaf13b2505",
+          "size_bytes": 314284
+        },
+        {
+          "id": "prob_gt_0p5inch",
+          "label": "Chance of more than 0.5 inch in 12 hours",
+          "units": "%",
+          "threshold_inch": 0.5,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f06_f18_prob_gt_0p5inch_429deb33c938.png",
+          "sha256": "84d759230a2c6ccc8cf1557204db3b6292bbabee9aff788da5d5624155b99429",
+          "size_bytes": 325434
+        },
+        {
+          "id": "prob_gt_1inch",
+          "label": "Chance of more than 1 inch in 12 hours",
+          "units": "%",
+          "threshold_inch": 1.0,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f06_f18_prob_gt_1inch_429deb33c938.png",
+          "sha256": "3ef7e9d2ce4f68f78fe559fa065259a1f99d0bfa24d1a117487ce954a90bcb2c",
+          "size_bytes": 315936
+        },
+        {
+          "id": "prob_gt_2inch",
+          "label": "Chance of more than 2 inches in 12 hours",
+          "units": "%",
+          "threshold_inch": 2.0,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f06_f18_prob_gt_2inch_429deb33c938.png",
+          "sha256": "56830093a50185732259610aa08443c02542a2ca8c635d6deddf86e8a60f657f",
+          "size_bytes": 309002
+        }
+      ]
+    },
+    {
+      "id": "f12_f24",
+      "hrrr_init": "2026092512",
+      "gefs_init": "2026092500",
+      "duration_hours": 12,
+      "hrrr_end_fhr": 24,
+      "gefs_end_fhr": 36,
+      "valid_start": "2026-09-26T00:00:00Z",
+      "valid_end": "2026-09-26T12:00:00Z",
+      "hrrr_source_sha256": "166ee67e3d5b7f5279acd7faf702b0a40e2d54790b894181980766aadfb41580",
+      "products": [
+        {
+          "id": "expected_precip",
+          "label": "Expected 12-hour rainfall",
+          "units": "inches",
+          "threshold_inch": null,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f12_f24_expected_precip_429deb33c938.png",
+          "sha256": "94cb97e7e27ebdd9b95466bb7dc9d141038c1852af1ba7f440cccdba09cd3f5d",
+          "size_bytes": 312002
+        },
+        {
+          "id": "prob_gt_0p5inch",
+          "label": "Chance of more than 0.5 inch in 12 hours",
+          "units": "%",
+          "threshold_inch": 0.5,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f12_f24_prob_gt_0p5inch_429deb33c938.png",
+          "sha256": "556b0edbee9eed09afefaae3378e65e243563114d2a045f5596d0c15a57fe59a",
+          "size_bytes": 322274
+        },
+        {
+          "id": "prob_gt_1inch",
+          "label": "Chance of more than 1 inch in 12 hours",
+          "units": "%",
+          "threshold_inch": 1.0,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f12_f24_prob_gt_1inch_429deb33c938.png",
+          "sha256": "6f77f5c58ad93425f6ebaf5b05b767ebe123f5bf366474ca5c7a462cc50731c0",
+          "size_bytes": 314655
+        },
+        {
+          "id": "prob_gt_2inch",
+          "label": "Chance of more than 2 inches in 12 hours",
+          "units": "%",
+          "threshold_inch": 2.0,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f12_f24_prob_gt_2inch_429deb33c938.png",
+          "sha256": "65d40d1a95c041c9cebd359fa51b85631bf20dacdad143d2c1cefb17d73b7c56",
+          "size_bytes": 308987
+        }
+      ]
+    },
+    {
+      "id": "f18_f30",
+      "hrrr_init": "2026092512",
+      "gefs_init": "2026092500",
+      "duration_hours": 12,
+      "hrrr_end_fhr": 30,
+      "gefs_end_fhr": 42,
+      "valid_start": "2026-09-26T06:00:00Z",
+      "valid_end": "2026-09-26T18:00:00Z",
+      "hrrr_source_sha256": "73f50ea766f56eeb7267a25210d9383b936e2b4f7562c7a76dd8678c1000bb98",
+      "products": [
+        {
+          "id": "expected_precip",
+          "label": "Expected 12-hour rainfall",
+          "units": "inches",
+          "threshold_inch": null,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f18_f30_expected_precip_429deb33c938.png",
+          "sha256": "4af26880a87a7556f9864fa4e619639f1f2ac4807adf4403597035c8afbc285d",
+          "size_bytes": 309778
+        },
+        {
+          "id": "prob_gt_0p5inch",
+          "label": "Chance of more than 0.5 inch in 12 hours",
+          "units": "%",
+          "threshold_inch": 0.5,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f18_f30_prob_gt_0p5inch_429deb33c938.png",
+          "sha256": "010d52efc7fea1806786f237d935abe64df52f293282e3f18da7757d2fc381e0",
+          "size_bytes": 319043
+        },
+        {
+          "id": "prob_gt_1inch",
+          "label": "Chance of more than 1 inch in 12 hours",
+          "units": "%",
+          "threshold_inch": 1.0,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f18_f30_prob_gt_1inch_429deb33c938.png",
+          "sha256": "bab61ce296b93ed8e4eed13dc4e25e32988d511c1c4193ac41b7afaa28094ee1",
+          "size_bytes": 313569
+        },
+        {
+          "id": "prob_gt_2inch",
+          "label": "Chance of more than 2 inches in 12 hours",
+          "units": "%",
+          "threshold_inch": 2.0,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f18_f30_prob_gt_2inch_429deb33c938.png",
+          "sha256": "f94370a7491aa34d103b18c5c8ac65e8bfd2ca009e37d595b26e31cb484eba49",
+          "size_bytes": 308463
+        }
+      ]
+    },
+    {
+      "id": "f24_f36",
+      "hrrr_init": "2026092512",
+      "gefs_init": "2026092500",
+      "duration_hours": 12,
+      "hrrr_end_fhr": 36,
+      "gefs_end_fhr": 48,
+      "valid_start": "2026-09-26T12:00:00Z",
+      "valid_end": "2026-09-27T00:00:00Z",
+      "hrrr_source_sha256": "e0eaa7778bb0bf78ed41fbc2a8c76cefc61d7cc346b78f29de9f438b22103213",
+      "products": [
+        {
+          "id": "expected_precip",
+          "label": "Expected 12-hour rainfall",
+          "units": "inches",
+          "threshold_inch": null,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f24_f36_expected_precip_429deb33c938.png",
+          "sha256": "b40c5a807f8e7ff6b08b97e075240b44e1f8e2952a4999ebdbbf5ca9b2febc51",
+          "size_bytes": 309230
+        },
+        {
+          "id": "prob_gt_0p5inch",
+          "label": "Chance of more than 0.5 inch in 12 hours",
+          "units": "%",
+          "threshold_inch": 0.5,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f24_f36_prob_gt_0p5inch_429deb33c938.png",
+          "sha256": "1c2c0c7b53735e8aea67d6d57c92937fbf1b7bd1e80dd92964fe91a050b4eebb",
+          "size_bytes": 317135
+        },
+        {
+          "id": "prob_gt_1inch",
+          "label": "Chance of more than 1 inch in 12 hours",
+          "units": "%",
+          "threshold_inch": 1.0,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f24_f36_prob_gt_1inch_429deb33c938.png",
+          "sha256": "a277695a775cf11d25ca5e796bdef7c043e41f449d87ecfba05fc137f997f070",
+          "size_bytes": 312107
+        },
+        {
+          "id": "prob_gt_2inch",
+          "label": "Chance of more than 2 inches in 12 hours",
+          "units": "%",
+          "threshold_inch": 2.0,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f24_f36_prob_gt_2inch_429deb33c938.png",
+          "sha256": "2796242faf34af8c99d0492a1aa2c5f72d0bd08fca00d38984c9a7c069b66d72",
+          "size_bytes": 308272
+        }
+      ]
+    },
+    {
+      "id": "f30_f42",
+      "hrrr_init": "2026092512",
+      "gefs_init": "2026092500",
+      "duration_hours": 12,
+      "hrrr_end_fhr": 42,
+      "gefs_end_fhr": 54,
+      "valid_start": "2026-09-26T18:00:00Z",
+      "valid_end": "2026-09-27T06:00:00Z",
+      "hrrr_source_sha256": "408a192737b93ae7b444aca9f94981661c99d9aac5f8857a79c3bd571947afef",
+      "products": [
+        {
+          "id": "expected_precip",
+          "label": "Expected 12-hour rainfall",
+          "units": "inches",
+          "threshold_inch": null,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f30_f42_expected_precip_429deb33c938.png",
+          "sha256": "c61f4318195e342babdf0735531717d1b1e6ea0e9bf11d732cb85a30653c2bd4",
+          "size_bytes": 309082
+        },
+        {
+          "id": "prob_gt_0p5inch",
+          "label": "Chance of more than 0.5 inch in 12 hours",
+          "units": "%",
+          "threshold_inch": 0.5,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f30_f42_prob_gt_0p5inch_429deb33c938.png",
+          "sha256": "7ecdd3a4806c291e2b3678f0cd55f2744e1195b301811f2aa76daeb96fb367c3",
+          "size_bytes": 318044
+        },
+        {
+          "id": "prob_gt_1inch",
+          "label": "Chance of more than 1 inch in 12 hours",
+          "units": "%",
+          "threshold_inch": 1.0,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f30_f42_prob_gt_1inch_429deb33c938.png",
+          "sha256": "8ac296a52cc3c392889d7c9829c101e777006c9197fcf3be84d46673a9f9afb0",
+          "size_bytes": 312433
+        },
+        {
+          "id": "prob_gt_2inch",
+          "label": "Chance of more than 2 inches in 12 hours",
+          "units": "%",
+          "threshold_inch": 2.0,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f30_f42_prob_gt_2inch_429deb33c938.png",
+          "sha256": "9b10dc13e61a31ca35c5566af128eca1a15001b402bd0351a543497557d2c484",
+          "size_bytes": 308586
+        }
+      ]
+    },
+    {
+      "id": "f36_f48",
+      "hrrr_init": "2026092512",
+      "gefs_init": "2026092500",
+      "duration_hours": 12,
+      "hrrr_end_fhr": 48,
+      "gefs_end_fhr": 60,
+      "valid_start": "2026-09-27T00:00:00Z",
+      "valid_end": "2026-09-27T12:00:00Z",
+      "hrrr_source_sha256": "54c215dfb7a0033d00f89747b67798a2933a7336da8a942fc6d36e567b56df43",
+      "products": [
+        {
+          "id": "expected_precip",
+          "label": "Expected 12-hour rainfall",
+          "units": "inches",
+          "threshold_inch": null,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f36_f48_expected_precip_429deb33c938.png",
+          "sha256": "8587b54d6ac9afc47c9de257bd648e0b58faece742ca192cd3cdfe12b714b201",
+          "size_bytes": 310582
+        },
+        {
+          "id": "prob_gt_0p5inch",
+          "label": "Chance of more than 0.5 inch in 12 hours",
+          "units": "%",
+          "threshold_inch": 0.5,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f36_f48_prob_gt_0p5inch_429deb33c938.png",
+          "sha256": "61039010b19616006aac74e2ffda6ee2bcec510d1001547950c69f1a33242fb2",
+          "size_bytes": 319673
+        },
+        {
+          "id": "prob_gt_1inch",
+          "label": "Chance of more than 1 inch in 12 hours",
+          "units": "%",
+          "threshold_inch": 1.0,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f36_f48_prob_gt_1inch_429deb33c938.png",
+          "sha256": "03af06b46bff0a4ec7370f7e5295964c081a15d03aaa3f69e24f228757410a97",
+          "size_bytes": 314637
+        },
+        {
+          "id": "prob_gt_2inch",
+          "label": "Chance of more than 2 inches in 12 hours",
+          "units": "%",
+          "threshold_inch": 2.0,
+          "common_valid_cells": 13318,
+          "path": "products/forecast-comparison/2026092512/f36_f48_prob_gt_2inch_429deb33c938.png",
+          "sha256": "24e673d2dc0c684d1f2dd38f9cb54f081a9b27533cc2e8aaefe8935f20b20bdb",
+          "size_bytes": 310170
+        }
+      ]
+    }
+  ]
+}

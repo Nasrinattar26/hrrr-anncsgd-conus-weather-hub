@@ -84,6 +84,11 @@
       <p><a class="verification-dashboard-button" href="https://nasrinattar26.github.io/ann-csgd-worldcup-weather-hub/">Open GEFS forecast dashboard</a></p>
       <p>The GEFS ANN-CSGD World Cup Weather Hub is a separate dashboard. Its initialization, valid periods and supported products may differ from those shown here.</p>
     </section>
+    <section class="panel" id="forecast-comparison">
+      <h2>Comparing GEFS and HRRR forecast maps</h2>
+      <p><a href="forecast-comparison/">Compare the two ANN-CSGD forecast systems</a> for identical 12-hour valid periods, using expected rainfall in inches and fixed-threshold probabilities in percent. The panels share the same color scale and common finite land cells on the existing 0.25° grid; no new interpolation is performed.</p>
+      <p>The daily pairing uses GEFS initialized at 00 UTC and HRRR initialized at 12 UTC on the same date. Their valid periods match, but GEFS has a 12-hour longer lead. These maps show forecast guidance and cannot establish comparative skill. The available products are expected rainfall and probabilities above 0.5, 1 and 2 inches. The separate GEFS 24-hour sampling product and local ARI thresholds are outside this comparison.</p>
+    </section>
     <section class="panel">
       <h2>Implementation basis</h2>
       <p>This description follows the operational source reviewed on 25 September 2026: HRRR regridding (04b), duration-specific training (50, 52, 53), inference (57), MRMS processing (47, 65), verification metrics (63, 68) and verification maps (74, 75). Display units and navigation updates do not change trained weights, forecast distributions or verification formulas.</p>
