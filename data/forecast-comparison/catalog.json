@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "latest_hrrr_initialization": "2026092512",
-  "generated_utc": "2026-09-25T22:34:51.457497+00:00",
+  "generated_utc": "2026-09-26T00:19:04.273802+00:00",
   "runs": [
     {
       "init": "2026092512",
