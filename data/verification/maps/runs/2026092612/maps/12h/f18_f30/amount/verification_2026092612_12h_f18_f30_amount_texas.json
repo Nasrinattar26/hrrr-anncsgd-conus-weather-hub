@@ -1,0 +1,84 @@
+{
+  "display_amount_units": "inches",
+  "status": "SUCCESS",
+  "product_family": "amount_verification",
+  "initialization": "2026092612",
+  "initialization_utc": "2026-09-26T12:00:00Z",
+  "duration_hours": 12,
+  "window": "f18_f30",
+  "lead_start_hour": 18,
+  "lead_end_hour": 30,
+  "valid_start_utc": "2026-09-27T06:00:00Z",
+  "valid_end_utc": "2026-09-27T18:00:00Z",
+  "domain": "texas",
+  "domain_label": "Texas regional view",
+  "domain_definition": "geographic_bounding_box",
+  "domain_extent": [
+    -107.5,
+    -92.5,
+    25.0,
+    37.2
+  ],
+  "common_domain_cell_count": 1930,
+  "land_cell_count": 13318,
+  "display_wet_threshold_mm": 0.1,
+  "wet_display_cell_count": 530,
+  "performance_label": "Raw HRRR has lower domain MAE",
+  "field_statistics": {
+    "raw_hrrr_precip_mm": {
+      "count": 1930,
+      "minimum": 0.0,
+      "maximum": 20.239999771118164,
+      "mean": 0.14127460931442254
+    },
+    "expected_precip_mm": {
+      "count": 1930,
+      "minimum": 0.019924048334360123,
+      "maximum": 4.223858833312988,
+      "mean": 0.3423429677726151
+    },
+    "mrms_observation_mm": {
+      "count": 1930,
+      "minimum": 0.0,
+      "maximum": 55.900001525878906,
+      "mean": 0.680000001794316
+    },
+    "absolute_error_improvement_mm": {
+      "count": 1930,
+      "minimum": -6.104517698287964,
+      "maximum": 17.453402280807495,
+      "mean": -0.02829498930742549
+    }
+  },
+  "summary_metrics": {
+    "raw_hrrr_mae_mm": 0.69962694158324,
+    "ann_csgd_mae_mm": 0.7279219308906655,
+    "mae_improvement_mm": -0.028294989307425467,
+    "mae_improvement_percent": -4.0442966995231115,
+    "raw_hrrr_rmse_mm": 3.421832370369817,
+    "ann_csgd_rmse_mm": 3.198627217125475,
+    "raw_hrrr_bias_mm": -0.5387253924798935,
+    "ann_csgd_bias_mm": -0.3376570340217009
+  },
+  "improvement_formula": "abs(raw_hrrr_mm - mrms_mm) - abs(ann_csgd_expected_mm - mrms_mm)",
+  "positive_improvement_meaning": "ANN-CSGD expected precipitation is closer to MRMS than raw HRRR",
+  "product_id": "2026092612__12h__f18_f30__amount_verification__texas",
+  "public_image_url": "data/verification/maps/runs/2026092612/maps/12h/f18_f30/amount/verification_2026092612_12h_f18_f30_amount_texas.webp",
+  "public_metadata_url": "data/verification/maps/runs/2026092612/maps/12h/f18_f30/amount/verification_2026092612_12h_f18_f30_amount_texas.json",
+  "source_png_sha256": "c3183bbbf8c4aef27ebf9be91b59033866aeb5ae357b9a455241260332e140a5",
+  "public_webp_profile": {
+    "name": "high",
+    "maximum_width": 2200,
+    "quality": 88,
+    "method": 6
+  },
+  "webp_bytes": 129352,
+  "webp_sha256": "0e655b112e9a0cab1b456dad29aece8550f6cf89d3461361d55acc2bd27bc7aa",
+  "webp_width": 2200,
+  "webp_height": 1452,
+  "webp_rgb_standard_deviation": [
+    43.33052498129459,
+    42.2817718258576,
+    44.042336671802616
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "display_amount_units": "inches",
+  "status": "SUCCESS",
+  "product_family": "amount_verification",
+  "initialization": "2026092612",
+  "initialization_utc": "2026-09-26T12:00:00Z",
+  "duration_hours": 6,
+  "window": "f24_f30",
+  "lead_start_hour": 24,
+  "lead_end_hour": 30,
+  "valid_start_utc": "2026-09-27T12:00:00Z",
+  "valid_end_utc": "2026-09-27T18:00:00Z",
+  "domain": "conus",
+  "domain_label": "CONUS",
+  "domain_definition": "geographic_bounding_box",
+  "domain_extent": [
+    -127.0,
+    -64.0,
+    23.0,
+    52.0
+  ],
+  "common_domain_cell_count": 13318,
+  "land_cell_count": 13318,
+  "display_wet_threshold_mm": 0.1,
+  "wet_display_cell_count": 2440,
+  "performance_label": "ANN-CSGD has lower domain MAE",
+  "field_statistics": {
+    "raw_hrrr_precip_mm": {
+      "count": 13318,
+      "minimum": 0.0,
+      "maximum": 50.63999557495117,
+      "mean": 0.32444586387814045
+    },
+    "expected_precip_mm": {
+      "count": 13318,
+      "minimum": 0.013309705071151257,
+      "maximum": 16.414657592773438,
+      "mean": 0.32764248210353014
+    },
+    "mrms_observation_mm": {
+      "count": 13318,
+      "minimum": 0.0,
+      "maximum": 49.70000076293945,
+      "mean": 0.31943234770747164
+    },
+    "absolute_error_improvement_mm": {
+      "count": 13318,
+      "minimum": -10.180665969848633,
+      "maximum": 41.6915922164917,
+      "mean": 0.04818292143481236
+    }
+  },
+  "summary_metrics": {
+    "raw_hrrr_mae_mm": 0.39176978307863847,
+    "ann_csgd_mae_mm": 0.34358686164382607,
+    "mae_improvement_mm": 0.0481829214348124,
+    "mae_improvement_percent": 12.298784519872177,
+    "raw_hrrr_rmse_mm": 2.1495095311207058,
+    "ann_csgd_rmse_mm": 1.553225989053956,
+    "raw_hrrr_bias_mm": 0.005013516170668797,
+    "ann_csgd_bias_mm": 0.008210134396058475
+  },
+  "improvement_formula": "abs(raw_hrrr_mm - mrms_mm) - abs(ann_csgd_expected_mm - mrms_mm)",
+  "positive_improvement_meaning": "ANN-CSGD expected precipitation is closer to MRMS than raw HRRR",
+  "product_id": "2026092612__6h__f24_f30__amount_verification__conus",
+  "public_image_url": "data/verification/maps/runs/2026092612/maps/6h/f24_f30/amount/verification_2026092612_6h_f24_f30_amount_conus.webp",
+  "public_metadata_url": "data/verification/maps/runs/2026092612/maps/6h/f24_f30/amount/verification_2026092612_6h_f24_f30_amount_conus.json",
+  "source_png_sha256": "01accfdad4c6b9274390d8c120805c0e80c5fa617c24d6e74bec9396545e91e5",
+  "public_webp_profile": {
+    "name": "high",
+    "maximum_width": 2200,
+    "quality": 88,
+    "method": 6
+  },
+  "webp_bytes": 266386,
+  "webp_sha256": "8655564a8ec14381f1806c43af84a25e7411037ce734665643ab20899265a5df",
+  "webp_width": 2200,
+  "webp_height": 1420,
+  "webp_rgb_standard_deviation": [
+    46.63943867416651,
+    45.32410460725786,
+    46.332741948059095
+  ]
+}
