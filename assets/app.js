@@ -1,3 +1,4 @@
+// WPC_QPF_ASSET_CACHE_V1
 function number(value, digits = 4) {
   return Number(value).toFixed(digits);
 }
@@ -182,7 +183,7 @@ function renderForecastMap() {
   const fullLink = document.getElementById("forecast-map-full");
 
   const imagePath = `./${product.path}`;
-  const version = `${mapCatalog.init}_${product.size_bytes}`;
+  const version = `${mapCatalog.init}_${product.sha256 || product.size_bytes}`;
   const versionedPath = cacheUrl(imagePath, version);
 
   loading.hidden = false;
@@ -1049,7 +1050,7 @@ function renderForecastGif() {
       : "Animated forecast sequence."
   );
 
-  fullLink.href = resolvedPath;
+  fullLink.href = cacheUrl(resolvedPath, entry.sha256 || entry.size_bytes || gifCatalog.created_utc || 'wpc-qpf-v1');
   fullLink.removeAttribute("aria-disabled");
 
   image.onload = () => {
@@ -1070,7 +1071,7 @@ function renderForecastGif() {
     + `${mediaProductLabel(variableName)} animation`
   );
 
-  image.src = resolvedPath;
+  image.src = cacheUrl(resolvedPath, entry.sha256 || entry.size_bytes || gifCatalog.created_utc || 'wpc-qpf-v1');
 }
 
 function attachGifListeners() {

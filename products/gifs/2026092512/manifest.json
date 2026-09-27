@@ -1,7 +1,7 @@
 {
   "title": "HRRR ANN-CSGD CONUS Forecast GIFs",
   "init": "2026092512",
-  "created_utc": "2026-09-25 17:15 UTC",
+  "created_utc": "2026-09-27T21:26:13.659320+00:00",
   "n_gifs": 22,
   "gifs": [
     {
@@ -14,8 +14,8 @@
       "frame_duration_ms": 1400,
       "final_frame_duration_ms": 2400,
       "width_pixels": 1200,
-      "height_pixels": 730,
-      "size_bytes": 1064817,
+      "height_pixels": 728,
+      "size_bytes": 1014195,
       "path": "products/gifs/2026092512/6h/expected_precip_mm.gif",
       "frame_sources": [
         "products/maps/2026092512/6h/f00_f06/expected_precip_mm.png",
@@ -26,7 +26,9 @@
         "products/maps/2026092512/6h/f30_f36/expected_precip_mm.png",
         "products/maps/2026092512/6h/f36_f42/expected_precip_mm.png",
         "products/maps/2026092512/6h/f42_f48/expected_precip_mm.png"
-      ]
+      ],
+      "sha256": "18e9e9c4dc876c1095a21f44e8ceacd294eaa90642f20c5b4609027c900f0c08",
+      "amount_palette": "wpc_qpf_gis_20260927_v1"
     },
     {
       "init": "2026092512",
@@ -182,8 +184,8 @@
       "frame_duration_ms": 1400,
       "final_frame_duration_ms": 2400,
       "width_pixels": 1200,
-      "height_pixels": 730,
-      "size_bytes": 967273,
+      "height_pixels": 728,
+      "size_bytes": 921820,
       "path": "products/gifs/2026092512/12h/expected_precip_mm.gif",
       "frame_sources": [
         "products/maps/2026092512/12h/f00_f12/expected_precip_mm.png",
@@ -193,7 +195,9 @@
         "products/maps/2026092512/12h/f24_f36/expected_precip_mm.png",
         "products/maps/2026092512/12h/f30_f42/expected_precip_mm.png",
         "products/maps/2026092512/12h/f36_f48/expected_precip_mm.png"
-      ]
+      ],
+      "sha256": "6ee99a05de6635001c7e35c65f83329e2447656dba7924f691c11d520dc17c84",
+      "amount_palette": "wpc_qpf_gis_20260927_v1"
     },
     {
       "init": "2026092512",
@@ -343,8 +347,8 @@
       "frame_duration_ms": 1400,
       "final_frame_duration_ms": 2400,
       "width_pixels": 1200,
-      "height_pixels": 730,
-      "size_bytes": 723091,
+      "height_pixels": 728,
+      "size_bytes": 685446,
       "path": "products/gifs/2026092512/24h/expected_precip_mm.gif",
       "frame_sources": [
         "products/maps/2026092512/24h/f00_f24/expected_precip_mm.png",
@@ -352,7 +356,9 @@
         "products/maps/2026092512/24h/f12_f36/expected_precip_mm.png",
         "products/maps/2026092512/24h/f18_f42/expected_precip_mm.png",
         "products/maps/2026092512/24h/f24_f48/expected_precip_mm.png"
-      ]
+      ],
+      "sha256": "eb4c74fbbfcfbd8c99c8fbe364627ba116635e57645f0c2043e7f1e676b33722",
+      "amount_palette": "wpc_qpf_gis_20260927_v1"
     },
     {
       "init": "2026092512",
@@ -501,5 +507,6 @@
         "products/maps/2026092512/24h/f24_f48/prob_gt_5yr24h_ari_percent.png"
       ]
     }
-  ]
+  ],
+  "amount_palette": "wpc_qpf_gis_20260927_v1"
 }

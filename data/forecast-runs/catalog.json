@@ -2,7 +2,7 @@
   "schema_version": 1,
   "latest_initialization": "2026092712",
   "retention_count": 4,
-  "updated_utc": "2026-09-27T16:47:30.597166+00:00",
+  "updated_utc": "2026-09-27T21:26:13.659320+00:00",
   "runs": [
     {
       "init": "2026092712",
@@ -10,7 +10,8 @@
       "gif_manifest": "products/gifs/2026092712/manifest.json",
       "grib_manifest": "products/grib2/2026092712/manifest.json",
       "map_count": 147,
-      "display_amount_units": "inches"
+      "display_amount_units": "inches",
+      "amount_palette": "wpc_qpf_gis_20260927_v1"
     },
     {
       "init": "2026092612",
@@ -18,7 +19,8 @@
       "gif_manifest": "products/gifs/2026092612/manifest.json",
       "grib_manifest": "products/grib2/2026092612/manifest.json",
       "map_count": 147,
-      "display_amount_units": "inches"
+      "display_amount_units": "inches",
+      "amount_palette": "wpc_qpf_gis_20260927_v1"
     },
     {
       "init": "2026092512",
@@ -26,7 +28,8 @@
       "gif_manifest": "products/gifs/2026092512/manifest.json",
       "grib_manifest": "products/grib2/2026092512/manifest.json",
       "map_count": 147,
-      "display_amount_units": "inches"
+      "display_amount_units": "inches",
+      "amount_palette": "wpc_qpf_gis_20260927_v1"
     },
     {
       "init": "2026092412",
@@ -34,7 +37,8 @@
       "gif_manifest": "products/gifs/2026092412/manifest.json",
       "grib_manifest": null,
       "map_count": 145,
-      "display_amount_units": "inches"
+      "display_amount_units": "inches",
+      "amount_palette": "wpc_qpf_gis_20260927_v1"
     }
   ]
 }

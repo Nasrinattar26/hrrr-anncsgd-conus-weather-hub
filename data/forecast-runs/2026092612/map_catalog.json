@@ -2,7 +2,7 @@
   "display_amount_units": "inches",
   "title": "HRRR ANN-CSGD CONUS Forecast Maps",
   "init": "2026092612",
-  "created_utc": "2026-09-26 16:45 UTC",
+  "created_utc": "2026-09-27T21:26:13.659320+00:00",
   "n_files": 145,
   "durations": {
     "6h": {
@@ -11,7 +11,8 @@
         {
           "variable": "expected_precip_mm",
           "label": "Expected precipitation",
-          "units": "inches"
+          "units": "inches",
+          "amount_palette": "wpc_qpf_gis_20260927_v1"
         },
         {
           "variable": "prob_gt_0p25inch_percent",
@@ -47,7 +48,7 @@
       "windows": [
         {
           "id": "f00_f06",
-          "label": "f00\u2013f06",
+          "label": "f00–f06",
           "start_fhr": 0,
           "end_fhr": 6,
           "products": [
@@ -61,7 +62,9 @@
               "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092612/6h/f00_f06/expected_precip_mm.png",
-              "size_bytes": 411760
+              "size_bytes": 403669,
+              "amount_palette": "wpc_qpf_gis_20260927_v1",
+              "sha256": "e87ce608531947e8b7355fc5e91f01b845b63aff8c0c71255f53e7542586ff1e"
             },
             {
               "duration_hours": 6,
@@ -139,7 +142,7 @@
         },
         {
           "id": "f06_f12",
-          "label": "f06\u2013f12",
+          "label": "f06–f12",
           "start_fhr": 6,
           "end_fhr": 12,
           "products": [
@@ -153,7 +156,9 @@
               "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092612/6h/f06_f12/expected_precip_mm.png",
-              "size_bytes": 412897
+              "size_bytes": 406010,
+              "amount_palette": "wpc_qpf_gis_20260927_v1",
+              "sha256": "ced45326780ff11a1c689283a8385d5c50d14f124b529822ed7faa0396061915"
             },
             {
               "duration_hours": 6,
@@ -231,7 +236,7 @@
         },
         {
           "id": "f12_f18",
-          "label": "f12\u2013f18",
+          "label": "f12–f18",
           "start_fhr": 12,
           "end_fhr": 18,
           "products": [
@@ -245,7 +250,9 @@
               "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092612/6h/f12_f18/expected_precip_mm.png",
-              "size_bytes": 413239
+              "size_bytes": 406668,
+              "amount_palette": "wpc_qpf_gis_20260927_v1",
+              "sha256": "f9aa45f641e947aa7f1f6df1b0d96b11880259c88abef57245c786fb751e96f2"
             },
             {
               "duration_hours": 6,
@@ -323,7 +330,7 @@
         },
         {
           "id": "f18_f24",
-          "label": "f18\u2013f24",
+          "label": "f18–f24",
           "start_fhr": 18,
           "end_fhr": 24,
           "products": [
@@ -337,7 +344,9 @@
               "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092612/6h/f18_f24/expected_precip_mm.png",
-              "size_bytes": 412740
+              "size_bytes": 405731,
+              "amount_palette": "wpc_qpf_gis_20260927_v1",
+              "sha256": "3ac7409386dae56f8c8a4aad82ba354a7e9920c222f1e75da8c33aa9151ed229"
             },
             {
               "duration_hours": 6,
@@ -415,7 +424,7 @@
         },
         {
           "id": "f24_f30",
-          "label": "f24\u2013f30",
+          "label": "f24–f30",
           "start_fhr": 24,
           "end_fhr": 30,
           "products": [
@@ -429,7 +438,9 @@
               "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092612/6h/f24_f30/expected_precip_mm.png",
-              "size_bytes": 411616
+              "size_bytes": 404979,
+              "amount_palette": "wpc_qpf_gis_20260927_v1",
+              "sha256": "713ad4193025023610d93b4f30e26543c4e2a28475644118d6f489d55048f069"
             },
             {
               "duration_hours": 6,
@@ -507,7 +518,7 @@
         },
         {
           "id": "f30_f36",
-          "label": "f30\u2013f36",
+          "label": "f30–f36",
           "start_fhr": 30,
           "end_fhr": 36,
           "products": [
@@ -521,7 +532,9 @@
               "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092612/6h/f30_f36/expected_precip_mm.png",
-              "size_bytes": 411007
+              "size_bytes": 407922,
+              "amount_palette": "wpc_qpf_gis_20260927_v1",
+              "sha256": "8c61877a6914b143ef00001eda7fc38db32294dd9169854072af99204f2b8edc"
             },
             {
               "duration_hours": 6,
@@ -599,7 +612,7 @@
         },
         {
           "id": "f36_f42",
-          "label": "f36\u2013f42",
+          "label": "f36–f42",
           "start_fhr": 36,
           "end_fhr": 42,
           "products": [
@@ -613,7 +626,9 @@
               "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092612/6h/f36_f42/expected_precip_mm.png",
-              "size_bytes": 411918
+              "size_bytes": 409589,
+              "amount_palette": "wpc_qpf_gis_20260927_v1",
+              "sha256": "2b06b554d62f6c00beb38362b2a068c8226f3efc77ac393f2e7addbc636bf13a"
             },
             {
               "duration_hours": 6,
@@ -691,7 +706,7 @@
         },
         {
           "id": "f42_f48",
-          "label": "f42\u2013f48",
+          "label": "f42–f48",
           "start_fhr": 42,
           "end_fhr": 48,
           "products": [
@@ -705,7 +720,9 @@
               "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092612/6h/f42_f48/expected_precip_mm.png",
-              "size_bytes": 414345
+              "size_bytes": 411376,
+              "amount_palette": "wpc_qpf_gis_20260927_v1",
+              "sha256": "f7aae54fc1bea7254fb31f7162dce9552ca2bd0c1edf47e8129855ed08dda303"
             },
             {
               "duration_hours": 6,
@@ -789,7 +806,8 @@
         {
           "variable": "expected_precip_mm",
           "label": "Expected precipitation",
-          "units": "inches"
+          "units": "inches",
+          "amount_palette": "wpc_qpf_gis_20260927_v1"
         },
         {
           "variable": "prob_gt_0p5inch_percent",
@@ -825,7 +843,7 @@
       "windows": [
         {
           "id": "f00_f12",
-          "label": "f00\u2013f12",
+          "label": "f00–f12",
           "start_fhr": 0,
           "end_fhr": 12,
           "products": [
@@ -839,7 +857,9 @@
               "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092612/12h/f00_f12/expected_precip_mm.png",
-              "size_bytes": 415953
+              "size_bytes": 407374,
+              "amount_palette": "wpc_qpf_gis_20260927_v1",
+              "sha256": "f1acc98cc31a4e4ff949468bef1945f2fddc0b8b072c84d882c1ac267a23c5eb"
             },
             {
               "duration_hours": 12,
@@ -917,7 +937,7 @@
         },
         {
           "id": "f06_f18",
-          "label": "f06\u2013f18",
+          "label": "f06–f18",
           "start_fhr": 6,
           "end_fhr": 18,
           "products": [
@@ -931,7 +951,9 @@
               "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092612/12h/f06_f18/expected_precip_mm.png",
-              "size_bytes": 418016
+              "size_bytes": 409366,
+              "amount_palette": "wpc_qpf_gis_20260927_v1",
+              "sha256": "7c25208374ead6ac56dd4e238423f8bb8458f6c81a8514b95ede935e1f67feb6"
             },
             {
               "duration_hours": 12,
@@ -1009,7 +1031,7 @@
         },
         {
           "id": "f12_f24",
-          "label": "f12\u2013f24",
+          "label": "f12–f24",
           "start_fhr": 12,
           "end_fhr": 24,
           "products": [
@@ -1023,7 +1045,9 @@
               "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092612/12h/f12_f24/expected_precip_mm.png",
-              "size_bytes": 417759
+              "size_bytes": 409144,
+              "amount_palette": "wpc_qpf_gis_20260927_v1",
+              "sha256": "84c57ff218bf69b5e6c4e8f23fa2fe75739ee97baa72f2afd31a8c3be77e3593"
             },
             {
               "duration_hours": 12,
@@ -1101,7 +1125,7 @@
         },
         {
           "id": "f18_f30",
-          "label": "f18\u2013f30",
+          "label": "f18–f30",
           "start_fhr": 18,
           "end_fhr": 30,
           "products": [
@@ -1115,7 +1139,9 @@
               "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092612/12h/f18_f30/expected_precip_mm.png",
-              "size_bytes": 415294
+              "size_bytes": 408701,
+              "amount_palette": "wpc_qpf_gis_20260927_v1",
+              "sha256": "49b542cbab940d8240fb98356edcc5c2ad4841ad29a6ea0c89c5057e4d70d7d2"
             },
             {
               "duration_hours": 12,
@@ -1193,7 +1219,7 @@
         },
         {
           "id": "f24_f36",
-          "label": "f24\u2013f36",
+          "label": "f24–f36",
           "start_fhr": 24,
           "end_fhr": 36,
           "products": [
@@ -1207,7 +1233,9 @@
               "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092612/12h/f24_f36/expected_precip_mm.png",
-              "size_bytes": 414750
+              "size_bytes": 410027,
+              "amount_palette": "wpc_qpf_gis_20260927_v1",
+              "sha256": "cf4f347c455c0c4c8221922ceec755c1c2416066845346a164a2feaf8f90c433"
             },
             {
               "duration_hours": 12,
@@ -1285,7 +1313,7 @@
         },
         {
           "id": "f30_f42",
-          "label": "f30\u2013f42",
+          "label": "f30–f42",
           "start_fhr": 30,
           "end_fhr": 42,
           "products": [
@@ -1299,7 +1327,9 @@
               "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092612/12h/f30_f42/expected_precip_mm.png",
-              "size_bytes": 416393
+              "size_bytes": 412735,
+              "amount_palette": "wpc_qpf_gis_20260927_v1",
+              "sha256": "291cee57f1b22fb23c32a557cd84fc0c4313b6e8ce5ae866e2d3adf4c738b750"
             },
             {
               "duration_hours": 12,
@@ -1377,7 +1407,7 @@
         },
         {
           "id": "f36_f48",
-          "label": "f36\u2013f48",
+          "label": "f36–f48",
           "start_fhr": 36,
           "end_fhr": 48,
           "products": [
@@ -1391,7 +1421,9 @@
               "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092612/12h/f36_f48/expected_precip_mm.png",
-              "size_bytes": 418095
+              "size_bytes": 413756,
+              "amount_palette": "wpc_qpf_gis_20260927_v1",
+              "sha256": "d79b2fd0a2b81a019e5a335b52490dfd8f8b0ed6a3147526d66cb05b0012e84e"
             },
             {
               "duration_hours": 12,
@@ -1475,7 +1507,8 @@
         {
           "variable": "expected_precip_mm",
           "label": "Expected precipitation",
-          "units": "inches"
+          "units": "inches",
+          "amount_palette": "wpc_qpf_gis_20260927_v1"
         },
         {
           "variable": "prob_gt_0p5inch_percent",
@@ -1516,7 +1549,7 @@
       "windows": [
         {
           "id": "f00_f24",
-          "label": "f00\u2013f24",
+          "label": "f00–f24",
           "start_fhr": 0,
           "end_fhr": 24,
           "products": [
@@ -1530,7 +1563,9 @@
               "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092612/24h/f00_f24/expected_precip_mm.png",
-              "size_bytes": 421267
+              "size_bytes": 411415,
+              "amount_palette": "wpc_qpf_gis_20260927_v1",
+              "sha256": "bd8cf4b38b3f3b7c5e6c6f0eb2681fc3035f058cfb89100c7a46c6754c54a9f2"
             },
             {
               "duration_hours": 24,
@@ -1622,7 +1657,7 @@
               "start_fhr": 0,
               "end_fhr": 24,
               "variable": "wpc_ero_comparison_day1",
-              "label": "WPC ERO Comparison \u2014 Day 1",
+              "label": "WPC ERO Comparison — Day 1",
               "units": "comparison",
               "kind": "image",
               "path": "products/ero/2026092612/24h/f00_f24/hrrr_anncsgd_wpc_ero_2026092612_24h_f00_f24_day1_conus.png",
@@ -1635,7 +1670,7 @@
         },
         {
           "id": "f06_f30",
-          "label": "f06\u2013f30",
+          "label": "f06–f30",
           "start_fhr": 6,
           "end_fhr": 30,
           "products": [
@@ -1649,7 +1684,9 @@
               "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092612/24h/f06_f30/expected_precip_mm.png",
-              "size_bytes": 421761
+              "size_bytes": 412357,
+              "amount_palette": "wpc_qpf_gis_20260927_v1",
+              "sha256": "787e191e961700e38e90f72228c381561025f009eb23c0e4e2b32762696b2797"
             },
             {
               "duration_hours": 24,
@@ -1739,7 +1776,7 @@
         },
         {
           "id": "f12_f36",
-          "label": "f12\u2013f36",
+          "label": "f12–f36",
           "start_fhr": 12,
           "end_fhr": 36,
           "products": [
@@ -1753,7 +1790,9 @@
               "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092612/24h/f12_f36/expected_precip_mm.png",
-              "size_bytes": 421306
+              "size_bytes": 414594,
+              "amount_palette": "wpc_qpf_gis_20260927_v1",
+              "sha256": "5a642ebe11c23cb41a3ae0e07c2840c53c77e2cffdf4c21ed525d301919ce03a"
             },
             {
               "duration_hours": 24,
@@ -1843,7 +1882,7 @@
         },
         {
           "id": "f18_f42",
-          "label": "f18\u2013f42",
+          "label": "f18–f42",
           "start_fhr": 18,
           "end_fhr": 42,
           "products": [
@@ -1857,7 +1896,9 @@
               "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092612/24h/f18_f42/expected_precip_mm.png",
-              "size_bytes": 421936
+              "size_bytes": 416963,
+              "amount_palette": "wpc_qpf_gis_20260927_v1",
+              "sha256": "70ac32aef24300223fbada2c77e05316df10425a4de7f05e4f661dd9cdc38282"
             },
             {
               "duration_hours": 24,
@@ -1947,7 +1988,7 @@
         },
         {
           "id": "f24_f48",
-          "label": "f24\u2013f48",
+          "label": "f24–f48",
           "start_fhr": 24,
           "end_fhr": 48,
           "products": [
@@ -1961,7 +2002,9 @@
               "units": "inches",
               "kind": "image",
               "path": "products/maps/2026092612/24h/f24_f48/expected_precip_mm.png",
-              "size_bytes": 423791
+              "size_bytes": 417275,
+              "amount_palette": "wpc_qpf_gis_20260927_v1",
+              "sha256": "1734fa581542ea76e3eae281eaf3541df62e74fcfae2a276534738726b24bcb4"
             },
             {
               "duration_hours": 24,
@@ -2053,7 +2096,7 @@
               "start_fhr": 24,
               "end_fhr": 48,
               "variable": "wpc_ero_comparison_day2",
-              "label": "WPC ERO Comparison \u2014 Day 2",
+              "label": "WPC ERO Comparison — Day 2",
               "units": "comparison",
               "kind": "image",
               "path": "products/ero/2026092612/24h/f24_f48/hrrr_anncsgd_wpc_ero_2026092612_24h_f24_f48_day2_conus.png",
@@ -2078,7 +2121,9 @@
       "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092612/6h/f00_f06/expected_precip_mm.png",
-      "size_bytes": 411760
+      "size_bytes": 403669,
+      "amount_palette": "wpc_qpf_gis_20260927_v1",
+      "sha256": "e87ce608531947e8b7355fc5e91f01b845b63aff8c0c71255f53e7542586ff1e"
     },
     {
       "duration_hours": 6,
@@ -2162,7 +2207,9 @@
       "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092612/6h/f06_f12/expected_precip_mm.png",
-      "size_bytes": 412897
+      "size_bytes": 406010,
+      "amount_palette": "wpc_qpf_gis_20260927_v1",
+      "sha256": "ced45326780ff11a1c689283a8385d5c50d14f124b529822ed7faa0396061915"
     },
     {
       "duration_hours": 6,
@@ -2246,7 +2293,9 @@
       "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092612/6h/f12_f18/expected_precip_mm.png",
-      "size_bytes": 413239
+      "size_bytes": 406668,
+      "amount_palette": "wpc_qpf_gis_20260927_v1",
+      "sha256": "f9aa45f641e947aa7f1f6df1b0d96b11880259c88abef57245c786fb751e96f2"
     },
     {
       "duration_hours": 6,
@@ -2330,7 +2379,9 @@
       "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092612/6h/f18_f24/expected_precip_mm.png",
-      "size_bytes": 412740
+      "size_bytes": 405731,
+      "amount_palette": "wpc_qpf_gis_20260927_v1",
+      "sha256": "3ac7409386dae56f8c8a4aad82ba354a7e9920c222f1e75da8c33aa9151ed229"
     },
     {
       "duration_hours": 6,
@@ -2414,7 +2465,9 @@
       "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092612/6h/f24_f30/expected_precip_mm.png",
-      "size_bytes": 411616
+      "size_bytes": 404979,
+      "amount_palette": "wpc_qpf_gis_20260927_v1",
+      "sha256": "713ad4193025023610d93b4f30e26543c4e2a28475644118d6f489d55048f069"
     },
     {
       "duration_hours": 6,
@@ -2498,7 +2551,9 @@
       "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092612/6h/f30_f36/expected_precip_mm.png",
-      "size_bytes": 411007
+      "size_bytes": 407922,
+      "amount_palette": "wpc_qpf_gis_20260927_v1",
+      "sha256": "8c61877a6914b143ef00001eda7fc38db32294dd9169854072af99204f2b8edc"
     },
     {
       "duration_hours": 6,
@@ -2582,7 +2637,9 @@
       "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092612/6h/f36_f42/expected_precip_mm.png",
-      "size_bytes": 411918
+      "size_bytes": 409589,
+      "amount_palette": "wpc_qpf_gis_20260927_v1",
+      "sha256": "2b06b554d62f6c00beb38362b2a068c8226f3efc77ac393f2e7addbc636bf13a"
     },
     {
       "duration_hours": 6,
@@ -2666,7 +2723,9 @@
       "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092612/6h/f42_f48/expected_precip_mm.png",
-      "size_bytes": 414345
+      "size_bytes": 411376,
+      "amount_palette": "wpc_qpf_gis_20260927_v1",
+      "sha256": "f7aae54fc1bea7254fb31f7162dce9552ca2bd0c1edf47e8129855ed08dda303"
     },
     {
       "duration_hours": 6,
@@ -2750,7 +2809,9 @@
       "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092612/12h/f00_f12/expected_precip_mm.png",
-      "size_bytes": 415953
+      "size_bytes": 407374,
+      "amount_palette": "wpc_qpf_gis_20260927_v1",
+      "sha256": "f1acc98cc31a4e4ff949468bef1945f2fddc0b8b072c84d882c1ac267a23c5eb"
     },
     {
       "duration_hours": 12,
@@ -2834,7 +2895,9 @@
       "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092612/12h/f06_f18/expected_precip_mm.png",
-      "size_bytes": 418016
+      "size_bytes": 409366,
+      "amount_palette": "wpc_qpf_gis_20260927_v1",
+      "sha256": "7c25208374ead6ac56dd4e238423f8bb8458f6c81a8514b95ede935e1f67feb6"
     },
     {
       "duration_hours": 12,
@@ -2918,7 +2981,9 @@
       "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092612/12h/f12_f24/expected_precip_mm.png",
-      "size_bytes": 417759
+      "size_bytes": 409144,
+      "amount_palette": "wpc_qpf_gis_20260927_v1",
+      "sha256": "84c57ff218bf69b5e6c4e8f23fa2fe75739ee97baa72f2afd31a8c3be77e3593"
     },
     {
       "duration_hours": 12,
@@ -3002,7 +3067,9 @@
       "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092612/12h/f18_f30/expected_precip_mm.png",
-      "size_bytes": 415294
+      "size_bytes": 408701,
+      "amount_palette": "wpc_qpf_gis_20260927_v1",
+      "sha256": "49b542cbab940d8240fb98356edcc5c2ad4841ad29a6ea0c89c5057e4d70d7d2"
     },
     {
       "duration_hours": 12,
@@ -3086,7 +3153,9 @@
       "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092612/12h/f24_f36/expected_precip_mm.png",
-      "size_bytes": 414750
+      "size_bytes": 410027,
+      "amount_palette": "wpc_qpf_gis_20260927_v1",
+      "sha256": "cf4f347c455c0c4c8221922ceec755c1c2416066845346a164a2feaf8f90c433"
     },
     {
       "duration_hours": 12,
@@ -3170,7 +3239,9 @@
       "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092612/12h/f30_f42/expected_precip_mm.png",
-      "size_bytes": 416393
+      "size_bytes": 412735,
+      "amount_palette": "wpc_qpf_gis_20260927_v1",
+      "sha256": "291cee57f1b22fb23c32a557cd84fc0c4313b6e8ce5ae866e2d3adf4c738b750"
     },
     {
       "duration_hours": 12,
@@ -3254,7 +3325,9 @@
       "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092612/12h/f36_f48/expected_precip_mm.png",
-      "size_bytes": 418095
+      "size_bytes": 413756,
+      "amount_palette": "wpc_qpf_gis_20260927_v1",
+      "sha256": "d79b2fd0a2b81a019e5a335b52490dfd8f8b0ed6a3147526d66cb05b0012e84e"
     },
     {
       "duration_hours": 12,
@@ -3338,7 +3411,9 @@
       "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092612/24h/f00_f24/expected_precip_mm.png",
-      "size_bytes": 421267
+      "size_bytes": 411415,
+      "amount_palette": "wpc_qpf_gis_20260927_v1",
+      "sha256": "bd8cf4b38b3f3b7c5e6c6f0eb2681fc3035f058cfb89100c7a46c6754c54a9f2"
     },
     {
       "duration_hours": 24,
@@ -3434,7 +3509,9 @@
       "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092612/24h/f06_f30/expected_precip_mm.png",
-      "size_bytes": 421761
+      "size_bytes": 412357,
+      "amount_palette": "wpc_qpf_gis_20260927_v1",
+      "sha256": "787e191e961700e38e90f72228c381561025f009eb23c0e4e2b32762696b2797"
     },
     {
       "duration_hours": 24,
@@ -3530,7 +3607,9 @@
       "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092612/24h/f12_f36/expected_precip_mm.png",
-      "size_bytes": 421306
+      "size_bytes": 414594,
+      "amount_palette": "wpc_qpf_gis_20260927_v1",
+      "sha256": "5a642ebe11c23cb41a3ae0e07c2840c53c77e2cffdf4c21ed525d301919ce03a"
     },
     {
       "duration_hours": 24,
@@ -3626,7 +3705,9 @@
       "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092612/24h/f18_f42/expected_precip_mm.png",
-      "size_bytes": 421936
+      "size_bytes": 416963,
+      "amount_palette": "wpc_qpf_gis_20260927_v1",
+      "sha256": "70ac32aef24300223fbada2c77e05316df10425a4de7f05e4f661dd9cdc38282"
     },
     {
       "duration_hours": 24,
@@ -3722,7 +3803,9 @@
       "units": "inches",
       "kind": "image",
       "path": "products/maps/2026092612/24h/f24_f48/expected_precip_mm.png",
-      "size_bytes": 423791
+      "size_bytes": 417275,
+      "amount_palette": "wpc_qpf_gis_20260927_v1",
+      "sha256": "1734fa581542ea76e3eae281eaf3541df62e74fcfae2a276534738726b24bcb4"
     },
     {
       "duration_hours": 24,
@@ -3808,5 +3891,6 @@
       "path": "products/maps/2026092612/24h/f24_f48/prob_gt_5yr24h_ari_percent.png",
       "size_bytes": 416642
     }
-  ]
+  ],
+  "amount_palette": "wpc_qpf_gis_20260927_v1"
 }
