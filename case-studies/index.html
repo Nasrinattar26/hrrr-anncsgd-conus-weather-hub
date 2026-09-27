@@ -22,6 +22,7 @@
       </div>
       <p id="window-help" class="selection-note">“Maps” marks the window with detailed figures. Scores are available for every window.</p>
     </section>
+    <p id="case-study-note" class="selection-note" aria-live="polite"></p>
     <section id="pending" hidden><h2>Results pending</h2><p id="pending-message"></p></section>
     <div id="scored-content">
       <section id="maps" aria-labelledby="maps-title">
@@ -53,30 +54,15 @@
         <p id="observed" class="observed"></p>
         <p id="finding" class="finding" aria-live="polite"></p>
         <div class="score-wrap" role="region" aria-label="Scores for the selected window" tabindex="0">
-          <table><thead><tr><th scope="col">Model</th><th scope="col">Mean rainfall<br>mm</th><th scope="col">CRPS ↓<br>mm</th><th scope="col">Brier score ↓</th><th scope="col">ROC AUC ↑</th></tr></thead><tbody id="scores"></tbody></table>
+          <table><thead><tr><th scope="col">Model</th><th scope="col">Mean rainfall<br><span id="rainfall-unit">mm</span></th><th scope="col">CRPS ↓<br><span id="crps-unit">mm</span></th><th scope="col">Brier score ↓</th><th scope="col">ROC AUC ↑</th></tr></thead><tbody id="scores"></tbody></table>
         </div>
       </section>
       <details id="all-windows" class="foldout">
-        <summary>Compare both storms · all windows</summary>
-        <div class="foldout-content">
-          <p>GNN has lower average CRPS for Hill Country; ANN has lower average CRPS for Edouard.</p>
-          <div class="score-wrap" role="region" aria-label="All-window CRPS comparison" tabindex="0"><table>
-            <caption>Average CRPS (mm), lower is better</caption>
-            <thead><tr><th scope="col">Storm</th><th scope="col">Duration</th><th scope="col">Windows</th><th scope="col">ANN</th><th scope="col">GNN</th></tr></thead>
-            <tbody>
-              <tr><th scope="row">Hill Country</th><td>6 h</td><td>16</td><td>3.6194</td><td>3.5933</td></tr>
-              <tr><th scope="row">Hill Country</th><td>12 h</td><td>16</td><td>6.4612</td><td>6.3823</td></tr>
-              <tr><th scope="row">Hill Country</th><td>24 h</td><td>16</td><td>10.8960</td><td>10.7211</td></tr>
-              <tr><th scope="row">Edouard</th><td>6 h</td><td>14</td><td>1.5928</td><td>1.6216</td></tr>
-              <tr><th scope="row">Edouard</th><td>12 h</td><td>11</td><td>2.7829</td><td>2.8277</td></tr>
-              <tr><th scope="row">Edouard</th><td>24 h</td><td>7</td><td>5.4736</td><td>5.6554</td></tr>
-            </tbody>
-          </table></div>
-          <p>For average Brier score, GNN leads in 8 of 13 Hill Country duration–threshold comparisons. ANN leads in all 13 for Edouard.</p>
-          <p class="muted">Each window has equal weight within its duration. Windows overlap; these differences are descriptive. ANN references are the controlled 0.25° model for Hill Country and the operational 0.25° model for Edouard.</p>
-          <div class="download-row"><a href="downloads/all_windows_crps.csv" download>CRPS CSV</a><a href="downloads/all_windows_brier.csv" download>Brier CSV</a><a href="downloads/gnn_storm_review.md" download>Full review</a></div>
-        </div>
-      </details>
+        <summary>Compare scored cases · all windows</summary><div class="foldout-content">
+        <p>Mean CRPS in inches; lower is better. Each window has equal weight within its duration.</p>
+        <div class="score-wrap"><table><thead><tr><th>Case</th><th>Duration</th><th>Windows</th><th>Raw HRRR</th><th>ANN</th><th>GNN</th></tr></thead><tbody><tr><th scope="row">Texas Hill Country floods, July 2025</th><td>6 h</td><td>16</td><td>0.2166</td><td>0.1425</td><td>0.1415</td></tr><tr><th scope="row">Texas Hill Country floods, July 2025</th><td>12 h</td><td>16</td><td>0.3908</td><td>0.2544</td><td>0.2513</td></tr><tr><th scope="row">Texas Hill Country floods, July 2025</th><td>24 h</td><td>16</td><td>0.6816</td><td>0.4290</td><td>0.4221</td></tr><tr><th scope="row">Tropical Storm Edouard, September 2026</th><td>6 h</td><td>14</td><td>0.1151</td><td>0.0627</td><td>0.0638</td></tr><tr><th scope="row">Tropical Storm Edouard, September 2026</th><td>12 h</td><td>11</td><td>0.1874</td><td>0.1096</td><td>0.1113</td></tr><tr><th scope="row">Tropical Storm Edouard, September 2026</th><td>24 h</td><td>7</td><td>0.3413</td><td>0.2155</td><td>0.2227</td></tr><tr><th scope="row">North Texas rainfall, August 21–22, 2022 (training period)</th><td>6 h</td><td>12</td><td>0.2917</td><td>0.1731</td><td>0.1728</td></tr><tr><th scope="row">North Texas rainfall, August 21–22, 2022 (training period)</th><td>12 h</td><td>10</td><td>0.5267</td><td>0.3113</td><td>0.3096</td></tr><tr><th scope="row">North Texas rainfall, August 21–22, 2022 (training period)</th><td>24 h</td><td>6</td><td>0.8777</td><td>0.5402</td><td>0.5348</td></tr><tr><th scope="row">North/Central Texas rainfall, March 4, 2026</th><td>6 h</td><td>10</td><td>0.0425</td><td>0.0253</td><td>0.0254</td></tr><tr><th scope="row">North/Central Texas rainfall, March 4, 2026</th><td>12 h</td><td>9</td><td>0.0581</td><td>0.0332</td><td>0.0321</td></tr><tr><th scope="row">North/Central Texas rainfall, March 4, 2026</th><td>24 h</td><td>6</td><td>0.0868</td><td>0.0511</td><td>0.0493</td></tr></tbody></table></div>
+        <p class="muted">The 2022 case overlaps model training. Other cases use different regions and forecast cycles. These descriptive scores do not establish a general model ranking. Overlapping windows are dependent. ANN uses the 0.25° reference available for each case.</p>
+        </div></details>
       <details class="foldout" id="methods">
         <summary>Methods, sources and downloads</summary>
         <div class="foldout-content">
@@ -95,8 +81,8 @@
     <noscript><p>Enable JavaScript to view the maps. <a href="downloads/all_windows_crps.csv">Download the CRPS summary.</a></p></noscript>
   </main>
   <footer>MRMS · HRRR · ANN-CSGD · GNN-CSGD</footer>
-  <script src="assets/map-data.js"></script>
-  <script src="assets/map-hover-data.js?v=point-hover-20260914"></script>
-  <script src="assets/map-gallery.js?v=point-hover-20260914"></script>
+  <script src="assets/map-data.js?v=cases-20260927T173007549919Z"></script>
+  <script src="assets/map-hover-data.js?v=cases-20260927T173007549919Z"></script>
+  <script src="assets/map-gallery.js?v=cases-20260927T173007549919Z"></script>
 </body>
 </html>

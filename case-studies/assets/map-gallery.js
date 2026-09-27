@@ -1,3 +1,4 @@
+// requested-case-v2
 'use strict';
 (() => {
   const cases = window.ANN_MAP_CASES || [];
@@ -20,6 +21,7 @@
   const pointMm = value => {
     const n = Number(value);
     if (!Number.isFinite(n)) return '—';
+    if (event.map_update?.display_units === 'in') return `${(n / 25.4).toFixed(3)} in`;
     if (n === 0) return '0.00 mm';
     return `${Math.abs(n) < 1 ? n.toFixed(3) : n.toFixed(2)} mm`;
   };
@@ -184,6 +186,11 @@
     render();
   }
   function render() {
+    const inUnits = event.map_update?.display_units === 'in';
+    const divisor = inUnits ? 25.4 : 1;
+    const unit = inUnits ? 'in' : 'mm';
+    $('rainfall-unit').textContent = unit;
+    $('crps-unit').textContent = unit;
     const r = current(), t = threshold();
     if (!r || !t) return;
     selectedThreshold = t.threshold_mm;
@@ -208,18 +215,18 @@
     $('model-choice').hidden = !panels;
     $('timing').textContent = `Initialized ${date.format(new Date(r.init_utc))}, ${clock(r.init_utc)} UTC · Forecast hours ${r.lead_to_window_start_hours}–${Number(r.lead_to_window_start_hours) + r.duration_hours}`;
     const captions = {
-      amounts: 'MRMS and forecast rainfall share one scale in mm. Shading interpolates between common 0.25° samples.',
+      amounts: inUnits ? 'MRMS and forecast rainfall share one scale in inches. Tiles show original common 0.25° points.' : 'MRMS and forecast rainfall share one scale in mm. Shading interpolates between common 0.25° samples.',
       probabilities: `Left: MRMS observed precipitation. Right: probability of rainfall > ${inches(t.threshold_mm)} in (${number.format(t.threshold_mm)} mm); black outline marks MRMS exceedance on the scoring grid.`,
       raw_exceedance: `MRMS observed and raw HRRR forecast exceedance of ${inches(t.threshold_mm)} in (${number.format(t.threshold_mm)} mm). Filled areas indicate exceedance.`,
       brier: 'Blue: lower Brier error than raw HRRR. Red: higher error. Values use original samples.',
-      mean_error: 'Forecast mean minus MRMS (mm). Negative: too little rain; positive: too much.',
+      mean_error: `Forecast mean minus MRMS (${unit}). Negative: too little rain; positive: too much.`,
       reliability: 'Observed frequency versus forecast probability; the diagonal indicates agreement.',
       survival: 'Forecast probabilities at the largest MRMS rainfall observation; the vertical line marks the observed amount.'
     };
     $('figure-area').replaceChildren();
     $('figure-area').classList.remove('has-point-inspector');
     $('hover-help').hidden = true;
-    $('figure-area').classList.toggle('single-map', Boolean(panels && view === 'probabilities' && model !== 'raw_hrrr'));
+    $('figure-area').classList.toggle('single-map', Boolean(!inUnits && panels && view === 'probabilities' && model !== 'raw_hrrr'));
     $('no-image').hidden = Boolean(file);
     $('full-image').hidden = !file;
     $('figure-caption').hidden = !file;
@@ -255,12 +262,12 @@
         const mark = document.createElement('span'); mark.className = 'marker'; mark.textContent = 'shown'; name.append(mark);
       }
       tr.append(name);
-      for (const v of [fmt(m.mean, 2), fmt(m.crps), fmt(m.bs, 6), fmt(m.auc)]) {
+      for (const v of [fmt(m.mean / divisor, 3), fmt(m.crps / divisor, 3), fmt(m.bs, 6), fmt(m.auc)]) {
         const td = document.createElement('td'); td.textContent = v; tr.append(td);
       }
       return tr;
     }));
-    $('observed').textContent = `MRMS: mean ${fmt(r.observed_mean_mm, 2)} mm · maximum ${fmt(r.observed_max_mm, 2)} mm · ${number.format(t.n_events)} of ${number.format(r.n_locations)} locations > ${inches(t.threshold_mm)} in`;
+    $('observed').textContent = `MRMS: mean ${fmt(r.observed_mean_mm / divisor, 3)} ${unit} · maximum ${fmt(r.observed_max_mm / divisor, 3)} ${unit} · ${number.format(t.n_events)} of ${number.format(r.n_locations)} locations > ${inches(t.threshold_mm)} in`;
     function lowest(key) {
       const valid = modelScores.filter(m => m[key] != null && Number.isFinite(m[key]));
       if (!valid.length) return 'unavailable';
@@ -274,13 +281,12 @@
     preferredView = 'probabilities';
     $('view').value = preferredView;
     if (event.status === 'SCORED') $('model').value = preferredModel(event.records[0]);
+    $('case-study-note').textContent = event.event?.training_period_diagnostic ? '2022 training-period diagnostic: these maps and scores are not independent test skill.' : (event.event?.domain_note || '');
     const pending = event.status !== 'SCORED';
     $('pending').hidden = !pending; $('scored-content').hidden = pending;
     $('duration').disabled = pending; $('window').disabled = pending;
     if (pending) { $('pending-message').textContent = event.scope || 'Matched observations and forecasts are not available yet.'; return; }
-    $('comparison-scope').textContent = event.event_id === 'hill_country_2025' ?
-      'Hill Country: three ANN predictor resolutions and a 0.25° GNN, using frozen models. ANN and GNN training archives differ; this comparison does not isolate architecture.' :
-      'Edouard: operational 0.25° ANN and retrospective 0.25° GNN inference from frozen weights. Other ANN resolutions are not available for this storm.';
+    $('comparison-scope').textContent = [event.comparison_design, event.scope].filter(Boolean).join(' ');
     for (const [id, key] of [['csv','case_scores.csv'], ['json','case_results.json'], ['correction','crps_scoring_correction.csv']]) {
       const f = event.downloads[key]; $(id).href = window.ANN_MAP_DOWNLOADS?.[f] || f;
     }
@@ -293,7 +299,8 @@
     changeDuration();
   }
   $('event').replaceChildren(...cases.map(e => option(e.event_id, e.title)));
-  $('event').value = (cases.find(e => e.status === 'SCORED') || cases[0]).event_id;
+  const requestedCase = new URLSearchParams(window.location.search).get('event');
+  $('event').value = (cases.find(e => e.event_id === requestedCase) || cases.find(e => e.status === 'SCORED') || cases[0]).event_id;
   $('event').addEventListener('change', changeEvent);
   $('duration').addEventListener('change', changeDuration);
   $('window').addEventListener('change', changeWindow);
