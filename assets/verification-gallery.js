@@ -1,3 +1,4 @@
+// WPC_VERIFY_CACHE_V1
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -391,7 +392,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="v2-gallery-card__actions">
             <a
               class="v2-button v2-button--blue"
-              href="${escapeHtml(product.image_url)}"
+              href="${escapeHtml(imageUrl)}"
               target="_blank"
               rel="noopener"
             >

@@ -1,3 +1,4 @@
+// WPC_VERIFY_CACHE_V1
 "use strict";
 
 // Display conversion only; source metadata remains in millimeters.
@@ -813,7 +814,7 @@ async function renderSelectedProduct() {
 
   setLinkState(
     verificationElements.fullImage,
-    product.image_url
+    (product.image_url + (product.image_url.includes('?') ? '&' : '?') + 'v=' + encodeURIComponent(product.webp_sha256 || 'wpc-v1'))
   );
 
   setLinkState(
@@ -864,7 +865,7 @@ async function renderSelectedProduct() {
       );
 
     verificationElements.mapImage.src =
-      product.image_url;
+      (product.image_url + (product.image_url.includes('?') ? '&' : '?') + 'v=' + encodeURIComponent(product.webp_sha256 || 'wpc-v1'));
   } catch (error) {
     verificationElements.mapStatus.textContent =
       `Could not load selected metadata: ${error.message}`;

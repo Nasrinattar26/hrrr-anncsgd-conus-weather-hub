@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "initialization": "2026090612",
-  "generated_utc": "2026-09-07T21:12:49.572038Z",
+  "generated_utc": "2026-09-28T04:52:39.488200+00:00",
   "product_count": 44,
   "family_counts": {
     "amount_verification": 6,
@@ -62,10 +62,10 @@
       "threshold_type": "",
       "image_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/amount/verification_2026090612_6h_f24_f30_amount_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/amount/verification_2026090612_6h_f24_f30_amount_conus.json",
-      "webp_bytes": 285046,
+      "webp_bytes": 254396,
       "webp_width": 2200,
-      "webp_height": 1420,
-      "webp_sha256": "4c14035256ca8d62fe6ab08c972cbd33ca5f41647e157157b66b70dc537f2afe"
+      "webp_height": 1554,
+      "webp_sha256": "99ea323ad0988e02671ef3b7c571352b43daf2c93c60847f89a564de0359b941"
     },
     {
       "product_id": "2026090612__6h__f24_f30__amount_verification__texas",
@@ -82,10 +82,10 @@
       "threshold_type": "",
       "image_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/amount/verification_2026090612_6h_f24_f30_amount_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/amount/verification_2026090612_6h_f24_f30_amount_texas.json",
-      "webp_bytes": 118614,
+      "webp_bytes": 124386,
       "webp_width": 2200,
-      "webp_height": 1452,
-      "webp_sha256": "34c3cb92697f791696fe0f5619c586a517c8c39b8ceffa878819de21285da562"
+      "webp_height": 1784,
+      "webp_sha256": "1b99321d4ef1522a4524f2474e38838a8f3227e6916ce15fc0cac37d1f5bfca3"
     },
     {
       "product_id": "2026090612__6h__f24_f30__threshold_verification__2yr6h_ari__conus",
@@ -102,10 +102,10 @@
       "threshold_type": "ari",
       "image_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/2yr6h_ari/verification_2026090612_6h_f24_f30_threshold_2yr6h_ari_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/2yr6h_ari/verification_2026090612_6h_f24_f30_threshold_2yr6h_ari_conus.json",
-      "webp_bytes": 235288,
+      "webp_bytes": 266214,
       "webp_width": 2200,
-      "webp_height": 1368,
-      "webp_sha256": "6d0c1f8012d9b7d1a0588ca515f4cb468df5bb5c6af19665128ed2d14c135312"
+      "webp_height": 1567,
+      "webp_sha256": "ad9d20104d1db55e92ce03b1abfcc341ecb9887db9c1cbf4191b05650c2ea1e3"
     },
     {
       "product_id": "2026090612__6h__f24_f30__threshold_verification__2yr6h_ari__texas",
@@ -122,10 +122,10 @@
       "threshold_type": "ari",
       "image_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/2yr6h_ari/verification_2026090612_6h_f24_f30_threshold_2yr6h_ari_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/2yr6h_ari/verification_2026090612_6h_f24_f30_threshold_2yr6h_ari_texas.json",
-      "webp_bytes": 97036,
+      "webp_bytes": 130980,
       "webp_width": 2200,
-      "webp_height": 1636,
-      "webp_sha256": "cb62124e1bf5229d33f1961045ee5e67b1e107336c989daf03d7ec88bf1ff744"
+      "webp_height": 1855,
+      "webp_sha256": "e9717a0c3adc1c86a6afb2c6d878356c67fcf2fbb05c30e23c1dbb72d31bb330"
     },
     {
       "product_id": "2026090612__6h__f24_f30__threshold_verification__5yr6h_ari__conus",
@@ -142,10 +142,10 @@
       "threshold_type": "ari",
       "image_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/5yr6h_ari/verification_2026090612_6h_f24_f30_threshold_5yr6h_ari_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/5yr6h_ari/verification_2026090612_6h_f24_f30_threshold_5yr6h_ari_conus.json",
-      "webp_bytes": 233094,
+      "webp_bytes": 264362,
       "webp_width": 2200,
-      "webp_height": 1368,
-      "webp_sha256": "ff83a2f8c79f2273a1a9d1cdd38e1e9284e34aa5561ee2642dc8d4f1e7a13e9b"
+      "webp_height": 1567,
+      "webp_sha256": "80b5db27ca1ce35dd12e611c43bec42d3d3e39f986e28999d860a7da9601eee4"
     },
     {
       "product_id": "2026090612__6h__f24_f30__threshold_verification__5yr6h_ari__texas",
@@ -162,10 +162,10 @@
       "threshold_type": "ari",
       "image_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/5yr6h_ari/verification_2026090612_6h_f24_f30_threshold_5yr6h_ari_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/5yr6h_ari/verification_2026090612_6h_f24_f30_threshold_5yr6h_ari_texas.json",
-      "webp_bytes": 97016,
+      "webp_bytes": 130980,
       "webp_width": 2200,
-      "webp_height": 1636,
-      "webp_sha256": "0bc0dac006256d483b9c3a40bba567c08b93b126ca0c56a1a8010aa359be0dc2"
+      "webp_height": 1855,
+      "webp_sha256": "3f946f48a858c4a7f2040225a005af4386eb0ddc8427aba284ec04d41e1e02d5"
     },
     {
       "product_id": "2026090612__6h__f24_f30__threshold_verification__0p25inch__conus",
@@ -182,10 +182,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/0p25inch/verification_2026090612_6h_f24_f30_threshold_0p25inch_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/0p25inch/verification_2026090612_6h_f24_f30_threshold_0p25inch_conus.json",
-      "webp_bytes": 245670,
+      "webp_bytes": 278100,
       "webp_width": 2200,
-      "webp_height": 1368,
-      "webp_sha256": "bb9fe87e8f6d09234386bf29fe057946ad3c149b939aa6b10583f0d857287560"
+      "webp_height": 1567,
+      "webp_sha256": "ebf84de567df4242a0ec30ead5b311c9e8c9caff7611ad5188f764f549e6cec1"
     },
     {
       "product_id": "2026090612__6h__f24_f30__threshold_verification__0p25inch__texas",
@@ -202,10 +202,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/0p25inch/verification_2026090612_6h_f24_f30_threshold_0p25inch_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/0p25inch/verification_2026090612_6h_f24_f30_threshold_0p25inch_texas.json",
-      "webp_bytes": 98214,
+      "webp_bytes": 130630,
       "webp_width": 2200,
-      "webp_height": 1636,
-      "webp_sha256": "86ba7ed406e1d5759d8a465870d29205f307d04e12b27669df62d69fbab9a4b2"
+      "webp_height": 1855,
+      "webp_sha256": "798a3585d49d493b08e03c79909574b9437464a03d255e50d21a591594957b4c"
     },
     {
       "product_id": "2026090612__6h__f24_f30__threshold_verification__0p5inch__conus",
@@ -222,10 +222,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/0p5inch/verification_2026090612_6h_f24_f30_threshold_0p5inch_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/0p5inch/verification_2026090612_6h_f24_f30_threshold_0p5inch_conus.json",
-      "webp_bytes": 239054,
+      "webp_bytes": 272192,
       "webp_width": 2200,
-      "webp_height": 1368,
-      "webp_sha256": "cdc45344c7d45abf4dbc78acd3874e1dd243db50944dd878f45182cf3b3b27d5"
+      "webp_height": 1567,
+      "webp_sha256": "e860a678b46bc8b7cb30bbc0f7c3302578d839f0a5d0f9eb751be18d7206e616"
     },
     {
       "product_id": "2026090612__6h__f24_f30__threshold_verification__0p5inch__texas",
@@ -242,10 +242,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/0p5inch/verification_2026090612_6h_f24_f30_threshold_0p5inch_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/0p5inch/verification_2026090612_6h_f24_f30_threshold_0p5inch_texas.json",
-      "webp_bytes": 96880,
+      "webp_bytes": 129378,
       "webp_width": 2200,
-      "webp_height": 1636,
-      "webp_sha256": "fd6c6063175c366b22a495a654db902d0ae16f7e87267e62d03ef6f6189d5084"
+      "webp_height": 1855,
+      "webp_sha256": "512b180480dc1a4d2d1f0f9cf9904cd6b6c56a108481a3657ee45db37f140d46"
     },
     {
       "product_id": "2026090612__6h__f24_f30__threshold_verification__1inch__conus",
@@ -262,10 +262,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/1inch/verification_2026090612_6h_f24_f30_threshold_1inch_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/1inch/verification_2026090612_6h_f24_f30_threshold_1inch_conus.json",
-      "webp_bytes": 231008,
+      "webp_bytes": 265194,
       "webp_width": 2200,
-      "webp_height": 1368,
-      "webp_sha256": "32876b321fc9222902cf64c9a3b315a80049c70726fccbe2878cc8230692adae"
+      "webp_height": 1567,
+      "webp_sha256": "73ab0fd8b234202a5a2877fd3f467dcf92d9c76852d3be362a626a8a1ba553ca"
     },
     {
       "product_id": "2026090612__6h__f24_f30__threshold_verification__1inch__texas",
@@ -282,10 +282,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/1inch/verification_2026090612_6h_f24_f30_threshold_1inch_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/1inch/verification_2026090612_6h_f24_f30_threshold_1inch_texas.json",
-      "webp_bytes": 95606,
+      "webp_bytes": 128108,
       "webp_width": 2200,
-      "webp_height": 1636,
-      "webp_sha256": "4d97b5d06842ff7d5c82ca1ed3a83298fc8f3169d30d87adf49338ffb7aaf073"
+      "webp_height": 1855,
+      "webp_sha256": "6a5c393b053095d81ef74ba9a8da0e928b7ac1683c5f8b3b3c6881f8b2f969c7"
     },
     {
       "product_id": "2026090612__6h__f24_f30__threshold_verification__2inch__conus",
@@ -302,10 +302,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/2inch/verification_2026090612_6h_f24_f30_threshold_2inch_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/2inch/verification_2026090612_6h_f24_f30_threshold_2inch_conus.json",
-      "webp_bytes": 231726,
+      "webp_bytes": 261254,
       "webp_width": 2200,
-      "webp_height": 1368,
-      "webp_sha256": "a816a245ed4d9341b676700ffb2a6c0fbb56331000727ea4938822af5955ed0f"
+      "webp_height": 1567,
+      "webp_sha256": "91c2aaec5b0c30438ba7560ea20b21cbd6ca940ba3c016957598d50b476fde63"
     },
     {
       "product_id": "2026090612__6h__f24_f30__threshold_verification__2inch__texas",
@@ -322,10 +322,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/2inch/verification_2026090612_6h_f24_f30_threshold_2inch_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/6h/f24_f30/thresholds/2inch/verification_2026090612_6h_f24_f30_threshold_2inch_texas.json",
-      "webp_bytes": 94950,
+      "webp_bytes": 127466,
       "webp_width": 2200,
-      "webp_height": 1636,
-      "webp_sha256": "3df79b570e9aded2b24687e9bbbb97941de1d5a5b575dbad370cb67276830402"
+      "webp_height": 1855,
+      "webp_sha256": "5d89a254263bba06fe421ba4774a184837f041d6cbd6ef68255766d54a6fbd63"
     },
     {
       "product_id": "2026090612__12h__f18_f30__amount_verification__conus",
@@ -342,10 +342,10 @@
       "threshold_type": "",
       "image_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/amount/verification_2026090612_12h_f18_f30_amount_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/amount/verification_2026090612_12h_f18_f30_amount_conus.json",
-      "webp_bytes": 312846,
+      "webp_bytes": 281988,
       "webp_width": 2200,
-      "webp_height": 1420,
-      "webp_sha256": "0e7a2458f16fc9dcf192e59fffbd0296db2378be2d0af69b165dbaadb456f379"
+      "webp_height": 1554,
+      "webp_sha256": "ce8816033e80be5e8a1a646d46347cdc8769d7157aaf333557af5d4ac8e353d8"
     },
     {
       "product_id": "2026090612__12h__f18_f30__amount_verification__texas",
@@ -362,10 +362,10 @@
       "threshold_type": "",
       "image_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/amount/verification_2026090612_12h_f18_f30_amount_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/amount/verification_2026090612_12h_f18_f30_amount_texas.json",
-      "webp_bytes": 121760,
+      "webp_bytes": 130220,
       "webp_width": 2200,
-      "webp_height": 1452,
-      "webp_sha256": "d0395045da0f06e069899b7f486ab192250e66a683379ad25df3c6f229814b5c"
+      "webp_height": 1784,
+      "webp_sha256": "98ab74fe9c67d3e20151c222414f771b9280f298b16a5e24c72dda5fde4d415d"
     },
     {
       "product_id": "2026090612__12h__f18_f30__threshold_verification__2yr12h_ari__conus",
@@ -382,10 +382,10 @@
       "threshold_type": "ari",
       "image_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/2yr12h_ari/verification_2026090612_12h_f18_f30_threshold_2yr12h_ari_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/2yr12h_ari/verification_2026090612_12h_f18_f30_threshold_2yr12h_ari_conus.json",
-      "webp_bytes": 241436,
+      "webp_bytes": 288140,
       "webp_width": 2200,
-      "webp_height": 1368,
-      "webp_sha256": "a6341295bb5de767796b665b4a989f12788fbd762ef70e12fda5331d1c134143"
+      "webp_height": 1567,
+      "webp_sha256": "e7a0eff16aa75a7300b36f4f32ebc476275615c3a893738d6546fd37f214d842"
     },
     {
       "product_id": "2026090612__12h__f18_f30__threshold_verification__2yr12h_ari__texas",
@@ -402,10 +402,10 @@
       "threshold_type": "ari",
       "image_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/2yr12h_ari/verification_2026090612_12h_f18_f30_threshold_2yr12h_ari_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/2yr12h_ari/verification_2026090612_12h_f18_f30_threshold_2yr12h_ari_texas.json",
-      "webp_bytes": 98646,
+      "webp_bytes": 133704,
       "webp_width": 2200,
-      "webp_height": 1636,
-      "webp_sha256": "c6e173f1604bd33207566f341e8d2448e376a4499cbaab73f4bbac4ab76d8106"
+      "webp_height": 1855,
+      "webp_sha256": "f0b1c905fc4829ca0adfcb425a16323232124353f1c429be804dfdbcd90b8ff1"
     },
     {
       "product_id": "2026090612__12h__f18_f30__threshold_verification__5yr12h_ari__conus",
@@ -422,10 +422,10 @@
       "threshold_type": "ari",
       "image_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/5yr12h_ari/verification_2026090612_12h_f18_f30_threshold_5yr12h_ari_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/5yr12h_ari/verification_2026090612_12h_f18_f30_threshold_5yr12h_ari_conus.json",
-      "webp_bytes": 239198,
+      "webp_bytes": 286232,
       "webp_width": 2200,
-      "webp_height": 1368,
-      "webp_sha256": "93644b17780d63cbc371d383d1c0e17777a0fddb6b891759e62b89b3199d5f1f"
+      "webp_height": 1567,
+      "webp_sha256": "6e6fef08d30da21418f63a79043e48cba3dc0cf37dc10ea23103509f68cd3b4a"
     },
     {
       "product_id": "2026090612__12h__f18_f30__threshold_verification__5yr12h_ari__texas",
@@ -442,10 +442,10 @@
       "threshold_type": "ari",
       "image_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/5yr12h_ari/verification_2026090612_12h_f18_f30_threshold_5yr12h_ari_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/5yr12h_ari/verification_2026090612_12h_f18_f30_threshold_5yr12h_ari_texas.json",
-      "webp_bytes": 98668,
+      "webp_bytes": 133700,
       "webp_width": 2200,
-      "webp_height": 1636,
-      "webp_sha256": "0d07f89b1e989bda3b3301f4cf04db3b8385c8e507cf1df9c84e9a3fa9cb9f0f"
+      "webp_height": 1855,
+      "webp_sha256": "ca20e2f74b5e19c550610af318c58cdd2dcaa028a1c0eae82ffdb9ba1ad3b3fc"
     },
     {
       "product_id": "2026090612__12h__f18_f30__threshold_verification__0p5inch__conus",
@@ -462,10 +462,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/0p5inch/verification_2026090612_12h_f18_f30_threshold_0p5inch_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/0p5inch/verification_2026090612_12h_f18_f30_threshold_0p5inch_conus.json",
-      "webp_bytes": 257552,
+      "webp_bytes": 293798,
       "webp_width": 2200,
-      "webp_height": 1368,
-      "webp_sha256": "33979c4e3a886a6e3bce3f12e16bd426bd04832c2ca9d171c4edd31bed12bb1d"
+      "webp_height": 1567,
+      "webp_sha256": "d87c3bd29baa5eb64d6b4183c64c95443c9b1fe63673d9880a7a61497c6d46e6"
     },
     {
       "product_id": "2026090612__12h__f18_f30__threshold_verification__0p5inch__texas",
@@ -482,10 +482,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/0p5inch/verification_2026090612_12h_f18_f30_threshold_0p5inch_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/0p5inch/verification_2026090612_12h_f18_f30_threshold_0p5inch_texas.json",
-      "webp_bytes": 100364,
+      "webp_bytes": 133302,
       "webp_width": 2200,
-      "webp_height": 1636,
-      "webp_sha256": "08cb847af919b015e4bc7d8f5401d9d922930389ecf4872004bbb761a9ac3954"
+      "webp_height": 1855,
+      "webp_sha256": "eb69acce6b6f7db81936fd6fac8fd2ecfa71a0e91594b50354ca180b3440c6ca"
     },
     {
       "product_id": "2026090612__12h__f18_f30__threshold_verification__1inch__conus",
@@ -502,10 +502,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/1inch/verification_2026090612_12h_f18_f30_threshold_1inch_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/1inch/verification_2026090612_12h_f18_f30_threshold_1inch_conus.json",
-      "webp_bytes": 247002,
+      "webp_bytes": 285752,
       "webp_width": 2200,
-      "webp_height": 1368,
-      "webp_sha256": "1cc0542ade73a79494e91c1639230682390a371b2d4a8cfc380027b7954c5276"
+      "webp_height": 1567,
+      "webp_sha256": "a53c01fea693f1ee1660b8cb7c984ad9471b5759a321ac8214eebb5c5f3007b7"
     },
     {
       "product_id": "2026090612__12h__f18_f30__threshold_verification__1inch__texas",
@@ -522,10 +522,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/1inch/verification_2026090612_12h_f18_f30_threshold_1inch_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/1inch/verification_2026090612_12h_f18_f30_threshold_1inch_texas.json",
-      "webp_bytes": 97652,
+      "webp_bytes": 130936,
       "webp_width": 2200,
-      "webp_height": 1636,
-      "webp_sha256": "d2b30d484ab29f21b05aca0ed7577022b2915cbfae3a1a64661cffd73d1701f0"
+      "webp_height": 1855,
+      "webp_sha256": "2f8440f6227acb098713f7e9d9e84d6586b9fd1d02fb7ca92b2c8d6180c61cc3"
     },
     {
       "product_id": "2026090612__12h__f18_f30__threshold_verification__2inch__conus",
@@ -542,10 +542,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/2inch/verification_2026090612_12h_f18_f30_threshold_2inch_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/2inch/verification_2026090612_12h_f18_f30_threshold_2inch_conus.json",
-      "webp_bytes": 239608,
+      "webp_bytes": 277636,
       "webp_width": 2200,
-      "webp_height": 1368,
-      "webp_sha256": "2b78659a3e24c3637700a74059c055b72cfb0d98a7dbdd2231667367c19ba77c"
+      "webp_height": 1567,
+      "webp_sha256": "19a556108994af7afd0f1e9f58253e50bcdb285b097e8ffbb79e9e11a6d0859a"
     },
     {
       "product_id": "2026090612__12h__f18_f30__threshold_verification__2inch__texas",
@@ -562,10 +562,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/2inch/verification_2026090612_12h_f18_f30_threshold_2inch_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/2inch/verification_2026090612_12h_f18_f30_threshold_2inch_texas.json",
-      "webp_bytes": 96774,
+      "webp_bytes": 130064,
       "webp_width": 2200,
-      "webp_height": 1636,
-      "webp_sha256": "1e64c03c3179062af59e9c5547d90926452561950d51135d8e9bca0febc11b2d"
+      "webp_height": 1855,
+      "webp_sha256": "b7cc854dd4edb2fdd25f949948d69000a334ab0660afd91e5a4740a1a56c3f8b"
     },
     {
       "product_id": "2026090612__12h__f18_f30__threshold_verification__3inch__conus",
@@ -582,10 +582,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/3inch/verification_2026090612_12h_f18_f30_threshold_3inch_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/3inch/verification_2026090612_12h_f18_f30_threshold_3inch_conus.json",
-      "webp_bytes": 236940,
+      "webp_bytes": 275494,
       "webp_width": 2200,
-      "webp_height": 1368,
-      "webp_sha256": "51e2c0d7a685190575f35ff95c7ab2482e3bca4935887d4d576cc4f71953a13b"
+      "webp_height": 1567,
+      "webp_sha256": "7657d2735c3500897a047ad379167ca2f0aca86eacdb2fbda8ce6c4f5b66a1f2"
     },
     {
       "product_id": "2026090612__12h__f18_f30__threshold_verification__3inch__texas",
@@ -602,10 +602,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/3inch/verification_2026090612_12h_f18_f30_threshold_3inch_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/12h/f18_f30/thresholds/3inch/verification_2026090612_12h_f18_f30_threshold_3inch_texas.json",
-      "webp_bytes": 96464,
+      "webp_bytes": 129934,
       "webp_width": 2200,
-      "webp_height": 1636,
-      "webp_sha256": "1acf4470713b10efb270eca494c1749affd6528bf4afb4135bde7575d2474827"
+      "webp_height": 1855,
+      "webp_sha256": "9d3195a09ec6d8dbb27754beeaa10d0fda1e9598a24f10a015926bfb7449284c"
     },
     {
       "product_id": "2026090612__24h__f06_f30__amount_verification__conus",
@@ -622,10 +622,10 @@
       "threshold_type": "",
       "image_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/amount/verification_2026090612_24h_f06_f30_amount_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/amount/verification_2026090612_24h_f06_f30_amount_conus.json",
-      "webp_bytes": 371356,
+      "webp_bytes": 344518,
       "webp_width": 2200,
-      "webp_height": 1420,
-      "webp_sha256": "24b96a786f72045b58f3a6be4c9bbdd5eba7e02c8ba9a41bd200fa9cac076053"
+      "webp_height": 1554,
+      "webp_sha256": "af204f66349b080b0b9ac3d579b2e5f8da9461db4c906daf169918108db912b9"
     },
     {
       "product_id": "2026090612__24h__f06_f30__amount_verification__texas",
@@ -642,10 +642,10 @@
       "threshold_type": "",
       "image_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/amount/verification_2026090612_24h_f06_f30_amount_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/amount/verification_2026090612_24h_f06_f30_amount_texas.json",
-      "webp_bytes": 155058,
+      "webp_bytes": 180852,
       "webp_width": 2200,
-      "webp_height": 1452,
-      "webp_sha256": "07f70dbff3e78f8792f25783b0203e3f6d0fbf16ba06f06e7904cbbbcb26411c"
+      "webp_height": 1784,
+      "webp_sha256": "9005793953e0516f77ae4b535c2335c946e494753ca16ebd2c8dc80300e0563d"
     },
     {
       "product_id": "2026090612__24h__f06_f30__threshold_verification__2yr24h_ari__conus",
@@ -662,10 +662,10 @@
       "threshold_type": "ari",
       "image_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/2yr24h_ari/verification_2026090612_24h_f06_f30_threshold_2yr24h_ari_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/2yr24h_ari/verification_2026090612_24h_f06_f30_threshold_2yr24h_ari_conus.json",
-      "webp_bytes": 277098,
+      "webp_bytes": 326360,
       "webp_width": 2200,
-      "webp_height": 1368,
-      "webp_sha256": "3fa81ad8ebd360a31eb04f77778d5d5d336a1a8674371cc10785967232d4d2b2"
+      "webp_height": 1567,
+      "webp_sha256": "d980d544b9dc63bbdcff2de7f3da5bf3ca5e60b80abe037dbdc73d477c21085a"
     },
     {
       "product_id": "2026090612__24h__f06_f30__threshold_verification__2yr24h_ari__texas",
@@ -682,10 +682,10 @@
       "threshold_type": "ari",
       "image_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/2yr24h_ari/verification_2026090612_24h_f06_f30_threshold_2yr24h_ari_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/2yr24h_ari/verification_2026090612_24h_f06_f30_threshold_2yr24h_ari_texas.json",
-      "webp_bytes": 120146,
+      "webp_bytes": 165510,
       "webp_width": 2200,
-      "webp_height": 1636,
-      "webp_sha256": "fdb9d4dea5db509b91c2a533e6cd6f5a93f8614bcb0c8f7e9b8f4626555d096d"
+      "webp_height": 1855,
+      "webp_sha256": "0a65985267d3d7f333f6bbf87babe7a6c084ac0a8d836f96cd21d802b2b32bc2"
     },
     {
       "product_id": "2026090612__24h__f06_f30__threshold_verification__5yr24h_ari__conus",
@@ -702,10 +702,10 @@
       "threshold_type": "ari",
       "image_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/5yr24h_ari/verification_2026090612_24h_f06_f30_threshold_5yr24h_ari_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/5yr24h_ari/verification_2026090612_24h_f06_f30_threshold_5yr24h_ari_conus.json",
-      "webp_bytes": 272248,
+      "webp_bytes": 321954,
       "webp_width": 2200,
-      "webp_height": 1368,
-      "webp_sha256": "7f3d6c8f9dd1856ddc1e56e91466a8a498ffeb7d190e4a1a44d8c4c8e1c7fae5"
+      "webp_height": 1567,
+      "webp_sha256": "b5dcb6dad8d8446981b678215970498099dc47b20b5b1100751cafac027ab175"
     },
     {
       "product_id": "2026090612__24h__f06_f30__threshold_verification__5yr24h_ari__texas",
@@ -722,10 +722,10 @@
       "threshold_type": "ari",
       "image_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/5yr24h_ari/verification_2026090612_24h_f06_f30_threshold_5yr24h_ari_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/5yr24h_ari/verification_2026090612_24h_f06_f30_threshold_5yr24h_ari_texas.json",
-      "webp_bytes": 119694,
+      "webp_bytes": 165304,
       "webp_width": 2200,
-      "webp_height": 1636,
-      "webp_sha256": "60956f75b57cff6378ab6ba153b54d5f74d6b5e25a18c909b37837e687d890fc"
+      "webp_height": 1855,
+      "webp_sha256": "cdee00c4b5b65163dec2981ea64ec29312d9975ad63f6c30384b9b00fc455105"
     },
     {
       "product_id": "2026090612__24h__f06_f30__threshold_verification__0p5inch__conus",
@@ -742,10 +742,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/0p5inch/verification_2026090612_24h_f06_f30_threshold_0p5inch_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/0p5inch/verification_2026090612_24h_f06_f30_threshold_0p5inch_conus.json",
-      "webp_bytes": 308190,
+      "webp_bytes": 349916,
       "webp_width": 2200,
-      "webp_height": 1368,
-      "webp_sha256": "42d4a158200ef2aff8b8fd8fc0cf5ef78bc21f06288fa760981b126193f8a065"
+      "webp_height": 1567,
+      "webp_sha256": "aeb18aefe4d5f70b20fda0f168b30d8a7b9129919b4d281fad98ef10e6b1449b"
     },
     {
       "product_id": "2026090612__24h__f06_f30__threshold_verification__0p5inch__texas",
@@ -762,10 +762,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/0p5inch/verification_2026090612_24h_f06_f30_threshold_0p5inch_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/0p5inch/verification_2026090612_24h_f06_f30_threshold_0p5inch_texas.json",
-      "webp_bytes": 133212,
+      "webp_bytes": 177440,
       "webp_width": 2200,
-      "webp_height": 1636,
-      "webp_sha256": "ed781d14fc51aa956ec83856a6b3b8516d546b975005dc8375faf75eeaf94e23"
+      "webp_height": 1855,
+      "webp_sha256": "63ca4d4f443a04a0d64574e846de6d285089c4de12efe80fa69bf5d8b18f33a6"
     },
     {
       "product_id": "2026090612__24h__f06_f30__threshold_verification__1inch__conus",
@@ -782,10 +782,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/1inch/verification_2026090612_24h_f06_f30_threshold_1inch_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/1inch/verification_2026090612_24h_f06_f30_threshold_1inch_conus.json",
-      "webp_bytes": 292158,
+      "webp_bytes": 334672,
       "webp_width": 2200,
-      "webp_height": 1368,
-      "webp_sha256": "c5269f58d93f058b0cd5c94bd60a7de19c14d416f36ad56ddf41bb2cc3f7182e"
+      "webp_height": 1567,
+      "webp_sha256": "df2456f4267e66ce6086b96ab6951a23fe87a25561ce9cf52167c6e53fb62e62"
     },
     {
       "product_id": "2026090612__24h__f06_f30__threshold_verification__1inch__texas",
@@ -802,10 +802,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/1inch/verification_2026090612_24h_f06_f30_threshold_1inch_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/1inch/verification_2026090612_24h_f06_f30_threshold_1inch_texas.json",
-      "webp_bytes": 125574,
+      "webp_bytes": 169566,
       "webp_width": 2200,
-      "webp_height": 1636,
-      "webp_sha256": "4c8b77b07b7d0ada99c63543462ddf20f6a523f430538a310daf8f94796853ee"
+      "webp_height": 1855,
+      "webp_sha256": "86808167bd404d6426c605beae1a4cb444d3f47a621d70b2c0a0cdcefcf85360"
     },
     {
       "product_id": "2026090612__24h__f06_f30__threshold_verification__2inch__conus",
@@ -822,10 +822,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/2inch/verification_2026090612_24h_f06_f30_threshold_2inch_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/2inch/verification_2026090612_24h_f06_f30_threshold_2inch_conus.json",
-      "webp_bytes": 276406,
+      "webp_bytes": 323880,
       "webp_width": 2200,
-      "webp_height": 1368,
-      "webp_sha256": "ed18b79c80a1f0ab72d9809b31992449504a04d847dc9460abaca77688a1a659"
+      "webp_height": 1567,
+      "webp_sha256": "cfa5474d726bd6eae108c6530aabcd607b8661875b3c231b99a6fb68cb51002e"
     },
     {
       "product_id": "2026090612__24h__f06_f30__threshold_verification__2inch__texas",
@@ -842,10 +842,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/2inch/verification_2026090612_24h_f06_f30_threshold_2inch_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/2inch/verification_2026090612_24h_f06_f30_threshold_2inch_texas.json",
-      "webp_bytes": 118738,
+      "webp_bytes": 162544,
       "webp_width": 2200,
-      "webp_height": 1636,
-      "webp_sha256": "85488e3526a9383e1ad132f4806653577a7ca034ed0a79092701d5418402e66e"
+      "webp_height": 1855,
+      "webp_sha256": "da444fed42bd093a3214a4a884db83dd8a572bf5bafbfa1bec145aa5e5e53691"
     },
     {
       "product_id": "2026090612__24h__f06_f30__threshold_verification__3inch__conus",
@@ -862,10 +862,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/3inch/verification_2026090612_24h_f06_f30_threshold_3inch_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/3inch/verification_2026090612_24h_f06_f30_threshold_3inch_conus.json",
-      "webp_bytes": 271246,
+      "webp_bytes": 319096,
       "webp_width": 2200,
-      "webp_height": 1368,
-      "webp_sha256": "65675a63e44042c92831a5636248af96ffcade84924dc5335eda28fb8bab2fed"
+      "webp_height": 1567,
+      "webp_sha256": "fb53c0f96ef6f65931bb30b7c2beac51fcdbe27cd053c0bbdd1a27223e94773b"
     },
     {
       "product_id": "2026090612__24h__f06_f30__threshold_verification__3inch__texas",
@@ -882,10 +882,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/3inch/verification_2026090612_24h_f06_f30_threshold_3inch_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/3inch/verification_2026090612_24h_f06_f30_threshold_3inch_texas.json",
-      "webp_bytes": 117986,
+      "webp_bytes": 162300,
       "webp_width": 2200,
-      "webp_height": 1636,
-      "webp_sha256": "b32bf7542d8621ada056ee31cebbde1f9d787faf0cf11f1d55ec3847a66d27d7"
+      "webp_height": 1855,
+      "webp_sha256": "5907a00bea929df4bd41a14d1d12c7e46cf54fa9fb5713eb7a97fbcdacc7f96a"
     },
     {
       "product_id": "2026090612__24h__f06_f30__threshold_verification__5inch__conus",
@@ -902,10 +902,10 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/5inch/verification_2026090612_24h_f06_f30_threshold_5inch_conus.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/5inch/verification_2026090612_24h_f06_f30_threshold_5inch_conus.json",
-      "webp_bytes": 266834,
+      "webp_bytes": 315554,
       "webp_width": 2200,
-      "webp_height": 1368,
-      "webp_sha256": "bfe1b9187cc8cf6666778ce98014d9502782f83ecf7fafec994b7f6df2bcbf6b"
+      "webp_height": 1567,
+      "webp_sha256": "e4e8f1bf44eaecdd187a663c28203056e6c32c16f58a370e0b9454ad8256310d"
     },
     {
       "product_id": "2026090612__24h__f06_f30__threshold_verification__5inch__texas",
@@ -922,10 +922,11 @@
       "threshold_type": "fixed",
       "image_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/5inch/verification_2026090612_24h_f06_f30_threshold_5inch_texas.webp",
       "metadata_url": "data/verification/maps/runs/2026090612/maps/24h/f06_f30/thresholds/5inch/verification_2026090612_24h_f06_f30_threshold_5inch_texas.json",
-      "webp_bytes": 117238,
+      "webp_bytes": 161444,
       "webp_width": 2200,
-      "webp_height": 1636,
-      "webp_sha256": "842d98c56f68fdc1b48eeddb3c02629cbe4a72bdfed6baa83474eeb37c9a8404"
+      "webp_height": 1855,
+      "webp_sha256": "8831c6c54437f2eafee7854610d61e8eba1ecbc0518fc3df5fa86f67f8a98ff3"
     }
-  ]
+  ],
+  "rainfall_style": "wpc_verification_inches_v1"
 }
