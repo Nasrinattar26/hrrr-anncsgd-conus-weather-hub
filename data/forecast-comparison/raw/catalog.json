@@ -1,6 +1,10 @@
 {
   "runs": [
     {
+      "init": "2026092918",
+      "path": "data/forecast-comparison/raw/2026092918.json"
+    },
+    {
       "init": "2026092912",
       "path": "data/forecast-comparison/raw/2026092912.json"
     },
