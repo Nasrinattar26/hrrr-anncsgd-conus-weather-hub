@@ -1,0 +1,10 @@
+{
+  "schema_version": 2,
+  "status": "unavailable",
+  "hrrr_init": "2026092906",
+  "gefs_init": "2026092900",
+  "generated_utc": "2026-09-29T13:49:30.511549+00:00",
+  "message": "A complete, validated comparison is not available for this forecast run. The individual dashboards remain available.",
+  "windows": [],
+  "products": []
+}
