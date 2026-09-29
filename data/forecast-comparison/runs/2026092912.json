@@ -1,10 +1,12 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "status": "ready",
   "hrrr_init": "2026092912",
-  "gefs_init": "2026092900",
-  "generated_utc": "2026-09-29T14:59:34.436034+00:00",
-  "render_version": "forecast-comparison-v4-all-cycles",
+  "gefs_init": "2026092912",
+  "matching_policy": "same_initialization",
+  "initialization_offset_hours": 0,
+  "generated_utc": "2026-09-29T17:29:57.271832+00:00",
+  "render_version": "forecast-comparison-v5-same-initialization",
   "grid": {
     "spacing_degrees": 0.25,
     "shape": [
@@ -13,7 +15,7 @@
     ],
     "regridding_performed": false
   },
-  "matching": "Same valid start, valid end, duration, fixed threshold and common finite land cells. Initialization offset: 12 hours.",
+  "matching": "Same initialization, forecast leads, valid start, valid end, duration, fixed threshold and common finite land cells.",
   "durations": {
     "6h": {
       "duration_hours": 6,
@@ -26,8 +28,8 @@
       "duration_hours": 12,
       "status": "ready",
       "method_note": "Both panels use directly predicted 12-hour CSGD distributions.",
-      "input_fingerprint": "b82cde8845c7c8847b64b3a42086ceee5f3026087bd44087e47ec10644149da7",
-      "gefs_source_sha256": "3cbd8a5a2e8c3b8b0d2ce718b9f071d6caa83872f9446d1813020996cd03c911",
+      "input_fingerprint": "037b78434b8774a47954d854833d65e1cb19c799cb999c045ccfd4742b8c1017",
+      "gefs_source_sha256": "c912d8bf91a84d0b72ff09a66d9823c9b962c4adc64d68df3f620d28e217e740",
       "products": [
         {
           "id": "expected_precip",
@@ -58,10 +60,10 @@
         {
           "id": "f00_f12",
           "hrrr_init": "2026092912",
-          "gefs_init": "2026092900",
+          "gefs_init": "2026092912",
           "duration_hours": 12,
           "hrrr_end_fhr": 12,
-          "gefs_end_fhr": 24,
+          "gefs_end_fhr": 12,
           "valid_start": "2026-09-29T12:00:00Z",
           "valid_end": "2026-09-30T00:00:00Z",
           "hrrr_source_sha256": "3c46ef32c33434cae8eaeeeca258f3861df8863547582a70b26e172e7b120f92",
@@ -72,9 +74,9 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f00_f12_expected_precip_b82cde8845c7.png",
-              "sha256": "03c3b18ef7bc7994a0306798fdb8bca23ca3fa37f04f4cd7f711459b123192a8",
-              "size_bytes": 311694
+              "path": "products/forecast-comparison/2026092912/12h_f00_f12_expected_precip_037b78434b87.png",
+              "sha256": "e87e3f7e90ce0c329c97e3fa676d01b9fb41c7a868f752eb935a3fad688020e7",
+              "size_bytes": 312290
             },
             {
               "id": "prob_gt_0p5inch",
@@ -82,9 +84,9 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f00_f12_prob_gt_0p5inch_b82cde8845c7.png",
-              "sha256": "1f9e78ac669ebba5feac757d313edb6b05a503574e65e6441d6e851850282d12",
-              "size_bytes": 326076
+              "path": "products/forecast-comparison/2026092912/12h_f00_f12_prob_gt_0p5inch_037b78434b87.png",
+              "sha256": "945bf8ac81626d6bfedde720ec09452793c1d30d46928dbe455feeeab8b26a32",
+              "size_bytes": 326947
             },
             {
               "id": "prob_gt_1inch",
@@ -92,9 +94,9 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f00_f12_prob_gt_1inch_b82cde8845c7.png",
-              "sha256": "936f16df48bb523af403103dc95a16f8d6a7c912fe0edba691a92e7966382186",
-              "size_bytes": 318661
+              "path": "products/forecast-comparison/2026092912/12h_f00_f12_prob_gt_1inch_037b78434b87.png",
+              "sha256": "8369e542d8fb451137fb59c9e965f0347864e7145db2fe73887666a7e8e1685e",
+              "size_bytes": 319665
             },
             {
               "id": "prob_gt_2inch",
@@ -102,9 +104,9 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f00_f12_prob_gt_2inch_b82cde8845c7.png",
-              "sha256": "61224d1536d180c66bca56ec6fe7da0bca0e3322bd0b5f42edb889f8c8fa6908",
-              "size_bytes": 310606
+              "path": "products/forecast-comparison/2026092912/12h_f00_f12_prob_gt_2inch_037b78434b87.png",
+              "sha256": "ff224703029b347f05c615ae42774feeede86b93fe5eb8f21494a46ec7f98e57",
+              "size_bytes": 311035
             }
           ],
           "method_note": "Both panels use directly predicted 12-hour CSGD distributions."
@@ -112,10 +114,10 @@
         {
           "id": "f06_f18",
           "hrrr_init": "2026092912",
-          "gefs_init": "2026092900",
+          "gefs_init": "2026092912",
           "duration_hours": 12,
           "hrrr_end_fhr": 18,
-          "gefs_end_fhr": 30,
+          "gefs_end_fhr": 18,
           "valid_start": "2026-09-29T18:00:00Z",
           "valid_end": "2026-09-30T06:00:00Z",
           "hrrr_source_sha256": "ab7c2a12024631fb45585460e7c3995515591c1187a683626b31ae7588e93b83",
@@ -126,9 +128,9 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f06_f18_expected_precip_b82cde8845c7.png",
-              "sha256": "bf864c3b4ccea58a228988d5635ff98ac89a4421f3f957f8346ec0712f757111",
-              "size_bytes": 312988
+              "path": "products/forecast-comparison/2026092912/12h_f06_f18_expected_precip_037b78434b87.png",
+              "sha256": "55ef12357d3d4bd59dc67705c4b6799e6ab0f165226de9a2da0cdabda2b875d5",
+              "size_bytes": 312594
             },
             {
               "id": "prob_gt_0p5inch",
@@ -136,9 +138,9 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f06_f18_prob_gt_0p5inch_b82cde8845c7.png",
-              "sha256": "7916d628fba78d2aa679b3ac8524641b9f91f76c1520b41391c3bef6333e5113",
-              "size_bytes": 327288
+              "path": "products/forecast-comparison/2026092912/12h_f06_f18_prob_gt_0p5inch_037b78434b87.png",
+              "sha256": "89ccdf3e823c5048e7d3f21209c777645fa6e4795a83b30753d1e714a1ca6e28",
+              "size_bytes": 327178
             },
             {
               "id": "prob_gt_1inch",
@@ -146,9 +148,9 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f06_f18_prob_gt_1inch_b82cde8845c7.png",
-              "sha256": "569dad0cc4d148d00a05769dc5e3873cf3e44d6863dd028993a05cbfd0619d44",
-              "size_bytes": 319821
+              "path": "products/forecast-comparison/2026092912/12h_f06_f18_prob_gt_1inch_037b78434b87.png",
+              "sha256": "3c44e9edde9db5ec2590b04c16da97e6880a71c81491fb165479ba3b635d45d2",
+              "size_bytes": 319418
             },
             {
               "id": "prob_gt_2inch",
@@ -156,9 +158,9 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f06_f18_prob_gt_2inch_b82cde8845c7.png",
-              "sha256": "32ad2b5d51245e7cab6963ebf8c490ce352abe50ebbafb716b110573f9dfe241",
-              "size_bytes": 312364
+              "path": "products/forecast-comparison/2026092912/12h_f06_f18_prob_gt_2inch_037b78434b87.png",
+              "sha256": "471bc587769eb35455635c75f5f2be28b03b86166785d840a482932607989286",
+              "size_bytes": 312190
             }
           ],
           "method_note": "Both panels use directly predicted 12-hour CSGD distributions."
@@ -166,10 +168,10 @@
         {
           "id": "f12_f24",
           "hrrr_init": "2026092912",
-          "gefs_init": "2026092900",
+          "gefs_init": "2026092912",
           "duration_hours": 12,
           "hrrr_end_fhr": 24,
-          "gefs_end_fhr": 36,
+          "gefs_end_fhr": 24,
           "valid_start": "2026-09-30T00:00:00Z",
           "valid_end": "2026-09-30T12:00:00Z",
           "hrrr_source_sha256": "86404364d065e47643e14731c9f29f78337c96d94fc006e362f72099047fb672",
@@ -180,9 +182,9 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f12_f24_expected_precip_b82cde8845c7.png",
-              "sha256": "57e92c0d7c86fd6bc20dbac1f7efe1ccb1b6697b43dd126db569a29ccf0d6c6f",
-              "size_bytes": 311905
+              "path": "products/forecast-comparison/2026092912/12h_f12_f24_expected_precip_037b78434b87.png",
+              "sha256": "fdae7c5a96f1d40b5a859d53b9198e8cda97b04d2d98c58b941a46475e4f1c86",
+              "size_bytes": 311543
             },
             {
               "id": "prob_gt_0p5inch",
@@ -190,9 +192,9 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f12_f24_prob_gt_0p5inch_b82cde8845c7.png",
-              "sha256": "104a389a8e9a50100c3c278b54ef3ecef7cc693c227517fe790f16813d21e69e",
-              "size_bytes": 326829
+              "path": "products/forecast-comparison/2026092912/12h_f12_f24_prob_gt_0p5inch_037b78434b87.png",
+              "sha256": "830bb2f0db1304dc1cf99ef51c7c1466f640f65db312e786ae6287ac4d5aa484",
+              "size_bytes": 326996
             },
             {
               "id": "prob_gt_1inch",
@@ -200,9 +202,9 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f12_f24_prob_gt_1inch_b82cde8845c7.png",
-              "sha256": "4f40d3d5b3dfaedcf2a8a06797de2e1097713327b2815077ec9f106ad9f823ce",
-              "size_bytes": 319769
+              "path": "products/forecast-comparison/2026092912/12h_f12_f24_prob_gt_1inch_037b78434b87.png",
+              "sha256": "15e2ca5cbc511591355a752c52069e1f6f9b29f0de559af30d9ff8bc0133888a",
+              "size_bytes": 319718
             },
             {
               "id": "prob_gt_2inch",
@@ -210,9 +212,9 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f12_f24_prob_gt_2inch_b82cde8845c7.png",
-              "sha256": "9845fa001f56b20a71c104c8908cd87ab3511a5bd0ee13625bcbccf15ed39664",
-              "size_bytes": 311969
+              "path": "products/forecast-comparison/2026092912/12h_f12_f24_prob_gt_2inch_037b78434b87.png",
+              "sha256": "dc5fb7964dc3fc77b6054c8ff1d1c554393dcd06d447f911f7fc4bbdc903784c",
+              "size_bytes": 311670
             }
           ],
           "method_note": "Both panels use directly predicted 12-hour CSGD distributions."
@@ -220,10 +222,10 @@
         {
           "id": "f18_f30",
           "hrrr_init": "2026092912",
-          "gefs_init": "2026092900",
+          "gefs_init": "2026092912",
           "duration_hours": 12,
           "hrrr_end_fhr": 30,
-          "gefs_end_fhr": 42,
+          "gefs_end_fhr": 30,
           "valid_start": "2026-09-30T06:00:00Z",
           "valid_end": "2026-09-30T18:00:00Z",
           "hrrr_source_sha256": "253ae6f04b63ca43c34f1e8fa6a761420bc9cf7353efe43ea6de2399ad7b4f62",
@@ -234,9 +236,9 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f18_f30_expected_precip_b82cde8845c7.png",
-              "sha256": "659e9a971de4d5dfa1e8b374236b03344c80e5e476cfd52ea425b32ca03b1519",
-              "size_bytes": 311440
+              "path": "products/forecast-comparison/2026092912/12h_f18_f30_expected_precip_037b78434b87.png",
+              "sha256": "16281333544d9320271b77722aab579659fc7bb8b940cf3ae828522187c85877",
+              "size_bytes": 311524
             },
             {
               "id": "prob_gt_0p5inch",
@@ -244,9 +246,9 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f18_f30_prob_gt_0p5inch_b82cde8845c7.png",
-              "sha256": "0c79f14c855f79ca4e5dc3c3d06bec8d10522068db314d9f24a2d53848b32f79",
-              "size_bytes": 325963
+              "path": "products/forecast-comparison/2026092912/12h_f18_f30_prob_gt_0p5inch_037b78434b87.png",
+              "sha256": "9b72f65c53e92dbc8d8fe8f0cf88940368175b2d9f38600e325252f3405d6e2a",
+              "size_bytes": 326792
             },
             {
               "id": "prob_gt_1inch",
@@ -254,9 +256,9 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f18_f30_prob_gt_1inch_b82cde8845c7.png",
-              "sha256": "ef0c4b0d499350cdccf5fe4a1b324b644a0b8cdf94edb91d025eaf0bd6768c40",
-              "size_bytes": 318920
+              "path": "products/forecast-comparison/2026092912/12h_f18_f30_prob_gt_1inch_037b78434b87.png",
+              "sha256": "ed88d1b67a03261ed51758180be9cb1fc02e09804714e9769235dce0407c609f",
+              "size_bytes": 319410
             },
             {
               "id": "prob_gt_2inch",
@@ -264,9 +266,9 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f18_f30_prob_gt_2inch_b82cde8845c7.png",
-              "sha256": "1a58f0904b32709121b3be9c2e0d7b56ce5de2419d0b165bd9ba863ffb9893c0",
-              "size_bytes": 311836
+              "path": "products/forecast-comparison/2026092912/12h_f18_f30_prob_gt_2inch_037b78434b87.png",
+              "sha256": "e74e9308c70086ff4c53d57be795bb01caef90bafe1b8955520c23f90f7d35df",
+              "size_bytes": 311986
             }
           ],
           "method_note": "Both panels use directly predicted 12-hour CSGD distributions."
@@ -274,10 +276,10 @@
         {
           "id": "f24_f36",
           "hrrr_init": "2026092912",
-          "gefs_init": "2026092900",
+          "gefs_init": "2026092912",
           "duration_hours": 12,
           "hrrr_end_fhr": 36,
-          "gefs_end_fhr": 48,
+          "gefs_end_fhr": 36,
           "valid_start": "2026-09-30T12:00:00Z",
           "valid_end": "2026-10-01T00:00:00Z",
           "hrrr_source_sha256": "4f69683d24b30a3570996441835ad6cc8752492e54a78bae92439f0695220349",
@@ -288,9 +290,9 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f24_f36_expected_precip_b82cde8845c7.png",
-              "sha256": "744f8e633c9465a59f9b085804a416f4719a0676e59707e46b043989141d5baa",
-              "size_bytes": 310679
+              "path": "products/forecast-comparison/2026092912/12h_f24_f36_expected_precip_037b78434b87.png",
+              "sha256": "2fba9527deb16dcff3a3364c7c039c4dfd5ac78b0938e3f18978306d01e3b279",
+              "size_bytes": 310727
             },
             {
               "id": "prob_gt_0p5inch",
@@ -298,9 +300,9 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f24_f36_prob_gt_0p5inch_b82cde8845c7.png",
-              "sha256": "2c6e6a8d616ce4cbda6bba6080e9186b6723919d1f582a5f1fc1dc60c4b005db",
-              "size_bytes": 324971
+              "path": "products/forecast-comparison/2026092912/12h_f24_f36_prob_gt_0p5inch_037b78434b87.png",
+              "sha256": "5b8b1b5b322883d7817abd0ec8c1cfc0a2e67b0779285c1d303867ee2fa2d792",
+              "size_bytes": 325140
             },
             {
               "id": "prob_gt_1inch",
@@ -308,9 +310,9 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f24_f36_prob_gt_1inch_b82cde8845c7.png",
-              "sha256": "0060f29f324dbc52e8904125f0389d2280f4e7f6e6309d4b3894b253f9e3816f",
-              "size_bytes": 318017
+              "path": "products/forecast-comparison/2026092912/12h_f24_f36_prob_gt_1inch_037b78434b87.png",
+              "sha256": "dadd51c0cae27007be323a3b1f4b0fe83add9a3c48d39387b0483bc6c6452876",
+              "size_bytes": 318320
             },
             {
               "id": "prob_gt_2inch",
@@ -318,9 +320,9 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f24_f36_prob_gt_2inch_b82cde8845c7.png",
-              "sha256": "f080c0a54e095637443b5f583b3cfbd4e8fdff7e7c8b23db79c4c8a73031bdf9",
-              "size_bytes": 311050
+              "path": "products/forecast-comparison/2026092912/12h_f24_f36_prob_gt_2inch_037b78434b87.png",
+              "sha256": "2dd474ab57f3359043a96bd8f884dc321b0898162a24856811825129372a4fd1",
+              "size_bytes": 310995
             }
           ],
           "method_note": "Both panels use directly predicted 12-hour CSGD distributions."
@@ -328,10 +330,10 @@
         {
           "id": "f30_f42",
           "hrrr_init": "2026092912",
-          "gefs_init": "2026092900",
+          "gefs_init": "2026092912",
           "duration_hours": 12,
           "hrrr_end_fhr": 42,
-          "gefs_end_fhr": 54,
+          "gefs_end_fhr": 42,
           "valid_start": "2026-09-30T18:00:00Z",
           "valid_end": "2026-10-01T06:00:00Z",
           "hrrr_source_sha256": "fcc538fb37ccb9b4d9618f2b0af083e1c7ccfdfb20140fc6eb5fae8d2537bd97",
@@ -342,9 +344,9 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f30_f42_expected_precip_b82cde8845c7.png",
-              "sha256": "b3be77d2853377b1e3cbd1b25a2d6dde7e3f9553598987428226d966f73b4a23",
-              "size_bytes": 310728
+              "path": "products/forecast-comparison/2026092912/12h_f30_f42_expected_precip_037b78434b87.png",
+              "sha256": "62bbef227cc67f3f59347afc9da34129ff3ea446c300a935ee1310fd6e213ca2",
+              "size_bytes": 311011
             },
             {
               "id": "prob_gt_0p5inch",
@@ -352,9 +354,9 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f30_f42_prob_gt_0p5inch_b82cde8845c7.png",
-              "sha256": "e03d11d6c1bb3052c9271f86999275e889896929166a67cfeddda20a9252e4a3",
-              "size_bytes": 324459
+              "path": "products/forecast-comparison/2026092912/12h_f30_f42_prob_gt_0p5inch_037b78434b87.png",
+              "sha256": "34725dd93459251cb3f826bf79d2ec32cb6a9443e9bea0f704850e560af45801",
+              "size_bytes": 325165
             },
             {
               "id": "prob_gt_1inch",
@@ -362,9 +364,9 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f30_f42_prob_gt_1inch_b82cde8845c7.png",
-              "sha256": "ff0197ce9a073f58bbb11cd648e4efe4a6ee757390aed6c8b7c71247185f375c",
-              "size_bytes": 317517
+              "path": "products/forecast-comparison/2026092912/12h_f30_f42_prob_gt_1inch_037b78434b87.png",
+              "sha256": "31dbe673e2bc7902c64c145c5798cef82d92ad56789bfbaac11da75db5495454",
+              "size_bytes": 318179
             },
             {
               "id": "prob_gt_2inch",
@@ -372,9 +374,9 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f30_f42_prob_gt_2inch_b82cde8845c7.png",
-              "sha256": "b209c70bc5998db04ccd4035c34da3b208c39e00c67115341e11a064dee0d0ce",
-              "size_bytes": 311703
+              "path": "products/forecast-comparison/2026092912/12h_f30_f42_prob_gt_2inch_037b78434b87.png",
+              "sha256": "1260a6e8ec41f8bc54a83d49acc87d69e40499a4ee782a2c7cef5182bc2e037f",
+              "size_bytes": 312010
             }
           ],
           "method_note": "Both panels use directly predicted 12-hour CSGD distributions."
@@ -382,10 +384,10 @@
         {
           "id": "f36_f48",
           "hrrr_init": "2026092912",
-          "gefs_init": "2026092900",
+          "gefs_init": "2026092912",
           "duration_hours": 12,
           "hrrr_end_fhr": 48,
-          "gefs_end_fhr": 60,
+          "gefs_end_fhr": 48,
           "valid_start": "2026-10-01T00:00:00Z",
           "valid_end": "2026-10-01T12:00:00Z",
           "hrrr_source_sha256": "6d1f1cd46988488f510c7f8985ac02056aceab6d9e9ddd55a7ef335a0dc0ea91",
@@ -396,9 +398,9 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f36_f48_expected_precip_b82cde8845c7.png",
-              "sha256": "91ab8ddd30241a7b20696048d0565b1c0665de635ad100739e00f63c1de063fd",
-              "size_bytes": 311576
+              "path": "products/forecast-comparison/2026092912/12h_f36_f48_expected_precip_037b78434b87.png",
+              "sha256": "744b7c325c97ada0fd652327da20d585787a5a7c68e0561925189a7960d98dcb",
+              "size_bytes": 310936
             },
             {
               "id": "prob_gt_0p5inch",
@@ -406,9 +408,9 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f36_f48_prob_gt_0p5inch_b82cde8845c7.png",
-              "sha256": "da0bcf4cd9374d200948dafea3b851892b0e8377a3581ec9ba3a9e51a7fee465",
-              "size_bytes": 325159
+              "path": "products/forecast-comparison/2026092912/12h_f36_f48_prob_gt_0p5inch_037b78434b87.png",
+              "sha256": "cec1e33f0edf2ef8fa72b923229fa6e3664d1a3023647223da6624122463e26b",
+              "size_bytes": 324765
             },
             {
               "id": "prob_gt_1inch",
@@ -416,9 +418,9 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f36_f48_prob_gt_1inch_b82cde8845c7.png",
-              "sha256": "1e23b0f4f801f646c0d2b5b5c5448bc879f2f7a0f1d1fc9dd11b0137594d22f4",
-              "size_bytes": 318977
+              "path": "products/forecast-comparison/2026092912/12h_f36_f48_prob_gt_1inch_037b78434b87.png",
+              "sha256": "5d2c0614606a6fbb8fe98fbf58488855caf20d743f42dec030697085738e7ed3",
+              "size_bytes": 318795
             },
             {
               "id": "prob_gt_2inch",
@@ -426,9 +428,9 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/12h_f36_f48_prob_gt_2inch_b82cde8845c7.png",
-              "sha256": "5809933b9384db3384b27281a75887618541e1bfd3725f6a4927c061d68e3171",
-              "size_bytes": 312828
+              "path": "products/forecast-comparison/2026092912/12h_f36_f48_prob_gt_2inch_037b78434b87.png",
+              "sha256": "cb771d0743c2a3ab5adc78be2b19923cf9e1bf1e3797d1473e3ada9aedf16016",
+              "size_bytes": 312873
             }
           ],
           "method_note": "Both panels use directly predicted 12-hour CSGD distributions."
@@ -439,8 +441,8 @@
       "duration_hours": 24,
       "status": "ready",
       "method_note": "GEFS probabilities: independent Monte Carlo sum of two non-overlapping 12-hour CSGD distributions (500 samples). GEFS expected rainfall: sum of the two 12-hour expectations. HRRR: directly predicted 24-hour CSGD distribution. The methods differ; GEFS sampling assumes temporal independence.",
-      "input_fingerprint": "1e62303496dde915437099f8fde5e71728222575a29800f2cc3584b57909f570",
-      "gefs_source_sha256": "7a3526d17f54fdc475e1775d3265293ac64a95c0d05d00c0cbd83af1d1557a89",
+      "input_fingerprint": "7f27a8c310c003c2cb53020c7fb55517d6f6c32d353c0fcb584eed9e8af200c2",
+      "gefs_source_sha256": "fcd5ede21f070cec56a4e44eda1a964fb33a6d03baa21c0438e0989c29be2e76",
       "products": [
         {
           "id": "expected_precip",
@@ -471,10 +473,10 @@
         {
           "id": "f00_f24",
           "hrrr_init": "2026092912",
-          "gefs_init": "2026092900",
+          "gefs_init": "2026092912",
           "duration_hours": 24,
           "hrrr_end_fhr": 24,
-          "gefs_end_fhr": 36,
+          "gefs_end_fhr": 24,
           "valid_start": "2026-09-29T12:00:00Z",
           "valid_end": "2026-09-30T12:00:00Z",
           "hrrr_source_sha256": "068fc49828a7bb580662e89a99bb51ac7d6c5167a47009a5c1b5f257a5208afa",
@@ -485,9 +487,9 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/24h_f00_f24_expected_precip_1e62303496dd.png",
-              "sha256": "c60b02123af1e5bd89a8c295d09abba0e31957be3bb8de809851a5dc4ff3f6cc",
-              "size_bytes": 329349
+              "path": "products/forecast-comparison/2026092912/24h_f00_f24_expected_precip_7f27a8c310c0.png",
+              "sha256": "8b943229c2df9c3b71a2d95212962ca0e6a9ac19817560bcfce3ff5225c509c7",
+              "size_bytes": 329680
             },
             {
               "id": "prob_gt_0p5inch",
@@ -495,9 +497,9 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/24h_f00_f24_prob_gt_0p5inch_1e62303496dd.png",
-              "sha256": "79970c206cc2b5a52eb10c15c4bc17d7d193effd1b7e75cb319a773dea33f2a8",
-              "size_bytes": 350257
+              "path": "products/forecast-comparison/2026092912/24h_f00_f24_prob_gt_0p5inch_7f27a8c310c0.png",
+              "sha256": "13d7fd5545e2b7d1f60817dd5432165aca437f8ec5786312d76e91e4c656a857",
+              "size_bytes": 350618
             },
             {
               "id": "prob_gt_1inch",
@@ -505,9 +507,9 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/24h_f00_f24_prob_gt_1inch_1e62303496dd.png",
-              "sha256": "b919a2ebc0f2b98286e424c2444b99c42349d33ad0e2065197cdafe21d1f047c",
-              "size_bytes": 342999
+              "path": "products/forecast-comparison/2026092912/24h_f00_f24_prob_gt_1inch_7f27a8c310c0.png",
+              "sha256": "34ac5c12acc1ffc59dadcb48ad6df6dd82a61939c2d6a0e702a0b238bcceaa95",
+              "size_bytes": 343334
             },
             {
               "id": "prob_gt_2inch",
@@ -515,9 +517,9 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/24h_f00_f24_prob_gt_2inch_1e62303496dd.png",
-              "sha256": "d41188476e4642692b86aebb436b0667f1d3f26a9340a9a91a8f8413c1c48749",
-              "size_bytes": 333847
+              "path": "products/forecast-comparison/2026092912/24h_f00_f24_prob_gt_2inch_7f27a8c310c0.png",
+              "sha256": "77e8d9b6e2c12f4b31b48ea220c75ca0966f94b7103a56c7aa6ad21ad90272f0",
+              "size_bytes": 334278
             }
           ],
           "method_note": "GEFS probabilities: independent Monte Carlo sum of two non-overlapping 12-hour CSGD distributions (500 samples). GEFS expected rainfall: sum of the two 12-hour expectations. HRRR: directly predicted 24-hour CSGD distribution. The methods differ; GEFS sampling assumes temporal independence."
@@ -525,10 +527,10 @@
         {
           "id": "f06_f30",
           "hrrr_init": "2026092912",
-          "gefs_init": "2026092900",
+          "gefs_init": "2026092912",
           "duration_hours": 24,
           "hrrr_end_fhr": 30,
-          "gefs_end_fhr": 42,
+          "gefs_end_fhr": 30,
           "valid_start": "2026-09-29T18:00:00Z",
           "valid_end": "2026-09-30T18:00:00Z",
           "hrrr_source_sha256": "e8363b7e83a79f3bd9151c0354ecad5459095d8a71dc7b9084f55f50e081d186",
@@ -539,9 +541,9 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/24h_f06_f30_expected_precip_1e62303496dd.png",
-              "sha256": "95a641124741e2209d5210a28d1cb6ad34763fc7de5c9f5ac15f08d75e299fcd",
-              "size_bytes": 330155
+              "path": "products/forecast-comparison/2026092912/24h_f06_f30_expected_precip_7f27a8c310c0.png",
+              "sha256": "01f6cd08da562bf8d3c589e4ccbf67ae49080be3b9189824c5045e8669dac971",
+              "size_bytes": 330091
             },
             {
               "id": "prob_gt_0p5inch",
@@ -549,9 +551,9 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/24h_f06_f30_prob_gt_0p5inch_1e62303496dd.png",
-              "sha256": "729b9f3659a94def70c297a688dc579ae82ab040e0b1ed57f61524194c21124f",
-              "size_bytes": 351051
+              "path": "products/forecast-comparison/2026092912/24h_f06_f30_prob_gt_0p5inch_7f27a8c310c0.png",
+              "sha256": "3c3dce9630532e600cce02633a7ee0d2e32689f7f8bc9dd9d48579a278415e0f",
+              "size_bytes": 351004
             },
             {
               "id": "prob_gt_1inch",
@@ -559,9 +561,9 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/24h_f06_f30_prob_gt_1inch_1e62303496dd.png",
-              "sha256": "5ecc8c153af2a4f88ad331da00357172eca70ad7ebfc11b38762aaad62fb9b3b",
-              "size_bytes": 342905
+              "path": "products/forecast-comparison/2026092912/24h_f06_f30_prob_gt_1inch_7f27a8c310c0.png",
+              "sha256": "d6bc7d8dbb69f6003ac68d6f0c65d10fcf3b30fe2ff091f725513830d5a0b4fa",
+              "size_bytes": 342815
             },
             {
               "id": "prob_gt_2inch",
@@ -569,9 +571,9 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/24h_f06_f30_prob_gt_2inch_1e62303496dd.png",
-              "sha256": "211cbf3cfbe7d8d3d057cffff929e9cffd38ee09efeabd7d2b035a3a2be3ae64",
-              "size_bytes": 334559
+              "path": "products/forecast-comparison/2026092912/24h_f06_f30_prob_gt_2inch_7f27a8c310c0.png",
+              "sha256": "56e4c730999fbd3e9833f00ee9ffb52369cdbeacab68a626334be6df423553bd",
+              "size_bytes": 334792
             }
           ],
           "method_note": "GEFS probabilities: independent Monte Carlo sum of two non-overlapping 12-hour CSGD distributions (500 samples). GEFS expected rainfall: sum of the two 12-hour expectations. HRRR: directly predicted 24-hour CSGD distribution. The methods differ; GEFS sampling assumes temporal independence."
@@ -579,10 +581,10 @@
         {
           "id": "f12_f36",
           "hrrr_init": "2026092912",
-          "gefs_init": "2026092900",
+          "gefs_init": "2026092912",
           "duration_hours": 24,
           "hrrr_end_fhr": 36,
-          "gefs_end_fhr": 48,
+          "gefs_end_fhr": 36,
           "valid_start": "2026-09-30T00:00:00Z",
           "valid_end": "2026-10-01T00:00:00Z",
           "hrrr_source_sha256": "c8acb4c46017e3119d1940a82c8c3cd4e114c577b4796b9223516e69304f5364",
@@ -593,9 +595,9 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/24h_f12_f36_expected_precip_1e62303496dd.png",
-              "sha256": "7ec3f0b48b5e6b83d541b9e6635a3b11e962fbd208b5b9c951baed7aba4625ca",
-              "size_bytes": 328229
+              "path": "products/forecast-comparison/2026092912/24h_f12_f36_expected_precip_7f27a8c310c0.png",
+              "sha256": "0487bb9cf2159ca2f98e564f51cda2977d875be2c946ff90817134cecd37323c",
+              "size_bytes": 328194
             },
             {
               "id": "prob_gt_0p5inch",
@@ -603,9 +605,9 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/24h_f12_f36_prob_gt_0p5inch_1e62303496dd.png",
-              "sha256": "51c5474fe2e3cbbbce544ff09ea620a2b6e7da1c6784e982fe6b0fe33abbb6db",
-              "size_bytes": 348550
+              "path": "products/forecast-comparison/2026092912/24h_f12_f36_prob_gt_0p5inch_7f27a8c310c0.png",
+              "sha256": "781c42c2c06d4e5ada6008afd4a91275c94bc7dab21f6635427d4b8234341da3",
+              "size_bytes": 348477
             },
             {
               "id": "prob_gt_1inch",
@@ -613,9 +615,9 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/24h_f12_f36_prob_gt_1inch_1e62303496dd.png",
-              "sha256": "5ffee8d8a3c1dd63230e383642da4471bd57412c7fba42a1f0a634a3a730cfe9",
-              "size_bytes": 340808
+              "path": "products/forecast-comparison/2026092912/24h_f12_f36_prob_gt_1inch_7f27a8c310c0.png",
+              "sha256": "72dc53c1c12b082a5d88de21af16831ac6902b223c3694752e3e5e0ce3deca8c",
+              "size_bytes": 340905
             },
             {
               "id": "prob_gt_2inch",
@@ -623,9 +625,9 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/24h_f12_f36_prob_gt_2inch_1e62303496dd.png",
-              "sha256": "a0f2ba897f72cacfff1b7e15b6db428174d2393552e7501a15d85cb31bb3770f",
-              "size_bytes": 333261
+              "path": "products/forecast-comparison/2026092912/24h_f12_f36_prob_gt_2inch_7f27a8c310c0.png",
+              "sha256": "4aae9171251dd5ac146ed6b0ec4a19ec4335480fe89bf66899515ac685491f73",
+              "size_bytes": 333525
             }
           ],
           "method_note": "GEFS probabilities: independent Monte Carlo sum of two non-overlapping 12-hour CSGD distributions (500 samples). GEFS expected rainfall: sum of the two 12-hour expectations. HRRR: directly predicted 24-hour CSGD distribution. The methods differ; GEFS sampling assumes temporal independence."
@@ -633,10 +635,10 @@
         {
           "id": "f18_f42",
           "hrrr_init": "2026092912",
-          "gefs_init": "2026092900",
+          "gefs_init": "2026092912",
           "duration_hours": 24,
           "hrrr_end_fhr": 42,
-          "gefs_end_fhr": 54,
+          "gefs_end_fhr": 42,
           "valid_start": "2026-09-30T06:00:00Z",
           "valid_end": "2026-10-01T06:00:00Z",
           "hrrr_source_sha256": "8622d05f4b84e356cbae08ed015c25071b1feff0206212d3c378438440ae2ebb",
@@ -647,9 +649,9 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/24h_f18_f42_expected_precip_1e62303496dd.png",
-              "sha256": "79bf2d7ede306b59ee9438b27bf8a3a73f6d38821d640a6c9500827c227f60e6",
-              "size_bytes": 328333
+              "path": "products/forecast-comparison/2026092912/24h_f18_f42_expected_precip_7f27a8c310c0.png",
+              "sha256": "d2ae5793380347a201f472a49cfb931ac114a9cfcc54fcb0d9616666b714003a",
+              "size_bytes": 328398
             },
             {
               "id": "prob_gt_0p5inch",
@@ -657,9 +659,9 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/24h_f18_f42_prob_gt_0p5inch_1e62303496dd.png",
-              "sha256": "febabfc9cc7d0f49d42cd405c2bb6a4d7b7f93548e6b472884a845ca92d1e91c",
-              "size_bytes": 347766
+              "path": "products/forecast-comparison/2026092912/24h_f18_f42_prob_gt_0p5inch_7f27a8c310c0.png",
+              "sha256": "9b34ef67419b4b27c8ba47fab93b73e2defabf7fde1640bbf39a3b298b363bf9",
+              "size_bytes": 347982
             },
             {
               "id": "prob_gt_1inch",
@@ -667,9 +669,9 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/24h_f18_f42_prob_gt_1inch_1e62303496dd.png",
-              "sha256": "0afd0ab4f041a517bad3ac71fd6905a7eafbb8c104bb5dd6c6d9e66a9352e480",
-              "size_bytes": 340812
+              "path": "products/forecast-comparison/2026092912/24h_f18_f42_prob_gt_1inch_7f27a8c310c0.png",
+              "sha256": "f65d3431108172b03c37efc152b46b63bd8e6fe05401e82f2f819d499b0bf3a8",
+              "size_bytes": 340524
             },
             {
               "id": "prob_gt_2inch",
@@ -677,9 +679,9 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/24h_f18_f42_prob_gt_2inch_1e62303496dd.png",
-              "sha256": "55472b2d8aa48063a22756852621e990434c3d65295caa096825d3a7b628c19b",
-              "size_bytes": 334267
+              "path": "products/forecast-comparison/2026092912/24h_f18_f42_prob_gt_2inch_7f27a8c310c0.png",
+              "sha256": "170c3c2ee19316a11ec86c0b2e21aef5fdc71152fda74afefdf19f0ae8af30dd",
+              "size_bytes": 334026
             }
           ],
           "method_note": "GEFS probabilities: independent Monte Carlo sum of two non-overlapping 12-hour CSGD distributions (500 samples). GEFS expected rainfall: sum of the two 12-hour expectations. HRRR: directly predicted 24-hour CSGD distribution. The methods differ; GEFS sampling assumes temporal independence."
@@ -687,10 +689,10 @@
         {
           "id": "f24_f48",
           "hrrr_init": "2026092912",
-          "gefs_init": "2026092900",
+          "gefs_init": "2026092912",
           "duration_hours": 24,
           "hrrr_end_fhr": 48,
-          "gefs_end_fhr": 60,
+          "gefs_end_fhr": 48,
           "valid_start": "2026-09-30T12:00:00Z",
           "valid_end": "2026-10-01T12:00:00Z",
           "hrrr_source_sha256": "d0c02dea7c6c7fbb994a348d76c11114ee102ae6412659efc72b6e96df38a55c",
@@ -701,9 +703,9 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/24h_f24_f48_expected_precip_1e62303496dd.png",
-              "sha256": "402b958de9cae2179035f94401480ec4f213a4d495f3bb645d040fb23cb1f6fc",
-              "size_bytes": 329443
+              "path": "products/forecast-comparison/2026092912/24h_f24_f48_expected_precip_7f27a8c310c0.png",
+              "sha256": "2c670a9e38b0fa6493d1962102f104448f83bcf285733b42215eb601c0c95e37",
+              "size_bytes": 328908
             },
             {
               "id": "prob_gt_0p5inch",
@@ -711,9 +713,9 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/24h_f24_f48_prob_gt_0p5inch_1e62303496dd.png",
-              "sha256": "b49b85acffe39e8260e422846eedde15911587f1f418a46539a225c2d96fbc72",
-              "size_bytes": 348015
+              "path": "products/forecast-comparison/2026092912/24h_f24_f48_prob_gt_0p5inch_7f27a8c310c0.png",
+              "sha256": "091f363e73abd87873c06ebe5cc1607e9c700f856ed884f78916c38e2d0dadc3",
+              "size_bytes": 347839
             },
             {
               "id": "prob_gt_1inch",
@@ -721,9 +723,9 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/24h_f24_f48_prob_gt_1inch_1e62303496dd.png",
-              "sha256": "316a539a85f7276fa561c3ff4f6ceb8c2ab67c9f60497ed1deb0223a319af1cd",
-              "size_bytes": 341671
+              "path": "products/forecast-comparison/2026092912/24h_f24_f48_prob_gt_1inch_7f27a8c310c0.png",
+              "sha256": "f346ffa7b6c97206a0ffd7f93f9ca088e0a416d909cc0676809f1199aaa667ca",
+              "size_bytes": 341435
             },
             {
               "id": "prob_gt_2inch",
@@ -731,9 +733,9 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026092912/24h_f24_f48_prob_gt_2inch_1e62303496dd.png",
-              "sha256": "64689d5e9a1d56fce82a8ede7117ef1e45fd66d9683a1e3df60bf1b743383dd0",
-              "size_bytes": 335019
+              "path": "products/forecast-comparison/2026092912/24h_f24_f48_prob_gt_2inch_7f27a8c310c0.png",
+              "sha256": "1c6891b6a466ec250bdd4d1ca6a9e84b98e3813614a044aa3c31a5f3ed978775",
+              "size_bytes": 334427
             }
           ],
           "method_note": "GEFS probabilities: independent Monte Carlo sum of two non-overlapping 12-hour CSGD distributions (500 samples). GEFS expected rainfall: sum of the two 12-hour expectations. HRRR: directly predicted 24-hour CSGD distribution. The methods differ; GEFS sampling assumes temporal independence."

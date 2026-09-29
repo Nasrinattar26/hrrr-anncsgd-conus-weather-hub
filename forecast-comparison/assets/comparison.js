@@ -40,15 +40,20 @@
   function missing(hours,message) {return {duration_hours:hours,status:'unavailable',message,windows:[],products:[]};}
   function normalize(value,row) {
     const h=initial(row.init),g=initial(row.gefs_init);
-    if(![1,2].includes(value.schema_version) || value.hrrr_init!==row.init || value.gefs_init!==row.gefs_init || ![0,21600000,43200000,64800000].includes(h-g) || row.gefs_init!==row.init.slice(0,8)+'00') throw Error('Forecast pair metadata is inconsistent.');
-    if(!['ready','unavailable'].includes(value.status)) throw Error('Invalid forecast comparison status.');
+    const exact=value.schema_version===3;
+    if(![1,2,3].includes(value.schema_version) || value.hrrr_init!==row.init || value.gefs_init!==row.gefs_init) throw Error('Forecast pair metadata is inconsistent.');
+    if(exact) {
+      if(h!==g || value.matching_policy!=='same_initialization' || value.initialization_offset_hours!==0 || row.matching_policy!=='same_initialization') throw Error('The comparison does not have matching initializations.');
+    } else if(![0,21600000,43200000,64800000].includes(h-g) || row.gefs_init!==row.init.slice(0,8)+'00') throw Error('Archived forecast pair metadata is inconsistent.');
+    if(!['ready','waiting','unavailable'].includes(value.status)) throw Error('Invalid forecast comparison status.');
     const defaults={
       '6h':missing(6,'A 6-hour GEFS-based ANN-CSGD product is not available in the reviewed daily workflow. Use the HRRR dashboard for 6-hour guidance.'),
       '12h':missing(12,'No validated 12-hour comparison is available for this run.'),
       '24h':missing(24,'No validated 24-hour comparison has been published for this run.')
     };
-    if(value.status==='unavailable') {
+    if(value.status!=='ready') {
       defaults['12h'].message=defaults['24h'].message=value.message||'No validated comparison is available for this run.';
+      defaults['12h'].status=defaults['24h'].status=value.status;
       return {...value,durations:defaults};
     }
     if(value.schema_version===1) {
@@ -60,7 +65,7 @@
     for(const [key,group] of Object.entries(groups)) {
       const hours=Number(key.replace('h',''));
       if(![6,12,24].includes(hours) || group.duration_hours!==hours) throw Error('Invalid accumulation duration.');
-      if(group.status==='unavailable') continue;
+      if(['waiting','unavailable'].includes(group.status)) continue;
       if(hours===6 || group.status!=='ready' || !group.windows?.length || !group.products?.length) throw Error('Incomplete forecast comparison.');
       if(hours===24 && (!Number.isInteger(group.gefs_nsamples) || group.gefs_nsamples<1 || !group.method_note)) throw Error('Missing 24-hour construction metadata.');
       const names=new Set(group.products.map(p=>p.id));
@@ -96,7 +101,8 @@
       img.src=source;img.alt=`${label(p.label)}: GEFS ${data.gefs_init} and HRRR ${data.hrrr_init}, valid ${fmt(w.valid_start)} to ${fmt(w.valid_end)} UTC.`;
       $('full-image').href=source;figure.hidden=false;
       status.textContent=`Valid ${fmt(w.valid_start)} → ${fmt(w.valid_end)} UTC · ${group.duration_hours} hours · ${p.common_valid_cells.toLocaleString()} common land cells`;
-      $('comparison-caption').textContent=`GEFS lead ${w.gefs_end_fhr-group.duration_hours}–${w.gefs_end_fhr} h · HRRR lead ${w.hrrr_end_fhr-group.duration_hours}–${w.hrrr_end_fhr} h · ${p.units==='inches'?'Amounts in inches':'Probabilities in percent'}`;
+      const timing=data.schema_version===3?'Same initialization':data.gefs_init===data.hrrr_init?'Archived pair · same initialization':'Archived pair · different initializations';
+      $('comparison-caption').textContent=`${timing} · GEFS lead ${w.gefs_end_fhr-group.duration_hours}–${w.gefs_end_fhr} h · HRRR lead ${w.hrrr_end_fhr-group.duration_hours}–${w.hrrr_end_fhr} h · ${p.units==='inches'?'Amounts in inches':'Probabilities in percent'}`;
     };
     preload.onerror=fail;preload.src=source;
   }
@@ -124,7 +130,7 @@
     try {
       if(row.manifest!==`data/forecast-comparison/runs/${row.init}.json`) throw Error('Invalid comparison catalog path.');
       const value=await json(row.manifest);if(ticket!==epoch)return;data=normalize(value,row);
-      options(duration,['6h','12h','24h'].map(key=>[key,`${data.durations[key].duration_hours}-hour${data.durations[key].status==='ready'?'':' · comparison unavailable'}`]),query().get('duration')||'12h');
+      options(duration,['6h','12h','24h'].map(key=>[key,`${data.durations[key].duration_hours}-hour${data.durations[key].status==='ready'?'':data.durations[key].status==='waiting'?' · waiting for matching cycle':' · comparison unavailable'}`]),query().get('duration')||'12h');
       showDuration();
     }catch(error){if(ticket===epoch && error.name!=='AbortError'){status.textContent=error.message;status.dataset.error='true';}}
   }
@@ -135,16 +141,20 @@
     try {
       const [catalog,forecast]=await Promise.all([json('data/forecast-comparison/catalog.json'),json('data/forecast-runs/catalog.json')]);
       if(ticket!==epoch)return;
-      if(catalog.schema_version!==1 || !Array.isArray(catalog.runs)) throw Error('Comparison catalog format is not supported.');
+      if(![1,2].includes(catalog.schema_version) || !Array.isArray(catalog.runs)) throw Error('Comparison catalog format is not supported.');
       const latest=forecast.latest_initialization;initial(latest);
       const retained=new Set(forecast.runs.map(r=>r.init));rows=catalog.runs.filter(r=>retained.has(r.init));
       rows.forEach(r=>{initial(r.init);initial(r.gefs_init);});
-      $('freshness').textContent=`Latest published HRRR: ${fmt(initial(latest))} UTC. GEFS comparisons use the same date’s 00 UTC run.`;
+      const exactRows=rows.filter(r=>r.status==='ready' && r.matching_policy==='same_initialization' && r.gefs_init===r.init).sort((a,b)=>b.init.localeCompare(a.init));
+      const latestReady=exactRows[0]?.init;
+      if(catalog.latest_ready_initialization!=null && catalog.latest_ready_initialization!==latestReady) throw Error('Latest ready comparison metadata is inconsistent.');
+      $('freshness').textContent=`Latest published HRRR: ${fmt(initial(latest))} UTC. ${latestReady?`Latest ready same-initialization pair: ${fmt(initial(latestReady))} UTC.${latestReady!==latest?' The newer pair will appear when both systems are ready.':''}`:'Waiting for the first same-initialization pair. Archived comparisons remain selectable.'}`;
       if(!rows.length) throw Error('No comparison has been published for the retained forecast runs yet.');
-      options(run,rows.map(r=>[r.init,`${fmt(initial(r.init)).slice(0,10)} · HRRR ${r.init.slice(-2)} / GEFS 00 UTC${r.status==='ready'?'':' · unavailable'}`]),query().get('init')||run.value||latest);
-      if(!query().get('init') && !rows.some(r=>r.init===latest)) {
-        const o=document.createElement('option');o.value='';o.textContent='Latest comparison not yet available';run.prepend(o);run.value='';
-        status.textContent='The newest HRRR comparison is not available yet. Choose an archived pair above or open either forecast dashboard.';return;
+      const requested=query().get('init'), chosen=requested||latestReady;
+      options(run,rows.map(r=>[r.init,`${fmt(initial(r.init)).slice(0,10)} · HRRR ${r.init.slice(-2)} / GEFS ${r.gefs_init.slice(-2)} UTC${r.matching_policy==='same_initialization'?'':' · archived'}${r.gefs_init!==r.init?' · different initializations':''}${r.status==='ready'?'':r.status==='waiting'?' · waiting':' · unavailable'}`]),chosen);
+      if(!chosen || !rows.some(r=>r.init===chosen)) {
+        const o=document.createElement('option');o.value='';o.textContent=requested?'Requested pair is not available':'Waiting for a same-initialization pair';run.prepend(o);run.value='';
+        status.textContent=requested?'The requested comparison is not in the retained archive. Choose another pair above.':'A same-initialization pair is not ready yet. Choose an archived pair above or open either forecast dashboard.';return;
       }
       await loadRun();
     }catch(error){if(ticket===epoch && error.name!=='AbortError'){status.textContent=error.message;status.dataset.error='true';}}
