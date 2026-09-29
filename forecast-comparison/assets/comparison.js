@@ -40,7 +40,7 @@
   function missing(hours,message) {return {duration_hours:hours,status:'unavailable',message,windows:[],products:[]};}
   function normalize(value,row) {
     const h=initial(row.init),g=initial(row.gefs_init);
-    if(![1,2].includes(value.schema_version) || value.hrrr_init!==row.init || value.gefs_init!==row.gefs_init || h-g!==43200000) throw Error('Forecast pair metadata is inconsistent.');
+    if(![1,2].includes(value.schema_version) || value.hrrr_init!==row.init || value.gefs_init!==row.gefs_init || ![0,21600000,43200000,64800000].includes(h-g) || row.gefs_init!==row.init.slice(0,8)+'00') throw Error('Forecast pair metadata is inconsistent.');
     if(!['ready','unavailable'].includes(value.status)) throw Error('Invalid forecast comparison status.');
     const defaults={
       '6h':missing(6,'A 6-hour GEFS-based ANN-CSGD product is not available in the reviewed daily workflow. Use the HRRR dashboard for 6-hour guidance.'),
@@ -69,7 +69,7 @@
       for(const w of group.windows) {
         if(windows.has(w.id)) throw Error('Duplicate forecast periods.');windows.add(w.id);
         if(w.id!==`f${String(w.hrrr_end_fhr-hours).padStart(2,'0')}_f${String(w.hrrr_end_fhr).padStart(2,'0')}` ||
-          w.hrrr_init!==row.init || w.gefs_init!==row.gefs_init || w.duration_hours!==hours || !Number.isInteger(w.hrrr_end_fhr) || !Number.isInteger(w.gefs_end_fhr) || w.hrrr_end_fhr<hours || w.hrrr_end_fhr>48 || w.gefs_end_fhr-w.hrrr_end_fhr!==12 ||
+          w.hrrr_init!==row.init || w.gefs_init!==row.gefs_init || w.duration_hours!==hours || !Number.isInteger(w.hrrr_end_fhr) || !Number.isInteger(w.gefs_end_fhr) || w.hrrr_end_fhr<hours || w.hrrr_end_fhr>48 || w.gefs_end_fhr-w.hrrr_end_fhr!==(h-g)/3600000 ||
           Date.parse(w.valid_end)!==h+w.hrrr_end_fhr*3600000 || Date.parse(w.valid_end)!==g+w.gefs_end_fhr*3600000 || Date.parse(w.valid_end)-Date.parse(w.valid_start)!==hours*3600000) throw Error('Forecast valid periods do not match.');
         if(!Array.isArray(w.products) || w.products.length!==4 || new Set(w.products.map(p=>p.id)).size!==4) throw Error('Missing forecast products.');
         for(const p of w.products) {
@@ -141,7 +141,7 @@
       rows.forEach(r=>{initial(r.init);initial(r.gefs_init);});
       $('freshness').textContent=`Latest published HRRR: ${fmt(initial(latest))} UTC. GEFS comparisons use the same date’s 00 UTC run.`;
       if(!rows.length) throw Error('No comparison has been published for the retained forecast runs yet.');
-      options(run,rows.map(r=>[r.init,`${fmt(initial(r.init)).slice(0,10)} · HRRR 12 / GEFS 00 UTC${r.status==='ready'?'':' · unavailable'}`]),query().get('init')||run.value||latest);
+      options(run,rows.map(r=>[r.init,`${fmt(initial(r.init)).slice(0,10)} · HRRR ${r.init.slice(-2)} / GEFS 00 UTC${r.status==='ready'?'':' · unavailable'}`]),query().get('init')||run.value||latest);
       if(!query().get('init') && !rows.some(r=>r.init===latest)) {
         const o=document.createElement('option');o.value='';o.textContent='Latest comparison not yet available';run.prepend(o);run.value='';
         status.textContent='The newest HRRR comparison is not available yet. Choose an archived pair above or open either forecast dashboard.';return;
