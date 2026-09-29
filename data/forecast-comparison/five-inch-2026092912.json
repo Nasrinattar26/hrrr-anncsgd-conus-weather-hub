@@ -1,0 +1,44 @@
+{
+  "initialization": "2026092912",
+  "gefs_source_sha256": "fcd5ede21f070cec56a4e44eda1a964fb33a6d03baa21c0438e0989c29be2e76",
+  "threshold_mm": 127.0,
+  "nsamples": 500,
+  "reproduced_probability_values": 199770,
+  "windows": [
+    {
+      "id": "f00_f24",
+      "common_valid_cells": 13318,
+      "gefs_max_percent": 1.7999999523162842,
+      "hrrr_max_percent": 1.968653678894043,
+      "path": "products/forecast-comparison/2026092912/24h_f00_f24_prob_gt_5inch_7b2f88e8a11c.png"
+    },
+    {
+      "id": "f06_f30",
+      "common_valid_cells": 13318,
+      "gefs_max_percent": 2.0,
+      "hrrr_max_percent": 2.217221736907959,
+      "path": "products/forecast-comparison/2026092912/24h_f06_f30_prob_gt_5inch_76e4feb2551b.png"
+    },
+    {
+      "id": "f12_f36",
+      "common_valid_cells": 13318,
+      "gefs_max_percent": 0.800000011920929,
+      "hrrr_max_percent": 2.8085596561431885,
+      "path": "products/forecast-comparison/2026092912/24h_f12_f36_prob_gt_5inch_fa2c8b13f397.png"
+    },
+    {
+      "id": "f18_f42",
+      "common_valid_cells": 13318,
+      "gefs_max_percent": 0.800000011920929,
+      "hrrr_max_percent": 6.471831321716309,
+      "path": "products/forecast-comparison/2026092912/24h_f18_f42_prob_gt_5inch_6bd55e568398.png"
+    },
+    {
+      "id": "f24_f48",
+      "common_valid_cells": 13318,
+      "gefs_max_percent": 1.7999999523162842,
+      "hrrr_max_percent": 6.843935489654541,
+      "path": "products/forecast-comparison/2026092912/24h_f24_f48_prob_gt_5inch_b957210c0f1c.png"
+    }
+  ]
+}

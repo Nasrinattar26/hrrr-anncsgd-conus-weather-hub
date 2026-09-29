@@ -467,6 +467,12 @@
           "label": "Probability of exceeding 2 inches in 24 hours",
           "units": "%",
           "threshold_inch": 2.0
+        },
+        {
+          "id": "prob_gt_5inch",
+          "label": "Probability of exceeding 5 inches in 24 hours",
+          "units": "%",
+          "threshold_inch": 5.0
         }
       ],
       "windows": [
@@ -520,6 +526,18 @@
               "path": "products/forecast-comparison/2026092912/24h_f00_f24_prob_gt_2inch_102fb435efbc.png",
               "sha256": "77e8d9b6e2c12f4b31b48ea220c75ca0966f94b7103a56c7aa6ad21ad90272f0",
               "size_bytes": 334278
+            },
+            {
+              "id": "prob_gt_5inch",
+              "label": "Probability of exceeding 5 inches in 24 hours",
+              "units": "%",
+              "threshold_inch": 5.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026092912/24h_f00_f24_prob_gt_5inch_7b2f88e8a11c.png",
+              "sha256": "cb832833885f7b76c6342d7bc15ed3d6187c5ad306bbe10b79801f5207f9681d",
+              "size_bytes": 355423,
+              "gefs_source_sha256": "fcd5ede21f070cec56a4e44eda1a964fb33a6d03baa21c0438e0989c29be2e76",
+              "hrrr_grib_sha256": "4290e9b8a18acdba5a952fa804a0f11b14e3d5d00936059069e631e34b06fbc2"
             }
           ],
           "method_note": "GEFS probabilities: independent Monte Carlo sum of two non-overlapping 12-hour CSGD distributions (500 samples). GEFS expected rainfall: sum of the two 12-hour expectations. HRRR: directly predicted 24-hour CSGD distribution. The methods differ; GEFS sampling assumes temporal independence."
@@ -574,6 +592,18 @@
               "path": "products/forecast-comparison/2026092912/24h_f06_f30_prob_gt_2inch_102fb435efbc.png",
               "sha256": "56e4c730999fbd3e9833f00ee9ffb52369cdbeacab68a626334be6df423553bd",
               "size_bytes": 334792
+            },
+            {
+              "id": "prob_gt_5inch",
+              "label": "Probability of exceeding 5 inches in 24 hours",
+              "units": "%",
+              "threshold_inch": 5.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026092912/24h_f06_f30_prob_gt_5inch_76e4feb2551b.png",
+              "sha256": "83c813346e0ec36330ee100f635e1d6f767a602f55f268c9f4393ad1f95f9a7f",
+              "size_bytes": 355703,
+              "gefs_source_sha256": "fcd5ede21f070cec56a4e44eda1a964fb33a6d03baa21c0438e0989c29be2e76",
+              "hrrr_grib_sha256": "545777ecb35bb01f374b3d61cadb9ef9f9b5640f12363474e89df6caff659b6f"
             }
           ],
           "method_note": "GEFS probabilities: independent Monte Carlo sum of two non-overlapping 12-hour CSGD distributions (500 samples). GEFS expected rainfall: sum of the two 12-hour expectations. HRRR: directly predicted 24-hour CSGD distribution. The methods differ; GEFS sampling assumes temporal independence."
@@ -628,6 +658,18 @@
               "path": "products/forecast-comparison/2026092912/24h_f12_f36_prob_gt_2inch_102fb435efbc.png",
               "sha256": "4aae9171251dd5ac146ed6b0ec4a19ec4335480fe89bf66899515ac685491f73",
               "size_bytes": 333525
+            },
+            {
+              "id": "prob_gt_5inch",
+              "label": "Probability of exceeding 5 inches in 24 hours",
+              "units": "%",
+              "threshold_inch": 5.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026092912/24h_f12_f36_prob_gt_5inch_fa2c8b13f397.png",
+              "sha256": "788ef17ae4d80986a5196ca7c557a4b6f30705fd73e326adf8045082c1f81b8c",
+              "size_bytes": 356590,
+              "gefs_source_sha256": "fcd5ede21f070cec56a4e44eda1a964fb33a6d03baa21c0438e0989c29be2e76",
+              "hrrr_grib_sha256": "2c082705461ef71fa7c4ff6403026671f7302a8622b60ddb898c178525e67c17"
             }
           ],
           "method_note": "GEFS probabilities: independent Monte Carlo sum of two non-overlapping 12-hour CSGD distributions (500 samples). GEFS expected rainfall: sum of the two 12-hour expectations. HRRR: directly predicted 24-hour CSGD distribution. The methods differ; GEFS sampling assumes temporal independence."
@@ -682,6 +724,18 @@
               "path": "products/forecast-comparison/2026092912/24h_f18_f42_prob_gt_2inch_102fb435efbc.png",
               "sha256": "170c3c2ee19316a11ec86c0b2e21aef5fdc71152fda74afefdf19f0ae8af30dd",
               "size_bytes": 334026
+            },
+            {
+              "id": "prob_gt_5inch",
+              "label": "Probability of exceeding 5 inches in 24 hours",
+              "units": "%",
+              "threshold_inch": 5.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026092912/24h_f18_f42_prob_gt_5inch_6bd55e568398.png",
+              "sha256": "faad5c5a01d84d7190e5b1bd6771b742df5f633bd2ad8e512e10a103685e043e",
+              "size_bytes": 357315,
+              "gefs_source_sha256": "fcd5ede21f070cec56a4e44eda1a964fb33a6d03baa21c0438e0989c29be2e76",
+              "hrrr_grib_sha256": "21ace1a8a6ada918b6624aaeb839c2b1b501475d696100867f712e3059e34206"
             }
           ],
           "method_note": "GEFS probabilities: independent Monte Carlo sum of two non-overlapping 12-hour CSGD distributions (500 samples). GEFS expected rainfall: sum of the two 12-hour expectations. HRRR: directly predicted 24-hour CSGD distribution. The methods differ; GEFS sampling assumes temporal independence."
@@ -736,12 +790,30 @@
               "path": "products/forecast-comparison/2026092912/24h_f24_f48_prob_gt_2inch_102fb435efbc.png",
               "sha256": "1c6891b6a466ec250bdd4d1ca6a9e84b98e3813614a044aa3c31a5f3ed978775",
               "size_bytes": 334427
+            },
+            {
+              "id": "prob_gt_5inch",
+              "label": "Probability of exceeding 5 inches in 24 hours",
+              "units": "%",
+              "threshold_inch": 5.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026092912/24h_f24_f48_prob_gt_5inch_b957210c0f1c.png",
+              "sha256": "55f5a30751f77f39af23a53edce9b22f4ca2de60d0838e627641f0e03ae278dc",
+              "size_bytes": 357799,
+              "gefs_source_sha256": "fcd5ede21f070cec56a4e44eda1a964fb33a6d03baa21c0438e0989c29be2e76",
+              "hrrr_grib_sha256": "3a26045dcebd8232d43cc66e643dc61faa85dcf911a66723a6c132800c009772"
             }
           ],
           "method_note": "GEFS probabilities: independent Monte Carlo sum of two non-overlapping 12-hour CSGD distributions (500 samples). GEFS expected rainfall: sum of the two 12-hour expectations. HRRR: directly predicted 24-hour CSGD distribution. The methods differ; GEFS sampling assumes temporal independence."
         }
       ],
-      "gefs_nsamples": 500
+      "gefs_nsamples": 500,
+      "five_inch_provenance": {
+        "method": "Same RT7a random stream; all stored fixed-threshold probabilities reproduced exactly.",
+        "threshold_mm": 127.0,
+        "hrrr_source": "Published 24-bit GRIB2 export, local parameter 198",
+        "reproduced_probability_values": 199770
+      }
     }
   }
 }

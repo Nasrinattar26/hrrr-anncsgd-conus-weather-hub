@@ -69,14 +69,16 @@
       if(hours===6 || group.status!=='ready' || !group.windows?.length || !group.products?.length) throw Error('Incomplete forecast comparison.');
       if(hours===24 && (!Number.isInteger(group.gefs_nsamples) || group.gefs_nsamples<1 || !group.method_note)) throw Error('Missing 24-hour construction metadata.');
       const names=new Set(group.products.map(p=>p.id));
-      if(names.size!==4 || !['expected_precip','prob_gt_0p5inch','prob_gt_1inch','prob_gt_2inch'].every(id=>names.has(id))) throw Error('Invalid comparison products.');
+      const required=['expected_precip','prob_gt_0p5inch','prob_gt_1inch','prob_gt_2inch'];
+      const allowed=new Set([...required,...(hours===24?['prob_gt_5inch']:[])]);
+      if(names.size!==group.products.length || !required.every(id=>names.has(id)) || [...names].some(id=>!allowed.has(id))) throw Error('Invalid comparison products.');
       const windows=new Set();
       for(const w of group.windows) {
         if(windows.has(w.id)) throw Error('Duplicate forecast periods.');windows.add(w.id);
         if(w.id!==`f${String(w.hrrr_end_fhr-hours).padStart(2,'0')}_f${String(w.hrrr_end_fhr).padStart(2,'0')}` ||
           w.hrrr_init!==row.init || w.gefs_init!==row.gefs_init || w.duration_hours!==hours || !Number.isInteger(w.hrrr_end_fhr) || !Number.isInteger(w.gefs_end_fhr) || w.hrrr_end_fhr<hours || w.hrrr_end_fhr>48 || w.gefs_end_fhr-w.hrrr_end_fhr!==(h-g)/3600000 ||
           Date.parse(w.valid_end)!==h+w.hrrr_end_fhr*3600000 || Date.parse(w.valid_end)!==g+w.gefs_end_fhr*3600000 || Date.parse(w.valid_end)-Date.parse(w.valid_start)!==hours*3600000) throw Error('Forecast valid periods do not match.');
-        if(!Array.isArray(w.products) || w.products.length!==4 || new Set(w.products.map(p=>p.id)).size!==4) throw Error('Missing forecast products.');
+        if(!Array.isArray(w.products) || w.products.length!==names.size || new Set(w.products.map(p=>p.id)).size!==names.size) throw Error('Missing forecast products.');
         for(const p of w.products) {
           const expected=p.id==='expected_precip'?null:Number(p.id.replace('prob_gt_','').replace('inch','').replace('p','.'));
           if(!names.has(p.id) || p.threshold_inch!==expected || p.units!==(expected===null?'inches':'%') || !new RegExp(`^products/forecast-comparison/${row.init}/[a-zA-Z0-9_-]+\\.png$`).test(p.path) || !Number.isInteger(p.common_valid_cells) || p.common_valid_cells<=0) throw Error('Invalid forecast image metadata.');
@@ -119,7 +121,11 @@
       options(period,[],null);options(product,[],null);status.textContent=group?.message||'This duration is unavailable.';remember();return;
     }
     options(period,group.windows.map(w=>[w.id,`${fmt(w.valid_start)} → ${fmt(w.valid_end)}`]),selected.get('window'));
-    options(product,group.products.map(p=>[p.id,label(p.label)]),selected.get('product')||'prob_gt_1inch');
+    const products=group.products.map(p=>[p.id,label(p.label)]);
+    if(group.duration_hours===24 && !group.products.some(p=>p.id==='prob_gt_5inch')) {
+      products.push(['prob_gt_5inch','Probability of exceeding 5 inches in 24 hours · not yet published']);
+    }
+    options(product,products,selected.get('product')||'prob_gt_1inch');
     showImage();
   }
   async function loadRun() {
