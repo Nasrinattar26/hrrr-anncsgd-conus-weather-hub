@@ -10,6 +10,7 @@
   const query=()=>new URL(location.href).searchParams;
   const label=value=>String(value||'').replace(/^Chance of more than /,'Probability of exceeding ');
   const active=()=>data?.durations?.[duration.value];
+  const displayable=group=>['ready','hrrr_only'].includes(group?.status);
   function initial(value) {
     if(!/^\d{10}$/.test(value)) throw Error('Invalid forecast initialization.');
     const iso=`${value.slice(0,4)}-${value.slice(4,6)}-${value.slice(6,8)}T${value.slice(8,10)}:00:00Z`;
@@ -66,11 +67,23 @@
       const hours=Number(key.replace('h',''));
       if(![6,12,24].includes(hours) || group.duration_hours!==hours) throw Error('Invalid accumulation duration.');
       if(['waiting','unavailable'].includes(group.status)) continue;
+      if(hours===6 && group.status==='hrrr_only') {
+        if(group.comparison_available!==false || group.products?.length!==1 || group.products[0].id!=='prob_gt_5inch' || group.windows?.length!==8) throw Error('Invalid HRRR-only forecast metadata.');
+        const seen=new Set();
+        for(const w of group.windows) {
+          const end=w.hrrr_end_fhr;
+          if(seen.has(w.id) || !Number.isInteger(end) || end<6 || end>48 || end%6 || w.id!==`f${String(end-6).padStart(2,'0')}_f${String(end).padStart(2,'0')}` || w.hrrr_init!==row.init || w.duration_hours!==6 || Date.parse(w.valid_end)!==h+end*3600000 || Date.parse(w.valid_end)-Date.parse(w.valid_start)!==6*3600000) throw Error('Invalid HRRR 6-hour forecast period.');
+          seen.add(w.id);
+          const p=w.products?.[0];
+          if(w.products?.length!==1 || p?.id!=='prob_gt_5inch' || p.threshold_inch!==5 || p.units!=='%' || !Number.isInteger(p.valid_cells) || p.valid_cells<=0 || !new RegExp(`^products/forecast-comparison/${row.init}/6h_[a-zA-Z0-9_-]+\\.png$`).test(p.path)) throw Error('Invalid HRRR 6-hour forecast image.');
+        }
+        continue;
+      }
       if(hours===6 || group.status!=='ready' || !group.windows?.length || !group.products?.length) throw Error('Incomplete forecast comparison.');
       if(hours===24 && (!Number.isInteger(group.gefs_nsamples) || group.gefs_nsamples<1 || !group.method_note)) throw Error('Missing 24-hour construction metadata.');
       const names=new Set(group.products.map(p=>p.id));
       const required=['expected_precip','prob_gt_0p5inch','prob_gt_1inch','prob_gt_2inch'];
-      const allowed=new Set([...required,...(hours===24?['prob_gt_5inch']:[])]);
+      const allowed=new Set([...required,'prob_gt_5inch']);
       if(names.size!==group.products.length || !required.every(id=>names.has(id)) || [...names].some(id=>!allowed.has(id))) throw Error('Invalid comparison products.');
       const windows=new Set();
       for(const w of group.windows) {
@@ -100,11 +113,12 @@
     timer=setTimeout(fail,30000);
     preload.onload=()=>{
       clearTimeout(timer);if(ticket!==epoch)return;
-      img.src=source;img.alt=`${label(p.label)}: GEFS ${data.gefs_init} and HRRR ${data.hrrr_init}, valid ${fmt(w.valid_start)} to ${fmt(w.valid_end)} UTC.`;
+      const single=group.status==='hrrr_only';
+      img.src=source;img.alt=`${label(p.label)}: ${single?'HRRR '+data.hrrr_init:'GEFS '+data.gefs_init+' and HRRR '+data.hrrr_init}, valid ${fmt(w.valid_start)} to ${fmt(w.valid_end)} UTC.`;
       $('full-image').href=source;figure.hidden=false;
-      status.textContent=`Valid ${fmt(w.valid_start)} → ${fmt(w.valid_end)} UTC · ${group.duration_hours} hours · ${p.common_valid_cells.toLocaleString()} common land cells`;
+      status.textContent=`Valid ${fmt(w.valid_start)} → ${fmt(w.valid_end)} UTC · ${group.duration_hours} hours · ${(single?p.valid_cells:p.common_valid_cells).toLocaleString()} ${single?'HRRR':'common'} land cells`;
       const timing=data.schema_version===3?'Same initialization':data.gefs_init===data.hrrr_init?'Archived pair · same initialization':'Archived pair · different initializations';
-      $('comparison-caption').textContent=`${timing} · GEFS lead ${w.gefs_end_fhr-group.duration_hours}–${w.gefs_end_fhr} h · HRRR lead ${w.hrrr_end_fhr-group.duration_hours}–${w.hrrr_end_fhr} h · ${p.units==='inches'?'Amounts in inches':'Probabilities in percent'}`;
+      $('comparison-caption').textContent=single?`HRRR only · GEFS 6-hour forecast unavailable · HRRR lead ${w.hrrr_end_fhr-6}–${w.hrrr_end_fhr} h · Probabilities in percent`:`${timing} · GEFS lead ${w.gefs_end_fhr-group.duration_hours}–${w.gefs_end_fhr} h · HRRR lead ${w.hrrr_end_fhr-group.duration_hours}–${w.hrrr_end_fhr} h · ${p.units==='inches'?'Amounts in inches':'Probabilities in percent'}`;
     };
     preload.onerror=fail;preload.src=source;
   }
@@ -112,18 +126,18 @@
     clear('Checking the selected accumulation duration…');
     const group=active(), selected=query();
     $('previous').disabled=true;$('next').disabled=true;
-    $('comparison-method').textContent=group?.status==='ready'?(group.method_note||''):'';
-    $('hrrr-duration-help').hidden=group?.status==='ready';
+    $('comparison-method').textContent=displayable(group)?(group.method_note||''):'';
+    $('hrrr-duration-help').hidden=displayable(group);
     const link=new URL('index.html',root);link.searchParams.set('init',run.value);link.searchParams.set('duration',duration.value);link.hash='forecast-workspace';
     $('hrrr-duration-link').href=link.href;
     $('hrrr-duration-link').textContent=`View HRRR ${group?.duration_hours||''}-hour forecasts ↗`;
-    if(!group || group.status!=='ready') {
+    if(!displayable(group)) {
       options(period,[],null);options(product,[],null);status.textContent=group?.message||'This duration is unavailable.';remember();return;
     }
     options(period,group.windows.map(w=>[w.id,`${fmt(w.valid_start)} → ${fmt(w.valid_end)}`]),selected.get('window'));
     const products=group.products.map(p=>[p.id,label(p.label)]);
-    if(group.duration_hours===24 && !group.products.some(p=>p.id==='prob_gt_5inch')) {
-      products.push(['prob_gt_5inch','Probability of exceeding 5 inches in 24 hours · not yet published']);
+    if(!group.products.some(p=>p.id==='prob_gt_5inch')) {
+      products.push(['prob_gt_5inch',`Probability of exceeding 5 inches in ${group.duration_hours} hours · not yet published`]);
     }
     options(product,products,selected.get('product')||'prob_gt_1inch');
     showImage();
@@ -136,7 +150,7 @@
     try {
       if(row.manifest!==`data/forecast-comparison/runs/${row.init}.json`) throw Error('Invalid comparison catalog path.');
       const value=await json(row.manifest);if(ticket!==epoch)return;data=normalize(value,row);
-      options(duration,['6h','12h','24h'].map(key=>[key,`${data.durations[key].duration_hours}-hour${data.durations[key].status==='ready'?'':data.durations[key].status==='waiting'?' · waiting for matching cycle':' · comparison unavailable'}`]),query().get('duration')||'12h');
+      options(duration,['6h','12h','24h'].map(key=>[key,`${data.durations[key].duration_hours}-hour${data.durations[key].status==='ready'?'':data.durations[key].status==='hrrr_only'?' · HRRR only':data.durations[key].status==='waiting'?' · waiting for matching cycle':' · comparison unavailable'}`]),query().get('duration')||'12h');
       showDuration();
     }catch(error){if(ticket===epoch && error.name!=='AbortError'){status.textContent=error.message;status.dataset.error='true';}}
   }
@@ -168,7 +182,7 @@
   run.addEventListener('change',loadRun);duration.addEventListener('change',showDuration);
   period.addEventListener('change',showImage);product.addEventListener('change',showImage);$('refresh').addEventListener('click',refresh);
   for(const [id,step] of [['previous',-1],['next',1]]) $(id).addEventListener('click',()=>{
-    const group=active();if(!group || group.status!=='ready')return;
+    const group=active();if(!displayable(group))return;
     const index=group.windows.findIndex(w=>w.id===period.value)+step;
     if(index>=0 && index<group.windows.length){period.value=group.windows[index].id;showImage();}
   });
