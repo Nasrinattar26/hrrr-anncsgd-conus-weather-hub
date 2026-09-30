@@ -1,9 +1,17 @@
 {
   "schema_version": 1,
-  "latest_initialization": "2026092918",
+  "latest_initialization": "2026093000",
   "retention_count": 12,
-  "updated_utc": "2026-09-29T20:17:04.664205+00:00",
+  "updated_utc": "2026-09-30T02:16:46.083559+00:00",
   "runs": [
+    {
+      "init": "2026093000",
+      "map_catalog": "data/forecast-runs/2026093000/map_catalog.json",
+      "gif_manifest": "products/gifs/2026093000/manifest.json",
+      "grib_manifest": "products/grib2/2026093000/manifest.json",
+      "map_count": 145,
+      "display_amount_units": "inches"
+    },
     {
       "init": "2026092918",
       "map_catalog": "data/forecast-runs/2026092918/map_catalog.json",
