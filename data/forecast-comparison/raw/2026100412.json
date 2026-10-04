@@ -1,0 +1,1269 @@
+{
+  "schema_version": 1,
+  "init": "2026100412",
+  "units": "inches",
+  "mm_per_inch": 25.4,
+  "generated_utc": "2026-10-04T14:06:55.339412+00:00",
+  "windows": [
+    {
+      "id": "6h_f00_f06",
+      "duration_hours": 6,
+      "window": "f00_f06",
+      "valid_start": "2026-10-04T12:00:00Z",
+      "valid_end": "2026-10-04T18:00:00Z",
+      "source_sha256": "363b839e338846e128e2ac4f91192321246a5b12fd14a0aee0384b509cc024af",
+      "fingerprint": "4f9b32de64d30b7be8f99e8c4bb19a3beba9cfe91226c313e76510f1123b06f3",
+      "regions": {
+        "conus": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_6h_f00_f06_conus_4f9b32de64d3.png",
+          "sha256": "3455661d6dfa439e6adda24dd3847d96654f0ef87f4d0542fc08a912ccc80e84",
+          "raw": {
+            "max_inches": 7.123228058101624,
+            "max_mm": 180.92999267578125,
+            "latitude": 30.0,
+            "longitude": -91.5,
+            "other_at_max_inches": 1.0952829375980409,
+            "mean_inches": 0.026381943542534786,
+            "points_ge_7_inches": 1,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          },
+          "ann": {
+            "max_inches": 1.6812641414131706,
+            "max_mm": 42.70410919189453,
+            "latitude": 30.0,
+            "longitude": -90.5,
+            "other_at_max_inches": 1.3346457293653113,
+            "mean_inches": 0.0277014196045539,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          }
+        },
+        "southwest_texas": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_6h_f00_f06_southwest_texas_4f9b32de64d3.png",
+          "sha256": "2b8c0742cec17a12bbf5037c583cb5591bfd88457a3b722fa1f7bbef7e1ed8b3",
+          "raw": {
+            "max_inches": 2.4468504537747604,
+            "max_mm": 62.15000152587891,
+            "latitude": 32.25,
+            "longitude": -93.75,
+            "other_at_max_inches": 0.5350325051255114,
+            "mean_inches": 0.02436681955621443,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          },
+          "ann": {
+            "max_inches": 1.2478301281065454,
+            "max_mm": 31.69488525390625,
+            "latitude": 26.75,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.8389763569268656,
+            "mean_inches": 0.030220676255971503,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          }
+        }
+      }
+    },
+    {
+      "id": "6h_f06_f12",
+      "duration_hours": 6,
+      "window": "f06_f12",
+      "valid_start": "2026-10-04T18:00:00Z",
+      "valid_end": "2026-10-05T00:00:00Z",
+      "source_sha256": "fa380d55724dc102b1d2a16a30e94d45de2375987cb0c8bde9f60884879d44d8",
+      "fingerprint": "587d8a869ecf4aa9ab04eb310d0e0973a4d64f3326534007b20b6b492d205756",
+      "regions": {
+        "conus": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_6h_f06_f12_conus_587d8a869ecf.png",
+          "sha256": "e30ffe7dfa4826c5ab59816768a91cdc8007775a787d2497a1d096b511d7d068",
+          "raw": {
+            "max_inches": 4.609055106095442,
+            "max_mm": 117.06999969482423,
+            "latitude": 31.75,
+            "longitude": -83.0,
+            "other_at_max_inches": 0.5362132215124416,
+            "mean_inches": 0.026056618609419685,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          },
+          "ann": {
+            "max_inches": 1.336387574203371,
+            "max_mm": 33.944244384765625,
+            "latitude": 29.75,
+            "longitude": -89.75,
+            "other_at_max_inches": 1.6740159162386197,
+            "mean_inches": 0.026948931808456648,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          }
+        },
+        "southwest_texas": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_6h_f06_f12_southwest_texas_587d8a869ecf.png",
+          "sha256": "72caa273d6e617de13c59d95fa3cf6836661997cf9e564bbeb7f3017cf08919f",
+          "raw": {
+            "max_inches": 1.4669292179618296,
+            "max_mm": 37.26000213623047,
+            "latitude": 27.0,
+            "longitude": -98.25,
+            "other_at_max_inches": 0.3515140653595211,
+            "mean_inches": 0.009418825026750788,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          },
+          "ann": {
+            "max_inches": 0.51922576633964,
+            "max_mm": 13.188334465026855,
+            "latitude": 26.5,
+            "longitude": -99.0,
+            "other_at_max_inches": 0.680314987663209,
+            "mean_inches": 0.01588372277661573,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          }
+        }
+      }
+    },
+    {
+      "id": "6h_f12_f18",
+      "duration_hours": 6,
+      "window": "f12_f18",
+      "valid_start": "2026-10-05T00:00:00Z",
+      "valid_end": "2026-10-05T06:00:00Z",
+      "source_sha256": "a9b1dd7d6996ec9df7e965ef6ae28256799c014f6a3b11f384dae663c40b478c",
+      "fingerprint": "c1cc81bc2268c8febaffa3f9b669a52bfef06751d886da7abf35fcabdf8ec7cc",
+      "regions": {
+        "conus": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_6h_f12_f18_conus_c1cc81bc2268.png",
+          "sha256": "acfbe09db06d8c17f6ff4dd2044ce0a79056dd78beacc44b7e98b53220ec5268",
+          "raw": {
+            "max_inches": 3.6393698744886507,
+            "max_mm": 92.43999481201172,
+            "latitude": 30.5,
+            "longitude": -88.5,
+            "other_at_max_inches": 0.7022883948378676,
+            "mean_inches": 0.017557139791751247,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          },
+          "ann": {
+            "max_inches": 0.9301021155409926,
+            "max_mm": 23.62459373474121,
+            "latitude": 32.75,
+            "longitude": -81.75,
+            "other_at_max_inches": 0.5952755860456331,
+            "mean_inches": 0.01624368240206055,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          }
+        },
+        "southwest_texas": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_6h_f12_f18_southwest_texas_c1cc81bc2268.png",
+          "sha256": "744d014bfcc5a8236392f16602e7863fb753cb7f8f6e1cd8ad738ae3324f8a9d",
+          "raw": {
+            "max_inches": 0.6665354450856608,
+            "max_mm": 16.93000030517578,
+            "latitude": 26.25,
+            "longitude": -97.75,
+            "other_at_max_inches": 0.11793091541200174,
+            "mean_inches": 0.002389482610790118,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          },
+          "ann": {
+            "max_inches": 0.17473827196857122,
+            "max_mm": 4.438352108001709,
+            "latitude": 26.5,
+            "longitude": -99.0,
+            "other_at_max_inches": 0.0059054217000645915,
+            "mean_inches": 0.004479651510955428,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          }
+        }
+      }
+    },
+    {
+      "id": "6h_f18_f24",
+      "duration_hours": 6,
+      "window": "f18_f24",
+      "valid_start": "2026-10-05T06:00:00Z",
+      "valid_end": "2026-10-05T12:00:00Z",
+      "source_sha256": "c2adbe86cc550b9f5634825a8f709c5a0db6b097ab0cf658525e8399c6eb7426",
+      "fingerprint": "185e35b94f61adac60fb296fea668a11a741d632653e0fc33012f8b987c687a7",
+      "regions": {
+        "conus": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_6h_f18_f24_conus_185e35b94f61.png",
+          "sha256": "4b8e619463a5b80313a7d55f87e53e4d646f6cecec43270185a7eb2475d0db64",
+          "raw": {
+            "max_inches": 2.6047245536263537,
+            "max_mm": 66.16000366210938,
+            "latitude": 30.25,
+            "longitude": -88.75,
+            "other_at_max_inches": 0.6680082336185486,
+            "mean_inches": 0.008234814489868328,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          },
+          "ann": {
+            "max_inches": 0.8661547983725241,
+            "max_mm": 22.00033187866211,
+            "latitude": 30.5,
+            "longitude": -88.5,
+            "other_at_max_inches": 0.5200790044829602,
+            "mean_inches": 0.009309816365180832,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          }
+        },
+        "southwest_texas": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_6h_f18_f24_southwest_texas_185e35b94f61.png",
+          "sha256": "94e6b5f00f2adb388796e27f0e2520443b908e43a52e301cf0d05bdb8632c13b",
+          "raw": {
+            "max_inches": 1.8913384685366172,
+            "max_mm": 48.03999710083008,
+            "latitude": 26.25,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.18049012957595464,
+            "mean_inches": 0.0014318002078002035,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          },
+          "ann": {
+            "max_inches": 0.18049012957595464,
+            "max_mm": 4.584449291229248,
+            "latitude": 26.25,
+            "longitude": -97.5,
+            "other_at_max_inches": 1.8913384685366172,
+            "mean_inches": 0.0023535929573930566,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          }
+        }
+      }
+    },
+    {
+      "id": "6h_f24_f30",
+      "duration_hours": 6,
+      "window": "f24_f30",
+      "valid_start": "2026-10-05T12:00:00Z",
+      "valid_end": "2026-10-05T18:00:00Z",
+      "source_sha256": "abcea9fc3062d6a4ee5804886a0cc52154b41be53d0e902b4ee9083a1af72085",
+      "fingerprint": "8122423f73660b1df817941b034e25b03c51959770acde274eb71cfee3b85414",
+      "regions": {
+        "conus": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_6h_f24_f30_conus_8122423f7366.png",
+          "sha256": "16f10da479d0fe8c364d7c05c218b09e45a52439694b0a6aac746b4e328295ea",
+          "raw": {
+            "max_inches": 2.014566857045091,
+            "max_mm": 51.16999816894531,
+            "latitude": 29.75,
+            "longitude": -83.25,
+            "other_at_max_inches": 0.2020353031909372,
+            "mean_inches": 0.006868568118584576,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          },
+          "ann": {
+            "max_inches": 0.7517471463661495,
+            "max_mm": 19.094377517700195,
+            "latitude": 30.25,
+            "longitude": -87.75,
+            "other_at_max_inches": 0.370866219828448,
+            "mean_inches": 0.008725143553081316,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          }
+        },
+        "southwest_texas": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_6h_f24_f30_southwest_texas_8122423f7366.png",
+          "sha256": "d12baf9b128f971892cc4ae5053343b0021047b26b138464e48490277a58b821",
+          "raw": {
+            "max_inches": 0.23582676264244742,
+            "max_mm": 5.989999771118164,
+            "latitude": 31.5,
+            "longitude": -102.0,
+            "other_at_max_inches": 0.036921414334004324,
+            "mean_inches": 0.0005635094112150107,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          },
+          "ann": {
+            "max_inches": 0.2549726756538932,
+            "max_mm": 6.476305961608887,
+            "latitude": 26.0,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.012598488274521716,
+            "mean_inches": 0.0022201475800042356,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          }
+        }
+      }
+    },
+    {
+      "id": "6h_f30_f36",
+      "duration_hours": 6,
+      "window": "f30_f36",
+      "valid_start": "2026-10-05T18:00:00Z",
+      "valid_end": "2026-10-06T00:00:00Z",
+      "source_sha256": "464ca6336f7f315f17472df340c98c2b81c1da97fe7d1f60f0abb037f5f8b939",
+      "fingerprint": "cf21166f721065e6ca0b464021d80c1929b92c1581263f16be66924c51155096",
+      "regions": {
+        "conus": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_6h_f30_f36_conus_cf21166f7210.png",
+          "sha256": "b1ceb5ac250f0d8a42101c56ae9d449d8e913dea5c5721ed1a3832c576dff94d",
+          "raw": {
+            "max_inches": 2.928346648929626,
+            "max_mm": 74.3800048828125,
+            "latitude": 27.5,
+            "longitude": -82.25,
+            "other_at_max_inches": 0.19973691054216522,
+            "mean_inches": 0.007166252943437873,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          },
+          "ann": {
+            "max_inches": 0.48340102819007214,
+            "max_mm": 12.278386116027832,
+            "latitude": 29.5,
+            "longitude": -81.5,
+            "other_at_max_inches": 0.46456689909687193,
+            "mean_inches": 0.008058985957451395,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          }
+        },
+        "southwest_texas": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_6h_f30_f36_southwest_texas_cf21166f7210.png",
+          "sha256": "ee9725ba01c5723386d63148a1112be0e8261a1d342593beb3a1d5eef69764c5",
+          "raw": {
+            "max_inches": 0.3011810873437116,
+            "max_mm": 7.649999618530273,
+            "latitude": 32.25,
+            "longitude": -104.0,
+            "other_at_max_inches": 0.05137282563006784,
+            "mean_inches": 0.0006122791456553104,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          },
+          "ann": {
+            "max_inches": 0.11243161254041778,
+            "max_mm": 2.8557629585266113,
+            "latitude": 26.0,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.019291329571581264,
+            "mean_inches": 0.0023429277501765245,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          }
+        }
+      }
+    },
+    {
+      "id": "6h_f36_f42",
+      "duration_hours": 6,
+      "window": "f36_f42",
+      "valid_start": "2026-10-06T00:00:00Z",
+      "valid_end": "2026-10-06T06:00:00Z",
+      "source_sha256": "6cb1a6252e273abf791250102f910e441b8bcfa12472d8d3a814a3433ffc8736",
+      "fingerprint": "fad3a60dec0834d839b781b3d4d3a938334ec21a17c9eb12af7836ce03612414",
+      "regions": {
+        "conus": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_6h_f36_f42_conus_fad3a60dec08.png",
+          "sha256": "6d87a324cce514e83c426b801f4290b723d6b2f0db3da88a54bfd36ee798ef37",
+          "raw": {
+            "max_inches": 2.990157660536879,
+            "max_mm": 75.95000457763672,
+            "latitude": 28.0,
+            "longitude": -80.75,
+            "other_at_max_inches": 0.2642454124811128,
+            "mean_inches": 0.00201062927959653,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          },
+          "ann": {
+            "max_inches": 0.32773840145801936,
+            "max_mm": 8.324555397033691,
+            "latitude": 28.0,
+            "longitude": -82.75,
+            "other_at_max_inches": 0.381889756270281,
+            "mean_inches": 0.0028222989148013254,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          }
+        },
+        "southwest_texas": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_6h_f36_f42_southwest_texas_fad3a60dec08.png",
+          "sha256": "cdea8f3c723a0e147cdfe2f3f8a0e535cbd954c8ef7d257744bb4c4071dd9472",
+          "raw": {
+            "max_inches": 0.19133860670675443,
+            "max_mm": 4.8600006103515625,
+            "latitude": 26.5,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.044217086213780205,
+            "mean_inches": 0.000231567844384606,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          },
+          "ann": {
+            "max_inches": 0.11891072190652682,
+            "max_mm": 3.0203323364257812,
+            "latitude": 26.0,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.0015747641015240528,
+            "mean_inches": 0.0017308564277642938,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          }
+        }
+      }
+    },
+    {
+      "id": "6h_f42_f48",
+      "duration_hours": 6,
+      "window": "f42_f48",
+      "valid_start": "2026-10-06T06:00:00Z",
+      "valid_end": "2026-10-06T12:00:00Z",
+      "source_sha256": "c0c5ce8d610cb2b8352f34fe50439a510e387123c43ff191b81b48b5bc7e3a1a",
+      "fingerprint": "14ab35a7ebb190385e7317dfef39599fe980bd1f537e152b30d93f89dea796f1",
+      "regions": {
+        "conus": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_6h_f42_f48_conus_14ab35a7ebb1.png",
+          "sha256": "0154bc8fd9c67c49c5991b9c5c1decf0df8a1017e7c9c148970c94752cbdfe05",
+          "raw": {
+            "max_inches": 3.657874159925566,
+            "max_mm": 92.91000366210938,
+            "latitude": 29.75,
+            "longitude": -81.5,
+            "other_at_max_inches": 0.18529955796369418,
+            "mean_inches": 0.0015270612513760505,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          },
+          "ann": {
+            "max_inches": 0.2972099349254698,
+            "max_mm": 7.549132347106933,
+            "latitude": 26.0,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.14803150507408805,
+            "mean_inches": 0.0023569487704900647,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          }
+        },
+        "southwest_texas": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_6h_f42_f48_southwest_texas_14ab35a7ebb1.png",
+          "sha256": "c2a94e1e2ac14fd05758897686961ce781239951398d4349449243f5fcd0c142",
+          "raw": {
+            "max_inches": 0.14803150507408805,
+            "max_mm": 3.7600002288818364,
+            "latitude": 26.0,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.2972099349254698,
+            "mean_inches": 6.069658463071435e-05,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          },
+          "ann": {
+            "max_inches": 0.2972099349254698,
+            "max_mm": 7.549132347106933,
+            "latitude": 26.0,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.14803150507408805,
+            "mean_inches": 0.0010658880729137973,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          }
+        }
+      }
+    },
+    {
+      "id": "12h_f00_f12",
+      "duration_hours": 12,
+      "window": "f00_f12",
+      "valid_start": "2026-10-04T12:00:00Z",
+      "valid_end": "2026-10-05T00:00:00Z",
+      "source_sha256": "d0cf82148a6eedad02e71236caeba94289771500c6e605e6b98a6a68b6edaca6",
+      "fingerprint": "75d66c86cab2a60242d1b845dd1526903389be64a61e7277b1d95fbf45e2a8ef",
+      "regions": {
+        "conus": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_12h_f00_f12_conus_75d66c86cab2.png",
+          "sha256": "3f7021946e7e8e5a82ce49db6d8bf2ca59e39df13fdf9bb320baca4177e54d77",
+          "raw": {
+            "max_inches": 8.5440946563961,
+            "max_mm": 217.0200042724609,
+            "latitude": 29.5,
+            "longitude": -90.75,
+            "other_at_max_inches": 1.982572360301581,
+            "mean_inches": 0.052438562099182386,
+            "points_ge_7_inches": 2,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          },
+          "ann": {
+            "max_inches": 3.25950292151744,
+            "max_mm": 82.79137420654297,
+            "latitude": 30.0,
+            "longitude": -90.25,
+            "other_at_max_inches": 3.996850261538048,
+            "mean_inches": 0.0514125625087249,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          }
+        },
+        "southwest_texas": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_12h_f00_f12_southwest_texas_75d66c86cab2.png",
+          "sha256": "dd93ee20dd21d769f4f84bcaa7f136a85cb467c6f1414ea6753a05596b3e9f7c",
+          "raw": {
+            "max_inches": 2.802362216739204,
+            "max_mm": 71.18000030517578,
+            "latitude": 26.75,
+            "longitude": -97.75,
+            "other_at_max_inches": 1.1749202247679704,
+            "mean_inches": 0.033785644540536196,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          },
+          "ann": {
+            "max_inches": 1.5797209551953895,
+            "max_mm": 40.12491226196289,
+            "latitude": 26.75,
+            "longitude": -97.5,
+            "other_at_max_inches": 1.2728347177580586,
+            "mean_inches": 0.04095215164651975,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          }
+        }
+      }
+    },
+    {
+      "id": "12h_f06_f18",
+      "duration_hours": 12,
+      "window": "f06_f18",
+      "valid_start": "2026-10-04T18:00:00Z",
+      "valid_end": "2026-10-05T06:00:00Z",
+      "source_sha256": "1993061b806ff1e70642b17c9ec642064e19703eb6f8dc6be3d25c4dfc991f95",
+      "fingerprint": "4127a4b56f919bd63b3a5026316b48e97fbdbe1d341d35670f28728f9d9c3809",
+      "regions": {
+        "conus": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_12h_f06_f18_conus_4127a4b56f91.png",
+          "sha256": "de7a84f20f1f3ec28b1d36785b3a7f0cf0a39a613d3ddf2dfecc169b542e9a04",
+          "raw": {
+            "max_inches": 4.890157444270577,
+            "max_mm": 124.20999908447266,
+            "latitude": 31.75,
+            "longitude": -83.0,
+            "other_at_max_inches": 0.7061014400692437,
+            "mean_inches": 0.043613758331301884,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          },
+          "ann": {
+            "max_inches": 1.304647791104054,
+            "max_mm": 33.13805389404297,
+            "latitude": 30.5,
+            "longitude": -89.0,
+            "other_at_max_inches": 2.2893701388141303,
+            "mean_inches": 0.042453715760772004,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          }
+        },
+        "southwest_texas": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_12h_f06_f18_southwest_texas_4127a4b56f91.png",
+          "sha256": "2ae4b1208f54d1b735df21e77e8d08bde9bb205a88abba46b0c2c0d22cb8ddf6",
+          "raw": {
+            "max_inches": 1.4677166375588244,
+            "max_mm": 37.28000259399414,
+            "latitude": 27.0,
+            "longitude": -98.25,
+            "other_at_max_inches": 0.3430203565462368,
+            "mean_inches": 0.0118083076385307,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          },
+          "ann": {
+            "max_inches": 0.6646024899219903,
+            "max_mm": 16.880903244018555,
+            "latitude": 26.5,
+            "longitude": -99.0,
+            "other_at_max_inches": 0.6862204093632736,
+            "mean_inches": 0.01861289671441842,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          }
+        }
+      }
+    },
+    {
+      "id": "12h_f12_f24",
+      "duration_hours": 12,
+      "window": "f12_f24",
+      "valid_start": "2026-10-05T00:00:00Z",
+      "valid_end": "2026-10-05T12:00:00Z",
+      "source_sha256": "49e2c8960eebd74764aaed63940c415af99d6632a93fbb219893f37a348b886b",
+      "fingerprint": "beaabd9f850cf3e2a3aa3ad9163f44fb09d48a057042144dae81e9ef01b50728",
+      "regions": {
+        "conus": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_12h_f12_f24_conus_beaabd9f850c.png",
+          "sha256": "28b20c8fdfaa575a65343fc1b67ff369cdc236a16f78a28ff96ffbd3e8cd4f92",
+          "raw": {
+            "max_inches": 4.15944887897161,
+            "max_mm": 105.65000152587889,
+            "latitude": 30.5,
+            "longitude": -88.5,
+            "other_at_max_inches": 1.3961539681502215,
+            "mean_inches": 0.02579195424766241,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          },
+          "ann": {
+            "max_inches": 1.543053904856284,
+            "max_mm": 39.19356918334961,
+            "latitude": 30.5,
+            "longitude": -88.75,
+            "other_at_max_inches": 0.7952756205881675,
+            "mean_inches": 0.024861370839823132,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          }
+        },
+        "southwest_texas": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_12h_f12_f24_southwest_texas_beaabd9f850c.png",
+          "sha256": "78f90211c8c5822beaaab9c5a36d68bcb4436bfd7947761b5a9259278d207ead",
+          "raw": {
+            "max_inches": 2.0015746589720718,
+            "max_mm": 50.83999633789062,
+            "latitude": 26.25,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.32334909664364314,
+            "mean_inches": 0.0038212828210098097,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          },
+          "ann": {
+            "max_inches": 0.32334909664364314,
+            "max_mm": 8.213067054748535,
+            "latitude": 26.25,
+            "longitude": -97.5,
+            "other_at_max_inches": 2.0015746589720718,
+            "mean_inches": 0.006478208049256595,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          }
+        }
+      }
+    },
+    {
+      "id": "12h_f18_f30",
+      "duration_hours": 12,
+      "window": "f18_f30",
+      "valid_start": "2026-10-05T06:00:00Z",
+      "valid_end": "2026-10-05T18:00:00Z",
+      "source_sha256": "d47d60ca3d2d394f9d22acc30972e7723ee2f639c118562452427c91ae23ed2d",
+      "fingerprint": "60f2b1d666a8b8c3000b7309e248d1b4576622eb9ed4e6fd3994804ec514cdfe",
+      "regions": {
+        "conus": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_12h_f18_f30_conus_60f2b1d666a8.png",
+          "sha256": "58a1b2f2c77ed78acba30ed6d094e6e45846d78434152b6a52bb5a2fe9a73cf5",
+          "raw": {
+            "max_inches": 2.96614158810593,
+            "max_mm": 75.33999633789062,
+            "latitude": 30.25,
+            "longitude": -88.75,
+            "other_at_max_inches": 0.9659379673755075,
+            "mean_inches": 0.015103382569022517,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          },
+          "ann": {
+            "max_inches": 1.235911376832977,
+            "max_mm": 31.392148971557614,
+            "latitude": 30.25,
+            "longitude": -87.75,
+            "other_at_max_inches": 0.44094491192675017,
+            "mean_inches": 0.01757857788436638,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          }
+        },
+        "southwest_texas": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_12h_f18_f30_southwest_texas_60f2b1d666a8.png",
+          "sha256": "c5e1a94ca333150e4b0a811f0a28482d0f7cd26a14fe7f3cdd98a8cf63e88687",
+          "raw": {
+            "max_inches": 1.8929133077306073,
+            "max_mm": 48.07999801635742,
+            "latitude": 26.25,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.3556479431512788,
+            "mean_inches": 0.0019953096192131727,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          },
+          "ann": {
+            "max_inches": 0.36534883844570853,
+            "max_mm": 9.279860496520996,
+            "latitude": 26.0,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.8078740337702234,
+            "mean_inches": 0.0038880398341962236,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          }
+        }
+      }
+    },
+    {
+      "id": "12h_f24_f36",
+      "duration_hours": 12,
+      "window": "f24_f36",
+      "valid_start": "2026-10-05T12:00:00Z",
+      "valid_end": "2026-10-06T00:00:00Z",
+      "source_sha256": "c019134575f7756e5f7d043099f2feb643fcf9d62d8a9963dee19e1d100710ac",
+      "fingerprint": "91fbb1f252094810ed0152dd08374fab2889cd0231cc09c437e9a8e741ca0f01",
+      "regions": {
+        "conus": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_12h_f24_f36_conus_91fbb1f25209.png",
+          "sha256": "ee77b29378d74086a5d27ee047592f96d72ad88be7505f16650f738bf292b7bc",
+          "raw": {
+            "max_inches": 4.635039201871617,
+            "max_mm": 117.72999572753906,
+            "latitude": 29.75,
+            "longitude": -83.25,
+            "other_at_max_inches": 0.52739796676035,
+            "mean_inches": 0.014034821051417375,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          },
+          "ann": {
+            "max_inches": 0.8805334286426935,
+            "max_mm": 22.365549087524414,
+            "latitude": 29.75,
+            "longitude": -85.0,
+            "other_at_max_inches": 0.22795279194989543,
+            "mean_inches": 0.016494727698126703,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          }
+        },
+        "southwest_texas": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_12h_f24_f36_southwest_texas_91fbb1f25209.png",
+          "sha256": "5cd8a655f23930009884591ad2eca44f4900ca0ddf02b2b8cfa41b89fce84998",
+          "raw": {
+            "max_inches": 0.30157479714220903,
+            "max_mm": 7.6599998474121085,
+            "latitude": 32.25,
+            "longitude": -104.0,
+            "other_at_max_inches": 0.057250754101069896,
+            "mean_inches": 0.0011757885573982095,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          },
+          "ann": {
+            "max_inches": 0.2960916579239012,
+            "max_mm": 7.52072811126709,
+            "latitude": 26.0,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.03188981784610298,
+            "mean_inches": 0.003763612844354874,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          }
+        }
+      }
+    },
+    {
+      "id": "12h_f30_f42",
+      "duration_hours": 12,
+      "window": "f30_f42",
+      "valid_start": "2026-10-05T18:00:00Z",
+      "valid_end": "2026-10-06T06:00:00Z",
+      "source_sha256": "9eb0f3497af5b2af716843bc2aea8063adcf7eba72a023a6b9ff97a18e1ec018",
+      "fingerprint": "ed0fb142737cb4f6b2637c3c06a64ad491019d73d827208b4d43c2b508c4dfb1",
+      "regions": {
+        "conus": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_12h_f30_f42_conus_ed0fb142737c.png",
+          "sha256": "9e0e8c4b369f69190b04095b9a2d9a46ed5316dbbbf8daf48908b398f78fe222",
+          "raw": {
+            "max_inches": 3.0429134218711553,
+            "max_mm": 77.29000091552734,
+            "latitude": 29.25,
+            "longitude": -82.25,
+            "other_at_max_inches": 0.3342453889020785,
+            "mean_inches": 0.009176882194836799,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          },
+          "ann": {
+            "max_inches": 0.7850552356149268,
+            "max_mm": 19.94040298461914,
+            "latitude": 28.75,
+            "longitude": -81.0,
+            "other_at_max_inches": 0.3779527333777721,
+            "mean_inches": 0.010274138145931113,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          }
+        },
+        "southwest_texas": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_12h_f30_f42_southwest_texas_ed0fb142737c.png",
+          "sha256": "b330c303c4c67b11e4d2a7ab526255558a84076649866e1b81936cc5a459584c",
+          "raw": {
+            "max_inches": 0.3011810873437116,
+            "max_mm": 7.649999618530273,
+            "latitude": 32.25,
+            "longitude": -104.0,
+            "other_at_max_inches": 0.054098635207949664,
+            "mean_inches": 0.0008438469895560188,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          },
+          "ann": {
+            "max_inches": 0.2172150762062373,
+            "max_mm": 5.517262935638428,
+            "latitude": 26.0,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.020866093673105317,
+            "mean_inches": 0.003484182773742617,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          }
+        }
+      }
+    },
+    {
+      "id": "12h_f36_f48",
+      "duration_hours": 12,
+      "window": "f36_f48",
+      "valid_start": "2026-10-06T00:00:00Z",
+      "valid_end": "2026-10-06T12:00:00Z",
+      "source_sha256": "3d61bda65d6f6bd1a5197fbceaf48cdb070c612996489c46d37f86a7d087615d",
+      "fingerprint": "bf4b5b1e5b8d42f3ea471401cff6017bfff2c120fcdadc20a059556b2a230476",
+      "regions": {
+        "conus": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_12h_f36_f48_conus_bf4b5b1e5b8d.png",
+          "sha256": "09cdf547f4a659cd025120fd8eddb3a7e3bbb084e2a5b6a0035994e5c414a643",
+          "raw": {
+            "max_inches": 3.6803150927926613,
+            "max_mm": 93.4800033569336,
+            "latitude": 29.75,
+            "longitude": -81.5,
+            "other_at_max_inches": 0.22455581529872626,
+            "mean_inches": 0.003537690532629966,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          },
+          "ann": {
+            "max_inches": 0.4559909264872394,
+            "max_mm": 11.582169532775879,
+            "latitude": 28.0,
+            "longitude": -82.75,
+            "other_at_max_inches": 0.7944882009911726,
+            "mean_inches": 0.0046427369041977164,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          }
+        },
+        "southwest_texas": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_12h_f36_f48_southwest_texas_bf4b5b1e5b8d.png",
+          "sha256": "38582ba2058c13d38d95c82d55aa6c0175f3b6df06826645cd7850da17a1a59d",
+          "raw": {
+            "max_inches": 0.19133860670675443,
+            "max_mm": 4.8600006103515625,
+            "latitude": 26.5,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.14148573237141288,
+            "mean_inches": 0.00029226442919128313,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          },
+          "ann": {
+            "max_inches": 0.31540806837907925,
+            "max_mm": 8.011364936828613,
+            "latitude": 26.0,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.1496062691756121,
+            "mean_inches": 0.0022882806088224935,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          }
+        }
+      }
+    },
+    {
+      "id": "24h_f00_f24",
+      "duration_hours": 24,
+      "window": "f00_f24",
+      "valid_start": "2026-10-04T12:00:00Z",
+      "valid_end": "2026-10-05T12:00:00Z",
+      "source_sha256": "4b8150a1c49a4c0b46744dd88ccfc08a3742871faaa8cd192a65c8fc918b30e9",
+      "fingerprint": "3ed960272cb5ee4290533a14fb9ec7785560e1ca2f07204e16fa7ae801b2f1dc",
+      "regions": {
+        "conus": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_24h_f00_f24_conus_3ed960272cb5.png",
+          "sha256": "44e2054c48fdf31873578dbcafc3918c09744a3c6a55b6d5207e13e250829ec2",
+          "raw": {
+            "max_inches": 8.563385610505353,
+            "max_mm": 217.50999450683597,
+            "latitude": 29.5,
+            "longitude": -90.75,
+            "other_at_max_inches": 1.9632291418360914,
+            "mean_inches": 0.07823051634341992,
+            "points_ge_7_inches": 2,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          },
+          "ann": {
+            "max_inches": 2.942522604634443,
+            "max_mm": 74.74007415771484,
+            "latitude": 30.0,
+            "longitude": -90.25,
+            "other_at_max_inches": 4.079921151709369,
+            "mean_inches": 0.07475209256676904,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          }
+        },
+        "southwest_texas": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_24h_f00_f24_southwest_texas_3ed960272cb5.png",
+          "sha256": "150b005ae830e19d514b091ab0d3d5dbe975b4452b8d478f38538fcf3983a56c",
+          "raw": {
+            "max_inches": 3.3165353489673044,
+            "max_mm": 84.23999786376953,
+            "latitude": 26.25,
+            "longitude": -97.5,
+            "other_at_max_inches": 1.3646704005444144,
+            "mean_inches": 0.03760692735989635,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          },
+          "ann": {
+            "max_inches": 1.6635846716212477,
+            "max_mm": 42.25505065917969,
+            "latitude": 26.75,
+            "longitude": -97.5,
+            "other_at_max_inches": 1.9125984972856178,
+            "mean_inches": 0.04696716816884994,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          }
+        }
+      }
+    },
+    {
+      "id": "24h_f06_f30",
+      "duration_hours": 24,
+      "window": "f06_f30",
+      "valid_start": "2026-10-04T18:00:00Z",
+      "valid_end": "2026-10-05T18:00:00Z",
+      "source_sha256": "1f328da8152204f61af96b69add91a65f8ca19c73c08be202011f077df174790",
+      "fingerprint": "c661853ddb2a20002e03ef7f5213ade8b94b6f0b7acf4b2f762af9af809cd58d",
+      "regions": {
+        "conus": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_24h_f06_f30_conus_c661853ddb2a.png",
+          "sha256": "b4990adc1640fb8483a44a4f538a3c99ca17f5da2f83767f95530026b890909c",
+          "raw": {
+            "max_inches": 5.470866406057763,
+            "max_mm": 138.9600067138672,
+            "latitude": 31.75,
+            "longitude": -83.0,
+            "other_at_max_inches": 1.505130707748293,
+            "mean_inches": 0.05871714093455136,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          },
+          "ann": {
+            "max_inches": 2.3762462646003786,
+            "max_mm": 60.35665512084961,
+            "latitude": 30.25,
+            "longitude": -88.25,
+            "other_at_max_inches": 1.5866141431913603,
+            "mean_inches": 0.05780762156799028,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          }
+        },
+        "southwest_texas": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_24h_f06_f30_southwest_texas_c661853ddb2a.png",
+          "sha256": "d08c5aa8f7dee0b09de5805d73b2632dbc36df7d03a98e896eac3fab0a051cf4",
+          "raw": {
+            "max_inches": 2.096456692913386,
+            "max_mm": 53.25000000000001,
+            "latitude": 26.25,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.9313819164366235,
+            "mean_inches": 0.013803617282334667,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          },
+          "ann": {
+            "max_inches": 0.9313819164366235,
+            "max_mm": 23.657100677490234,
+            "latitude": 26.25,
+            "longitude": -97.5,
+            "other_at_max_inches": 2.096456692913386,
+            "mean_inches": 0.021785320354756124,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          }
+        }
+      }
+    },
+    {
+      "id": "24h_f12_f36",
+      "duration_hours": 24,
+      "window": "f12_f36",
+      "valid_start": "2026-10-05T00:00:00Z",
+      "valid_end": "2026-10-06T00:00:00Z",
+      "source_sha256": "6d9a6c6361cfe0475e10eadf3c444663bf112c3ecbc066fc19e80b76fe2450f0",
+      "fingerprint": "da8d9ac86f8d371235eaf3942f71e134261d6e300dc5a9c83c777543ff62c0cf",
+      "regions": {
+        "conus": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_24h_f12_f36_conus_da8d9ac86f8d.png",
+          "sha256": "274c6e020bb929074fc82773cca92ece729876cb563308d68ea813ce19cd9e02",
+          "raw": {
+            "max_inches": 4.671653387114758,
+            "max_mm": 118.65999603271484,
+            "latitude": 29.75,
+            "longitude": -83.25,
+            "other_at_max_inches": 0.910226641677496,
+            "mean_inches": 0.039826775281646944,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          },
+          "ann": {
+            "max_inches": 2.0616897823303706,
+            "max_mm": 52.36692047119141,
+            "latitude": 30.25,
+            "longitude": -88.25,
+            "other_at_max_inches": 1.5405512231541432,
+            "mean_inches": 0.040641651224415244,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          }
+        },
+        "southwest_texas": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_24h_f12_f36_southwest_texas_da8d9ac86f8d.png",
+          "sha256": "61af996a68294d59d07830a909fd42beaae14761f50145b6ff9d3f02070bb17c",
+          "raw": {
+            "max_inches": 2.003149498166062,
+            "max_mm": 50.87999725341797,
+            "latitude": 26.25,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.5659157084667776,
+            "mean_inches": 0.004997071380321615,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          },
+          "ann": {
+            "max_inches": 0.5777611319474348,
+            "max_mm": 14.675132751464844,
+            "latitude": 26.0,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.830708676435816,
+            "mean_inches": 0.010426953088477848,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          }
+        }
+      }
+    },
+    {
+      "id": "24h_f18_f42",
+      "duration_hours": 24,
+      "window": "f18_f42",
+      "valid_start": "2026-10-05T06:00:00Z",
+      "valid_end": "2026-10-06T06:00:00Z",
+      "source_sha256": "d37470f1b2a28c439166f43c764214e2ae15d4a047c99a4857166a09d60d10a6",
+      "fingerprint": "7cc206e02f8892de4d576743286359480ad0cb7ac0c9a95b07a769cabefdd4d7",
+      "regions": {
+        "conus": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_24h_f18_f42_conus_7cc206e02f88.png",
+          "sha256": "500b76a687a95b25637ec91f8bec39f928c9a3252e572aebd93ec6e8233d3479",
+          "raw": {
+            "max_inches": 4.655511811023622,
+            "max_mm": 118.25,
+            "latitude": 29.75,
+            "longitude": -83.25,
+            "other_at_max_inches": 0.6132488551102285,
+            "mean_inches": 0.024280264767581553,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          },
+          "ann": {
+            "max_inches": 1.2646135945958417,
+            "max_mm": 32.121185302734375,
+            "latitude": 30.25,
+            "longitude": -87.75,
+            "other_at_max_inches": 0.4452754944328248,
+            "mean_inches": 0.02728541420617829,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          }
+        },
+        "southwest_texas": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_24h_f18_f42_southwest_texas_7cc206e02f88.png",
+          "sha256": "ae42cabad18321e6505e2189ed87e29092ccc2945e6ae424f3d708eaf7e1ecfb",
+          "raw": {
+            "max_inches": 1.8999999339186302,
+            "max_mm": 48.2599983215332,
+            "latitude": 26.25,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.5022027548842543,
+            "mean_inches": 0.0028391566120025066,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          },
+          "ann": {
+            "max_inches": 0.6069449552400845,
+            "max_mm": 15.416401863098146,
+            "latitude": 26.0,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.8287401274433287,
+            "mean_inches": 0.007137144356268326,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          }
+        }
+      }
+    },
+    {
+      "id": "24h_f24_f48",
+      "duration_hours": 24,
+      "window": "f24_f48",
+      "valid_start": "2026-10-05T12:00:00Z",
+      "valid_end": "2026-10-06T12:00:00Z",
+      "source_sha256": "f401c7c7933711dd5e9f7e90fbdea75df8288ac502946e0d67c14eb9d3758d0d",
+      "fingerprint": "a0975aeae90c2a7b4232b76ed1cef3a58f5d4f33fe89cf8d2b1df1e2b2781fdc",
+      "regions": {
+        "conus": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_24h_f24_f48_conus_a0975aeae90c.png",
+          "sha256": "2410bb4fb2ebf1aa84403c0ae6cc7e61da1f1064856c3ce828b781cfe55d3356",
+          "raw": {
+            "max_inches": 4.703149570254829,
+            "max_mm": 119.45999908447264,
+            "latitude": 29.75,
+            "longitude": -83.25,
+            "other_at_max_inches": 0.6314358748788909,
+            "mean_inches": 0.017572511579757956,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          },
+          "ann": {
+            "max_inches": 1.0393771224134551,
+            "max_mm": 26.400178909301758,
+            "latitude": 29.75,
+            "longitude": -85.25,
+            "other_at_max_inches": 1.2334645639254354,
+            "mean_inches": 0.02070297043191147,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 13318
+          }
+        },
+        "southwest_texas": {
+          "path": "products/forecast-comparison/2026100412/raw_expected_24h_f24_f48_southwest_texas_a0975aeae90c.png",
+          "sha256": "38d8a4a4c26d204de7f0d8a49d4099aa2a92a5c299393b0efd4b5ec74b2676ca",
+          "raw": {
+            "max_inches": 0.30157479714220903,
+            "max_mm": 7.6599998474121085,
+            "latitude": 32.25,
+            "longitude": -104.0,
+            "other_at_max_inches": 0.06394711066418746,
+            "mean_inches": 0.0014680529859956181,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          },
+          "ann": {
+            "max_inches": 0.6912196902778205,
+            "max_mm": 17.55698013305664,
+            "latitude": 26.0,
+            "longitude": -97.5,
+            "other_at_max_inches": 0.18149608702171507,
+            "mean_inches": 0.005711595754177455,
+            "points_ge_7_inches": 0,
+            "points_ge_10_inches": 0,
+            "common_points": 3334
+          }
+        }
+      }
+    }
+  ]
+}
