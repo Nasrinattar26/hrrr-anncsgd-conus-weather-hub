@@ -7,8 +7,8 @@
   "retained_run_count": 30,
   "complete_run_count": 29,
   "partial_run_count": 1,
-  "latest_initialization": "2026100312",
-  "latest_valid_time": "2026-10-04T18:00:00Z",
+  "latest_initialization": "2026100412",
+  "latest_valid_time": "2026-10-05T18:00:00Z",
   "metric_definitions": {
     "BSS": "Brier Skill Score relative to monthly historical MRMS event-frequency climatology.",
     "POD": "Hits divided by hits plus misses.",
@@ -18,15 +18,15 @@
   "categorical_forecast_definition": "ANN-CSGD expected precipitation greater than or equal to the event threshold.",
   "runs": [
     {
-      "initialization": "2026100312",
+      "initialization": "2026100412",
       "verification_state": "PARTIAL",
       "is_fully_verified": false,
       "forecast_window_count": 20,
       "completed_window_count": 11,
       "pending_window_count": 9,
       "threshold_row_count": 68,
-      "earliest_valid_time": "2026-10-03T18:00:00Z",
-      "latest_valid_time": "2026-10-04T18:00:00Z",
+      "earliest_valid_time": "2026-10-04T18:00:00Z",
+      "latest_valid_time": "2026-10-05T18:00:00Z",
       "duration_window_counts": {
         "6": 5,
         "12": 4,
@@ -34,24 +34,64 @@
       },
       "metric_ranges": {
         "POD": {
-          "finite_count": 66,
+          "finite_count": 61,
           "minimum": 0.0,
-          "maximum": 0.5698447893569845
+          "maximum": 0.7318087318087318
         },
         "FAR": {
-          "finite_count": 30,
-          "minimum": 0.4166666666666667,
+          "finite_count": 28,
+          "minimum": 0.31313131313131315,
           "maximum": 1.0
         },
         "CSI": {
-          "finite_count": 66,
+          "finite_count": 61,
           "minimum": 0.0,
-          "maximum": 0.34404283801874164
+          "maximum": 0.5410798122065728
         },
         "brier_skill_score": {
           "finite_count": 68,
-          "minimum": -4.694651334263471,
-          "maximum": 0.3702355115296513
+          "minimum": -1.935684832789402,
+          "maximum": 0.9224387949274049
+        }
+      },
+      "summary_url": "runs/2026100412/verification_summary.json",
+      "csv_url": "runs/2026100412/verification_metrics.csv"
+    },
+    {
+      "initialization": "2026100312",
+      "verification_state": "COMPLETE",
+      "is_fully_verified": true,
+      "forecast_window_count": 20,
+      "completed_window_count": 20,
+      "pending_window_count": 0,
+      "threshold_row_count": 125,
+      "earliest_valid_time": "2026-10-03T18:00:00Z",
+      "latest_valid_time": "2026-10-05T12:00:00Z",
+      "duration_window_counts": {
+        "6": 8,
+        "12": 7,
+        "24": 5
+      },
+      "metric_ranges": {
+        "POD": {
+          "finite_count": 120,
+          "minimum": 0.0,
+          "maximum": 0.8116883116883117
+        },
+        "FAR": {
+          "finite_count": 57,
+          "minimum": 0.39903846153846156,
+          "maximum": 1.0
+        },
+        "CSI": {
+          "finite_count": 120,
+          "minimum": 0.0,
+          "maximum": 0.5274261603375527
+        },
+        "brier_skill_score": {
+          "finite_count": 125,
+          "minimum": -7.974267750859404,
+          "maximum": 0.5190696952975964
         }
       },
       "summary_url": "runs/2026100312/verification_summary.json",
@@ -1176,46 +1216,6 @@
       },
       "summary_url": "runs/2026090512/verification_summary.json",
       "csv_url": "runs/2026090512/verification_metrics.csv"
-    },
-    {
-      "initialization": "2026090412",
-      "verification_state": "COMPLETE",
-      "is_fully_verified": true,
-      "forecast_window_count": 20,
-      "completed_window_count": 20,
-      "pending_window_count": 0,
-      "threshold_row_count": 125,
-      "earliest_valid_time": "2026-09-04T18:00:00Z",
-      "latest_valid_time": "2026-09-06T12:00:00Z",
-      "duration_window_counts": {
-        "6": 8,
-        "12": 7,
-        "24": 5
-      },
-      "metric_ranges": {
-        "POD": {
-          "finite_count": 119,
-          "minimum": 0.0,
-          "maximum": 0.39768339768339767
-        },
-        "FAR": {
-          "finite_count": 28,
-          "minimum": 0.32142857142857145,
-          "maximum": 1.0
-        },
-        "CSI": {
-          "finite_count": 119,
-          "minimum": 0.0,
-          "maximum": 0.2791327913279133
-        },
-        "brier_skill_score": {
-          "finite_count": 125,
-          "minimum": -3.9663943847583525,
-          "maximum": 0.4231389512828059
-        }
-      },
-      "summary_url": "runs/2026090412/verification_summary.json",
-      "csv_url": "runs/2026090412/verification_metrics.csv"
     }
   ]
 }
