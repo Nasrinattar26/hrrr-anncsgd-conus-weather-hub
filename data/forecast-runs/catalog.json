@@ -1,9 +1,17 @@
 {
   "schema_version": 1,
-  "latest_initialization": "2026100718",
+  "latest_initialization": "2026100800",
   "retention_count": 12,
-  "updated_utc": "2026-10-07T20:15:57.179963+00:00",
+  "updated_utc": "2026-10-08T02:15:54.057770+00:00",
   "runs": [
+    {
+      "init": "2026100800",
+      "map_catalog": "data/forecast-runs/2026100800/map_catalog.json",
+      "gif_manifest": "products/gifs/2026100800/manifest.json",
+      "grib_manifest": "products/grib2/2026100800/manifest.json",
+      "map_count": 145,
+      "display_amount_units": "inches"
+    },
     {
       "init": "2026100718",
       "map_catalog": "data/forecast-runs/2026100718/map_catalog.json",
@@ -89,14 +97,6 @@
       "map_catalog": "data/forecast-runs/2026100506/map_catalog.json",
       "gif_manifest": "products/gifs/2026100506/manifest.json",
       "grib_manifest": "products/grib2/2026100506/manifest.json",
-      "map_count": 145,
-      "display_amount_units": "inches"
-    },
-    {
-      "init": "2026100500",
-      "map_catalog": "data/forecast-runs/2026100500/map_catalog.json",
-      "gif_manifest": "products/gifs/2026100500/manifest.json",
-      "grib_manifest": "products/grib2/2026100500/manifest.json",
       "map_count": 145,
       "display_amount_units": "inches"
     }
