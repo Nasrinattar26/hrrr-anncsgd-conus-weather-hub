@@ -1,12 +1,747 @@
 {
   "schema_version": 3,
-  "status": "waiting",
+  "status": "ready",
   "hrrr_init": "2026101506",
   "gefs_init": "2026101506",
   "matching_policy": "same_initialization",
   "initialization_offset_hours": 0,
-  "generated_utc": "2026-10-15T08:16:16.549521+00:00",
+  "generated_utc": "2026-10-15T10:15:44.750321+00:00",
   "render_version": "forecast-comparison-v5-same-initialization",
-  "message": "Waiting for complete GEFS and HRRR products from the same initialization. No older GEFS cycle is substituted.",
-  "durations": {}
+  "grid": {
+    "spacing_degrees": 0.25,
+    "shape": [
+      117,
+      253
+    ],
+    "regridding_performed": false
+  },
+  "matching": "Same initialization, forecast leads, valid start, valid end, duration, fixed threshold and common finite land cells.",
+  "durations": {
+    "6h": {
+      "duration_hours": 6,
+      "status": "unavailable",
+      "message": "A 6-hour GEFS-based ANN-CSGD product is not provided by the reviewed daily workflow. HRRR 6-hour forecasts are available on the main dashboard. A 12-hour probability cannot be converted into a 6-hour probability by division.",
+      "windows": [],
+      "products": []
+    },
+    "12h": {
+      "duration_hours": 12,
+      "status": "ready",
+      "method_note": "Both panels use directly predicted 12-hour CSGD distributions.",
+      "input_fingerprint": "b26671d018a25690307c974be5d50cb0b98330587f793afdf934c36ab480cd82",
+      "gefs_source_sha256": "965451b04e9dfc60ad459a4ea614405b70d7c6725e21527e0c41392408960dd5",
+      "products": [
+        {
+          "id": "expected_precip",
+          "label": "Expected 12-hour rainfall",
+          "units": "inches",
+          "threshold_inch": null
+        },
+        {
+          "id": "prob_gt_0p5inch",
+          "label": "Probability of exceeding 0.5 inch in 12 hours",
+          "units": "%",
+          "threshold_inch": 0.5
+        },
+        {
+          "id": "prob_gt_1inch",
+          "label": "Probability of exceeding 1 inch in 12 hours",
+          "units": "%",
+          "threshold_inch": 1.0
+        },
+        {
+          "id": "prob_gt_2inch",
+          "label": "Probability of exceeding 2 inches in 12 hours",
+          "units": "%",
+          "threshold_inch": 2.0
+        }
+      ],
+      "windows": [
+        {
+          "id": "f00_f12",
+          "hrrr_init": "2026101506",
+          "gefs_init": "2026101506",
+          "duration_hours": 12,
+          "hrrr_end_fhr": 12,
+          "gefs_end_fhr": 12,
+          "valid_start": "2026-10-15T06:00:00Z",
+          "valid_end": "2026-10-15T18:00:00Z",
+          "hrrr_source_sha256": "c80dbb198455cac32e0d3a951d2eefbf94c85b00f8939d8c9570c00dc5ba50ff",
+          "products": [
+            {
+              "id": "expected_precip",
+              "label": "Expected 12-hour rainfall",
+              "units": "inches",
+              "threshold_inch": null,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f00_f12_expected_precip_b26671d018a2.png",
+              "sha256": "6ce923013e1e7e16b6704b46fd27251231a89dc6f1e409b91e32203577b2684f",
+              "size_bytes": 310722
+            },
+            {
+              "id": "prob_gt_0p5inch",
+              "label": "Probability of exceeding 0.5 inch in 12 hours",
+              "units": "%",
+              "threshold_inch": 0.5,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f00_f12_prob_gt_0p5inch_b26671d018a2.png",
+              "sha256": "9d54a818f43af1d9bc876da8a5258a74c2a459b996df5a3bafedcf48b76d4c04",
+              "size_bytes": 324342
+            },
+            {
+              "id": "prob_gt_1inch",
+              "label": "Probability of exceeding 1 inch in 12 hours",
+              "units": "%",
+              "threshold_inch": 1.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f00_f12_prob_gt_1inch_b26671d018a2.png",
+              "sha256": "73ebf32fbf50e552639f323ffed847d4dd8831fefdc3a8cd646cb19299933081",
+              "size_bytes": 315512
+            },
+            {
+              "id": "prob_gt_2inch",
+              "label": "Probability of exceeding 2 inches in 12 hours",
+              "units": "%",
+              "threshold_inch": 2.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f00_f12_prob_gt_2inch_b26671d018a2.png",
+              "sha256": "2865142058e01db7f943bb3c9bdc8507cf2c21a7b8c895b1bb20cf3af70f9be0",
+              "size_bytes": 308366
+            }
+          ],
+          "method_note": "Both panels use directly predicted 12-hour CSGD distributions."
+        },
+        {
+          "id": "f06_f18",
+          "hrrr_init": "2026101506",
+          "gefs_init": "2026101506",
+          "duration_hours": 12,
+          "hrrr_end_fhr": 18,
+          "gefs_end_fhr": 18,
+          "valid_start": "2026-10-15T12:00:00Z",
+          "valid_end": "2026-10-16T00:00:00Z",
+          "hrrr_source_sha256": "b49dc663ddd39f26a9f5daa871429acbc7d76bfe423653fdb2552b2c4fa104b5",
+          "products": [
+            {
+              "id": "expected_precip",
+              "label": "Expected 12-hour rainfall",
+              "units": "inches",
+              "threshold_inch": null,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f06_f18_expected_precip_b26671d018a2.png",
+              "sha256": "74463ddd3a63c5aacfa308a3e5a1eeb0124d93a5b3e5577a4890375118b1465c",
+              "size_bytes": 310563
+            },
+            {
+              "id": "prob_gt_0p5inch",
+              "label": "Probability of exceeding 0.5 inch in 12 hours",
+              "units": "%",
+              "threshold_inch": 0.5,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f06_f18_prob_gt_0p5inch_b26671d018a2.png",
+              "sha256": "19a102c9071cb4c498ef1b41fc10208aaffaac5167239d3b5c2ee16a7afa4987",
+              "size_bytes": 324413
+            },
+            {
+              "id": "prob_gt_1inch",
+              "label": "Probability of exceeding 1 inch in 12 hours",
+              "units": "%",
+              "threshold_inch": 1.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f06_f18_prob_gt_1inch_b26671d018a2.png",
+              "sha256": "55520d3b555452ed94235f4db4c329343e184267b8a21a713f68d8b0d50805c7",
+              "size_bytes": 316700
+            },
+            {
+              "id": "prob_gt_2inch",
+              "label": "Probability of exceeding 2 inches in 12 hours",
+              "units": "%",
+              "threshold_inch": 2.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f06_f18_prob_gt_2inch_b26671d018a2.png",
+              "sha256": "ab9bf58833fe9262d962b6aa5a3faab6a8a69323dd9e33addc5012c05d2851ae",
+              "size_bytes": 308632
+            }
+          ],
+          "method_note": "Both panels use directly predicted 12-hour CSGD distributions."
+        },
+        {
+          "id": "f12_f24",
+          "hrrr_init": "2026101506",
+          "gefs_init": "2026101506",
+          "duration_hours": 12,
+          "hrrr_end_fhr": 24,
+          "gefs_end_fhr": 24,
+          "valid_start": "2026-10-15T18:00:00Z",
+          "valid_end": "2026-10-16T06:00:00Z",
+          "hrrr_source_sha256": "1953e3673deb429ab410547b1add56642c900932fa620e7168375edc281867a5",
+          "products": [
+            {
+              "id": "expected_precip",
+              "label": "Expected 12-hour rainfall",
+              "units": "inches",
+              "threshold_inch": null,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f12_f24_expected_precip_b26671d018a2.png",
+              "sha256": "2efdbc259eb0b2399207f67fdca62f4248075f9eb11a84d8e88ea986b1aad297",
+              "size_bytes": 310162
+            },
+            {
+              "id": "prob_gt_0p5inch",
+              "label": "Probability of exceeding 0.5 inch in 12 hours",
+              "units": "%",
+              "threshold_inch": 0.5,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f12_f24_prob_gt_0p5inch_b26671d018a2.png",
+              "sha256": "0ea57ffa2fac022332974112ebd2a415073782344037cf3a341118696aa655bb",
+              "size_bytes": 324582
+            },
+            {
+              "id": "prob_gt_1inch",
+              "label": "Probability of exceeding 1 inch in 12 hours",
+              "units": "%",
+              "threshold_inch": 1.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f12_f24_prob_gt_1inch_b26671d018a2.png",
+              "sha256": "0b8a192c776eb0e35b6c55e0c9b10c202f2503278f40bd12312c23dddb45fbe5",
+              "size_bytes": 318390
+            },
+            {
+              "id": "prob_gt_2inch",
+              "label": "Probability of exceeding 2 inches in 12 hours",
+              "units": "%",
+              "threshold_inch": 2.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f12_f24_prob_gt_2inch_b26671d018a2.png",
+              "sha256": "aea0958a0aa7af2c88031c32c40bb574165e55291ebcf7f4186103ab71373d97",
+              "size_bytes": 309969
+            }
+          ],
+          "method_note": "Both panels use directly predicted 12-hour CSGD distributions."
+        },
+        {
+          "id": "f18_f30",
+          "hrrr_init": "2026101506",
+          "gefs_init": "2026101506",
+          "duration_hours": 12,
+          "hrrr_end_fhr": 30,
+          "gefs_end_fhr": 30,
+          "valid_start": "2026-10-16T00:00:00Z",
+          "valid_end": "2026-10-16T12:00:00Z",
+          "hrrr_source_sha256": "d0f00d3b5a1459d73dd9df8cd0200718f1ead1f6856ec2af9182ef09707c4b1b",
+          "products": [
+            {
+              "id": "expected_precip",
+              "label": "Expected 12-hour rainfall",
+              "units": "inches",
+              "threshold_inch": null,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f18_f30_expected_precip_b26671d018a2.png",
+              "sha256": "524482ef052b4affc067caa928959bc109106a06549e24020b1ecba3bd9ab69f",
+              "size_bytes": 310538
+            },
+            {
+              "id": "prob_gt_0p5inch",
+              "label": "Probability of exceeding 0.5 inch in 12 hours",
+              "units": "%",
+              "threshold_inch": 0.5,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f18_f30_prob_gt_0p5inch_b26671d018a2.png",
+              "sha256": "52a4dacb5304fd0fb2600542dfbbcfcc4b5b65a74ce2daeebea24d38d42e199a",
+              "size_bytes": 324426
+            },
+            {
+              "id": "prob_gt_1inch",
+              "label": "Probability of exceeding 1 inch in 12 hours",
+              "units": "%",
+              "threshold_inch": 1.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f18_f30_prob_gt_1inch_b26671d018a2.png",
+              "sha256": "59129a89133986c6c459666bbd6926de2f9ee37940a62db17196b6e9a5df4138",
+              "size_bytes": 317234
+            },
+            {
+              "id": "prob_gt_2inch",
+              "label": "Probability of exceeding 2 inches in 12 hours",
+              "units": "%",
+              "threshold_inch": 2.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f18_f30_prob_gt_2inch_b26671d018a2.png",
+              "sha256": "9fb609d4df89e543922144233b584d591a3720c0c3715d7e741decfef748f522",
+              "size_bytes": 308031
+            }
+          ],
+          "method_note": "Both panels use directly predicted 12-hour CSGD distributions."
+        },
+        {
+          "id": "f24_f36",
+          "hrrr_init": "2026101506",
+          "gefs_init": "2026101506",
+          "duration_hours": 12,
+          "hrrr_end_fhr": 36,
+          "gefs_end_fhr": 36,
+          "valid_start": "2026-10-16T06:00:00Z",
+          "valid_end": "2026-10-16T18:00:00Z",
+          "hrrr_source_sha256": "a6781c8eeb12705c5eedea498be2dcdab64ae9c1b5c1ac1a8dc084de6feb75e7",
+          "products": [
+            {
+              "id": "expected_precip",
+              "label": "Expected 12-hour rainfall",
+              "units": "inches",
+              "threshold_inch": null,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f24_f36_expected_precip_b26671d018a2.png",
+              "sha256": "5529ef889b032a9b3587692733336b0b1ea6879e2bdee1f960b3185450ab7943",
+              "size_bytes": 309219
+            },
+            {
+              "id": "prob_gt_0p5inch",
+              "label": "Probability of exceeding 0.5 inch in 12 hours",
+              "units": "%",
+              "threshold_inch": 0.5,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f24_f36_prob_gt_0p5inch_b26671d018a2.png",
+              "sha256": "15245b9584b7eb819a17bd9478ee2e6c67362b16b0f3d6384296cd29a7328166",
+              "size_bytes": 322175
+            },
+            {
+              "id": "prob_gt_1inch",
+              "label": "Probability of exceeding 1 inch in 12 hours",
+              "units": "%",
+              "threshold_inch": 1.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f24_f36_prob_gt_1inch_b26671d018a2.png",
+              "sha256": "4dca244870f6f72b7b51fa4f4a5221c8af4e308cd116d865a4b316810c6fd41f",
+              "size_bytes": 315382
+            },
+            {
+              "id": "prob_gt_2inch",
+              "label": "Probability of exceeding 2 inches in 12 hours",
+              "units": "%",
+              "threshold_inch": 2.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f24_f36_prob_gt_2inch_b26671d018a2.png",
+              "sha256": "c9aa7c3f8d3084b74dc9ae923f75f8b8b2d4d125939c08959142541d80029286",
+              "size_bytes": 307694
+            }
+          ],
+          "method_note": "Both panels use directly predicted 12-hour CSGD distributions."
+        },
+        {
+          "id": "f30_f42",
+          "hrrr_init": "2026101506",
+          "gefs_init": "2026101506",
+          "duration_hours": 12,
+          "hrrr_end_fhr": 42,
+          "gefs_end_fhr": 42,
+          "valid_start": "2026-10-16T12:00:00Z",
+          "valid_end": "2026-10-17T00:00:00Z",
+          "hrrr_source_sha256": "ec4aee02c20351ab4ee9e34fc70c2043c70d67c34bee28c3cd3302e2eb5e5adc",
+          "products": [
+            {
+              "id": "expected_precip",
+              "label": "Expected 12-hour rainfall",
+              "units": "inches",
+              "threshold_inch": null,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f30_f42_expected_precip_b26671d018a2.png",
+              "sha256": "06a6e9e9ce4c11812c8afc97f921ef4a9a8cfb486c0c7890a245e17d6caf69b6",
+              "size_bytes": 308674
+            },
+            {
+              "id": "prob_gt_0p5inch",
+              "label": "Probability of exceeding 0.5 inch in 12 hours",
+              "units": "%",
+              "threshold_inch": 0.5,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f30_f42_prob_gt_0p5inch_b26671d018a2.png",
+              "sha256": "f7663eff1afe79dd33f9737409521683a097a152a0a43f1bbf4d654edcbfbef1",
+              "size_bytes": 319945
+            },
+            {
+              "id": "prob_gt_1inch",
+              "label": "Probability of exceeding 1 inch in 12 hours",
+              "units": "%",
+              "threshold_inch": 1.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f30_f42_prob_gt_1inch_b26671d018a2.png",
+              "sha256": "28d05a5d880c8880748a3d6a1383a79df4a036dfe7ead34460250196f2b7ad2b",
+              "size_bytes": 314237
+            },
+            {
+              "id": "prob_gt_2inch",
+              "label": "Probability of exceeding 2 inches in 12 hours",
+              "units": "%",
+              "threshold_inch": 2.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f30_f42_prob_gt_2inch_b26671d018a2.png",
+              "sha256": "5d375e319034a50853bdee2fe661e0b89a97b2f651fa372ed36f0e243dee24b0",
+              "size_bytes": 306818
+            }
+          ],
+          "method_note": "Both panels use directly predicted 12-hour CSGD distributions."
+        },
+        {
+          "id": "f36_f48",
+          "hrrr_init": "2026101506",
+          "gefs_init": "2026101506",
+          "duration_hours": 12,
+          "hrrr_end_fhr": 48,
+          "gefs_end_fhr": 48,
+          "valid_start": "2026-10-16T18:00:00Z",
+          "valid_end": "2026-10-17T06:00:00Z",
+          "hrrr_source_sha256": "6734376b094f50d0edd8cab4b05463cb771cd8eb08d4e4a0dddc5392442fd137",
+          "products": [
+            {
+              "id": "expected_precip",
+              "label": "Expected 12-hour rainfall",
+              "units": "inches",
+              "threshold_inch": null,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f36_f48_expected_precip_b26671d018a2.png",
+              "sha256": "6d59f07052080c698b66283d94d704e3575520b46f14726d1a98f7db1c96e778",
+              "size_bytes": 308741
+            },
+            {
+              "id": "prob_gt_0p5inch",
+              "label": "Probability of exceeding 0.5 inch in 12 hours",
+              "units": "%",
+              "threshold_inch": 0.5,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f36_f48_prob_gt_0p5inch_b26671d018a2.png",
+              "sha256": "eb06a312683edb8fd889410cfb94c540d8f75c9dd022c38edc66d0df38b7e35e",
+              "size_bytes": 318844
+            },
+            {
+              "id": "prob_gt_1inch",
+              "label": "Probability of exceeding 1 inch in 12 hours",
+              "units": "%",
+              "threshold_inch": 1.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f36_f48_prob_gt_1inch_b26671d018a2.png",
+              "sha256": "fc202db0e355d48ab358d9fde134b0d38bd90119f5cf74efaa416842fc597cd0",
+              "size_bytes": 313946
+            },
+            {
+              "id": "prob_gt_2inch",
+              "label": "Probability of exceeding 2 inches in 12 hours",
+              "units": "%",
+              "threshold_inch": 2.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/12h_f36_f48_prob_gt_2inch_b26671d018a2.png",
+              "sha256": "dd87dcbe8bc440979c0cf8b542d46c62f76a598621755d25b32c94f9839a3f92",
+              "size_bytes": 307087
+            }
+          ],
+          "method_note": "Both panels use directly predicted 12-hour CSGD distributions."
+        }
+      ]
+    },
+    "24h": {
+      "duration_hours": 24,
+      "status": "ready",
+      "method_note": "GEFS probabilities: independent Monte Carlo sum of two non-overlapping 12-hour CSGD distributions (500 samples). GEFS expected rainfall: sum of the two 12-hour expectations. HRRR: directly predicted 24-hour CSGD distribution. The methods differ; GEFS sampling assumes temporal independence.",
+      "input_fingerprint": "c49af491b64a2ff73928c04112c8f25e0c7b9769c62521f0e69372db80cdd35d",
+      "gefs_source_sha256": "37634b7ddb93877a764e6bf19f6d459fb117da641b64d0261ad4ed935e22d17b",
+      "products": [
+        {
+          "id": "expected_precip",
+          "label": "Expected 24-hour rainfall",
+          "units": "inches",
+          "threshold_inch": null
+        },
+        {
+          "id": "prob_gt_0p5inch",
+          "label": "Probability of exceeding 0.5 inch in 24 hours",
+          "units": "%",
+          "threshold_inch": 0.5
+        },
+        {
+          "id": "prob_gt_1inch",
+          "label": "Probability of exceeding 1 inch in 24 hours",
+          "units": "%",
+          "threshold_inch": 1.0
+        },
+        {
+          "id": "prob_gt_2inch",
+          "label": "Probability of exceeding 2 inches in 24 hours",
+          "units": "%",
+          "threshold_inch": 2.0
+        }
+      ],
+      "windows": [
+        {
+          "id": "f00_f24",
+          "hrrr_init": "2026101506",
+          "gefs_init": "2026101506",
+          "duration_hours": 24,
+          "hrrr_end_fhr": 24,
+          "gefs_end_fhr": 24,
+          "valid_start": "2026-10-15T06:00:00Z",
+          "valid_end": "2026-10-16T06:00:00Z",
+          "hrrr_source_sha256": "6aab624297dad837bd69414915437b9a5b9f33907f38336ab925f4451418c5c1",
+          "products": [
+            {
+              "id": "expected_precip",
+              "label": "Expected 24-hour rainfall",
+              "units": "inches",
+              "threshold_inch": null,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/24h_f00_f24_expected_precip_c49af491b64a.png",
+              "sha256": "700ffe681e1640695421ad06b53db1b9c3e07b0e78bc111176a34a5ae7f35c51",
+              "size_bytes": 327021
+            },
+            {
+              "id": "prob_gt_0p5inch",
+              "label": "Probability of exceeding 0.5 inch in 24 hours",
+              "units": "%",
+              "threshold_inch": 0.5,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/24h_f00_f24_prob_gt_0p5inch_c49af491b64a.png",
+              "sha256": "2efad8d04078fa61483a8e05253fefcc98a777b12a85b101e77401f04566d809",
+              "size_bytes": 348882
+            },
+            {
+              "id": "prob_gt_1inch",
+              "label": "Probability of exceeding 1 inch in 24 hours",
+              "units": "%",
+              "threshold_inch": 1.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/24h_f00_f24_prob_gt_1inch_c49af491b64a.png",
+              "sha256": "5efa59b86871da90a84b3e5cb6ff0f3fc5cfd8a51aa31729b283d088c0b49e3f",
+              "size_bytes": 341361
+            },
+            {
+              "id": "prob_gt_2inch",
+              "label": "Probability of exceeding 2 inches in 24 hours",
+              "units": "%",
+              "threshold_inch": 2.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/24h_f00_f24_prob_gt_2inch_c49af491b64a.png",
+              "sha256": "2d476c9ae8076fa3d89bf1ec54b591d77ba3ee50ceaea9253285a31d110f10e8",
+              "size_bytes": 329368
+            }
+          ],
+          "method_note": "GEFS probabilities: independent Monte Carlo sum of two non-overlapping 12-hour CSGD distributions (500 samples). GEFS expected rainfall: sum of the two 12-hour expectations. HRRR: directly predicted 24-hour CSGD distribution. The methods differ; GEFS sampling assumes temporal independence."
+        },
+        {
+          "id": "f06_f30",
+          "hrrr_init": "2026101506",
+          "gefs_init": "2026101506",
+          "duration_hours": 24,
+          "hrrr_end_fhr": 30,
+          "gefs_end_fhr": 30,
+          "valid_start": "2026-10-15T12:00:00Z",
+          "valid_end": "2026-10-16T12:00:00Z",
+          "hrrr_source_sha256": "347bf3a7a8d45673be0ecd8af912817aaf6fee9de04c032d7adf4744ae4019ed",
+          "products": [
+            {
+              "id": "expected_precip",
+              "label": "Expected 24-hour rainfall",
+              "units": "inches",
+              "threshold_inch": null,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/24h_f06_f30_expected_precip_c49af491b64a.png",
+              "sha256": "4f6f945e1c462304d1fe8dcbf942058b703dd9b4682cd0979437cc53b7c5d9d6",
+              "size_bytes": 327483
+            },
+            {
+              "id": "prob_gt_0p5inch",
+              "label": "Probability of exceeding 0.5 inch in 24 hours",
+              "units": "%",
+              "threshold_inch": 0.5,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/24h_f06_f30_prob_gt_0p5inch_c49af491b64a.png",
+              "sha256": "83ba6a59756c4c2be4fc2936a142e6baabf7aa5d89259c3aed5be983409ed3a1",
+              "size_bytes": 348761
+            },
+            {
+              "id": "prob_gt_1inch",
+              "label": "Probability of exceeding 1 inch in 24 hours",
+              "units": "%",
+              "threshold_inch": 1.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/24h_f06_f30_prob_gt_1inch_c49af491b64a.png",
+              "sha256": "a3829d20825f51da47e6fed1ac327144adc5a39dd02ebae86be0a234daff9138",
+              "size_bytes": 343074
+            },
+            {
+              "id": "prob_gt_2inch",
+              "label": "Probability of exceeding 2 inches in 24 hours",
+              "units": "%",
+              "threshold_inch": 2.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/24h_f06_f30_prob_gt_2inch_c49af491b64a.png",
+              "sha256": "0fd49870ebb5d4e72482c124033017621400708bc1a08807b5698f5ed3f3c078",
+              "size_bytes": 329843
+            }
+          ],
+          "method_note": "GEFS probabilities: independent Monte Carlo sum of two non-overlapping 12-hour CSGD distributions (500 samples). GEFS expected rainfall: sum of the two 12-hour expectations. HRRR: directly predicted 24-hour CSGD distribution. The methods differ; GEFS sampling assumes temporal independence."
+        },
+        {
+          "id": "f12_f36",
+          "hrrr_init": "2026101506",
+          "gefs_init": "2026101506",
+          "duration_hours": 24,
+          "hrrr_end_fhr": 36,
+          "gefs_end_fhr": 36,
+          "valid_start": "2026-10-15T18:00:00Z",
+          "valid_end": "2026-10-16T18:00:00Z",
+          "hrrr_source_sha256": "06c7ff7f8a11eb7b378f3f9e1aa7cea425695de9496246048e8aac5162b9a9bd",
+          "products": [
+            {
+              "id": "expected_precip",
+              "label": "Expected 24-hour rainfall",
+              "units": "inches",
+              "threshold_inch": null,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/24h_f12_f36_expected_precip_c49af491b64a.png",
+              "sha256": "f4cde438e58c82ebcbbd1cd59518fad7b79df654f3638b6aed78b3c99cb0e4ff",
+              "size_bytes": 326424
+            },
+            {
+              "id": "prob_gt_0p5inch",
+              "label": "Probability of exceeding 0.5 inch in 24 hours",
+              "units": "%",
+              "threshold_inch": 0.5,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/24h_f12_f36_prob_gt_0p5inch_c49af491b64a.png",
+              "sha256": "6e66ec8610983f98de0e0aa5eee53dc375b2238beff276cfa09b2d785b9c4cfc",
+              "size_bytes": 347314
+            },
+            {
+              "id": "prob_gt_1inch",
+              "label": "Probability of exceeding 1 inch in 24 hours",
+              "units": "%",
+              "threshold_inch": 1.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/24h_f12_f36_prob_gt_1inch_c49af491b64a.png",
+              "sha256": "442a15c0faf10217085b83695002a45ae7ab2829b9fd3554bb951c13c922dedd",
+              "size_bytes": 343207
+            },
+            {
+              "id": "prob_gt_2inch",
+              "label": "Probability of exceeding 2 inches in 24 hours",
+              "units": "%",
+              "threshold_inch": 2.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/24h_f12_f36_prob_gt_2inch_c49af491b64a.png",
+              "sha256": "7baba13a725f62b398e0b94ba5b4b892dd79f31c22977470e71d684a3a04d14f",
+              "size_bytes": 330682
+            }
+          ],
+          "method_note": "GEFS probabilities: independent Monte Carlo sum of two non-overlapping 12-hour CSGD distributions (500 samples). GEFS expected rainfall: sum of the two 12-hour expectations. HRRR: directly predicted 24-hour CSGD distribution. The methods differ; GEFS sampling assumes temporal independence."
+        },
+        {
+          "id": "f18_f42",
+          "hrrr_init": "2026101506",
+          "gefs_init": "2026101506",
+          "duration_hours": 24,
+          "hrrr_end_fhr": 42,
+          "gefs_end_fhr": 42,
+          "valid_start": "2026-10-16T00:00:00Z",
+          "valid_end": "2026-10-17T00:00:00Z",
+          "hrrr_source_sha256": "745f3c4c42147c79f04fba73800442b061723051e69297a691811e869dee41bb",
+          "products": [
+            {
+              "id": "expected_precip",
+              "label": "Expected 24-hour rainfall",
+              "units": "inches",
+              "threshold_inch": null,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/24h_f18_f42_expected_precip_c49af491b64a.png",
+              "sha256": "ebb26e479000c18cd09e7429ce805190eee9377309010c12426a1fe5c9334bc7",
+              "size_bytes": 325336
+            },
+            {
+              "id": "prob_gt_0p5inch",
+              "label": "Probability of exceeding 0.5 inch in 24 hours",
+              "units": "%",
+              "threshold_inch": 0.5,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/24h_f18_f42_prob_gt_0p5inch_c49af491b64a.png",
+              "sha256": "ad694d245a174f424764bd9bbfd06b956f148dccdef633dd34027c280aed1a90",
+              "size_bytes": 345421
+            },
+            {
+              "id": "prob_gt_1inch",
+              "label": "Probability of exceeding 1 inch in 24 hours",
+              "units": "%",
+              "threshold_inch": 1.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/24h_f18_f42_prob_gt_1inch_c49af491b64a.png",
+              "sha256": "ff7a81afa740aac2597916f640b6f3df9cb9a46af3adb25a5cf3301c3ab6c446",
+              "size_bytes": 339387
+            },
+            {
+              "id": "prob_gt_2inch",
+              "label": "Probability of exceeding 2 inches in 24 hours",
+              "units": "%",
+              "threshold_inch": 2.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/24h_f18_f42_prob_gt_2inch_c49af491b64a.png",
+              "sha256": "d48e8b395e2db60c60b8373558d7794b019221e8c652031b7d9457731060436c",
+              "size_bytes": 329361
+            }
+          ],
+          "method_note": "GEFS probabilities: independent Monte Carlo sum of two non-overlapping 12-hour CSGD distributions (500 samples). GEFS expected rainfall: sum of the two 12-hour expectations. HRRR: directly predicted 24-hour CSGD distribution. The methods differ; GEFS sampling assumes temporal independence."
+        },
+        {
+          "id": "f24_f48",
+          "hrrr_init": "2026101506",
+          "gefs_init": "2026101506",
+          "duration_hours": 24,
+          "hrrr_end_fhr": 48,
+          "gefs_end_fhr": 48,
+          "valid_start": "2026-10-16T06:00:00Z",
+          "valid_end": "2026-10-17T06:00:00Z",
+          "hrrr_source_sha256": "afd1b41c2644838ab8a79a5132658311a7d1cc949ead285b00e6292069cf4b4a",
+          "products": [
+            {
+              "id": "expected_precip",
+              "label": "Expected 24-hour rainfall",
+              "units": "inches",
+              "threshold_inch": null,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/24h_f24_f48_expected_precip_c49af491b64a.png",
+              "sha256": "988eacec7070dd3e8949779a9cada2a987977d03f8806ea1abe315915a1413db",
+              "size_bytes": 325507
+            },
+            {
+              "id": "prob_gt_0p5inch",
+              "label": "Probability of exceeding 0.5 inch in 24 hours",
+              "units": "%",
+              "threshold_inch": 0.5,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/24h_f24_f48_prob_gt_0p5inch_c49af491b64a.png",
+              "sha256": "0b2c21ef5453b94819bec46060be2051ee6cbe2d72a23f24fd18e8ca73365901",
+              "size_bytes": 344093
+            },
+            {
+              "id": "prob_gt_1inch",
+              "label": "Probability of exceeding 1 inch in 24 hours",
+              "units": "%",
+              "threshold_inch": 1.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/24h_f24_f48_prob_gt_1inch_c49af491b64a.png",
+              "sha256": "fc8b3e2ab01c0bcd22a2b12e13d0127ad4a80fba985952520bdacb948a540628",
+              "size_bytes": 336875
+            },
+            {
+              "id": "prob_gt_2inch",
+              "label": "Probability of exceeding 2 inches in 24 hours",
+              "units": "%",
+              "threshold_inch": 2.0,
+              "common_valid_cells": 13318,
+              "path": "products/forecast-comparison/2026101506/24h_f24_f48_prob_gt_2inch_c49af491b64a.png",
+              "sha256": "c024e92666d92c4c36b4119bb410f10c0fb8904fbed048ddf69d7fc8f617edb4",
+              "size_bytes": 328137
+            }
+          ],
+          "method_note": "GEFS probabilities: independent Monte Carlo sum of two non-overlapping 12-hour CSGD distributions (500 samples). GEFS expected rainfall: sum of the two 12-hour expectations. HRRR: directly predicted 24-hour CSGD distribution. The methods differ; GEFS sampling assumes temporal independence."
+        }
+      ],
+      "gefs_nsamples": 500
+    }
+  }
 }
