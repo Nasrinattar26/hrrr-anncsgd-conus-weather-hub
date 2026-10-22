@@ -1,6 +1,10 @@
 {
   "runs": [
     {
+      "init": "2026102200",
+      "path": "data/forecast-comparison/raw/2026102200.json"
+    },
+    {
       "init": "2026102118",
       "path": "data/forecast-comparison/raw/2026102118.json"
     },
@@ -43,10 +47,6 @@
     {
       "init": "2026101806",
       "path": "data/forecast-comparison/raw/2026101806.json"
-    },
-    {
-      "init": "2026101800",
-      "path": "data/forecast-comparison/raw/2026101800.json"
     }
   ]
 }
