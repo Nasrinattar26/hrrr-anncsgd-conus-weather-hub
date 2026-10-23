@@ -7,7 +7,7 @@
     name="description"
     content="Matched verification of GEFS-driven and HRRR-driven ANN-CSGD precipitation guidance."
   >
-  <title>ANN-CSGD model comparison</title>
+  <title>ANN-CSGD verification comparison</title>
   <link
     rel="stylesheet"
     href="assets/model-comparison.css?v=20261016T214110"
@@ -62,9 +62,9 @@
       <div class="global-site-nav__links">
         <a href="../index.html#forecast-workspace">Forecasts</a>
         <a href="../verification.html">Verification</a>
-        <a href="./" aria-current="page">Model comparison</a>
+        <a href="./" aria-current="page">Verification comparison</a>
         <a href="../index.html#grib2-downloads">Downloads</a>
-        <a href="../index.html#method">Method</a>
+        <a href="../methods.html">Methods and guidance</a>
       </div>
     </div>
   </nav>
@@ -72,7 +72,7 @@
     <div class="hero__inner">
       <div>
         <p class="eyebrow">Forecast verification</p>
-        <h1>ANN-CSGD model comparison</h1>
+        <h1>ANN-CSGD verification comparison</h1>
         <p class="hero__subtitle">
         See how the HRRR- and GEFS-based ANN-CSGD forecasts performed against the same MRMS observations. Choose a date to explore the results.
       </p>
@@ -82,6 +82,12 @@
           </a>
           <a class="button button--accent" href="../verification.html">
             Open HRRR Verification
+          </a>
+          <a class="button button--glass" href="../forecast-comparison/">
+            Compare forecast maps
+          </a>
+          <a class="button button--glass" href="../methods.html#verification">
+            Verification methods and grid limitations
           </a>
         </nav>
       </div>
@@ -121,15 +127,16 @@
           <h2 id="amount-title">Continuous verification</h2>
         </div>
       </div>
+      <p><strong>Research-score units:</strong> CRPS, MAE, RMSE and additive bias below are in millimeters (mm). WIS, predictive-interval widths and resolution-study CRPS also use mm. One inch equals 25.4 mm. Probability, correlation and skill scores are dimensionless; operational forecast rainfall maps use inches.</p>
       <div class="table-shell">
         <table>
           <thead>
             <tr>
               <th>Forecast system</th>
-              <th>CRPS ↓</th>
-              <th>MAE ↓</th>
-              <th>RMSE ↓</th>
-              <th>Bias</th>
+              <th>CRPS (mm) ↓</th>
+              <th>MAE (mm) ↓</th>
+              <th>RMSE (mm) ↓</th>
+              <th>Bias (mm)</th>
               <th>Correlation ↑</th>
               <th>CRPSS/raw ↑</th>
             </tr>
@@ -175,7 +182,7 @@
           <div id="interval-coverage-chart"></div>
         </article>
         <article class="chart-block">
-          <h3>Weighted Interval Score</h3>
+          <h3>Weighted Interval Score (mm)</h3>
           <p>
             WIS jointly rewards narrow intervals and correct coverage.
             Lower values are better.
@@ -191,8 +198,8 @@
               <th>Nominal</th>
               <th>Empirical</th>
               <th>Coverage error</th>
-              <th>Mean width</th>
-              <th>Median width</th>
+              <th>Mean width (mm)</th>
+              <th>Median width (mm)</th>
             </tr>
           </thead>
           <tbody id="interval-table"></tbody>
@@ -440,8 +447,8 @@
 
       <div class="resolution-metric-grid">
         <article class="chart-block">
-          <h3>Continuous Ranked Probability Score</h3>
-          <p>Lower CRPS is better. Raw HRRR is the shared deterministic reference.</p>
+          <h3>Continuous Ranked Probability Score (mm)</h3>
+          <p>Lower CRPS is better. Values and paired CRPS differences are in millimeters. Raw HRRR is the shared deterministic reference.</p>
           <div id="resolution-crps-chart" class="resolution-chart"></div>
         </article>
         <article class="chart-block">
@@ -476,7 +483,7 @@
       <div class="table-shell resolution-table">
         <table>
           <thead>
-            <tr><th>Resolution</th><th>CRPS ↓</th><th>CRPSS ↑</th><th>BSS ↑</th><th>ROC AUC ↑</th><th>CSI ↑</th><th>POD ↑</th><th>FAR ↓</th><th>Events</th></tr>
+            <tr><th>Resolution</th><th>CRPS (mm) ↓</th><th>CRPSS ↑</th><th>BSS ↑</th><th>ROC AUC ↑</th><th>CSI ↑</th><th>POD ↑</th><th>FAR ↓</th><th>Events</th></tr>
           </thead>
           <tbody id="resolution-score-table"></tbody>
         </table>

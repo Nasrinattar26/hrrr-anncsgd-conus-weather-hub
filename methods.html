@@ -30,6 +30,7 @@
     <nav class="methods-links" aria-label="On this page">
       <a href="#forecast-method">Forecast method</a><a href="#training">Training</a>
       <a href="#verification">Verification</a><a href="#using-guidance">Using the guidance</a>
+      <a href="#forecast-comparison">Forecast comparisons</a><a href="#references">Scientific reference</a>
     </nav>
     <section class="panel" id="forecast-method">
       <h2>One HRRR initialization, three accumulation models</h2>
@@ -41,6 +42,7 @@
         <li><strong>Calculate the displayed products.</strong> Expected rainfall is the mathematical expectation of this distribution. Exceedance probabilities are calculated analytically from its gamma survival function for fixed rainfall amounts and local recurrence thresholds.</li>
       </ol>
       <p><strong>What “probabilistic” means here:</strong> the probabilities come from the predicted CSGD. The displayed products are not fractions of time-lagged members, and the operational inference script does not need to sample an ensemble to generate them. MRMS supplies observed targets for training and verification; it is not an input predictor for the real-time forecast.</p>
+      <p>There is therefore no ensemble-member count for the operational HRRR probability maps. Each distribution describes rainfall uncertainty at one grid location and accumulation window; these marginal distributions alone do not define spatially or temporally coherent ensemble trajectories.</p>
       <p>The grid has 117 latitude positions and 253 longitude positions, spanning 23–52°N and 127–64°W at 0.25° spacing. The operational land mask contains 13,318 cells.</p>
     </section>
     <section class="panel" id="training">
@@ -76,10 +78,10 @@
       <ul>
         <li><strong>Initialization:</strong> the model's starting time, shown in UTC. The selector controls maps, animations and downloads for the chosen run. The latest-run card always identifies the newest published initialization.</li>
         <li><strong>Forecast window:</strong> f00–f12, for example, is accumulated rainfall during the first twelve hours after initialization. Compare forecast systems only when accumulation duration and valid start and end times agree.</li>
-        <li><strong>Units:</strong> operational rainfall maps and amount metrics use inches; probabilities use percent. One inch equals 25.4 mm. Downloaded scientific data and metadata fields ending in <code>_mm</code> retain their original millimeter units. Research case-study figures retain their labeled original units.</li>
+        <li><strong>Units:</strong> operational rainfall maps and operational amount-error displays use inches; forecast probabilities use percent. One inch equals 25.4 mm. The research verification-comparison page retains millimeters for CRPS, MAE, RMSE, bias, WIS and interval widths, including resolution-study CRPS. Probability and skill scores are dimensionless. Downloaded scientific data and metadata fields ending in <code>_mm</code> retain their original millimeter units. Research case-study figures retain their labeled original units.</li>
         <li><strong>ARI:</strong> a local average recurrence interval rainfall threshold for the specified duration. A probability of exceeding a 2-year rainfall threshold is not a direct flash-flood probability.</li>
         <li><strong>WPC ERO:</strong> the Excessive Rainfall Outlook describes a different hazard quantity from ANN-CSGD rainfall exceedance probabilities. Check the ERO issue time and valid period printed with the product.</li>
-        <li><strong>Past runs:</strong> the four most recent complete published runs are retained. Historical maps can be reconstructed only where the saved forecast products remain available. Missing archived animations or downloads are shown as unavailable for that run.</li>
+        <li><strong>Past runs:</strong> choose a recent published cycle using <strong>Forecast initialization (UTC)</strong> above the forecast maps. The selector lists the currently retained runs; archive availability can change as new cycles are published. Maps, animations and downloads follow the selected initialization. Missing archived products are shown as unavailable for that run.</li>
       </ul>
       <p><a class="verification-dashboard-button" href="https://nasrinattar26.github.io/ann-csgd-worldcup-weather-hub/">Open GEFS forecast dashboard</a></p>
       <p>The GEFS ANN-CSGD World Cup Weather Hub is a separate dashboard. Its initialization, valid periods and supported products may differ from those shown here.</p>
@@ -87,16 +89,23 @@
     <section class="panel" id="forecast-comparison">
       <h2>Comparing GEFS and HRRR forecast maps</h2>
       <p><a href="forecast-comparison/">Compare the two ANN-CSGD forecast systems</a> for identical 12- or 24-hour valid periods, using expected rainfall in inches and fixed-threshold probabilities in percent. The panels share the same color scale and common finite land cells on the existing 0.25° grid; no new interpolation is performed.</p>
-      <p>The daily pairing uses GEFS initialized at 00 UTC and HRRR initialized at 12 UTC on the same date. Their valid periods match, but GEFS has a 12-hour longer lead. These maps show forecast guidance and cannot establish comparative skill. The available products are expected rainfall and the probability of exceeding 0.5, 1 and 2 inches. Local ARI thresholds are outside this comparison. A 6-hour GEFS-based ANN-CSGD counterpart is not available in the reviewed operational workflow; all three durations remain available for HRRR on its dashboard.</p>
+      <p><strong>Current comparisons use the same initialization:</strong> GEFS and HRRR are paired from the same 00, 06, 12 or 18 UTC cycle, with matching forecast leads and valid periods. A pair becomes available after both systems finish. While a newer pair is waiting, the latest complete pair remains available; an older GEFS run is not substituted for a missing same-cycle forecast.</p>
+      <p><strong>Archived comparisons:</strong> earlier pairs may use different initialization times, including GEFS 00 UTC and HRRR 12 UTC. Their valid periods match but their forecast leads differ. These pairs are labeled as archived, and the selected map caption reports each system's initialization relationship and lead interval.</p>
+      <p>These maps show forecast guidance and cannot establish comparative skill. The available products are expected rainfall and the probability of exceeding 0.5, 1 and 2 inches. Local ARI thresholds are outside this comparison. A 6-hour GEFS-based ANN-CSGD counterpart is not available in the reviewed operational workflow; all three durations remain available for HRRR on its dashboard. Use the separate <a href="model-comparison/">verification-comparison page</a> to assess performance against observations, following that page's own matched samples and initialization labels.</p>
     </section>
     <section class="panel" id="comparison-24h-method">
       <h2>How the 24-hour GEFS comparison is constructed</h2>
       <p>The existing GEFS RT7a product sums independent Monte Carlo draws from two non-overlapping 12-hour CSGD predictive distributions. Its 24-hour exceedance probabilities are the percentage of these sampled sums exceeding each fixed threshold. The actual sample count is read from the stored forecast metadata and displayed on the comparison page. Expected 24-hour rainfall is the sum of the two 12-hour expected values.</p>
       <p>The HRRR panel uses its separate, directly predicted 24-hour CSGD distribution. Matching valid periods, thresholds and grid cells does not equalize these constructions. GEFS sampling assumes independence between the two periods and adds Monte Carlo variability; it does not preserve their temporal dependence. The comparison displays these existing products without running new sampling or inference. The renderer checks that the GEFS expected 24-hour amount equals the sum of the corresponding stored 12-hour expectations.</p>
     </section>
+    <section class="panel" id="references">
+      <h2>Scientific reference and scope of this adaptation</h2>
+      <p>The ANN-CSGD approach is described in Ghazvinian et al. (2022). That study postprocessed GEFS ensemble forecasts using ensemble-derived and geographic predictors with a rolling 60-day training window. It provides methodological background; its ensemble inputs, predictors and training design differ from the duration-specific HRRR implementation documented above. Its published performance results should not be treated as validation of this HRRR dashboard.</p>
+      <p>Ghazvinian, M., Y. Zhang, T. M. Hamill, D.-J. Seo, and N. Fernando, 2022: <em>Improving Probabilistic Quantitative Precipitation Forecasts Using Short Training Data through Artificial Neural Networks.</em> Journal of Hydrometeorology, 23, 1365–1382. <a href="https://doi.org/10.1175/JHM-D-22-0021.1">doi:10.1175/JHM-D-22-0021.1</a>.</p>
+    </section>
     <section class="panel">
       <h2>Implementation basis</h2>
-      <p>This description follows the operational source reviewed on 25 September 2026: HRRR regridding (04b), duration-specific training (50, 52, 53), inference (57), MRMS processing (47, 65), verification metrics (63, 68) and verification maps (74, 75). Display units and navigation updates do not change trained weights, forecast distributions or verification formulas.</p>
+      <p>The operational-processing description is based on the source review recorded on 25 September 2026: HRRR regridding (04b), duration-specific training (50, 52, 53), inference (57), MRMS processing (47, 65), verification metrics (63, 68) and verification maps (74, 75). Website navigation, retained-run guidance and forecast-pairing descriptions were reconciled with the published interface on 23 October 2026. Documentation and unit-label updates do not change trained weights, forecast distributions or verification formulas.</p>
     </section>
   </main>
   <footer><p>Research product developed by Nasrin Attar under the supervision of Prof. Yu Zhang at The University of Texas at Arlington.</p></footer>
