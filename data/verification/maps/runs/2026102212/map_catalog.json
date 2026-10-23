@@ -1,7 +1,131 @@
 {
   "status": "SUCCESS",
+  "verification_coverage": {
+    "schema": "verification_coverage_v1",
+    "verification_state": "PARTIAL",
+    "forecast_window_count": 20,
+    "completed_window_count": 11,
+    "unavailable_observation_window_count": 0,
+    "pending_window_count": 9,
+    "duration_window_counts": {
+      "6": 5,
+      "12": 4,
+      "24": 2
+    },
+    "unverified_windows": [
+      {
+        "duration_hours": 6,
+        "window": "f30_f36",
+        "valid_time": "2026-10-24T00:00:00Z",
+        "status": "PENDING_VALID_TIME",
+        "reason": "Observation availability time has not passed."
+      },
+      {
+        "duration_hours": 6,
+        "window": "f36_f42",
+        "valid_time": "2026-10-24T06:00:00Z",
+        "status": "PENDING_VALID_TIME",
+        "reason": "Observation availability time has not passed."
+      },
+      {
+        "duration_hours": 6,
+        "window": "f42_f48",
+        "valid_time": "2026-10-24T12:00:00Z",
+        "status": "PENDING_VALID_TIME",
+        "reason": "Observation availability time has not passed."
+      },
+      {
+        "duration_hours": 12,
+        "window": "f24_f36",
+        "valid_time": "2026-10-24T00:00:00Z",
+        "status": "PENDING_VALID_TIME",
+        "reason": "Observation availability time has not passed."
+      },
+      {
+        "duration_hours": 12,
+        "window": "f30_f42",
+        "valid_time": "2026-10-24T06:00:00Z",
+        "status": "PENDING_VALID_TIME",
+        "reason": "Observation availability time has not passed."
+      },
+      {
+        "duration_hours": 12,
+        "window": "f36_f48",
+        "valid_time": "2026-10-24T12:00:00Z",
+        "status": "PENDING_VALID_TIME",
+        "reason": "Observation availability time has not passed."
+      },
+      {
+        "duration_hours": 24,
+        "window": "f12_f36",
+        "valid_time": "2026-10-24T00:00:00Z",
+        "status": "PENDING_VALID_TIME",
+        "reason": "Observation availability time has not passed."
+      },
+      {
+        "duration_hours": 24,
+        "window": "f18_f42",
+        "valid_time": "2026-10-24T06:00:00Z",
+        "status": "PENDING_VALID_TIME",
+        "reason": "Observation availability time has not passed."
+      },
+      {
+        "duration_hours": 24,
+        "window": "f24_f48",
+        "valid_time": "2026-10-24T12:00:00Z",
+        "status": "PENDING_VALID_TIME",
+        "reason": "Observation availability time has not passed."
+      }
+    ],
+    "verified_windows": [
+      {
+        "duration_hours": 6,
+        "window": "f00_f06"
+      },
+      {
+        "duration_hours": 6,
+        "window": "f06_f12"
+      },
+      {
+        "duration_hours": 6,
+        "window": "f12_f18"
+      },
+      {
+        "duration_hours": 6,
+        "window": "f18_f24"
+      },
+      {
+        "duration_hours": 6,
+        "window": "f24_f30"
+      },
+      {
+        "duration_hours": 12,
+        "window": "f00_f12"
+      },
+      {
+        "duration_hours": 12,
+        "window": "f06_f18"
+      },
+      {
+        "duration_hours": 12,
+        "window": "f12_f24"
+      },
+      {
+        "duration_hours": 12,
+        "window": "f18_f30"
+      },
+      {
+        "duration_hours": 24,
+        "window": "f00_f24"
+      },
+      {
+        "duration_hours": 24,
+        "window": "f06_f30"
+      }
+    ]
+  },
   "initialization": "2026102212",
-  "generated_utc": "2026-10-23T21:11:03.572698Z",
+  "generated_utc": "2026-10-23T21:14:44.723250Z",
   "product_count": 44,
   "family_counts": {
     "amount_verification": 6,
