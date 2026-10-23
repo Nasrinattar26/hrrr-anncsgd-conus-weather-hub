@@ -3,7 +3,7 @@
   "latest_initialization": "2026102200",
   "retained_run_count": 30,
   "maximum_retained_runs": 30,
-  "generated_utc": "2026-10-23T22:29:11.794589Z",
+  "generated_utc": "2026-10-23T22:36:44.319813Z",
   "runs": [
     {
       "initialization": "2026102200",
@@ -22,6 +22,15 @@
       "total_amount_samples": 53272,
       "data_json": "runs/2026102100/comparison_run.json",
       "data_js": "runs/2026102100/comparison_run.js"
+    },
+    {
+      "initialization": "2026101900",
+      "status": "PASS",
+      "generated_utc": "2026-10-23T22:36:43Z",
+      "common_window_count": 4,
+      "total_amount_samples": 53272,
+      "data_json": "runs/2026101900/comparison_run.json",
+      "data_js": "runs/2026101900/comparison_run.js"
     },
     {
       "initialization": "2026101500",
@@ -265,15 +274,6 @@
       "total_amount_samples": 53272,
       "data_json": "runs/2026091200/comparison_run.json",
       "data_js": "runs/2026091200/comparison_run.js"
-    },
-    {
-      "initialization": "2026091100",
-      "status": "PASS",
-      "generated_utc": "2026-09-12T21:41:20Z",
-      "common_window_count": 4,
-      "total_amount_samples": 53272,
-      "data_json": "runs/2026091100/comparison_run.json",
-      "data_js": "runs/2026091100/comparison_run.js"
     }
   ]
 }
