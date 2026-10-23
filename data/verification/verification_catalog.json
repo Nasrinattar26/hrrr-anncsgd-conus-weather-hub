@@ -5,8 +5,8 @@
   "retention_definition": "Latest successful forecast initializations, newest to oldest, up to the configured maximum.",
   "maximum_retained_runs": 30,
   "retained_run_count": 30,
-  "complete_run_count": 28,
-  "partial_run_count": 2,
+  "complete_run_count": 27,
+  "partial_run_count": 3,
   "latest_initialization": "2026102212",
   "latest_valid_time": "2026-10-23T18:00:00Z",
   "metric_definitions": {
@@ -893,6 +893,186 @@
       "csv_url": "runs/2026101012/verification_metrics.csv"
     },
     {
+      "initialization": "2026100912",
+      "verification_state": "PARTIAL",
+      "is_fully_verified": false,
+      "verification_coverage": {
+        "schema": "verification_coverage_v1",
+        "verification_state": "PARTIAL",
+        "forecast_window_count": 20,
+        "completed_window_count": 6,
+        "unavailable_observation_window_count": 14,
+        "pending_window_count": 0,
+        "duration_window_counts": {
+          "6": 5,
+          "12": 1,
+          "24": 0
+        },
+        "unverified_windows": [
+          {
+            "duration_hours": 6,
+            "window": "f06_f12",
+            "valid_time": "2026-10-10T00:00:00Z",
+            "status": "FAILED",
+            "reason": "Observation unavailable or its builder failed; excluded from scores."
+          },
+          {
+            "duration_hours": 6,
+            "window": "f18_f24",
+            "valid_time": "2026-10-10T12:00:00Z",
+            "status": "FAILED",
+            "reason": "Observation unavailable or its builder failed; excluded from scores."
+          },
+          {
+            "duration_hours": 6,
+            "window": "f30_f36",
+            "valid_time": "2026-10-11T00:00:00Z",
+            "status": "FAILED",
+            "reason": "Observation unavailable or its builder failed; excluded from scores."
+          },
+          {
+            "duration_hours": 12,
+            "window": "f00_f12",
+            "valid_time": "2026-10-10T00:00:00Z",
+            "status": "FAILED",
+            "reason": "Observation unavailable or its builder failed; excluded from scores."
+          },
+          {
+            "duration_hours": 12,
+            "window": "f06_f18",
+            "valid_time": "2026-10-10T06:00:00Z",
+            "status": "FAILED",
+            "reason": "Observation unavailable or its builder failed; excluded from scores."
+          },
+          {
+            "duration_hours": 12,
+            "window": "f12_f24",
+            "valid_time": "2026-10-10T12:00:00Z",
+            "status": "FAILED",
+            "reason": "Observation unavailable or its builder failed; excluded from scores."
+          },
+          {
+            "duration_hours": 12,
+            "window": "f18_f30",
+            "valid_time": "2026-10-10T18:00:00Z",
+            "status": "FAILED",
+            "reason": "Observation unavailable or its builder failed; excluded from scores."
+          },
+          {
+            "duration_hours": 12,
+            "window": "f24_f36",
+            "valid_time": "2026-10-11T00:00:00Z",
+            "status": "FAILED",
+            "reason": "Observation unavailable or its builder failed; excluded from scores."
+          },
+          {
+            "duration_hours": 12,
+            "window": "f30_f42",
+            "valid_time": "2026-10-11T06:00:00Z",
+            "status": "FAILED",
+            "reason": "Observation unavailable or its builder failed; excluded from scores."
+          },
+          {
+            "duration_hours": 24,
+            "window": "f00_f24",
+            "valid_time": "2026-10-10T12:00:00Z",
+            "status": "FAILED",
+            "reason": "Observation unavailable or its builder failed; excluded from scores."
+          },
+          {
+            "duration_hours": 24,
+            "window": "f06_f30",
+            "valid_time": "2026-10-10T18:00:00Z",
+            "status": "FAILED",
+            "reason": "Observation unavailable or its builder failed; excluded from scores."
+          },
+          {
+            "duration_hours": 24,
+            "window": "f12_f36",
+            "valid_time": "2026-10-11T00:00:00Z",
+            "status": "FAILED",
+            "reason": "Observation unavailable or its builder failed; excluded from scores."
+          },
+          {
+            "duration_hours": 24,
+            "window": "f18_f42",
+            "valid_time": "2026-10-11T06:00:00Z",
+            "status": "FAILED",
+            "reason": "Observation unavailable or its builder failed; excluded from scores."
+          },
+          {
+            "duration_hours": 24,
+            "window": "f24_f48",
+            "valid_time": "2026-10-11T12:00:00Z",
+            "status": "FAILED",
+            "reason": "Observation unavailable or its builder failed; excluded from scores."
+          }
+        ],
+        "verified_windows": [
+          {
+            "duration_hours": 6,
+            "window": "f00_f06"
+          },
+          {
+            "duration_hours": 6,
+            "window": "f12_f18"
+          },
+          {
+            "duration_hours": 6,
+            "window": "f24_f30"
+          },
+          {
+            "duration_hours": 6,
+            "window": "f36_f42"
+          },
+          {
+            "duration_hours": 6,
+            "window": "f42_f48"
+          },
+          {
+            "duration_hours": 12,
+            "window": "f36_f48"
+          }
+        ]
+      },
+      "unavailable_observation_window_count": 14,
+      "forecast_window_count": 20,
+      "completed_window_count": 6,
+      "pending_window_count": 0,
+      "threshold_row_count": 36,
+      "earliest_valid_time": "2026-10-09T18:00:00Z",
+      "latest_valid_time": "2026-10-11T12:00:00Z",
+      "duration_window_counts": {
+        "6": 5,
+        "12": 1,
+        "24": 0
+      },
+      "metric_ranges": {
+        "POD": {
+          "finite_count": 33,
+          "minimum": 0.0,
+          "maximum": 0.6949152542372882
+        },
+        "FAR": {
+          "finite_count": 20,
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "CSI": {
+          "finite_count": 33,
+          "minimum": 0.0,
+          "maximum": 0.4880952380952381
+        },
+        "brier_skill_score": {
+          "finite_count": 36,
+          "minimum": -4.324744628547994,
+          "maximum": 0.9097307460031255
+        }
+      },
+      "summary_url": "runs/2026100912/verification_summary.json",
+      "csv_url": "runs/2026100912/verification_metrics.csv"
+    },
+    {
       "initialization": "2026100712",
       "verification_state": "COMPLETE",
       "is_fully_verified": true,
@@ -1563,48 +1743,6 @@
       },
       "summary_url": "runs/2026092212/verification_summary.json",
       "csv_url": "runs/2026092212/verification_metrics.csv"
-    },
-    {
-      "initialization": "2026092112",
-      "verification_state": "COMPLETE",
-      "is_fully_verified": true,
-      "verification_coverage": null,
-      "unavailable_observation_window_count": 0,
-      "forecast_window_count": 20,
-      "completed_window_count": 20,
-      "pending_window_count": 0,
-      "threshold_row_count": 125,
-      "earliest_valid_time": "2026-09-21T18:00:00Z",
-      "latest_valid_time": "2026-09-23T12:00:00Z",
-      "duration_window_counts": {
-        "6": 8,
-        "12": 7,
-        "24": 5
-      },
-      "metric_ranges": {
-        "POD": {
-          "finite_count": 111,
-          "minimum": 0.0,
-          "maximum": 0.34108527131782945
-        },
-        "FAR": {
-          "finite_count": 33,
-          "minimum": 0.4946808510638298,
-          "maximum": 1.0
-        },
-        "CSI": {
-          "finite_count": 111,
-          "minimum": 0.0,
-          "maximum": 0.24384787472035793
-        },
-        "brier_skill_score": {
-          "finite_count": 125,
-          "minimum": -15.154127838599234,
-          "maximum": 0.9837264721963404
-        }
-      },
-      "summary_url": "runs/2026092112/verification_summary.json",
-      "csv_url": "runs/2026092112/verification_metrics.csv"
     }
   ]
 }
