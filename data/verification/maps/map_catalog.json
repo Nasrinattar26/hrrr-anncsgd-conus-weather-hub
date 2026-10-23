@@ -60,6 +60,12 @@
       "success_marker_url": "data/verification/maps/runs/2026101212/_MAPS_SUCCESS"
     },
     {
+      "initialization": "2026101112",
+      "product_count": 44,
+      "catalog_url": "data/verification/maps/runs/2026101112/map_catalog.json",
+      "success_marker_url": "data/verification/maps/runs/2026101112/_MAPS_SUCCESS"
+    },
+    {
       "initialization": "2026100812",
       "product_count": 44,
       "catalog_url": "data/verification/maps/runs/2026100812/map_catalog.json",
@@ -178,12 +184,6 @@
       "product_count": 44,
       "catalog_url": "data/verification/maps/runs/2026091912/map_catalog.json",
       "success_marker_url": "data/verification/maps/runs/2026091912/_MAPS_SUCCESS"
-    },
-    {
-      "initialization": "2026091812",
-      "product_count": 44,
-      "catalog_url": "data/verification/maps/runs/2026091812/map_catalog.json",
-      "success_marker_url": "data/verification/maps/runs/2026091812/_MAPS_SUCCESS"
     }
   ]
 }
