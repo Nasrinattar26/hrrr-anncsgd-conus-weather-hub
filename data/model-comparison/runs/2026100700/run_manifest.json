@@ -1,0 +1,16 @@
+{
+  "contract_version": 1,
+  "initialization": "2026100700",
+  "files": [
+    {
+      "name": "comparison_run.json",
+      "bytes": 433427,
+      "sha256": "c85d15aba94e5d3a80d2fb009d868503bdded6320213ade73045b4b227fae985"
+    },
+    {
+      "name": "comparison_run.js",
+      "bytes": 280599,
+      "sha256": "3d8076c11b6e2a469d5c64ac3ec4be6283760efb5e4da80ca4787e50b7fa5eb4"
+    }
+  ]
+}
