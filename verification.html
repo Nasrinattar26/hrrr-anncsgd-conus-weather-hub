@@ -90,14 +90,10 @@
 
         <span
           id="verification-page-run-state"
-          hidden
-          aria-hidden="true"
         ></span>
 
         <span
           id="verification-page-window-count"
-          hidden
-          aria-hidden="true"
         ></span>
 
         <div
@@ -116,6 +112,12 @@
   </header>
 
   <main class="v2-page">
+    <section class="v2-panel" aria-label="Verification coverage">
+      <h2>Verification coverage</h2>
+      <p id="verification-coverage-note" role="status">Loading verified-window coverage…</p>
+      <details id="verification-coverage-details" hidden><summary>Unverified windows</summary><ul id="verification-coverage-list"></ul></details>
+      <p>Scores use only validated, duration-matched observations. Unavailable observations are never treated as zero rainfall. Map products show the latest verified window for each available duration.</p>
+    </section>
     <section class="v2-panel v2-overview">
       <div class="v2-section-heading">
         <p class="v2-eyebrow v2-eyebrow--blue">
@@ -179,8 +181,7 @@
           <h2>Select a verification product</h2>
 
           <p>
-            Choose the run, duration, lead window, domain, product
-            family, and precipitation threshold.
+            Choose the run, duration, lead window, and domain. Amount, threshold, and ARI products appear together below.
           </p>
         </div>
 
@@ -258,13 +259,13 @@
         <header class="v2-gallery-heading">
           <div>
             <p class="v2-eyebrow v2-eyebrow--blue">
-              Threshold and ARI products
+              Amount, threshold and ARI products
             </p>
 
             <h2>Verification map gallery</h2>
 
             <p>
-              Every available fixed-threshold and
+              Every available rainfall-amount, fixed-threshold and
               recurrence-interval product for the selected
               initialization, duration, lead window, and domain.
             </p>
@@ -285,7 +286,7 @@
           role="status"
           aria-live="polite"
         >
-          Loading threshold and ARI products…
+          Loading verification products…
         </p>
 
         <div

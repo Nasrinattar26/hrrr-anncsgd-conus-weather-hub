@@ -131,8 +131,10 @@
         <span class="small-label">Operational system</span>
         <strong>HRRR guidance for 6, 12 and 24 hours</strong>
         <p>
-          Three separately trained ANN-CSGD models use HRRR inputs, one for each
-          accumulation duration. Each forecast uses one HRRR initialization.
+          Three duration-specific ANN-CSGD models: one for 6-hour, one for 12-hour,
+          and one for 24-hour rainfall. All three use HRRR inputs from a single
+          initialization; they are not different forecast systems or time-lagged members.
+          GEFS-based ANN-CSGD is a separate system available through the GEFS dashboard link.
           <a href="methods.html#forecast-method">How the forecasts are made</a>.
         </p>
       </article>

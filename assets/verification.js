@@ -878,6 +878,28 @@ async function renderSelectedProduct() {
 }
 
 function updateRunStatus(initialization) {
+  const note = document.getElementById("verification-coverage-note");
+  const details = document.getElementById("verification-coverage-details");
+  const list = document.getElementById("verification-coverage-list");
+  const record = verificationState.metricCatalog?.runs?.find(r => String(r.initialization) === String(initialization));
+  list?.replaceChildren();
+  if (details) details.hidden = true;
+  if (record) {
+    const c = record.verification_coverage;
+    const done = Number(record.completed_window_count || 0);
+    const total = Number(record.forecast_window_count || 20);
+    const pending = Number(record.pending_window_count || 0);
+    const failed = Number(record.unavailable_observation_window_count ?? Math.max(0,total-done-pending));
+    if (note) note.textContent = `${done}/${total} windows verified · ${failed} observation windows unavailable or failed · ${pending} awaiting observation availability. ${done === total ? "Complete coverage." : "Partial coverage; unverified windows are excluded from scores."}`;
+    for (const row of c?.unverified_windows || []) {
+      const li = document.createElement("li");
+      li.textContent = `${row.duration_hours}-hour ${row.window}: ${row.reason}`;
+      list?.appendChild(li);
+    }
+    if (details) details.hidden = !(c?.unverified_windows?.length);
+  } else if (note) {
+    note.textContent = "Archived maps are available, but this run has no current metric-catalog entry. Complete verification coverage is not established.";
+  }
   const metricRun =
     verificationState.metricCatalog?.runs?.find(
       (run) =>
@@ -904,16 +926,7 @@ function updateRunStatus(initialization) {
   verificationElements.runState.textContent =
     metricRun.verification_state || "—";
 
-  verificationElements.windowCount.textContent =
-    (
-      `${metricRun.completed_window_count ?? "—"} / ` +
-      `${
-        (
-          Number(metricRun.completed_window_count || 0) +
-          Number(metricRun.pending_window_count || 0)
-        ) || "—"
-      }`
-    );
+  verificationElements.windowCount.textContent = `${metricRun.completed_window_count ?? "—"} / ${metricRun.forecast_window_count ?? 20} verified windows`;
 
   verificationElements.latestValid.textContent =
     formatUtc(metricRun.latest_valid_time);

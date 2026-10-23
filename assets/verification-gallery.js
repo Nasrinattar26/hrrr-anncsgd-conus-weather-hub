@@ -138,6 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const rank = (product) => {
+    if (product.product_family === "amount_verification") return 0;
     const key = String(
       product.threshold_key || ""
     ).toLowerCase();
@@ -202,6 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
     product,
     metadata
   ) => {
+    if (product.product_family === "amount_verification") return amountCard(product, metadata);
     const metrics = metadata?.validated_metrics || {};
     const events = metadata?.event_counts || {};
     const brier = metadata?.brier_comparison || {};
@@ -420,13 +422,25 @@ document.addEventListener("DOMContentLoaded", () => {
             Observed event: MRMS precipitation ≥ the selected
               threshold. POD, FAR, CSI, and FSS use each
               model's single-valued precipitation forecast. FSS
-              uses land-aware 3×3 neighborhood event fractions.
+              uses land-aware 1×1, 3×3 and 5×5 neighborhood event fractions, as labeled.
               BSS uses exceedance probabilities relative to
               historical MRMS climatology.
           </p>
         </section>
       </article>
     `;
+  };
+
+  const amountCard = (product, metadata) => {
+    const m = metadata?.summary_metrics || {};
+    const inches = value => value == null ? "—" : `${number(Number(value)/25.4)} in`;
+    const url = product.image_url + (product.webp_sha256 ? `?v=${encodeURIComponent(product.webp_sha256.slice(0,12))}` : "");
+    const row = (label, key) => chip(label, inches(m[key]));
+    return `<article class="v2-gallery-card">
+      <header class="v2-gallery-card__header"><h3>Rainfall amount verification</h3><p class="v2-gallery-card__subtitle">${escapeHtml(`Init ${product.initialization} · ${product.duration_hours}-hour ${product.window} · ${domainLabel(product.domain)} · ${time(metadata?.valid_start_utc)} to ${time(metadata?.valid_end_utc || product.valid_time)}`)}</p></header>
+      <div class="v2-gallery-card__image"><img src="${escapeHtml(url)}" alt="Rainfall amount verification map" loading="lazy" decoding="async"></div>
+      <footer class="v2-gallery-card__footer"><span>Rainfall and amount errors in inches</span><div class="v2-gallery-card__actions"><a class="v2-button v2-button--blue" href="${escapeHtml(url)}" target="_blank" rel="noopener">Open full image</a><a class="v2-button v2-button--outline" href="${escapeHtml(product.metadata_url)}" target="_blank" rel="noopener">Open metadata</a></div></footer>
+      <section class="v2-gallery-card__metrics"><h4>Metrics for this map</h4><div class="v2-gallery-metric-values">${row("Raw HRRR MAE","raw_hrrr_mae_mm")}${row("ANN-CSGD MAE","ann_csgd_mae_mm")}${row("Raw HRRR RMSE","raw_hrrr_rmse_mm")}${row("ANN-CSGD RMSE","ann_csgd_rmse_mm")}${row("MAE improvement","mae_improvement_mm")}</div><p class="v2-gallery-card__metric-note">Positive MAE improvement means ANN-CSGD reduced absolute error relative to raw HRRR. Scientific metadata retain millimeters; displayed amount metrics are converted to inches.</p></section></article>`;
   };
 
   const loadCatalog = async (run) => {
@@ -504,7 +518,7 @@ document.addEventListener("DOMContentLoaded", () => {
     elements.status.hidden = false;
     elements.status.dataset.state = "loading";
     elements.status.textContent = (
-      "Loading threshold and ARI products…"
+      "Loading verification products…"
     );
 
     try {
@@ -526,8 +540,7 @@ document.addEventListener("DOMContentLoaded", () => {
             === selected.window
           && String(product.domain)
             === selected.domain
-          && String(product.product_family)
-            === "threshold_verification"
+          && ["amount_verification", "threshold_verification"].includes(String(product.product_family))
         ))
         .sort(
           (first, second) => (
@@ -539,7 +552,7 @@ document.addEventListener("DOMContentLoaded", () => {
         elements.count.textContent = "0 products";
         elements.status.dataset.state = "error";
         elements.status.textContent = (
-          "No threshold or ARI products are "
+          "No verification products are "
           + "available for this selection."
         );
 
@@ -600,13 +613,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       elements.status.dataset.state = "ready";
       elements.status.textContent = (
-        `${products.length} fixed-threshold and `
+        `${products.length} amount, fixed-threshold and `
         + "ARI verification products loaded."
       );
 
       if (elements.summary) {
         elements.summary.textContent = (
-          `Showing all ${products.length} threshold `
+          `Showing all ${products.length} amount, threshold `
           + `and ARI products for `
           + `${selected.duration}-hour `
           + `${selected.window}, `
