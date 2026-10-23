@@ -138,6 +138,46 @@
       "csv_url": "runs/2026101812/verification_metrics.csv"
     },
     {
+      "initialization": "2026101712",
+      "verification_state": "COMPLETE",
+      "is_fully_verified": true,
+      "forecast_window_count": 20,
+      "completed_window_count": 20,
+      "pending_window_count": 0,
+      "threshold_row_count": 125,
+      "earliest_valid_time": "2026-10-17T18:00:00Z",
+      "latest_valid_time": "2026-10-19T12:00:00Z",
+      "duration_window_counts": {
+        "6": 8,
+        "12": 7,
+        "24": 5
+      },
+      "metric_ranges": {
+        "POD": {
+          "finite_count": 28,
+          "minimum": 0.0,
+          "maximum": 0.9473684210526315
+        },
+        "FAR": {
+          "finite_count": 20,
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "CSI": {
+          "finite_count": 31,
+          "minimum": 0.0,
+          "maximum": 0.6415094339622641
+        },
+        "brier_skill_score": {
+          "finite_count": 125,
+          "minimum": -7.472626541231417,
+          "maximum": 0.9996708426750819
+        }
+      },
+      "summary_url": "runs/2026101712/verification_summary.json",
+      "csv_url": "runs/2026101712/verification_metrics.csv"
+    },
+    {
       "initialization": "2026100712",
       "verification_state": "COMPLETE",
       "is_fully_verified": true,
@@ -1176,46 +1216,6 @@
       },
       "summary_url": "runs/2026091212/verification_summary.json",
       "csv_url": "runs/2026091212/verification_metrics.csv"
-    },
-    {
-      "initialization": "2026091112",
-      "verification_state": "COMPLETE",
-      "is_fully_verified": true,
-      "forecast_window_count": 20,
-      "completed_window_count": 20,
-      "pending_window_count": 0,
-      "threshold_row_count": 125,
-      "earliest_valid_time": "2026-09-11T18:00:00Z",
-      "latest_valid_time": "2026-09-13T12:00:00Z",
-      "duration_window_counts": {
-        "6": 8,
-        "12": 7,
-        "24": 5
-      },
-      "metric_ranges": {
-        "POD": {
-          "finite_count": 108,
-          "minimum": 0.0,
-          "maximum": 0.5880503144654088
-        },
-        "FAR": {
-          "finite_count": 34,
-          "minimum": 0.47058823529411764,
-          "maximum": 1.0
-        },
-        "CSI": {
-          "finite_count": 108,
-          "minimum": 0.0,
-          "maximum": 0.3702970297029703
-        },
-        "brier_skill_score": {
-          "finite_count": 125,
-          "minimum": -53.54124689404,
-          "maximum": 0.9832797716601533
-        }
-      },
-      "summary_url": "runs/2026091112/verification_summary.json",
-      "csv_url": "runs/2026091112/verification_metrics.csv"
     }
   ]
 }
