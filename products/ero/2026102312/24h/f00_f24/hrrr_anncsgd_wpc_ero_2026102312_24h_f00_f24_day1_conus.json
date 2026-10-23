@@ -1,0 +1,60 @@
+{
+  "display_amount_units": "inches",
+  "product_family": "hrrr_anncsgd_wpc_ero_comparison",
+  "initialization": "2026102312",
+  "duration_hours": 24,
+  "window": "f00_f24",
+  "ero_day": 1,
+  "valid_start_utc": "2026-10-23T12:00:00Z",
+  "valid_end_utc": "2026-10-24T12:00:00Z",
+  "ero_issue_times": [
+    "2026-10-23 08:03:00"
+  ],
+  "ero_categories": [
+    "MARGINAL",
+    "SLIGHT"
+  ],
+  "ero_feature_count": 2,
+  "threshold_key": "1inch",
+  "threshold_mm": 25.4,
+  "comparison_scope": "qualitative_guidance_comparison",
+  "science_note": "WPC ERO categories are excessive-rainfall risk guidance and are not equivalent to ANN-CSGD precipitation probabilities.",
+  "panels": [
+    "raw_hrrr_24h_precipitation",
+    "raw_hrrr_deterministic_1inch_exceedance",
+    "ann_csgd_1inch_exceedance_probability",
+    "wpc_ero_categorical_risk"
+  ],
+  "field_statistics": {
+    "raw_hrrr_maximum_mm": 50.09000015258789,
+    "ann_csgd_expected_maximum_mm": 28.219675064086914,
+    "ann_csgd_1inch_probability_maximum_percent": 55.25388717651367
+  },
+  "source_npz": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/realtime_products/2026102312/24h/f00_f24/hrrr_2026102312_f00_f24_anncsgd_24h.npz",
+  "source_ero_geojson": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/github/hrrr-anncsgd-conus-weather-hub/products/ero/2026102312/source/Day1_normalized.geojson",
+  "png_width": 3600,
+  "png_height": 2070,
+  "png_bytes": 1035072,
+  "png_sha256": "3742e53483141e021e2b3a1f163dea290cd863c0d91b1fc535f905490701540c",
+  "png_rgb_standard_deviation": [
+    41.94987631799644,
+    42.744708964913286,
+    43.322954196755774
+  ],
+  "wpc_ero_outlook_status": "RISK_AREAS_ISSUED",
+  "wpc_ero_archive_provenance": null,
+  "wpc_ero_no_risk_evidence": null,
+  "wpc_ero_source_url": "https://www.wpc.ncep.noaa.gov/exper/eromap/geojson/Day1_Latest.geojson",
+  "wpc_ero_official_geojson": "products/ero/2026102312/source/Day1_Latest.geojson",
+  "wpc_ero_valid_start_actual_utc": "2026-10-23T12:00:00Z",
+  "wpc_ero_valid_end_actual_utc": "2026-10-24T12:00:00Z",
+  "wpc_ero_temporal_coverage": "full",
+  "wpc_ero_issue_times_actual": [
+    "2026-10-23 08:03:00"
+  ],
+  "wpc_ero_categories_actual": [
+    "MARGINAL",
+    "SLIGHT"
+  ],
+  "science_note_temporal": "The WPC ERO validity matches the HRRR 24-hour window."
+}
