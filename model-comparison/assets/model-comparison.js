@@ -202,6 +202,21 @@
   };
 
   const reliabilityChart = threshold => {
+    const unavailable = (data.reliability_availability?.groups || [])
+      .filter(row => row.threshold === threshold && row.status !== "AVAILABLE");
+    if (unavailable.length) {
+      const counts = unavailable.map(row =>
+        `${row.model}: ${row.observed_events.toLocaleString()} events among ${row.sample_count.toLocaleString()} samples`
+      ).join("; ");
+      return `<div class="v2-reliability-warning" role="note">
+        <strong>One observed outcome in this sample.</strong>
+        <p>${escapeHtml(counts)}. The current scoring workflow omits reliability bins,
+        PR AUC and ECE for this case. ROC AUC is undefined with only one observed class.</p>
+        <p>Brier scores and event counts remain shown. A no-event sample does not
+        demonstrate skill at detecting heavy-rain events.</p>
+      </div>`;
+    }
+
     const width = 760;
     const height = 390;
     const left = 60;
@@ -1437,6 +1452,21 @@
     normalizedDecompositionChart("reliability", false);
 
   const reliabilityV2 = threshold => {
+    const unavailable = (data.reliability_availability?.groups || [])
+      .filter(row => row.threshold === threshold && row.status !== "AVAILABLE");
+    if (unavailable.length) {
+      const counts = unavailable.map(row =>
+        `${row.model}: ${row.observed_events.toLocaleString()} events among ${row.sample_count.toLocaleString()} samples`
+      ).join("; ");
+      return `<div class="v2-reliability-warning" role="note">
+        <strong>One observed outcome in this sample.</strong>
+        <p>${escapeHtml(counts)}. The current scoring workflow omits reliability bins,
+        PR AUC and ECE for this case. ROC AUC is undefined with only one observed class.</p>
+        <p>Brier scores and event counts remain shown. A no-event sample does not
+        demonstrate skill at detecting heavy-rain events.</p>
+      </div>`;
+    }
+
     const width = 760;
     const height = 410;
     const left = 62;
@@ -1471,7 +1501,7 @@
         <div class="v2-reliability-warning">
           <strong>Insufficient probability-bin support for a reliable curve.</strong>
           <p>${escapeHtml(counts)}. Exact Brier scores, paired uncertainty,
-          event counts, ROC AUC, and PR AUC remain available.</p>
+          and event counts remain shown; ROC AUC and PR AUC are shown where defined.</p>
         </div>
       `;
     }
