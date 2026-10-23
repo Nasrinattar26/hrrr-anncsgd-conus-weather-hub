@@ -3,6 +3,8 @@
   "initialization": "2026101412",
   "verification_state": "COMPLETE",
   "is_fully_verified": true,
+  "verification_coverage": null,
+  "unavailable_observation_window_count": 0,
   "forecast_window_count": 20,
   "eligible_window_count": 20,
   "completed_window_count": 20,
