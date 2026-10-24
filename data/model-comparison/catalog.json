@@ -1,10 +1,19 @@
 {
   "contract_version": 1,
-  "latest_initialization": "2026102200",
+  "latest_initialization": "2026102300",
   "retained_run_count": 30,
   "maximum_retained_runs": 30,
-  "generated_utc": "2026-10-23T23:40:44.644636Z",
+  "generated_utc": "2026-10-24T21:40:49.975603Z",
   "runs": [
+    {
+      "initialization": "2026102300",
+      "status": "PASS",
+      "generated_utc": "2026-10-24T21:40:48Z",
+      "common_window_count": 4,
+      "total_amount_samples": 53272,
+      "data_json": "runs/2026102300/comparison_run.json",
+      "data_js": "runs/2026102300/comparison_run.js"
+    },
     {
       "initialization": "2026102200",
       "status": "PASS",
@@ -265,15 +274,6 @@
       "total_amount_samples": 53272,
       "data_json": "runs/2026091800/comparison_run.json",
       "data_js": "runs/2026091800/comparison_run.js"
-    },
-    {
-      "initialization": "2026091700",
-      "status": "PASS",
-      "generated_utc": "2026-09-18T21:41:00Z",
-      "common_window_count": 4,
-      "total_amount_samples": 53272,
-      "data_json": "runs/2026091700/comparison_run.json",
-      "data_js": "runs/2026091700/comparison_run.js"
     }
   ]
 }
