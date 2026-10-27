@@ -1,9 +1,16 @@
 {
   "schema_version": 2,
-  "latest_hrrr_initialization": "2026102700",
+  "latest_hrrr_initialization": "2026102706",
   "latest_ready_initialization": "2026102700",
-  "generated_utc": "2026-10-27T04:15:45.985958+00:00",
+  "generated_utc": "2026-10-27T08:16:13.333946+00:00",
   "runs": [
+    {
+      "init": "2026102706",
+      "gefs_init": "2026102706",
+      "status": "waiting",
+      "matching_policy": "same_initialization",
+      "manifest": "data/forecast-comparison/runs/2026102706.json"
+    },
     {
       "init": "2026102700",
       "gefs_init": "2026102700",
@@ -80,13 +87,6 @@
       "status": "ready",
       "matching_policy": "same_initialization",
       "manifest": "data/forecast-comparison/runs/2026102412.json"
-    },
-    {
-      "init": "2026102406",
-      "gefs_init": "2026102406",
-      "status": "ready",
-      "matching_policy": "same_initialization",
-      "manifest": "data/forecast-comparison/runs/2026102406.json"
     }
   ]
 }
