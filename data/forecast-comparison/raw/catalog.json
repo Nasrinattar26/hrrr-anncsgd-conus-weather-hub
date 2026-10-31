@@ -1,52 +1,16 @@
 {
   "runs": [
     {
+      "init": "2026103118",
+      "path": "data/forecast-comparison/raw/2026103118.json"
+    },
+    {
       "init": "2026103112",
       "path": "data/forecast-comparison/raw/2026103112.json"
     },
     {
       "init": "2026103106",
       "path": "data/forecast-comparison/raw/2026103106.json"
-    },
-    {
-      "init": "2026103100",
-      "path": "data/forecast-comparison/raw/2026103100.json"
-    },
-    {
-      "init": "2026103018",
-      "path": "data/forecast-comparison/raw/2026103018.json"
-    },
-    {
-      "init": "2026103012",
-      "path": "data/forecast-comparison/raw/2026103012.json"
-    },
-    {
-      "init": "2026103006",
-      "path": "data/forecast-comparison/raw/2026103006.json"
-    },
-    {
-      "init": "2026103000",
-      "path": "data/forecast-comparison/raw/2026103000.json"
-    },
-    {
-      "init": "2026102918",
-      "path": "data/forecast-comparison/raw/2026102918.json"
-    },
-    {
-      "init": "2026102912",
-      "path": "data/forecast-comparison/raw/2026102912.json"
-    },
-    {
-      "init": "2026102906",
-      "path": "data/forecast-comparison/raw/2026102906.json"
-    },
-    {
-      "init": "2026102900",
-      "path": "data/forecast-comparison/raw/2026102900.json"
-    },
-    {
-      "init": "2026102818",
-      "path": "data/forecast-comparison/raw/2026102818.json"
     }
   ]
 }
