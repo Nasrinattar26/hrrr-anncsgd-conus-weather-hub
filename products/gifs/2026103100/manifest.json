@@ -1,0 +1,1492 @@
+{
+  "title": "HRRR ANN-CSGD CONUS Forecast GIFs",
+  "init": "2026103100",
+  "created_utc": "2026-10-31 02:34 UTC",
+  "n_gifs": 22,
+  "gifs": [
+    {
+      "init": "2026103100",
+      "duration_hours": 6,
+      "variable": "expected_precip_mm",
+      "label": "Expected precipitation",
+      "units": "inches",
+      "frame_count": 8,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 728,
+      "size_bytes": 806715,
+      "path": "products/gifs/2026103100/6h/expected_precip_mm.gif",
+      "frame_sources": [
+        "products/maps/2026103100/6h/f00_f06/expected_precip_mm.png",
+        "products/maps/2026103100/6h/f06_f12/expected_precip_mm.png",
+        "products/maps/2026103100/6h/f12_f18/expected_precip_mm.png",
+        "products/maps/2026103100/6h/f18_f24/expected_precip_mm.png",
+        "products/maps/2026103100/6h/f24_f30/expected_precip_mm.png",
+        "products/maps/2026103100/6h/f30_f36/expected_precip_mm.png",
+        "products/maps/2026103100/6h/f36_f42/expected_precip_mm.png",
+        "products/maps/2026103100/6h/f42_f48/expected_precip_mm.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/6h/f00_f06/expected_precip_mm.png": "e0813a03a4b7113ee4d4035f17ec21f20adc4b6f45ac82e6ea003864bd9ae516",
+        "products/maps/2026103100/6h/f06_f12/expected_precip_mm.png": "34c29cb88a6c3e1c4e3c7604ddd3ed0a5c90e47b5ed5e7d39a4074127cd8efb0",
+        "products/maps/2026103100/6h/f12_f18/expected_precip_mm.png": "6785aa3d9d06a1a6a155bb9354ba4f32ba213c70efdfbe0b21a0f6a757ebc173",
+        "products/maps/2026103100/6h/f18_f24/expected_precip_mm.png": "ce6e2271560e398670344a44538ec2e782e4a88b0cdc78bd4bce0d0feda5a742",
+        "products/maps/2026103100/6h/f24_f30/expected_precip_mm.png": "66d778e90c7e57344357abd614a444efdb392ba0c8bf7224c1c8690bb4fb879a",
+        "products/maps/2026103100/6h/f30_f36/expected_precip_mm.png": "a9f7d966b355e759a964159198fe22f53af5e94fd137d4ac9ab9193f79ea9166",
+        "products/maps/2026103100/6h/f36_f42/expected_precip_mm.png": "049634dd6fb4fcbfae623d543a472d0c4065863a585a96b18c0ba77702413ab2",
+        "products/maps/2026103100/6h/f42_f48/expected_precip_mm.png": "d83c239f8550ce429ec855e6f6df73346a03bfda01653fc01c275d64ce317d20"
+      },
+      "sha256": "e81483677c6f719dc5ea1932b2c89b39e2c331433b2cb484a886441434f290dd",
+      "decoded_rgb_sha256": [
+        "2b28f55550ab47241e26d8f97f83fc446da5beffca873756e34decd49c1ff52b",
+        "baf9269d1504f89e319db3bbbbe0464612b5b72dbfbe60c2cdd3c686569c5c88",
+        "2f99b4c231c7f69bbf3fcc22978ea3e14880cad49b1053ad9e12dc88cd89a24f",
+        "02b4f9ca8500439246efc6ee11165c22ba7632b707235b098ea4e366467c5e19",
+        "e70b1c6b7deb773d0f5afc276e530b1c52dcc7b4b51739d06fd9fbbcfec889be",
+        "c7b45e3e182a948e89b1f8f98b7fc5ec400bff8c7e1a8160ec02d58325db3f52",
+        "c28a27bac40646270255cd2cb3b4b6cfbd8aab61d24abedccba69ce2f2f61beb",
+        "9bfc88420be13212304cf9b1c6630b79825f6ed2bb65f4812618adfde04eee2b"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1074,
+        127,
+        1104,
+        608
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 6,
+      "variable": "prob_gt_0p25inch_percent",
+      "label": "Probability > 0.25 inch",
+      "units": "%",
+      "frame_count": 8,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 734,
+      "size_bytes": 1022731,
+      "path": "products/gifs/2026103100/6h/prob_gt_0p25inch_percent.gif",
+      "frame_sources": [
+        "products/maps/2026103100/6h/f00_f06/prob_gt_0p25inch_percent.png",
+        "products/maps/2026103100/6h/f06_f12/prob_gt_0p25inch_percent.png",
+        "products/maps/2026103100/6h/f12_f18/prob_gt_0p25inch_percent.png",
+        "products/maps/2026103100/6h/f18_f24/prob_gt_0p25inch_percent.png",
+        "products/maps/2026103100/6h/f24_f30/prob_gt_0p25inch_percent.png",
+        "products/maps/2026103100/6h/f30_f36/prob_gt_0p25inch_percent.png",
+        "products/maps/2026103100/6h/f36_f42/prob_gt_0p25inch_percent.png",
+        "products/maps/2026103100/6h/f42_f48/prob_gt_0p25inch_percent.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/6h/f00_f06/prob_gt_0p25inch_percent.png": "8bf8c0de6c8f2fcbeddfa9cf18aa768e4461f11b230980e624fdaa8d30236476",
+        "products/maps/2026103100/6h/f06_f12/prob_gt_0p25inch_percent.png": "def7d88b706aa97a93389a4f14e8be3256b68c1655bac0b0ac1f50924a18aae9",
+        "products/maps/2026103100/6h/f12_f18/prob_gt_0p25inch_percent.png": "33ead9dc937e30b06f9f2eb4fca9ba2d35784df986690f66e0e1ac6bac552578",
+        "products/maps/2026103100/6h/f18_f24/prob_gt_0p25inch_percent.png": "69ff2536d27ab43028643b679aab142976038b24582720be0e9096229dd043f0",
+        "products/maps/2026103100/6h/f24_f30/prob_gt_0p25inch_percent.png": "ba08af64575fc16b549bc8584a9d8cca822706d8020f054f9ef2ef688aa0c776",
+        "products/maps/2026103100/6h/f30_f36/prob_gt_0p25inch_percent.png": "d87ce3aee438a38bee3dc097c1d4128f2db5152ee4b9cc2da1cbf1489567338f",
+        "products/maps/2026103100/6h/f36_f42/prob_gt_0p25inch_percent.png": "877862f7d5fb57a6bf10d1b476701176092041fbeae8e92bcd426dc198b8aed4",
+        "products/maps/2026103100/6h/f42_f48/prob_gt_0p25inch_percent.png": "de3a862a7549b80e16c9817c0e1974bd317a5d60793fdf73385be271f71deb6a"
+      },
+      "sha256": "d5abc69eab32f40bb600f4088ec4d7abfd4e516b5ff1f7c2e347ca4a3b35ff36",
+      "decoded_rgb_sha256": [
+        "ec4c765982ceed8f665a8b5cc3c947a624087d74427e2457236d742074fb7c1b",
+        "08ac66f6b0bc1dfb47af6dd0b50ad0ba3b8230e8b0c2121b88844264549a10ed",
+        "fe9ffbdb38f6852961562181618cd7bff2a8d63cd5f826ffeaf548a583f2c2d1",
+        "6281a67f6b77f50239683461e412e976daf94637f621cf02a9767ae89136a9d3",
+        "4629432228476f9e898b734c9c8e2592b643a007a23a387a3636df77aa1fdbbd",
+        "b7a3d1796fce38facdc1f2d36dd9031e559d6ab5f6b6f5a6cfdd686505ab94e0",
+        "0cbe796960daab3a8b804a067a0f8180a762bf715cf99307df7ee0aeb7f5ee3d",
+        "96567eb13487ed5eeb1e4d2af17e34a854873a1bfaa93135ce2060bf07f2d487"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1102,
+        128,
+        1128,
+        620
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 6,
+      "variable": "prob_gt_0p5inch_percent",
+      "label": "Probability > 0.5 inch",
+      "units": "%",
+      "frame_count": 8,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 734,
+      "size_bytes": 952442,
+      "path": "products/gifs/2026103100/6h/prob_gt_0p5inch_percent.gif",
+      "frame_sources": [
+        "products/maps/2026103100/6h/f00_f06/prob_gt_0p5inch_percent.png",
+        "products/maps/2026103100/6h/f06_f12/prob_gt_0p5inch_percent.png",
+        "products/maps/2026103100/6h/f12_f18/prob_gt_0p5inch_percent.png",
+        "products/maps/2026103100/6h/f18_f24/prob_gt_0p5inch_percent.png",
+        "products/maps/2026103100/6h/f24_f30/prob_gt_0p5inch_percent.png",
+        "products/maps/2026103100/6h/f30_f36/prob_gt_0p5inch_percent.png",
+        "products/maps/2026103100/6h/f36_f42/prob_gt_0p5inch_percent.png",
+        "products/maps/2026103100/6h/f42_f48/prob_gt_0p5inch_percent.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/6h/f00_f06/prob_gt_0p5inch_percent.png": "c58350e6f57525e0accf9f3bdb0285b876b6a7e21de88c8b61219dad74aa4d13",
+        "products/maps/2026103100/6h/f06_f12/prob_gt_0p5inch_percent.png": "b16b0b8d025472562f4277a71b4d82622b5b43b96b5cf85ab43d9a5e86993b35",
+        "products/maps/2026103100/6h/f12_f18/prob_gt_0p5inch_percent.png": "13c857f9036729d675e16f32a3c076f15af2c23b63075ab4c67735cc0df25849",
+        "products/maps/2026103100/6h/f18_f24/prob_gt_0p5inch_percent.png": "d1f84bdfe134a086f2d9736f6a0f21fec99e3864af591959f91a54f30d446f93",
+        "products/maps/2026103100/6h/f24_f30/prob_gt_0p5inch_percent.png": "375febe81da55112a07fb4b921cebb0bbe7e06b02211377d92e52e4f10ccdb2b",
+        "products/maps/2026103100/6h/f30_f36/prob_gt_0p5inch_percent.png": "6ec4ec699a1c2b302b63b4ccb686956701b3337c84791fee1e020aadb404c4fb",
+        "products/maps/2026103100/6h/f36_f42/prob_gt_0p5inch_percent.png": "704c78ad6666b88f049d86ebd0f971eedb1a3429af015245c36be703670e796a",
+        "products/maps/2026103100/6h/f42_f48/prob_gt_0p5inch_percent.png": "dd6071c3085899973e911a14be47d00cb84811f30341838a605c2d62a42940e4"
+      },
+      "sha256": "ff7b62898caa124adb4db574d69ce1b482c9a960dd33aad7d240c0a61055507b",
+      "decoded_rgb_sha256": [
+        "c052c54fd38e701460ef2146d20635f6c050ced961deefee1e03e948ed50bf08",
+        "0820fec2fdb864bd98d75debd62104fdc5397855b2145e23b5d6d75a4facb3a3",
+        "920654226f9ca5309a2486723359d8ab12e7d635bf17d19824190bfe6c57b1ef",
+        "b0dab915d80b6befd5f13a40ae8a5974dbeaabfbea03a15821d988b007bf0e7d",
+        "058f4ad0ddd5af86274b83addbe8f13a4d4c2f58c22cd8facfc1fd16b9f05161",
+        "85547ed06494c2cf47e7889f429118337ff596a407c43e0953e391eb716e6a1b",
+        "d47e6f2125839260e58dfaea17229df10d7e3c91141cddcdaf4953bd9475ebc6",
+        "83270e7ec5dbe68604304332bd3f10aba83809cf3b86aa1c99b5c3829331bf71"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1102,
+        128,
+        1128,
+        620
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 6,
+      "variable": "prob_gt_1inch_percent",
+      "label": "Probability > 1 inch",
+      "units": "%",
+      "frame_count": 8,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 734,
+      "size_bytes": 856530,
+      "path": "products/gifs/2026103100/6h/prob_gt_1inch_percent.gif",
+      "frame_sources": [
+        "products/maps/2026103100/6h/f00_f06/prob_gt_1inch_percent.png",
+        "products/maps/2026103100/6h/f06_f12/prob_gt_1inch_percent.png",
+        "products/maps/2026103100/6h/f12_f18/prob_gt_1inch_percent.png",
+        "products/maps/2026103100/6h/f18_f24/prob_gt_1inch_percent.png",
+        "products/maps/2026103100/6h/f24_f30/prob_gt_1inch_percent.png",
+        "products/maps/2026103100/6h/f30_f36/prob_gt_1inch_percent.png",
+        "products/maps/2026103100/6h/f36_f42/prob_gt_1inch_percent.png",
+        "products/maps/2026103100/6h/f42_f48/prob_gt_1inch_percent.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/6h/f00_f06/prob_gt_1inch_percent.png": "05ec9be28d5d5b7c17c574a06dda447213ea9a0362988f823f942f4d33b6f431",
+        "products/maps/2026103100/6h/f06_f12/prob_gt_1inch_percent.png": "fcc35b0eccc1af36df8cef0eea2de1352358e3bce857dc3ad7915323b7d258f7",
+        "products/maps/2026103100/6h/f12_f18/prob_gt_1inch_percent.png": "64ac0a5beb773795ec53ad676059856247b0a2f6f91755626433a3a272cae0ef",
+        "products/maps/2026103100/6h/f18_f24/prob_gt_1inch_percent.png": "d9dedc6035ba0284c0c404fbf63154a5ef481024379a0b08b50b5c9b4d796b76",
+        "products/maps/2026103100/6h/f24_f30/prob_gt_1inch_percent.png": "7b62d2e13a072d3c03307b19235fa676becb8025761fe3a9459a63f4606fe0ce",
+        "products/maps/2026103100/6h/f30_f36/prob_gt_1inch_percent.png": "5c2d065330b90e32cff86e9f555b11a1393ce391c711714e1681e556b2517a1e",
+        "products/maps/2026103100/6h/f36_f42/prob_gt_1inch_percent.png": "90807022e02b47ecd978c461de0ae218f797c5400121eaf66cf42a23315899c1",
+        "products/maps/2026103100/6h/f42_f48/prob_gt_1inch_percent.png": "072c90cf4e1166a347c5fccdb7e31d0f82f720e00ad99bf277d96244ece89f7f"
+      },
+      "sha256": "418b5a092b915dd3dcba7c01135b30fca8cef8bda209e0ee26825788a3db2cb8",
+      "decoded_rgb_sha256": [
+        "bfa03358a531c2ed98bd6ff3ca29a2325d92f68ad90b28f5d0c888120a622e40",
+        "eb930175ccf70b7c1ac2233a0a8ec510dc6db2933bc23c40bde182e783599e9b",
+        "31d880aeb26bc402c2dca759bfc92063529cfffe02474299794684417a1e093e",
+        "8a46997305722bd970fe86f11381ca54f77686e7633de43a12648c7410adebed",
+        "bbccaf544363143d7f8a4be3332b61ba982db3f8a49deaa035742c82a1c379ab",
+        "7db8cd927fd1bdf1a06af5eba3844b950fedf525a51673b3315b91b915b7044a",
+        "f12abb5d5f72e3a0a323fe98bf046435812a3b42ea9e3058665e442e4c1e525f",
+        "87d0e8908dbf3c8cd4d544972b3ec28f73ecf40e233adb8795f91e07b66c39bc"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1102,
+        128,
+        1128,
+        620
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 6,
+      "variable": "prob_gt_2inch_percent",
+      "label": "Probability > 2 inches",
+      "units": "%",
+      "frame_count": 8,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 734,
+      "size_bytes": 805176,
+      "path": "products/gifs/2026103100/6h/prob_gt_2inch_percent.gif",
+      "frame_sources": [
+        "products/maps/2026103100/6h/f00_f06/prob_gt_2inch_percent.png",
+        "products/maps/2026103100/6h/f06_f12/prob_gt_2inch_percent.png",
+        "products/maps/2026103100/6h/f12_f18/prob_gt_2inch_percent.png",
+        "products/maps/2026103100/6h/f18_f24/prob_gt_2inch_percent.png",
+        "products/maps/2026103100/6h/f24_f30/prob_gt_2inch_percent.png",
+        "products/maps/2026103100/6h/f30_f36/prob_gt_2inch_percent.png",
+        "products/maps/2026103100/6h/f36_f42/prob_gt_2inch_percent.png",
+        "products/maps/2026103100/6h/f42_f48/prob_gt_2inch_percent.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/6h/f00_f06/prob_gt_2inch_percent.png": "6be8fd7fa2750037a760253472faef9d5e12b6d8d2ed3b440c78dd98cef5ddcb",
+        "products/maps/2026103100/6h/f06_f12/prob_gt_2inch_percent.png": "d7ff97ee4efde91d7f3ee8ec48e5b01baf20e8ec1a44207829c88f0511d3ceae",
+        "products/maps/2026103100/6h/f12_f18/prob_gt_2inch_percent.png": "4c0c3a9a4a7a7f8009eeea23ca4e1e2885d8de47873a36f85afb19209d607dfa",
+        "products/maps/2026103100/6h/f18_f24/prob_gt_2inch_percent.png": "b5e28644c17ae7deea3a6926e2207eadf99f9872d5ce7aae1c33da4361c1d42b",
+        "products/maps/2026103100/6h/f24_f30/prob_gt_2inch_percent.png": "a6883502e010e930c402b1f7de4784093775c7fbaffbb41d9fa4c4726d280340",
+        "products/maps/2026103100/6h/f30_f36/prob_gt_2inch_percent.png": "0e74acd96a13e0c2a4052ddeb91d602e4034bacf3cb3b531ce4ced68b2ad4eb1",
+        "products/maps/2026103100/6h/f36_f42/prob_gt_2inch_percent.png": "f6add2b4bce2eaa275ae67ae68facb43618c8231bc0dd983cf51a8dc003a3d09",
+        "products/maps/2026103100/6h/f42_f48/prob_gt_2inch_percent.png": "a797d1abf22e3c211412481d76ca43394a53cba02160207382165cbf13234a1b"
+      },
+      "sha256": "2f296be9598972b90e37879a5b575aea6a4fa69a0d3d8133808d64954a858578",
+      "decoded_rgb_sha256": [
+        "127eedd1c61ebcf814d12ed6e4efb33b6fddbc849ddca7b72b0f4d11160a08fc",
+        "324f1f26fdcca62f09d5ef40c7bbae315ee06db577b56e40d2719145e6d21cdd",
+        "09d7a53fb0ba89836b5f3ff0f6662a0ad61ce9aa01008841fa4413fcf72abf5e",
+        "5819af1fe95d0745e9ddb96f685145d198894f5ef87a8d2533b64b69f2e8987b",
+        "59d9131e2650d68c6ef9450650f6b7a304746bb98f7a33aaaa86dc05b5b212e8",
+        "7933f22ce62aee6c93dcd3da2f96eaa98ba172b87bb9a435c75ea3387450aa33",
+        "25091a93d44bbdf05167fe10c7eaf3db4eedaa9698fa250d50a5df52657fe755",
+        "d62aa4f78b06921e125eb023ab44da10129822c1c6b7b26c38457b092eb4fdda"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1102,
+        128,
+        1128,
+        620
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 6,
+      "variable": "prob_gt_2yr6h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "frame_count": 8,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 734,
+      "size_bytes": 836336,
+      "path": "products/gifs/2026103100/6h/prob_gt_2yr6h_ari_percent.gif",
+      "frame_sources": [
+        "products/maps/2026103100/6h/f00_f06/prob_gt_2yr6h_ari_percent.png",
+        "products/maps/2026103100/6h/f06_f12/prob_gt_2yr6h_ari_percent.png",
+        "products/maps/2026103100/6h/f12_f18/prob_gt_2yr6h_ari_percent.png",
+        "products/maps/2026103100/6h/f18_f24/prob_gt_2yr6h_ari_percent.png",
+        "products/maps/2026103100/6h/f24_f30/prob_gt_2yr6h_ari_percent.png",
+        "products/maps/2026103100/6h/f30_f36/prob_gt_2yr6h_ari_percent.png",
+        "products/maps/2026103100/6h/f36_f42/prob_gt_2yr6h_ari_percent.png",
+        "products/maps/2026103100/6h/f42_f48/prob_gt_2yr6h_ari_percent.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/6h/f00_f06/prob_gt_2yr6h_ari_percent.png": "cfee5cc0112d78ce2417c8e7ab5be3407eb62ca63c43d6e98fa2d0fa5011ec11",
+        "products/maps/2026103100/6h/f06_f12/prob_gt_2yr6h_ari_percent.png": "e613ef8ef516b660e835b4a671d6d14c116adaf965d6da1548208af3ce5660c8",
+        "products/maps/2026103100/6h/f12_f18/prob_gt_2yr6h_ari_percent.png": "15b2a71504e6cf3f7406818deaa608899468c2acc744a23574ca1a22fb92a7ee",
+        "products/maps/2026103100/6h/f18_f24/prob_gt_2yr6h_ari_percent.png": "ed5f9bf59e6950474355c260c8e5af951dea3b5b73b4e5d38d065d77925c75dd",
+        "products/maps/2026103100/6h/f24_f30/prob_gt_2yr6h_ari_percent.png": "47a97c1edd1e98cdddf965d5002b8ff693516f8f3e7a8e68b18e512b04b7c356",
+        "products/maps/2026103100/6h/f30_f36/prob_gt_2yr6h_ari_percent.png": "cfa515ba3f013995b2d48c8f1ae425fe967fe82a7b2c5773dfc5922997f51d41",
+        "products/maps/2026103100/6h/f36_f42/prob_gt_2yr6h_ari_percent.png": "438e026671e8105530ba1b2c804cb04e4ff377e8ad46addb7f1d6ea11ec3f370",
+        "products/maps/2026103100/6h/f42_f48/prob_gt_2yr6h_ari_percent.png": "1370f47eddb9907adfdb3069611e5a2108c4f3640d1d4ec51cfec7c416fbdac3"
+      },
+      "sha256": "18dc8192fb591c189f033aca72ff416426c4df5df7d52894f7d063c7c8262dcb",
+      "decoded_rgb_sha256": [
+        "2331ff29ecf8fffd04bcc7046f047a344e004ed6688c7a4cc03aa6494273364a",
+        "e9385918e72ddcbc105afa884cb6e053bff0c525d8d833c62c35b70cd696a602",
+        "80148028357ea0c31e96f2d89554b5525b311145b3ae069309c3f54223aa0f01",
+        "6f44ed48ac525673ec1d3702d6956450fb2393dfedf694c5e345a23e23fcbe25",
+        "3bd9a3a502aa1095a5043faed41ea865c0226d380b2be549fac4af0f0739c127",
+        "28bdaa2318f29d266b2bbeb17a150cc5e1a8cc89ed7f2d613280e6ddf41f5c8c",
+        "41ec9571f1df9bd02ff4c472107fee1ffe1b8843206cfd1c226f48e33db9ed0b",
+        "4c1523f63e7e534de8db24968ad63d9730a2fcc57d7e522063062e12ea9408b0"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1102,
+        128,
+        1128,
+        620
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 6,
+      "variable": "prob_gt_5yr6h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "frame_count": 8,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 734,
+      "size_bytes": 817380,
+      "path": "products/gifs/2026103100/6h/prob_gt_5yr6h_ari_percent.gif",
+      "frame_sources": [
+        "products/maps/2026103100/6h/f00_f06/prob_gt_5yr6h_ari_percent.png",
+        "products/maps/2026103100/6h/f06_f12/prob_gt_5yr6h_ari_percent.png",
+        "products/maps/2026103100/6h/f12_f18/prob_gt_5yr6h_ari_percent.png",
+        "products/maps/2026103100/6h/f18_f24/prob_gt_5yr6h_ari_percent.png",
+        "products/maps/2026103100/6h/f24_f30/prob_gt_5yr6h_ari_percent.png",
+        "products/maps/2026103100/6h/f30_f36/prob_gt_5yr6h_ari_percent.png",
+        "products/maps/2026103100/6h/f36_f42/prob_gt_5yr6h_ari_percent.png",
+        "products/maps/2026103100/6h/f42_f48/prob_gt_5yr6h_ari_percent.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/6h/f00_f06/prob_gt_5yr6h_ari_percent.png": "af2df713acf2428e65be17e13e254308f7fe10c63927be092051cff432f1512b",
+        "products/maps/2026103100/6h/f06_f12/prob_gt_5yr6h_ari_percent.png": "bd8f00ac9daf46f0cd679824ec1c27427d3b6e97d272a614ab754ced404c79d5",
+        "products/maps/2026103100/6h/f12_f18/prob_gt_5yr6h_ari_percent.png": "1c9bd2f762b8dcde581905937005835f76b2691cbfa9f5d8758d3438d9ed20f3",
+        "products/maps/2026103100/6h/f18_f24/prob_gt_5yr6h_ari_percent.png": "b62d09cd839d7b2b3c6940b905b79e385c6d1579eb10fcaa8dadf7d07c875751",
+        "products/maps/2026103100/6h/f24_f30/prob_gt_5yr6h_ari_percent.png": "61383f85627cbcf9724395750c9407755d338614d9a199fb4e62fe52553846c4",
+        "products/maps/2026103100/6h/f30_f36/prob_gt_5yr6h_ari_percent.png": "fbf3db391768556f8c912ca46320f4f0828080aca54994e1b9f5240db67fa42d",
+        "products/maps/2026103100/6h/f36_f42/prob_gt_5yr6h_ari_percent.png": "05bc4b419791a9663393b1247adb4f0c11b9915382d08b13e68db00d9bbfcec3",
+        "products/maps/2026103100/6h/f42_f48/prob_gt_5yr6h_ari_percent.png": "c4251c388ad2cc58d74bbbb5a562f47f7f4abf88086389c7adb0feef0f962e61"
+      },
+      "sha256": "6d4209de1c2a480b31a98efb74393589d84da2490cedea68b0ab41f915e16b54",
+      "decoded_rgb_sha256": [
+        "2d811159688c402232426368cc70a5f3e89e7aab48c29fce244a2d8b39dee976",
+        "1ba885c15ed2cf1b65333d7f7b1fd4843948ca63e6a4228b111a2a6e6c713e21",
+        "b60a30ed14c1f0838414bc9eb554491a3b530c4dbbc8406c878a9761c20e6f2a",
+        "6483419595c6bbbc35d749e4cb175c21d99e9d45751314536434057bedfb4af1",
+        "04c2ef34095590e934b50d340a3fe95e84009b0a35db4b7c6061f7e8eb72615a",
+        "ed834877e7ddd167bada4db5c6d8d63c6a2a912df7294ee15b53020b5377887b",
+        "e31c5cede12deefcff962a4adef0be0797c9b0679b51c8ab5b046203f2df6328",
+        "d60372648ec3bd871c9c5b637f0cfb1005445f8e006ee788e61357883bc9e6a6"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1102,
+        128,
+        1128,
+        620
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 12,
+      "variable": "expected_precip_mm",
+      "label": "Expected precipitation",
+      "units": "inches",
+      "frame_count": 7,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 728,
+      "size_bytes": 723064,
+      "path": "products/gifs/2026103100/12h/expected_precip_mm.gif",
+      "frame_sources": [
+        "products/maps/2026103100/12h/f00_f12/expected_precip_mm.png",
+        "products/maps/2026103100/12h/f06_f18/expected_precip_mm.png",
+        "products/maps/2026103100/12h/f12_f24/expected_precip_mm.png",
+        "products/maps/2026103100/12h/f18_f30/expected_precip_mm.png",
+        "products/maps/2026103100/12h/f24_f36/expected_precip_mm.png",
+        "products/maps/2026103100/12h/f30_f42/expected_precip_mm.png",
+        "products/maps/2026103100/12h/f36_f48/expected_precip_mm.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/12h/f00_f12/expected_precip_mm.png": "15ce0d252d73ab3cf36cd7e6f5835bfb245fa37b8faec3d7814c0087b178ede6",
+        "products/maps/2026103100/12h/f06_f18/expected_precip_mm.png": "0264d14b89591b5fd294b4e3476328657b35e7531969b7efd0b742ea965dc9a5",
+        "products/maps/2026103100/12h/f12_f24/expected_precip_mm.png": "5bb70521079cc760554c388c7ba84376442308cca312e90ea4603b5f0e214e7d",
+        "products/maps/2026103100/12h/f18_f30/expected_precip_mm.png": "72ad4d6e00d0fe99ab76ccd5527eda33c638b0b228ab234f361d6fcd18ec2a27",
+        "products/maps/2026103100/12h/f24_f36/expected_precip_mm.png": "16d2ed3700f17bb793567172d8a8ca9145554650e10c5b22092019449767ff6f",
+        "products/maps/2026103100/12h/f30_f42/expected_precip_mm.png": "1f5038e75f8d4d6e90dae7cb5c54395f6ec04c21838c873182fd861c2d7f7282",
+        "products/maps/2026103100/12h/f36_f48/expected_precip_mm.png": "145ec0919a0f03e586baf0072ce15ccff38a1235b7a76c640924ddb955045eea"
+      },
+      "sha256": "1d3aa018cdf42c4b5b55f557a8e6422b3943a20a620740f9f5a0da6e16bba893",
+      "decoded_rgb_sha256": [
+        "a5445042e9a3cfe439c6b5d0f1531ee459573a8843773fd203514ad3420155d9",
+        "b90013518da98d9794c8c543e3bb5b129ad841c80ea13f03cf592129104dcb01",
+        "9d4ac89b3874d1c1524f0ce4ad88de16d3d3e121f944dd5b3ee43d6edb33a2ca",
+        "3313ba152824abd0ea7e4c09edef8964f0ac47669320d31009ee935d51897fae",
+        "c87be9bdbb15c5e3d5805d695bf64e2297f48ef8872c3c1a37206e18c8e3acc8",
+        "e0cd995beb4986f9d670e6f42fcd134595211aecb80878381752e5918d74ac39",
+        "e8ca18bdc07f4b70c0648735b4997fa132c73f2fdedcbecb9d4ec4dc0d2085b7"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1074,
+        127,
+        1104,
+        608
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 12,
+      "variable": "prob_gt_0p5inch_percent",
+      "label": "Probability > 0.5 inch",
+      "units": "%",
+      "frame_count": 7,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 734,
+      "size_bytes": 884508,
+      "path": "products/gifs/2026103100/12h/prob_gt_0p5inch_percent.gif",
+      "frame_sources": [
+        "products/maps/2026103100/12h/f00_f12/prob_gt_0p5inch_percent.png",
+        "products/maps/2026103100/12h/f06_f18/prob_gt_0p5inch_percent.png",
+        "products/maps/2026103100/12h/f12_f24/prob_gt_0p5inch_percent.png",
+        "products/maps/2026103100/12h/f18_f30/prob_gt_0p5inch_percent.png",
+        "products/maps/2026103100/12h/f24_f36/prob_gt_0p5inch_percent.png",
+        "products/maps/2026103100/12h/f30_f42/prob_gt_0p5inch_percent.png",
+        "products/maps/2026103100/12h/f36_f48/prob_gt_0p5inch_percent.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/12h/f00_f12/prob_gt_0p5inch_percent.png": "ab86e175d560380223f48c2ef2c7569f3a9faf1b7cfbf8788f619de1b2283f6b",
+        "products/maps/2026103100/12h/f06_f18/prob_gt_0p5inch_percent.png": "7c0cc2571c8248dfa4599bd45d9783a72bab410475d6f447dd9966f432118566",
+        "products/maps/2026103100/12h/f12_f24/prob_gt_0p5inch_percent.png": "6c646d0209cc6bbcc48fd3e56a265765e1cd479f88163b171491bb1e758a567c",
+        "products/maps/2026103100/12h/f18_f30/prob_gt_0p5inch_percent.png": "893c0c74b10f931aacb17bbeb37fc48d8cf7c702c544ae2c456247413690e26c",
+        "products/maps/2026103100/12h/f24_f36/prob_gt_0p5inch_percent.png": "e2cb462500d14d2960b2370c16a5d80969fd3d21debc63a30f0b027dcb65f96e",
+        "products/maps/2026103100/12h/f30_f42/prob_gt_0p5inch_percent.png": "136d0c63aa9978ef70d3d8a13d732e68ab866d020907feca47cac6681a34547c",
+        "products/maps/2026103100/12h/f36_f48/prob_gt_0p5inch_percent.png": "a423a27d00b34552d001c673f9ee80957b05c3a599241f275f9bd78f2c3bab66"
+      },
+      "sha256": "98a32b9e3d42a25f35c9d6b684870a0a6d734749bde3164c60dedce3460fdfe7",
+      "decoded_rgb_sha256": [
+        "2bd09fab450823f64cbd7f9cc483edfceeb53c9bee8662159038570a977b6080",
+        "387250b85d3b650b2740f529e7fa262352fe1028299d9ea589410e50d43648ba",
+        "213fda3e93dec04a2539c2de5028438514b4feaa159a818f4ab8daf237111f02",
+        "3e854c0c6475af8aad3afd36a5b5c05b688b620448685cbcfb75f81c7495d273",
+        "58b8051555fda4a5d29f1e0c947615c0b293bab498cc0413ba7eb409c9e1212f",
+        "f3724f714c494d89986e85f234a207567953c1dd855d4513ac0946bb5e22511c",
+        "a8311b6f54272357cad415b06cedef7ab05a214e90a130914dbf70dfa6b1d2b3"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1102,
+        128,
+        1128,
+        620
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 12,
+      "variable": "prob_gt_1inch_percent",
+      "label": "Probability > 1 inch",
+      "units": "%",
+      "frame_count": 7,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 734,
+      "size_bytes": 795976,
+      "path": "products/gifs/2026103100/12h/prob_gt_1inch_percent.gif",
+      "frame_sources": [
+        "products/maps/2026103100/12h/f00_f12/prob_gt_1inch_percent.png",
+        "products/maps/2026103100/12h/f06_f18/prob_gt_1inch_percent.png",
+        "products/maps/2026103100/12h/f12_f24/prob_gt_1inch_percent.png",
+        "products/maps/2026103100/12h/f18_f30/prob_gt_1inch_percent.png",
+        "products/maps/2026103100/12h/f24_f36/prob_gt_1inch_percent.png",
+        "products/maps/2026103100/12h/f30_f42/prob_gt_1inch_percent.png",
+        "products/maps/2026103100/12h/f36_f48/prob_gt_1inch_percent.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/12h/f00_f12/prob_gt_1inch_percent.png": "d3ce1fa4053c32fee5ec0c84d3ad0cc537ad56cb8cb9474bcda5594ef183350b",
+        "products/maps/2026103100/12h/f06_f18/prob_gt_1inch_percent.png": "73e60077782d47cc32e256bf5d4dcaaec34135ebbd3cc69e0bef1e802d0bcee3",
+        "products/maps/2026103100/12h/f12_f24/prob_gt_1inch_percent.png": "1e8d05510ce174b57f31a6cee94c6d9d5ac3808f2f7f5faf605c2e9858e2f297",
+        "products/maps/2026103100/12h/f18_f30/prob_gt_1inch_percent.png": "f60329e530d14c808a924296ccf43c4389f9c0204286d1f77e80ed3c3992a3b6",
+        "products/maps/2026103100/12h/f24_f36/prob_gt_1inch_percent.png": "d78c6c98947ae2c5ac5e4aabb34d04b591a2f6a6fe81471c7becfd255a85336d",
+        "products/maps/2026103100/12h/f30_f42/prob_gt_1inch_percent.png": "7d1675ef8fbde85b0f120e4980700cdb4eb14c71d87004cedbc48b27dd0eae10",
+        "products/maps/2026103100/12h/f36_f48/prob_gt_1inch_percent.png": "f91c09b02cc36e8f854b178dee1cd401236244c7acc2a065c69c3947a7532812"
+      },
+      "sha256": "657e221a6b5bb93b9e4315fc03a96df2c026ad85b20f5eb612167f38cc986949",
+      "decoded_rgb_sha256": [
+        "62835458c21592f493cfbc8c3a454f4271dc8aff1e055888f188bcb3a9183680",
+        "53443bcc3b72bcb1d3b80874d458b5b2ae91a0de676ee9ed7e54d8c669df5016",
+        "2878bcb0c4d70fafadd026420f81c76468a0ca920fbb1aca754899dc69d938bb",
+        "8e189cc0f3e3b05789a11567737cdb5f818e50fa57e299d7e7463e93fd3267ab",
+        "f7bbdc41ffc7cfcccf1e3d13bcdfa4d09845ff8cb9bdfe3ed305d9f1a4a67c4e",
+        "19699b38d04c2fae61c63f7200435ea717d8a0f9b924a64a2d9ba74347ce6d6c",
+        "270c6fab158df019d46c8d14dce79016c01a15bbb4017b55d0847b81c2524816"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1102,
+        128,
+        1128,
+        620
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 12,
+      "variable": "prob_gt_2inch_percent",
+      "label": "Probability > 2 inches",
+      "units": "%",
+      "frame_count": 7,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 734,
+      "size_bytes": 723807,
+      "path": "products/gifs/2026103100/12h/prob_gt_2inch_percent.gif",
+      "frame_sources": [
+        "products/maps/2026103100/12h/f00_f12/prob_gt_2inch_percent.png",
+        "products/maps/2026103100/12h/f06_f18/prob_gt_2inch_percent.png",
+        "products/maps/2026103100/12h/f12_f24/prob_gt_2inch_percent.png",
+        "products/maps/2026103100/12h/f18_f30/prob_gt_2inch_percent.png",
+        "products/maps/2026103100/12h/f24_f36/prob_gt_2inch_percent.png",
+        "products/maps/2026103100/12h/f30_f42/prob_gt_2inch_percent.png",
+        "products/maps/2026103100/12h/f36_f48/prob_gt_2inch_percent.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/12h/f00_f12/prob_gt_2inch_percent.png": "fbedaf01b918b6bd045b466812f91e456125c7c5d87aaa374c8277ea78fe8efd",
+        "products/maps/2026103100/12h/f06_f18/prob_gt_2inch_percent.png": "d9f82db10fba650b0853c6df8b740696aa7767c0027dfde8984b350c0d305e38",
+        "products/maps/2026103100/12h/f12_f24/prob_gt_2inch_percent.png": "483fd4b2c2a6560f03e1a7ac7893045567c389644868488db475b7600755fc8e",
+        "products/maps/2026103100/12h/f18_f30/prob_gt_2inch_percent.png": "7fccf5dc2eb355365e307c2fc841a0aa8a1e4d33f72ca2168db43aaf60f36907",
+        "products/maps/2026103100/12h/f24_f36/prob_gt_2inch_percent.png": "36bbb78cf27e2e431d4c4fea6b9a2d99f84d29707f0430be17f7c7f7b1bc86fc",
+        "products/maps/2026103100/12h/f30_f42/prob_gt_2inch_percent.png": "dbd25ef6adf3872c2b8f4e794bf4bc28f88b4cd0698dd248c47bfe8e0c9140ae",
+        "products/maps/2026103100/12h/f36_f48/prob_gt_2inch_percent.png": "3dd3bc43708069792e12c4078cfbab10c7cae90ac2cc87e98d164b5752135ea1"
+      },
+      "sha256": "0cdcc3f8db8c1e31d6eed806c49178b3565450cf20d6afe679e956b68bacf9c2",
+      "decoded_rgb_sha256": [
+        "010c697c47b95babd80e556ed1a2b35f02a3bd527500e040bc54f0afc5c2eb61",
+        "8d9f5ce8d97e83c40a8bd8adb650ac9ddad7b5ac5b308b46837562b424c654fc",
+        "ab3544b04a86442e9124aacc133c9927a11a1abd055a4d718672f83c73cba5c3",
+        "0c23cd7035f8afc994de3bc06acb3104784fe0992b2afe8facd90e7ffbfe7870",
+        "71038250ff15222794bf857f31086814d3d20e43f0831c0fbdcd5861696ed78e",
+        "67803306bb4fe967ebc2aca6abdf4d2255169df4bbd20c3e0147d924ff38aad7",
+        "75d75798e9aa4a130da1e101e086d6b58324fa7e173cb1b9120f51fb61d0e82c"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1102,
+        128,
+        1128,
+        620
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 12,
+      "variable": "prob_gt_2yr12h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "frame_count": 7,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 734,
+      "size_bytes": 742423,
+      "path": "products/gifs/2026103100/12h/prob_gt_2yr12h_ari_percent.gif",
+      "frame_sources": [
+        "products/maps/2026103100/12h/f00_f12/prob_gt_2yr12h_ari_percent.png",
+        "products/maps/2026103100/12h/f06_f18/prob_gt_2yr12h_ari_percent.png",
+        "products/maps/2026103100/12h/f12_f24/prob_gt_2yr12h_ari_percent.png",
+        "products/maps/2026103100/12h/f18_f30/prob_gt_2yr12h_ari_percent.png",
+        "products/maps/2026103100/12h/f24_f36/prob_gt_2yr12h_ari_percent.png",
+        "products/maps/2026103100/12h/f30_f42/prob_gt_2yr12h_ari_percent.png",
+        "products/maps/2026103100/12h/f36_f48/prob_gt_2yr12h_ari_percent.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/12h/f00_f12/prob_gt_2yr12h_ari_percent.png": "eeba83f75eaa78cb5064deecb6018aa99522d448cdf6b880bc5aafae5e7754b4",
+        "products/maps/2026103100/12h/f06_f18/prob_gt_2yr12h_ari_percent.png": "cfa2679f14aaf4af87558b1752493ae7a9850b6c7f8f2c56d0cdd22488927914",
+        "products/maps/2026103100/12h/f12_f24/prob_gt_2yr12h_ari_percent.png": "e0035f3655f19d4d2488af9e7db4b6e05ed130aff54f25cfcabeae91a6d5630c",
+        "products/maps/2026103100/12h/f18_f30/prob_gt_2yr12h_ari_percent.png": "a4c519585e94b7f4324653d4ba5b4651697132fd44514f1e5a748e8ad78d0c65",
+        "products/maps/2026103100/12h/f24_f36/prob_gt_2yr12h_ari_percent.png": "769ab915ba54962a234bc4ed321ca5ca104fcf8e1cfc3d34b566d043e59d9673",
+        "products/maps/2026103100/12h/f30_f42/prob_gt_2yr12h_ari_percent.png": "1ee5d4f639a02967b1d2c33355bc7b9f6ff3e633f209fd12793daa36133034bc",
+        "products/maps/2026103100/12h/f36_f48/prob_gt_2yr12h_ari_percent.png": "081b6d3a66d377cdb94af33181fde146e6db4cf805071a7fd99d19cf4cce147b"
+      },
+      "sha256": "c9718dc88f2b967b417f6e78da6315cbfb17549e0bc49375a6879c6a4ca516fe",
+      "decoded_rgb_sha256": [
+        "f84adbb858a7a0ec53a9e2a2560232efb230a962880578626a790aa25bf7a4f9",
+        "5c09762dd7631d2e74994b51e521afd3d2e3aa18e10ccbc7a8a002bcc4befb0d",
+        "19762902d0d9e22443d0da259f81ad304b061234a8a57ee7c223eedc994f6c4b",
+        "9cbc9a883e8d6a430019c4ef650db2001173bf0587beb484b365ffda9c909662",
+        "6fea3c42a7641c8c3da01516505e568bc321f766dcbc2dd33bdf88dff3b6164f",
+        "725049bdf9110a0556d8241b7c1e46519437afb0bf67074282ceab451d5bb897",
+        "89d0ae501c4e4045801f37d3aaf03ea67d14ff7d939d232ba18f6edf4277bc6b"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1102,
+        128,
+        1128,
+        620
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 12,
+      "variable": "prob_gt_3inch_percent",
+      "label": "Probability > 3 inches",
+      "units": "%",
+      "frame_count": 7,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 734,
+      "size_bytes": 703136,
+      "path": "products/gifs/2026103100/12h/prob_gt_3inch_percent.gif",
+      "frame_sources": [
+        "products/maps/2026103100/12h/f00_f12/prob_gt_3inch_percent.png",
+        "products/maps/2026103100/12h/f06_f18/prob_gt_3inch_percent.png",
+        "products/maps/2026103100/12h/f12_f24/prob_gt_3inch_percent.png",
+        "products/maps/2026103100/12h/f18_f30/prob_gt_3inch_percent.png",
+        "products/maps/2026103100/12h/f24_f36/prob_gt_3inch_percent.png",
+        "products/maps/2026103100/12h/f30_f42/prob_gt_3inch_percent.png",
+        "products/maps/2026103100/12h/f36_f48/prob_gt_3inch_percent.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/12h/f00_f12/prob_gt_3inch_percent.png": "4e603ffd4006aa3050117ebcabc3414b7fab234d78aa31487c8fa89b8d6ea8f0",
+        "products/maps/2026103100/12h/f06_f18/prob_gt_3inch_percent.png": "4731b3df685ba4323ebc6b6147ba0e0a86c2e1c4d274e3dd9afa6f622b066ff7",
+        "products/maps/2026103100/12h/f12_f24/prob_gt_3inch_percent.png": "ba1ccd99c93172bc988d554ca8e01a4963638c7675c93a65511beaa730a29faf",
+        "products/maps/2026103100/12h/f18_f30/prob_gt_3inch_percent.png": "97d05514769b569bbfa90b140011bd2df12efef6b917971a726bb302efd85efa",
+        "products/maps/2026103100/12h/f24_f36/prob_gt_3inch_percent.png": "31148998aaed8d73c58e078c81068251f4ad6b72b1a77ff84ca2810b9aef7a3d",
+        "products/maps/2026103100/12h/f30_f42/prob_gt_3inch_percent.png": "2f3542a97f68239b0acaf7c44c65abd07cd5715bf4283819c7f277940ddba05a",
+        "products/maps/2026103100/12h/f36_f48/prob_gt_3inch_percent.png": "97fb7c9d888512eee6dc8cbcf54e17d0a37fc5a42ce920fe49369afab26621cd"
+      },
+      "sha256": "d1412e83f4c51db99a373a3d5429b4322cae5a15fb2e1a881c03fae2f8dd18ac",
+      "decoded_rgb_sha256": [
+        "6f60f961ff71d48ef3e9ac7205dd81af337429f6ae4a5f524fd1352dbe472c74",
+        "5cdcc3084e76bf51bcedf3eff58e4950c91428f004b62b2fd3f934cecc79d4ac",
+        "43b8540de6a2266f9da989af929f4bf30eceff5f42b4c9a95ce25e9b6b37b65e",
+        "027162da6737364b10143411b230c09428807ad6eca6fc1cd2bd72f3fe5e803c",
+        "296337878f8a817ed6cdd58b1223643c68e01da41a714b86a7a87243c34c0988",
+        "aca8495be5db1736e888a83757eeafacc1836e90b41e04e30a50c16483736cec",
+        "659f944afc4d025183d6d40dc3e3ad4999552cb21927668e92e29c56523ded20"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1102,
+        128,
+        1128,
+        620
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 12,
+      "variable": "prob_gt_5yr12h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "frame_count": 7,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 734,
+      "size_bytes": 725402,
+      "path": "products/gifs/2026103100/12h/prob_gt_5yr12h_ari_percent.gif",
+      "frame_sources": [
+        "products/maps/2026103100/12h/f00_f12/prob_gt_5yr12h_ari_percent.png",
+        "products/maps/2026103100/12h/f06_f18/prob_gt_5yr12h_ari_percent.png",
+        "products/maps/2026103100/12h/f12_f24/prob_gt_5yr12h_ari_percent.png",
+        "products/maps/2026103100/12h/f18_f30/prob_gt_5yr12h_ari_percent.png",
+        "products/maps/2026103100/12h/f24_f36/prob_gt_5yr12h_ari_percent.png",
+        "products/maps/2026103100/12h/f30_f42/prob_gt_5yr12h_ari_percent.png",
+        "products/maps/2026103100/12h/f36_f48/prob_gt_5yr12h_ari_percent.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/12h/f00_f12/prob_gt_5yr12h_ari_percent.png": "273f37541307e496d89fc7d091cc86a86e26239f56927cfa5648225de8522084",
+        "products/maps/2026103100/12h/f06_f18/prob_gt_5yr12h_ari_percent.png": "45f80fb2584c0197156e07349c1417c4cc98b64686c4835677f31b6157b69c1f",
+        "products/maps/2026103100/12h/f12_f24/prob_gt_5yr12h_ari_percent.png": "88f1385470cc9daf779195c92767984b23d93d8027839432085f90e02d53c277",
+        "products/maps/2026103100/12h/f18_f30/prob_gt_5yr12h_ari_percent.png": "90a4e4207b0abc26f1e86a3bc63ae456e33af19eaa02fd42be67068d4acb13ab",
+        "products/maps/2026103100/12h/f24_f36/prob_gt_5yr12h_ari_percent.png": "9b651b6a5a276043952c30c87e9a21879bde01e05b2c6c5ff8076ffef9d4796d",
+        "products/maps/2026103100/12h/f30_f42/prob_gt_5yr12h_ari_percent.png": "81c853ee725b04a961d573966963ebe700be086a7981fcd2cc3aa9f7c7d3f896",
+        "products/maps/2026103100/12h/f36_f48/prob_gt_5yr12h_ari_percent.png": "dd0f66e9fa21c7ebd5f539646e88d101015c2888d20b975edccb18e0b18d0340"
+      },
+      "sha256": "30e2a44b31bbdef5b812ec8394b523a563f4febaca379055c77492feb2fe9771",
+      "decoded_rgb_sha256": [
+        "16b6d08e1bb7a96d4b1a4914dc97a2fba2292036fc6458e41bba895174dac3b0",
+        "683c6ba118493eb58e6acb50f48561d4216b380b5231233d68600436c95cd337",
+        "d6a5f5b51b000a6a6f84a785710c6bca272e2f3a8190a2028fd20208bf79c461",
+        "b86e9dfacf88a4fb483ed58ed6c39e15dbecbd741fbe12293408e5f5bd293632",
+        "040eb754f46bec83cd67568a99cbe662995289fae3dec8242b2fd012645f5667",
+        "7091c0b76eb095169fc86ac89cba8cd76ada6ae24a0385b192020ae4290a50d2",
+        "a1dc3e87fd238990fcd6314954f5d8d571a12976431a22a35219b11c635c751c"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1102,
+        128,
+        1128,
+        620
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 24,
+      "variable": "expected_precip_mm",
+      "label": "Expected precipitation",
+      "units": "inches",
+      "frame_count": 5,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 728,
+      "size_bytes": 526235,
+      "path": "products/gifs/2026103100/24h/expected_precip_mm.gif",
+      "frame_sources": [
+        "products/maps/2026103100/24h/f00_f24/expected_precip_mm.png",
+        "products/maps/2026103100/24h/f06_f30/expected_precip_mm.png",
+        "products/maps/2026103100/24h/f12_f36/expected_precip_mm.png",
+        "products/maps/2026103100/24h/f18_f42/expected_precip_mm.png",
+        "products/maps/2026103100/24h/f24_f48/expected_precip_mm.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/24h/f00_f24/expected_precip_mm.png": "ead130fb5dbf91b5d0ec9c1cb93200664f6a9d0a473886955bdf258a1a66f34c",
+        "products/maps/2026103100/24h/f06_f30/expected_precip_mm.png": "1c5729a4ec12cab59b6d6a793bcbfe58ec8ed4ac12c8965a31c25486586f88f3",
+        "products/maps/2026103100/24h/f12_f36/expected_precip_mm.png": "1cd735f67475f51dba4737d62c37de9e55d6308c28e67efbb3bcd8bb1db798fa",
+        "products/maps/2026103100/24h/f18_f42/expected_precip_mm.png": "786a2a83a9bc563fc737675475ea7853cf36f865b14ed80cbfc3f94ecc7f67ed",
+        "products/maps/2026103100/24h/f24_f48/expected_precip_mm.png": "59b5032bf0a58750c3171e9c4b9c0e6e139decbfae5be236a0cbd1f81447f37f"
+      },
+      "sha256": "643dcd11e4b16044dd2a953d856410f3a5efdfadacfcb5bd970b60afc4d3e694",
+      "decoded_rgb_sha256": [
+        "57fde9b3b62d93b6e8ea41578a3e6a9e851be5d9375625bc9d59e95bbbf6dfad",
+        "5ac9da2b2e50ad7622803c3731add6ffbdbcb0d2c9f7c111df18fec2f749050b",
+        "3836201a257d8ce03e4f06b6becb826480e58dc22d038cd20ac585dfeb5deb1b",
+        "cf2ca31806bb817dd269e10f829251788319149697ff5dcf80407b3cb28a1604",
+        "dcc97db9c96155d36fa025a8ca7e1ae11e032f04db2d891cc1229908a6c2fd55"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1074,
+        127,
+        1104,
+        608
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 24,
+      "variable": "prob_gt_0p5inch_percent",
+      "label": "Probability > 0.5 inch",
+      "units": "%",
+      "frame_count": 5,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 734,
+      "size_bytes": 670538,
+      "path": "products/gifs/2026103100/24h/prob_gt_0p5inch_percent.gif",
+      "frame_sources": [
+        "products/maps/2026103100/24h/f00_f24/prob_gt_0p5inch_percent.png",
+        "products/maps/2026103100/24h/f06_f30/prob_gt_0p5inch_percent.png",
+        "products/maps/2026103100/24h/f12_f36/prob_gt_0p5inch_percent.png",
+        "products/maps/2026103100/24h/f18_f42/prob_gt_0p5inch_percent.png",
+        "products/maps/2026103100/24h/f24_f48/prob_gt_0p5inch_percent.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/24h/f00_f24/prob_gt_0p5inch_percent.png": "d0962068d40ff0c62df1adddfce6722ae4defa5297bcd17f95e26f56b9bc24b3",
+        "products/maps/2026103100/24h/f06_f30/prob_gt_0p5inch_percent.png": "17a9220fb514c574b20d7d33556ea9bd37bfb06fd1b8df37fd1fb26851928930",
+        "products/maps/2026103100/24h/f12_f36/prob_gt_0p5inch_percent.png": "f41306139d860a700debcb8c7a2d85999810c1f36c87d2a1234bafcec696dc35",
+        "products/maps/2026103100/24h/f18_f42/prob_gt_0p5inch_percent.png": "e5d2b8a4a130f3bf4708ebe4e60daf2d1c4b9d2047e936caff4ad0b3da38fe68",
+        "products/maps/2026103100/24h/f24_f48/prob_gt_0p5inch_percent.png": "8e429e0cc46cd4c5a28da749e7b988659b317246002ba372b67931011bcaee69"
+      },
+      "sha256": "c136e0808e56a1fc8333bdf6aca9c68086a5491b4ada11d94cfa4bbb10ed18bb",
+      "decoded_rgb_sha256": [
+        "f19a144f8b50c07400ce459cd68ba17ad3e4992c2cf8fadbc373203745d356c3",
+        "ff3b05ad18f0ae97826b05258bcf939036191e7b59e6bd3253b8b1667052b2ed",
+        "79a1b05e45ac9901dc8ad969f59c8107460d003a92d2802f3f7dcc4b98768640",
+        "cf4ca48a0464572fbbce7ef86bae666a2bf2865e75bf92e85cae1218c1a06e9f",
+        "ae9d85de7b611a89ea11cd65f1ce802f63a55c9bf24f7b23f3d927627460969a"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1102,
+        128,
+        1128,
+        620
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 24,
+      "variable": "prob_gt_1inch_percent",
+      "label": "Probability > 1 inch",
+      "units": "%",
+      "frame_count": 5,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 734,
+      "size_bytes": 614985,
+      "path": "products/gifs/2026103100/24h/prob_gt_1inch_percent.gif",
+      "frame_sources": [
+        "products/maps/2026103100/24h/f00_f24/prob_gt_1inch_percent.png",
+        "products/maps/2026103100/24h/f06_f30/prob_gt_1inch_percent.png",
+        "products/maps/2026103100/24h/f12_f36/prob_gt_1inch_percent.png",
+        "products/maps/2026103100/24h/f18_f42/prob_gt_1inch_percent.png",
+        "products/maps/2026103100/24h/f24_f48/prob_gt_1inch_percent.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/24h/f00_f24/prob_gt_1inch_percent.png": "628786f4df645de183ed815e295e0004993f8ef28daa6ac39fe4377ecd8ac19b",
+        "products/maps/2026103100/24h/f06_f30/prob_gt_1inch_percent.png": "89a74da91191defe17b0cea8b56c0f19146e42d6af50ceb459e5887a9aaaf2b2",
+        "products/maps/2026103100/24h/f12_f36/prob_gt_1inch_percent.png": "53435f1d3f39949e008bff866810b4881fac1c5e28b3d0eadab99d3eec951168",
+        "products/maps/2026103100/24h/f18_f42/prob_gt_1inch_percent.png": "3f799dfdaab358f0c8f858f195792e10e305911c0b22922d0795c040240e3395",
+        "products/maps/2026103100/24h/f24_f48/prob_gt_1inch_percent.png": "b5b219ba6c6edda56246381c2d1191a802b52bdd18b8f5f4bd6933a7b5b0cd53"
+      },
+      "sha256": "2d96717b714a51dce8e894a280736c3e17bbe45fd31d36fb7f511d48e9ab3c27",
+      "decoded_rgb_sha256": [
+        "d17b137fc367bf91eec58aed1b46db5ac87bccbe3ff74cca2cff18dfaea4be23",
+        "7011499145a8ed736e0a316df4e66142f50c8ec5448f4c3cc9750a6ad219d144",
+        "f76477c0867dae0812096b1cb8cee8fea068fa50d027749c89828b4f604f5532",
+        "9970a1da2e86a06f03e1d406eb0fbf9e46fe0c6e99e951374f98f861643a757e",
+        "c7ef904cc2255d5ac9f0cb5607532ffccca753bfb065b3114038d0435174ed38"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1102,
+        128,
+        1128,
+        620
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 24,
+      "variable": "prob_gt_2inch_percent",
+      "label": "Probability > 2 inches",
+      "units": "%",
+      "frame_count": 5,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 734,
+      "size_bytes": 539300,
+      "path": "products/gifs/2026103100/24h/prob_gt_2inch_percent.gif",
+      "frame_sources": [
+        "products/maps/2026103100/24h/f00_f24/prob_gt_2inch_percent.png",
+        "products/maps/2026103100/24h/f06_f30/prob_gt_2inch_percent.png",
+        "products/maps/2026103100/24h/f12_f36/prob_gt_2inch_percent.png",
+        "products/maps/2026103100/24h/f18_f42/prob_gt_2inch_percent.png",
+        "products/maps/2026103100/24h/f24_f48/prob_gt_2inch_percent.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/24h/f00_f24/prob_gt_2inch_percent.png": "4e9e4689174e8c9f25109452e08d97292363b8973788c63def999dd08650b7f5",
+        "products/maps/2026103100/24h/f06_f30/prob_gt_2inch_percent.png": "e58ff3697ad208037dad3996b900445c93de6d8ae47dfceadb3e4ca1a868aba3",
+        "products/maps/2026103100/24h/f12_f36/prob_gt_2inch_percent.png": "75c49bac9e60e1a2310ec57994c7328226d5fa3a1fffe5b120d5bd6157fc4f55",
+        "products/maps/2026103100/24h/f18_f42/prob_gt_2inch_percent.png": "f26b4335e9df1eb453859265a4be96d872a5cfdad2597c89b443b055e3f7785b",
+        "products/maps/2026103100/24h/f24_f48/prob_gt_2inch_percent.png": "6831d5537d90be52e8ae27752816a4b351e9a03f299dcf8766fdfda89087070b"
+      },
+      "sha256": "ca9bf6d6a0701ec9e14cd5bc05c95b9cf953cab256ddf4f319e69e5106e04768",
+      "decoded_rgb_sha256": [
+        "cbabec6e4a35f9e1772c8f44a5f3f6d8669d19204d65258b0cbda8491eb29b3e",
+        "a26403e3d7ceb3acb8f19997042b646c09343b4051c8667f5f068cdcf7bfcf01",
+        "692b94cb971d338f26848c5b35b3016608780034a927936e9cc1b373e752e963",
+        "91d0092e9780363e1d320711f36c2fc1992b4755628447c47fa2310b4b0fa034",
+        "8d95bd8281e129d3dddaf2c5c5838e5fd1f7aa93f307521963257629a304833e"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1102,
+        128,
+        1128,
+        620
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 24,
+      "variable": "prob_gt_2yr24h_ari_percent",
+      "label": "Probability > local 2-year ARI",
+      "units": "%",
+      "frame_count": 5,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 734,
+      "size_bytes": 538931,
+      "path": "products/gifs/2026103100/24h/prob_gt_2yr24h_ari_percent.gif",
+      "frame_sources": [
+        "products/maps/2026103100/24h/f00_f24/prob_gt_2yr24h_ari_percent.png",
+        "products/maps/2026103100/24h/f06_f30/prob_gt_2yr24h_ari_percent.png",
+        "products/maps/2026103100/24h/f12_f36/prob_gt_2yr24h_ari_percent.png",
+        "products/maps/2026103100/24h/f18_f42/prob_gt_2yr24h_ari_percent.png",
+        "products/maps/2026103100/24h/f24_f48/prob_gt_2yr24h_ari_percent.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/24h/f00_f24/prob_gt_2yr24h_ari_percent.png": "945a85440630d87bfefdb6e1c1b55da1c6d9ec5deffc9ed2eea2f94e55e34214",
+        "products/maps/2026103100/24h/f06_f30/prob_gt_2yr24h_ari_percent.png": "7b2a4612615f57e68614829df35488962da9832cf03c020160b5a8d5b3ab5381",
+        "products/maps/2026103100/24h/f12_f36/prob_gt_2yr24h_ari_percent.png": "591dd24a736ea3b1436bd278114943ee5deb211dceaf66e0e3d136fd33cba6ef",
+        "products/maps/2026103100/24h/f18_f42/prob_gt_2yr24h_ari_percent.png": "53dc159bdc7795a6a01c70b883f2251b7b67ecc51bb59d9dd92c8817ab69a620",
+        "products/maps/2026103100/24h/f24_f48/prob_gt_2yr24h_ari_percent.png": "c48ed3f92a349a435ab01e423739c0933cccd6de3ad06a78d7dd346a80eb74cd"
+      },
+      "sha256": "39bbd161fb457e64b7c938c41e1bf9dcb373324965315eccee1d129478b39f4c",
+      "decoded_rgb_sha256": [
+        "fc61343af26c9c248ed4f70884893b6bd7822fec9608bd43d9fab97ba92cbf82",
+        "f368977ca460748a4a47763304c3a83109a0fc53427ee287a5bedca33a7ee787",
+        "bcabadf73fa9e3985c525e5af1037bd0fba4484ca0f8a067e8fd097cd5b836b3",
+        "5c7c9ef54ee8a62e78b8106a201b30c812306e8e41e62d89c4bfe35975b5fd7c",
+        "def19e8b28a104c8997ebd9a53370bfe85d21cb97209b346f1e90ba1602dee98"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1102,
+        128,
+        1128,
+        620
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 24,
+      "variable": "prob_gt_3inch_percent",
+      "label": "Probability > 3 inches",
+      "units": "%",
+      "frame_count": 5,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 734,
+      "size_bytes": 512860,
+      "path": "products/gifs/2026103100/24h/prob_gt_3inch_percent.gif",
+      "frame_sources": [
+        "products/maps/2026103100/24h/f00_f24/prob_gt_3inch_percent.png",
+        "products/maps/2026103100/24h/f06_f30/prob_gt_3inch_percent.png",
+        "products/maps/2026103100/24h/f12_f36/prob_gt_3inch_percent.png",
+        "products/maps/2026103100/24h/f18_f42/prob_gt_3inch_percent.png",
+        "products/maps/2026103100/24h/f24_f48/prob_gt_3inch_percent.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/24h/f00_f24/prob_gt_3inch_percent.png": "5bb232115312881e638629aba5854124f0f0891042f61013bab09a724805b836",
+        "products/maps/2026103100/24h/f06_f30/prob_gt_3inch_percent.png": "4b3989a60d99f4964583234b0c6944d9efda2ccc14f3ebc983affe497fc512f1",
+        "products/maps/2026103100/24h/f12_f36/prob_gt_3inch_percent.png": "6b3468f8f1cb9871d51eadb31461dd76a0939443f2110fdc27166240bc6d6455",
+        "products/maps/2026103100/24h/f18_f42/prob_gt_3inch_percent.png": "182727e05bfe1f06ab579af0f53210a62e939c826ef79b460ea772bb3f2e9adf",
+        "products/maps/2026103100/24h/f24_f48/prob_gt_3inch_percent.png": "2670bde5eb71896efc9c450dd3a2ef9029c2f9aff162be111256029316d422b4"
+      },
+      "sha256": "53a0e3869a9e68107ca18b380255dd15643898eedfdeacf3c2c27fec42c9aae0",
+      "decoded_rgb_sha256": [
+        "b48d6151ce32f1cd65372f1415028ca9328f51b83c4cf7366276ae2fb1a9edfc",
+        "825e6ab70e996a68838ebba2880c5b40bdc136778ed9ccfd1c8a687a668cd050",
+        "2ca1ab4b5ae6dabbd2ec1d27b794aa14c2bfd21981ad0001f804765b782ba65b",
+        "aa7c666cd076e1cb4dcbd8c7a4087fa7ca2615675828516990f7c867845d2f06",
+        "1316e10e42f85e4ff2d8440dbb68c58677a209e4a598cf1a044e24effa58bb2f"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1102,
+        128,
+        1128,
+        620
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 24,
+      "variable": "prob_gt_5inch_percent",
+      "label": "Probability > 5 inches",
+      "units": "%",
+      "frame_count": 5,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 734,
+      "size_bytes": 495684,
+      "path": "products/gifs/2026103100/24h/prob_gt_5inch_percent.gif",
+      "frame_sources": [
+        "products/maps/2026103100/24h/f00_f24/prob_gt_5inch_percent.png",
+        "products/maps/2026103100/24h/f06_f30/prob_gt_5inch_percent.png",
+        "products/maps/2026103100/24h/f12_f36/prob_gt_5inch_percent.png",
+        "products/maps/2026103100/24h/f18_f42/prob_gt_5inch_percent.png",
+        "products/maps/2026103100/24h/f24_f48/prob_gt_5inch_percent.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/24h/f00_f24/prob_gt_5inch_percent.png": "c176f385394918fb8e4c7500c57e7c72a89faeae5fdfb75112b8aa830312e8f4",
+        "products/maps/2026103100/24h/f06_f30/prob_gt_5inch_percent.png": "7689521d09fe03be4c0c5693261099b4e59b8e5ec779f49ec27a38d0da817951",
+        "products/maps/2026103100/24h/f12_f36/prob_gt_5inch_percent.png": "35f9c68aafc9c7e46bdec5aeacc46684e6e5ffd400b2da7a7a0bfd3efc7746a3",
+        "products/maps/2026103100/24h/f18_f42/prob_gt_5inch_percent.png": "a7ea357f4060c35c39e5d583ba95213f10b68618f5daee8f35c5147f7800e79e",
+        "products/maps/2026103100/24h/f24_f48/prob_gt_5inch_percent.png": "e554436ffb29ea675ea4ad6f79587f537cc17354b2560cd95df6727baa99a9f9"
+      },
+      "sha256": "b12b4b2b10682b672517c9417b52b3eb39dd9a4bb60ea2597c87507df16b5096",
+      "decoded_rgb_sha256": [
+        "195a67f7390980c5dc31cdc33e616c564ed753759f6c262edf7b239ba406e2d4",
+        "d6f7b89d62ae627802081c17f91eed937b594d3bdaaf733b839568619b8f8d34",
+        "3646b4c9430b415ec3abba300ec4750d01d097e1891949fd13ce34a3820e9c3f",
+        "88d340830fa31dc55c82377a59e0334348bd770ece19d5af3f79bba39197f419",
+        "e323354add181483daae1798900093eb7b1c53c8537820709929a95329579810"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1102,
+        128,
+        1128,
+        620
+      ],
+      "legend_invariant": true
+    },
+    {
+      "init": "2026103100",
+      "duration_hours": 24,
+      "variable": "prob_gt_5yr24h_ari_percent",
+      "label": "Probability > local 5-year ARI",
+      "units": "%",
+      "frame_count": 5,
+      "frame_duration_ms": 1400,
+      "final_frame_duration_ms": 2400,
+      "frame_durations_ms": [
+        1400,
+        1400,
+        1400,
+        1400,
+        2400
+      ],
+      "width_pixels": 1200,
+      "height_pixels": 734,
+      "size_bytes": 521848,
+      "path": "products/gifs/2026103100/24h/prob_gt_5yr24h_ari_percent.gif",
+      "frame_sources": [
+        "products/maps/2026103100/24h/f00_f24/prob_gt_5yr24h_ari_percent.png",
+        "products/maps/2026103100/24h/f06_f30/prob_gt_5yr24h_ari_percent.png",
+        "products/maps/2026103100/24h/f12_f36/prob_gt_5yr24h_ari_percent.png",
+        "products/maps/2026103100/24h/f18_f42/prob_gt_5yr24h_ari_percent.png",
+        "products/maps/2026103100/24h/f24_f48/prob_gt_5yr24h_ari_percent.png"
+      ],
+      "source_sha256": {
+        "products/maps/2026103100/24h/f00_f24/prob_gt_5yr24h_ari_percent.png": "38140a329c63fd9edab49930b6338141b63e73759dfd4bc14d09ef585be06ba8",
+        "products/maps/2026103100/24h/f06_f30/prob_gt_5yr24h_ari_percent.png": "1612c22dd1866001fa8fb46d26a30032fc82c3f8567bf58584df5d1a9f23eeab",
+        "products/maps/2026103100/24h/f12_f36/prob_gt_5yr24h_ari_percent.png": "4c24e772d99c3927befc60a248038b5bf90e5804103381ea3bd94d80d963247c",
+        "products/maps/2026103100/24h/f18_f42/prob_gt_5yr24h_ari_percent.png": "52a7dcfb3bfe73462bb0ced9493d7a88f0495fb0417c336d2527ef8328fa0064",
+        "products/maps/2026103100/24h/f24_f48/prob_gt_5yr24h_ari_percent.png": "09121f8b205bafa11fa58578f5ab365a0ef74bc087e82fecdf2373f85dcd8826"
+      },
+      "sha256": "ad157fa5d1d73d1981f2b172507b6b72f6a2e78385d2ea777f86a77b0953551b",
+      "decoded_rgb_sha256": [
+        "f2b29b502a2e533664ea25af23f67679791ac9085eff50321c807252b2d2a9f0",
+        "811c3a00bda8c8339d3ffee8468cc11ce1f7cd48dbac465ff7e3ea31b26df957",
+        "978e966812727ac49c4a46dd88413cf2438a89d99d43afd4ef50bae44ac7ce24",
+        "9680ecc9ffcea2695e51dbc8d65fccaba287f66e8629b4e80de1586d52430bc4",
+        "b4de7f68b40cb498bd7ccc923e43782c74bc917742481f82c7f32f62e8827fe4"
+      ],
+      "encoder_version": "ann-wpc-fixed-palette-v2",
+      "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189",
+      "encoding_settings": {
+        "max_width": 1200,
+        "frame_ms": 1400,
+        "final_frame_ms": 2400,
+        "resampling": "LANCZOS",
+        "dither": "NONE",
+        "optimize": false,
+        "disposal": 2
+      },
+      "legend_box": [
+        1102,
+        128,
+        1128,
+        620
+      ],
+      "legend_invariant": true
+    }
+  ],
+  "encoder_version": "ann-wpc-fixed-palette-v2",
+  "palette_sha256": "a36f960f7f9f10b45adf1413e8228bdc112f6dbacb233b61e844d5e379ac3189"
+}
