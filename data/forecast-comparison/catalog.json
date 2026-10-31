@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-31T19:32:55.171755+00:00",
+  "generated_utc": "2026-10-31T19:53:21.978664+00:00",
   "latest_hrrr_initialization": "2026103112",
   "latest_ready_initialization": "2026103112",
   "runs": [
@@ -11,11 +11,11 @@
       "manifest": "data/forecast-comparison/runs/2026103112.json"
     },
     {
-      "gefs_init": "2026103106",
       "init": "2026103106",
-      "manifest": "data/forecast-comparison/runs/2026103106.json",
+      "gefs_init": "2026103106",
+      "status": "ready",
       "matching_policy": "same_initialization",
-      "status": "ready"
+      "manifest": "data/forecast-comparison/runs/2026103106.json"
     },
     {
       "gefs_init": "2026103100",

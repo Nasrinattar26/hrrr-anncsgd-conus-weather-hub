@@ -19,5 +19,5 @@
   "gif_count": 22,
   "grib2_file_count": 92,
   "validation_description": "Independent split and sampled test diagnostics recorded in models.json; no inherited HRRR verification claims",
-  "updated_utc": "2026-10-31T19:32:55.166418+00:00"
+  "updated_utc": "2026-10-31T19:53:21.973425+00:00"
 }
