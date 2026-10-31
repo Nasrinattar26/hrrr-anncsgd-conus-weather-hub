@@ -1,104 +1,32 @@
 {
-  "schema_version": 1,
   "latest_initialization": "2026103112",
-  "retention_count": 12,
-  "updated_utc": "2026-10-31T14:20:24.444185+00:00",
+  "retention_count": 3,
   "runs": [
     {
-      "init": "2026103112",
-      "map_catalog": "data/forecast-runs/2026103112/map_catalog.json",
+      "display_amount_units": "inches",
       "gif_manifest": "products/gifs/2026103112/manifest.json",
       "grib_manifest": "products/grib2/2026103112/manifest.json",
-      "map_count": 147,
-      "display_amount_units": "inches"
+      "init": "2026103112",
+      "map_catalog": "data/forecast-runs/2026103112/map_catalog.json",
+      "map_count": 147
     },
     {
-      "init": "2026103106",
-      "map_catalog": "data/forecast-runs/2026103106/map_catalog.json",
+      "display_amount_units": "inches",
       "gif_manifest": "products/gifs/2026103106/manifest.json",
       "grib_manifest": "products/grib2/2026103106/manifest.json",
-      "map_count": 145,
-      "display_amount_units": "inches"
+      "init": "2026103106",
+      "map_catalog": "data/forecast-runs/2026103106/map_catalog.json",
+      "map_count": 145
     },
     {
-      "init": "2026103100",
-      "map_catalog": "data/forecast-runs/2026103100/map_catalog.json",
+      "display_amount_units": "inches",
       "gif_manifest": "products/gifs/2026103100/manifest.json",
       "grib_manifest": "products/grib2/2026103100/manifest.json",
-      "map_count": 145,
-      "display_amount_units": "inches"
-    },
-    {
-      "init": "2026103018",
-      "map_catalog": "data/forecast-runs/2026103018/map_catalog.json",
-      "gif_manifest": "products/gifs/2026103018/manifest.json",
-      "grib_manifest": "products/grib2/2026103018/manifest.json",
-      "map_count": 145,
-      "display_amount_units": "inches"
-    },
-    {
-      "init": "2026103012",
-      "map_catalog": "data/forecast-runs/2026103012/map_catalog.json",
-      "gif_manifest": "products/gifs/2026103012/manifest.json",
-      "grib_manifest": "products/grib2/2026103012/manifest.json",
-      "map_count": 147,
-      "display_amount_units": "inches"
-    },
-    {
-      "init": "2026103006",
-      "map_catalog": "data/forecast-runs/2026103006/map_catalog.json",
-      "gif_manifest": "products/gifs/2026103006/manifest.json",
-      "grib_manifest": "products/grib2/2026103006/manifest.json",
-      "map_count": 145,
-      "display_amount_units": "inches"
-    },
-    {
-      "init": "2026103000",
-      "map_catalog": "data/forecast-runs/2026103000/map_catalog.json",
-      "gif_manifest": "products/gifs/2026103000/manifest.json",
-      "grib_manifest": "products/grib2/2026103000/manifest.json",
-      "map_count": 145,
-      "display_amount_units": "inches"
-    },
-    {
-      "init": "2026102918",
-      "map_catalog": "data/forecast-runs/2026102918/map_catalog.json",
-      "gif_manifest": "products/gifs/2026102918/manifest.json",
-      "grib_manifest": "products/grib2/2026102918/manifest.json",
-      "map_count": 145,
-      "display_amount_units": "inches"
-    },
-    {
-      "init": "2026102912",
-      "map_catalog": "data/forecast-runs/2026102912/map_catalog.json",
-      "gif_manifest": "products/gifs/2026102912/manifest.json",
-      "grib_manifest": "products/grib2/2026102912/manifest.json",
-      "map_count": 147,
-      "display_amount_units": "inches"
-    },
-    {
-      "init": "2026102906",
-      "map_catalog": "data/forecast-runs/2026102906/map_catalog.json",
-      "gif_manifest": "products/gifs/2026102906/manifest.json",
-      "grib_manifest": "products/grib2/2026102906/manifest.json",
-      "map_count": 145,
-      "display_amount_units": "inches"
-    },
-    {
-      "init": "2026102900",
-      "map_catalog": "data/forecast-runs/2026102900/map_catalog.json",
-      "gif_manifest": "products/gifs/2026102900/manifest.json",
-      "grib_manifest": "products/grib2/2026102900/manifest.json",
-      "map_count": 145,
-      "display_amount_units": "inches"
-    },
-    {
-      "init": "2026102818",
-      "map_catalog": "data/forecast-runs/2026102818/map_catalog.json",
-      "gif_manifest": "products/gifs/2026102818/manifest.json",
-      "grib_manifest": "products/grib2/2026102818/manifest.json",
-      "map_count": 145,
-      "display_amount_units": "inches"
+      "init": "2026103100",
+      "map_catalog": "data/forecast-runs/2026103100/map_catalog.json",
+      "map_count": 145
     }
-  ]
+  ],
+  "schema_version": 1,
+  "updated_utc": "2026-10-31T19:22:53.202281+00:00"
 }

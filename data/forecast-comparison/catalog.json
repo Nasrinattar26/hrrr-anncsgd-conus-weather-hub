@@ -1,92 +1,29 @@
 {
-  "schema_version": 2,
+  "generated_utc": "2026-10-31T19:22:53.456273+00:00",
   "latest_hrrr_initialization": "2026103112",
   "latest_ready_initialization": "2026103112",
-  "generated_utc": "2026-10-31T16:16:29.727645+00:00",
   "runs": [
     {
-      "init": "2026103112",
       "gefs_init": "2026103112",
-      "status": "ready",
+      "init": "2026103112",
+      "manifest": "data/forecast-comparison/runs/2026103112.json",
       "matching_policy": "same_initialization",
-      "manifest": "data/forecast-comparison/runs/2026103112.json"
+      "status": "ready"
     },
     {
-      "init": "2026103106",
       "gefs_init": "2026103106",
-      "status": "ready",
+      "init": "2026103106",
+      "manifest": "data/forecast-comparison/runs/2026103106.json",
       "matching_policy": "same_initialization",
-      "manifest": "data/forecast-comparison/runs/2026103106.json"
+      "status": "ready"
     },
     {
-      "init": "2026103100",
       "gefs_init": "2026103100",
-      "status": "ready",
+      "init": "2026103100",
+      "manifest": "data/forecast-comparison/runs/2026103100.json",
       "matching_policy": "same_initialization",
-      "manifest": "data/forecast-comparison/runs/2026103100.json"
-    },
-    {
-      "init": "2026103018",
-      "gefs_init": "2026103018",
-      "status": "ready",
-      "matching_policy": "same_initialization",
-      "manifest": "data/forecast-comparison/runs/2026103018.json"
-    },
-    {
-      "init": "2026103012",
-      "gefs_init": "2026103012",
-      "status": "ready",
-      "matching_policy": "same_initialization",
-      "manifest": "data/forecast-comparison/runs/2026103012.json"
-    },
-    {
-      "init": "2026103006",
-      "gefs_init": "2026103006",
-      "status": "ready",
-      "matching_policy": "same_initialization",
-      "manifest": "data/forecast-comparison/runs/2026103006.json"
-    },
-    {
-      "init": "2026103000",
-      "gefs_init": "2026103000",
-      "status": "ready",
-      "matching_policy": "same_initialization",
-      "manifest": "data/forecast-comparison/runs/2026103000.json"
-    },
-    {
-      "init": "2026102918",
-      "gefs_init": "2026102918",
-      "status": "ready",
-      "matching_policy": "same_initialization",
-      "manifest": "data/forecast-comparison/runs/2026102918.json"
-    },
-    {
-      "init": "2026102912",
-      "gefs_init": "2026102912",
-      "status": "ready",
-      "matching_policy": "same_initialization",
-      "manifest": "data/forecast-comparison/runs/2026102912.json"
-    },
-    {
-      "init": "2026102906",
-      "gefs_init": "2026102906",
-      "status": "ready",
-      "matching_policy": "same_initialization",
-      "manifest": "data/forecast-comparison/runs/2026102906.json"
-    },
-    {
-      "init": "2026102900",
-      "gefs_init": "2026102900",
-      "status": "ready",
-      "matching_policy": "same_initialization",
-      "manifest": "data/forecast-comparison/runs/2026102900.json"
-    },
-    {
-      "init": "2026102818",
-      "gefs_init": "2026102818",
-      "status": "ready",
-      "matching_policy": "same_initialization",
-      "manifest": "data/forecast-comparison/runs/2026102818.json"
+      "status": "ready"
     }
-  ]
+  ],
+  "schema_version": 2
 }
