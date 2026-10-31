@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Compare GEFS-based and HRRR-based ANN-CSGD rainfall forecasts for matching 12- and 24-hour valid periods.">
+  <meta name="description" content="Compare GEFS-based and HRRR-based ANN-CSGD rainfall forecasts for matching 6-, 12- and 24-hour valid periods.">
   <title>Compare forecasts · ANN-CSGD Weather Hub</title>
   <link rel="stylesheet" href="../assets/style.css?v=20260729T180318Z">
   <link rel="stylesheet" href="assets/comparison.css?v=3">
@@ -25,7 +25,7 @@
     <div class="compare-links">
       <a href="raw-hrrr/">Raw HRRR versus ANN-CSGD rainfall ↗</a>
       <a href="../index.html">HRRR forecast dashboard ↗</a>
-      <a href="https://nasrinattar26.github.io/ann-csgd-worldcup-weather-hub/">GEFS forecast dashboard ↗</a>
+      <a href="../index.html?model=gefs">GEFS ANN-CSGD model ↗</a>
       <a href="../model-comparison/">Compare verification performance ↗</a>
     </div>
   </div></header>
@@ -56,13 +56,14 @@
     <section class="compare-panel compare-explanation" aria-labelledby="reading-title">
       <h2 id="reading-title">Reading these maps</h2>
       <p>Expected rainfall is shown in inches. Exceedance probabilities are shown as percentages for the same fixed rainfall threshold in both panels. Both fields are displayed at matching 0.25° grid locations using their common finite land cells; no additional interpolation is performed for this page.</p>
-      <p>This page compares the two <strong>postprocessed ANN-CSGD systems</strong> for 12- and 24-hour accumulations: expected rainfall and the probability of exceeding 0.5, 1 and 2 inches. The HRRR dashboard also provides 6-hour guidance. A 6-hour GEFS counterpart is not available in the reviewed daily workflow, so that selection explains the limitation and links to HRRR.</p>
-      <p><strong>The 24-hour methods differ.</strong> GEFS probabilities come from stored Monte Carlo samples of the sum of two non-overlapping 12-hour CSGD distributions, assuming independence between periods. GEFS expected rainfall is the sum of their expectations. HRRR uses its directly predicted 24-hour CSGD distribution. The GEFS construction does not represent temporal dependence between the two periods. Sampling variability also affects the probabilities. The sample count is displayed with the selected 24-hour forecast.</p>
+      <p>This page compares the two <strong>postprocessed ANN-CSGD systems</strong> over their common 48-hour forecast horizon. Newly trained GEFS runs provide direct 6-, 12- and 24-hour distributions; archived runs may provide fewer durations. Availability and construction are recorded for each selected run. Expected rainfall and probabilities of exceeding 0.5, 1 and 2 inches use matching windows and common finite land cells.</p>
+      <p><strong>Read the selected run’s method note.</strong> New direct-duration comparisons use a separately trained model for each duration in both systems. Earlier GEFS 24-hour products instead summed independent samples from two non-overlapping 12-hour distributions; those archived runs retain their sampling count and independence assumption. Their construction differs from HRRR’s directly predicted 24-hour distribution.</p>
       <p>Maps are generated from saved numerical forecast fields. Initialization times and lead intervals appear above both panels. Up to twelve recent HRRR runs are retained. A missing same-cycle source is labeled as waiting; no older GEFS run is substituted. These maps compare forecast guidance, not verified model skill.</p>
       <p><a href="../methods.html#verification">Read the verification methods and spatial-resolution limitations</a>.</p>
     </section>
   </main>
   <footer><p>Research product developed by Nasrin Attar under the supervision of Prof. Yu Zhang at The University of Texas at Arlington.</p></footer>
-  <script src="assets/comparison.js?v=5-same-initialization"></script>
+  <script src="assets/comparison.js?v=6-direct-duration-gefs"></script>
 </body>
 </html>
+

@@ -1836,13 +1836,13 @@ async function loadSelectedForecast(init) {
 }
 
 async function loadCoreSite() {
-  siteSummary = await fetchJsonCatalog("./data/site_summary.json");
+  siteSummary = await fetchJsonCatalog(window.ANN_MODEL_CONFIG?.summaryURL || "./data/site_summary.json");
   loadOverview(siteSummary);
 }
 
 async function loadSite() {
   await loadCoreSite();
-  const archive = await fetchJsonCatalog("./data/forecast-runs/catalog.json");
+  const archive = await fetchJsonCatalog(window.ANN_MODEL_CONFIG?.catalogURL || "./data/forecast-runs/catalog.json");
   forecastRuns = archive.runs.filter(item => /^\d{10}$/.test(item.init) && item.map_catalog)
     .sort((a, b) => b.init.localeCompare(a.init));
   if (!forecastRuns.length) throw new Error("No complete forecasts are in the archive.");

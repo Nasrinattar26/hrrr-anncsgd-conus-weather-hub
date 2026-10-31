@@ -1,0 +1,468 @@
+{
+  "version": "gefs-duration-direct-v1",
+  "created_utc": "2026-10-31T03:16:48.376457+00:00",
+  "models": {
+    "6": {
+      "version": "gefs-duration-direct-v1",
+      "created_utc": "2026-10-30T20:13:34.787418+00:00",
+      "duration_hours": 6,
+      "horizon_hours": 192,
+      "model": "/data/Nasrin/Ann_csgd_project/gefs_duration_specific_v1/models/6h/gefs_anncsgd_6h_best.keras",
+      "model_sha256": "127a8600793cb8b14349839589b69b0a36f46ab5ef841b3fe46ace8b28305846",
+      "stats": "/data/Nasrin/Ann_csgd_project/gefs_duration_specific_v1/models/6h/stats.npz",
+      "stats_sha256": "153a0f36e9c17ea1919b9ce519598e36ae388b5a263d9a80f8820f6d9ead1c3c",
+      "network": [
+        12,
+        128,
+        128,
+        64,
+        3
+      ],
+      "dropout": 0.05,
+      "activation": "elu",
+      "bounds": {
+        "min_mu": 0.0001,
+        "min_sigma": 0.05,
+        "max_shift": 20.0,
+        "max_log_mu": 5.5,
+        "max_log_sigma": 4.5,
+        "min_shape": 0.05,
+        "max_shape": 100.0,
+        "min_scale": 0.0001,
+        "max_scale": 500.0
+      },
+      "train_years": [
+        2021,
+        2022,
+        2023
+      ],
+      "validation_years": [
+        2024
+      ],
+      "test_years": [
+        2025
+      ],
+      "record_counts": {
+        "train": 14104,
+        "validation": 5064,
+        "test": 3200
+      },
+      "training_initialization_hours_utc": [
+        0
+      ],
+      "training_records_by_year": {
+        "2021": 4712,
+        "2022": 4712,
+        "2023": 4680
+      },
+      "dataset_catalog_sha256": "80928b2d1c5c2363be104548fdd660210d86d2fc2587d3c6fa634810da521ed4",
+      "validation_loss_min": 0.39429306983947754,
+      "independent_test": {
+        "mean_crps_mm": 0.34455405537833855,
+        "sampled_cases": 300000,
+        "note": "Reproducible random point sample; not full-grid/full-period verification"
+      },
+      "scaler_policy": "Source-specific scaler estimated from training records only",
+      "crps_formula": "complete CSGD CRPS, including shift*F(0)^2",
+      "training_code_sha256": "864c2eae146534d7692baafb0565e8c2aaf2768f687b6b8ab0409d74e0b91121",
+      "config": {
+        "version": "gefs-duration-direct-v1",
+        "project_root": "/data/Nasrin/Ann_csgd_project",
+        "workspace": "/data/Nasrin/Ann_csgd_project/gefs_duration_specific_v1",
+        "site_repo": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/github/hrrr-anncsgd-conus-weather-hub",
+        "mask": "/data/Nasrin/Ann_csgd_project/CONUS_land_mask_on_GEFSgrid.npz",
+        "raw_roots": [
+          "/data/Nasrin/Ann_csgd_project/gefs_duration_specific_v1/restored_gefs_0p50",
+          "/HDD_Pool/pdas/GEFS_realtime_upperair",
+          "/data/Nasrin/Ann_csgd_project/workflow/GEFS_realtime_upperair",
+          "/data/Nasrin/Ann_csgd_project/auto_website_lead8/gefs_realtime"
+        ],
+        "observation_patterns": {
+          "6": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/mrms_6h_native/archives/MRMS_native6h_every6h_ann025_{year}.npz",
+          "12": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/mrms_yearly_landcomplete/MRMS_rolling12h_every6h_on_GEFSgrid_{year}_LANDCOMPLETE.npz",
+          "24": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/mrms_yearly_landcomplete/MRMS_rolling24h_every6h_on_GEFSgrid_{year}_LANDCOMPLETE.npz"
+        },
+        "training_years": [
+          2021,
+          2022,
+          2023
+        ],
+        "validation_years": [
+          2024
+        ],
+        "test_years": [
+          2025
+        ],
+        "min_initializations": {
+          "train": 100,
+          "validation": 30,
+          "test": 30
+        },
+        "initialization_hours": [
+          0,
+          6,
+          12,
+          18
+        ],
+        "forecast_horizon_hours": 192,
+        "batch_size": 32768,
+        "records_per_batch": 8,
+        "steps_per_epoch": 1000,
+        "epochs": 20,
+        "scaler_samples": 2000000,
+        "validation_samples": 300000,
+        "test_samples": 300000,
+        "learning_rate": 0.0005,
+        "seed": 12345,
+        "bounds": {
+          "min_mu": 0.0001,
+          "min_sigma": 0.05,
+          "max_shift": 20.0,
+          "max_log_mu": 5.5,
+          "max_log_sigma": 4.5,
+          "min_shape": 0.05,
+          "max_shape": 100.0,
+          "min_scale": 0.0001,
+          "max_scale": 500.0
+        },
+        "retain_runs": 2,
+        "max_gefs_site_bytes": 450000000,
+        "max_total_site_bytes": 950000000,
+        "latency_hours": 6,
+        "ari_files": {
+          "6": {
+            "2": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/ari_thresholds/wpc_allusa_v1/wpc_allusa_2yr_06h_ann025_landmask.npz",
+            "5": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/ari_thresholds/wpc_allusa_v1/wpc_allusa_5yr_06h_ann025_landmask.npz"
+          },
+          "12": {
+            "2": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/ari_thresholds/wpc_allusa_v1/wpc_allusa_2yr_12h_ann025_landmask.npz",
+            "5": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/ari_thresholds/wpc_allusa_v1/wpc_allusa_5yr_12h_ann025_landmask.npz"
+          },
+          "24": {
+            "2": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/ari_thresholds/wpc_allusa_v1/wpc_allusa_2yr_24h_ann025_landmask.npz",
+            "5": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/ari_thresholds/wpc_allusa_v1/wpc_allusa_5yr_24h_ann025_landmask.npz"
+          }
+        },
+        "crps_formula": "complete CSGD CRPS, including shift*F(0)^2",
+        "source_recovery_provenance": {
+          "version": "gefs-noaa-coverage-recovery-v1",
+          "activated_utc": "2026-10-30T15:32:55.843400+00:00",
+          "plan_sha256": "f92de9d03bdcfa01f3ec0343cabb6f0afad02832aa5329c64922d66a40efe361",
+          "program_sha256": "f2fe98e7b8d14d6d723ea30ed40267713b62271d9b77654ed168ea7ae47a47b5",
+          "restored_root": "/data/Nasrin/Ann_csgd_project/gefs_duration_specific_v1/restored_gefs_0p50",
+          "cycles": 714
+        }
+      },
+      "grid_sha256": "bbed54220754e9561274d998e90a0a6820ce6738e4ae1fff7208ec852741fe30",
+      "interpolation_policy": "bilinear_land_plus_5x5_predictor_halo_v1"
+    },
+    "12": {
+      "version": "gefs-duration-direct-v1",
+      "created_utc": "2026-10-31T00:43:21.060415+00:00",
+      "duration_hours": 12,
+      "horizon_hours": 192,
+      "model": "/data/Nasrin/Ann_csgd_project/gefs_duration_specific_v1/models/12h/gefs_anncsgd_12h_best.keras",
+      "model_sha256": "5e6c745994021a86a54d4c273aad655007a469685b4473edb037073f046c1092",
+      "stats": "/data/Nasrin/Ann_csgd_project/gefs_duration_specific_v1/models/12h/stats.npz",
+      "stats_sha256": "90209036b5c34feb964457561b73d4af40c5e1a801d08ace735914e03624599b",
+      "network": [
+        12,
+        128,
+        128,
+        64,
+        3
+      ],
+      "dropout": 0.05,
+      "activation": "elu",
+      "bounds": {
+        "min_mu": 0.0001,
+        "min_sigma": 0.05,
+        "max_shift": 20.0,
+        "max_log_mu": 5.5,
+        "max_log_sigma": 4.5,
+        "min_shape": 0.05,
+        "max_shape": 100.0,
+        "min_scale": 0.0001,
+        "max_scale": 500.0
+      },
+      "train_years": [
+        2021,
+        2022,
+        2023
+      ],
+      "validation_years": [
+        2024
+      ],
+      "test_years": [
+        2025
+      ],
+      "record_counts": {
+        "train": 13606,
+        "validation": 4902,
+        "test": 3100
+      },
+      "training_initialization_hours_utc": [
+        0
+      ],
+      "training_records_by_year": {
+        "2021": 4546,
+        "2022": 4545,
+        "2023": 4515
+      },
+      "dataset_catalog_sha256": "d8257aa99830e750a05b9ba123f9666babcd3ad66b38027362942165491e5d42",
+      "validation_loss_min": 0.6929943561553955,
+      "independent_test": {
+        "mean_crps_mm": 0.5912934825305302,
+        "sampled_cases": 300000,
+        "note": "Reproducible random point sample; not full-grid/full-period verification"
+      },
+      "scaler_policy": "Source-specific scaler estimated from training records only",
+      "crps_formula": "complete CSGD CRPS, including shift*F(0)^2",
+      "training_code_sha256": "864c2eae146534d7692baafb0565e8c2aaf2768f687b6b8ab0409d74e0b91121",
+      "config": {
+        "version": "gefs-duration-direct-v1",
+        "project_root": "/data/Nasrin/Ann_csgd_project",
+        "workspace": "/data/Nasrin/Ann_csgd_project/gefs_duration_specific_v1",
+        "site_repo": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/github/hrrr-anncsgd-conus-weather-hub",
+        "mask": "/data/Nasrin/Ann_csgd_project/CONUS_land_mask_on_GEFSgrid.npz",
+        "raw_roots": [
+          "/data/Nasrin/Ann_csgd_project/gefs_duration_specific_v1/restored_gefs_0p50",
+          "/HDD_Pool/pdas/GEFS_realtime_upperair",
+          "/data/Nasrin/Ann_csgd_project/workflow/GEFS_realtime_upperair",
+          "/data/Nasrin/Ann_csgd_project/auto_website_lead8/gefs_realtime"
+        ],
+        "observation_patterns": {
+          "6": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/mrms_6h_native/archives/MRMS_native6h_every6h_ann025_{year}.npz",
+          "12": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/mrms_yearly_landcomplete/MRMS_rolling12h_every6h_on_GEFSgrid_{year}_LANDCOMPLETE.npz",
+          "24": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/mrms_yearly_landcomplete/MRMS_rolling24h_every6h_on_GEFSgrid_{year}_LANDCOMPLETE.npz"
+        },
+        "training_years": [
+          2021,
+          2022,
+          2023
+        ],
+        "validation_years": [
+          2024
+        ],
+        "test_years": [
+          2025
+        ],
+        "min_initializations": {
+          "train": 100,
+          "validation": 30,
+          "test": 30
+        },
+        "initialization_hours": [
+          0,
+          6,
+          12,
+          18
+        ],
+        "forecast_horizon_hours": 192,
+        "batch_size": 32768,
+        "records_per_batch": 8,
+        "steps_per_epoch": 1000,
+        "epochs": 20,
+        "scaler_samples": 2000000,
+        "validation_samples": 300000,
+        "test_samples": 300000,
+        "learning_rate": 0.0005,
+        "seed": 12345,
+        "bounds": {
+          "min_mu": 0.0001,
+          "min_sigma": 0.05,
+          "max_shift": 20.0,
+          "max_log_mu": 5.5,
+          "max_log_sigma": 4.5,
+          "min_shape": 0.05,
+          "max_shape": 100.0,
+          "min_scale": 0.0001,
+          "max_scale": 500.0
+        },
+        "retain_runs": 2,
+        "max_gefs_site_bytes": 450000000,
+        "max_total_site_bytes": 950000000,
+        "latency_hours": 6,
+        "ari_files": {
+          "6": {
+            "2": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/ari_thresholds/wpc_allusa_v1/wpc_allusa_2yr_06h_ann025_landmask.npz",
+            "5": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/ari_thresholds/wpc_allusa_v1/wpc_allusa_5yr_06h_ann025_landmask.npz"
+          },
+          "12": {
+            "2": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/ari_thresholds/wpc_allusa_v1/wpc_allusa_2yr_12h_ann025_landmask.npz",
+            "5": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/ari_thresholds/wpc_allusa_v1/wpc_allusa_5yr_12h_ann025_landmask.npz"
+          },
+          "24": {
+            "2": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/ari_thresholds/wpc_allusa_v1/wpc_allusa_2yr_24h_ann025_landmask.npz",
+            "5": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/ari_thresholds/wpc_allusa_v1/wpc_allusa_5yr_24h_ann025_landmask.npz"
+          }
+        },
+        "crps_formula": "complete CSGD CRPS, including shift*F(0)^2",
+        "source_recovery_provenance": {
+          "version": "gefs-noaa-coverage-recovery-v1",
+          "activated_utc": "2026-10-30T15:32:55.843400+00:00",
+          "plan_sha256": "f92de9d03bdcfa01f3ec0343cabb6f0afad02832aa5329c64922d66a40efe361",
+          "program_sha256": "f2fe98e7b8d14d6d723ea30ed40267713b62271d9b77654ed168ea7ae47a47b5",
+          "restored_root": "/data/Nasrin/Ann_csgd_project/gefs_duration_specific_v1/restored_gefs_0p50",
+          "cycles": 714
+        }
+      },
+      "grid_sha256": "bbed54220754e9561274d998e90a0a6820ce6738e4ae1fff7208ec852741fe30",
+      "interpolation_policy": "bilinear_land_plus_5x5_predictor_halo_v1"
+    },
+    "24": {
+      "version": "gefs-duration-direct-v1",
+      "created_utc": "2026-10-31T03:16:48.346016+00:00",
+      "duration_hours": 24,
+      "horizon_hours": 192,
+      "model": "/data/Nasrin/Ann_csgd_project/gefs_duration_specific_v1/models/24h/gefs_anncsgd_24h_best.keras",
+      "model_sha256": "1b45888abe5b0b69c65784d619e5d460acf706bd6c4b5329816db7afba3564a4",
+      "stats": "/data/Nasrin/Ann_csgd_project/gefs_duration_specific_v1/models/24h/stats.npz",
+      "stats_sha256": "8dd31e7f4686a7b35d449230687f4cd555e72fa21574b264dd9eb6569fa240b3",
+      "network": [
+        12,
+        128,
+        128,
+        64,
+        3
+      ],
+      "dropout": 0.05,
+      "activation": "elu",
+      "bounds": {
+        "min_mu": 0.0001,
+        "min_sigma": 0.05,
+        "max_shift": 20.0,
+        "max_log_mu": 5.5,
+        "max_log_sigma": 4.5,
+        "min_shape": 0.05,
+        "max_shape": 100.0,
+        "min_scale": 0.0001,
+        "max_scale": 500.0
+      },
+      "train_years": [
+        2021,
+        2022,
+        2023
+      ],
+      "validation_years": [
+        2024
+      ],
+      "test_years": [
+        2025
+      ],
+      "record_counts": {
+        "train": 12661,
+        "validation": 4578,
+        "test": 2900
+      },
+      "training_initialization_hours_utc": [
+        0
+      ],
+      "training_records_by_year": {
+        "2021": 4230,
+        "2022": 4230,
+        "2023": 4201
+      },
+      "dataset_catalog_sha256": "e3bb957994c2b905924ff75b1aaae48e8928a4812a5c60d429d9532a9d75e027",
+      "validation_loss_min": 1.239859700202942,
+      "independent_test": {
+        "mean_crps_mm": 1.1117813854479064,
+        "sampled_cases": 300000,
+        "note": "Reproducible random point sample; not full-grid/full-period verification"
+      },
+      "scaler_policy": "Source-specific scaler estimated from training records only",
+      "crps_formula": "complete CSGD CRPS, including shift*F(0)^2",
+      "training_code_sha256": "864c2eae146534d7692baafb0565e8c2aaf2768f687b6b8ab0409d74e0b91121",
+      "config": {
+        "version": "gefs-duration-direct-v1",
+        "project_root": "/data/Nasrin/Ann_csgd_project",
+        "workspace": "/data/Nasrin/Ann_csgd_project/gefs_duration_specific_v1",
+        "site_repo": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/github/hrrr-anncsgd-conus-weather-hub",
+        "mask": "/data/Nasrin/Ann_csgd_project/CONUS_land_mask_on_GEFSgrid.npz",
+        "raw_roots": [
+          "/data/Nasrin/Ann_csgd_project/gefs_duration_specific_v1/restored_gefs_0p50",
+          "/HDD_Pool/pdas/GEFS_realtime_upperair",
+          "/data/Nasrin/Ann_csgd_project/workflow/GEFS_realtime_upperair",
+          "/data/Nasrin/Ann_csgd_project/auto_website_lead8/gefs_realtime"
+        ],
+        "observation_patterns": {
+          "6": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/mrms_6h_native/archives/MRMS_native6h_every6h_ann025_{year}.npz",
+          "12": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/mrms_yearly_landcomplete/MRMS_rolling12h_every6h_on_GEFSgrid_{year}_LANDCOMPLETE.npz",
+          "24": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/mrms_yearly_landcomplete/MRMS_rolling24h_every6h_on_GEFSgrid_{year}_LANDCOMPLETE.npz"
+        },
+        "training_years": [
+          2021,
+          2022,
+          2023
+        ],
+        "validation_years": [
+          2024
+        ],
+        "test_years": [
+          2025
+        ],
+        "min_initializations": {
+          "train": 100,
+          "validation": 30,
+          "test": 30
+        },
+        "initialization_hours": [
+          0,
+          6,
+          12,
+          18
+        ],
+        "forecast_horizon_hours": 192,
+        "batch_size": 32768,
+        "records_per_batch": 8,
+        "steps_per_epoch": 1000,
+        "epochs": 20,
+        "scaler_samples": 2000000,
+        "validation_samples": 300000,
+        "test_samples": 300000,
+        "learning_rate": 0.0005,
+        "seed": 12345,
+        "bounds": {
+          "min_mu": 0.0001,
+          "min_sigma": 0.05,
+          "max_shift": 20.0,
+          "max_log_mu": 5.5,
+          "max_log_sigma": 4.5,
+          "min_shape": 0.05,
+          "max_shape": 100.0,
+          "min_scale": 0.0001,
+          "max_scale": 500.0
+        },
+        "retain_runs": 2,
+        "max_gefs_site_bytes": 450000000,
+        "max_total_site_bytes": 950000000,
+        "latency_hours": 6,
+        "ari_files": {
+          "6": {
+            "2": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/ari_thresholds/wpc_allusa_v1/wpc_allusa_2yr_06h_ann025_landmask.npz",
+            "5": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/ari_thresholds/wpc_allusa_v1/wpc_allusa_5yr_06h_ann025_landmask.npz"
+          },
+          "12": {
+            "2": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/ari_thresholds/wpc_allusa_v1/wpc_allusa_2yr_12h_ann025_landmask.npz",
+            "5": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/ari_thresholds/wpc_allusa_v1/wpc_allusa_5yr_12h_ann025_landmask.npz"
+          },
+          "24": {
+            "2": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/ari_thresholds/wpc_allusa_v1/wpc_allusa_2yr_24h_ann025_landmask.npz",
+            "5": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/ari_thresholds/wpc_allusa_v1/wpc_allusa_5yr_24h_ann025_landmask.npz"
+          }
+        },
+        "crps_formula": "complete CSGD CRPS, including shift*F(0)^2",
+        "source_recovery_provenance": {
+          "version": "gefs-noaa-coverage-recovery-v1",
+          "activated_utc": "2026-10-30T15:32:55.843400+00:00",
+          "plan_sha256": "f92de9d03bdcfa01f3ec0343cabb6f0afad02832aa5329c64922d66a40efe361",
+          "program_sha256": "f2fe98e7b8d14d6d723ea30ed40267713b62271d9b77654ed168ea7ae47a47b5",
+          "restored_root": "/data/Nasrin/Ann_csgd_project/gefs_duration_specific_v1/restored_gefs_0p50",
+          "cycles": 714
+        }
+      },
+      "grid_sha256": "bbed54220754e9561274d998e90a0a6820ce6738e4ae1fff7208ec852741fe30",
+      "interpolation_policy": "bilinear_land_plus_5x5_predictor_halo_v1"
+    }
+  }
+}

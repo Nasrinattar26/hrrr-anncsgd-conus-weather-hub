@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "runs": [
+    {
+      "init": "2026103112",
+      "map_catalog": "data/gefs/forecast-runs/2026103112/map_catalog.json",
+      "gif_manifest": "products/gefs/gifs/2026103112/manifest.json",
+      "grib_manifest": "products/gefs/grib2/2026103112/manifest.json",
+      "map_count": 673,
+      "display_amount_units": "inches"
+    }
+  ],
+  "latest_initialization": "2026103112",
+  "retention_count": 2,
+  "updated_utc": "2026-10-31T19:32:55.163221+00:00"
+}

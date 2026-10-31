@@ -40,8 +40,8 @@
   function missing(hours,message) {return {duration_hours:hours,status:'unavailable',message,windows:[],products:[]};}
   function normalize(value,row) {
     const h=initial(row.init),g=initial(row.gefs_init);
-    const exact=value.schema_version===3;
-    if(![1,2,3].includes(value.schema_version) || value.hrrr_init!==row.init || value.gefs_init!==row.gefs_init) throw Error('Forecast pair metadata is inconsistent.');
+    const exact=value.schema_version>=3;
+    if(![1,2,3,4].includes(value.schema_version) || value.hrrr_init!==row.init || value.gefs_init!==row.gefs_init) throw Error('Forecast pair metadata is inconsistent.');
     if(exact) {
       if(h!==g || value.matching_policy!=='same_initialization' || value.initialization_offset_hours!==0 || row.matching_policy!=='same_initialization') throw Error('The comparison does not have matching initializations.');
     } else if(![0,21600000,43200000,64800000].includes(h-g) || row.gefs_init!==row.init.slice(0,8)+'00') throw Error('Archived forecast pair metadata is inconsistent.');
@@ -54,6 +54,7 @@
     if(value.status!=='ready') {
       defaults['12h'].message=defaults['24h'].message=value.message||'No validated comparison is available for this run.';
       defaults['12h'].status=defaults['24h'].status=value.status;
+      if(value.schema_version===4){defaults['6h'].status=value.status;defaults['6h'].message=value.message||'Waiting for the matching direct 6-hour forecasts.';}
       return {...value,durations:defaults};
     }
     if(value.schema_version===1) {
@@ -66,8 +67,14 @@
       const hours=Number(key.replace('h',''));
       if(![6,12,24].includes(hours) || group.duration_hours!==hours) throw Error('Invalid accumulation duration.');
       if(['waiting','unavailable'].includes(group.status)) continue;
-      if(hours===6 || group.status!=='ready' || !group.windows?.length || !group.products?.length) throw Error('Incomplete forecast comparison.');
-      if(hours===24 && (!Number.isInteger(group.gefs_nsamples) || group.gefs_nsamples<1 || !group.method_note)) throw Error('Missing 24-hour construction metadata.');
+      if((hours===6 && value.schema_version<4) || group.status!=='ready' || !group.windows?.length || !group.products?.length) throw Error('Incomplete forecast comparison.');
+      if(value.schema_version===4) {
+        for(const source of ['gefs','hrrr']) {
+          const construction=group.construction?.[source];
+          if(construction?.method!=='direct_csgd' || construction.model_duration_hours!==hours) throw Error('Missing direct duration-specific construction metadata.');
+        }
+        if(!group.method_note) throw Error('Missing construction explanation.');
+      } else if(hours===24 && (!Number.isInteger(group.gefs_nsamples) || group.gefs_nsamples<1 || !group.method_note)) throw Error('Missing 24-hour construction metadata.');
       const names=new Set(group.products.map(p=>p.id));
       if(names.size!==4 || !['expected_precip','prob_gt_0p5inch','prob_gt_1inch','prob_gt_2inch'].every(id=>names.has(id))) throw Error('Invalid comparison products.');
       const windows=new Set();
@@ -101,7 +108,7 @@
       img.src=source;img.alt=`${label(p.label)}: GEFS ${data.gefs_init} and HRRR ${data.hrrr_init}, valid ${fmt(w.valid_start)} to ${fmt(w.valid_end)} UTC.`;
       $('full-image').href=source;figure.hidden=false;
       status.textContent=`Valid ${fmt(w.valid_start)} → ${fmt(w.valid_end)} UTC · ${group.duration_hours} hours · ${p.common_valid_cells.toLocaleString()} common land cells`;
-      const timing=data.schema_version===3?'Same initialization':data.gefs_init===data.hrrr_init?'Archived pair · same initialization':'Archived pair · different initializations';
+      const timing=data.schema_version>=3?'Same initialization':data.gefs_init===data.hrrr_init?'Archived pair · same initialization':'Archived pair · different initializations';
       $('comparison-caption').textContent=`${timing} · GEFS lead ${w.gefs_end_fhr-group.duration_hours}–${w.gefs_end_fhr} h · HRRR lead ${w.hrrr_end_fhr-group.duration_hours}–${w.hrrr_end_fhr} h · ${p.units==='inches'?'Amounts in inches':'Probabilities in percent'}`;
     };
     preload.onerror=fail;preload.src=source;
@@ -168,3 +175,4 @@
   });
   refresh();
 })();
+
