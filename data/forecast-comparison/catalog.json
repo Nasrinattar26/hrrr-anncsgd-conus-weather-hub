@@ -2,7 +2,7 @@
   "schema_version": 2,
   "latest_hrrr_initialization": "2026110212",
   "latest_ready_initialization": "2026110206",
-  "generated_utc": "2026-11-02T14:23:02.843630+00:00",
+  "generated_utc": "2026-11-02T14:41:54.021724+00:00",
   "runs": [
     {
       "init": "2026110212",
@@ -22,7 +22,7 @@
       "init": "2026110200",
       "gefs_init": "2026110200",
       "status": "ready",
-      "matching_policy": "legacy_valid_period",
+      "matching_policy": "same_initialization",
       "manifest": "data/forecast-comparison/runs/2026110200.json"
     }
   ]
