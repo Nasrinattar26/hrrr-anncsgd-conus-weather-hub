@@ -86,7 +86,7 @@
         if(!Array.isArray(w.products) || w.products.length!==4 || new Set(w.products.map(p=>p.id)).size!==4) throw Error('Missing forecast products.');
         for(const p of w.products) {
           const expected=p.id==='expected_precip'?null:Number(p.id.replace('prob_gt_','').replace('inch','').replace('p','.'));
-          if(!names.has(p.id) || p.threshold_inch!==expected || p.units!==(expected===null?'inches':'%') || !new RegExp(`^products/forecast-comparison/${row.init}/[a-zA-Z0-9_-]+\\.png$`).test(p.path) || !Number.isInteger(p.common_valid_cells) || p.common_valid_cells<=0) throw Error('Invalid forecast image metadata.');
+          if(!names.has(p.id) || p.threshold_inch!==expected || p.units!==(expected===null?'inches':'%') || !new RegExp(`^products/forecast-comparison/${row.init}/[a-zA-Z0-9_-]+\\.(?:png|webp)$`).test(p.path) || !Number.isInteger(p.common_valid_cells) || p.common_valid_cells<=0) throw Error('Invalid forecast image metadata.');
         }
       }
     }

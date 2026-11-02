@@ -78,9 +78,11 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f00_f06_expected_precip_1e50c6f3e37c.png",
-              "sha256": "26f14c66dc9c36ad03b78c582ff2ad275118ee87b581ccbb01943ca59a545136",
-              "size_bytes": 43241
+              "path": "products/forecast-comparison/2026110200/6h_f00_f06_expected_precip_1e50c6f3e37c.webp",
+              "sha256": "40d4dac8ae83c01eb75a53432c6a0098085e4d33bce959a58687e9c607061d35",
+              "size_bytes": 15264,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "b05f3fdd22dc92459c95104d9ad6e548171d459d45375a296792cfe4a1e129dc"
             },
             {
               "id": "prob_gt_0p5inch",
@@ -88,9 +90,11 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f00_f06_prob_gt_0p5inch_fcc37ba1d1af.png",
-              "sha256": "f0c99540e31c59ed6dc904e844610356c66f43a5fc7cb56f0170ec52516b98c0",
-              "size_bytes": 45490
+              "path": "products/forecast-comparison/2026110200/6h_f00_f06_prob_gt_0p5inch_fcc37ba1d1af.webp",
+              "sha256": "0f11c63c8c6447879913605c9062e4fc90dbafe5405e0dafb40d5d0eb6297cb2",
+              "size_bytes": 16118,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "5d34ed3d5e2e787834414d8dfd00d3a313578b65e1a6b660871f02e8a196c9e4"
             },
             {
               "id": "prob_gt_1inch",
@@ -98,9 +102,11 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f00_f06_prob_gt_1inch_dda8cdacdd85.png",
-              "sha256": "7d21ecdb7f1864f237fa81f5bd17754e34752a3a050769f324a005f2b97b0f34",
-              "size_bytes": 38925
+              "path": "products/forecast-comparison/2026110200/6h_f00_f06_prob_gt_1inch_dda8cdacdd85.webp",
+              "sha256": "ac99b495d51e90249f7222df9cc1a529cdf700aec5d514cc03dde72d66bb8792",
+              "size_bytes": 13678,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "cc8bd794045a96b7b0f12a2eeb4531c846d28850784b7e9ef52b72252b12d6be"
             },
             {
               "id": "prob_gt_2inch",
@@ -108,9 +114,11 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f00_f06_prob_gt_2inch_a02323ace947.png",
-              "sha256": "b0a30ba9e4b8ac6082acab1c0040d10bc8ab27191e1300e0c9798e7d938219a4",
-              "size_bytes": 36687
+              "path": "products/forecast-comparison/2026110200/6h_f00_f06_prob_gt_2inch_a02323ace947.webp",
+              "sha256": "45dd027eebe5d701af98a99f292ca0dcdab9aae2c801ae7f305053c44ffa3fa7",
+              "size_bytes": 12370,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "747a6f71d0abe5915b31d864c894734800c2a2cc58ab74c1ba203799c077d0ca"
             }
           ]
         },
@@ -133,9 +141,11 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f06_f12_expected_precip_03bbe3be40f7.png",
-              "sha256": "8d969ea759d057152922b4370eaf593879968146f588df1af2a9aaec79d0c23d",
-              "size_bytes": 42669
+              "path": "products/forecast-comparison/2026110200/6h_f06_f12_expected_precip_03bbe3be40f7.webp",
+              "sha256": "9820921464148d9bcc1dc2b43d0528103a29d8b88dacbda9f05bbc1b1811ff69",
+              "size_bytes": 15124,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "b73e9fe0f7f9ef35e93014d16c7e1f3bba3585a4dd9776ae508efa38a012bacc"
             },
             {
               "id": "prob_gt_0p5inch",
@@ -143,9 +153,11 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f06_f12_prob_gt_0p5inch_7585f85777fd.png",
-              "sha256": "15ae06326799dd5708e4e45c230e5817c159be733c58350fcf07b78a1f9a40f3",
-              "size_bytes": 45958
+              "path": "products/forecast-comparison/2026110200/6h_f06_f12_prob_gt_0p5inch_7585f85777fd.webp",
+              "sha256": "c4b76da3b0765a22b41b580fff85354afd221813ae2c9cea9bdca77f0d48d808",
+              "size_bytes": 16306,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "1675f33a5e171a445196c77ca34396c806cbb6709c361c370c797535b308aeb4"
             },
             {
               "id": "prob_gt_1inch",
@@ -153,9 +165,11 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f06_f12_prob_gt_1inch_fa36bfb2672d.png",
-              "sha256": "5d4b2b648aae87b2146792d6ab7f2ab6550aed6bb22dcbcd9e05b0424ceb74fc",
-              "size_bytes": 39879
+              "path": "products/forecast-comparison/2026110200/6h_f06_f12_prob_gt_1inch_fa36bfb2672d.webp",
+              "sha256": "1e6fbc2ff3c4d7476112364fc6937965a272927cbdf3ceae0185349a0be1994e",
+              "size_bytes": 13882,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "e447d2fd7e73bba23a4cd7683c4cca5a76bd858ae387ab8d9e02af13af7d97ba"
             },
             {
               "id": "prob_gt_2inch",
@@ -163,9 +177,11 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f06_f12_prob_gt_2inch_031bd6f95909.png",
-              "sha256": "31d8d57966f7d949e995320b3f6bbd0c1f51e4c326bcd916651ce01bd767b9ae",
-              "size_bytes": 36844
+              "path": "products/forecast-comparison/2026110200/6h_f06_f12_prob_gt_2inch_031bd6f95909.webp",
+              "sha256": "d78d0aabe24d5ea61969c99d225f92d84e3df3e31307a847743dd6e96f053cf8",
+              "size_bytes": 12414,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "dfa1a69bc0db57c470eedced28cac5535340bb0742bdebad92079b173d42914f"
             }
           ]
         },
@@ -188,9 +204,11 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f12_f18_expected_precip_c7168091d686.png",
-              "sha256": "f86f4ff9590a1eade9529526cdaabaa48339bda698e5162e85e39ca3a2ccbc1a",
-              "size_bytes": 41533
+              "path": "products/forecast-comparison/2026110200/6h_f12_f18_expected_precip_c7168091d686.webp",
+              "sha256": "28c87a8f4e0fc451880aae8cc2e720d1cfa1a7857aef3c6334ef18ad1762b5f5",
+              "size_bytes": 14662,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "2a5c43e012bffeebebc76299ed62a61681f69ff5e684594331c2a2ae182a8296"
             },
             {
               "id": "prob_gt_0p5inch",
@@ -198,9 +216,11 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f12_f18_prob_gt_0p5inch_2b757fe64553.png",
-              "sha256": "72ceb688060c322a637e2c8268b5287f3f5006515751d99fbadec58173d275a0",
-              "size_bytes": 43916
+              "path": "products/forecast-comparison/2026110200/6h_f12_f18_prob_gt_0p5inch_2b757fe64553.webp",
+              "sha256": "adf98010adeb704e344b1c3647d3666502394a96fbf41db2d670c42c19c89b56",
+              "size_bytes": 15620,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "421c6d5ce078d241dc9cefd99c8f9ce7abc67b701d67f2ceee2b446e5d786104"
             },
             {
               "id": "prob_gt_1inch",
@@ -208,9 +228,11 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f12_f18_prob_gt_1inch_83ad8082ea9b.png",
-              "sha256": "d1f7ba311fd651a4f6ed1afbcade2dd88cac5e7c3088e7851986629b8d5c5db1",
-              "size_bytes": 38716
+              "path": "products/forecast-comparison/2026110200/6h_f12_f18_prob_gt_1inch_83ad8082ea9b.webp",
+              "sha256": "384a90b9c7cf2ff57a45dd2c8de3a1bd74ea513b2db91a6177ceb26396524f89",
+              "size_bytes": 13544,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "cce7bf6ed1b11711ed76a03e5221f26620daea20653df00fd75ad9dbd27cf745"
             },
             {
               "id": "prob_gt_2inch",
@@ -218,9 +240,11 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f12_f18_prob_gt_2inch_5929cd5f67a1.png",
-              "sha256": "3184c6aa136e041920c8f526a89de6115405fe7daf693f1e5a5b73cdb71dd658",
-              "size_bytes": 36539
+              "path": "products/forecast-comparison/2026110200/6h_f12_f18_prob_gt_2inch_5929cd5f67a1.webp",
+              "sha256": "e7b8f18f1a354fdc6f5e0f0f6a5c49e651a329b735de66ae3749eedd7413e517",
+              "size_bytes": 12190,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "6141668fbcf7b8041f36f7f1dc9e8841bd9913595654e31988b819a85a4c1525"
             }
           ]
         },
@@ -243,9 +267,11 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f18_f24_expected_precip_7746d9bd7a99.png",
-              "sha256": "d78fbb57d28c2cc0058b85b71b26a95b3912e671ab4980d084733f7233790232",
-              "size_bytes": 41542
+              "path": "products/forecast-comparison/2026110200/6h_f18_f24_expected_precip_7746d9bd7a99.webp",
+              "sha256": "4c74159fc7d3c188652ca36a513e25d4c223099d94a39a72015a10b1cb001313",
+              "size_bytes": 14634,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "dc24f506f5987938f26baa7a987c023b6faa5c7cd481a8fb4a954b084f26fc03"
             },
             {
               "id": "prob_gt_0p5inch",
@@ -253,9 +279,11 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f18_f24_prob_gt_0p5inch_697601aed5bf.png",
-              "sha256": "9fd8987761e3137067533458546ef9dd56266078af272a36a6360cd0cea78f9f",
-              "size_bytes": 44704
+              "path": "products/forecast-comparison/2026110200/6h_f18_f24_prob_gt_0p5inch_697601aed5bf.webp",
+              "sha256": "7f991edffd1e13f309823c238ca0ab350e7e8e1bdf6872857bbe0a7b42014c39",
+              "size_bytes": 15764,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "6d1f032313af82711c360bc6b86bcfb6a066156fdf68e29b0827859ddcd90e37"
             },
             {
               "id": "prob_gt_1inch",
@@ -263,9 +291,11 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f18_f24_prob_gt_1inch_a23a38003f09.png",
-              "sha256": "0020711b8de085d92487bde62d9724246d075f66c896e97929ca385b0649a909",
-              "size_bytes": 40111
+              "path": "products/forecast-comparison/2026110200/6h_f18_f24_prob_gt_1inch_a23a38003f09.webp",
+              "sha256": "a052d1110eb4eb9172c057ce916f4f3a66f3c607f8a8157bb9a84a323f2d71e1",
+              "size_bytes": 14126,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "98219769254ae6e80f603b715bb0b6fefb5b55f597b21dccfae3013b49ecf5fe"
             },
             {
               "id": "prob_gt_2inch",
@@ -273,9 +303,11 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f18_f24_prob_gt_2inch_c0802e8d4f48.png",
-              "sha256": "01d804f6f0d2e7ffc5aa23ab5647929966473a29e226636ff8e7eedd2002106a",
-              "size_bytes": 37232
+              "path": "products/forecast-comparison/2026110200/6h_f18_f24_prob_gt_2inch_c0802e8d4f48.webp",
+              "sha256": "3afacf5fd04bbb92c47ba243225a648cb847619cb13ee775fd70c290e5f0c589",
+              "size_bytes": 12770,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "e4daba494dd885c7d11b8007d8b8fa64c855920d307c7c6f08d58d76f08303c0"
             }
           ]
         },
@@ -298,9 +330,11 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f24_f30_expected_precip_c081cb72f35c.png",
-              "sha256": "8331cbb61c5ab15e9cc0e01f8604354fa24f70a46767e0aa7dae3442c6bfbcbc",
-              "size_bytes": 41976
+              "path": "products/forecast-comparison/2026110200/6h_f24_f30_expected_precip_c081cb72f35c.webp",
+              "sha256": "fd34f589ca6f26d5fbd6c43dda6f331b42c6204c7dd50469c4eebb7b15a45c12",
+              "size_bytes": 14798,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "57b6acd240f9b5e6e8f0dd6a6c9e520989785e1a5418143a39ecc825fb70ad19"
             },
             {
               "id": "prob_gt_0p5inch",
@@ -308,9 +342,11 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f24_f30_prob_gt_0p5inch_10c98d5b74d3.png",
-              "sha256": "81e5975019d03c60487de158af2404588f091997786018fbb6aa2d7b37f78134",
-              "size_bytes": 45404
+              "path": "products/forecast-comparison/2026110200/6h_f24_f30_prob_gt_0p5inch_10c98d5b74d3.webp",
+              "sha256": "66e364046cb9ca83ed3cf39457d92ffba0a7f1d33fa207f15121407577cc543e",
+              "size_bytes": 16120,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "6694d2b9b384b5e9a9eeadfd09f0d46eaa54ee39b14bf68d16061f6a464d86dd"
             },
             {
               "id": "prob_gt_1inch",
@@ -318,9 +354,11 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f24_f30_prob_gt_1inch_421c8f956313.png",
-              "sha256": "f02251b73196268abdc6510ef1929dea8d7c9196bd3c162bf869059d99e5fc54",
-              "size_bytes": 40883
+              "path": "products/forecast-comparison/2026110200/6h_f24_f30_prob_gt_1inch_421c8f956313.webp",
+              "sha256": "ff5695083286d5a92f1dcdd19878500b630b5bc724f0e6e69384b4274ac7302e",
+              "size_bytes": 14536,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "3e7b3dff67e2f9a496ac0d87679ad00ba25afdeb27bff9f480b559a2961afcc1"
             },
             {
               "id": "prob_gt_2inch",
@@ -328,9 +366,11 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f24_f30_prob_gt_2inch_844dc50db07f.png",
-              "sha256": "4a6483ee9250e891585197d19bce7c0f47a1e459b1d12b478fcb25157b69fad4",
-              "size_bytes": 37886
+              "path": "products/forecast-comparison/2026110200/6h_f24_f30_prob_gt_2inch_844dc50db07f.webp",
+              "sha256": "61c976095789b443a1e236517773fc7eaf29aa2a5117c8ff6c7b50a5cd829825",
+              "size_bytes": 13194,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "dd44fcba3a7b65c5b8b8e7fa2a2bca05199aa7f6f348511e14c1da19a8667024"
             }
           ]
         },
@@ -353,9 +393,11 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f30_f36_expected_precip_b2dab525ccce.png",
-              "sha256": "50fe3bffdf71ca9e0a66a9d7c78679f45ec6175e893f9d1f8e7ab71cc78b13df",
-              "size_bytes": 41822
+              "path": "products/forecast-comparison/2026110200/6h_f30_f36_expected_precip_b2dab525ccce.webp",
+              "sha256": "08b4745ff26ba21bf29a2cb20c4c100e4dbceef3a159272cf300a225e1180344",
+              "size_bytes": 14910,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "b34007e83c4d63c9e70b1bb6c6088e0273c82f8cb2b7dc364d8a55b3a1e62e31"
             },
             {
               "id": "prob_gt_0p5inch",
@@ -363,9 +405,11 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f30_f36_prob_gt_0p5inch_6bf4286a5b20.png",
-              "sha256": "ed4f37d1642efc005dfb1e16908af974aa04e823b158f37b5b2a5b088553ee3f",
-              "size_bytes": 45576
+              "path": "products/forecast-comparison/2026110200/6h_f30_f36_prob_gt_0p5inch_6bf4286a5b20.webp",
+              "sha256": "b3649d727b4232e8af29ffb7e817b8b0da33811b4ebfe98fc09f9b336a8e34c1",
+              "size_bytes": 16246,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "20872e68848d14b5158de0ade0dea22db7063805d16f00213f7762e58d0a184e"
             },
             {
               "id": "prob_gt_1inch",
@@ -373,9 +417,11 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f30_f36_prob_gt_1inch_a345ab6433c1.png",
-              "sha256": "b6de5edccaabcb7905efb825efe87e32275f72e8f47974e3ebe3e05e68bb3768",
-              "size_bytes": 40919
+              "path": "products/forecast-comparison/2026110200/6h_f30_f36_prob_gt_1inch_a345ab6433c1.webp",
+              "sha256": "db3f512f89cf77414fe840b28d08408a6b0b41d641beba7f4f791112162d13d0",
+              "size_bytes": 14478,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "a0fac89f73744b2d02eb7bb0b52bad5ec98793d9996f081024bc9a22fa0171d1"
             },
             {
               "id": "prob_gt_2inch",
@@ -383,9 +429,11 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f30_f36_prob_gt_2inch_9213b8d2c783.png",
-              "sha256": "76b44687ed10db8415e6d49fb79a0ea2d10f74dabcbedc245ba4a24944a43dad",
-              "size_bytes": 37849
+              "path": "products/forecast-comparison/2026110200/6h_f30_f36_prob_gt_2inch_9213b8d2c783.webp",
+              "sha256": "98e10950a2c0617ae78e9fdf45b42fe5cdfb69d67196b2f5c6abf9bd608e3ef7",
+              "size_bytes": 13178,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "ffe660e8f596dcc5afcaad49310af6045ef5a759999a195352325b1c0e4e0883"
             }
           ]
         },
@@ -408,9 +456,11 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f36_f42_expected_precip_d122c3403fd4.png",
-              "sha256": "589d4764cc7269919ba32b5a32642052d8f251d3bacce73c5e06a7e43f772127",
-              "size_bytes": 41874
+              "path": "products/forecast-comparison/2026110200/6h_f36_f42_expected_precip_d122c3403fd4.webp",
+              "sha256": "19584d476b70d66e49d751748ab07755b826cf9eda5ac5ed91a9ce11a7eac083",
+              "size_bytes": 14770,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "6f8a4cfe8b2be46ddffd37e0666c38d0b53939c9b1129c9b004439dbbfd56d08"
             },
             {
               "id": "prob_gt_0p5inch",
@@ -418,9 +468,11 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f36_f42_prob_gt_0p5inch_6eb731d0c1bf.png",
-              "sha256": "e12f57e786f64a46779b139e02b325645a3bb340d0886e318fa951b0161d5161",
-              "size_bytes": 44446
+              "path": "products/forecast-comparison/2026110200/6h_f36_f42_prob_gt_0p5inch_6eb731d0c1bf.webp",
+              "sha256": "567704d078b75e89f841468066a66ea45e04c1610bfbe9e07efe80ac4b87875a",
+              "size_bytes": 15828,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "a7ba13c05a799e2422a0e6cb296b13f9c038249da14075778edd2d4e3d43f44e"
             },
             {
               "id": "prob_gt_1inch",
@@ -428,9 +480,11 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f36_f42_prob_gt_1inch_856fe0204a51.png",
-              "sha256": "47982308fd0b4bb84f6922e0e2c0d2bd9824d2e389786cda8770b1c5e2a3b4f7",
-              "size_bytes": 40701
+              "path": "products/forecast-comparison/2026110200/6h_f36_f42_prob_gt_1inch_856fe0204a51.webp",
+              "sha256": "6ee56e9bc8fafb708ce88dcacb84ce27f7f0b25469923f4c6f5a8436bf11ce22",
+              "size_bytes": 14410,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "a13d5d1c5e4ef1bb2b854cdab47b58f2aae3c7795db0379c716c480984b075e4"
             },
             {
               "id": "prob_gt_2inch",
@@ -438,9 +492,11 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f36_f42_prob_gt_2inch_0c408527cb77.png",
-              "sha256": "961efc5e2824aec4a9bfdf04aa72b492af29a2ede4da03afe8ee11aa04a20dcc",
-              "size_bytes": 37736
+              "path": "products/forecast-comparison/2026110200/6h_f36_f42_prob_gt_2inch_0c408527cb77.webp",
+              "sha256": "dd6baf59db2f20d430aadaed91ca94c3d3c27e46de2d964ebecf2fc97bb2f704",
+              "size_bytes": 13198,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "17453cba2185f410d2237a3979dc0ebabbc5691d7f0e65698dfe5b78d721e5e2"
             }
           ]
         },
@@ -463,9 +519,11 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f42_f48_expected_precip_ce967e625b88.png",
-              "sha256": "c8e195b82b6196f3b3e61184a23f95bbc02e0be3b494baac234c34845124bf05",
-              "size_bytes": 41641
+              "path": "products/forecast-comparison/2026110200/6h_f42_f48_expected_precip_ce967e625b88.webp",
+              "sha256": "2cd0d039f67b3ae30262aa656b6e593453d3e51444491ae2452a23250f7ee40c",
+              "size_bytes": 14744,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "2a47d602bbd25f9458eed0bf30bb1300dd580da535d7b3e6d238b0380638f6bc"
             },
             {
               "id": "prob_gt_0p5inch",
@@ -473,9 +531,11 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f42_f48_prob_gt_0p5inch_c3355d335bf7.png",
-              "sha256": "31bece4c354dc20de5cf16c54622d255e46e572d8b52c7198b5b331b94214a49",
-              "size_bytes": 44834
+              "path": "products/forecast-comparison/2026110200/6h_f42_f48_prob_gt_0p5inch_c3355d335bf7.webp",
+              "sha256": "9f0ca1e0f99b43141c9b7136d7eb22ec1d1490e50ca1b555a26b992f809226a0",
+              "size_bytes": 16098,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "78025cfaf3b75fcbd7588be41c3dbe7e5f6ff3d1066899a208721341bef195b6"
             },
             {
               "id": "prob_gt_1inch",
@@ -483,9 +543,11 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f42_f48_prob_gt_1inch_90d43a4dc95d.png",
-              "sha256": "b3610c8ff249588425e79ac29317f0b0543fb395c051beae260768968daad499",
-              "size_bytes": 41061
+              "path": "products/forecast-comparison/2026110200/6h_f42_f48_prob_gt_1inch_90d43a4dc95d.webp",
+              "sha256": "cc9df7cd3c243df5a8b9638f3ffeb851583d872973de1feee57be5c012946bbb",
+              "size_bytes": 14606,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "352da0b79171feb01d7a3d5700f11c4f09b00f5ee4d231659147851142d7c11e"
             },
             {
               "id": "prob_gt_2inch",
@@ -493,9 +555,11 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/6h_f42_f48_prob_gt_2inch_e4a1ffe9eac6.png",
-              "sha256": "857c0c141392898effda5468ad7ae3fc0c1a7fb0220541ca6c964d46dcebc208",
-              "size_bytes": 38078
+              "path": "products/forecast-comparison/2026110200/6h_f42_f48_prob_gt_2inch_e4a1ffe9eac6.webp",
+              "sha256": "e6f1d807f251796eabf67761cbb2724cb4a1b5334049e13fd1d2a9dbbdae6e44",
+              "size_bytes": 13280,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "575702e74fef1261f7775c3437f33f3c218cc4b950e9236bedf874a1850e3e0a"
             }
           ]
         }
@@ -563,9 +627,11 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f00_f12_expected_precip_1b43c9ed777d.png",
-              "sha256": "97f5c991bf3b47ab7a69e2acae75d754b4c439ea0ae240af5f3a54b7731d5fe1",
-              "size_bytes": 45043
+              "path": "products/forecast-comparison/2026110200/12h_f00_f12_expected_precip_1b43c9ed777d.webp",
+              "sha256": "118a95e6dc8eabaef5d519ff3ef40ed404eb50439ee43aef3e57834435085065",
+              "size_bytes": 16040,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "3d7b64e072948a791bcce2dc562bf0eafa052510b334db40dbcd97217a7f5e75"
             },
             {
               "id": "prob_gt_0p5inch",
@@ -573,9 +639,11 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f00_f12_prob_gt_0p5inch_83758dde70a6.png",
-              "sha256": "93010a5bd8a5bbc306ce91cf9c918437cd2efb2f30cb5fe1cb82964600a5fb1c",
-              "size_bytes": 51032
+              "path": "products/forecast-comparison/2026110200/12h_f00_f12_prob_gt_0p5inch_83758dde70a6.webp",
+              "sha256": "04659f60885934dcb052ea8aa13e1f716fc11a3e314b430095657ead2f369390",
+              "size_bytes": 18154,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "e4f47bcc8158afed19eff47cf9c1c47095c36a08634779c38f4f0357687917eb"
             },
             {
               "id": "prob_gt_1inch",
@@ -583,9 +651,11 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f00_f12_prob_gt_1inch_17ac7ccc9433.png",
-              "sha256": "7cdf74a3eb0a71eb9bbcd22a13291e8361a2eee394c22958105a79595b63fb8f",
-              "size_bytes": 43689
+              "path": "products/forecast-comparison/2026110200/12h_f00_f12_prob_gt_1inch_17ac7ccc9433.webp",
+              "sha256": "32b567dc36560de17e46ff3764280868e0c73363f1a6f0bf349a41eb751335dd",
+              "size_bytes": 15218,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "1977b70a505988461787fc35b674ab1ef432e81a6742eb7c79251432fc031030"
             },
             {
               "id": "prob_gt_2inch",
@@ -593,9 +663,11 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f00_f12_prob_gt_2inch_21a142d76145.png",
-              "sha256": "04621ded941f5d7143909a62f115f09181f8be213453ba5ed55627e6a5ff32d3",
-              "size_bytes": 37909
+              "path": "products/forecast-comparison/2026110200/12h_f00_f12_prob_gt_2inch_21a142d76145.webp",
+              "sha256": "6359bd4160faee29f7cc817354aec17b03e7363abf1b848fec634db2115f56e4",
+              "size_bytes": 13120,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "97e45cc696b4ff6b735427f9f5f3d57d851f5846d4b642dd94a774985cb6dd94"
             }
           ]
         },
@@ -618,9 +690,11 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f06_f18_expected_precip_b60ccfd2094e.png",
-              "sha256": "1fcaeb0a6b34a5306726b03eae01197550a90733123e724cc876f846d02d1ab8",
-              "size_bytes": 44408
+              "path": "products/forecast-comparison/2026110200/12h_f06_f18_expected_precip_b60ccfd2094e.webp",
+              "sha256": "645f0f04f072755128d243c6b28ffbca8e90dbb74f6ee025360977bf6c5d211c",
+              "size_bytes": 15886,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "2db0fffb0c94762addfda0fad1e64cee1e2898c339d9b6340bdf1cf778e1e2fb"
             },
             {
               "id": "prob_gt_0p5inch",
@@ -628,9 +702,11 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f06_f18_prob_gt_0p5inch_6c9423d3ba34.png",
-              "sha256": "0e1de689bdac0611e100f3fdd9d1d65bc73c33860ffe3bc35bea538a6184f970",
-              "size_bytes": 49371
+              "path": "products/forecast-comparison/2026110200/12h_f06_f18_prob_gt_0p5inch_6c9423d3ba34.webp",
+              "sha256": "a9904c670d3634ef0aef2cbdbe7b89ae6b4087ab3b1e8e5c3e1e68bb29e686f5",
+              "size_bytes": 17728,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "6c7385a9d77b98fec2283f9a18ab9c0ada4d14138fd81fc0376fbb81132a21a8"
             },
             {
               "id": "prob_gt_1inch",
@@ -638,9 +714,11 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f06_f18_prob_gt_1inch_88b67cc199de.png",
-              "sha256": "d895a20c9c52511044ad3870b0bdb8e5782d12e8812d15a1eb40238c2409c7ac",
-              "size_bytes": 43119
+              "path": "products/forecast-comparison/2026110200/12h_f06_f18_prob_gt_1inch_88b67cc199de.webp",
+              "sha256": "da0d514a0293459eef8a1f0a0ffbb58453b3d4f9022755d7fef85aad1adeda16",
+              "size_bytes": 15284,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "f267356c66915327a8f62a966bbb8ae3f39f552d62a014ba1c069c786b9527bb"
             },
             {
               "id": "prob_gt_2inch",
@@ -648,9 +726,11 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f06_f18_prob_gt_2inch_fd6d24bd04c4.png",
-              "sha256": "e904db9eaaa749f3036ec73fa25cde340449836a21cd50326f1e4335d22c6091",
-              "size_bytes": 38093
+              "path": "products/forecast-comparison/2026110200/12h_f06_f18_prob_gt_2inch_fd6d24bd04c4.webp",
+              "sha256": "812d2e6156bcfc5006ba2d77b11859834b420a796334c5e58487002821c886cb",
+              "size_bytes": 13026,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "94b47df573be14d8cd92df9811057f60775cb8548cd550d60203859c9449d916"
             }
           ]
         },
@@ -673,9 +753,11 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f12_f24_expected_precip_10ce12ce5e94.png",
-              "sha256": "4886f6b17203fa4679589cce279ce40fc84786e3b5a3bac9f0a77ce5afa3c70a",
-              "size_bytes": 43643
+              "path": "products/forecast-comparison/2026110200/12h_f12_f24_expected_precip_10ce12ce5e94.webp",
+              "sha256": "7c41fe0493efd31c8c1289a06240ece2ec94d9b42aba6bc80cc122529f88f404",
+              "size_bytes": 15672,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "a80992e4e028eeab3f3f7ea4d83092e996f4bea85f4ab48423d5bb0b14fdd92d"
             },
             {
               "id": "prob_gt_0p5inch",
@@ -683,9 +765,11 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f12_f24_prob_gt_0p5inch_7974cbd08cec.png",
-              "sha256": "45dff4aea9ab20ad803a2597a3cfde34f3f1e016f88cb11a1383e5dda7775d63",
-              "size_bytes": 48193
+              "path": "products/forecast-comparison/2026110200/12h_f12_f24_prob_gt_0p5inch_7974cbd08cec.webp",
+              "sha256": "d48960603a5976043faadf0fe705d23a39335cc49b84be21a172a0086dadb581",
+              "size_bytes": 17284,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "3419d266a011c41880a03740fb535bc2f50a75ba8bb7a8ea35b6abee001965ff"
             },
             {
               "id": "prob_gt_1inch",
@@ -693,9 +777,11 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f12_f24_prob_gt_1inch_c7e786214b69.png",
-              "sha256": "a3df7d766b9b2d9594ffc173d293386bf5149d06ba6d83eb3fe08a0a15216e6b",
-              "size_bytes": 42678
+              "path": "products/forecast-comparison/2026110200/12h_f12_f24_prob_gt_1inch_c7e786214b69.webp",
+              "sha256": "803e903ce3fe4d9336eb6694379b35f75b07a2e48095ab81ac611bda9a5d7cec",
+              "size_bytes": 15028,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "b719f6d3f89b25ffb2c0d404c5c2fba81c224c3563007987643fe33986b0670a"
             },
             {
               "id": "prob_gt_2inch",
@@ -703,9 +789,11 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f12_f24_prob_gt_2inch_346bc66be503.png",
-              "sha256": "840af7a4e7898550e60ce026fc46a769db9b69283f595207cfc964a550c06114",
-              "size_bytes": 38090
+              "path": "products/forecast-comparison/2026110200/12h_f12_f24_prob_gt_2inch_346bc66be503.webp",
+              "sha256": "6a94e0fa5fa9cfc711d34ce9fded29d1b9eb88c8939f1ce8cacc98069e1ee910",
+              "size_bytes": 13080,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "2539b311017fd88941c7b7bd19782e157113c8eab7ed712d98fcdcc223252c9c"
             }
           ]
         },
@@ -728,9 +816,11 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f18_f30_expected_precip_c31b0001f916.png",
-              "sha256": "664be929745fe5b09afd77071fa3dab65ebd2db11ceaa36aca2f451887826a02",
-              "size_bytes": 43767
+              "path": "products/forecast-comparison/2026110200/12h_f18_f30_expected_precip_c31b0001f916.webp",
+              "sha256": "0a01b2d2de8e8b552e6640aba88d73358c966d6fd8477bdd5c665b906efe35a9",
+              "size_bytes": 15618,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "d980cede6e09c17b661c32ecaff7c4be43be59199c3c5b06131e52b837fc2990"
             },
             {
               "id": "prob_gt_0p5inch",
@@ -738,9 +828,11 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f18_f30_prob_gt_0p5inch_5561f5e89d06.png",
-              "sha256": "7b723fc024eef306812dad2bec10a11d8c3d1da9dfca5e779a0c8a6b4cad38e1",
-              "size_bytes": 49256
+              "path": "products/forecast-comparison/2026110200/12h_f18_f30_prob_gt_0p5inch_5561f5e89d06.webp",
+              "sha256": "baf24bb51faf00ee05e5f086f26e8fdb2f4f0986b7101526a5f96f41279b30d0",
+              "size_bytes": 17620,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "264b10decef4a92790c37d6d1e7f3ed526441c5b6fbe2887890c213854f3f5ae"
             },
             {
               "id": "prob_gt_1inch",
@@ -748,9 +840,11 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f18_f30_prob_gt_1inch_6cab7afc1fb6.png",
-              "sha256": "36f95c45fb3d010fc630274140c9d0f2eec4603c7476cc5244b6a8c72dc3a48f",
-              "size_bytes": 43944
+              "path": "products/forecast-comparison/2026110200/12h_f18_f30_prob_gt_1inch_6cab7afc1fb6.webp",
+              "sha256": "578fa7344c1f2f26ed1c4e8c0f8534645903536d8e6c821b3d646d089bde51ad",
+              "size_bytes": 15440,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "f8274c44f1f3d56163d0a67cdb712ce2a5b8714ecc64abf46fa6ba5bc97b56c9"
             },
             {
               "id": "prob_gt_2inch",
@@ -758,9 +852,11 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f18_f30_prob_gt_2inch_9361acdf2183.png",
-              "sha256": "bc3013cf585da088080f2ff09b638926128d604fa48dcedb75afb1ad9d4a6613",
-              "size_bytes": 39537
+              "path": "products/forecast-comparison/2026110200/12h_f18_f30_prob_gt_2inch_9361acdf2183.webp",
+              "sha256": "8ae575a50899dd962f9005097984f914815dc8be86b0c85af1307d91c4df6eb3",
+              "size_bytes": 13734,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "2da4ea72b455ec89994cc89810963d0e6d331aa1d86c410c8ea30481f6ef80af"
             }
           ]
         },
@@ -783,9 +879,11 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f24_f36_expected_precip_1e5c14e3326d.png",
-              "sha256": "bb772dd2aaba9f257b6d42032c133c61aa1c14a09d7d3a9963ef33048729cda3",
-              "size_bytes": 44111
+              "path": "products/forecast-comparison/2026110200/12h_f24_f36_expected_precip_1e5c14e3326d.webp",
+              "sha256": "a5244e976fd28db4e64a5154ce83ea371bfa3e8df0d4414d6048b74d25af3ec2",
+              "size_bytes": 15854,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "3f181dffbfe63d4d31f6c5338f4179bb7559c4e0a2f4e780688ebffb2a7e4dd8"
             },
             {
               "id": "prob_gt_0p5inch",
@@ -793,9 +891,11 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f24_f36_prob_gt_0p5inch_9cdeb2f590ef.png",
-              "sha256": "110297313548f6c25bb0241c2916677745bbad61bd19919891a60c726ae827ca",
-              "size_bytes": 49197
+              "path": "products/forecast-comparison/2026110200/12h_f24_f36_prob_gt_0p5inch_9cdeb2f590ef.webp",
+              "sha256": "951cdd430fe72ed2799690c15a24a4f8728c2910d258a5f93a6164a0755338d9",
+              "size_bytes": 17620,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "a32655e36e483008a20f8c774edb10bc9c7b2085a730d9895eccb5b5d41c9d02"
             },
             {
               "id": "prob_gt_1inch",
@@ -803,9 +903,11 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f24_f36_prob_gt_1inch_ed32d8f4eb0a.png",
-              "sha256": "641596ff35afa7aa4db36ff76e0564aea95d5b681e24f40dda2a54c13614e456",
-              "size_bytes": 44154
+              "path": "products/forecast-comparison/2026110200/12h_f24_f36_prob_gt_1inch_ed32d8f4eb0a.webp",
+              "sha256": "8886c5c1a4eee4cb48b5d628bc70f7daffe0e1c435fd9bd72a84885e72b76a01",
+              "size_bytes": 15570,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "8228b8ce3a21607ca6b0ab51744019dd4a94cb03e4541d8433014c8c76d37f14"
             },
             {
               "id": "prob_gt_2inch",
@@ -813,9 +915,11 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f24_f36_prob_gt_2inch_e281b167162f.png",
-              "sha256": "5482aaeba4af0b7993a0180c097f637df5927ae2be86d099a277a259642488e1",
-              "size_bytes": 39812
+              "path": "products/forecast-comparison/2026110200/12h_f24_f36_prob_gt_2inch_e281b167162f.webp",
+              "sha256": "8d854cf98f6b4bd12789d28043ec9ba273dff984803bf1a6dcd6f089b8719f48",
+              "size_bytes": 13942,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "80b3e90fac281ba55b9ff046acbaaa0500891b9356c95fad062caa6fc325850e"
             }
           ]
         },
@@ -838,9 +942,11 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f30_f42_expected_precip_91bf568a92c1.png",
-              "sha256": "a065594c740f71ff1c350a23c3ab17cf3bee37edc619ae2dc466a882ee63334b",
-              "size_bytes": 43555
+              "path": "products/forecast-comparison/2026110200/12h_f30_f42_expected_precip_91bf568a92c1.webp",
+              "sha256": "48b6c7d42a6dc0aaa27b0408090f54cff96f04cc785bb199add5854b00921e64",
+              "size_bytes": 15606,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "1de73ccd800f1a0717393166f9060a6115f077e36b0710790fbf9599da2fedc2"
             },
             {
               "id": "prob_gt_0p5inch",
@@ -848,9 +954,11 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f30_f42_prob_gt_0p5inch_a4dc54bdfd91.png",
-              "sha256": "c6a4f52bf31975d8de4c2501f40e1e75015dbdc2de85f323126bd86f9087ffe9",
-              "size_bytes": 48367
+              "path": "products/forecast-comparison/2026110200/12h_f30_f42_prob_gt_0p5inch_a4dc54bdfd91.webp",
+              "sha256": "d3775d86dd2547e90421e797438cfd147739999ead4900f59f714510ed95ec3c",
+              "size_bytes": 17430,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "cdf587025cc117d191bf2c79258991b8827b8730bdc06e46887825c0469af264"
             },
             {
               "id": "prob_gt_1inch",
@@ -858,9 +966,11 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f30_f42_prob_gt_1inch_21c55348298f.png",
-              "sha256": "8788655be074683971f90dac0341ce5edece9fd83b1c4785f810b0c5610b2911",
-              "size_bytes": 43487
+              "path": "products/forecast-comparison/2026110200/12h_f30_f42_prob_gt_1inch_21c55348298f.webp",
+              "sha256": "9db78d92fc28f9e306ae0c6d3697ab4027baaba57037ea8e3b80d447b6127cce",
+              "size_bytes": 15388,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "ed8cc5a120e29c827fd4c3da95c9ad850be1b32b8f75a6a44e67fc33bc469e35"
             },
             {
               "id": "prob_gt_2inch",
@@ -868,9 +978,11 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f30_f42_prob_gt_2inch_a3f2fa882b9e.png",
-              "sha256": "ad2f0496120d02d067af88f5938bc93271c92ffeed5fa3037e6858ec539c39b0",
-              "size_bytes": 39562
+              "path": "products/forecast-comparison/2026110200/12h_f30_f42_prob_gt_2inch_a3f2fa882b9e.webp",
+              "sha256": "4ad0e1f5fb09c9faa335c56509c9bcd5d23f397a0261c5b292d449a2bd7fdc9e",
+              "size_bytes": 13852,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "495c479c927557d93382e9c78cbbc67ced6e3eba606926e7c9054a3feefa5e74"
             }
           ]
         },
@@ -893,9 +1005,11 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f36_f48_expected_precip_7ba1760a34b1.png",
-              "sha256": "d46b0e1a888d4d05decc0f412eea69d832a11b8c2455738f55860c5f603e1deb",
-              "size_bytes": 43415
+              "path": "products/forecast-comparison/2026110200/12h_f36_f48_expected_precip_7ba1760a34b1.webp",
+              "sha256": "b45906fa770ecb749170ee82627b41261c8028131c8e5156190e4dde31ed8136",
+              "size_bytes": 15460,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "c187cccd65aa10b0571264f578c10997c3a11b07baa9f4d7412e57b9c7a161f9"
             },
             {
               "id": "prob_gt_0p5inch",
@@ -903,9 +1017,11 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f36_f48_prob_gt_0p5inch_7c110914c6a2.png",
-              "sha256": "c99e4a0289546b54bc21ea6cd13ac10277f0f23d4c02495d98f9d3d2f3d2180e",
-              "size_bytes": 47795
+              "path": "products/forecast-comparison/2026110200/12h_f36_f48_prob_gt_0p5inch_7c110914c6a2.webp",
+              "sha256": "5ae528bac3ed86b2d57e476a56a7d6fe89beb9444805ff710568cd13ca572ac3",
+              "size_bytes": 17168,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "5545563ded4976e74c1c215bacf54fcb5918ed805af04d08b46934e24fe484a5"
             },
             {
               "id": "prob_gt_1inch",
@@ -913,9 +1029,11 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f36_f48_prob_gt_1inch_25ea65612812.png",
-              "sha256": "a53c3e833f7db619a7eae2e4f57f60b36d2f59b44188e8b1c7d6fbcf88e410ed",
-              "size_bytes": 43322
+              "path": "products/forecast-comparison/2026110200/12h_f36_f48_prob_gt_1inch_25ea65612812.webp",
+              "sha256": "0ccf5df1562cbd39438beed8c984bdc88a13a06194d8e0fc848338ba5a0431c5",
+              "size_bytes": 15314,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "aa6b16c605547203f268ed264611c1478f06861b44cb11e871bdb1a039383432"
             },
             {
               "id": "prob_gt_2inch",
@@ -923,9 +1041,11 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/12h_f36_f48_prob_gt_2inch_d5aafea4bb1b.png",
-              "sha256": "38ba435ee4d40805cffcc5d0d6ed7c85fd6b6233e131f4c8ae0c14ee588a4636",
-              "size_bytes": 39151
+              "path": "products/forecast-comparison/2026110200/12h_f36_f48_prob_gt_2inch_d5aafea4bb1b.webp",
+              "sha256": "f6ee873e48554030027c6c1b94b4ab3ec7a043f60848d49d09f19fa0de3ecda6",
+              "size_bytes": 13658,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "f1902d3c30f2063909cc2eec0ab511ce44fca9f4f091858124136ded4144dc38"
             }
           ]
         }
@@ -993,9 +1113,11 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/24h_f00_f24_expected_precip_371a3c467cf6.png",
-              "sha256": "e9bae7f72709f80637bd24a2dfb2812970d9e2a2ecbf8a9e44c3ad38754607e2",
-              "size_bytes": 47430
+              "path": "products/forecast-comparison/2026110200/24h_f00_f24_expected_precip_371a3c467cf6.webp",
+              "sha256": "656f524cf004c738c705b7646a8988c34b096de22ec806e08ee3a3521e5cbbff",
+              "size_bytes": 17012,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "23383b3b048e3ade4a56aa2b7af604d6d84c89b2e3b9601b1f5b87ffb26e926f"
             },
             {
               "id": "prob_gt_0p5inch",
@@ -1003,9 +1125,11 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/24h_f00_f24_prob_gt_0p5inch_3b31cbe09c6c.png",
-              "sha256": "850c560206282eed061639cc5a2460c70d3fbf56190e7202b6a888b47b3060c5",
-              "size_bytes": 54882
+              "path": "products/forecast-comparison/2026110200/24h_f00_f24_prob_gt_0p5inch_3b31cbe09c6c.webp",
+              "sha256": "7844361da5ed07a089177ff05416ccf4d2038e9fad42e361465c9f339ff3f631",
+              "size_bytes": 19706,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "7972940e4c4dab7e0fa8a7aadc7e84b77844e783ea736178193ef64f19e83dcc"
             },
             {
               "id": "prob_gt_1inch",
@@ -1013,9 +1137,11 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/24h_f00_f24_prob_gt_1inch_2215109e2e06.png",
-              "sha256": "7f404f45d216b0cc636cd98d403bb14617a7d5e8eaeb98a9932316f5be01e2aa",
-              "size_bytes": 48659
+              "path": "products/forecast-comparison/2026110200/24h_f00_f24_prob_gt_1inch_2215109e2e06.webp",
+              "sha256": "329039f218f83dce8d19ac575cece0a2b00a7b1a49af5ffc597b35c7805f5281",
+              "size_bytes": 17304,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "5d9255de4c672894375e6c05bdd2908710b87a69eaefd4788ab62e4cf02f3f28"
             },
             {
               "id": "prob_gt_2inch",
@@ -1023,9 +1149,11 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/24h_f00_f24_prob_gt_2inch_b436b7284109.png",
-              "sha256": "6e761db2c94cc253f4b9ca6f86d1de6cb38b401fd76019e96f1a7ceb3e26587a",
-              "size_bytes": 40503
+              "path": "products/forecast-comparison/2026110200/24h_f00_f24_prob_gt_2inch_b436b7284109.webp",
+              "sha256": "1066cc6bea8d136219d2400b1e9e95b919598b00833a3d2835309b81f42c4b20",
+              "size_bytes": 14230,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "08c16f040ef8a21638c46f9b0ada6ee791c007bf420f502baeca52f2f887e24a"
             }
           ]
         },
@@ -1048,9 +1176,11 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/24h_f06_f30_expected_precip_09d99859564b.png",
-              "sha256": "ec275cafe4c83291adef9c365752e1cdd8e928ea15053d09bd67443edb3fa150",
-              "size_bytes": 47338
+              "path": "products/forecast-comparison/2026110200/24h_f06_f30_expected_precip_09d99859564b.webp",
+              "sha256": "4b2a7b81d6460c284e4efb8c2eeadd6adfb0f5af688b13811aba24ea80a8aa4d",
+              "size_bytes": 17044,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "552e2718dfb4ed0f1246ad08acace50b324b195e6058e9b5dca16481c585bd05"
             },
             {
               "id": "prob_gt_0p5inch",
@@ -1058,9 +1188,11 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/24h_f06_f30_prob_gt_0p5inch_2d284992417e.png",
-              "sha256": "7bdad89a48c5fc46bc630667b57fd8e9ea9472e5211a0718e6e28911827c2d88",
-              "size_bytes": 54868
+              "path": "products/forecast-comparison/2026110200/24h_f06_f30_prob_gt_0p5inch_2d284992417e.webp",
+              "sha256": "d70b0d9ae4c32a91bf6713c0dc19e78c8a66496cb965a89560fbe1fdc3f6d452",
+              "size_bytes": 19768,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "e00bd7af3990ce464ca04344c286ba737a79d1f7b47949358eea52cc83c88038"
             },
             {
               "id": "prob_gt_1inch",
@@ -1068,9 +1200,11 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/24h_f06_f30_prob_gt_1inch_785d6090d8a5.png",
-              "sha256": "a9ab29c57a7b4febfcb6f9e73a0e22d9d2da1df1b1f90771d077a5085e6fb240",
-              "size_bytes": 48982
+              "path": "products/forecast-comparison/2026110200/24h_f06_f30_prob_gt_1inch_785d6090d8a5.webp",
+              "sha256": "158d34d57ea0efda10a5f8765d81fe17a45e6b18e2d8020cf8ff9ad83deb1dce",
+              "size_bytes": 17458,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "dccc75e1de97b14b76a52ae38d1a83b912f737dca5150176d40c06e0f20eb6f7"
             },
             {
               "id": "prob_gt_2inch",
@@ -1078,9 +1212,11 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/24h_f06_f30_prob_gt_2inch_936acd6bde86.png",
-              "sha256": "1220c3d3c3eca0ad60400e6862d59fc5a4b703741e0cda4133961b0cdf9fd05c",
-              "size_bytes": 41653
+              "path": "products/forecast-comparison/2026110200/24h_f06_f30_prob_gt_2inch_936acd6bde86.webp",
+              "sha256": "20cf1320be78b55f33bdde187b9700a2f8724bde0c9e504e0a3c9b8557ccda45",
+              "size_bytes": 14724,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "f8f192def8777deecf85b15500ab090a8e7f61b12368466194a7ea6693519cf0"
             }
           ]
         },
@@ -1103,9 +1239,11 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/24h_f12_f36_expected_precip_e5cffb69c200.png",
-              "sha256": "def6889c93ca6022279437158f9b2dd37e15b1c4ba7f329f8784b0358f42e2e5",
-              "size_bytes": 47064
+              "path": "products/forecast-comparison/2026110200/24h_f12_f36_expected_precip_e5cffb69c200.webp",
+              "sha256": "0c8667be8d11ee4b666f0c1bf330c5f99913e4d9bb9d08713f3d6725102caa21",
+              "size_bytes": 16846,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "eb6542570cd0db7ef9d2e68edbe4900f93bf5cec112fe03fbdd69ae34cdc4a5e"
             },
             {
               "id": "prob_gt_0p5inch",
@@ -1113,9 +1251,11 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/24h_f12_f36_prob_gt_0p5inch_7bd7ea3bf4f6.png",
-              "sha256": "adecceca082a1bb73b21e6163f1461d7492714e87d08c1d40b8acdd3cc3821e0",
-              "size_bytes": 53398
+              "path": "products/forecast-comparison/2026110200/24h_f12_f36_prob_gt_0p5inch_7bd7ea3bf4f6.webp",
+              "sha256": "b2fdd1299d0953df1f443112cedf5456b0d772d41a5583d64df25c608ae42b04",
+              "size_bytes": 19234,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "d88bdd7761780f4c66db29819c0e92ac352e2e7aa5452fce30dd4eeb67a078a7"
             },
             {
               "id": "prob_gt_1inch",
@@ -1123,9 +1263,11 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/24h_f12_f36_prob_gt_1inch_6ba2d4ef1bd4.png",
-              "sha256": "11b9d6d23ddf8238b91017bd43abf0d3e3be6662a134bbd91c1153e33d1c2c94",
-              "size_bytes": 48307
+              "path": "products/forecast-comparison/2026110200/24h_f12_f36_prob_gt_1inch_6ba2d4ef1bd4.webp",
+              "sha256": "564efe9f50aa5df240e1539ddfb40926ac637b9e994efe73c8502766b44771f0",
+              "size_bytes": 17082,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "729302c419223db67b35d48f1087b39dd97e51e15ffccdcbe5767d3e7ab7ead9"
             },
             {
               "id": "prob_gt_2inch",
@@ -1133,9 +1275,11 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/24h_f12_f36_prob_gt_2inch_8c6786f31a53.png",
-              "sha256": "ce10783954fb095d17b0655219afc30579e3828c62367fc35d44ba6799f4d25f",
-              "size_bytes": 41702
+              "path": "products/forecast-comparison/2026110200/24h_f12_f36_prob_gt_2inch_8c6786f31a53.webp",
+              "sha256": "d3c062ffae1f17099913f460c773d21f9b743c520cdcae970957c4f98e61ad6b",
+              "size_bytes": 14866,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "26b998bc46e7139d3a46334e5e21d1118c17838ae0af3c7b1affa746cc227199"
             }
           ]
         },
@@ -1158,9 +1302,11 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/24h_f18_f42_expected_precip_14bd317546c4.png",
-              "sha256": "ad1010eaab4cb246e8dbe603259d53eeb95d60367fbfb31876cf9a8caf5b9f75",
-              "size_bytes": 46347
+              "path": "products/forecast-comparison/2026110200/24h_f18_f42_expected_precip_14bd317546c4.webp",
+              "sha256": "c1cf9b4b7a81c79c9f75b2ce44cde5dcef03f867da8aa497aefd3cc6caedc813",
+              "size_bytes": 16622,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "8774db35b5c184270ac055ed6bd642b75e6e301a4ff297f9f5912c52fedf9314"
             },
             {
               "id": "prob_gt_0p5inch",
@@ -1168,9 +1314,11 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/24h_f18_f42_prob_gt_0p5inch_f276355bbadc.png",
-              "sha256": "57ae0dff55b50c7ddb9288ca5eb31560e1e0540d37dbaf7d028864b2a30d6973",
-              "size_bytes": 52839
+              "path": "products/forecast-comparison/2026110200/24h_f18_f42_prob_gt_0p5inch_f276355bbadc.webp",
+              "sha256": "c4faa12cb789401f79f3b32eb8d456b88b5f6b91354bf5cf77de329e991873d1",
+              "size_bytes": 19016,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "5dd97ec3fdbe108606b62b2529a6f6e1e5fe938f8f2b2696ee07eef0955752d1"
             },
             {
               "id": "prob_gt_1inch",
@@ -1178,9 +1326,11 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/24h_f18_f42_prob_gt_1inch_3d6a5053d8bc.png",
-              "sha256": "ae90133e316d4501dd627b47833cb37021408a21c05945b1693e65970bee8983",
-              "size_bytes": 47726
+              "path": "products/forecast-comparison/2026110200/24h_f18_f42_prob_gt_1inch_3d6a5053d8bc.webp",
+              "sha256": "808769fd0c057a8c5012384024d1d241c07940b84383ad918ad523c544884f1d",
+              "size_bytes": 16934,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "3b4e31da468623575bc73f5405b0e2e606e1bbb49268a46faf3c6aa9d2e05f4b"
             },
             {
               "id": "prob_gt_2inch",
@@ -1188,9 +1338,11 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/24h_f18_f42_prob_gt_2inch_74dd5907594e.png",
-              "sha256": "78c6325e71cbc3a19e16672dd0589ef3d9c6432bbc4b937223fb7dd8650040bd",
-              "size_bytes": 42026
+              "path": "products/forecast-comparison/2026110200/24h_f18_f42_prob_gt_2inch_74dd5907594e.webp",
+              "sha256": "245b24a0db828a2ff67f9f03ab2dce2838a9280016ee58b544d5d503ae064c36",
+              "size_bytes": 14806,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "727735fc6ce5e4c48b149fdae9777a76d705bd1b9297d0909c39fe4d9f4c0d6d"
             }
           ]
         },
@@ -1213,9 +1365,11 @@
               "units": "inches",
               "threshold_inch": null,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/24h_f24_f48_expected_precip_a0b0c176d7b4.png",
-              "sha256": "c4f51f3b15af7599ddba14a560797a9b230a46a03693553476125ae026e09e69",
-              "size_bytes": 46323
+              "path": "products/forecast-comparison/2026110200/24h_f24_f48_expected_precip_a0b0c176d7b4.webp",
+              "sha256": "ebb1ef8d7ca771dd007307790ee478e137a667824b7d17b0938069ebca0ebbd6",
+              "size_bytes": 16622,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "baa236a08cdc5ccda61f2953cc43e9c84f4f12788b826a6ffc65c03b93cacf8d"
             },
             {
               "id": "prob_gt_0p5inch",
@@ -1223,9 +1377,11 @@
               "units": "%",
               "threshold_inch": 0.5,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/24h_f24_f48_prob_gt_0p5inch_9ab0c097b77e.png",
-              "sha256": "323708348858ea1e2781aac5bff0df509b3fdb72d07f97f64d809edd71eba4bf",
-              "size_bytes": 53042
+              "path": "products/forecast-comparison/2026110200/24h_f24_f48_prob_gt_0p5inch_9ab0c097b77e.webp",
+              "sha256": "a9741085c6518f2d30e871a5c0d31dc838d871fa66b6248fa34777ce88b3bd38",
+              "size_bytes": 19020,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "a8b7f43664d63efbe13acd51246e5323dd6f69acc3877d458eff095940db93b2"
             },
             {
               "id": "prob_gt_1inch",
@@ -1233,9 +1389,11 @@
               "units": "%",
               "threshold_inch": 1.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/24h_f24_f48_prob_gt_1inch_e03b8ddaa215.png",
-              "sha256": "3f5713611526c1ed672a6117c65d3ecf7d8fb39334672da045666b1a26a9d8dd",
-              "size_bytes": 47712
+              "path": "products/forecast-comparison/2026110200/24h_f24_f48_prob_gt_1inch_e03b8ddaa215.webp",
+              "sha256": "5c9f653b2804e47d8314e7a53b160cfc2799faa889c82c10c02a796c05c46765",
+              "size_bytes": 16936,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "364b74c055e7ad2f3664b59f9fc0e69b1e7d11fee639268b93db99de445500cc"
             },
             {
               "id": "prob_gt_2inch",
@@ -1243,9 +1401,11 @@
               "units": "%",
               "threshold_inch": 2.0,
               "common_valid_cells": 13318,
-              "path": "products/forecast-comparison/2026110200/24h_f24_f48_prob_gt_2inch_d33dd153b122.png",
-              "sha256": "83ed48935492e0da30126d859a23e0a3db4c67610209a31ca987461d1902983b",
-              "size_bytes": 42031
+              "path": "products/forecast-comparison/2026110200/24h_f24_f48_prob_gt_2inch_d33dd153b122.webp",
+              "sha256": "cac696f62d3a8a60a31f4cda3d1bc3bfdeeae75e472861b89d1d7a1c8489da58",
+              "size_bytes": 14884,
+              "image_encoding": "lossless-webp",
+              "decoded_rgb_sha256": "c9cb4383c1ef616bedb7d178d4833ffab8d0f1e3fcb530d97cf9dbb4c36baf10"
             }
           ]
         }
