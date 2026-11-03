@@ -1,14 +1,18 @@
-/* Durable entry into the comparison overview; ?legacy=1 preserves the pilot. */
+/* Preserve the original comparison page and add access to the new results. */
 (function () {
   'use strict';
-  var current = new URL(window.location.href);
-  if (current.searchParams.get('legacy') === '1') return;
-  var target = new URL('overview.html', current);
-  target.search = current.search;
-  target.hash = current.hash;
-  target.searchParams.delete('legacy');
-  if (!target.searchParams.has('mode') && target.searchParams.has('init')) {
-    target.searchParams.set('mode', 'operational');
+  function addResultsLink() {
+    if (document.getElementById('verification-overview-link-v3')) return;
+    var actions = document.querySelector('.hero__actions');
+    if (!actions) return;
+    var link = document.createElement('a');
+    link.id = 'verification-overview-link-v3';
+    link.className = 'button button--glass';
+    link.href = 'overview.html';
+    link.textContent = '2025 research and 6/12/24-hour verification';
+    actions.appendChild(link);
   }
-  window.location.replace(target.href);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', addResultsLink, { once: true });
+  } else addResultsLink();
 }());

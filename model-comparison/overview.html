@@ -5,36 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Matched GEFS and HRRR ANN-CSGD precipitation verification for the 2025 study and recent operational forecasts.">
   <title>GEFS and HRRR ANN-CSGD verification</title>
-  <link rel="stylesheet" href="assets/verification-v2.css">
+  <link rel="stylesheet" href="assets/model-comparison.css?v=theme3">
+  <link rel="stylesheet" href="assets/verification-v2.css?v=theme3">
 </head>
 <body>
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a class="brand" href="../index.html">ANN-CSGD Weather Hub</a>
-      <nav aria-label="Primary navigation">
+  <nav class="global-site-nav" aria-label="Primary navigation">
+    <div class="global-site-nav__inner">
+      <a class="global-site-nav__brand" href="../index.html">ANN-CSGD Weather Hub</a>
+      <div class="global-site-nav__links">
         <a href="../index.html#forecast-workspace">Forecasts</a>
-        <a href="./" aria-current="page">Model verification</a>
-        <a href="../forecast-comparison/">Compare forecast maps</a>
-        <a href="../methods.html">Methods</a>
-      </nav>
+        <a href="../verification.html">Verification</a>
+        <a href="./" aria-current="page">Verification comparison</a>
+        <a href="../index.html#grib2-downloads">Downloads</a>
+        <a href="../methods.html">Methods and guidance</a>
+      </div>
+    </div>
+  </nav>
+  <header class="hero">
+    <div class="hero__inner">
+      <div>
+        <p class="eyebrow">Forecast verification</p>
+        <h1 id="page-title">ANN-CSGD verification comparison</h1>
+        <p class="hero__subtitle">Compare GEFS- and HRRR-based ANN-CSGD forecasts against matched MRMS observations for 6-, 12-, and 24-hour precipitation accumulations.</p>
+        <nav class="hero__actions view-tabs" role="group" aria-label="Verification dataset">
+          <button type="button" id="research-tab" class="button button--accent tab active" aria-pressed="true">2025 research evaluation</button>
+          <button type="button" id="operational-tab" class="button button--glass tab" aria-pressed="false">Recent operational verification</button>
+          <a class="button button--glass" href="../forecast-comparison/">Compare forecast maps</a>
+          <a class="button button--glass" href="./?legacy=1">Previous comparison plots</a>
+        </nav>
+        <p id="dataset-status" class="status" role="status" aria-live="polite">Loading the matched verification datasets…</p>
+      </div>
+      <aside class="run-card" aria-label="Comparison scope">
+        <span>Matched accumulation durations</span>
+        <strong>6 h · 12 h · 24 h</strong>
+        <p>View the full-year 2025 study or recent issued forecasts after verifying observations become available.</p>
+        <p>Common forecast horizon through 48 hours.</p>
+      </aside>
     </div>
   </header>
-  <main class="workspace">
-    <section class="intro" aria-labelledby="page-title">
-      <p class="eyebrow">GEFS ANN-CSGD and HRRR ANN-CSGD</p>
-      <h1 id="page-title">Matched precipitation verification</h1>
-      <p>Compare forecast accuracy, probability calibration and rainfall-event detection on common observations and valid periods.</p>
-      <div class="view-tabs" role="group" aria-label="Verification dataset">
-        <button type="button" id="research-tab" class="tab active" aria-pressed="true">2025 research evaluation</button>
-        <button type="button" id="operational-tab" class="tab" aria-pressed="false">Recent operational verification</button>
-        <a class="tab tab-link" href="../forecast-comparison/">Forecast-map comparison ↗</a>
-      </div>
-      <p id="dataset-status" class="status" role="status" aria-live="polite">Loading the matched verification datasets…</p>
-    </section>
-
+  <main>
+    <nav class="comparison-section-nav" aria-label="Comparison sections">
+      <a href="#overview-title">Overview</a><a href="#detail-title">Selected scores</a><a href="#lead-title">Forecast lead</a><a href="#calibration-title">Reliability</a><a href="#event-title">Event detection</a><a href="#scope-title">Evaluation scope</a>
+    </nav>
     <section id="data-panel" hidden>
       <section class="panel scope" aria-labelledby="dataset-title">
-        <div class="heading-row">
+        <div class="section-heading heading-row">
           <div><p class="eyebrow" id="dataset-kind"></p><h2 id="dataset-title"></h2></div>
           <button type="button" class="button secondary" id="refresh-data">Refresh results</button>
         </div>
@@ -54,14 +69,13 @@
       </section>
 
       <section class="panel" aria-labelledby="overview-title">
-        <p class="eyebrow">All accumulation durations</p>
-        <h2 id="overview-title">Accuracy overview</h2>
+        <div class="section-heading"><div><p class="eyebrow eyebrow--blue">All accumulation durations</p><h2 id="overview-title">Accuracy overview</h2></div></div>
         <p class="subtle">Each duration pools its retained windows and common grid cells. Compare models within a duration; longer accumulations naturally have different precipitation-error scales.</p>
         <div id="overview-cards" class="overview-grid"></div>
       </section>
 
       <section class="panel" aria-labelledby="detail-title">
-        <div class="heading-row"><div><p class="eyebrow">Explore matched cases</p><h2 id="detail-title">Duration, lead and threshold</h2></div></div>
+        <div class="section-heading heading-row"><div><p class="eyebrow">Explore matched cases</p><h2 id="detail-title">Duration, lead and threshold</h2></div></div>
         <div class="controls">
           <label>Accumulation duration<select id="duration-select"></select></label>
           <label>Ending forecast lead<select id="lead-select"></select></label>
@@ -78,34 +92,34 @@
       </section>
 
       <section class="panel" aria-labelledby="lead-title">
-        <p class="eyebrow">Accuracy through 48 hours</p><h2 id="lead-title">Performance by ending forecast lead</h2>
-        <div class="model-key" aria-label="Forecast system legend"><span><i class="key-line gefs"></i>GEFS ANN-CSGD · dashed, open circles</span><span><i class="key-line hrrr"></i>HRRR ANN-CSGD · solid, filled squares</span></div>
-        <div class="chart-grid three">
-          <article><h3>CRPS mm</h3><div id="crps-chart" class="chart"></div></article>
-          <article><h3>Brier skill score</h3><div id="bss-chart" class="chart"></div></article>
-          <article><h3>Exact ROC AUC</h3><div id="auc-chart" class="chart"></div></article>
+        <div class="section-heading"><div><p class="eyebrow eyebrow--blue">Accuracy through 48 hours</p><h2 id="lead-title">Performance by ending forecast lead</h2></div></div>
+        <div class="model-key" aria-label="Forecast system legend"><span class="model-gefs"><i class="key-line gefs"></i>GEFS ANN-CSGD · dashed, open circles</span><span class="model-hrrr"><i class="key-line hrrr"></i>HRRR ANN-CSGD · solid, filled squares</span></div>
+        <div class="chart-grid chart-grid--three three">
+          <article class="chart-block"><h3>CRPS mm</h3><div id="crps-chart" class="chart"></div></article>
+          <article class="chart-block"><h3>Brier skill score</h3><div id="bss-chart" class="chart"></div></article>
+          <article class="chart-block"><h3>Exact ROC AUC</h3><div id="auc-chart" class="chart"></div></article>
         </div>
         <p class="subtle">BSS above zero improves on the shared reference. ROC AUC measures discrimination; the displayed AUC scale may focus on the observed range. These lines do not display confidence intervals.</p>
       </section>
 
       <section class="panel" aria-labelledby="calibration-title">
-        <p class="eyebrow">Probability calibration</p><h2 id="calibration-title">Reliability and forecast counts</h2>
-        <div class="chart-grid two"><article><h3>Observed frequency against forecast probability</h3><div id="reliability-chart" class="chart"></div></article><article><h3>Forecast counts by probability bin</h3><div id="count-chart" class="chart"></div></article></div>
+        <div class="section-heading"><div><p class="eyebrow eyebrow--blue">Probability calibration</p><h2 id="calibration-title">Reliability and forecast counts</h2></div></div>
+        <div class="chart-grid chart-grid--two two"><article class="chart-block"><h3>Reliability</h3><div id="reliability-chart" class="chart"></div></article><article class="chart-block"><h3>Forecast probability counts</h3><div id="count-chart" class="chart"></div></article></div>
         <p class="subtle">All nonempty bins are shown. The dotted diagonal marks perfect reliability. Forecast counts use a logarithmic scale; sparse high-probability bins require caution. No binomial reference bars are interpreted as spatially independent confidence intervals.</p>
       </section>
 
       <section class="panel" aria-labelledby="event-title">
-        <p class="eyebrow">Thresholded expected precipitation</p><h2 id="event-title">Event detection and calibration summaries</h2>
+        <div class="section-heading"><div><p class="eyebrow eyebrow--blue">Thresholded expected precipitation</p><h2 id="event-title">Event detection and calibration summaries</h2></div></div>
         <div class="table-shell"><table><thead><tr><th scope="col">Forecast system</th><th scope="col">CSI ↑</th><th scope="col">Precision ↑</th><th scope="col">Recall POD ↑</th><th scope="col">FAR ↓</th><th scope="col">F1 ↑</th><th scope="col">ETS ↑</th><th scope="col">ECE ↓</th></tr></thead><tbody id="event-table"></tbody></table></div>
         <p class="subtle">Forecast events use expected precipitation strictly exceeding the rainfall threshold, rather than a selected probability decision threshold. Undefined denominators are shown as an em dash. ECE is a probability fraction, calculated from all nonempty reliability bins; event rarity affects its interpretation.</p>
         <details><summary>Binned Brier components</summary><div class="table-shell"><table><thead><tr><th scope="col">Forecast system</th><th scope="col">Reliability REL ↓</th><th scope="col">Resolution RES ↑</th><th scope="col">REL / UNC ↓</th><th scope="col">RES / UNC ↑</th><th scope="col">Uncertainty UNC</th><th scope="col">Binning residual</th></tr></thead><tbody id="brier-components"></tbody></table></div><p class="subtle">These components use probabilities collapsed to their bin means. REL and RES are normalized by event uncertainty only when UNC is positive. The residual against the original Brier score is retained. Event uncertainty is distinct from the monthly reference Brier score used in BSS. Here “resolution” describes probability discrimination, not model grid spacing.</p></details>
       </section>
 
-      <section class="panel methods-note" aria-labelledby="scope-title"><h2 id="scope-title">Scope of the displayed results</h2><p>Only calculated and validated diagnostics appear in these tables. Additional interval, PIT, spatial-neighborhood and uncertainty analyses are separate extensions.</p><p id="pending-diagnostics" class="subtle"></p><p>The historical four-window operational pilot and the HRRR predictor-resolution experiment remain available in the <a href="./?legacy=1">earlier comparison view</a>; their samples and references differ from the annual study.</p></section>
+      <section class="panel methods-note" aria-labelledby="scope-title"><div class="section-heading"><div><h2 id="scope-title">Scope of the displayed results</h2></div></div><p>Only calculated and validated diagnostics appear in these tables. Additional interval, PIT, spatial-neighborhood and uncertainty analyses are separate extensions.</p><p id="pending-diagnostics" class="subtle"></p><p>The historical four-window operational pilot and the HRRR predictor-resolution experiment remain available in the <a href="./?legacy=1">previous comparison plots</a>; their samples and references differ from the annual study.</p></section>
     </section>
-    <noscript><p class="status">JavaScript is needed to select verification datasets. The <a href="./?legacy=1">earlier comparison view</a> remains available.</p></noscript>
+    <noscript><p class="status">JavaScript is needed to select verification datasets. The <a href="./?legacy=1">previous comparison plots</a> remains available.</p></noscript>
   </main>
   <footer><p>Precipitation errors are in millimeters. Operational rainfall maps use inches. One inch equals 25.4 mm.</p><p id="updated-time"></p></footer>
-  <script src="assets/verification-v2.js" defer></script>
+  <script src="assets/verification-v2.js?v=theme3" defer></script>
 </body>
 </html>

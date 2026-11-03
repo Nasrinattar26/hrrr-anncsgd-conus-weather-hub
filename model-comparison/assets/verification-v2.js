@@ -3,6 +3,7 @@
   "use strict";
   const SOURCES = ["gefs", "hrrr"];
   const LABELS = { gefs: "GEFS ANN-CSGD", hrrr: "HRRR ANN-CSGD" };
+  const COLORS = Object.freeze({ gefs: "#d97721", hrrr: "#1767d5" });
   const EXPECTED = { "6": 8, "12": 7, "24": 5 };
   const finite = value => typeof value === "number" && Number.isFinite(value);
   const divide = (a, b) => finite(a) && finite(b) && b > 0 ? a / b : null;
@@ -88,7 +89,7 @@
     return data;
   }
 
-  const API = { extras, reduction, validateDataset, selectedRow, durationData, thresholdRow };
+  const API = { extras, reduction, validateDataset, selectedRow, durationData, thresholdRow, colors: COLORS };
   if (typeof module !== "undefined" && module.exports) module.exports = API;
   if (typeof document === "undefined") return;
 
@@ -123,15 +124,15 @@
   function overview() {
     clear("overview-cards");
     ["6", "12", "24"].forEach(d => {
-      const score = durationData(state.data, d), card = el("article", undefined, "overview-card");
+      const score = durationData(state.data, d), card = el("article", undefined, "overview-card summary-card");
       card.append(el("h3", d + "-hour accumulation"));
       const g = score?.models?.gefs?.pooled, h = score?.models?.hrrr?.pooled;
       if (!g || !h) { card.classList.add("empty"); card.append(el("p", "Waiting for matched observations.")); $("overview-cards").append(card); return; }
       card.append(el("p", `BSS threshold: ${(state.threshold / 25.4).toFixed(state.threshold === 12.7 ? 1 : 0)} inch${state.threshold === 25.4 ? "" : "es"}`, "subtle"));
       const dl = el("dl");
-      [["GEFS CRPS", fmt(g.mean_crps_mm) + " mm"], ["HRRR CRPS", fmt(h.mean_crps_mm) + " mm"]].forEach(([label, val]) => { dl.append(el("dt", label), el("dd", val)); });
+      [["GEFS CRPS", fmt(g.mean_crps_mm) + " mm"], ["HRRR CRPS", fmt(h.mean_crps_mm) + " mm"]].forEach(([label, val]) => { dl.append(el("dt", label, label.startsWith("GEFS") ? "model-gefs" : "model-hrrr"), el("dd", val)); });
       const qg = thresholdRow(g, state.threshold), qh = thresholdRow(h, state.threshold);
-      [["GEFS BSS", fmt(qg?.brier_skill_score)], ["HRRR BSS", fmt(qh?.brier_skill_score)]].forEach(([label, val]) => { dl.append(el("dt", label), el("dd", val)); });
+      [["GEFS BSS", fmt(qg?.brier_skill_score)], ["HRRR BSS", fmt(qh?.brier_skill_score)]].forEach(([label, val]) => { dl.append(el("dt", label, label.startsWith("GEFS") ? "model-gefs" : "model-hrrr"), el("dd", val)); });
       card.append(dl);
       const gain = reduction(g.mean_crps_mm, h.mean_crps_mm);
       card.append(el("p", finite(gain) ? (gain >= 0 ? "HRRR CRPS reduction: " : "HRRR CRPS increase: ") + Math.abs(gain).toFixed(2) + "%" : "CRPS reduction is undefined.", "improvement"));
@@ -141,7 +142,7 @@
   }
 
   function renderRows(id, rows) {
-    clear(id); rows.forEach(cells => { const tr = el("tr"); cells.forEach((value, i) => { const td = el(i === 0 ? "th" : "td", value); if (!i) td.scope = "row"; tr.append(td); }); $(id).append(tr); });
+    clear(id); rows.forEach(cells => { const tr = el("tr"); cells.forEach((value, i) => { const td = el(i === 0 ? "th" : "td", value); if (!i) { td.scope = "row"; td.className = String(value).startsWith("GEFS") ? "model-gefs" : "model-hrrr"; } tr.append(td); }); $(id).append(tr); });
   }
   function renderControls() {
     const durations = ["6", "12", "24"].filter(d => durationData(state.data, d)?.models?.gefs?.pooled);
@@ -177,16 +178,16 @@
     clear(id); const svg = svgEl("svg", { viewBox: `0 0 440 ${height}`, role: "img", "aria-label": title });
     svg.append(svgEl("title", {}, title), svgEl("desc", {}, description)); $(id).append(svg); return svg;
   }
-  function chartText(svg, value, x, y, extra = {}) { svg.append(svgEl("text", { x, y, fill: "#000", "font-family": "Times New Roman, Times, serif", "font-size": 14, ...extra }, value)); }
-  function marker(svg, x, y, source, size = 3.8) { if (source === "gefs") svg.append(svgEl("circle", { cx: x, cy: y, r: size, fill: "#fff", stroke: "#000", "stroke-width": 1.5 })); else svg.append(svgEl("rect", { x: x - size, y: y - size, width: 2 * size, height: 2 * size, fill: "#000" })); }
+  function chartText(svg, value, x, y, extra = {}) { svg.append(svgEl("text", { x, y, fill: "#26333d", "font-family": "inherit", "font-size": 14, ...extra }, value)); }
+  function marker(svg, x, y, source, size = 3.8) { if (source === "gefs") svg.append(svgEl("circle", { cx: x, cy: y, r: size, fill: "#fff", stroke: COLORS[source], "stroke-width": 1.5 })); else svg.append(svgEl("rect", { x: x - size, y: y - size, width: 2 * size, height: 2 * size, fill: COLORS[source] })); }
   function axes(svg, opts) {
     const { width = 440, height = 315, xmin = 0, xmax = 48, ymin, ymax, xticks, yticks, xlabel, ylabel, yformat = v => fmt(v, 2) } = opts;
     const margin = { left: 62, right: 20, top: 18, bottom: 56 };
     const x = v => margin.left + (v - xmin) / (xmax - xmin) * (width - margin.left - margin.right);
     const y = v => height - margin.bottom - (v - ymin) / (ymax - ymin) * (height - margin.top - margin.bottom);
-    yticks.forEach(v => { svg.append(svgEl("line", { x1: x(xmin), y1: y(v), x2: x(xmax), y2: y(v), stroke: "#d8d8d8", "stroke-width": .7 })); chartText(svg, yformat(v), x(xmin) - 8, y(v) + 5, { "text-anchor": "end" }); });
-    xticks.forEach(v => { svg.append(svgEl("line", { x1: x(v), y1: y(ymin), x2: x(v), y2: y(ymin) + 5, stroke: "#000" })); chartText(svg, v, x(v), y(ymin) + 23, { "text-anchor": "middle" }); });
-    svg.append(svgEl("path", { d: `M${x(xmin)},${y(ymax)}V${y(ymin)}H${x(xmax)}`, fill: "none", stroke: "#000", "stroke-width": 1.1 }));
+    yticks.forEach(v => { svg.append(svgEl("line", { x1: x(xmin), y1: y(v), x2: x(xmax), y2: y(v), stroke: "#dde6f2", "stroke-width": .7 })); chartText(svg, yformat(v), x(xmin) - 8, y(v) + 5, { "text-anchor": "end" }); });
+    xticks.forEach(v => { svg.append(svgEl("line", { x1: x(v), y1: y(ymin), x2: x(v), y2: y(ymin) + 5, stroke: "#8192aa" })); chartText(svg, v, x(v), y(ymin) + 23, { "text-anchor": "middle" }); });
+    svg.append(svgEl("path", { d: `M${x(xmin)},${y(ymax)}V${y(ymin)}H${x(xmax)}`, fill: "none", stroke: "#8192aa", "stroke-width": 1.1 }));
     chartText(svg, xlabel, (x(xmin) + x(xmax)) / 2, height - 9, { "text-anchor": "middle" });
     chartText(svg, ylabel, 16, (y(ymin) + y(ymax)) / 2, { transform: `rotate(-90 16 ${(y(ymin) + y(ymax)) / 2})`, "text-anchor": "middle" });
     return { x, y };
@@ -210,7 +211,7 @@
     series.forEach(s => {
       let path = "", open = false;
       s.points.forEach(([xx, yy]) => { if (!finite(yy)) { open = false; return; } path += `${open ? "L" : "M"}${x(xx)},${y(yy)}`; open = true; });
-      svg.append(svgEl("path", { d: path, fill: "none", stroke: "#000", "stroke-width": 1.8, ...(s.source === "gefs" ? { "stroke-dasharray": "6 4" } : {}) }));
+      svg.append(svgEl("path", { d: path, fill: "none", stroke: COLORS[s.source], "stroke-width": 2.5, ...(s.source === "gefs" ? { "stroke-dasharray": "6 4" } : {}) }));
       s.points.filter(p => finite(p[1])).forEach(([xx, yy]) => marker(svg, x(xx), y(yy), s.source));
     });
   }
@@ -221,21 +222,21 @@
     SOURCES.forEach((source, i) => {
       const bins = (qs[i]?.reliability || []).filter(b => b.count > 0 && finite(b.mean_probability) && finite(b.observed_frequency));
       const path = bins.map((b, j) => `${j ? "L" : "M"}${x(b.mean_probability)},${y(b.observed_frequency)}`).join("");
-      svg.append(svgEl("path", { d: path, fill: "none", stroke: "#000", "stroke-width": 1.7, ...(source === "gefs" ? { "stroke-dasharray": "6 4" } : {}) }));
+      svg.append(svgEl("path", { d: path, fill: "none", stroke: COLORS[source], "stroke-width": 2.5, ...(source === "gefs" ? { "stroke-dasharray": "6 4" } : {}) }));
       bins.forEach(b => marker(svg, x(b.mean_probability), y(b.observed_frequency), source));
     });
   }
   function binCounts(qs) {
-    const svg = svgBase("count-chart", "Forecast probability bin counts", "Logarithmic forecast counts by probability bin. GEFS has hatched white bars, HRRR solid black bars. Zero-count bins are omitted.");
+    const svg = svgBase("count-chart", "Forecast probability bin counts", "Logarithmic forecast counts by probability bin. GEFS has orange hatched bars; HRRR has solid blue bars. Zero-count bins are omitted.");
     const all = qs.flatMap(q => q?.reliability || []), max = Math.max(1, ...all.map(b => b.count));
     const top = Math.max(1, Math.ceil(Math.log10(max)));
     const { x, y } = axes(svg, { xmin: 0, xmax: 1, ymin: 0, ymax: top, xticks: [0, .2, .4, .6, .8, 1], yticks: Array.from({ length: top + 1 }, (_, i) => i), xlabel: "Forecast probability bin", ylabel: "Forecast count log scale", yformat: v => v === 0 ? "1" : "10" + ({1:"¹",2:"²",3:"³",4:"⁴",5:"⁵",6:"⁶",7:"⁷",8:"⁸",9:"⁹"}[v] || "^" + v) });
     const defs = svgEl("defs"), pattern = svgEl("pattern", { id: "gefs-count-hatch", width: 5, height: 5, patternUnits: "userSpaceOnUse" });
-    pattern.append(svgEl("rect", { width: 5, height: 5, fill: "#fff" }), svgEl("path", { d: "M-1,1L1,-1M0,5L5,0M4,6L6,4", stroke: "#555", "stroke-width": .7 })); defs.append(pattern); svg.append(defs);
+    pattern.append(svgEl("rect", { width: 5, height: 5, fill: "#ffead8" }), svgEl("path", { d: "M-1,1L1,-1M0,5L5,0M4,6L6,4", stroke: COLORS.gefs, "stroke-width": .7 })); defs.append(pattern); svg.append(defs);
     SOURCES.forEach((source, i) => (qs[i]?.reliability || []).forEach(b => {
       if (!(b.count > 0)) return;
       const center = (b.lower_probability + b.upper_probability) / 2 + (i ? .019 : -.019);
-      svg.append(svgEl("rect", { x: x(center - .017), y: y(Math.log10(b.count)), width: x(.034) - x(0), height: Math.max(.8, y(0) - y(Math.log10(b.count))), fill: source === "gefs" ? "url(#gefs-count-hatch)" : "#000", stroke: "#000", "stroke-width": .6 }));
+      svg.append(svgEl("rect", { x: x(center - .017), y: y(Math.log10(b.count)), width: x(.034) - x(0), height: Math.max(.8, y(0) - y(Math.log10(b.count))), fill: source === "gefs" ? "url(#gefs-count-hatch)" : COLORS.hrrr, stroke: COLORS[source], "stroke-width": .6 }));
     }));
     chartText(svg, "GEFS hatched · HRRR filled", 438, 12, { "text-anchor": "end", "font-size": 12 });
   }
