@@ -1,8 +1,29 @@
 {
-  "generated_utc": "2026-11-03T18:54:49.646143+00:00",
+  "generated_utc": "2026-11-03T20:39:23.720238+00:00",
   "operational": {
-    "latest_complete_init": null,
-    "runs": []
+    "latest_complete_init": "2026110118",
+    "runs": [
+      {
+        "available_windows": {
+          "12": 7,
+          "24": 5,
+          "6": 8
+        },
+        "init": "2026110118",
+        "path": "operational/recent-1.json",
+        "status": "COMPLETE"
+      },
+      {
+        "available_windows": {
+          "12": 7,
+          "24": 5,
+          "6": 8
+        },
+        "init": "2026110112",
+        "path": "operational/recent-2.json",
+        "status": "COMPLETE"
+      }
+    ]
   },
   "research": {
     "label": "2025 research evaluation",
