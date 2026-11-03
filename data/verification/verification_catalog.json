@@ -7,8 +7,8 @@
   "retained_run_count": 30,
   "complete_run_count": 26,
   "partial_run_count": 4,
-  "latest_initialization": "2026110112",
-  "latest_valid_time": "2026-11-02T18:00:00Z",
+  "latest_initialization": "2026110212",
+  "latest_valid_time": "2026-11-03T18:00:00Z",
   "metric_definitions": {
     "BSS": "Brier Skill Score relative to monthly historical MRMS event-frequency climatology.",
     "POD": "Hits divided by hits plus misses.",
@@ -18,7 +18,7 @@
   "categorical_forecast_definition": "ANN-CSGD expected precipitation greater than or equal to the event threshold.",
   "runs": [
     {
-      "initialization": "2026110112",
+      "initialization": "2026110212",
       "verification_state": "PARTIAL",
       "is_fully_verified": false,
       "verification_coverage": {
@@ -37,63 +37,63 @@
           {
             "duration_hours": 6,
             "window": "f30_f36",
-            "valid_time": "2026-11-03T00:00:00Z",
+            "valid_time": "2026-11-04T00:00:00Z",
             "status": "PENDING_VALID_TIME",
             "reason": "Observation availability time has not passed."
           },
           {
             "duration_hours": 6,
             "window": "f36_f42",
-            "valid_time": "2026-11-03T06:00:00Z",
+            "valid_time": "2026-11-04T06:00:00Z",
             "status": "PENDING_VALID_TIME",
             "reason": "Observation availability time has not passed."
           },
           {
             "duration_hours": 6,
             "window": "f42_f48",
-            "valid_time": "2026-11-03T12:00:00Z",
+            "valid_time": "2026-11-04T12:00:00Z",
             "status": "PENDING_VALID_TIME",
             "reason": "Observation availability time has not passed."
           },
           {
             "duration_hours": 12,
             "window": "f24_f36",
-            "valid_time": "2026-11-03T00:00:00Z",
+            "valid_time": "2026-11-04T00:00:00Z",
             "status": "PENDING_VALID_TIME",
             "reason": "Observation availability time has not passed."
           },
           {
             "duration_hours": 12,
             "window": "f30_f42",
-            "valid_time": "2026-11-03T06:00:00Z",
+            "valid_time": "2026-11-04T06:00:00Z",
             "status": "PENDING_VALID_TIME",
             "reason": "Observation availability time has not passed."
           },
           {
             "duration_hours": 12,
             "window": "f36_f48",
-            "valid_time": "2026-11-03T12:00:00Z",
+            "valid_time": "2026-11-04T12:00:00Z",
             "status": "PENDING_VALID_TIME",
             "reason": "Observation availability time has not passed."
           },
           {
             "duration_hours": 24,
             "window": "f12_f36",
-            "valid_time": "2026-11-03T00:00:00Z",
+            "valid_time": "2026-11-04T00:00:00Z",
             "status": "PENDING_VALID_TIME",
             "reason": "Observation availability time has not passed."
           },
           {
             "duration_hours": 24,
             "window": "f18_f42",
-            "valid_time": "2026-11-03T06:00:00Z",
+            "valid_time": "2026-11-04T06:00:00Z",
             "status": "PENDING_VALID_TIME",
             "reason": "Observation availability time has not passed."
           },
           {
             "duration_hours": 24,
             "window": "f24_f48",
-            "valid_time": "2026-11-03T12:00:00Z",
+            "valid_time": "2026-11-04T12:00:00Z",
             "status": "PENDING_VALID_TIME",
             "reason": "Observation availability time has not passed."
           }
@@ -150,8 +150,8 @@
       "completed_window_count": 11,
       "pending_window_count": 9,
       "threshold_row_count": 68,
-      "earliest_valid_time": "2026-11-01T18:00:00Z",
-      "latest_valid_time": "2026-11-02T18:00:00Z",
+      "earliest_valid_time": "2026-11-02T18:00:00Z",
+      "latest_valid_time": "2026-11-03T18:00:00Z",
       "duration_window_counts": {
         "6": 5,
         "12": 4,
@@ -159,28 +159,28 @@
       },
       "metric_ranges": {
         "POD": {
-          "finite_count": 66,
+          "finite_count": 59,
           "minimum": 0.0,
-          "maximum": 0.6873949579831933
+          "maximum": 0.7645727221279004
         },
         "FAR": {
-          "finite_count": 35,
-          "minimum": 0.0,
+          "finite_count": 26,
+          "minimum": 0.14473684210526316,
           "maximum": 1.0
         },
         "CSI": {
-          "finite_count": 66,
+          "finite_count": 59,
           "minimum": 0.0,
-          "maximum": 0.5323210412147505
+          "maximum": 0.6049504950495049
         },
         "brier_skill_score": {
           "finite_count": 68,
-          "minimum": -41.11644405449887,
-          "maximum": 0.5682897237792766
+          "minimum": -10.284438253960554,
+          "maximum": 0.8967449108229057
         }
       },
-      "summary_url": "runs/2026110112/verification_summary.json",
-      "csv_url": "runs/2026110112/verification_metrics.csv"
+      "summary_url": "runs/2026110212/verification_summary.json",
+      "csv_url": "runs/2026110212/verification_metrics.csv"
     },
     {
       "initialization": "2026103112",
