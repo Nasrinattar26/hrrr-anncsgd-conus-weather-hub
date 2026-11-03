@@ -1,0 +1,12 @@
+{
+  "generated_utc": "2026-11-03T18:54:49.646143+00:00",
+  "operational": {
+    "latest_complete_init": null,
+    "runs": []
+  },
+  "research": {
+    "label": "2025 research evaluation",
+    "path": "research-2025.json"
+  },
+  "schema_version": 1
+}
