@@ -2,8 +2,8 @@
   "project_name": "GEFS ANN-CSGD model",
   "description": "Independent direct 6/12/24-hour GEFS postprocessing through 192h",
   "source_model": "GEFS",
-  "latest_initialization": "2026110412",
-  "latest_initialization_display": "2026-11-04 12 UTC",
+  "latest_initialization": "2026110418",
+  "latest_initialization_display": "2026-11-04 18 UTC",
   "production_status": "PASS",
   "expected_products": 92,
   "passed_products": 92,
@@ -19,5 +19,5 @@
   "gif_count": 22,
   "grib2_file_count": 92,
   "validation_description": "Independent split and sampled test diagnostics recorded in models.json; no inherited HRRR verification claims",
-  "updated_utc": "2026-11-04T18:23:29.710326+00:00"
+  "updated_utc": "2026-11-05T00:16:23.395711+00:00"
 }
