@@ -1,0 +1,79 @@
+{
+  "init": "2026110500",
+  "duration_hours": 24,
+  "window": "f102_f126",
+  "start_fhr": 102,
+  "end_fhr": 126,
+  "valid_start": "2026-11-09T06:00:00Z",
+  "valid_end": "2026-11-10T06:00:00Z",
+  "model": "/data/Nasrin/Ann_csgd_project/gefs_duration_specific_v1/models/24h/gefs_anncsgd_24h_best.keras",
+  "model_sha256": "1b45888abe5b0b69c65784d619e5d460acf706bd6c4b5329816db7afba3564a4",
+  "stats_sha256": "8dd31e7f4686a7b35d449230687f4cd555e72fa21574b264dd9eb6569fa240b3",
+  "construction": "direct duration-specific CSGD distribution",
+  "units": "mm / percent",
+  "ari_sources": {
+    "2": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/ari_thresholds/wpc_allusa_v1/wpc_allusa_2yr_24h_ann025_landmask.npz",
+    "5": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/ari_thresholds/wpc_allusa_v1/wpc_allusa_5yr_24h_ann025_landmask.npz"
+  },
+  "institution": "UTA HydroMet Lab; research postprocessing",
+  "message_count": 8,
+  "records": [
+    {
+      "variable": "expected_precip_mm",
+      "units": "mm (kg m-2)",
+      "finite_cells": 13318,
+      "local_ARI_field": false,
+      "encoding": "WMO PDT4.8 total precipitation"
+    },
+    {
+      "variable": "prob_gt_0p5inch_percent",
+      "units": "percent",
+      "finite_cells": 13318,
+      "local_ARI_field": false,
+      "encoding": "WMO PDT4.9 upper-limit exceedance"
+    },
+    {
+      "variable": "prob_gt_1inch_percent",
+      "units": "percent",
+      "finite_cells": 13318,
+      "local_ARI_field": false,
+      "encoding": "WMO PDT4.9 upper-limit exceedance"
+    },
+    {
+      "variable": "prob_gt_2inch_percent",
+      "units": "percent",
+      "finite_cells": 13318,
+      "local_ARI_field": false,
+      "encoding": "WMO PDT4.9 upper-limit exceedance"
+    },
+    {
+      "variable": "prob_gt_3inch_percent",
+      "units": "percent",
+      "finite_cells": 13318,
+      "local_ARI_field": false,
+      "encoding": "WMO PDT4.9 upper-limit exceedance"
+    },
+    {
+      "variable": "prob_gt_5inch_percent",
+      "units": "percent",
+      "finite_cells": 13318,
+      "local_ARI_field": false,
+      "encoding": "WMO PDT4.9 upper-limit exceedance"
+    },
+    {
+      "variable": "prob_gt_2yr24h_ari_percent",
+      "units": "percent",
+      "finite_cells": 13301,
+      "local_ARI_field": true,
+      "encoding": "local discipline192, category0, parameter2/5; spatial ARI threshold"
+    },
+    {
+      "variable": "prob_gt_5yr24h_ari_percent",
+      "units": "percent",
+      "finite_cells": 13301,
+      "local_ARI_field": true,
+      "encoding": "local discipline192, category0, parameter2/5; spatial ARI threshold"
+    }
+  ],
+  "ARI_local_definition": "discipline192/category0/parameter2 or5 = percent exceeding local duration-specific 2/5-year threshold; see numerical product provenance"
+}
