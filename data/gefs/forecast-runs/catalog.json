@@ -2,15 +2,15 @@
   "schema_version": 1,
   "runs": [
     {
-      "init": "2026110506",
-      "map_catalog": "data/gefs/forecast-runs/2026110506/map_catalog.json",
-      "gif_manifest": "products/gefs/gifs/2026110506/manifest.json",
-      "grib_manifest": "products/gefs/grib2/2026110506/manifest.json",
+      "init": "2026110512",
+      "map_catalog": "data/gefs/forecast-runs/2026110512/map_catalog.json",
+      "gif_manifest": "products/gefs/gifs/2026110512/manifest.json",
+      "grib_manifest": "products/gefs/grib2/2026110512/manifest.json",
       "map_count": 673,
       "display_amount_units": "inches"
     }
   ],
-  "latest_initialization": "2026110506",
+  "latest_initialization": "2026110512",
   "retention_count": 1,
-  "updated_utc": "2026-11-05T12:16:19.254153+00:00"
+  "updated_utc": "2026-11-05T18:15:52.795177+00:00"
 }
