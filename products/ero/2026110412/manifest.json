@@ -1,0 +1,58 @@
+{
+  "status": "SUCCESS",
+  "initialization": "2026110412",
+  "product_family": "hrrr_anncsgd_wpc_ero_comparison",
+  "product_count": 2,
+  "standard_map_count_unchanged": 145,
+  "created_utc": "2026-11-05T21:18:28.856225+00:00",
+  "products": [
+    {
+      "duration_hours": 24,
+      "window": "f00_f24",
+      "start_fhr": 0,
+      "end_fhr": 24,
+      "variable": "wpc_ero_comparison_day1",
+      "label": "WPC ERO Comparison \u2014 Day 1",
+      "units": "comparison",
+      "kind": "image",
+      "path": "products/ero/2026110412/24h/f00_f24/hrrr_anncsgd_wpc_ero_2026110412_24h_f00_f24_day1_conus.png",
+      "metadata_path": "products/ero/2026110412/24h/f00_f24/hrrr_anncsgd_wpc_ero_2026110412_24h_f00_f24_day1_conus.json",
+      "size_bytes": 1008207,
+      "ero_day": 1,
+      "ero_temporal_coverage": "full",
+      "sha256": "c6a77acd79ec5e607bea2e7dd54b5d255aaf38cd9a84b00a08f7218005ab00a4",
+      "wpc_ero_source_url": "https://mesonet.agron.iastate.edu/cgi-bin/request/gis/outlooks.py?d=1&d=2&type=E&geom=geom_layers&sts=2026-11-04T00%3A00Z&ets=2026-11-05T00%3A00Z",
+      "wpc_ero_outlook_status": "RISK_AREAS_ISSUED",
+      "wpc_ero_source_resolution": "WPC_ARCHIVE_IEM",
+      "wpc_ero_source_feature_count": 1,
+      "wpc_ero_valid_start_actual_utc": "2026-11-04T12:00:00Z",
+      "wpc_ero_valid_end_actual_utc": "2026-11-05T12:00:00Z",
+      "ero_categories": [
+        "MARGINAL"
+      ]
+    },
+    {
+      "duration_hours": 24,
+      "window": "f24_f48",
+      "start_fhr": 24,
+      "end_fhr": 48,
+      "variable": "wpc_ero_comparison_day2",
+      "label": "WPC ERO Comparison \u2014 Day 2",
+      "units": "comparison",
+      "kind": "image",
+      "path": "products/ero/2026110412/24h/f24_f48/hrrr_anncsgd_wpc_ero_2026110412_24h_f24_f48_day2_conus.png",
+      "metadata_path": "products/ero/2026110412/24h/f24_f48/hrrr_anncsgd_wpc_ero_2026110412_24h_f24_f48_day2_conus.json",
+      "size_bytes": 989594,
+      "ero_day": 2,
+      "ero_temporal_coverage": "full",
+      "sha256": "50b8b827f5699d01f45745bc241aa30996bbf8ca0c40e205b1f1a4304cc02275",
+      "wpc_ero_source_url": "https://mesonet.agron.iastate.edu/cgi-bin/request/gis/outlooks.py?d=1&d=2&type=E&geom=geom_layers&sts=2026-11-04T00%3A00Z&ets=2026-11-05T00%3A00Z",
+      "wpc_ero_outlook_status": "NO_RISK_AREAS",
+      "wpc_ero_source_resolution": "WPC_ARCHIVE_IEM",
+      "wpc_ero_source_feature_count": 0,
+      "wpc_ero_valid_start_actual_utc": "2026-11-05T12:00:00Z",
+      "wpc_ero_valid_end_actual_utc": "2026-11-06T12:00:00Z",
+      "ero_categories": []
+    }
+  ]
+}

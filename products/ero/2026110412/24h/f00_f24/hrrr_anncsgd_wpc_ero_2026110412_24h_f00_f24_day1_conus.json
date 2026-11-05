@@ -1,0 +1,74 @@
+{
+  "display_amount_units": "inches",
+  "product_family": "hrrr_anncsgd_wpc_ero_comparison",
+  "initialization": "2026110412",
+  "duration_hours": 24,
+  "window": "f00_f24",
+  "ero_day": 1,
+  "valid_start_utc": "2026-11-04T12:00:00Z",
+  "valid_end_utc": "2026-11-05T12:00:00Z",
+  "ero_issue_times": [
+    "2026-11-04 08:07:00"
+  ],
+  "ero_categories": [
+    "MARGINAL"
+  ],
+  "ero_feature_count": 1,
+  "threshold_key": "1inch",
+  "threshold_mm": 25.4,
+  "comparison_scope": "qualitative_guidance_comparison",
+  "science_note": "WPC ERO categories are excessive-rainfall risk guidance and are not equivalent to ANN-CSGD precipitation probabilities.",
+  "panels": [
+    "raw_hrrr_24h_precipitation",
+    "raw_hrrr_deterministic_1inch_exceedance",
+    "ann_csgd_1inch_exceedance_probability",
+    "wpc_ero_categorical_risk"
+  ],
+  "field_statistics": {
+    "raw_hrrr_maximum_mm": 93.19000244140625,
+    "ann_csgd_expected_maximum_mm": 47.0595703125,
+    "ann_csgd_1inch_probability_maximum_percent": 86.84326171875
+  },
+  "source_npz": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/data/realtime_products/2026110412/24h/f00_f24/hrrr_2026110412_f00_f24_anncsgd_24h.npz",
+  "source_ero_geojson": "/data/Nasrin/Ann_csgd_project/hrrr_anncsgd_project/github/hrrr-anncsgd-conus-weather-hub/products/ero/2026110412/source/Day1_normalized.geojson",
+  "png_width": 3600,
+  "png_height": 2070,
+  "png_bytes": 1008207,
+  "png_sha256": "c6a77acd79ec5e607bea2e7dd54b5d255aaf38cd9a84b00a08f7218005ab00a4",
+  "png_rgb_standard_deviation": [
+    42.22486722059198,
+    41.107989329416704,
+    42.424586834888466
+  ],
+  "wpc_ero_outlook_status": "RISK_AREAS_ISSUED",
+  "wpc_ero_archive_provenance": {
+    "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/gis/outlooks.py?d=1&d=2&type=E&geom=geom_layers&sts=2026-11-04T00%3A00Z&ets=2026-11-05T00%3A00Z",
+    "sha256": "cee6b3ce009a65c26f5aa2d0bd891cdd08ef9f57ac4ec09c028ff865e4addcbf",
+    "bytes": 3152,
+    "fetched_utc": "2026-11-05T21:17:57.586204+00:00",
+    "resolver": "wpc_ero_archive_v2",
+    "provider": "Iowa Environmental Mesonet archive of WPC PTS outlooks",
+    "geometry": "IEM cake layers; decoded from WPC PTS, not native WPC GeoJSON",
+    "outlook_day": 1,
+    "initialization": "2026110412",
+    "product_issued_utc": "2026-11-04T08:07:00+00:00",
+    "valid_start_utc": "2026-11-04T12:00:00+00:00",
+    "valid_end_utc": "2026-11-05T12:00:00+00:00",
+    "issued_after_hrrr_initialization": false
+  },
+  "wpc_ero_source_feature_count": 1,
+  "wpc_ero_valid_start_actual_utc": "2026-11-04T12:00:00Z",
+  "wpc_ero_valid_end_actual_utc": "2026-11-05T12:00:00Z",
+  "wpc_ero_temporal_coverage": "full",
+  "wpc_ero_no_risk_evidence": null,
+  "wpc_ero_source_url": "https://mesonet.agron.iastate.edu/cgi-bin/request/gis/outlooks.py?d=1&d=2&type=E&geom=geom_layers&sts=2026-11-04T00%3A00Z&ets=2026-11-05T00%3A00Z",
+  "wpc_ero_source_resolution": "WPC_ARCHIVE_IEM",
+  "wpc_ero_official_geojson": "products/ero/2026110412/source/Day1_Latest.geojson",
+  "wpc_ero_issue_times_actual": [
+    "2026-11-04 08:07:00"
+  ],
+  "wpc_ero_categories_actual": [
+    "MARGINAL"
+  ],
+  "science_note_temporal": "The WPC ERO validity matches the HRRR 24-hour window."
+}
