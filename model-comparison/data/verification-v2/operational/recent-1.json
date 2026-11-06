@@ -1564,7 +1564,7 @@
     "score_units": "CRPS/MAE/RMSE/bias in mm; probabilities and skill scores as fractions.",
     "status": "PARTIAL",
     "title": "Issued operational forecasts 2026110606",
-    "verified_utc": "2026-11-06T18:52:13.335787+00:00",
+    "verified_utc": "2026-11-06T19:37:11.903368+00:00",
     "waiting_windows": [
       {
         "duration_hours": 6,
