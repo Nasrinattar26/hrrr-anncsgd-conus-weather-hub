@@ -1,15 +1,15 @@
 {
-  "generated_utc": "2026-11-06T02:08:42.864192+00:00",
+  "generated_utc": "2026-11-06T02:37:13.134894+00:00",
   "operational": {
     "latest_complete_init": "2026110400",
     "runs": [
       {
         "available_windows": {
-          "12": 5,
-          "24": 3,
-          "6": 6
+          "12": 0,
+          "24": 0,
+          "6": 1
         },
-        "init": "2026110412",
+        "init": "2026110518",
         "path": "operational/recent-1.json",
         "status": "PARTIAL"
       },
