@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "latest_hrrr_initialization": "2026111612",
-  "latest_ready_initialization": "2026111606",
-  "generated_utc": "2026-11-16T14:07:10.140571+00:00",
+  "latest_ready_initialization": "2026111612",
+  "generated_utc": "2026-11-16T18:11:43.410958+00:00",
   "runs": [
     {
       "init": "2026111612",
       "gefs_init": "2026111612",
-      "status": "waiting",
+      "status": "ready",
       "matching_policy": "same_initialization",
       "manifest": "data/forecast-comparison/runs/2026111612.json"
     },
