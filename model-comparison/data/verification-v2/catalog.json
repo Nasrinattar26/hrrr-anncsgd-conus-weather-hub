@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-11-16T08:52:13.077422+00:00",
+  "generated_utc": "2026-11-16T14:22:18.597939+00:00",
   "operational": {
-    "latest_complete_init": "2026111406",
+    "latest_complete_init": "2026111412",
     "runs": [
       {
         "available_windows": {
@@ -9,7 +9,7 @@
           "24": 0,
           "6": 1
         },
-        "init": "2026111600",
+        "init": "2026111606",
         "path": "operational/recent-1.json",
         "status": "PARTIAL"
       },
@@ -19,7 +19,7 @@
           "24": 5,
           "6": 8
         },
-        "init": "2026111406",
+        "init": "2026111412",
         "path": "operational/recent-2.json",
         "status": "COMPLETE"
       }
