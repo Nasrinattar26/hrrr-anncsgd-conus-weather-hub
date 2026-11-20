@@ -1,0 +1,64 @@
+{
+  "status": "SUCCESS",
+  "initialization": "2026112012",
+  "product_family": "hrrr_anncsgd_wpc_ero_comparison",
+  "product_count": 2,
+  "standard_map_count_unchanged": 145,
+  "created_utc": "2026-11-20T14:06:26.461436+00:00",
+  "products": [
+    {
+      "duration_hours": 24,
+      "window": "f00_f24",
+      "start_fhr": 0,
+      "end_fhr": 24,
+      "variable": "wpc_ero_comparison_day1",
+      "label": "WPC ERO Comparison \u2014 Day 1",
+      "units": "comparison",
+      "kind": "image",
+      "path": "products/ero/2026112012/24h/f00_f24/hrrr_anncsgd_wpc_ero_2026112012_24h_f00_f24_day1_conus.png",
+      "metadata_path": "products/ero/2026112012/24h/f00_f24/hrrr_anncsgd_wpc_ero_2026112012_24h_f00_f24_day1_conus.json",
+      "size_bytes": 994966,
+      "ero_day": 1,
+      "ero_temporal_coverage": "full",
+      "sha256": "a1e311cbdc811159db5de5388f633fb508da191ac796cac16c659b1769eb4dbf",
+      "wpc_ero_source_url": "https://www.wpc.ncep.noaa.gov/exper/eromap/geojson/Day1_Latest.geojson",
+      "wpc_ero_outlook_status": "RISK_AREAS_ISSUED",
+      "wpc_ero_source_resolution": "WPC_NATIVE_LATEST",
+      "wpc_ero_source_feature_count": 4,
+      "wpc_ero_valid_start_actual_utc": "2026-11-20T12:00:00Z",
+      "wpc_ero_valid_end_actual_utc": "2026-11-21T12:00:00Z",
+      "ero_categories": [
+        "MARGINAL",
+        "SLIGHT",
+        "MODERATE",
+        "HIGH"
+      ]
+    },
+    {
+      "duration_hours": 24,
+      "window": "f24_f48",
+      "start_fhr": 24,
+      "end_fhr": 48,
+      "variable": "wpc_ero_comparison_day2",
+      "label": "WPC ERO Comparison \u2014 Day 2",
+      "units": "comparison",
+      "kind": "image",
+      "path": "products/ero/2026112012/24h/f24_f48/hrrr_anncsgd_wpc_ero_2026112012_24h_f24_f48_day2_conus.png",
+      "metadata_path": "products/ero/2026112012/24h/f24_f48/hrrr_anncsgd_wpc_ero_2026112012_24h_f24_f48_day2_conus.json",
+      "size_bytes": 1014518,
+      "ero_day": 2,
+      "ero_temporal_coverage": "full",
+      "sha256": "264b2776883a7e62db18a43226e00ed87385c6bde461f82b3a64d0da0a7eda51",
+      "wpc_ero_source_url": "https://www.wpc.ncep.noaa.gov/exper/eromap/geojson/Day2_Latest.geojson",
+      "wpc_ero_outlook_status": "RISK_AREAS_ISSUED",
+      "wpc_ero_source_resolution": "WPC_NATIVE_LATEST",
+      "wpc_ero_source_feature_count": 3,
+      "wpc_ero_valid_start_actual_utc": "2026-11-21T12:00:00Z",
+      "wpc_ero_valid_end_actual_utc": "2026-11-22T12:00:00Z",
+      "ero_categories": [
+        "MARGINAL",
+        "SLIGHT"
+      ]
+    }
+  ]
+}
