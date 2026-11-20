@@ -183,6 +183,143 @@
       "csv_url": "runs/2026111912/verification_metrics.csv"
     },
     {
+      "initialization": "2026111812",
+      "verification_state": "COMPLETE",
+      "is_fully_verified": true,
+      "verification_coverage": {
+        "schema": "verification_coverage_v1",
+        "verification_state": "COMPLETE",
+        "forecast_window_count": 20,
+        "completed_window_count": 20,
+        "unavailable_observation_window_count": 0,
+        "pending_window_count": 0,
+        "duration_window_counts": {
+          "6": 8,
+          "12": 7,
+          "24": 5
+        },
+        "unverified_windows": [],
+        "verified_windows": [
+          {
+            "duration_hours": 6,
+            "window": "f00_f06"
+          },
+          {
+            "duration_hours": 6,
+            "window": "f06_f12"
+          },
+          {
+            "duration_hours": 6,
+            "window": "f12_f18"
+          },
+          {
+            "duration_hours": 6,
+            "window": "f18_f24"
+          },
+          {
+            "duration_hours": 6,
+            "window": "f24_f30"
+          },
+          {
+            "duration_hours": 6,
+            "window": "f30_f36"
+          },
+          {
+            "duration_hours": 6,
+            "window": "f36_f42"
+          },
+          {
+            "duration_hours": 6,
+            "window": "f42_f48"
+          },
+          {
+            "duration_hours": 12,
+            "window": "f00_f12"
+          },
+          {
+            "duration_hours": 12,
+            "window": "f06_f18"
+          },
+          {
+            "duration_hours": 12,
+            "window": "f12_f24"
+          },
+          {
+            "duration_hours": 12,
+            "window": "f18_f30"
+          },
+          {
+            "duration_hours": 12,
+            "window": "f24_f36"
+          },
+          {
+            "duration_hours": 12,
+            "window": "f30_f42"
+          },
+          {
+            "duration_hours": 12,
+            "window": "f36_f48"
+          },
+          {
+            "duration_hours": 24,
+            "window": "f00_f24"
+          },
+          {
+            "duration_hours": 24,
+            "window": "f06_f30"
+          },
+          {
+            "duration_hours": 24,
+            "window": "f12_f36"
+          },
+          {
+            "duration_hours": 24,
+            "window": "f18_f42"
+          },
+          {
+            "duration_hours": 24,
+            "window": "f24_f48"
+          }
+        ]
+      },
+      "unavailable_observation_window_count": 0,
+      "forecast_window_count": 20,
+      "completed_window_count": 20,
+      "pending_window_count": 0,
+      "threshold_row_count": 125,
+      "earliest_valid_time": "2026-11-18T18:00:00Z",
+      "latest_valid_time": "2026-11-20T12:00:00Z",
+      "duration_window_counts": {
+        "6": 8,
+        "12": 7,
+        "24": 5
+      },
+      "metric_ranges": {
+        "POD": {
+          "finite_count": 110,
+          "minimum": 0.0,
+          "maximum": 0.8421052631578947
+        },
+        "FAR": {
+          "finite_count": 68,
+          "minimum": 0.0,
+          "maximum": 0.6842105263157895
+        },
+        "CSI": {
+          "finite_count": 110,
+          "minimum": 0.0,
+          "maximum": 0.7275132275132276
+        },
+        "brier_skill_score": {
+          "finite_count": 125,
+          "minimum": -259.76904578682144,
+          "maximum": 0.7610610115304047
+        }
+      },
+      "summary_url": "runs/2026111812/verification_summary.json",
+      "csv_url": "runs/2026111812/verification_metrics.csv"
+    },
+    {
       "initialization": "2026111712",
       "verification_state": "COMPLETE",
       "is_fully_verified": true,
@@ -3922,48 +4059,6 @@
       },
       "summary_url": "runs/2026102012/verification_summary.json",
       "csv_url": "runs/2026102012/verification_metrics.csv"
-    },
-    {
-      "initialization": "2026101912",
-      "verification_state": "COMPLETE",
-      "is_fully_verified": true,
-      "verification_coverage": null,
-      "unavailable_observation_window_count": 0,
-      "forecast_window_count": 20,
-      "completed_window_count": 20,
-      "pending_window_count": 0,
-      "threshold_row_count": 125,
-      "earliest_valid_time": "2026-10-19T18:00:00Z",
-      "latest_valid_time": "2026-10-21T12:00:00Z",
-      "duration_window_counts": {
-        "6": 8,
-        "12": 7,
-        "24": 5
-      },
-      "metric_ranges": {
-        "POD": {
-          "finite_count": 34,
-          "minimum": 0.0,
-          "maximum": 0.0
-        },
-        "FAR": {
-          "finite_count": 0,
-          "minimum": null,
-          "maximum": null
-        },
-        "CSI": {
-          "finite_count": 34,
-          "minimum": 0.0,
-          "maximum": 0.0
-        },
-        "brier_skill_score": {
-          "finite_count": 125,
-          "minimum": -0.047550225107613864,
-          "maximum": 0.9999999992962341
-        }
-      },
-      "summary_url": "runs/2026101912/verification_summary.json",
-      "csv_url": "runs/2026101912/verification_metrics.csv"
     }
   ]
 }
