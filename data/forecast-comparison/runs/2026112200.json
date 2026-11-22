@@ -1,0 +1,12 @@
+{
+  "schema_version": 3,
+  "status": "waiting",
+  "hrrr_init": "2026112200",
+  "gefs_init": "2026112200",
+  "matching_policy": "same_initialization",
+  "initialization_offset_hours": 0,
+  "generated_utc": "2026-11-22T02:19:29.969507+00:00",
+  "render_version": "forecast-comparison-v5-same-initialization",
+  "message": "Waiting for complete GEFS and HRRR products from the same initialization. No older GEFS cycle is substituted.",
+  "durations": {}
+}
