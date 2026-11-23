@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-11-23T08:07:09.932912+00:00",
+  "generated_utc": "2026-11-23T08:52:15.832650+00:00",
   "operational": {
-    "latest_complete_init": "2026112100",
+    "latest_complete_init": "2026112106",
     "runs": [
       {
         "available_windows": {
@@ -19,7 +19,7 @@
           "24": 5,
           "6": 8
         },
-        "init": "2026112100",
+        "init": "2026112106",
         "path": "operational/recent-2.json",
         "status": "COMPLETE"
       }
