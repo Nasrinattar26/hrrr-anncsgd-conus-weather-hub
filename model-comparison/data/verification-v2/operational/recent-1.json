@@ -9,85 +9,206 @@
         "gefs": {
           "by_ending_lead": {
             "6": {
-              "correlation": 0.8208415070951235,
-              "mae_mm": 0.30272936344325896,
-              "mean_bias_mm": -0.08594198095779755,
-              "mean_crps_mm": 0.21402035356901647,
-              "mean_forecast_mm": 0.39527141364222385,
-              "mean_observation_mm": 0.4812133946000214,
+              "correlation": 0.8768771359069926,
+              "mae_mm": 0.36543083045840685,
+              "mean_bias_mm": -0.17496850037154418,
+              "mean_crps_mm": 0.2705899185301604,
+              "mean_forecast_mm": 0.4885920950293166,
+              "mean_observation_mm": 0.6635605954008608,
               "reference_available": true,
-              "rmse_mm": 1.0628696035074137,
+              "rmse_mm": 1.4773187231550475,
               "sample_count": 13318,
               "thresholds": [
                 {
-                  "brier_decomposition_residual": -0.00017002101795679904,
-                  "brier_reliability_10bin": 0.0002159980742195349,
-                  "brier_resolution_10bin": 0.0006669193216549208,
-                  "brier_score": 0.0032683028548577183,
-                  "brier_skill_score": 0.09315298174437114,
-                  "brier_uncertainty": 0.0038892451202499033,
-                  "correct_negatives": 13266,
+                  "brier_decomposition_residual": -0.0001489520563267956,
+                  "brier_reliability_10bin": 0.0009930249818334486,
+                  "brier_resolution_10bin": 0.005573647584887947,
+                  "brier_score": 0.007432948057932233,
+                  "brier_skill_score": 0.3837760556191957,
+                  "brier_uncertainty": 0.012162522717313527,
+                  "correct_negatives": 13149,
+                  "csi": 0.21301775147928995,
+                  "ece_10bin": 0.005609911963005656,
+                  "equitable_threat_score": 0.21065962928996113,
+                  "events": 164,
+                  "f1": 0.35121951219512193,
+                  "false_alarm_ratio": 0.12195121951219512,
+                  "false_alarms": 5,
+                  "frequency_bias": 0.25,
+                  "hits": 36,
+                  "mean_probability": 0.006704249322472643,
+                  "misses": 128,
+                  "non_events": 13154,
+                  "normalized_brier_reliability": 0.081646300271231,
+                  "normalized_brier_resolution": 0.4582641047776856,
+                  "observed_frequency": 0.0123141612854783,
+                  "precision": 0.8780487804878049,
+                  "recall_pod": 0.21951219512195122,
+                  "reference_brier_score": 0.012062088994936779,
+                  "reliability": [
+                    {
+                      "count": 13038,
+                      "lower_probability": 0.0,
+                      "mean_probability": 0.0010863075863778075,
+                      "observed_event_count": 32,
+                      "observed_frequency": 0.0024543641662831722,
+                      "upper_inclusive": false,
+                      "upper_probability": 0.1
+                    },
+                    {
+                      "count": 131,
+                      "lower_probability": 0.1,
+                      "mean_probability": 0.14498845573600008,
+                      "observed_event_count": 39,
+                      "observed_frequency": 0.29770992366412213,
+                      "upper_inclusive": false,
+                      "upper_probability": 0.2
+                    },
+                    {
+                      "count": 84,
+                      "lower_probability": 0.2,
+                      "mean_probability": 0.2427380532310122,
+                      "observed_event_count": 38,
+                      "observed_frequency": 0.4523809523809524,
+                      "upper_inclusive": false,
+                      "upper_probability": 0.3
+                    },
+                    {
+                      "count": 18,
+                      "lower_probability": 0.3,
+                      "mean_probability": 0.3536918364630805,
+                      "observed_event_count": 14,
+                      "observed_frequency": 0.7777777777777778,
+                      "upper_inclusive": false,
+                      "upper_probability": 0.4
+                    },
+                    {
+                      "count": 13,
+                      "lower_probability": 0.4,
+                      "mean_probability": 0.45490627288818364,
+                      "observed_event_count": 9,
+                      "observed_frequency": 0.6923076923076923,
+                      "upper_inclusive": false,
+                      "upper_probability": 0.5
+                    },
+                    {
+                      "count": 8,
+                      "lower_probability": 0.5,
+                      "mean_probability": 0.5577438831329345,
+                      "observed_event_count": 7,
+                      "observed_frequency": 0.875,
+                      "upper_inclusive": false,
+                      "upper_probability": 0.6
+                    },
+                    {
+                      "count": 11,
+                      "lower_probability": 0.6,
+                      "mean_probability": 0.6471522036465731,
+                      "observed_event_count": 11,
+                      "observed_frequency": 1.0,
+                      "upper_inclusive": false,
+                      "upper_probability": 0.7
+                    },
+                    {
+                      "count": 8,
+                      "lower_probability": 0.7,
+                      "mean_probability": 0.7566009426116943,
+                      "observed_event_count": 7,
+                      "observed_frequency": 0.875,
+                      "upper_inclusive": false,
+                      "upper_probability": 0.8
+                    },
+                    {
+                      "count": 7,
+                      "lower_probability": 0.8,
+                      "mean_probability": 0.8323946489606584,
+                      "observed_event_count": 7,
+                      "observed_frequency": 1.0,
+                      "upper_inclusive": false,
+                      "upper_probability": 0.9
+                    },
+                    {
+                      "count": 0,
+                      "lower_probability": 0.9,
+                      "mean_probability": null,
+                      "observed_event_count": 0,
+                      "observed_frequency": null,
+                      "upper_inclusive": true,
+                      "upper_probability": 1.0
+                    }
+                  ],
+                  "roc_auc": 0.9928918960012164,
+                  "threshold_mm": 12.7
+                },
+                {
+                  "brier_decomposition_residual": -1.1806844835157834e-05,
+                  "brier_reliability_10bin": 0.0004972318395506278,
+                  "brier_resolution_10bin": 0.0008895260453642733,
+                  "brier_score": 0.001245069861420425,
+                  "brier_skill_score": 0.24245906499291003,
+                  "brier_uncertainty": 0.0016491709120692282,
+                  "correct_negatives": 13296,
                   "csi": 0.0,
-                  "ece_10bin": 0.0024251018446616963,
+                  "ece_10bin": 0.0011739805306462115,
                   "equitable_threat_score": 0.0,
-                  "events": 52,
+                  "events": 22,
                   "f1": 0.0,
                   "false_alarm_ratio": null,
                   "false_alarms": 0,
                   "frequency_bias": 0.0,
                   "hits": 0,
-                  "mean_probability": 0.002045270993377127,
-                  "misses": 52,
-                  "non_events": 13266,
-                  "normalized_brier_reliability": 0.055537274597301796,
-                  "normalized_brier_resolution": 0.17147783208173514,
-                  "observed_frequency": 0.0039044901636882414,
+                  "mean_probability": 0.0004779191539911231,
+                  "misses": 22,
+                  "non_events": 13296,
+                  "normalized_brier_reliability": 0.30150412908189544,
+                  "normalized_brier_resolution": 0.53937771934637,
+                  "observed_frequency": 0.001651899684637333,
                   "precision": null,
                   "recall_pod": 0.0,
-                  "reference_brier_score": 0.003604028892485617,
+                  "reference_brier_score": 0.00164356776496675,
                   "reliability": [
                     {
-                      "count": 13255,
+                      "count": 13295,
                       "lower_probability": 0.0,
-                      "mean_probability": 0.0009870156204688561,
-                      "observed_event_count": 35,
-                      "observed_frequency": 0.002640513013956997,
+                      "mean_probability": 0.00017735566486987142,
+                      "observed_event_count": 6,
+                      "observed_frequency": 0.0004512974802557352,
                       "upper_inclusive": false,
                       "upper_probability": 0.1
                     },
                     {
-                      "count": 32,
+                      "count": 13,
                       "lower_probability": 0.1,
-                      "mean_probability": 0.15387165516614912,
-                      "observed_event_count": 2,
-                      "observed_frequency": 0.0625,
+                      "mean_probability": 0.12769678629361667,
+                      "observed_event_count": 7,
+                      "observed_frequency": 0.5384615384615384,
                       "upper_inclusive": false,
                       "upper_probability": 0.2
                     },
                     {
-                      "count": 17,
+                      "count": 9,
                       "lower_probability": 0.2,
-                      "mean_probability": 0.2563217813828413,
-                      "observed_event_count": 6,
-                      "observed_frequency": 0.35294117647058826,
+                      "mean_probability": 0.22743435329861109,
+                      "observed_event_count": 8,
+                      "observed_frequency": 0.8888888888888888,
                       "upper_inclusive": false,
                       "upper_probability": 0.3
                     },
                     {
-                      "count": 12,
+                      "count": 1,
                       "lower_probability": 0.3,
-                      "mean_probability": 0.33586200237274166,
-                      "observed_event_count": 9,
-                      "observed_frequency": 0.75,
+                      "mean_probability": 0.30001632690429686,
+                      "observed_event_count": 1,
+                      "observed_frequency": 1.0,
                       "upper_inclusive": false,
                       "upper_probability": 0.4
                     },
                     {
-                      "count": 2,
+                      "count": 0,
                       "lower_probability": 0.4,
-                      "mean_probability": 0.42215988159179685,
+                      "mean_probability": null,
                       "observed_event_count": 0,
-                      "observed_frequency": 0.0,
+                      "observed_frequency": null,
                       "upper_inclusive": false,
                       "upper_probability": 0.5
                     },
@@ -137,19 +258,19 @@
                       "upper_probability": 1.0
                     }
                   ],
-                  "roc_auc": 0.9891248883786197,
-                  "threshold_mm": 12.7
+                  "roc_auc": 0.9968685045399847,
+                  "threshold_mm": 25.4
                 },
                 {
-                  "brier_decomposition_residual": -1.3512827687094564e-06,
-                  "brier_reliability_10bin": 1.343115427615153e-08,
+                  "brier_decomposition_residual": -6.698343064492744e-07,
+                  "brier_reliability_10bin": 2.190575279804715e-08,
                   "brier_resolution_10bin": 0.0,
-                  "brier_score": 0.00014881229514955476,
-                  "brier_skill_score": 0.020019434543781744,
+                  "brier_score": 0.00014950221821033685,
+                  "brier_skill_score": 0.0008721860260102465,
                   "brier_uncertainty": 0.00015015014676398808,
                   "correct_negatives": 13316,
                   "csi": 0.0,
-                  "ece_10bin": 0.0001158928568814814,
+                  "ece_10bin": 0.0001480059214965643,
                   "equitable_threat_score": 0.0,
                   "events": 2,
                   "f1": 0.0,
@@ -157,20 +278,20 @@
                   "false_alarms": 0,
                   "frequency_bias": 0.0,
                   "hits": 0,
-                  "mean_probability": 3.4279841721912624e-05,
+                  "mean_probability": 2.1667771068296128e-06,
                   "misses": 2,
                   "non_events": 13316,
-                  "normalized_brier_reliability": 8.945148949646481e-05,
+                  "normalized_brier_reliability": 0.00014589231692513412,
                   "normalized_brier_resolution": 0.0,
                   "observed_frequency": 0.0001501726986033939,
                   "precision": null,
                   "recall_pod": 0.0,
-                  "reference_brier_score": 0.00015185229217303607,
+                  "reference_brier_score": 0.00014963272578279844,
                   "reliability": [
                     {
                       "count": 13318,
                       "lower_probability": 0.0,
-                      "mean_probability": 3.4279841721912495e-05,
+                      "mean_probability": 2.166777106829607e-06,
                       "observed_event_count": 2,
                       "observed_frequency": 0.0001501726986033939,
                       "upper_inclusive": false,
@@ -258,213 +379,213 @@
                       "upper_probability": 1.0
                     }
                   ],
-                  "roc_auc": 0.9953814959447281,
-                  "threshold_mm": 25.4
-                },
-                {
-                  "brier_decomposition_residual": 1.9919751399957716e-14,
-                  "brier_reliability_10bin": 1.802332631488312e-17,
-                  "brier_resolution_10bin": 0.0,
-                  "brier_score": 1.99377747262726e-14,
-                  "brier_skill_score": 0.9999999322581606,
-                  "brier_uncertainty": 0.0,
-                  "correct_negatives": 13318,
-                  "csi": null,
-                  "ece_10bin": 4.24538882964601e-09,
-                  "equitable_threat_score": null,
-                  "events": 0,
-                  "f1": null,
-                  "false_alarm_ratio": null,
-                  "false_alarms": 0,
-                  "frequency_bias": null,
-                  "hits": 0,
-                  "mean_probability": 4.245388829646035e-09,
-                  "misses": 0,
-                  "non_events": 13318,
-                  "normalized_brier_reliability": null,
-                  "normalized_brier_resolution": null,
-                  "observed_frequency": 0.0,
-                  "precision": null,
-                  "recall_pod": null,
-                  "reference_brier_score": 2.9431994942331835e-07,
-                  "reliability": [
-                    {
-                      "count": 13318,
-                      "lower_probability": 0.0,
-                      "mean_probability": 4.24538882964601e-09,
-                      "observed_event_count": 0,
-                      "observed_frequency": 0.0,
-                      "upper_inclusive": false,
-                      "upper_probability": 0.1
-                    },
-                    {
-                      "count": 0,
-                      "lower_probability": 0.1,
-                      "mean_probability": null,
-                      "observed_event_count": 0,
-                      "observed_frequency": null,
-                      "upper_inclusive": false,
-                      "upper_probability": 0.2
-                    },
-                    {
-                      "count": 0,
-                      "lower_probability": 0.2,
-                      "mean_probability": null,
-                      "observed_event_count": 0,
-                      "observed_frequency": null,
-                      "upper_inclusive": false,
-                      "upper_probability": 0.3
-                    },
-                    {
-                      "count": 0,
-                      "lower_probability": 0.3,
-                      "mean_probability": null,
-                      "observed_event_count": 0,
-                      "observed_frequency": null,
-                      "upper_inclusive": false,
-                      "upper_probability": 0.4
-                    },
-                    {
-                      "count": 0,
-                      "lower_probability": 0.4,
-                      "mean_probability": null,
-                      "observed_event_count": 0,
-                      "observed_frequency": null,
-                      "upper_inclusive": false,
-                      "upper_probability": 0.5
-                    },
-                    {
-                      "count": 0,
-                      "lower_probability": 0.5,
-                      "mean_probability": null,
-                      "observed_event_count": 0,
-                      "observed_frequency": null,
-                      "upper_inclusive": false,
-                      "upper_probability": 0.6
-                    },
-                    {
-                      "count": 0,
-                      "lower_probability": 0.6,
-                      "mean_probability": null,
-                      "observed_event_count": 0,
-                      "observed_frequency": null,
-                      "upper_inclusive": false,
-                      "upper_probability": 0.7
-                    },
-                    {
-                      "count": 0,
-                      "lower_probability": 0.7,
-                      "mean_probability": null,
-                      "observed_event_count": 0,
-                      "observed_frequency": null,
-                      "upper_inclusive": false,
-                      "upper_probability": 0.8
-                    },
-                    {
-                      "count": 0,
-                      "lower_probability": 0.8,
-                      "mean_probability": null,
-                      "observed_event_count": 0,
-                      "observed_frequency": null,
-                      "upper_inclusive": false,
-                      "upper_probability": 0.9
-                    },
-                    {
-                      "count": 0,
-                      "lower_probability": 0.9,
-                      "mean_probability": null,
-                      "observed_event_count": 0,
-                      "observed_frequency": null,
-                      "upper_inclusive": true,
-                      "upper_probability": 1.0
-                    }
-                  ],
-                  "roc_auc": null,
+                  "roc_auc": 0.99984980474617,
                   "threshold_mm": 50.8
                 }
               ]
             }
           },
           "pooled": {
-            "correlation": 0.8208415070951235,
-            "mae_mm": 0.30272936344325896,
-            "mean_bias_mm": -0.08594198095779755,
-            "mean_crps_mm": 0.21402035356901647,
-            "mean_forecast_mm": 0.39527141364222385,
-            "mean_observation_mm": 0.4812133946000214,
+            "correlation": 0.8768771359069926,
+            "mae_mm": 0.36543083045840685,
+            "mean_bias_mm": -0.17496850037154418,
+            "mean_crps_mm": 0.2705899185301604,
+            "mean_forecast_mm": 0.4885920950293166,
+            "mean_observation_mm": 0.6635605954008608,
             "reference_available": true,
-            "rmse_mm": 1.0628696035074137,
+            "rmse_mm": 1.4773187231550475,
             "sample_count": 13318,
             "thresholds": [
               {
-                "brier_decomposition_residual": -0.00017002101795679904,
-                "brier_reliability_10bin": 0.0002159980742195349,
-                "brier_resolution_10bin": 0.0006669193216549208,
-                "brier_score": 0.0032683028548577183,
-                "brier_skill_score": 0.09315298174437114,
-                "brier_uncertainty": 0.0038892451202499033,
-                "correct_negatives": 13266,
+                "brier_decomposition_residual": -0.0001489520563267956,
+                "brier_reliability_10bin": 0.0009930249818334486,
+                "brier_resolution_10bin": 0.005573647584887947,
+                "brier_score": 0.007432948057932233,
+                "brier_skill_score": 0.3837760556191957,
+                "brier_uncertainty": 0.012162522717313527,
+                "correct_negatives": 13149,
+                "csi": 0.21301775147928995,
+                "ece_10bin": 0.005609911963005656,
+                "equitable_threat_score": 0.21065962928996113,
+                "events": 164,
+                "f1": 0.35121951219512193,
+                "false_alarm_ratio": 0.12195121951219512,
+                "false_alarms": 5,
+                "frequency_bias": 0.25,
+                "hits": 36,
+                "mean_probability": 0.006704249322472643,
+                "misses": 128,
+                "non_events": 13154,
+                "normalized_brier_reliability": 0.081646300271231,
+                "normalized_brier_resolution": 0.4582641047776856,
+                "observed_frequency": 0.0123141612854783,
+                "precision": 0.8780487804878049,
+                "recall_pod": 0.21951219512195122,
+                "reference_brier_score": 0.012062088994936779,
+                "reliability": [
+                  {
+                    "count": 13038,
+                    "lower_probability": 0.0,
+                    "mean_probability": 0.0010863075863778075,
+                    "observed_event_count": 32,
+                    "observed_frequency": 0.0024543641662831722,
+                    "upper_inclusive": false,
+                    "upper_probability": 0.1
+                  },
+                  {
+                    "count": 131,
+                    "lower_probability": 0.1,
+                    "mean_probability": 0.14498845573600008,
+                    "observed_event_count": 39,
+                    "observed_frequency": 0.29770992366412213,
+                    "upper_inclusive": false,
+                    "upper_probability": 0.2
+                  },
+                  {
+                    "count": 84,
+                    "lower_probability": 0.2,
+                    "mean_probability": 0.2427380532310122,
+                    "observed_event_count": 38,
+                    "observed_frequency": 0.4523809523809524,
+                    "upper_inclusive": false,
+                    "upper_probability": 0.3
+                  },
+                  {
+                    "count": 18,
+                    "lower_probability": 0.3,
+                    "mean_probability": 0.3536918364630805,
+                    "observed_event_count": 14,
+                    "observed_frequency": 0.7777777777777778,
+                    "upper_inclusive": false,
+                    "upper_probability": 0.4
+                  },
+                  {
+                    "count": 13,
+                    "lower_probability": 0.4,
+                    "mean_probability": 0.45490627288818364,
+                    "observed_event_count": 9,
+                    "observed_frequency": 0.6923076923076923,
+                    "upper_inclusive": false,
+                    "upper_probability": 0.5
+                  },
+                  {
+                    "count": 8,
+                    "lower_probability": 0.5,
+                    "mean_probability": 0.5577438831329345,
+                    "observed_event_count": 7,
+                    "observed_frequency": 0.875,
+                    "upper_inclusive": false,
+                    "upper_probability": 0.6
+                  },
+                  {
+                    "count": 11,
+                    "lower_probability": 0.6,
+                    "mean_probability": 0.6471522036465731,
+                    "observed_event_count": 11,
+                    "observed_frequency": 1.0,
+                    "upper_inclusive": false,
+                    "upper_probability": 0.7
+                  },
+                  {
+                    "count": 8,
+                    "lower_probability": 0.7,
+                    "mean_probability": 0.7566009426116943,
+                    "observed_event_count": 7,
+                    "observed_frequency": 0.875,
+                    "upper_inclusive": false,
+                    "upper_probability": 0.8
+                  },
+                  {
+                    "count": 7,
+                    "lower_probability": 0.8,
+                    "mean_probability": 0.8323946489606584,
+                    "observed_event_count": 7,
+                    "observed_frequency": 1.0,
+                    "upper_inclusive": false,
+                    "upper_probability": 0.9
+                  },
+                  {
+                    "count": 0,
+                    "lower_probability": 0.9,
+                    "mean_probability": null,
+                    "observed_event_count": 0,
+                    "observed_frequency": null,
+                    "upper_inclusive": true,
+                    "upper_probability": 1.0
+                  }
+                ],
+                "roc_auc": 0.9928918960012164,
+                "threshold_mm": 12.7
+              },
+              {
+                "brier_decomposition_residual": -1.1806844835157834e-05,
+                "brier_reliability_10bin": 0.0004972318395506278,
+                "brier_resolution_10bin": 0.0008895260453642733,
+                "brier_score": 0.001245069861420425,
+                "brier_skill_score": 0.24245906499291003,
+                "brier_uncertainty": 0.0016491709120692282,
+                "correct_negatives": 13296,
                 "csi": 0.0,
-                "ece_10bin": 0.0024251018446616963,
+                "ece_10bin": 0.0011739805306462115,
                 "equitable_threat_score": 0.0,
-                "events": 52,
+                "events": 22,
                 "f1": 0.0,
                 "false_alarm_ratio": null,
                 "false_alarms": 0,
                 "frequency_bias": 0.0,
                 "hits": 0,
-                "mean_probability": 0.002045270993377127,
-                "misses": 52,
-                "non_events": 13266,
-                "normalized_brier_reliability": 0.055537274597301796,
-                "normalized_brier_resolution": 0.17147783208173514,
-                "observed_frequency": 0.0039044901636882414,
+                "mean_probability": 0.0004779191539911231,
+                "misses": 22,
+                "non_events": 13296,
+                "normalized_brier_reliability": 0.30150412908189544,
+                "normalized_brier_resolution": 0.53937771934637,
+                "observed_frequency": 0.001651899684637333,
                 "precision": null,
                 "recall_pod": 0.0,
-                "reference_brier_score": 0.003604028892485617,
+                "reference_brier_score": 0.00164356776496675,
                 "reliability": [
                   {
-                    "count": 13255,
+                    "count": 13295,
                     "lower_probability": 0.0,
-                    "mean_probability": 0.0009870156204688561,
-                    "observed_event_count": 35,
-                    "observed_frequency": 0.002640513013956997,
+                    "mean_probability": 0.00017735566486987142,
+                    "observed_event_count": 6,
+                    "observed_frequency": 0.0004512974802557352,
                     "upper_inclusive": false,
                     "upper_probability": 0.1
                   },
                   {
-                    "count": 32,
+                    "count": 13,
                     "lower_probability": 0.1,
-                    "mean_probability": 0.15387165516614912,
-                    "observed_event_count": 2,
-                    "observed_frequency": 0.0625,
+                    "mean_probability": 0.12769678629361667,
+                    "observed_event_count": 7,
+                    "observed_frequency": 0.5384615384615384,
                     "upper_inclusive": false,
                     "upper_probability": 0.2
                   },
                   {
-                    "count": 17,
+                    "count": 9,
                     "lower_probability": 0.2,
-                    "mean_probability": 0.2563217813828413,
-                    "observed_event_count": 6,
-                    "observed_frequency": 0.35294117647058826,
+                    "mean_probability": 0.22743435329861109,
+                    "observed_event_count": 8,
+                    "observed_frequency": 0.8888888888888888,
                     "upper_inclusive": false,
                     "upper_probability": 0.3
                   },
                   {
-                    "count": 12,
+                    "count": 1,
                     "lower_probability": 0.3,
-                    "mean_probability": 0.33586200237274166,
-                    "observed_event_count": 9,
-                    "observed_frequency": 0.75,
+                    "mean_probability": 0.30001632690429686,
+                    "observed_event_count": 1,
+                    "observed_frequency": 1.0,
                     "upper_inclusive": false,
                     "upper_probability": 0.4
                   },
                   {
-                    "count": 2,
+                    "count": 0,
                     "lower_probability": 0.4,
-                    "mean_probability": 0.42215988159179685,
+                    "mean_probability": null,
                     "observed_event_count": 0,
-                    "observed_frequency": 0.0,
+                    "observed_frequency": null,
                     "upper_inclusive": false,
                     "upper_probability": 0.5
                   },
@@ -514,19 +635,19 @@
                     "upper_probability": 1.0
                   }
                 ],
-                "roc_auc": 0.9891248883786197,
-                "threshold_mm": 12.7
+                "roc_auc": 0.9968685045399847,
+                "threshold_mm": 25.4
               },
               {
-                "brier_decomposition_residual": -1.3512827687094564e-06,
-                "brier_reliability_10bin": 1.343115427615153e-08,
+                "brier_decomposition_residual": -6.698343064492744e-07,
+                "brier_reliability_10bin": 2.190575279804715e-08,
                 "brier_resolution_10bin": 0.0,
-                "brier_score": 0.00014881229514955476,
-                "brier_skill_score": 0.020019434543781744,
+                "brier_score": 0.00014950221821033685,
+                "brier_skill_score": 0.0008721860260102465,
                 "brier_uncertainty": 0.00015015014676398808,
                 "correct_negatives": 13316,
                 "csi": 0.0,
-                "ece_10bin": 0.0001158928568814814,
+                "ece_10bin": 0.0001480059214965643,
                 "equitable_threat_score": 0.0,
                 "events": 2,
                 "f1": 0.0,
@@ -534,20 +655,20 @@
                 "false_alarms": 0,
                 "frequency_bias": 0.0,
                 "hits": 0,
-                "mean_probability": 3.4279841721912624e-05,
+                "mean_probability": 2.1667771068296128e-06,
                 "misses": 2,
                 "non_events": 13316,
-                "normalized_brier_reliability": 8.945148949646481e-05,
+                "normalized_brier_reliability": 0.00014589231692513412,
                 "normalized_brier_resolution": 0.0,
                 "observed_frequency": 0.0001501726986033939,
                 "precision": null,
                 "recall_pod": 0.0,
-                "reference_brier_score": 0.00015185229217303607,
+                "reference_brier_score": 0.00014963272578279844,
                 "reliability": [
                   {
                     "count": 13318,
                     "lower_probability": 0.0,
-                    "mean_probability": 3.4279841721912495e-05,
+                    "mean_probability": 2.166777106829607e-06,
                     "observed_event_count": 2,
                     "observed_frequency": 0.0001501726986033939,
                     "upper_inclusive": false,
@@ -635,128 +756,7 @@
                     "upper_probability": 1.0
                   }
                 ],
-                "roc_auc": 0.9953814959447281,
-                "threshold_mm": 25.4
-              },
-              {
-                "brier_decomposition_residual": 1.9919751399957716e-14,
-                "brier_reliability_10bin": 1.802332631488312e-17,
-                "brier_resolution_10bin": 0.0,
-                "brier_score": 1.99377747262726e-14,
-                "brier_skill_score": 0.9999999322581606,
-                "brier_uncertainty": 0.0,
-                "correct_negatives": 13318,
-                "csi": null,
-                "ece_10bin": 4.24538882964601e-09,
-                "equitable_threat_score": null,
-                "events": 0,
-                "f1": null,
-                "false_alarm_ratio": null,
-                "false_alarms": 0,
-                "frequency_bias": null,
-                "hits": 0,
-                "mean_probability": 4.245388829646035e-09,
-                "misses": 0,
-                "non_events": 13318,
-                "normalized_brier_reliability": null,
-                "normalized_brier_resolution": null,
-                "observed_frequency": 0.0,
-                "precision": null,
-                "recall_pod": null,
-                "reference_brier_score": 2.9431994942331835e-07,
-                "reliability": [
-                  {
-                    "count": 13318,
-                    "lower_probability": 0.0,
-                    "mean_probability": 4.24538882964601e-09,
-                    "observed_event_count": 0,
-                    "observed_frequency": 0.0,
-                    "upper_inclusive": false,
-                    "upper_probability": 0.1
-                  },
-                  {
-                    "count": 0,
-                    "lower_probability": 0.1,
-                    "mean_probability": null,
-                    "observed_event_count": 0,
-                    "observed_frequency": null,
-                    "upper_inclusive": false,
-                    "upper_probability": 0.2
-                  },
-                  {
-                    "count": 0,
-                    "lower_probability": 0.2,
-                    "mean_probability": null,
-                    "observed_event_count": 0,
-                    "observed_frequency": null,
-                    "upper_inclusive": false,
-                    "upper_probability": 0.3
-                  },
-                  {
-                    "count": 0,
-                    "lower_probability": 0.3,
-                    "mean_probability": null,
-                    "observed_event_count": 0,
-                    "observed_frequency": null,
-                    "upper_inclusive": false,
-                    "upper_probability": 0.4
-                  },
-                  {
-                    "count": 0,
-                    "lower_probability": 0.4,
-                    "mean_probability": null,
-                    "observed_event_count": 0,
-                    "observed_frequency": null,
-                    "upper_inclusive": false,
-                    "upper_probability": 0.5
-                  },
-                  {
-                    "count": 0,
-                    "lower_probability": 0.5,
-                    "mean_probability": null,
-                    "observed_event_count": 0,
-                    "observed_frequency": null,
-                    "upper_inclusive": false,
-                    "upper_probability": 0.6
-                  },
-                  {
-                    "count": 0,
-                    "lower_probability": 0.6,
-                    "mean_probability": null,
-                    "observed_event_count": 0,
-                    "observed_frequency": null,
-                    "upper_inclusive": false,
-                    "upper_probability": 0.7
-                  },
-                  {
-                    "count": 0,
-                    "lower_probability": 0.7,
-                    "mean_probability": null,
-                    "observed_event_count": 0,
-                    "observed_frequency": null,
-                    "upper_inclusive": false,
-                    "upper_probability": 0.8
-                  },
-                  {
-                    "count": 0,
-                    "lower_probability": 0.8,
-                    "mean_probability": null,
-                    "observed_event_count": 0,
-                    "observed_frequency": null,
-                    "upper_inclusive": false,
-                    "upper_probability": 0.9
-                  },
-                  {
-                    "count": 0,
-                    "lower_probability": 0.9,
-                    "mean_probability": null,
-                    "observed_event_count": 0,
-                    "observed_frequency": null,
-                    "upper_inclusive": true,
-                    "upper_probability": 1.0
-                  }
-                ],
-                "roc_auc": null,
+                "roc_auc": 0.99984980474617,
                 "threshold_mm": 50.8
               }
             ]
@@ -765,85 +765,206 @@
         "hrrr": {
           "by_ending_lead": {
             "6": {
-              "correlation": 0.808205502129023,
-              "mae_mm": 0.3099280459446745,
-              "mean_bias_mm": -0.07453280335691098,
-              "mean_crps_mm": 0.21434641587564118,
-              "mean_forecast_mm": 0.4066805912431104,
-              "mean_observation_mm": 0.4812133946000214,
+              "correlation": 0.8980342361549644,
+              "mae_mm": 0.35443076359951164,
+              "mean_bias_mm": -0.1372823090227339,
+              "mean_crps_mm": 0.250187508733348,
+              "mean_forecast_mm": 0.5262782863781269,
+              "mean_observation_mm": 0.6635605954008608,
               "reference_available": true,
-              "rmse_mm": 1.0780783031961547,
+              "rmse_mm": 1.3921167694594845,
               "sample_count": 13318,
               "thresholds": [
                 {
-                  "brier_decomposition_residual": -0.00017554632020785627,
-                  "brier_reliability_10bin": 6.304811173417341e-05,
-                  "brier_resolution_10bin": 0.00028761711492174735,
-                  "brier_score": 0.003489129796854473,
-                  "brier_skill_score": 0.03188073654756429,
-                  "brier_uncertainty": 0.0038892451202499033,
-                  "correct_negatives": 13264,
-                  "csi": 0.0,
-                  "ece_10bin": 0.0022367143399960074,
-                  "equitable_threat_score": -0.00014463166209593528,
-                  "events": 52,
-                  "f1": 0.0,
-                  "false_alarm_ratio": 1.0,
+                  "brier_decomposition_residual": -0.0002993944637463466,
+                  "brier_reliability_10bin": 0.0017980807512315853,
+                  "brier_resolution_10bin": 0.006488096661907123,
+                  "brier_score": 0.007173112342891642,
+                  "brier_skill_score": 0.4053175742690466,
+                  "brier_uncertainty": 0.012162522717313527,
+                  "correct_negatives": 13152,
+                  "csi": 0.26506024096385544,
+                  "ece_10bin": 0.006817185299802226,
+                  "equitable_threat_score": 0.26254377635885995,
+                  "events": 164,
+                  "f1": 0.41904761904761906,
+                  "false_alarm_ratio": 0.043478260869565216,
                   "false_alarms": 2,
-                  "frequency_bias": 0.038461538461538464,
-                  "hits": 0,
-                  "mean_probability": 0.0019085704789875506,
-                  "misses": 52,
-                  "non_events": 13266,
-                  "normalized_brier_reliability": 0.01621088663347664,
-                  "normalized_brier_resolution": 0.07395191252519114,
-                  "observed_frequency": 0.0039044901636882414,
-                  "precision": 0.0,
-                  "recall_pod": 0.0,
-                  "reference_brier_score": 0.003604028892485617,
+                  "frequency_bias": 0.2804878048780488,
+                  "hits": 44,
+                  "mean_probability": 0.005496975985676074,
+                  "misses": 120,
+                  "non_events": 13154,
+                  "normalized_brier_reliability": 0.1478378123538459,
+                  "normalized_brier_resolution": 0.5334499110674814,
+                  "observed_frequency": 0.0123141612854783,
+                  "precision": 0.9565217391304348,
+                  "recall_pod": 0.2682926829268293,
+                  "reference_brier_score": 0.012062088994936779,
                   "reliability": [
                     {
-                      "count": 13251,
+                      "count": 13143,
                       "lower_probability": 0.0,
-                      "mean_probability": 0.0008161260619194713,
-                      "observed_event_count": 36,
-                      "observed_frequency": 0.002716776092370387,
+                      "mean_probability": 0.0010745897006396619,
+                      "observed_event_count": 43,
+                      "observed_frequency": 0.0032717035684394734,
                       "upper_inclusive": false,
                       "upper_probability": 0.1
                     },
                     {
-                      "count": 35,
+                      "count": 73,
                       "lower_probability": 0.1,
-                      "mean_probability": 0.14286867380142212,
-                      "observed_event_count": 8,
-                      "observed_frequency": 0.22857142857142856,
+                      "mean_probability": 0.1410599702025113,
+                      "observed_event_count": 43,
+                      "observed_frequency": 0.589041095890411,
                       "upper_inclusive": false,
                       "upper_probability": 0.2
                     },
                     {
-                      "count": 21,
+                      "count": 35,
                       "lower_probability": 0.2,
-                      "mean_probability": 0.24311094482739767,
-                      "observed_event_count": 5,
-                      "observed_frequency": 0.23809523809523808,
+                      "mean_probability": 0.2414787790605,
+                      "observed_event_count": 21,
+                      "observed_frequency": 0.6,
                       "upper_inclusive": false,
                       "upper_probability": 0.3
                     },
                     {
-                      "count": 6,
+                      "count": 17,
                       "lower_probability": 0.3,
-                      "mean_probability": 0.3512374858061473,
-                      "observed_event_count": 2,
-                      "observed_frequency": 0.3333333333333333,
+                      "mean_probability": 0.3434479131418116,
+                      "observed_event_count": 10,
+                      "observed_frequency": 0.5882352941176471,
                       "upper_inclusive": false,
                       "upper_probability": 0.4
                     },
                     {
-                      "count": 4,
+                      "count": 7,
                       "lower_probability": 0.4,
-                      "mean_probability": 0.4428536668419838,
+                      "mean_probability": 0.4543521659714835,
+                      "observed_event_count": 6,
+                      "observed_frequency": 0.8571428571428571,
+                      "upper_inclusive": false,
+                      "upper_probability": 0.5
+                    },
+                    {
+                      "count": 12,
+                      "lower_probability": 0.5,
+                      "mean_probability": 0.5463234633207321,
+                      "observed_event_count": 10,
+                      "observed_frequency": 0.8333333333333334,
+                      "upper_inclusive": false,
+                      "upper_probability": 0.6
+                    },
+                    {
+                      "count": 9,
+                      "lower_probability": 0.6,
+                      "mean_probability": 0.6598833203315735,
+                      "observed_event_count": 9,
+                      "observed_frequency": 1.0,
+                      "upper_inclusive": false,
+                      "upper_probability": 0.7
+                    },
+                    {
+                      "count": 5,
+                      "lower_probability": 0.7,
+                      "mean_probability": 0.7540005326271058,
+                      "observed_event_count": 5,
+                      "observed_frequency": 1.0,
+                      "upper_inclusive": false,
+                      "upper_probability": 0.8
+                    },
+                    {
+                      "count": 8,
+                      "lower_probability": 0.8,
+                      "mean_probability": 0.8449528515338898,
+                      "observed_event_count": 8,
+                      "observed_frequency": 1.0,
+                      "upper_inclusive": false,
+                      "upper_probability": 0.9
+                    },
+                    {
+                      "count": 9,
+                      "lower_probability": 0.9,
+                      "mean_probability": 0.9214135607083639,
+                      "observed_event_count": 9,
+                      "observed_frequency": 1.0,
+                      "upper_inclusive": true,
+                      "upper_probability": 1.0
+                    }
+                  ],
+                  "roc_auc": 0.9944869779015564,
+                  "threshold_mm": 12.7
+                },
+                {
+                  "brier_decomposition_residual": -5.513163234011835e-05,
+                  "brier_reliability_10bin": 0.0002928099386382048,
+                  "brier_resolution_10bin": 0.0005736162524470179,
+                  "brier_score": 0.0013132329659202968,
+                  "brier_skill_score": 0.20098641874564627,
+                  "brier_uncertainty": 0.0016491709120692282,
+                  "correct_negatives": 13296,
+                  "csi": 0.0,
+                  "ece_10bin": 0.001305393153874688,
+                  "equitable_threat_score": 0.0,
+                  "events": 22,
+                  "f1": 0.0,
+                  "false_alarm_ratio": null,
+                  "false_alarms": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "mean_probability": 0.0003465065307626452,
+                  "misses": 22,
+                  "non_events": 13296,
+                  "normalized_brier_reliability": 0.17754978364905416,
+                  "normalized_brier_resolution": 0.34782098583542015,
+                  "observed_frequency": 0.001651899684637333,
+                  "precision": null,
+                  "recall_pod": 0.0,
+                  "reference_brier_score": 0.00164356776496675,
+                  "reliability": [
+                    {
+                      "count": 13302,
+                      "lower_probability": 0.0,
+                      "mean_probability": 0.00011019325324108826,
+                      "observed_event_count": 11,
+                      "observed_frequency": 0.000826943316794467,
+                      "upper_inclusive": false,
+                      "upper_probability": 0.1
+                    },
+                    {
+                      "count": 9,
+                      "lower_probability": 0.1,
+                      "mean_probability": 0.14812407477034462,
+                      "observed_event_count": 6,
+                      "observed_frequency": 0.6666666666666666,
+                      "upper_inclusive": false,
+                      "upper_probability": 0.2
+                    },
+                    {
+                      "count": 6,
+                      "lower_probability": 0.2,
+                      "mean_probability": 0.23591558635234833,
+                      "observed_event_count": 4,
+                      "observed_frequency": 0.6666666666666666,
+                      "upper_inclusive": false,
+                      "upper_probability": 0.3
+                    },
+                    {
+                      "count": 0,
+                      "lower_probability": 0.3,
+                      "mean_probability": null,
+                      "observed_event_count": 0,
+                      "observed_frequency": null,
+                      "upper_inclusive": false,
+                      "upper_probability": 0.4
+                    },
+                    {
+                      "count": 1,
+                      "lower_probability": 0.4,
+                      "mean_probability": 0.4003731310367584,
                       "observed_event_count": 1,
-                      "observed_frequency": 0.25,
+                      "observed_frequency": 1.0,
                       "upper_inclusive": false,
                       "upper_probability": 0.5
                     },
@@ -857,11 +978,11 @@
                       "upper_probability": 0.6
                     },
                     {
-                      "count": 1,
+                      "count": 0,
                       "lower_probability": 0.6,
-                      "mean_probability": 0.6192821860313416,
+                      "mean_probability": null,
                       "observed_event_count": 0,
-                      "observed_frequency": 0.0,
+                      "observed_frequency": null,
                       "upper_inclusive": false,
                       "upper_probability": 0.7
                     },
@@ -893,19 +1014,19 @@
                       "upper_probability": 1.0
                     }
                   ],
-                  "roc_auc": 0.9910514444096533,
-                  "threshold_mm": 12.7
+                  "roc_auc": 0.9965539875287168,
+                  "threshold_mm": 25.4
                 },
                 {
-                  "brier_decomposition_residual": 2.0261877817530079e-07,
-                  "brier_reliability_10bin": 1.590236654901856e-08,
+                  "brier_decomposition_residual": -4.8042998465353676e-08,
+                  "brier_reliability_10bin": 2.2446323921689986e-08,
                   "brier_resolution_10bin": 0.0,
-                  "brier_score": 0.0001503686679087124,
-                  "brier_skill_score": 0.009770180239578319,
+                  "brier_score": 0.00015012455008944442,
+                  "brier_skill_score": -0.003286876611202638,
                   "brier_uncertainty": 0.00015015014676398808,
                   "correct_negatives": 13316,
                   "csi": 0.0,
-                  "ece_10bin": 0.00012610458575729338,
+                  "ece_10bin": 0.00014982097290329544,
                   "equitable_threat_score": 0.0,
                   "events": 2,
                   "f1": 0.0,
@@ -913,20 +1034,20 @@
                   "false_alarms": 0,
                   "frequency_bias": 0.0,
                   "hits": 0,
-                  "mean_probability": 2.4068112846100527e-05,
+                  "mean_probability": 3.5172570009846145e-07,
                   "misses": 2,
                   "non_events": 13316,
-                  "normalized_brier_reliability": 0.00010590976360492359,
+                  "normalized_brier_reliability": 0.00014949252068978663,
                   "normalized_brier_resolution": 0.0,
                   "observed_frequency": 0.0001501726986033939,
                   "precision": null,
                   "recall_pod": 0.0,
-                  "reference_brier_score": 0.00015185229217303607,
+                  "reference_brier_score": 0.00014963272578279844,
                   "reliability": [
                     {
                       "count": 13318,
                       "lower_probability": 0.0,
-                      "mean_probability": 2.4068112846100527e-05,
+                      "mean_probability": 3.517257000984607e-07,
                       "observed_event_count": 2,
                       "observed_frequency": 0.0001501726986033939,
                       "upper_inclusive": false,
@@ -1014,213 +1135,213 @@
                       "upper_probability": 1.0
                     }
                   ],
-                  "roc_auc": 0.9930534695103634,
-                  "threshold_mm": 25.4
-                },
-                {
-                  "brier_decomposition_residual": 3.8599368704109225e-14,
-                  "brier_reliability_10bin": 6.747030984451578e-17,
-                  "brier_resolution_10bin": 0.0,
-                  "brier_score": 3.866683901395374e-14,
-                  "brier_skill_score": 0.9999998686231121,
-                  "brier_uncertainty": 0.0,
-                  "correct_negatives": 13318,
-                  "csi": null,
-                  "ece_10bin": 8.214031278520662e-09,
-                  "equitable_threat_score": null,
-                  "events": 0,
-                  "f1": null,
-                  "false_alarm_ratio": null,
-                  "false_alarms": 0,
-                  "frequency_bias": null,
-                  "hits": 0,
-                  "mean_probability": 8.214031278520667e-09,
-                  "misses": 0,
-                  "non_events": 13318,
-                  "normalized_brier_reliability": null,
-                  "normalized_brier_resolution": null,
-                  "observed_frequency": 0.0,
-                  "precision": null,
-                  "recall_pod": null,
-                  "reference_brier_score": 2.9431994942331835e-07,
-                  "reliability": [
-                    {
-                      "count": 13318,
-                      "lower_probability": 0.0,
-                      "mean_probability": 8.214031278520662e-09,
-                      "observed_event_count": 0,
-                      "observed_frequency": 0.0,
-                      "upper_inclusive": false,
-                      "upper_probability": 0.1
-                    },
-                    {
-                      "count": 0,
-                      "lower_probability": 0.1,
-                      "mean_probability": null,
-                      "observed_event_count": 0,
-                      "observed_frequency": null,
-                      "upper_inclusive": false,
-                      "upper_probability": 0.2
-                    },
-                    {
-                      "count": 0,
-                      "lower_probability": 0.2,
-                      "mean_probability": null,
-                      "observed_event_count": 0,
-                      "observed_frequency": null,
-                      "upper_inclusive": false,
-                      "upper_probability": 0.3
-                    },
-                    {
-                      "count": 0,
-                      "lower_probability": 0.3,
-                      "mean_probability": null,
-                      "observed_event_count": 0,
-                      "observed_frequency": null,
-                      "upper_inclusive": false,
-                      "upper_probability": 0.4
-                    },
-                    {
-                      "count": 0,
-                      "lower_probability": 0.4,
-                      "mean_probability": null,
-                      "observed_event_count": 0,
-                      "observed_frequency": null,
-                      "upper_inclusive": false,
-                      "upper_probability": 0.5
-                    },
-                    {
-                      "count": 0,
-                      "lower_probability": 0.5,
-                      "mean_probability": null,
-                      "observed_event_count": 0,
-                      "observed_frequency": null,
-                      "upper_inclusive": false,
-                      "upper_probability": 0.6
-                    },
-                    {
-                      "count": 0,
-                      "lower_probability": 0.6,
-                      "mean_probability": null,
-                      "observed_event_count": 0,
-                      "observed_frequency": null,
-                      "upper_inclusive": false,
-                      "upper_probability": 0.7
-                    },
-                    {
-                      "count": 0,
-                      "lower_probability": 0.7,
-                      "mean_probability": null,
-                      "observed_event_count": 0,
-                      "observed_frequency": null,
-                      "upper_inclusive": false,
-                      "upper_probability": 0.8
-                    },
-                    {
-                      "count": 0,
-                      "lower_probability": 0.8,
-                      "mean_probability": null,
-                      "observed_event_count": 0,
-                      "observed_frequency": null,
-                      "upper_inclusive": false,
-                      "upper_probability": 0.9
-                    },
-                    {
-                      "count": 0,
-                      "lower_probability": 0.9,
-                      "mean_probability": null,
-                      "observed_event_count": 0,
-                      "observed_frequency": null,
-                      "upper_inclusive": true,
-                      "upper_probability": 1.0
-                    }
-                  ],
-                  "roc_auc": null,
+                  "roc_auc": 0.999624511865425,
                   "threshold_mm": 50.8
                 }
               ]
             }
           },
           "pooled": {
-            "correlation": 0.808205502129023,
-            "mae_mm": 0.3099280459446745,
-            "mean_bias_mm": -0.07453280335691098,
-            "mean_crps_mm": 0.21434641587564118,
-            "mean_forecast_mm": 0.4066805912431104,
-            "mean_observation_mm": 0.4812133946000214,
+            "correlation": 0.8980342361549644,
+            "mae_mm": 0.35443076359951164,
+            "mean_bias_mm": -0.1372823090227339,
+            "mean_crps_mm": 0.250187508733348,
+            "mean_forecast_mm": 0.5262782863781269,
+            "mean_observation_mm": 0.6635605954008608,
             "reference_available": true,
-            "rmse_mm": 1.0780783031961547,
+            "rmse_mm": 1.3921167694594845,
             "sample_count": 13318,
             "thresholds": [
               {
-                "brier_decomposition_residual": -0.00017554632020785627,
-                "brier_reliability_10bin": 6.304811173417341e-05,
-                "brier_resolution_10bin": 0.00028761711492174735,
-                "brier_score": 0.003489129796854473,
-                "brier_skill_score": 0.03188073654756429,
-                "brier_uncertainty": 0.0038892451202499033,
-                "correct_negatives": 13264,
-                "csi": 0.0,
-                "ece_10bin": 0.0022367143399960074,
-                "equitable_threat_score": -0.00014463166209593528,
-                "events": 52,
-                "f1": 0.0,
-                "false_alarm_ratio": 1.0,
+                "brier_decomposition_residual": -0.0002993944637463466,
+                "brier_reliability_10bin": 0.0017980807512315853,
+                "brier_resolution_10bin": 0.006488096661907123,
+                "brier_score": 0.007173112342891642,
+                "brier_skill_score": 0.4053175742690466,
+                "brier_uncertainty": 0.012162522717313527,
+                "correct_negatives": 13152,
+                "csi": 0.26506024096385544,
+                "ece_10bin": 0.006817185299802226,
+                "equitable_threat_score": 0.26254377635885995,
+                "events": 164,
+                "f1": 0.41904761904761906,
+                "false_alarm_ratio": 0.043478260869565216,
                 "false_alarms": 2,
-                "frequency_bias": 0.038461538461538464,
-                "hits": 0,
-                "mean_probability": 0.0019085704789875506,
-                "misses": 52,
-                "non_events": 13266,
-                "normalized_brier_reliability": 0.01621088663347664,
-                "normalized_brier_resolution": 0.07395191252519114,
-                "observed_frequency": 0.0039044901636882414,
-                "precision": 0.0,
-                "recall_pod": 0.0,
-                "reference_brier_score": 0.003604028892485617,
+                "frequency_bias": 0.2804878048780488,
+                "hits": 44,
+                "mean_probability": 0.005496975985676074,
+                "misses": 120,
+                "non_events": 13154,
+                "normalized_brier_reliability": 0.1478378123538459,
+                "normalized_brier_resolution": 0.5334499110674814,
+                "observed_frequency": 0.0123141612854783,
+                "precision": 0.9565217391304348,
+                "recall_pod": 0.2682926829268293,
+                "reference_brier_score": 0.012062088994936779,
                 "reliability": [
                   {
-                    "count": 13251,
+                    "count": 13143,
                     "lower_probability": 0.0,
-                    "mean_probability": 0.0008161260619194713,
-                    "observed_event_count": 36,
-                    "observed_frequency": 0.002716776092370387,
+                    "mean_probability": 0.0010745897006396619,
+                    "observed_event_count": 43,
+                    "observed_frequency": 0.0032717035684394734,
                     "upper_inclusive": false,
                     "upper_probability": 0.1
                   },
                   {
-                    "count": 35,
+                    "count": 73,
                     "lower_probability": 0.1,
-                    "mean_probability": 0.14286867380142212,
-                    "observed_event_count": 8,
-                    "observed_frequency": 0.22857142857142856,
+                    "mean_probability": 0.1410599702025113,
+                    "observed_event_count": 43,
+                    "observed_frequency": 0.589041095890411,
                     "upper_inclusive": false,
                     "upper_probability": 0.2
                   },
                   {
-                    "count": 21,
+                    "count": 35,
                     "lower_probability": 0.2,
-                    "mean_probability": 0.24311094482739767,
-                    "observed_event_count": 5,
-                    "observed_frequency": 0.23809523809523808,
+                    "mean_probability": 0.2414787790605,
+                    "observed_event_count": 21,
+                    "observed_frequency": 0.6,
                     "upper_inclusive": false,
                     "upper_probability": 0.3
                   },
                   {
-                    "count": 6,
+                    "count": 17,
                     "lower_probability": 0.3,
-                    "mean_probability": 0.3512374858061473,
-                    "observed_event_count": 2,
-                    "observed_frequency": 0.3333333333333333,
+                    "mean_probability": 0.3434479131418116,
+                    "observed_event_count": 10,
+                    "observed_frequency": 0.5882352941176471,
                     "upper_inclusive": false,
                     "upper_probability": 0.4
                   },
                   {
-                    "count": 4,
+                    "count": 7,
                     "lower_probability": 0.4,
-                    "mean_probability": 0.4428536668419838,
+                    "mean_probability": 0.4543521659714835,
+                    "observed_event_count": 6,
+                    "observed_frequency": 0.8571428571428571,
+                    "upper_inclusive": false,
+                    "upper_probability": 0.5
+                  },
+                  {
+                    "count": 12,
+                    "lower_probability": 0.5,
+                    "mean_probability": 0.5463234633207321,
+                    "observed_event_count": 10,
+                    "observed_frequency": 0.8333333333333334,
+                    "upper_inclusive": false,
+                    "upper_probability": 0.6
+                  },
+                  {
+                    "count": 9,
+                    "lower_probability": 0.6,
+                    "mean_probability": 0.6598833203315735,
+                    "observed_event_count": 9,
+                    "observed_frequency": 1.0,
+                    "upper_inclusive": false,
+                    "upper_probability": 0.7
+                  },
+                  {
+                    "count": 5,
+                    "lower_probability": 0.7,
+                    "mean_probability": 0.7540005326271058,
+                    "observed_event_count": 5,
+                    "observed_frequency": 1.0,
+                    "upper_inclusive": false,
+                    "upper_probability": 0.8
+                  },
+                  {
+                    "count": 8,
+                    "lower_probability": 0.8,
+                    "mean_probability": 0.8449528515338898,
+                    "observed_event_count": 8,
+                    "observed_frequency": 1.0,
+                    "upper_inclusive": false,
+                    "upper_probability": 0.9
+                  },
+                  {
+                    "count": 9,
+                    "lower_probability": 0.9,
+                    "mean_probability": 0.9214135607083639,
+                    "observed_event_count": 9,
+                    "observed_frequency": 1.0,
+                    "upper_inclusive": true,
+                    "upper_probability": 1.0
+                  }
+                ],
+                "roc_auc": 0.9944869779015564,
+                "threshold_mm": 12.7
+              },
+              {
+                "brier_decomposition_residual": -5.513163234011835e-05,
+                "brier_reliability_10bin": 0.0002928099386382048,
+                "brier_resolution_10bin": 0.0005736162524470179,
+                "brier_score": 0.0013132329659202968,
+                "brier_skill_score": 0.20098641874564627,
+                "brier_uncertainty": 0.0016491709120692282,
+                "correct_negatives": 13296,
+                "csi": 0.0,
+                "ece_10bin": 0.001305393153874688,
+                "equitable_threat_score": 0.0,
+                "events": 22,
+                "f1": 0.0,
+                "false_alarm_ratio": null,
+                "false_alarms": 0,
+                "frequency_bias": 0.0,
+                "hits": 0,
+                "mean_probability": 0.0003465065307626452,
+                "misses": 22,
+                "non_events": 13296,
+                "normalized_brier_reliability": 0.17754978364905416,
+                "normalized_brier_resolution": 0.34782098583542015,
+                "observed_frequency": 0.001651899684637333,
+                "precision": null,
+                "recall_pod": 0.0,
+                "reference_brier_score": 0.00164356776496675,
+                "reliability": [
+                  {
+                    "count": 13302,
+                    "lower_probability": 0.0,
+                    "mean_probability": 0.00011019325324108826,
+                    "observed_event_count": 11,
+                    "observed_frequency": 0.000826943316794467,
+                    "upper_inclusive": false,
+                    "upper_probability": 0.1
+                  },
+                  {
+                    "count": 9,
+                    "lower_probability": 0.1,
+                    "mean_probability": 0.14812407477034462,
+                    "observed_event_count": 6,
+                    "observed_frequency": 0.6666666666666666,
+                    "upper_inclusive": false,
+                    "upper_probability": 0.2
+                  },
+                  {
+                    "count": 6,
+                    "lower_probability": 0.2,
+                    "mean_probability": 0.23591558635234833,
+                    "observed_event_count": 4,
+                    "observed_frequency": 0.6666666666666666,
+                    "upper_inclusive": false,
+                    "upper_probability": 0.3
+                  },
+                  {
+                    "count": 0,
+                    "lower_probability": 0.3,
+                    "mean_probability": null,
+                    "observed_event_count": 0,
+                    "observed_frequency": null,
+                    "upper_inclusive": false,
+                    "upper_probability": 0.4
+                  },
+                  {
+                    "count": 1,
+                    "lower_probability": 0.4,
+                    "mean_probability": 0.4003731310367584,
                     "observed_event_count": 1,
-                    "observed_frequency": 0.25,
+                    "observed_frequency": 1.0,
                     "upper_inclusive": false,
                     "upper_probability": 0.5
                   },
@@ -1234,11 +1355,11 @@
                     "upper_probability": 0.6
                   },
                   {
-                    "count": 1,
+                    "count": 0,
                     "lower_probability": 0.6,
-                    "mean_probability": 0.6192821860313416,
+                    "mean_probability": null,
                     "observed_event_count": 0,
-                    "observed_frequency": 0.0,
+                    "observed_frequency": null,
                     "upper_inclusive": false,
                     "upper_probability": 0.7
                   },
@@ -1270,19 +1391,19 @@
                     "upper_probability": 1.0
                   }
                 ],
-                "roc_auc": 0.9910514444096533,
-                "threshold_mm": 12.7
+                "roc_auc": 0.9965539875287168,
+                "threshold_mm": 25.4
               },
               {
-                "brier_decomposition_residual": 2.0261877817530079e-07,
-                "brier_reliability_10bin": 1.590236654901856e-08,
+                "brier_decomposition_residual": -4.8042998465353676e-08,
+                "brier_reliability_10bin": 2.2446323921689986e-08,
                 "brier_resolution_10bin": 0.0,
-                "brier_score": 0.0001503686679087124,
-                "brier_skill_score": 0.009770180239578319,
+                "brier_score": 0.00015012455008944442,
+                "brier_skill_score": -0.003286876611202638,
                 "brier_uncertainty": 0.00015015014676398808,
                 "correct_negatives": 13316,
                 "csi": 0.0,
-                "ece_10bin": 0.00012610458575729338,
+                "ece_10bin": 0.00014982097290329544,
                 "equitable_threat_score": 0.0,
                 "events": 2,
                 "f1": 0.0,
@@ -1290,20 +1411,20 @@
                 "false_alarms": 0,
                 "frequency_bias": 0.0,
                 "hits": 0,
-                "mean_probability": 2.4068112846100527e-05,
+                "mean_probability": 3.5172570009846145e-07,
                 "misses": 2,
                 "non_events": 13316,
-                "normalized_brier_reliability": 0.00010590976360492359,
+                "normalized_brier_reliability": 0.00014949252068978663,
                 "normalized_brier_resolution": 0.0,
                 "observed_frequency": 0.0001501726986033939,
                 "precision": null,
                 "recall_pod": 0.0,
-                "reference_brier_score": 0.00015185229217303607,
+                "reference_brier_score": 0.00014963272578279844,
                 "reliability": [
                   {
                     "count": 13318,
                     "lower_probability": 0.0,
-                    "mean_probability": 2.4068112846100527e-05,
+                    "mean_probability": 3.517257000984607e-07,
                     "observed_event_count": 2,
                     "observed_frequency": 0.0001501726986033939,
                     "upper_inclusive": false,
@@ -1391,128 +1512,7 @@
                     "upper_probability": 1.0
                   }
                 ],
-                "roc_auc": 0.9930534695103634,
-                "threshold_mm": 25.4
-              },
-              {
-                "brier_decomposition_residual": 3.8599368704109225e-14,
-                "brier_reliability_10bin": 6.747030984451578e-17,
-                "brier_resolution_10bin": 0.0,
-                "brier_score": 3.866683901395374e-14,
-                "brier_skill_score": 0.9999998686231121,
-                "brier_uncertainty": 0.0,
-                "correct_negatives": 13318,
-                "csi": null,
-                "ece_10bin": 8.214031278520662e-09,
-                "equitable_threat_score": null,
-                "events": 0,
-                "f1": null,
-                "false_alarm_ratio": null,
-                "false_alarms": 0,
-                "frequency_bias": null,
-                "hits": 0,
-                "mean_probability": 8.214031278520667e-09,
-                "misses": 0,
-                "non_events": 13318,
-                "normalized_brier_reliability": null,
-                "normalized_brier_resolution": null,
-                "observed_frequency": 0.0,
-                "precision": null,
-                "recall_pod": null,
-                "reference_brier_score": 2.9431994942331835e-07,
-                "reliability": [
-                  {
-                    "count": 13318,
-                    "lower_probability": 0.0,
-                    "mean_probability": 8.214031278520662e-09,
-                    "observed_event_count": 0,
-                    "observed_frequency": 0.0,
-                    "upper_inclusive": false,
-                    "upper_probability": 0.1
-                  },
-                  {
-                    "count": 0,
-                    "lower_probability": 0.1,
-                    "mean_probability": null,
-                    "observed_event_count": 0,
-                    "observed_frequency": null,
-                    "upper_inclusive": false,
-                    "upper_probability": 0.2
-                  },
-                  {
-                    "count": 0,
-                    "lower_probability": 0.2,
-                    "mean_probability": null,
-                    "observed_event_count": 0,
-                    "observed_frequency": null,
-                    "upper_inclusive": false,
-                    "upper_probability": 0.3
-                  },
-                  {
-                    "count": 0,
-                    "lower_probability": 0.3,
-                    "mean_probability": null,
-                    "observed_event_count": 0,
-                    "observed_frequency": null,
-                    "upper_inclusive": false,
-                    "upper_probability": 0.4
-                  },
-                  {
-                    "count": 0,
-                    "lower_probability": 0.4,
-                    "mean_probability": null,
-                    "observed_event_count": 0,
-                    "observed_frequency": null,
-                    "upper_inclusive": false,
-                    "upper_probability": 0.5
-                  },
-                  {
-                    "count": 0,
-                    "lower_probability": 0.5,
-                    "mean_probability": null,
-                    "observed_event_count": 0,
-                    "observed_frequency": null,
-                    "upper_inclusive": false,
-                    "upper_probability": 0.6
-                  },
-                  {
-                    "count": 0,
-                    "lower_probability": 0.6,
-                    "mean_probability": null,
-                    "observed_event_count": 0,
-                    "observed_frequency": null,
-                    "upper_inclusive": false,
-                    "upper_probability": 0.7
-                  },
-                  {
-                    "count": 0,
-                    "lower_probability": 0.7,
-                    "mean_probability": null,
-                    "observed_event_count": 0,
-                    "observed_frequency": null,
-                    "upper_inclusive": false,
-                    "upper_probability": 0.8
-                  },
-                  {
-                    "count": 0,
-                    "lower_probability": 0.8,
-                    "mean_probability": null,
-                    "observed_event_count": 0,
-                    "observed_frequency": null,
-                    "upper_inclusive": false,
-                    "upper_probability": 0.9
-                  },
-                  {
-                    "count": 0,
-                    "lower_probability": 0.9,
-                    "mean_probability": null,
-                    "observed_event_count": 0,
-                    "observed_frequency": null,
-                    "upper_inclusive": true,
-                    "upper_probability": 1.0
-                  }
-                ],
-                "roc_auc": null,
+                "roc_auc": 0.999624511865425,
                 "threshold_mm": 50.8
               }
             ]
@@ -1529,8 +1529,8 @@
           "observation_complete": true,
           "start_fhr": 0,
           "valid_cells": 13318,
-          "valid_end": "2026-11-28T00:00:00Z",
-          "valid_start": "2026-11-27T18:00:00Z"
+          "valid_end": "2026-11-28T06:00:00Z",
+          "valid_start": "2026-11-28T00:00:00Z"
         }
       ]
     }
@@ -1548,7 +1548,7 @@
     "hrrr_generation_model_names": {
       "6": "ann_csgd_hrrr_mrms_6h_v1_best.keras"
     },
-    "init": "2026112718",
+    "init": "2026112800",
     "kind": "operational",
     "observation_note": "A complete cycle has 8 six-hour, 7 twelve-hour and 5 twenty-four-hour windows, each with full canonical land coverage. Partial cycles and masked cells are identified; unverified periods are not scored.",
     "pending_diagnostics": [
@@ -1563,140 +1563,140 @@
     "sample_note": "Same initialization, duration, valid interval, common 0.25\u00b0 CONUS grid and finite nonnegative MRMS land observations. Scores give equal weight to retained point\u2013window pairs; examples are dependent.",
     "score_units": "CRPS/MAE/RMSE/bias in mm; probabilities and skill scores as fractions.",
     "status": "PARTIAL",
-    "title": "Issued operational forecasts 2026112718",
-    "verified_utc": "2026-11-28T02:07:10.107603+00:00",
+    "title": "Issued operational forecasts 2026112800",
+    "verified_utc": "2026-11-28T08:07:09.492304+00:00",
     "waiting_windows": [
-      {
-        "duration_hours": 6,
-        "status": "WAITING_FOR_OBSERVATIONS",
-        "valid_end": "2026-11-28T06:00:00Z",
-        "valid_start": "2026-11-28T00:00:00Z",
-        "window_id": "f06_f12"
-      },
       {
         "duration_hours": 6,
         "status": "WAITING_FOR_OBSERVATIONS",
         "valid_end": "2026-11-28T12:00:00Z",
         "valid_start": "2026-11-28T06:00:00Z",
-        "window_id": "f12_f18"
+        "window_id": "f06_f12"
       },
       {
         "duration_hours": 6,
         "status": "WAITING_FOR_OBSERVATIONS",
         "valid_end": "2026-11-28T18:00:00Z",
         "valid_start": "2026-11-28T12:00:00Z",
-        "window_id": "f18_f24"
+        "window_id": "f12_f18"
       },
       {
         "duration_hours": 6,
         "status": "WAITING_FOR_OBSERVATIONS",
         "valid_end": "2026-11-29T00:00:00Z",
         "valid_start": "2026-11-28T18:00:00Z",
-        "window_id": "f24_f30"
+        "window_id": "f18_f24"
       },
       {
         "duration_hours": 6,
         "status": "WAITING_FOR_OBSERVATIONS",
         "valid_end": "2026-11-29T06:00:00Z",
         "valid_start": "2026-11-29T00:00:00Z",
-        "window_id": "f30_f36"
+        "window_id": "f24_f30"
       },
       {
         "duration_hours": 6,
         "status": "WAITING_FOR_OBSERVATIONS",
         "valid_end": "2026-11-29T12:00:00Z",
         "valid_start": "2026-11-29T06:00:00Z",
-        "window_id": "f36_f42"
+        "window_id": "f30_f36"
       },
       {
         "duration_hours": 6,
         "status": "WAITING_FOR_OBSERVATIONS",
         "valid_end": "2026-11-29T18:00:00Z",
         "valid_start": "2026-11-29T12:00:00Z",
-        "window_id": "f42_f48"
+        "window_id": "f36_f42"
       },
       {
-        "duration_hours": 12,
+        "duration_hours": 6,
         "status": "WAITING_FOR_OBSERVATIONS",
-        "valid_end": "2026-11-28T06:00:00Z",
-        "valid_start": "2026-11-27T18:00:00Z",
-        "window_id": "f00_f12"
+        "valid_end": "2026-11-30T00:00:00Z",
+        "valid_start": "2026-11-29T18:00:00Z",
+        "window_id": "f42_f48"
       },
       {
         "duration_hours": 12,
         "status": "WAITING_FOR_OBSERVATIONS",
         "valid_end": "2026-11-28T12:00:00Z",
         "valid_start": "2026-11-28T00:00:00Z",
-        "window_id": "f06_f18"
+        "window_id": "f00_f12"
       },
       {
         "duration_hours": 12,
         "status": "WAITING_FOR_OBSERVATIONS",
         "valid_end": "2026-11-28T18:00:00Z",
         "valid_start": "2026-11-28T06:00:00Z",
-        "window_id": "f12_f24"
+        "window_id": "f06_f18"
       },
       {
         "duration_hours": 12,
         "status": "WAITING_FOR_OBSERVATIONS",
         "valid_end": "2026-11-29T00:00:00Z",
         "valid_start": "2026-11-28T12:00:00Z",
-        "window_id": "f18_f30"
+        "window_id": "f12_f24"
       },
       {
         "duration_hours": 12,
         "status": "WAITING_FOR_OBSERVATIONS",
         "valid_end": "2026-11-29T06:00:00Z",
         "valid_start": "2026-11-28T18:00:00Z",
-        "window_id": "f24_f36"
+        "window_id": "f18_f30"
       },
       {
         "duration_hours": 12,
         "status": "WAITING_FOR_OBSERVATIONS",
         "valid_end": "2026-11-29T12:00:00Z",
         "valid_start": "2026-11-29T00:00:00Z",
-        "window_id": "f30_f42"
+        "window_id": "f24_f36"
       },
       {
         "duration_hours": 12,
         "status": "WAITING_FOR_OBSERVATIONS",
         "valid_end": "2026-11-29T18:00:00Z",
         "valid_start": "2026-11-29T06:00:00Z",
-        "window_id": "f36_f48"
+        "window_id": "f30_f42"
       },
       {
-        "duration_hours": 24,
+        "duration_hours": 12,
         "status": "WAITING_FOR_OBSERVATIONS",
-        "valid_end": "2026-11-28T18:00:00Z",
-        "valid_start": "2026-11-27T18:00:00Z",
-        "window_id": "f00_f24"
+        "valid_end": "2026-11-30T00:00:00Z",
+        "valid_start": "2026-11-29T12:00:00Z",
+        "window_id": "f36_f48"
       },
       {
         "duration_hours": 24,
         "status": "WAITING_FOR_OBSERVATIONS",
         "valid_end": "2026-11-29T00:00:00Z",
         "valid_start": "2026-11-28T00:00:00Z",
-        "window_id": "f06_f30"
+        "window_id": "f00_f24"
       },
       {
         "duration_hours": 24,
         "status": "WAITING_FOR_OBSERVATIONS",
         "valid_end": "2026-11-29T06:00:00Z",
         "valid_start": "2026-11-28T06:00:00Z",
-        "window_id": "f12_f36"
+        "window_id": "f06_f30"
       },
       {
         "duration_hours": 24,
         "status": "WAITING_FOR_OBSERVATIONS",
         "valid_end": "2026-11-29T12:00:00Z",
         "valid_start": "2026-11-28T12:00:00Z",
-        "window_id": "f18_f42"
+        "window_id": "f12_f36"
       },
       {
         "duration_hours": 24,
         "status": "WAITING_FOR_OBSERVATIONS",
         "valid_end": "2026-11-29T18:00:00Z",
         "valid_start": "2026-11-28T18:00:00Z",
+        "window_id": "f18_f42"
+      },
+      {
+        "duration_hours": 24,
+        "status": "WAITING_FOR_OBSERVATIONS",
+        "valid_end": "2026-11-30T00:00:00Z",
+        "valid_start": "2026-11-29T00:00:00Z",
         "window_id": "f24_f48"
       }
     ]

@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-28T02:22:14.724570+00:00",
+  "generated_utc": "2026-11-28T08:07:09.492304+00:00",
   "operational": {
     "latest_complete_init": "2026112600",
     "runs": [
@@ -9,7 +9,7 @@
           "24": 0,
           "6": 1
         },
-        "init": "2026112718",
+        "init": "2026112800",
         "path": "operational/recent-1.json",
         "status": "PARTIAL"
       },
